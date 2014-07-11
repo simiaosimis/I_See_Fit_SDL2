@@ -19,7 +19,7 @@ class Animation{
 		* @param loop_ : Whether to loop or not.
 		*/
 		Animation(const int x_, const int y_, const int spriteWidth_, const int spriteHeight_,
-			const unsigned int numberOfImages_, const bool loop_);
+			const unsigned int numberOfImages_, const bool loop_, const double totalTime_);
 
 		/**
 		* The destructor.
@@ -68,7 +68,7 @@ class Animation{
 		int spriteWidth; /**< The sprite width. */
 		int spriteHeight; /**< The sprite height. */
 		int numberOfImages; /**< The number of images to animate inside the spritesheet. */
-		bool loop; /**< Whether to loop or not. */
+		bool loop; /**< Whether to loop or not. (NOT WORKING)*/
 		double totalElapsedTime; /**< Total time elapsed on the animation, to check if the
 			frame changed. */
 		double totalTime; /**< Total time for each animation loop. */

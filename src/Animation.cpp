@@ -3,19 +3,20 @@
 int animationCount = 0;
 
 Animation::Animation(const int x_, const int y_, const int spriteWidth_,
-	const int spriteHeight_, const unsigned int numberOfImages_, const bool loop_) :
+	const int spriteHeight_, const unsigned int numberOfImages_, const bool loop_,
+	const double totalTime_) :
 	
 	ANIMATION_LIMIT(10),
 	x(x_),
 	y(y_),
-	initialX(0),
-	initialY(0),
+	initialX(x_),
+	initialY(y_),
 	spriteWidth(spriteWidth_),
 	spriteHeight(spriteHeight_),
 	numberOfImages(0),
 	loop(loop_),
 	totalElapsedTime(0.0),
-	totalTime(0.0)
+	totalTime(totalTime_)
 {
 	this->numberOfImages = (numberOfImages_ == 0) ? 1 : numberOfImages_;
 }
