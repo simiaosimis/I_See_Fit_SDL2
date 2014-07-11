@@ -1,7 +1,6 @@
 #pragma once
 
 #include "SDLWrapper.h"
-#include <memory>
 #include <string>
 
 /**
@@ -11,8 +10,6 @@
 class Sprite {
 
 	public:
-		typedef std::shared_ptr<Sprite> SpritePtr; /**< Typedef of a Sprite shared pointer. */
-
 		/**
 		* The constructor.
 		* Initializes all the data, and sets the desired renderer. Loads image with the desired
@@ -21,6 +18,7 @@ class Sprite {
 		* @see Sprite::loadFrom
 		*/
 		Sprite(const std::string& path_);
+
 		Sprite(SDL_Surface* const surface_);
 
 		/**

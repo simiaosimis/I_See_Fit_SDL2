@@ -9,7 +9,7 @@
 
 #include "AudioHandler.h"
 #include "InputHandler.h"
-#include "ResourceManager.h"
+#include "SpriteManager.h"
 
 /**
 * Main structure class for the game.
@@ -65,7 +65,7 @@ class Game {
 		/**
 		* @return The resource manager.
 		*/
-		ResourceManager& getResources();
+		SpriteManager& getResources();
 
 		/**
 		* Stops execution and closes the game.
@@ -101,7 +101,7 @@ class Game {
 
 		AudioHandler* audioHandler; /**< The Game AudioHandler. */
 		InputHandler* inputHandler; /**< The Game InputHandler. */
-		ResourceManager* resourceManager; /**< The Game ResourceManager. */
+		SpriteManager* resourceManager; /**< The Game ResourceManager. */
 
 		StateGame* currentState; /**< The current state, which the game is in. */
 

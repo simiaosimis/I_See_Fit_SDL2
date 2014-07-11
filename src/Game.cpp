@@ -22,7 +22,7 @@ Game::Game() :
 	isRunning(false),
 	audioHandler(new AudioHandler()),
 	inputHandler(new InputHandler()),
-	resourceManager(new ResourceManager()),
+	resourceManager(new SpriteManager()),
 	currentState(nullptr),
 	statesMap()
 {
@@ -122,7 +122,7 @@ std::array<bool, GameKeys::MAX> Game::getInput(){
 	return this->inputHandler->getKeyStates();
 }
 
-ResourceManager& Game::getResources(){
+SpriteManager& Game::getResources(){
 	return (*(this->resourceManager));
 }
 

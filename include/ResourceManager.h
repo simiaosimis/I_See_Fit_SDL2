@@ -2,55 +2,55 @@
 
 #include <map>
 #include <string>
-#include "Sprite.h"
+#include <memory>
 
 /**
-* General resource management class.
-* @todo Generalize the resource manager for audio, not just sprites.
+* Template resource management class.
+*
 */
+template <class Type>
 class ResourceManager {
 
-	public:
-		/**
-		* The constructor.
-		* Initializes attributes.
-		*/
-		ResourceManager();
+	private:
+		typedef std::shared_ptr<Type> TypePtr;
+		typedef std::map<std::string, TypePtr> TypeMap;
 
+	public:
 		/**
 		* The destructor.
 		* @note Warns about resources being deleted with references still pointing to them.
 		*/
-		~ResourceManager();
+		virtual ~ResourceManager();
 		
 		/**
-		* Retrieves the sprite from the resources.
-		* @return The pointer to the wanted sprite. Creates it, if not already in resources.
-		* @param path_ : Path to the desired sprite.
+		* Retrieves the resource from the resources.
+		* @return The pointer to the wanted resource. Creates it, if not already in resources.
+		* @param path_ : Path to the desired resource.
 		*/
-		Sprite* get(const std::string& path_);
+		Type* get(const std::string& path_);
 
-	private:
+	protected:
 		/**
-		* Constructs the desired sprite.
-		* @param path_ : Path to the desired sprite.
+		* Constructs the desired resource.
+		* @param path_ : Path to the desired resource.
 		*/
-		Sprite::SpritePtr load(const std::string& path_);
+		virtual TypePtr load(const std::string& path_) = 0;
 
 		/**
 		* Registers the resource on the resources map.
-		* @param path_ : Path to the sprite. Will be the key value.
+		* @param path_ : Path to the resource. Will be the key value.
 		* @param resource_ : The shared pointer for the resource.
 		*/
-		void registerResource(const std::string& path_, Sprite::SpritePtr resource_);
+		void registerResource(const std::string& path_, TypePtr resource_);
 
 		/**
 		* Unregisters the resource on the resources map.
-		* @param path_ : The key (path to sprite) on the map.
+		* @param path_ : The key (path to resource) on the map.
 		*/
 		void unregisterResource(const std::string& path_);
 
-		std::map<std::string, Sprite::SpritePtr> resources; /**< The map that contains all the
-			Sprite resources. */
+		TypeMap resources; /**< The map that contains all the Type resources. */
 
 };
+
+#include "ResourceManager.tpp"
