@@ -3,7 +3,7 @@
 body {
   padding:50px;
   font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color:#777;
+  color:#444;
   font-weight:300;
 }
 
@@ -29,7 +29,7 @@ h2 {
 }
 
 h3, h4, h5, h6 {
-  color:#494949;
+  color:#383838;
 }
 
 a {
@@ -103,7 +103,7 @@ header {
 
 header ul {
   list-style:none;
-  height:40px;
+  height:60px;
   
   padding:0;
   
@@ -116,22 +116,22 @@ header ul {
   background: linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
   
   border-radius:5px;
-  border:1px solid #d2d2d2;
+  border:2px solid #d2d2d2;
   box-shadow:inset #fff 0 1px 0, inset rgba(0,0,0,0.03) 0 -1px 0;
   width:270px;
 }
 
 header li {
-  width:89px;
+  width:120px;
   float:left;
-  border-right:1px solid #d2d2d2;
+  border-right:0px solid #d2d2d2;
   height:40px;
 }
 
 header ul a {
   line-height:1;
-  font-size:11px;
-  color:#999;
+  font-size:20px;
+  color:#666;
   display:block;
   text-align:center;
   padding-top:6px;
@@ -143,18 +143,13 @@ strong {
   font-weight:700;
 }
 
-header ul li + li {
-  width:88px;
-  border-left:1px solid #fff;
-}
-
-header ul li + li + li {
-  border-right:none;
-  width:89px;
+header ul li {
+  width:260px;
+  border-left:0px solid #fff;
 }
 
 header ul a strong {
-  font-size:14px;
+  font-size:24px;
   display:block;
   color:#222;
 }
