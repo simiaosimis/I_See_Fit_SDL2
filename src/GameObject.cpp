@@ -7,7 +7,7 @@ GameObject::GameObject(const double x_, const double y_, const std::string& path
     x(x_),
     y(y_),
     isRight(true),
-    sprite(Game::instance().getResources().get(path_)),
+    sprite(Game::instance().getSprite(path_)),
     width(0),
     height(0),
     animationClip{0,0,0,0},

@@ -1,6 +1,7 @@
 #include "AudioHandler.h"
 #include "Game.h"
 #include "Logger.h"
+#include "UsefulDefines.h"
 
 AudioHandler::AudioHandler() :
 	currentMusic(nullptr),
@@ -10,11 +11,6 @@ AudioHandler::AudioHandler() :
 }
 
 AudioHandler::~AudioHandler() {
-	if(this->currentMusic != nullptr){
-		Mix_FreeMusic(this->currentMusic);
-		this->currentMusic = nullptr;
-	}
-
 	// Log(DEBUG) << "Still had " << this->currentEffects.size() << " sfx on vector.";
 
 	for(auto sfx : this->currentEffects){
@@ -25,20 +21,19 @@ AudioHandler::~AudioHandler() {
 }
 
 void AudioHandler::setCurrentMusic(const std::string& path_) {
-	if(this->currentMusic != nullptr){
-		Mix_FreeMusic(this->currentMusic);
-		this->currentMusic = nullptr;
-	}
-
-	this->currentMusic = Mix_LoadMUS(path_.c_str());
+	this->currentMusic = Game::instance().getMusic(path_);
 }
 
 void AudioHandler::playMusic(const int times_) {
-	if(this->currentMusic){
-		Mix_PlayMusic(this->currentMusic, times_);
+	if(this->currentMusic != nullptr) {
+		const int playedMusic = Mix_PlayMusic(this->currentMusic->getMixMusic(), times_);
+
+		if(playedMusic == -1){
+			Log(ERROR) << "Couldn't play music (" << this->currentMusic->getPath() << "). " << Mix_GetError();
+		}
 	}
-	else{
-		Log(WARN) << "There is no song loaded.";
+	else {
+		Log(ERROR) << "Can't play a null music.";
 	}
 }
 

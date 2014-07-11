@@ -212,7 +212,7 @@ void TileMap::renderLayer(const double cameraX_, const double cameraY_, const un
 }
 
 void TileMap::addTileSet(const std::string& path_){
-	Sprite* newTileSet = Game::instance().getResources().get(path_);
+	Sprite* newTileSet = Game::instance().getSprite(path_);
 	this->tilesetSprites.push_back(newTileSet);
 }
 

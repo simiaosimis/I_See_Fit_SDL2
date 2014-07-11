@@ -5,6 +5,7 @@
 #endif
 
 #include "SDLWrapper.h"
+#include "Music.h"
 #include <string>
 #include <vector>
 
@@ -92,7 +93,7 @@ class AudioHandler {
 	private:
 		static void channelDone(int channel_);
 
-		Mix_Music* currentMusic; /**< The current music that is playing. */
+		Music* currentMusic; /**< The current music that is playing. */
 		std::vector<SoundEffect> currentEffects; /**< The current effect that is playing. */
 
 };

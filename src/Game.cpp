@@ -22,7 +22,8 @@ Game::Game() :
 	isRunning(false),
 	audioHandler(new AudioHandler()),
 	inputHandler(new InputHandler()),
-	resourceManager(new SpriteManager()),
+	spriteResources(new SpriteManager()),
+	musicResources(new MusicManager()),
 	currentState(nullptr),
 	statesMap()
 {
@@ -46,7 +47,8 @@ Game::~Game(){
 
 	SAFE_DELETE(audioHandler);
 	SAFE_DELETE(inputHandler);
-	SAFE_DELETE(resourceManager);
+	SAFE_DELETE(spriteResources);
+	SAFE_DELETE(musicResources);
 	SAFE_DELETE(window);
 }
 
@@ -122,8 +124,12 @@ std::array<bool, GameKeys::MAX> Game::getInput(){
 	return this->inputHandler->getKeyStates();
 }
 
-SpriteManager& Game::getResources(){
-	return (*(this->resourceManager));
+Sprite* Game::getSprite(const std::string& path_) {
+	return this->spriteResources->get(path_);
+}
+
+Music* Game::getMusic(const std::string& path_) {
+	return this->musicResources->get(path_);
 }
 
 void Game::stop(){

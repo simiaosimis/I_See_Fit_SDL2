@@ -16,7 +16,8 @@ Animation::Animation(const int x_, const int y_, const int spriteWidth_,
 	numberOfImages(0),
 	loop(loop_),
 	totalElapsedTime(0.0),
-	totalTime(totalTime_)
+	totalTime(totalTime_),
+	animationCount(0)
 {
 	this->numberOfImages = (numberOfImages_ == 0) ? 1 : numberOfImages_;
 }
