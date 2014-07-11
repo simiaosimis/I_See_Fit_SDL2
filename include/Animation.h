@@ -2,6 +2,8 @@
 
 #include "SDLWrapper.h"
 
+#define ANIMATION_LIMIT 10 // Apparently defines the max horizontal sprites in the spritesheet
+
 /**
 * Class in control of animating a sprite.
 */
@@ -50,8 +52,6 @@ class Animation{
 		void changeAnimation(const int x_, const int y_, const unsigned int numberOfImages_,
 			const bool loop_, const double totalTime_);
 
-		unsigned int ANIMATION_LIMIT;
-
 	private:
 		/**
 		* Updates the clip to a new position.
@@ -72,7 +72,6 @@ class Animation{
 		double totalElapsedTime; /**< Total time elapsed on the animation, to check if the
 			frame changed. */
 		double totalTime; /**< Total time for each animation loop. */
-
 		int animationCount;
 
 };

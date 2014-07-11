@@ -1,19 +1,16 @@
 #include "Animation.h"
 
-int animationCount = 0;
-
 Animation::Animation(const int x_, const int y_, const int spriteWidth_,
 	const int spriteHeight_, const unsigned int numberOfImages_, const bool loop_,
 	const double totalTime_) :
 	
-	ANIMATION_LIMIT(10),
 	x(x_),
 	y(y_),
 	initialX(x_),
 	initialY(y_),
 	spriteWidth(spriteWidth_),
 	spriteHeight(spriteHeight_),
-	numberOfImages(0),
+	numberOfImages(numberOfImages_),
 	loop(loop_),
 	totalElapsedTime(0.0),
 	totalTime(totalTime_),
@@ -29,7 +26,7 @@ Animation::~Animation() {
 void Animation::update(SDL_Rect& clip, const double dt_) {
 	// Compare the position on the sprite with the number of positions to know if is the
 	// end of the animation.
-	bool endOfAnimation = ((animationCount + 1) >= this->numberOfImages);
+	const bool endOfAnimation = ((this->animationCount + 1) >= this->numberOfImages);
 
 	const double deltaT = (this->totalTime / this->numberOfImages);
 
@@ -39,9 +36,9 @@ void Animation::update(SDL_Rect& clip, const double dt_) {
     if(this->totalElapsedTime >= deltaT) {
         
         this->totalElapsedTime = 0;
-        animationCount += 1;
+        this->animationCount += 1;
 
-        if(Animation::animationCount <= this->numberOfImages){
+        if(this->animationCount <= this->numberOfImages){
 	        if(this->x < (int)ANIMATION_LIMIT){
 	        	this->x += 1;
 	        }
@@ -54,7 +51,7 @@ void Animation::update(SDL_Rect& clip, const double dt_) {
     	if(endOfAnimation){
     		this->x= this->initialX;
     		this->y= this->initialY;
-    		Animation::animationCount = 0;
+    		this->animationCount = 0;
     	}
     }
 
@@ -73,7 +70,7 @@ void Animation::changeAnimation(const int x_, const int y_, const unsigned int n
 	this->numberOfImages = (numberOfImages_ == 0) ? 1 : numberOfImages_;
 	this->loop = loop_;
 	this->totalTime = totalTime_;
-	animationCount = 0;
+	this->animationCount = 0;
 }
 
 void Animation::updateClip(SDL_Rect& clip, const int x_, const int y_) {
@@ -84,7 +81,7 @@ void Animation::updateClip(SDL_Rect& clip, const int x_, const int y_) {
 }
 
 int Animation::getCurrentFrame() {
-	return (animationCount + 1);
+	return (this->animationCount + 1);
 }
 
 void Animation::changeWidthHeight(const int width_, const int height_) {
