@@ -24,6 +24,7 @@ Game::Game() :
 	inputHandler(new InputHandler()),
 	spriteResources(new SpriteManager()),
 	musicResources(new MusicManager()),
+	sfxResources(new SFXManager()),
 	currentState(nullptr),
 	statesMap()
 {
@@ -49,6 +50,7 @@ Game::~Game(){
 	SAFE_DELETE(inputHandler);
 	SAFE_DELETE(spriteResources);
 	SAFE_DELETE(musicResources);
+	SAFE_DELETE(sfxResources);
 	SAFE_DELETE(window);
 }
 
@@ -130,6 +132,10 @@ Sprite* Game::getSprite(const std::string& path_) {
 
 Music* Game::getMusic(const std::string& path_) {
 	return this->musicResources->get(path_);
+}
+
+SoundEffect* Game::getSoundEffect(const std::string& path_){
+	return this->sfxResources->get(path_);
 }
 
 void Game::stop(){

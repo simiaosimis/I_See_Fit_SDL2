@@ -11,7 +11,7 @@
 #include "InputHandler.h"
 #include "SpriteManager.h"
 #include "MusicManager.h"
-// #include "SpriteManager.h"
+#include "SFXManager.h"
 
 /**
 * Main structure class for the game.
@@ -75,9 +75,9 @@ class Game {
 		Music* getMusic(const std::string& path_);
 
 		/**
-		* @return The resource manager.
+		* @return The desired SoundEffect.
 		*/
-		//SFXManager& getResources();
+		SoundEffect* getSoundEffect(const std::string& path_);
 
 		/**
 		* Stops execution and closes the game.
@@ -113,8 +113,9 @@ class Game {
 
 		AudioHandler* audioHandler; /**< The Game AudioHandler. */
 		InputHandler* inputHandler; /**< The Game InputHandler. */
-		SpriteManager* spriteResources; /**< The Game ResourceManager. */
-		MusicManager* musicResources; /**< The Game ResourceManager. */
+		SpriteManager* spriteResources; /**< The Game SpriteManager. */
+		MusicManager* musicResources; /**< The Game MusicManager. */
+		SFXManager* sfxResources; /**< The Game SFXManager. */
 
 		StateGame* currentState; /**< The current state, which the game is in. */
 

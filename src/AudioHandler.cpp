@@ -11,12 +11,6 @@ AudioHandler::AudioHandler() :
 }
 
 AudioHandler::~AudioHandler() {
-	// Log(DEBUG) << "Still had " << this->currentEffects.size() << " sfx on vector.";
-
-	for(auto sfx : this->currentEffects){
-		Mix_FreeChunk(sfx->getMixChunk());
-	}
-
 	this->currentEffects.clear();
 }
 
@@ -47,11 +41,8 @@ void AudioHandler::setMusicVolume(const unsigned int percent_) {
 }
 
 void AudioHandler::addSoundEffect(const std::string& path_) {
-	SoundEffect* sfx = new SoundEffect(path_);
-
-	/// @todo Resource manager for audio.
+	SoundEffect* sfx = Game::instance().getSoundEffect(path_);
 	this->currentEffects.push_back(sfx);
-
 	playEffect(0);
 }
 
@@ -85,7 +76,6 @@ void AudioHandler::clearChannel(const int channel_) {
 
 	for(it = this->currentEffects.begin(); it != this->currentEffects.end();) {
 		if((*it)->channel == channel_){
-			delete (*it);
 			this->currentEffects.erase(it);
 		}
 		else{
@@ -95,7 +85,5 @@ void AudioHandler::clearChannel(const int channel_) {
 }
 
 void AudioHandler::channelDone(int channel_) {
-	// Log(DEBUG) << "Channel [" << channel_ << "] done. (CALLBACK)";
-
 	Game::instance().getAudioHandler().clearChannel(channel_);
 }

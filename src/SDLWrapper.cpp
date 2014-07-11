@@ -62,6 +62,10 @@ bool SDLWrapper::initialize(){
 
 		SDL_MIXER_VERSION(&compiled);
 		SDLWrapper::logSDLVersion("SDL_mixer", compiled);
+
+		const int channelsAllocated = Mix_AllocateChannels(25);
+
+		Log(DEBUG) << "Allocated " << channelsAllocated << " channels for the mixer.";
 	}
 	else{
 		Log(ERROR) << "Could not initialize SDL_Mixer" << Mix_GetError();
