@@ -6,13 +6,9 @@
 
 #include "SDLWrapper.h"
 #include "Music.h"
+#include "SoundEffect.h"
 #include <string>
 #include <vector>
-
-typedef struct _SoundEffect {
-	Mix_Chunk* effect;
-	int channel;
-} SoundEffect;
 
 /**
 * The audio handler.
@@ -94,6 +90,6 @@ class AudioHandler {
 		static void channelDone(int channel_);
 
 		Music* currentMusic; /**< The current music that is playing. */
-		std::vector<SoundEffect> currentEffects; /**< The current effect that is playing. */
+		std::vector<SoundEffect*> currentEffects; /**< The current effect that is playing. */
 
 };

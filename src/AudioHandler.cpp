@@ -14,7 +14,7 @@ AudioHandler::~AudioHandler() {
 	// Log(DEBUG) << "Still had " << this->currentEffects.size() << " sfx on vector.";
 
 	for(auto sfx : this->currentEffects){
-		Mix_FreeChunk(sfx.effect);
+		Mix_FreeChunk(sfx->getMixChunk());
 	}
 
 	this->currentEffects.clear();
@@ -47,12 +47,7 @@ void AudioHandler::setMusicVolume(const unsigned int percent_) {
 }
 
 void AudioHandler::addSoundEffect(const std::string& path_) {
-	Mix_Chunk* effect = Mix_LoadWAV(path_.c_str());
-	SoundEffect sfx = {effect, -1};
-
-	if(effect == nullptr){
-		Log(DEBUG) << "Loaded null chunk " << path_ << " " << Mix_GetError();
-	}
+	SoundEffect* sfx = new SoundEffect(path_);
 
 	/// @todo Resource manager for audio.
 	this->currentEffects.push_back(sfx);
@@ -61,14 +56,15 @@ void AudioHandler::addSoundEffect(const std::string& path_) {
 }
 
 void AudioHandler::playEffect(const int times_) {
-	const int playedChannel = Mix_PlayChannel(-1, this->currentEffects.back().effect, times_);
+	const int playedChannel = Mix_PlayChannel(-1, this->currentEffects.back()->getMixChunk(),
+		times_);
 
 	if(playedChannel == -1){
 		Log(ERROR) << "Failed to play sound effect on channel " << playedChannel << ". "
 			<< Mix_GetError();
 	}
 
-	this->currentEffects.back().channel = playedChannel;
+	this->currentEffects.back()->channel = playedChannel;
 
 	Mix_ChannelFinished(AudioHandler::channelDone);
 }
@@ -85,12 +81,11 @@ void AudioHandler::changeMusic(const std::string& path_) {
 }
 
 void AudioHandler::clearChannel(const int channel_) {
-	std::vector<SoundEffect>::iterator it;
+	std::vector<SoundEffect*>::iterator it;
 
 	for(it = this->currentEffects.begin(); it != this->currentEffects.end();) {
-		if(it->channel == channel_){
-			Mix_FreeChunk(it->effect);
-			it->effect = nullptr;
+		if((*it)->channel == channel_){
+			delete (*it);
 			this->currentEffects.erase(it);
 		}
 		else{
