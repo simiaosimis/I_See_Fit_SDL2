@@ -1,3 +1,7 @@
+# The executables
+sdl2-engine
+*.exe
+
 # The build folder
 build/
 
