@@ -29,28 +29,27 @@ class StateGame {
 
 		/**
 		* Unloads necessary objects.
-		* Pure virtual function. Purpose is to unload whatever was previously loaded.
+		* Purpose is to unload whatever was previously loaded.
 		*/
 		virtual void unload() = 0;
 
 		/**
-		* Renders the level.
-		* Always render on 0,0 position.
-		* @see Sprite::render()
+		* Renders the state.
+		* Pure virtual function.
 		*/
 		virtual void render() = 0;
 
 		/**
-		* Adds an entity to the vector.
+		* Adds a GameObject to the gameObjects vector.
 		*/
-		void addEntity(GameObject* const entity);
+		void addGameObject(GameObject* const gameObject_);
 
 		/**
-		* Deletes all the gameObjects inside the vector.
+		* Deletes all the gameObjects inside the gameObjects vector.
 		*/
-		void cleanEntities();
+		void cleanGameObjects();
 
 	protected:
-		std::vector<GameObject*> gameObjects; /**< List of all the gameObjects in the state. */
+		std::vector<GameObject*> gameObjects; /**< List of all the GameObjects in the state. */
 
 };

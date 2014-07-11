@@ -2,10 +2,11 @@
 
 #include "StateGame.h"
 #include "Sprite.h"
+#include "Animation.h"
 
 /**
-* The state for the initial splash screen.
-* Game state that will contain the initial splash images, before the main menu state is called.
+* The state used for testing the engine.
+* For now is just a placeholder, might have different states to test different things later.
 */
 class GStatePlaceholder : public StateGame {
 
@@ -22,8 +23,8 @@ class GStatePlaceholder : public StateGame {
 		virtual ~GStatePlaceholder();
 
 		/**
-		* Loads the level.
-		* From the Splash.lua script, loads all the necessary objects.
+		* Loads the state.
+		* 
 		*/
 		virtual void load();
 
@@ -41,9 +42,13 @@ class GStatePlaceholder : public StateGame {
 
 		/**
 		* Renders the state.
-		* Always renders on 0,0 position.
-		* @see Sprite::render
+		*
 		*/
 		virtual void render();
+
+	private:
+		Sprite* image;
+		Animation* animation;
+		SDL_Rect animationClip;
 
 };
