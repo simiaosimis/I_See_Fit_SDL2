@@ -20,3 +20,6 @@ build/
 
 # Kate files
 *.kate-swp
+
+# Doxygen gh-pages folder
+html/
