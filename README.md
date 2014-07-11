@@ -1,4 +1,16 @@
-sdl2-engine
+[SDL2]-engine
 ===========
+---
 
-Attempt to have a little SDL2 engine ready
+See the [GitHub page for this project]
+
+---
+
+License
+===
+---
+
+See LICENSE file.
+
+[SDL2]:http://www.libsdl.org/
+[GitHub page for this project]:https://caioicy.github.io/sdl2-engine/
