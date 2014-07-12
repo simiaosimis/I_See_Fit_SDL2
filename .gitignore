@@ -27,3 +27,7 @@ build/
 
 # Doxygen gh-pages folder
 gh-pages/
+
+#cpplint
+cpplint.py
+lint.log
