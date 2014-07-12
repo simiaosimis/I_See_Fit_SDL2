@@ -95,5 +95,4 @@ class Window {
 		SDL_Window *sdlWindow; /**< The SDL window, that will be the actual game window. */
 		static SDL_Renderer *sdlRenderer; /**< The SDL renderer to render onto. */
 
-		
 };

@@ -17,9 +17,9 @@ class Sprite {
 		* @param path_ : the image path.
 		* @see Sprite::loadFrom
 		*/
-		Sprite(const std::string& path_);
+		explicit Sprite(const std::string& path_);
 
-		Sprite(SDL_Surface* const surface_);
+		explicit Sprite(SDL_Surface* const surface_);
 
 		/**
 		* The destructor.
@@ -67,7 +67,7 @@ class Sprite {
 
 		double getAlpha();
 		void setAlpha(int alpha_);
-		
+
 	private:
 		/**
 		* Loads image from a path.

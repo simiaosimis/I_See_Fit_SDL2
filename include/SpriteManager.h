@@ -2,6 +2,7 @@
 
 #include "ResourceManager.h"
 #include "Sprite.h"
+#include <string>
 
 /**
 */

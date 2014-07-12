@@ -3,6 +3,7 @@
 #include "../lib/TmxParser/Tmx.h"
 #include "Sprite.h"
 #include <vector>
+#include <string>
 
 const int TILE_SIZE = 64;
 
@@ -17,7 +18,7 @@ class TileMap {
 		* The constructor.
 		* @param mapPath_ : Path to the desired Tiled map.
 		*/
-		TileMap(const std::string& mapPath_);
+		explicit TileMap(const std::string& mapPath_);
 
 		/**
 		* The destructor.

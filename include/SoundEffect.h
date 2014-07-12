@@ -6,7 +6,7 @@
 class SoundEffect {
 
 	public:
-		SoundEffect(const std::string& path_);
+		explicit SoundEffect(const std::string& path_);
 		~SoundEffect();
 
 		Mix_Chunk* getMixChunk();

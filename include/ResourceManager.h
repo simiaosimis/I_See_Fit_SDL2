@@ -21,7 +21,7 @@ class ResourceManager {
 		* @note Warns about resources being deleted with references still pointing to them.
 		*/
 		virtual ~ResourceManager();
-		
+
 		/**
 		* Retrieves the resource from the resources.
 		* @return The pointer to the wanted resource. Creates it, if not already in resources.

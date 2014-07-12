@@ -6,7 +6,7 @@
 class Music {
 
 	public:
-		Music(const std::string& path_);
+		explicit Music(const std::string& path_);
 		~Music();
 
 		Mix_Music* getMixMusic();

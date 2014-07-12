@@ -54,7 +54,7 @@ class AudioHandler {
 		* If the percent_ is over 100, will be set to 100.
 		* @param percent_ : The volume percentage (0-100).
 		*/
-		void setMusicVolume(const unsigned int percent_);		
+		void setMusicVolume(const unsigned int percent_);
 
 		/**
 		* Sets the volume for the effects.

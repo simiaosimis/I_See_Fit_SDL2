@@ -4,14 +4,15 @@
 #include "Window.h"
 #include "StateGame.h"
 
-#include <map>
-#include <memory>
-
 #include "AudioHandler.h"
 #include "InputHandler.h"
 #include "SpriteManager.h"
 #include "MusicManager.h"
 #include "SFXManager.h"
+
+#include <map>
+#include <memory>
+#include <string>
 
 /**
 * Main structure class for the game.
@@ -39,7 +40,7 @@ class Game {
 		* Destroys the game's Window and states, and unloads current state.
 		*/
 		~Game();
-		
+
 		/**
 		* The main game loop.
 		* Orders the game structure, such as inputs, updates, and rendering.

@@ -7,7 +7,7 @@
 * Uses SDL2_GFX, by ferzkopp.
 */
 class FPSWrapper {
-	
+
 	public:
 		/**
 		* Initializes FPS managing.
@@ -25,5 +25,5 @@ class FPSWrapper {
 		* @return The time in seconds since the last call.
 		*/
 		static double delay(FPSmanager& fpsManager_);
-		
+
 };

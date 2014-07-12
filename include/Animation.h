@@ -2,12 +2,12 @@
 
 #include "SDLWrapper.h"
 
-#define ANIMATION_LIMIT 10 // Apparently defines the max horizontal sprites in the spritesheet
+#define ANIMATION_LIMIT 10 /**< Apparently defines the max horizontal sprites in the spritesheet. */
 
 /**
 * Class in control of animating a sprite.
 */
-class Animation{
+class Animation {
 
 	public:
 		/**
@@ -44,7 +44,7 @@ class Animation{
 		int getCurrentFrame();
 
 		void changeWidthHeight(const int width_, const int height_);
-		
+
 		/**
 		* Changes the animation to another.
 		* @note See Animation::Animation for the parameters descriptions.

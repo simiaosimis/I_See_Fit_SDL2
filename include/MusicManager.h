@@ -2,6 +2,7 @@
 
 #include "ResourceManager.h"
 #include "Music.h"
+#include <string>
 
 /**
 */

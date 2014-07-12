@@ -2,6 +2,7 @@
 
 #include "ResourceManager.h"
 #include "SoundEffect.h"
+#include <string>
 
 /**
 */

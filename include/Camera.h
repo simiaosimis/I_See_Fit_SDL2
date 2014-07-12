@@ -15,7 +15,7 @@ class Camera {
 		* Initializes all the attributes.
 		* @param gameObject_ : The GameObject to centralize the camera on.
 		*/
-		Camera(GameObject* const gameObject_);
+		explicit Camera(GameObject* const gameObject_);
 
 		/**
 		* The destructor.

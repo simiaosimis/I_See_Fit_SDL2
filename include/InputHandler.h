@@ -18,7 +18,7 @@ class InputHandler {
 		* Used to create the input handler instance.
 		*/
 		InputHandler();
-		
+
 		/**
 		* The destructor.
 		* Deletes the InputHandler instance.

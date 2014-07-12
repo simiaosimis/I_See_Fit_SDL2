@@ -10,10 +10,10 @@ class Text : public GameObject {
 
 	public:
 		Text(const double x_, const double y_, const char* path_, const int size_,
-			const char* text_, const SDL_Color color_); 
+			const char* text_, const SDL_Color color_);
 
 		Text(const double x_, const double y_, const char* path_, const int size_,
-			const char* text_); 
+			const char* text_);
 
 		virtual ~Text();
 

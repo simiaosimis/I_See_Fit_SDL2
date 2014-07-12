@@ -3,6 +3,8 @@
 #include "Sprite.h"
 #include "SDLWrapper.h"
 
+#include <string>
+
 /**
 * Base class for all game objects (gameObjects).
 * The entity contains the (x,y) position, width and height, and a sprite.
@@ -51,7 +53,7 @@ class GameObject {
 
 		double x; /**< The position in the x axis. */
 		double y; /**< The position in the y axis. */
-		bool isRight; /**< The direction in the x axis. */ 
+		bool isRight; /**< The direction in the x axis. */
 
 	protected:
 		/**
