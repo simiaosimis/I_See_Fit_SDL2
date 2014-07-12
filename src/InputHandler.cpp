@@ -17,25 +17,25 @@ void InputHandler::handleInput() {
 
 	int pendingEvent = 0;
 
-	do{
+	do {
 
-		pendingEvent = SDL_PollEvent(&this->sdlEvent); 
+		pendingEvent = SDL_PollEvent(&this->sdlEvent);
 
-		if(this->sdlEvent.type == SDL_CONTROLLERBUTTONDOWN 
-			|| this->sdlEvent.type == SDL_CONTROLLERBUTTONUP 
-			|| this->sdlEvent.type == SDL_CONTROLLERAXISMOTION){
-			
+		if(this->sdlEvent.type == SDL_CONTROLLERBUTTONDOWN
+			|| this->sdlEvent.type == SDL_CONTROLLERBUTTONUP
+			|| this->sdlEvent.type == SDL_CONTROLLERAXISMOTION) {
+
 			this->controllerHandler->handleInput(this->sdlEvent);
 
-			for(unsigned int i = 0; i < this->keyStates.size(); i++){
+			for(unsigned int i = 0; i < this->keyStates.size(); i++) {
 				this->keyStates[i] = this->controllerHandler->keyStates[i];
 			}
-			
+
 		}
 		// On keydown.
-		if(this->sdlEvent.type == SDL_KEYDOWN){
+		if(this->sdlEvent.type == SDL_KEYDOWN) {
 
-			switch(this->sdlEvent.key.keysym.sym){
+			switch(this->sdlEvent.key.keysym.sym) {
 				case SDLK_SPACE: // SPACEBAR.
 					this->keyStates[GameKeys::SPACE] = true;
 					break;
@@ -60,9 +60,9 @@ void InputHandler::handleInput() {
 		}
 
 		// On keyup.
-		else if(this->sdlEvent.type == SDL_KEYUP){
+		else if(this->sdlEvent.type == SDL_KEYUP) {
 
-			switch(this->sdlEvent.key.keysym.sym){
+			switch(this->sdlEvent.key.keysym.sym) {
 				case SDLK_SPACE: // SPACEBAR.
 					this->keyStates[GameKeys::SPACE] = false;
 					break;
@@ -85,11 +85,11 @@ void InputHandler::handleInput() {
 					break;
 			}
 		}
-		
+
 		// On window exit (X).
-		else if(this->sdlEvent.type == SDL_QUIT){
-	    	signalExit();
-	    }
+		else if(this->sdlEvent.type == SDL_QUIT) {
+			signalExit();
+		}
 
 	} while(pendingEvent != 0);
 }

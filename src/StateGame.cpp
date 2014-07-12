@@ -1,6 +1,6 @@
 #include "StateGame.h"
 
-StateGame::~StateGame(){
+StateGame::~StateGame() {
 
 }
 
@@ -13,7 +13,7 @@ void StateGame::addGameObject(GameObject* const gameObject_) {
 }
 
 void StateGame::cleanGameObjects() {
-	for(auto gameObject : this->gameObjects){
+	for(auto gameObject : this->gameObjects) {
 		delete gameObject;
 		gameObject = nullptr;
 	}

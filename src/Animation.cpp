@@ -3,7 +3,7 @@
 Animation::Animation(const int x_, const int y_, const int spriteWidth_,
 	const int spriteHeight_, const unsigned int numberOfImages_, const bool loop_,
 	const double totalTime_) :
-	
+
 	x(x_),
 	y(y_),
 	initialX(x_),
@@ -31,32 +31,32 @@ void Animation::update(SDL_Rect& clip, const double dt_) {
 	const double deltaT = (this->totalTime / this->numberOfImages);
 
 	// Check if the frame has changed.
-    this->totalElapsedTime += dt_;
+	this->totalElapsedTime += dt_;
 
-    if(this->totalElapsedTime >= deltaT) {
-        
-        this->totalElapsedTime = 0;
-        this->animationCount += 1;
+	if(this->totalElapsedTime >= deltaT) {
+		this->totalElapsedTime = 0;
+		this->animationCount += 1;
 
-        if(this->animationCount <= this->numberOfImages){
-	        if(this->x < (int)ANIMATION_LIMIT){
-	        	this->x += 1;
-	        }
-	        else{
-	        	this->y += 1;
-	        	this->x = 0;
-	        }
-    	}
+		if(this->animationCount <= this->numberOfImages) {
+			if(this->x < (int)ANIMATION_LIMIT) {
+				this->x += 1;
+			}
+			else {
+				this->y += 1;
+				this->x = 0;
+			}
+		}
 
-    	if(endOfAnimation){
-    		this->x= this->initialX;
-    		this->y= this->initialY;
-    		this->animationCount = 0;
-    	}
-    }
+		if(endOfAnimation) {
+			this->x= this->initialX;
+			this->y= this->initialY;
+			this->animationCount = 0;
+		}
+	}
 
-   	const int positionX_ = this->x * this->spriteWidth;
+	const int positionX_ = this->x * this->spriteWidth;
 	const int positionY_ = this->y * this->spriteHeight;
+
 	updateClip(clip, positionX_, positionY_);
 }
 

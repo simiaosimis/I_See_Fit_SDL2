@@ -1,6 +1,6 @@
 #include "Text.h"
 #include "Logger.h"
- 
+
 Text::Text(const double x_, const double y_, const char* path_, const int size_,
 	const char* text_, const SDL_Color color_) :
 	GameObject(x_, y_),
@@ -8,7 +8,7 @@ Text::Text(const double x_, const double y_, const char* path_, const int size_,
 {
 	this->font = TTF_OpenFont(path_, size_);
 
-	if(this->font == nullptr){
+	if(this->font == nullptr) {
 		Log(ERROR) << "Failed to open font." << TTF_GetError();
 	}
 
@@ -16,17 +16,17 @@ Text::Text(const double x_, const double y_, const char* path_, const int size_,
 	const int surfaceW = surface->w;
 	const int surfaceH = surface->h;
 
-	if(surface != nullptr){
+	if(surface != nullptr) {
 		this->sprite = new Sprite(surface);
 
-		// Idk.
+		/// @todo Absolute hack, figure out how to not need this.
 		this->sprite->setWidth(surfaceW);
 		this->sprite->setHeight(surfaceH);
 	}
-	else{
+	else {
 		Log(ERROR) << "Could not load font surface.";
 	}
-	
+
 }
 
 Text::Text(const double x_, const double y_, const char* path_, const int size_,
@@ -36,7 +36,7 @@ Text::Text(const double x_, const double y_, const char* path_, const int size_,
 {
 	this->font = TTF_OpenFont(path_, size_);
 
-	if(this->font == nullptr){
+	if(this->font == nullptr) {
 		Log(ERROR) << "Failed to open font." << TTF_GetError();
 	}
 
@@ -44,21 +44,21 @@ Text::Text(const double x_, const double y_, const char* path_, const int size_,
 	const int surfaceW = surface->w;
 	const int surfaceH = surface->h;
 
-	if(surface != nullptr){
+	if(surface != nullptr) {
 		this->sprite = new Sprite(surface);
 
-		// Idk.
+		/// @todo Absolute hack, figure out how to not need this.
 		this->sprite->setWidth(surfaceW);
 		this->sprite->setHeight(surfaceH);
 	}
-	else{
+	else {
 		Log(ERROR) << "Could not load font surface.";
 	}
-	
+
 }
 
-Text::~Text(){
-	if(this->sprite != nullptr){
+Text::~Text() {
+	if(this->sprite != nullptr) {
 		delete this->sprite;
 		this->sprite = nullptr;
 	}
@@ -66,9 +66,9 @@ Text::~Text(){
 	TTF_CloseFont(this->font);
 }
 
-void Text::changeText(const char* text_, const SDL_Color color_){
+void Text::changeText(const char* text_, const SDL_Color color_) {
 
-	if(this->sprite != nullptr){
+	if(this->sprite != nullptr) {
 		delete this->sprite;
 		this->sprite = nullptr;
 	}
@@ -77,22 +77,22 @@ void Text::changeText(const char* text_, const SDL_Color color_){
 	const int surfaceW = surface->w;
 	const int surfaceH = surface->h;
 
-	if(surface != nullptr){
+	if(surface != nullptr) {
 		this->sprite = new Sprite(surface);
 
-		// Idk.
+		/// @todo Absolute hack, figure out how to not need this.
 		this->sprite->setWidth(surfaceW);
 		this->sprite->setHeight(surfaceH);
 	}
-	else{
+	else {
 		Log(ERROR) << "Could not load font surface.";
 	}
 
 }
 
-void Text::changeText(const char* text_){
+void Text::changeText(const char* text_) {
 
-	if(this->sprite != nullptr){
+	if(this->sprite != nullptr) {
 		delete this->sprite;
 		this->sprite = nullptr;
 	}
@@ -101,31 +101,31 @@ void Text::changeText(const char* text_){
 	const int surfaceW = surface->w;
 	const int surfaceH = surface->h;
 
-	if(surface != nullptr){
+	if(surface != nullptr) {
 		this->sprite = new Sprite(surface);
 
-		// Idk.
+		/// @todo Absolute hack, figure out how to not need this.
 		this->sprite->setWidth(surfaceW);
 		this->sprite->setHeight(surfaceH);
 	}
-	else{
+	else {
 		Log(ERROR) << "Could not load font surface.";
 	}
 
 }
 
-void Text::update(const double dt_){
-	(void(dt_)); //unused
+void Text::update(const double dt_) {
+	(void(dt_)); // Unused.
 }
 
-void Text::render(const double cameraX_, const double cameraY_){
+void Text::render(const double cameraX_, const double cameraY_) {
 	const int dx = this->x - cameraX_;
 	const int dy = this->y - cameraY_;
 
-	if(this->sprite != nullptr){
+	if(this->sprite != nullptr) {
 		this->sprite->render(dx, dy);
 	}
-	else{
+	else {
 		Log(WARN) << "Null sprite for text";
 	}
 }

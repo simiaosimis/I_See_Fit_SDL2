@@ -9,7 +9,7 @@ SoundEffect::SoundEffect(const std::string& path_) :
 {
 	this->mixChunk = Mix_LoadWAV(this->path.c_str());
 
-	if(this->mixChunk == nullptr){
+	if(this->mixChunk == nullptr) {
 		Log(ERROR) << "Couldn't load sound effect (" << this->path << "). " << Mix_GetError();
 	}
 }
@@ -22,6 +22,6 @@ Mix_Chunk* SoundEffect::getMixChunk() {
 	return this->mixChunk;
 }
 
-std::string SoundEffect::getPath(){
+std::string SoundEffect::getPath() {
 	return this->path;
 }

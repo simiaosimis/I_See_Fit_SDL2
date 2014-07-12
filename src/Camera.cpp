@@ -28,19 +28,19 @@ void Camera::updatePosition() {
 	this->clip.y = (this->gameObject->y + this->gameObject->getHeight() / 2) - (this->clip.h / 2);
 
 	// Left wall.
-	if(this->clip.x < 0){
+	if(this->clip.x < 0) {
 		this->clip.x = 0;
 	}
 	// Right wall.
-	else if(this->clip.x > (int)this->levelW - this->clip.w){
+	else if(this->clip.x > (int)this->levelW - this->clip.w) {
 		this->clip.x = (int)this->levelW - this->clip.w;
 	}
 	// Top wall.
-	if(this->clip.y < 0){
+	if(this->clip.y < 0) {
 		this->clip.y = 0;
 	}
 	// Bottom wall.
-	else if(this->clip.y > (int)this->levelH - this->clip.h){
+	else if(this->clip.y > (int)this->levelH - this->clip.h) {
 		this->clip.y = (int)this->levelH - this->clip.h;
 	}
 }

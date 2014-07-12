@@ -1,7 +1,7 @@
 #include "SDLWrapper.h"
 #include "Logger.h"
 
-bool SDLWrapper::initialize(){
+bool SDLWrapper::initialize() {
 	bool successSDL = false;
 	bool successIMG = false;
 	bool successMixer = false;
@@ -13,13 +13,13 @@ bool SDLWrapper::initialize(){
 
 	// Initializing SDL_TTF.
 	const int ttfInit = TTF_Init();
-	if(ttfInit == 0){
+	if(ttfInit == 0) {
 		successTTF = true;
 
 		SDL_TTF_VERSION(&compiled);
 		SDLWrapper::logSDLVersion("SDL_TTF", compiled);
 	}
-	else{
+	else {
 		Log(ERROR) << "Could not initialize TTF." << TTF_GetError();
 	}
 
@@ -27,7 +27,7 @@ bool SDLWrapper::initialize(){
 	const Uint32 initFlags = SDL_INIT_EVERYTHING;
 	const int sdlInit = SDL_Init(initFlags);
 
-	if(sdlInit == 0){
+	if(sdlInit == 0) {
 		successSDL = true;
 
 		SDL_version linked;
@@ -36,19 +36,19 @@ bool SDLWrapper::initialize(){
 
 		SDLWrapper::logSDLVersion("SDL", compiled, SDL_GetRevision());
 	}
-	else{
+	else {
 		Log(ERROR) << "Could not initialize SDL." << SDL_GetError();
 	}
 
 	// Initializing SDL_image with imgFlags.
 	const Uint32 imgFlags = IMG_INIT_PNG;
-	if((IMG_Init(imgFlags) & imgFlags)){
+	if((IMG_Init(imgFlags) & imgFlags)) {
 		successIMG = true;
 
 		SDL_IMAGE_VERSION(&compiled);
 		SDLWrapper::logSDLVersion("SDL_image", compiled);
 	}
-	else{
+	else {
 		Log(ERROR) << "Could not initialize SDL_Image." << IMG_GetError();
 	}
 
@@ -57,7 +57,7 @@ bool SDLWrapper::initialize(){
 	const int channels = 2;
 	const int chunksize = 4096;
 	const int initialized = Mix_OpenAudio(frequency, MIX_DEFAULT_FORMAT, channels, chunksize);
-	if(initialized == 0){
+	if(initialized == 0) {
 		successMixer = true;
 
 		SDL_MIXER_VERSION(&compiled);
@@ -67,7 +67,7 @@ bool SDLWrapper::initialize(){
 
 		Log(DEBUG) << "Allocated " << channelsAllocated << " channels for the mixer.";
 	}
-	else{
+	else {
 		Log(ERROR) << "Could not initialize SDL_Mixer" << Mix_GetError();
 	}
 
@@ -75,7 +75,7 @@ bool SDLWrapper::initialize(){
 	return (successSDL && successIMG && successMixer && successTTF);
 }
 
-void SDLWrapper::close(){
+void SDLWrapper::close() {
 	Log(DEBUG) << "Closing SDL.";
 
 	// Quits SDL_mixer.
@@ -93,7 +93,7 @@ void SDLWrapper::close(){
 }
 
 void SDLWrapper::logSDLVersion(const std::string& what_, const SDL_version& compiled_,
-	std::string revision_){
+	std::string revision_) {
 
 	Log(DEBUG) << what_ << " Version (Compiled): " << (int)compiled_.major << "." <<
 		(int)compiled_.minor << "." << (int)compiled_.patch <<

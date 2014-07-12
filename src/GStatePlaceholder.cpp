@@ -8,7 +8,7 @@ GStatePlaceholder::GStatePlaceholder() :
 	animation(nullptr),
 	animationClip{0, 0, 0, 0}
 {
-	
+
 }
 
 GStatePlaceholder::~GStatePlaceholder() {
@@ -36,7 +36,7 @@ void GStatePlaceholder::unload() {
 void GStatePlaceholder::update(const double dt_) {
 	const std::array<bool, GameKeys::MAX> keyStates = Game::instance().getInput();
 
-	if(keyStates[GameKeys::SPACE] == true){
+	if(keyStates[GameKeys::SPACE] == true) {
 		Game::instance().getAudioHandler().addSoundEffect("res/audio/sfx/test_sfx.wav");
 	}
 

@@ -1,7 +1,7 @@
 #include "Util.h"
 #include <sstream>
 
-std::string Util::toString(const int number_){
+std::string Util::toString(const int number_) {
 	std::string result;
 	std::ostringstream oss;
 	oss.str("");

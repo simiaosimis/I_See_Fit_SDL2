@@ -22,8 +22,9 @@ void AudioHandler::playMusic(const int times_) {
 	if(this->currentMusic != nullptr) {
 		const int playedMusic = Mix_PlayMusic(this->currentMusic->getMixMusic(), times_);
 
-		if(playedMusic == -1){
-			Log(ERROR) << "Couldn't play music (" << this->currentMusic->getPath() << "). " << Mix_GetError();
+		if(playedMusic == -1) {
+			Log(ERROR) << "Couldn't play music (" << this->currentMusic->getPath() << "). "
+				<< Mix_GetError();
 		}
 	}
 	else {
@@ -50,7 +51,7 @@ void AudioHandler::playEffect(const int times_) {
 	const int playedChannel = Mix_PlayChannel(-1, this->currentEffects.back()->getMixChunk(),
 		times_);
 
-	if(playedChannel == -1){
+	if(playedChannel == -1) {
 		Log(ERROR) << "Failed to play sound effect on channel " << playedChannel << ". "
 			<< Mix_GetError();
 	}
@@ -75,10 +76,10 @@ void AudioHandler::clearChannel(const int channel_) {
 	std::vector<SoundEffect*>::iterator it;
 
 	for(it = this->currentEffects.begin(); it != this->currentEffects.end();) {
-		if((*it)->channel == channel_){
+		if((*it)->channel == channel_) {
 			this->currentEffects.erase(it);
 		}
-		else{
+		else {
 			it++;
 		}
 	}

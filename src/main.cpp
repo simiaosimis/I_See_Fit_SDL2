@@ -3,7 +3,7 @@
 #include "Configuration.h"
 #include "UsefulDefines.h"
 
-int main(int argc, char** argv){
+int main(int argc, char** argv) {
 
 	// Unused.
 	UNUSED(argc);
@@ -15,11 +15,11 @@ int main(int argc, char** argv){
 
 	const bool systemsInitialized = SDLWrapper::initialize();
 
-	if(systemsInitialized){
+	if(systemsInitialized) {
 		Game::instance().runGame();
 		delete &Game::instance();
 	}
-	else{
+	else {
 		Log(ERROR) << "Systems were not initialized.";
 	}
 

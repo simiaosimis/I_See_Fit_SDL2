@@ -1,7 +1,7 @@
 #include "Collision.h"
 #include <cmath>
 
-bool Collision::rectsCollided(const SDL_Rect& a_, const SDL_Rect& b_){
+bool Collision::rectsCollided(const SDL_Rect& a_, const SDL_Rect& b_) {
     // Calculate the sides of rect A.
     const int leftA = a_.x;
     const int rightA = a_.x + a_.w;
@@ -14,18 +14,21 @@ bool Collision::rectsCollided(const SDL_Rect& a_, const SDL_Rect& b_){
     const int topB = b_.y;
     const int bottomB = b_.y + b_.h;
 
+    bool collided = false;
+
     // If any of the sides from A are outside of B.
-    if(bottomA <= topB || topA >= bottomB || rightA <= leftB || leftA >= rightB){
-        return false;
+    if(bottomA <= topB || topA >= bottomB || rightA <= leftB || leftA >= rightB) {
+        collided = false;
     }
     // If none of the sides from A are outside B.
-    else{
-        return true;
+    else {
+        collided = true;
     }
 
+    return collided;
 }
 
-Collision::RectangleSide Collision::rectsCollidedSide(const SDL_Rect& a_, const SDL_Rect& b_){
+Collision::RectangleSide Collision::rectsCollidedSide(const SDL_Rect& a_, const SDL_Rect& b_) {
     const double w = 0.5 * (a_.w + b_.w);
     const double h = 0.5 * (a_.h + b_.h);
 
@@ -37,29 +40,29 @@ Collision::RectangleSide Collision::rectsCollidedSide(const SDL_Rect& a_, const 
     const double dx = centerAx - centerBx;
     const double dy = centerAy - centerBy;
 
-    if (abs(dx) <= w && abs(dy) <= h){
+    if (abs(dx) <= w && abs(dy) <= h) {
         /* collision! */
         const double wy = w * dy;
         const double hx = h * dx;
 
-        if (wy > hx){
-            if (wy > -hx){
+        if (wy > hx) {
+            if (wy > -hx) {
                 return RectangleSide::TOP;
             }
-            else{
+            else {
                 return RectangleSide::LEFT;
             }
         }
-        else{
-            if (wy > -hx){
+        else {
+            if (wy > -hx) {
                 return RectangleSide::RIGHT;
             }
-            else{
+            else {
                 return RectangleSide::BOTTOM;
             }
         }
     }
-    else{
+    else {
         return RectangleSide::NONE;
     }
 }

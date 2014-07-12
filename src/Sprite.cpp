@@ -24,19 +24,19 @@ Sprite::Sprite(SDL_Surface* const surface_) :
 	flipHorizontal(false)
 {
 	// Display error log if image wasn't loaded.
-	if(this->sdlTexture == nullptr){
+	if(this->sdlTexture == nullptr) {
 		Log(ERROR) << "Sprite load failed: " << this->path;
 	}
 }
 
-Sprite::~Sprite(){
-	if(this->sdlTexture != nullptr){
+Sprite::~Sprite() {
+	if(this->sdlTexture != nullptr) {
 		SDL_DestroyTexture(this->sdlTexture);
 		this->sdlTexture = nullptr;
 	}
 }
 
-void Sprite::loadFrom(const std::string& path_){
+void Sprite::loadFrom(const std::string& path_) {
 	assert(Window::getRenderer() != nullptr && "Window renderer should not be null!");
 
 
@@ -46,23 +46,23 @@ void Sprite::loadFrom(const std::string& path_){
 	this->sdlTexture = surfaceToTexture(loadedSurface);
 
 	// Display error log if image wasn't loaded.
-	if(this->sdlTexture == nullptr){
+	if(this->sdlTexture == nullptr) {
 		Log(ERROR) << "Sprite load failed: " << path_;
 	}
 }
 
 void Sprite::render(const double x_, const double y_, SDL_Rect* const clip_,
 	const bool stretch_, const double angle_, SDL_Point* const center_,
-	SDL_RendererFlip flip_){
+	SDL_RendererFlip flip_) {
 
 	// This is the destination SDL_Rect structure.
 	SDL_Rect renderQuad = {(int)x_, (int)y_, (int)this->width, (int)this->height};
 
-	if(clip_ != nullptr){
+	if(clip_ != nullptr) {
 		renderQuad.w = clip_->w;
 		renderQuad.h = clip_->h;
 	}
-	else{
+	else {
 		// Don't clip the sprite.
 	}
 
@@ -76,86 +76,86 @@ void Sprite::render(const double x_, const double y_, SDL_Rect* const clip_,
 			&renderQuad, angle_, center_, flip_) :
 		SDL_RenderCopyEx(Window::getRenderer(), this->sdlTexture, clip_,
 			&stretch, angle_, center_, flip_);
-	
-	if(successfullRender != 0){
+
+	if(successfullRender != 0) {
 		Log(ERROR) << "Failed to render sprite." << SDL_GetError();
 	}
 }
 
-unsigned int Sprite::getWidth(){
+unsigned int Sprite::getWidth() {
 	return this->width;
 }
 
-unsigned int Sprite::getHeight(){
+unsigned int Sprite::getHeight() {
 	return this->height;
 }
 
-void Sprite::setWidth(unsigned int width_){
+void Sprite::setWidth(unsigned int width_) {
 	this->width = width_;
 }
 
-void Sprite::setHeight(unsigned int height_){
+void Sprite::setHeight(unsigned int height_) {
 	this->height = height_;
 }
 
-SDL_Texture* Sprite::surfaceToTexture(SDL_Surface* const surface_){
+SDL_Texture* Sprite::surfaceToTexture(SDL_Surface* const surface_) {
 	// The final texture.
 	SDL_Texture* newTexture = nullptr;
 
-	if(surface_ != nullptr){
+	if(surface_ != nullptr) {
 		// Create texture from the surface pixels.
         newTexture = SDL_CreateTextureFromSurface(Window::getRenderer(), surface_);
-		if(newTexture != nullptr){
+		if(newTexture != nullptr) {
 			// Set the Sprites width and height, from the loaded surface.
 			this->width = surface_->w;
 			this->height = surface_->h;
 		}
-		else{
+		else {
 			Log(ERROR) << "Could not create texture from surface." << SDL_GetError();
 		}
 
 		// Free the loaded surface.
 		SDL_FreeSurface(surface_);
 	}
-	else{
+	else {
 		Log(ERROR) << "Could not load surface from path." << IMG_GetError();
 	}
 
 	return newTexture;
 }
 
-std::string Sprite::getPath(){
+std::string Sprite::getPath() {
 	return this->path;
 }
 
-double Sprite::getAlpha(){
+double Sprite::getAlpha() {
 	Uint8 alpha = 0;
 
 	const int rc = SDL_GetTextureAlphaMod(this->sdlTexture, &alpha);
-	if(rc != 0){
+	if(rc != 0) {
 		Log(ERROR) << "Could not get alpha value from Sprite (" << this->path << "). " << SDL_GetError();
 	}
 
-	return ((double)alpha); // /255.0
+	return ((double)alpha);
 }
 
-void Sprite::setAlpha(int alpha_){
-	if(alpha_ < 0){
+void Sprite::setAlpha(int alpha_) {
+	if(alpha_ < 0) {
 		alpha_ = 0;
 	}
-	else if(alpha_ > 255){
+	else if(alpha_ > 255) {
 		alpha_ = 255;
 	}
 
 	const int rc = SDL_SetTextureAlphaMod(this->sdlTexture, alpha_);
-	if(rc != 0){
+	if(rc != 0) {
 		Log(ERROR) << "Could not set alpha value of Sprite (" << this->path << "). " << SDL_GetError();
 	}
 }
 
-void Sprite::setBlendMode(SDL_BlendMode blending_){
+void Sprite::setBlendMode(SDL_BlendMode blending_) {
 	const int rc = SDL_SetTextureBlendMode(this->sdlTexture, blending_);
-	if(rc != 0){
+	if(rc != 0) {
 		Log(ERROR) << "Could not set blend mode of Sprite (" << this->path << "). " << SDL_GetError();
 	}
 }
