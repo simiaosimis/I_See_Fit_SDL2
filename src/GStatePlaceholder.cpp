@@ -20,7 +20,7 @@ void GStatePlaceholder::load() {
 
 	Log(INFO) << "Press SPACEBAR for the SFX.";
 
-	this->animation = new Animation(0, 4, 32, 32, 5, false, 2);
+	this->animation = new Animation(0, 4, 32, 32, 5, 5.0);
 	this->animationClip = {0, 0, 0, 0};
 	this->image = Game::instance().getSprite("res/images/spritesheet.png");
 

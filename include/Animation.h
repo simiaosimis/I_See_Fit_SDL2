@@ -2,26 +2,25 @@
 
 #include "SDLWrapper.h"
 
-#define ANIMATION_LIMIT 10 /**< Apparently defines the max horizontal sprites in the spritesheet. */
-
 /**
 * Class in control of animating a sprite.
+* @todo Control if animation should loop or not.
 */
 class Animation {
 
 	public:
 		/**
 		* The constructor.
-		* Initializes all attributes.
-		* @param x_ : The x position on the spritesheet.
-		* @param y_ : The y position on the spritesheet.
-		* @param spriteWidth_ : The width of the sprite to animate.
-		* @param spriteHeight_ : The height of the sprite to animate.
+		* @param x_ : The initial x position on the spritesheet.
+		* @param y_ : The initial y position on the spritesheet.
+		* @param spriteWidth_ : The width of the sprite to animate (in pixels).
+		* @param spriteHeight_ : The height of the sprite to animate (in pixels).
 		* @param numberOfImages_ : The number of images to animate inside the spritesheet.
-		* @param loop_ : Whether to loop or not.
+		* @param totalTime_ : The time in seconds each animation loop takes.
 		*/
-		Animation(const int x_, const int y_, const int spriteWidth_, const int spriteHeight_,
-			const unsigned int numberOfImages_, const bool loop_, const double totalTime_);
+		Animation(const unsigned int x_, const unsigned int y_,
+			const unsigned int spriteWidth_, const unsigned int spriteHeight_,
+			const unsigned int numberOfImages_, const double totalTime_);
 
 		/**
 		* The destructor.
@@ -33,24 +32,25 @@ class Animation {
 		* @param clip_ : Reference to the clip of whatever object the animation is a part of.
 		* @param dt_ : Delta time. Time elapsed between one frame and the other, independent
 		* 	of processing speed.
-		* @param totalTime_ : How much time each frame should have. Affects the speed on which
-		* 	the animation changes.
 		*/
 		void update(SDL_Rect& clip_, const double dt_);
 
 		/**
 		* @return The current frame the animation is in.
 		*/
-		int getCurrentFrame();
+		unsigned int getCurrentFrame();
 
-		void changeWidthHeight(const int width_, const int height_);
+		/**
+		* Changes the dimensions of the clip on the spritesheet.
+		*/
+		void changeWidthHeight(const unsigned int width_, const unsigned int height_);
 
 		/**
 		* Changes the animation to another.
 		* @note See Animation::Animation for the parameters descriptions.
 		*/
-		void changeAnimation(const int x_, const int y_, const unsigned int numberOfImages_,
-			const bool loop_, const double totalTime_);
+		void changeAnimation(const unsigned int x_, const unsigned int y_,
+			const unsigned int numberOfImages_,	const double totalTime_);
 
 	private:
 		/**
@@ -59,19 +59,20 @@ class Animation {
 		* @param x_ : New x position.
 		* @param y_ : New y position.
 		*/
-		void updateClip(SDL_Rect& clip_, const int x_, const int y_);
+		void updateClip(SDL_Rect& clip_, const unsigned int x_, const unsigned int y_);
 
-		int x; /**< The position on x axis on the sprite. */
-		int y; /**< The position on x axis on the sprite. */
-		int initialX; /**< Where to start/restart the animation on x. */
-		int initialY; /**< Where to start/restart the animation on y. */
-		int spriteWidth; /**< The sprite width. */
-		int spriteHeight; /**< The sprite height. */
-		int numberOfImages; /**< The number of images to animate inside the spritesheet. */
-		bool loop; /**< Whether to loop or not. (NOT WORKING)*/
+		unsigned int x; /**< The position on x axis on the sprite. */
+		unsigned int y; /**< The position on x axis on the sprite. */
+		unsigned int initialX; /**< Where to start/restart the animation on x. */
+		unsigned int initialY; /**< Where to start/restart the animation on y. */
+		unsigned int spriteWidth; /**< The sprite width. (in pixels) */
+		unsigned int spriteHeight; /**< The sprite height. (in pixels) */
+		unsigned int numberOfImages; /**< The number of images to animate inside the
+			spritesheet. */
 		double totalElapsedTime; /**< Total time elapsed on the animation, to check if the
 			frame changed. */
-		double totalTime; /**< Total time for each animation loop. */
-		int animationCount;
+		double totalTime; /**< Total time in seconds for each animation loop. */
+		unsigned int animationCount; /**< Index of the current image relative to the number of
+			images. */
 
 };

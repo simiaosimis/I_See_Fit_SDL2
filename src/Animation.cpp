@@ -1,8 +1,8 @@
 #include "Animation.h"
 
-Animation::Animation(const int x_, const int y_, const int spriteWidth_,
-	const int spriteHeight_, const unsigned int numberOfImages_, const bool loop_,
-	const double totalTime_) :
+Animation::Animation(const unsigned int x_, const unsigned int y_,
+	const unsigned int spriteWidth_, const unsigned int spriteHeight_,
+	const unsigned int numberOfImages_, const double totalTime_) :
 
 	x(x_),
 	y(y_),
@@ -11,7 +11,6 @@ Animation::Animation(const int x_, const int y_, const int spriteWidth_,
 	spriteWidth(spriteWidth_),
 	spriteHeight(spriteHeight_),
 	numberOfImages(numberOfImages_),
-	loop(loop_),
 	totalElapsedTime(0.0),
 	totalTime(totalTime_),
 	animationCount(0)
@@ -26,19 +25,22 @@ Animation::~Animation() {
 void Animation::update(SDL_Rect& clip, const double dt_) {
 	// Compare the position on the sprite with the number of positions to know if is the
 	// end of the animation.
-	const bool endOfAnimation = ((this->animationCount + 1) >= this->numberOfImages);
+	const bool endOfAnimation = (getCurrentFrame() >= this->numberOfImages);
 
-	const double deltaT = (this->totalTime / this->numberOfImages);
+	const double timeForEachFrame = (this->totalTime / this->numberOfImages);
 
-	// Check if the frame has changed.
 	this->totalElapsedTime += dt_;
 
-	if(this->totalElapsedTime >= deltaT) {
+	// Check if the frame has changed.
+	if(this->totalElapsedTime >= timeForEachFrame) {
 		this->totalElapsedTime = 0;
 		this->animationCount += 1;
 
+		// Apparently defines the max horizontal sprites in the spritesheet.
+		const unsigned int animationLimit = 10;
+
 		if(this->animationCount <= this->numberOfImages) {
-			if(this->x < (int)ANIMATION_LIMIT) {
+			if(this->x < animationLimit) {
 				this->x += 1;
 			}
 			else {
@@ -48,43 +50,42 @@ void Animation::update(SDL_Rect& clip, const double dt_) {
 		}
 
 		if(endOfAnimation) {
-			this->x= this->initialX;
-			this->y= this->initialY;
+			this->x = this->initialX;
+			this->y = this->initialY;
 			this->animationCount = 0;
 		}
 	}
 
-	const int positionX_ = this->x * this->spriteWidth;
-	const int positionY_ = this->y * this->spriteHeight;
+	const unsigned int positionX_ = this->x * this->spriteWidth;
+	const unsigned int positionY_ = this->y * this->spriteHeight;
 
 	updateClip(clip, positionX_, positionY_);
 }
 
-void Animation::changeAnimation(const int x_, const int y_, const unsigned int numberOfImages_,
-	const bool loop_, const double totalTime_) {
+void Animation::changeAnimation(const unsigned int x_, const unsigned int y_,
+	const unsigned int numberOfImages_, const double totalTime_) {
 
 	this->x = x_;
 	this->y = y_;
 	this->initialX = x_;
 	this->initialY = y_;
 	this->numberOfImages = (numberOfImages_ == 0) ? 1 : numberOfImages_;
-	this->loop = loop_;
 	this->totalTime = totalTime_;
 	this->animationCount = 0;
 }
 
-void Animation::updateClip(SDL_Rect& clip, const int x_, const int y_) {
-	clip.x = x_;
-	clip.y = y_;
-	clip.w = this->spriteWidth;
-	clip.h = this->spriteHeight;
+void Animation::updateClip(SDL_Rect& clip, const unsigned int x_, const unsigned int y_) {
+	clip.x = (int) x_;
+	clip.y = (int) y_;
+	clip.w = (int) this->spriteWidth;
+	clip.h = (int) this->spriteHeight;
 }
 
-int Animation::getCurrentFrame() {
+unsigned int Animation::getCurrentFrame() {
 	return (this->animationCount + 1);
 }
 
-void Animation::changeWidthHeight(const int width_, const int height_) {
+void Animation::changeWidthHeight(const unsigned int width_, const unsigned int height_) {
 	this->spriteWidth = width_;
 	this->spriteHeight = height_;
 }
