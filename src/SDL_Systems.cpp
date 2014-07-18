@@ -18,7 +18,7 @@ bool SDL_Wrapper::initialize() {
 		successTTF = true;
 
 		SDL_TTF_VERSION(&compiled);
-		SDL_Wrapper::logSDLVersion("SDL_TTF", compiled);
+		SDL_Wrapper_detail::logSDLVersion("SDL_TTF", compiled);
 	}
 	else {
 		Log(ERROR) << "Could not initialize TTF." << TTF_GetError();
@@ -35,7 +35,7 @@ bool SDL_Wrapper::initialize() {
 		SDL_VERSION(&compiled);
 		SDL_GetVersion(&linked);
 
-		SDL_Wrapper::logSDLVersion("SDL", compiled, SDL_GetRevision());
+		SDL_Wrapper_detail::logSDLVersion("SDL", compiled, SDL_GetRevision());
 	}
 	else {
 		Log(ERROR) << "Could not initialize SDL." << SDL_GetError();
@@ -47,7 +47,7 @@ bool SDL_Wrapper::initialize() {
 		successIMG = true;
 
 		SDL_IMAGE_VERSION(&compiled);
-		SDL_Wrapper::logSDLVersion("SDL_image", compiled);
+		SDL_Wrapper_detail::logSDLVersion("SDL_image", compiled);
 	}
 	else {
 		Log(ERROR) << "Could not initialize SDL_Image." << IMG_GetError();
@@ -62,7 +62,7 @@ bool SDL_Wrapper::initialize() {
 		successMixer = true;
 
 		SDL_MIXER_VERSION(&compiled);
-		SDL_Wrapper::logSDLVersion("SDL_mixer", compiled);
+		SDL_Wrapper_detail::logSDLVersion("SDL_mixer", compiled);
 
 		const int channelsAllocated = Mix_AllocateChannels(25);
 
