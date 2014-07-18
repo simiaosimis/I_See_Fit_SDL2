@@ -1,9 +1,9 @@
 #pragma once
 
-#include "SDLWrapper.h"
+#include "SDL_Libs.h"
 #include <string>
 
-namespace SDLWrapper {
+namespace SDL_Wrapper {
 
 	/**
 	* Logs the SDL API version.

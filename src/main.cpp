@@ -1,6 +1,7 @@
 #include "Game.h"
 #include "Logger.h"
 #include "Configuration.h"
+#include "SDL_Systems.h"
 #include "UsefulDefines.h"
 
 int main(int argc, char** argv) {
@@ -13,7 +14,7 @@ int main(int argc, char** argv) {
 
 	Configuration::initialize();
 
-	const bool systemsInitialized = SDLWrapper::initialize();
+	const bool systemsInitialized = SDL_Wrapper::initialize();
 
 	if(systemsInitialized) {
 		Game::instance().runGame();
@@ -23,7 +24,7 @@ int main(int argc, char** argv) {
 		Log(ERROR) << "Systems were not initialized.";
 	}
 
-	SDLWrapper::close();
+	SDL_Wrapper::close();
 
 	Log(DEBUG) << "Exiting sdl2-engine...";
 	return 0;

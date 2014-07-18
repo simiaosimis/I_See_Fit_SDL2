@@ -4,7 +4,7 @@
 #define TRIGGER_DEAD_ZONE 8000
 
 #include "InputKeys.h"
-#include "SDLWrapper.h"
+#include "SDL_Libs.h"
 
 #include <array>
 
@@ -19,14 +19,14 @@ namespace controllerMap {
  		FACE_RIGHT, // O on PS4 controller - 1
  		FACE_LEFT, // [] on PS4 controller - 2
  		FACE_UP, // /\ on PS4 controller - 3
- 
+
  		SELECT, // SHARE on PS4 controller - 4
  		HOME, // PS Button on PS4 controller - 5
  		START, // OPTIONS on PS4 controller - 6
- 
+
  		L3, // Left analogue button - 7
  		R3, // Right analogue button  - 8
- 
+
  		LDTRIGGER, // Left Digital Trigger - 9
  		RDTRIGGER, // Right Digital Trigger  - 10
 

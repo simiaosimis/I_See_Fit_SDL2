@@ -1,6 +1,6 @@
 #pragma once
 
-#include "SDLWrapper.h"
+#include "SDL_Libs.h"
 #include <string>
 
 class SoundEffect {

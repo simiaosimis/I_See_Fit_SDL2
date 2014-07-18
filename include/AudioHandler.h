@@ -4,7 +4,7 @@
 #define MIX_LOOP -1
 #endif
 
-#include "SDLWrapper.h"
+#include "SDL_Libs.h"
 #include "Music.h"
 #include "SoundEffect.h"
 #include <string>
@@ -12,23 +12,20 @@
 
 /**
 * The audio handler.
-* Class that handles all the audio in the game. Is a singleton, so should be called in each
-* 	state.
+* Class that handles all the audio in the game.
 */
 class AudioHandler {
 
 	public:
 		/**
 		* The constructor.
-		* Initializes all the attributes.
 		*/
 		AudioHandler();
 
 		/**
 		* The destructor.
-		* Frees the allocated attributes.
 		*/
-		virtual ~AudioHandler();
+		~AudioHandler();
 
 		/**
 		* Plays the current music.

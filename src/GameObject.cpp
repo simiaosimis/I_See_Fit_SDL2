@@ -1,6 +1,6 @@
 #include "GameObject.h"
 #include "Game.h"
-#include "SDLWrapper.h"
+#include "SDL_Libs.h"
 #include "Logger.h"
 
 GameObject::GameObject(const double x_, const double y_, const std::string& path_) :

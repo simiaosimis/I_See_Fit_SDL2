@@ -1,8 +1,8 @@
-#include "SDLWrapper.h"
-#include "SDLUtil.h"
+#include "SDL_Systems.h"
+#include "SDL_Util.h"
 #include "Logger.h"
 
-bool SDLWrapper::initialize() {
+bool SDL_Wrapper::initialize() {
 	bool successSDL = false;
 	bool successIMG = false;
 	bool successMixer = false;
@@ -18,7 +18,7 @@ bool SDLWrapper::initialize() {
 		successTTF = true;
 
 		SDL_TTF_VERSION(&compiled);
-		SDLWrapper::logSDLVersion("SDL_TTF", compiled);
+		SDL_Wrapper::logSDLVersion("SDL_TTF", compiled);
 	}
 	else {
 		Log(ERROR) << "Could not initialize TTF." << TTF_GetError();
@@ -35,7 +35,7 @@ bool SDLWrapper::initialize() {
 		SDL_VERSION(&compiled);
 		SDL_GetVersion(&linked);
 
-		SDLWrapper::logSDLVersion("SDL", compiled, SDL_GetRevision());
+		SDL_Wrapper::logSDLVersion("SDL", compiled, SDL_GetRevision());
 	}
 	else {
 		Log(ERROR) << "Could not initialize SDL." << SDL_GetError();
@@ -47,7 +47,7 @@ bool SDLWrapper::initialize() {
 		successIMG = true;
 
 		SDL_IMAGE_VERSION(&compiled);
-		SDLWrapper::logSDLVersion("SDL_image", compiled);
+		SDL_Wrapper::logSDLVersion("SDL_image", compiled);
 	}
 	else {
 		Log(ERROR) << "Could not initialize SDL_Image." << IMG_GetError();
@@ -62,7 +62,7 @@ bool SDLWrapper::initialize() {
 		successMixer = true;
 
 		SDL_MIXER_VERSION(&compiled);
-		SDLWrapper::logSDLVersion("SDL_mixer", compiled);
+		SDL_Wrapper::logSDLVersion("SDL_mixer", compiled);
 
 		const int channelsAllocated = Mix_AllocateChannels(25);
 
@@ -76,11 +76,11 @@ bool SDLWrapper::initialize() {
 	return (successSDL && successIMG && successMixer && successTTF);
 }
 
-void SDLWrapper::close() {
+void SDL_Wrapper::close() {
 	Log(DEBUG) << "Closing SDL.";
 
 	// Quits SDL_mixer.
-	SDLWrapper_detail::closeMixer();
+	SDL_Wrapper_detail::closeMixer();
 
 	// Quits SDL_image.
 	IMG_Quit();
@@ -92,7 +92,7 @@ void SDLWrapper::close() {
 	TTF_Quit();
 }
 
-void SDLWrapper::SDLWrapper_detail::closeMixer() {
+void SDL_Wrapper::SDL_Wrapper_detail::closeMixer() {
 	// Query the specifications of the opened audio, to figure out how many times we need to
 	// close the audio.
 	int frequency = 0;

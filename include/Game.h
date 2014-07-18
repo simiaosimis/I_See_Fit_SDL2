@@ -1,6 +1,6 @@
 #pragma once
 
-#include "SDLWrapper.h"
+#include "SDL_Libs.h"
 #include "Window.h"
 #include "StateGame.h"
 
