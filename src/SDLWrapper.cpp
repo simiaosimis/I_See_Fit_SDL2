@@ -1,4 +1,5 @@
 #include "SDLWrapper.h"
+#include "SDLUtil.h"
 #include "Logger.h"
 
 bool SDLWrapper::initialize() {
@@ -79,8 +80,7 @@ void SDLWrapper::close() {
 	Log(DEBUG) << "Closing SDL.";
 
 	// Quits SDL_mixer.
-	Mix_CloseAudio();
-	Mix_Quit();
+	SDLWrapper_detail::closeMixer();
 
 	// Quits SDL_image.
 	IMG_Quit();
@@ -92,10 +92,75 @@ void SDLWrapper::close() {
 	TTF_Quit();
 }
 
-void SDLWrapper::logSDLVersion(const std::string& what_, const SDL_version& compiled_,
-	std::string revision_) {
+void SDLWrapper::SDLWrapper_detail::closeMixer() {
+	// Query the specifications of the opened audio, to figure out how many times we need to
+	// close the audio.
+	int frequency = 0;
+	int channels = 0;
+	Uint16 format = 0;
+	const int numberOfTimesOpened = Mix_QuerySpec(&frequency, &format, &channels);
+	int timesToClose = numberOfTimesOpened;
 
-	Log(DEBUG) << what_ << " Version (Compiled): " << (int)compiled_.major << "." <<
-		(int)compiled_.minor << "." << (int)compiled_.patch <<
-		((!revision_.empty()) ? revision_ : "");
+	if(numberOfTimesOpened != 0) {
+		// Build a string with the format.
+		std::string format_str("Unknown format");
+	    switch(format) {
+	        case AUDIO_U8:
+	        	format_str="U8";
+	        	break;
+	        case AUDIO_S8:
+		        format_str="S8";
+	        	break;
+	        case AUDIO_U16LSB:
+		        format_str="U16LSB";
+	        	break;
+	        case AUDIO_S16LSB:
+		        format_str="S16LSB";
+	        	break;
+	        case AUDIO_U16MSB:
+		        format_str="U16MSB";
+	        	break;
+	        case AUDIO_S16MSB:
+		        format_str="S16MSB";
+	        	break;
+	        default:
+	        	break;
+	    }
+
+	    // Build a string with the channels type.
+	    std::string channels_str("Unknown channels");
+	    switch(channels) {
+	    	case 1:
+	    		channels_str = "(mono)";
+	    		break;
+	    	case 2:
+	    		channels_str = "(stereo)";
+	    		break;
+	    	default:
+	    		break;
+	    }
+
+		Log(DEBUG) << "Audio opened " << numberOfTimesOpened << " time(s). Frequency: " <<
+			frequency << "Hz. Format: " << format_str << ". Channels: " << channels << " " <<
+			channels_str << ".";
+	}
+	else {
+		Log(ERROR) << "Error querying the specifications of the audio. " << Mix_GetError();
+
+		// Set the amount of times to close the audio to one, just for safety.
+		timesToClose = 1;
+	}
+
+	// Close the audio the necessary amount of times.
+	while(timesToClose > 0){
+		Mix_CloseAudio();
+		timesToClose--;
+	}
+
+	// "Since each call to Mix_Init may set different flags, there is no way, currently, to
+	// request how many times each one was initted. In other words, the only way to quit for
+	// sure is to do a loop like so: "
+	while(Mix_Init(0)){
+		Mix_Quit();
+	}
 }
