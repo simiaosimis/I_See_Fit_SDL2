@@ -1,5 +1,6 @@
 #pragma once
 
+#include "Uncopyable.h"
 #include <map>
 #include <string>
 #include <memory>
@@ -9,11 +10,11 @@
 *
 */
 template <class Type>
-class ResourceManager {
+class ResourceManager : private Uncopyable {
 
 	private:
-		typedef std::shared_ptr<Type> TypePtr;
-		typedef std::map<std::string, TypePtr> TypeMap;
+		typedef std::shared_ptr<Type> typePtr;
+		typedef std::map<std::string, typePtr> typeMap;
 
 	public:
 		/**
@@ -34,14 +35,14 @@ class ResourceManager {
 		* Constructs the desired resource.
 		* @param path_ : Path to the desired resource.
 		*/
-		virtual TypePtr load(const std::string& path_) = 0;
+		virtual typePtr load(const std::string& path_) = 0;
 
 		/**
 		* Registers the resource on the resources map.
 		* @param path_ : Path to the resource. Will be the key value.
 		* @param resource_ : The shared pointer for the resource.
 		*/
-		void registerResource(const std::string& path_, TypePtr resource_);
+		void registerResource(const std::string& path_, typePtr resource_);
 
 		/**
 		* Unregisters the resource on the resources map.
@@ -49,7 +50,7 @@ class ResourceManager {
 		*/
 		void unregisterResource(const std::string& path_);
 
-		TypeMap resources; /**< The map that contains all the Type resources. */
+		typeMap resources; /**< The map that contains all the Type resources. */
 
 };
 

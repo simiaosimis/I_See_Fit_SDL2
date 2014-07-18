@@ -2,8 +2,8 @@
 
 template <class Type>
 ResourceManager<Type>::~ResourceManager() {
-	typename TypeMap::const_iterator it;
-	
+	typename typeMap::const_iterator it;
+
 	for(it = resources.begin(); it != resources.end(); it++) {
 		if(it->second.use_count() != 1) {
 			Log(WARN) << "Resource deleted with use count different than 1 (" << it->first
@@ -14,7 +14,7 @@ ResourceManager<Type>::~ResourceManager() {
 
 template <class Type>
 Type* ResourceManager<Type>::get(const std::string& path_) {
-	typename TypeMap::const_iterator it;
+	typename typeMap::const_iterator it;
 	it = resources.find(path_);
 
 	Type* tPtr = nullptr;
@@ -25,18 +25,18 @@ Type* ResourceManager<Type>::get(const std::string& path_) {
 	else {
 		tPtr = load(path_).get();
 	}
-	
+
 	return tPtr;
 }
 
 template <class Type>
-void ResourceManager<Type>::registerResource(const std::string& path_, TypePtr resource_) {
+void ResourceManager<Type>::registerResource(const std::string& path_, typePtr resource_) {
 	resources.insert(std::make_pair(path_, resource_));
 }
 
 template <class Type>
 void ResourceManager<Type>::unregisterResource(const std::string& path_) {
-	typename TypeMap::const_iterator it;
+	typename typeMap::const_iterator it;
 	it = resources.find(path_);
 
 	if (it != resources.end()) {
