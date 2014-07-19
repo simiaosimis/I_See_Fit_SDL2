@@ -75,10 +75,12 @@ class ControllerHandler {
 		*/
 		void handleInput(SDL_Event& sdlEvent_);
 
+		std::array<bool, GameKeys::MAX> getKeyStates();
+
+	private:
 		std::array<bool, GameKeys::MAX> keyStates; /**< Boolean array that controls which keys
 		are pressed or not. */
 
-	private:
 		SDL_GameController* gameController; /**< Pointer to the controller. */
 
 };

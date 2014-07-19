@@ -33,14 +33,14 @@ void ControllerHandler::handleInput(SDL_Event& sdlEvent_) {
 					pressed |= (1 << controllerMap::buttons::FACE_DOWN);
 				}
 			break;
- 
+
 			case controllerMap::buttons::FACE_UP: // Action.
 				if(!(pressed & (1 << controllerMap::buttons::FACE_UP))){
 					this->keyStates[GameKeys::ACTION] = true;
 					pressed |= (1 << controllerMap::buttons::FACE_UP);
 				}
 				break;
- 
+
 			case controllerMap::buttons::DUP: // Move Up.
 				this->keyStates[GameKeys::UP] = true;
 				break;
@@ -67,7 +67,7 @@ void ControllerHandler::handleInput(SDL_Event& sdlEvent_) {
 			case controllerMap::buttons::LDTRIGGER: // Crouch
 				this->keyStates[GameKeys::CROUCH] = true;
 			break;
-			
+
 			case controllerMap::buttons::FACE_LEFT: // Lethal Attack
 				 if(!(pressed & (1 << controllerMap::buttons::FACE_LEFT))){
 					this->keyStates[GameKeys::LATTACK] = true;
@@ -101,12 +101,12 @@ void ControllerHandler::handleInput(SDL_Event& sdlEvent_) {
 				this->keyStates[GameKeys::SPACE] = false;
 				pressed &= ~(1 << controllerMap::buttons::FACE_DOWN);
 			break;
- 
+
 			case controllerMap::buttons::FACE_UP: // Action.
 				this->keyStates[GameKeys::ACTION] = false;
 				pressed &= ~(1 << controllerMap::buttons::FACE_UP);
 				break;
- 
+
 			case controllerMap::buttons::DUP: // Move Up.
 				this->keyStates[GameKeys::UP] = false;
 				break;
@@ -150,9 +150,9 @@ void ControllerHandler::handleInput(SDL_Event& sdlEvent_) {
 				break;
 		}
 	}
-	
+
 	if(sdlEvent_.type == SDL_CONTROLLERAXISMOTION){
-			
+
 		switch(sdlEvent_.caxis.axis){
 
 			case controllerMap::axes::LATRIGGER:
@@ -167,7 +167,7 @@ void ControllerHandler::handleInput(SDL_Event& sdlEvent_) {
 				break;
 
 
-			case controllerMap::axes::RATRIGGER:        
+			case controllerMap::axes::RATRIGGER:
 					if(sdlEvent_.caxis.value > TRIGGER_DEAD_ZONE){
 						this->keyStates[GameKeys::ITEMS] = true;
 					}
@@ -184,4 +184,8 @@ void ControllerHandler::handleInput(SDL_Event& sdlEvent_) {
 		}
 	}*/
 
+}
+
+std::array<bool, GameKeys::MAX> ControllerHandler::getKeyStates() {
+	return this->keyStates;
 }

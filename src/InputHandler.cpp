@@ -28,7 +28,7 @@ void InputHandler::handleInput() {
 			this->controllerHandler->handleInput(this->sdlEvent);
 
 			for(unsigned int i = 0; i < this->keyStates.size(); i++) {
-				this->keyStates[i] = this->controllerHandler->keyStates[i];
+				this->keyStates[i] = this->controllerHandler->getKeyStates()[i];
 			}
 
 		}
