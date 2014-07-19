@@ -3,9 +3,8 @@
 #define CONTROLLERSTICK_DEAD_ZONE 8000
 #define TRIGGER_DEAD_ZONE 8000
 
-#include "InputKeys.h"
 #include "SDL_Libs.h"
-
+#include "InputKeys.h"
 #include <array>
 
 namespace controllerMap {

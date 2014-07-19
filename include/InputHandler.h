@@ -3,7 +3,6 @@
 #include "SDL_Libs.h"
 #include "InputKeys.h"
 #include "ControllerHandler.h"
-
 #include <array>
 
 /**

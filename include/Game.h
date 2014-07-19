@@ -3,13 +3,11 @@
 #include "SDL_Libs.h"
 #include "Window.h"
 #include "StateGame.h"
-
 #include "AudioHandler.h"
 #include "InputHandler.h"
 #include "SpriteManager.h"
 #include "MusicManager.h"
 #include "SFXManager.h"
-
 #include <map>
 #include <memory>
 #include <string>

@@ -6,8 +6,9 @@
 #include "Logger.h"
 #include "UsefulDefines.h"
 
-// Game States includes
+// Begin Game States includes
 #include "GStatePlaceholder.h"
+// End Game States includes
 
 #include <cassert>
 

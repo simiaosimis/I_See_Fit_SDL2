@@ -2,7 +2,6 @@
 
 #include <string>
 #include <sstream>
-#include <cstdio>
 
 enum LogLevel : uint8_t {
 	INFO,
@@ -19,7 +18,7 @@ class Logger {
 
 	public:
 		Logger();
-		virtual ~Logger();
+		~Logger();
 
 		std::ostringstream& log(const LogLevel level_);
 

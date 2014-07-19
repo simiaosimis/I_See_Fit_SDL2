@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../lib/TmxParser/Tmx.h"
 #include "Sprite.h"
+#include "../lib/TmxParser/Tmx.h"
 #include <vector>
 #include <string>
 
@@ -27,7 +27,7 @@ class TileMap {
 
 		/**
 		* Renders the TileMap.
-		* 
+		*
 		* @param cameraX_ : The x position of the camera.
 		* @param cameraY_ : The y position of the camera.
 		*/
@@ -49,7 +49,7 @@ class TileMap {
 
 		/**
 		* Renders a certain layer from the TileMap.
-		* 
+		*
 		* @param cameraX_ : The x position of the camera.
 		* @param cameraY_ : The y position of the camera.
 		*/

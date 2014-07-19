@@ -1,8 +1,7 @@
 #pragma once
 
-#include "Sprite.h"
 #include "SDL_Libs.h"
-
+#include "Sprite.h"
 #include <string>
 
 /**

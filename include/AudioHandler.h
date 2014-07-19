@@ -13,6 +13,7 @@
 /**
 * The audio handler.
 * Class that handles all the audio in the game.
+* @todo Figure out the best way to design music logic apart from SFX logic.
 */
 class AudioHandler {
 
@@ -81,9 +82,8 @@ class AudioHandler {
 		*/
 		void addSoundEffect(const std::string& path_);
 
-		void clearChannel(const int channel_);
-
 	private:
+		void clearChannel(const int channel_);
 		static void channelDone(int channel_);
 
 		Music* currentMusic; /**< The current music that is playing. */
