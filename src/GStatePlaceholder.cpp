@@ -37,7 +37,7 @@ void GStatePlaceholder::update(const double dt_) {
 	const std::array<bool, GameKeys::MAX> keyStates = Game::instance().getInput();
 
 	if(keyStates[GameKeys::SPACE] == true) {
-		Game::instance().getAudioHandler().addSoundEffect("res/audio/sfx/test_sfx.wav");
+		Game::instance().getAudioHandler().pushSoundEffect("res/audio/sfx/test_sfx.wav");
 	}
 
 	this->animation->update(this->animationClip, dt_);
