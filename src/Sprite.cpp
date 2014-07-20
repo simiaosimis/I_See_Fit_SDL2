@@ -39,8 +39,12 @@ Sprite::~Sprite() {
 void Sprite::loadFrom(const std::string& path_) {
 	SDL_Surface* loadedSurface = IMG_Load(path_.c_str());
 
-	// Returns whether the Sprites texture is null or not.
-	this->sdlTexture = surfaceToTexture(loadedSurface);
+	if(loadedSurface != nullptr) {
+		this->sdlTexture = surfaceToTexture(loadedSurface);
+	}
+	else {
+		Log(ERROR) << "Could not load surface from path." << IMG_GetError();
+	}
 
 	// Display error log if image wasn't loaded.
 	if(this->sdlTexture == nullptr) {
@@ -103,7 +107,7 @@ SDL_Texture* Sprite::surfaceToTexture(SDL_Surface* const surface_) {
 
 	if(surface_ != nullptr) {
 		// Create texture from the surface pixels.
-        newTexture = SDL_CreateTextureFromSurface(Game::instance().getRenderer()->getSdlRenderer(), surface_);
+	    newTexture = SDL_CreateTextureFromSurface(Game::instance().getRenderer()->getSdlRenderer(), surface_);
 		if(newTexture != nullptr) {
 			// Set the Sprites width and height, from the loaded surface.
 			this->width = surface_->w;
@@ -117,7 +121,7 @@ SDL_Texture* Sprite::surfaceToTexture(SDL_Surface* const surface_) {
 		SDL_FreeSurface(surface_);
 	}
 	else {
-		Log(ERROR) << "Could not load surface from path." << IMG_GetError();
+		Log(WARN) << "Trying to convert a null surface to a texture.";
 	}
 
 	return newTexture;
