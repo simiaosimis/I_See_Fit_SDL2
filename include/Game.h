@@ -79,6 +79,11 @@ class Game {
 		SoundEffect* getSoundEffect(const std::string& path_);
 
 		/**
+		* @return The SDL_Renderer.
+		*/
+		Renderer* getRenderer();
+
+		/**
 		* Stops execution and closes the game.
 		*/
 		void stop();

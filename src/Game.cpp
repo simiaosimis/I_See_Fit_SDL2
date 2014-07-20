@@ -93,11 +93,11 @@ void Game::runGame() {
 		}
 
 		// Render.
-		window->clear();
+		this->window->getRenderer()->clear();
 
 		this->currentState->render();
 
-		window->render();
+		this->window->getRenderer()->render();
 
 	}
 
@@ -154,4 +154,8 @@ void Game::clearKeyFromInput(const GameKeys key_) {
 
 void Game::resizeWindow(const unsigned int width_, const unsigned int height_) {
 	this->window->resize(width_, height_);
+}
+
+Renderer* Game::getRenderer() {
+	return this->window->getRenderer();
 }

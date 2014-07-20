@@ -1,30 +1,19 @@
 #include "Window.h"
 #include "Logger.h"
 #include "Configuration.h"
-
-
-SDL_Renderer* Window::sdlRenderer = nullptr;
-
+#include "UsefulDefines.h"
 
 Window::Window(const unsigned int width_, const unsigned int height_, const std::string& title_) :
 	windowTitle(title_),
-	sdlWindow(nullptr)
+	sdlWindow(nullptr),
+	renderer(nullptr)
 {
 	create(width_, height_);
 }
 
 Window::~Window() {
-	destroy();
-}
-
-void Window::destroy() {
-	// Destroys the Window renderer.
-	SDL_DestroyRenderer(Window::sdlRenderer);
-	Window::sdlRenderer = nullptr;
-
-	// Destroys the Window window.
-	SDL_DestroyWindow(this->sdlWindow);
-	this->sdlWindow = nullptr;
+	SAFE_DELETE(this->renderer);
+	SAFE_DELETE_WITH_FUNCTION(SDL_DestroyWindow, this->sdlWindow);
 }
 
 void Window::minimize() {
@@ -33,15 +22,6 @@ void Window::minimize() {
 
 void Window::maximize() {
 	SDL_MaximizeWindow(this->sdlWindow);
-}
-
-void Window::clear() {
-	SDL_SetRenderDrawColor(Window::sdlRenderer, 0x00, 0x00, 0x00, 0xFF);
-	SDL_RenderClear(Window::sdlRenderer);
-}
-
-void Window::render() {
-	SDL_RenderPresent(Window::sdlRenderer);
 }
 
 void Window::create(const unsigned int width_, const unsigned int height_) {
@@ -55,15 +35,17 @@ void Window::create(const unsigned int width_, const unsigned int height_) {
 	if(this->sdlWindow != nullptr) {
 
 		// Creates the SDL renderer.
-		Window::sdlRenderer = SDL_CreateRenderer(this->sdlWindow, -1, SDL_RENDERER_ACCELERATED);
-		if(Window::sdlRenderer != nullptr) {
+		const Uint32 rendererFlags = SDL_RENDERER_ACCELERATED;
+		this->renderer = new Renderer(this->sdlWindow, rendererFlags);
+
+		if(this->renderer != nullptr) {
 
 			// Set texture filtering to linear.
 			SDL_bool linearFilter = SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "nearest");
 
-			if(linearFilter) {
+			if(linearFilter == SDL_TRUE) {
 				Log(INFO) << "Linear texture filtering enabled!";
-				rescale(Configuration::getLogicalRenderSize());
+				this->renderer->setLogicalSize(Configuration::getLogicalRenderSize());
 			}
 			else {
 				Log(WARN) << "Linear texture filtering disabled!";
@@ -73,7 +55,8 @@ void Window::create(const unsigned int width_, const unsigned int height_) {
 
 		}
 		else {
-			Log(ERROR) << "Renderer could not be created. " << SDL_GetError();
+			Log(ERROR) << "Renderer could not be created, while creating window. " <<
+				SDL_GetError();
 		}
 	}
 	else {
@@ -85,21 +68,6 @@ void Window::resize(const unsigned int width_, const unsigned int height_) {
 	SDL_SetWindowSize(this->sdlWindow, width_, height_);
 }
 
-void Window::rescale(unsigned int size_) {
-	// Just a precaution, so there is no abuse on the size.
-	if(size_ > 10) {
-		size_ = 10;
-		Log(WARN) << "Trying to rescale for a value too big.";
-	}
-
-	SDL_RenderSetLogicalSize(Window::sdlRenderer, Configuration::getResolutionWidth() * size_,
-		Configuration::getResolutionHeight() * size_);
-}
-
-SDL_Renderer* Window::getRenderer() {
-	return Window::sdlRenderer;
-}
-
-void Window::getLogicalSize(int* w, int* h) {
-	SDL_RenderGetLogicalSize(Window::getRenderer(), w, h);
+Renderer* Window::getRenderer() {
+	return this->renderer;
 }

@@ -1,10 +1,11 @@
 #pragma once
 
 #include "SDL_Libs.h"
+#include "Renderer.h"
 #include <string>
 
 /**
-* Represents actual window that game runs on.
+* Represents the actual window that the game runs on.
 * Contains the SDL_Window and the SDL_Renderer, and methods related to these.
 */
 class Window {
@@ -30,29 +31,11 @@ class Window {
 		~Window();
 
 		/**
-		* Renders to screen.
-		* Updates the screen with every change in the renderer.
-		*/
-		void render();
-
-		/**
-		* Clears the renderer.
-		* Sets the renderers draw color to black, and subsequently clears it.
-		*/
-		void clear();
-
-		/**
 		* Resizes the window.
 		* @todo Instead of directly choosing width and height, choose from a pre-defined list
 		* 	of resolutions.
 		*/
 		void resize(const unsigned int width_, const unsigned int height_);
-
-		/**
-		* Frees allocated members.
-		* Frees the SDL_Renderer and the SDL_Window.
-		*/
-		void destroy();
 
 		/**
 		* Minimizes window.
@@ -67,11 +50,9 @@ class Window {
 		void maximize();
 
 		/**
-		* @return The renderer attribute.
+		* @return The Renderer.
 		*/
-		static SDL_Renderer* getRenderer();
-
-		static void getLogicalSize(int* w, int* h);
+		Renderer* getRenderer();
 
 	private:
 		/**
@@ -92,7 +73,7 @@ class Window {
 		void rescale(unsigned int size_);
 
 		const std::string windowTitle; /**< The game Window title. */
-		SDL_Window *sdlWindow; /**< The SDL window, that will be the actual game window. */
-		static SDL_Renderer *sdlRenderer; /**< The SDL renderer to render onto. */
+		SDL_Window* sdlWindow; /**< The SDL window, that will be the actual game window. */
+		Renderer* renderer; /**< The SDL renderer to render onto. */
 
 };
