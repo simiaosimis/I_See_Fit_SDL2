@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>sdl2-engine: include/Collision.h Source File</title>
+<title>sdl2-engine: include/Animation.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -46,6 +46,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -91,7 +92,7 @@ $(document).ready(function(){initNavTree('a00027_source.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -102,37 +103,52 @@ $(document).ready(function(){initNavTree('a00027_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Collision.h</div>  </div>
+<div class="title">Animation.h</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;SDLWrapper.h&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;GameObject.h&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="code" href="a00006.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00006.html" title="Simple collision detection. ">Collision</a> {</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;SDL_Libs.h&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="code" href="a00001.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00001.html" title="Class in control of animating a sprite. ">Animation</a> {</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="code" href="a00006.html#aff63033fba1bd69e0ff7c267aadd58ca">   15</a></span>&#160;        <span class="keyword">enum</span> <a class="code" href="a00006.html#aff63033fba1bd69e0ff7c267aadd58ca" title="Possible sides a rectangle can collide. ">RectangleSide</a> : uint8_t {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            TOP = 0,</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            BOTTOM,</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            LEFT,</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            RIGHT,</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            NONE</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        };</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="a00006.html#a1ca688777eff8626a0dd950d69c0371c">rectsCollided</a>(<span class="keyword">const</span> SDL_Rect&amp; a_, <span class="keyword">const</span> SDL_Rect&amp; b_);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keyword">static</span> <a class="code" href="a00006.html#aff63033fba1bd69e0ff7c267aadd58ca" title="Possible sides a rectangle can collide. ">RectangleSide</a> <a class="code" href="a00006.html#a271d4cfeafc94b90fad82437b55f56a6">rectsCollidedSide</a>(<span class="keyword">const</span> SDL_Rect&amp; a_, <span class="keyword">const</span> SDL_Rect&amp; b_);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;};</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="a00001.html#a6a64a03b291d22ab4c747470b74b8531" title="The constructor. ">Animation</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> x_, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> y_,</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> spriteWidth_, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> spriteHeight_,</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> numberOfImages_, <span class="keyword">const</span> <span class="keywordtype">double</span> totalTime_);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="a00001.html#a401b68793d4fbf48d481c030ee4b2a16" title="The destructor. ">~Animation</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="a00001.html#a7017337003829eef3787b4a10a31e8fb" title="Updates the animation clip. ">update</a>(SDL_Rect&amp; clip_, <span class="keyword">const</span> <span class="keywordtype">double</span> dt_);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="a00001.html#a56354acb39435a9d41fbeaa2e321eb25">getCurrentFrame</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="a00001.html#a230bc5afad74e9d4ee9213e8eb49685f" title="Changes the dimensions of the clip on the spritesheet. ">changeWidthHeight</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> width_, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> height_);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="a00001.html#a633f597780d760edf4d8852538b894c0" title="Changes the animation to another. ">changeAnimation</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> x_, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> y_,</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> numberOfImages_, <span class="keyword">const</span> <span class="keywordtype">double</span> totalTime_);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="a00001.html#ad86524ca999883c40965d04990a2762e" title="Updates the clip to a new position. ">updateClip</a>(SDL_Rect&amp; clip_, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> x_, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> y_);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="code" href="a00001.html#a9639a9e1352cb0e0e853149171c44840">   64</a></span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="a00001.html#a9639a9e1352cb0e0e853149171c44840" title="The position on x axis on the sprite. ">x</a>; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="code" href="a00001.html#aaf9cc4d9267529d4e19f6380d4623805">   65</a></span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="a00001.html#aaf9cc4d9267529d4e19f6380d4623805" title="The position on x axis on the sprite. ">y</a>; </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="code" href="a00001.html#aaf8398cc1bd20bcb4fe834f6462af8b8">   66</a></span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="a00001.html#aaf8398cc1bd20bcb4fe834f6462af8b8" title="Where to start/restart the animation on x. ">initialX</a>; </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="code" href="a00001.html#a367086d31c5d7bf8b5b73cb8301607b7">   67</a></span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="a00001.html#a367086d31c5d7bf8b5b73cb8301607b7" title="Where to start/restart the animation on y. ">initialY</a>; </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="code" href="a00001.html#a313a8988b9eb64f84dcb3dcb2b4b17d1">   68</a></span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="a00001.html#a313a8988b9eb64f84dcb3dcb2b4b17d1" title="The sprite width. ">spriteWidth</a>; </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="code" href="a00001.html#abcdcc399e4459bcbcd1a93818fefb3cc">   69</a></span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="a00001.html#abcdcc399e4459bcbcd1a93818fefb3cc" title="The sprite height. ">spriteHeight</a>; </div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="code" href="a00001.html#af20f66365564581376b13cf776d0aae1">   70</a></span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="a00001.html#af20f66365564581376b13cf776d0aae1" title="                          The number of images to animate inside the  spritesheet. ">numberOfImages</a>; </div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="code" href="a00001.html#a23cf823fb939c2ed05a98e5a1239bac1">   72</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="a00001.html#a23cf823fb939c2ed05a98e5a1239bac1" title="                      Total time elapsed on the animation, to check if the  frame changed...">totalElapsedTime</a>; </div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="code" href="a00001.html#a6315668e311f54415bdd708b076bb35d">   74</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="a00001.html#a6315668e311f54415bdd708b076bb35d" title="Total time in seconds for each animation loop. ">totalTime</a>; </div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="code" href="a00001.html#a1e6128b6da5ccb39a73cb8bca0faaf6f">   75</a></span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="a00001.html#a1e6128b6da5ccb39a73cb8bca0faaf6f" title="                          Index of the current image relative to the number of  images. ">animationCount</a>; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><b>Collision.h</b></li>
-    <li class="footer">Generated on Fri Jul 11 2014 00:17:00 for sdl2-engine by
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><b>Animation.h</b></li>
+    <li class="footer">Generated on Sun Jul 20 2014 18:16:34 for sdl2-engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

@@ -1,8 +1,14 @@
 var NAVTREE =
 [
   [ "sdl2-engine", "index.html", [
-    [ "sdl2-engine", "a00001.html", null ],
-    [ "Todo List", "a00071.html", null ],
+    [ "Todo List", "a00088.html", null ],
+    [ "Namespaces", null, [
+      [ "Namespace List", "namespaces.html", "namespaces" ],
+      [ "Namespace Members", "namespacemembers.html", [
+        [ "All", "namespacemembers.html", null ],
+        [ "Functions", "namespacemembers_func.html", null ]
+      ] ]
+    ] ],
     [ "Classes", null, [
       [ "Class List", "annotated.html", "annotated" ],
       [ "Class Index", "classes.html", null ],
@@ -11,7 +17,6 @@ var NAVTREE =
         [ "All", "functions.html", null ],
         [ "Functions", "functions_func.html", null ],
         [ "Variables", "functions_vars.html", null ],
-        [ "Typedefs", "functions_type.html", null ],
         [ "Enumerations", "functions_enum.html", null ]
       ] ]
     ] ],
@@ -24,7 +29,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "a00001.html",
-"a00031_source.html"
+"a00024.html#a5a4f91e3216bd655de910722ef3ee8d0"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -46,6 +46,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -79,7 +80,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li class="current"><a href="functions_vars.html"><span>Variables</span></a></li>
-      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
       <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
     </ul>
   </div>
@@ -125,7 +125,7 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -139,231 +139,237 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 
 <h3><a class="anchor" id="index_a"></a>- a -</h3><ul>
 <li>animationClip
-: <a class="el" href="a00011.html#aedbe7c552382ea0686d020661826c106">GameObject</a>
+: <a class="el" href="a00009.html#aedbe7c552382ea0686d020661826c106">GameObject</a>
+</li>
+<li>animationCount
+: <a class="el" href="a00001.html#a1e6128b6da5ccb39a73cb8bca0faaf6f">Animation</a>
 </li>
 <li>audioHandler
-: <a class="el" href="a00010.html#a0669fc05427f97820f44f2ac5cc7cef0">Game</a>
+: <a class="el" href="a00008.html#a0669fc05427f97820f44f2ac5cc7cef0">Game</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_c"></a>- c -</h3><ul>
 <li>cameraDistanceHeight
-: <a class="el" href="a00007.html#ab1df391e86cd95764b62bf817d11f0ef">Configuration</a>
+: <a class="el" href="a00005.html#ab1df391e86cd95764b62bf817d11f0ef">Configuration</a>
 </li>
 <li>cameraDistanceWidth
-: <a class="el" href="a00007.html#ab4c70c72580771e9f7d9925388355bb5">Configuration</a>
+: <a class="el" href="a00005.html#ab4c70c72580771e9f7d9925388355bb5">Configuration</a>
 </li>
 <li>clip
-: <a class="el" href="a00005.html#a3e33feaa65673d9de0067aecabdbe249">Camera</a>
+: <a class="el" href="a00003.html#a3e33feaa65673d9de0067aecabdbe249">Camera</a>
 </li>
 <li>controllerHandler
-: <a class="el" href="a00013.html#a50ac48002b081c2c03af8f638c47dbe7">InputHandler</a>
+: <a class="el" href="a00011.html#a50ac48002b081c2c03af8f638c47dbe7">InputHandler</a>
 </li>
 <li>currentEffects
-: <a class="el" href="a00004.html#ab26ad56cd72bf43324563461fb44a918">AudioHandler</a>
+: <a class="el" href="a00002.html#a5eca2a502fcb855b03fc132fb65e8d5f">AudioHandler</a>
 </li>
 <li>currentMusic
-: <a class="el" href="a00004.html#ab42c5517df5e910b7f7abdbf2e1aeba3">AudioHandler</a>
+: <a class="el" href="a00002.html#a6f21f9e61a997d20796865ad10a28eac">AudioHandler</a>
 </li>
 <li>currentState
-: <a class="el" href="a00010.html#a39cc30f3e086ce1279ad01967d7694fe">Game</a>
+: <a class="el" href="a00008.html#a39cc30f3e086ce1279ad01967d7694fe">Game</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_f"></a>- f -</h3><ul>
 <li>flipHorizontal
-: <a class="el" href="a00018.html#aa70e85ab29425537f1b0e41abbbfe852">Sprite</a>
+: <a class="el" href="a00019.html#aa70e85ab29425537f1b0e41abbbfe852">Sprite</a>
 </li>
 <li>fpsManager
-: <a class="el" href="a00010.html#a5817ea6f0896abffc6ab8bc893382a31">Game</a>
+: <a class="el" href="a00008.html#a5817ea6f0896abffc6ab8bc893382a31">Game</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
 <li>gameController
-: <a class="el" href="a00008.html#a65bbcf23b90f3ab1b4087acd136518b2">ControllerHandler</a>
+: <a class="el" href="a00006.html#a65bbcf23b90f3ab1b4087acd136518b2">ControllerHandler</a>
 </li>
 <li>gameObject
-: <a class="el" href="a00005.html#ac9b5a1f9deecf080f38a6196b3bb706f">Camera</a>
+: <a class="el" href="a00003.html#ac9b5a1f9deecf080f38a6196b3bb706f">Camera</a>
 </li>
 <li>gameObjects
-: <a class="el" href="a00019.html#ae4b0e8ceb5cc37fe469b5e4f978ceea9">StateGame</a>
+: <a class="el" href="a00021.html#ae4b0e8ceb5cc37fe469b5e4f978ceea9">StateGame</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_h"></a>- h -</h3><ul>
 <li>height
-: <a class="el" href="a00011.html#a033b30bb7caf6660beabef5a81574bfb">GameObject</a>
-, <a class="el" href="a00018.html#a4d34b71316c3456acb51c3c7e57a94e2">Sprite</a>
+: <a class="el" href="a00009.html#a033b30bb7caf6660beabef5a81574bfb">GameObject</a>
+, <a class="el" href="a00019.html#a4d34b71316c3456acb51c3c7e57a94e2">Sprite</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_i"></a>- i -</h3><ul>
 <li>initialX
-: <a class="el" href="a00003.html#aba49daee599cf1c73ec12fe9adf7a424">Animation</a>
+: <a class="el" href="a00001.html#aaf8398cc1bd20bcb4fe834f6462af8b8">Animation</a>
 </li>
 <li>initialY
-: <a class="el" href="a00003.html#a8aae31b208d2ecbebdd4a3d0827fdef6">Animation</a>
+: <a class="el" href="a00001.html#a367086d31c5d7bf8b5b73cb8301607b7">Animation</a>
 </li>
 <li>inputHandler
-: <a class="el" href="a00010.html#aa0ca10b15de880181ddcfede0de9226c">Game</a>
+: <a class="el" href="a00008.html#aa0ca10b15de880181ddcfede0de9226c">Game</a>
 </li>
 <li>isRight
-: <a class="el" href="a00011.html#a095a894671d43674c0fe2966a0781e5f">GameObject</a>
+: <a class="el" href="a00009.html#a095a894671d43674c0fe2966a0781e5f">GameObject</a>
 </li>
 <li>isRunning
-: <a class="el" href="a00010.html#adb424734b2454f9ed1e6d6bd44e6dfaf">Game</a>
+: <a class="el" href="a00008.html#adb424734b2454f9ed1e6d6bd44e6dfaf">Game</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_k"></a>- k -</h3><ul>
 <li>keyStates
-: <a class="el" href="a00008.html#ac40f0381dd876419404a52a7d1b515d6">ControllerHandler</a>
-, <a class="el" href="a00013.html#af8e03451ccf5a1028b2bc38ed85fad19">InputHandler</a>
+: <a class="el" href="a00006.html#ac40f0381dd876419404a52a7d1b515d6">ControllerHandler</a>
+, <a class="el" href="a00011.html#af8e03451ccf5a1028b2bc38ed85fad19">InputHandler</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_l"></a>- l -</h3><ul>
 <li>levelH
-: <a class="el" href="a00005.html#a561e153f11f640088936dcb63cd2924a">Camera</a>
+: <a class="el" href="a00003.html#a561e153f11f640088936dcb63cd2924a">Camera</a>
 </li>
 <li>levelW
-: <a class="el" href="a00005.html#afcf1ecd0a79a95e8097109be04dd1779">Camera</a>
+: <a class="el" href="a00003.html#afcf1ecd0a79a95e8097109be04dd1779">Camera</a>
 </li>
 <li>logicalRenderSize
-: <a class="el" href="a00007.html#a9c18ad1f19aa75b6c8fa4a626cc206f0">Configuration</a>
-</li>
-<li>loop
-: <a class="el" href="a00003.html#a951ff207e048c16b7c5dde293eb5419b">Animation</a>
+: <a class="el" href="a00005.html#a9c18ad1f19aa75b6c8fa4a626cc206f0">Configuration</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
 <li>maxFramerate
-: <a class="el" href="a00007.html#ae0480202acc37209e339ad7da33c89a2">Configuration</a>
+: <a class="el" href="a00005.html#ae0480202acc37209e339ad7da33c89a2">Configuration</a>
+</li>
+<li>musicResources
+: <a class="el" href="a00008.html#ad17d8c0f97be766064f4f9b5879ffbeb">Game</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_n"></a>- n -</h3><ul>
 <li>numberOfImages
-: <a class="el" href="a00003.html#aa74f5c2a1d5a6afd4f3b21e0f7582ab0">Animation</a>
+: <a class="el" href="a00001.html#af20f66365564581376b13cf776d0aae1">Animation</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_p"></a>- p -</h3><ul>
 <li>path
-: <a class="el" href="a00018.html#a2bd9395c3ebb407e632723c3aae2a267">Sprite</a>
+: <a class="el" href="a00019.html#a2bd9395c3ebb407e632723c3aae2a267">Sprite</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_q"></a>- q -</h3><ul>
 <li>quitFlag
-: <a class="el" href="a00013.html#a6bd166e013cbd6313609eab276f00abd">InputHandler</a>
+: <a class="el" href="a00011.html#a6bd166e013cbd6313609eab276f00abd">InputHandler</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_r"></a>- r -</h3><ul>
 <li>resolutionHeight
-: <a class="el" href="a00007.html#a469e15c3c77e7eced8d2682aa127e10b">Configuration</a>
+: <a class="el" href="a00005.html#a469e15c3c77e7eced8d2682aa127e10b">Configuration</a>
 </li>
 <li>resolutionWidth
-: <a class="el" href="a00007.html#a5b733811a9215c5bba90d16604cfabcf">Configuration</a>
-</li>
-<li>resourceManager
-: <a class="el" href="a00010.html#a0380dd032f09020e98149414fe501c96">Game</a>
+: <a class="el" href="a00005.html#a5b733811a9215c5bba90d16604cfabcf">Configuration</a>
 </li>
 <li>resources
-: <a class="el" href="a00016.html#a3f682a7080fd7feed161d6ca4a01f809">ResourceManager</a>
+: <a class="el" href="a00016.html#a87e65c9b6ce65734a23ff51022e6681d">ResourceManager&lt; Type &gt;</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
 <li>screenHeight
-: <a class="el" href="a00007.html#a5c49a9e882e7acb0aced8e6bd63d212d">Configuration</a>
+: <a class="el" href="a00005.html#a5c49a9e882e7acb0aced8e6bd63d212d">Configuration</a>
 </li>
 <li>screenWidth
-: <a class="el" href="a00007.html#aef24b67543ea3560d93544769d7aa2b8">Configuration</a>
+: <a class="el" href="a00005.html#aef24b67543ea3560d93544769d7aa2b8">Configuration</a>
 </li>
 <li>sdlEvent
-: <a class="el" href="a00013.html#ab2fa06988077060c7a3dca6c3d643dd3">InputHandler</a>
+: <a class="el" href="a00011.html#ab2fa06988077060c7a3dca6c3d643dd3">InputHandler</a>
 </li>
 <li>sdlRenderer
-: <a class="el" href="a00023.html#a3c56f31300b017074ab06800b2164e40">Window</a>
+: <a class="el" href="a00026.html#a3c56f31300b017074ab06800b2164e40">Window</a>
 </li>
 <li>sdlTexture
-: <a class="el" href="a00018.html#a546d109413d8f3541ffde26701075bd1">Sprite</a>
+: <a class="el" href="a00019.html#a546d109413d8f3541ffde26701075bd1">Sprite</a>
 </li>
 <li>sdlWindow
-: <a class="el" href="a00023.html#a6be667ef970fd951a4853e7bcc933ac8">Window</a>
+: <a class="el" href="a00026.html#a6be667ef970fd951a4853e7bcc933ac8">Window</a>
+</li>
+<li>sfxResources
+: <a class="el" href="a00008.html#aade4c8155efb7726762f7918d98d67ed">Game</a>
 </li>
 <li>sprite
-: <a class="el" href="a00011.html#a00fecd21a33c990c4132f6f8e886135f">GameObject</a>
+: <a class="el" href="a00009.html#a00fecd21a33c990c4132f6f8e886135f">GameObject</a>
 </li>
 <li>spriteHeight
-: <a class="el" href="a00003.html#abf5b6b0b0178b93bf86e0a2551ac1c06">Animation</a>
+: <a class="el" href="a00001.html#abcdcc399e4459bcbcd1a93818fefb3cc">Animation</a>
+</li>
+<li>spriteResources
+: <a class="el" href="a00008.html#ad7fb7081ebfc76e220eec27e6e3c5b2f">Game</a>
 </li>
 <li>spriteWidth
-: <a class="el" href="a00003.html#a030a8f97b36c7e77ba8ce544ea3b3132">Animation</a>
+: <a class="el" href="a00001.html#a313a8988b9eb64f84dcb3dcb2b4b17d1">Animation</a>
 </li>
 <li>statesMap
-: <a class="el" href="a00010.html#a9d6b3d33b550f2ac3425d324d5e235e8">Game</a>
+: <a class="el" href="a00008.html#a9d6b3d33b550f2ac3425d324d5e235e8">Game</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_t"></a>- t -</h3><ul>
 <li>tileMatrix
-: <a class="el" href="a00021.html#ac51c4128280aa6bdf0ea3706ef7238ff">TileMap</a>
+: <a class="el" href="a00023.html#ac51c4128280aa6bdf0ea3706ef7238ff">TileMap</a>
 </li>
 <li>totalElapsedTime
-: <a class="el" href="a00003.html#a23cf823fb939c2ed05a98e5a1239bac1">Animation</a>
+: <a class="el" href="a00001.html#a23cf823fb939c2ed05a98e5a1239bac1">Animation</a>
 </li>
 <li>totalTime
-: <a class="el" href="a00003.html#a6315668e311f54415bdd708b076bb35d">Animation</a>
+: <a class="el" href="a00001.html#a6315668e311f54415bdd708b076bb35d">Animation</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_w"></a>- w -</h3><ul>
 <li>width
-: <a class="el" href="a00011.html#ade95bb86cc216d745edf8ea15101f2af">GameObject</a>
-, <a class="el" href="a00018.html#a950adad23da17ce64e6e759b0b64fadd">Sprite</a>
+: <a class="el" href="a00009.html#ade95bb86cc216d745edf8ea15101f2af">GameObject</a>
+, <a class="el" href="a00019.html#a950adad23da17ce64e6e759b0b64fadd">Sprite</a>
 </li>
 <li>window
-: <a class="el" href="a00010.html#a553924bcccf9f9b1c04e385041852f17">Game</a>
+: <a class="el" href="a00008.html#a553924bcccf9f9b1c04e385041852f17">Game</a>
 </li>
 <li>windowTitle
-: <a class="el" href="a00007.html#ab5fa690a270bfcb7e34416a952eebe00">Configuration</a>
-, <a class="el" href="a00023.html#a003d840446d3c6bdb4a4b0cabfc3f182">Window</a>
+: <a class="el" href="a00005.html#ab5fa690a270bfcb7e34416a952eebe00">Configuration</a>
+, <a class="el" href="a00026.html#a003d840446d3c6bdb4a4b0cabfc3f182">Window</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_x"></a>- x -</h3><ul>
 <li>x
-: <a class="el" href="a00003.html#afd5c86707e8b565c868cbee56496dcd7">Animation</a>
-, <a class="el" href="a00011.html#a77ae10ff022a6cfe7419d4acdcffe2a4">GameObject</a>
+: <a class="el" href="a00001.html#a9639a9e1352cb0e0e853149171c44840">Animation</a>
+, <a class="el" href="a00009.html#a77ae10ff022a6cfe7419d4acdcffe2a4">GameObject</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_y"></a>- y -</h3><ul>
 <li>y
-: <a class="el" href="a00003.html#a72467306123dccc6abee23b0fe86d046">Animation</a>
-, <a class="el" href="a00011.html#af3f4a42c92fa6f6ac04d57bf4b11d43f">GameObject</a>
+: <a class="el" href="a00001.html#aaf9cc4d9267529d4e19f6380d4623805">Animation</a>
+, <a class="el" href="a00009.html#af3f4a42c92fa6f6ac04d57bf4b11d43f">GameObject</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -371,7 +377,7 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Fri Jul 11 2014 00:17:02 for sdl2-engine by
+    <li class="footer">Generated on Sun Jul 20 2014 18:16:34 for sdl2-engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

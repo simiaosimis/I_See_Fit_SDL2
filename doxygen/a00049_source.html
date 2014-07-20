@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>sdl2-engine: src/AudioHandler.cpp Source File</title>
+<title>sdl2-engine: include/Sprite.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -46,6 +46,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -91,7 +92,7 @@ $(document).ready(function(){initNavTree('a00049_source.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -102,126 +103,60 @@ $(document).ready(function(){initNavTree('a00049_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">AudioHandler.cpp</div>  </div>
+<div class="title">Sprite.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;AudioHandler.h&quot;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;Game.h&quot;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;Logger.h&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="code" href="a00004.html#a605b5c91270eb7cad7a0ac60b354b56b">    5</a></span>&#160;<a class="code" href="a00004.html#a605b5c91270eb7cad7a0ac60b354b56b" title="The constructor. ">AudioHandler::AudioHandler</a>() :</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    currentMusic(nullptr),</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    currentEffects()</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;SDL_Libs.h&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="code" href="a00019.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00019.html" title="Visual representation of game objects. ">Sprite</a> {</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="code" href="a00004.html#a61a1e88ca69c4021792400389eec3f27">   12</a></span>&#160;<a class="code" href="a00004.html#a61a1e88ca69c4021792400389eec3f27" title="The destructor. ">AudioHandler::~AudioHandler</a>() {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordflow">if</span>(this-&gt;<a class="code" href="a00004.html#ab42c5517df5e910b7f7abdbf2e1aeba3" title="The current music that is playing. ">currentMusic</a> != <span class="keyword">nullptr</span>){</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        Mix_FreeMusic(this-&gt;<a class="code" href="a00004.html#ab42c5517df5e910b7f7abdbf2e1aeba3" title="The current music that is playing. ">currentMusic</a>);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        this-&gt;<a class="code" href="a00004.html#ab42c5517df5e910b7f7abdbf2e1aeba3" title="The current music that is playing. ">currentMusic</a> = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    }</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="comment">// Log(DEBUG) &lt;&lt; &quot;Still had &quot; &lt;&lt; this-&gt;currentEffects.size() &lt;&lt; &quot; sfx on vector.&quot;;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">for</span>(<span class="keyword">auto</span> sfx : this-&gt;<a class="code" href="a00004.html#ab26ad56cd72bf43324563461fb44a918" title="The current effect that is playing. ">currentEffects</a>){</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        Mix_FreeChunk(sfx.effect);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    }</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="a00019.html#a0c5597fedd9b09878ec8acddca54c2f7" title="The constructor. ">Sprite</a>(<span class="keyword">const</span> std::string&amp; path_);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="a00019.html#a0c5597fedd9b09878ec8acddca54c2f7" title="The constructor. ">Sprite</a>(SDL_Surface* <span class="keyword">const</span> surface_);</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    this-&gt;currentEffects.clear();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="code" href="a00004.html#aca81071ce7b30e1cdf5970fcd6a4adc8">   27</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00004.html#aca81071ce7b30e1cdf5970fcd6a4adc8" title="Sets the current music. ">AudioHandler::setCurrentMusic</a>(<span class="keyword">const</span> std::string&amp; path_) {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">if</span>(this-&gt;<a class="code" href="a00004.html#ab42c5517df5e910b7f7abdbf2e1aeba3" title="The current music that is playing. ">currentMusic</a> != <span class="keyword">nullptr</span>){</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        Mix_FreeMusic(this-&gt;<a class="code" href="a00004.html#ab42c5517df5e910b7f7abdbf2e1aeba3" title="The current music that is playing. ">currentMusic</a>);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        this-&gt;<a class="code" href="a00004.html#ab42c5517df5e910b7f7abdbf2e1aeba3" title="The current music that is playing. ">currentMusic</a> = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    this-&gt;<a class="code" href="a00004.html#ab42c5517df5e910b7f7abdbf2e1aeba3" title="The current music that is playing. ">currentMusic</a> = Mix_LoadMUS(path_.c_str());</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="code" href="a00004.html#aa2a12ba2a153edefb2d9229767f04b47">   36</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00004.html#aa2a12ba2a153edefb2d9229767f04b47" title="Plays the current music. ">AudioHandler::playMusic</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> times_) {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">if</span>(this-&gt;<a class="code" href="a00004.html#ab42c5517df5e910b7f7abdbf2e1aeba3" title="The current music that is playing. ">currentMusic</a>){</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        Mix_PlayMusic(this-&gt;<a class="code" href="a00004.html#ab42c5517df5e910b7f7abdbf2e1aeba3" title="The current music that is playing. ">currentMusic</a>, times_);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">else</span>{</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        Log(WARN) &lt;&lt; <span class="stringliteral">&quot;There is no song loaded.&quot;</span>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="code" href="a00004.html#aeff0546d72fab5587f86c830efb6f40e">   45</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00004.html#aeff0546d72fab5587f86c830efb6f40e" title="Stops playing the current music. ">AudioHandler::stopMusic</a>() {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    Mix_HaltMusic();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="code" href="a00004.html#a68d00941dddc05e756d6eea507990f56">   49</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00004.html#a68d00941dddc05e756d6eea507990f56" title="Sets the volume for the music. ">AudioHandler::setMusicVolume</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> percent_) {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> value = percent_ * MIX_MAX_VOLUME/100;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    Mix_VolumeMusic(value);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="code" href="a00004.html#a55ad80b02e3e02240a66257e383b3e55">   54</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00004.html#a55ad80b02e3e02240a66257e383b3e55" title="Sets the current effect. ">AudioHandler::addSoundEffect</a>(<span class="keyword">const</span> std::string&amp; path_) {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    Mix_Chunk* effect = Mix_LoadWAV(path_.c_str());</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="a00002.html">SoundEffect</a> sfx = {effect, -1};</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">if</span>(effect == <span class="keyword">nullptr</span>){</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        Log(DEBUG) &lt;&lt; <span class="stringliteral">&quot;Loaded null chunk &quot;</span> &lt;&lt; path_ &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; Mix_GetError();</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    this-&gt;<a class="code" href="a00004.html#ab26ad56cd72bf43324563461fb44a918" title="The current effect that is playing. ">currentEffects</a>.push_back(sfx);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="a00004.html#a51383b60963be06458c1dbfe7a73ac14" title="Plays the current effect. ">playEffect</a>(0);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="a00019.html#a8accab430f9d90ae5117b57d67e32b84" title="The destructor. ">~Sprite</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="a00019.html#ac82a01b98130b9b1403667059640163b" title="Renders the sprite. ">render</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> x_, <span class="keyword">const</span> <span class="keywordtype">double</span> y_, SDL_Rect* <span class="keyword">const</span> clip_ = <span class="keyword">nullptr</span>,</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">bool</span> stretch_ = <span class="keyword">false</span>, <span class="keyword">const</span> <span class="keywordtype">double</span> angle_ = 0.0,</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            SDL_Point* <span class="keyword">const</span> center_ = <span class="keyword">nullptr</span>, SDL_RendererFlip flip_ = SDL_FLIP_NONE);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="a00019.html#a8f425d524e48eea595ef74dc310e0417">getWidth</a>();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordtype">void</span> setWidth(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> width_);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordtype">void</span> setHeight(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> height_);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="a00019.html#a02fcba350f07d226b110f7d0712f5154">getHeight</a>();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        std::string getPath();</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="code" href="a00004.html#a51383b60963be06458c1dbfe7a73ac14">   68</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00004.html#a51383b60963be06458c1dbfe7a73ac14" title="Plays the current effect. ">AudioHandler::playEffect</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> times_) {</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> playedChannel = Mix_PlayChannel(-1, this-&gt;<a class="code" href="a00004.html#ab26ad56cd72bf43324563461fb44a918" title="The current effect that is playing. ">currentEffects</a>.back().effect, times_);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordtype">double</span> getAlpha();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordtype">void</span> setAlpha(<span class="keywordtype">int</span> alpha_);</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">if</span>(playedChannel == -1){</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        Log(ERROR) &lt;&lt; <span class="stringliteral">&quot;Failed to play sound effect on channel &quot;</span> &lt;&lt; playedChannel &lt;&lt; <span class="stringliteral">&quot;. &quot;</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            &lt;&lt; Mix_GetError();</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    this-&gt;<a class="code" href="a00004.html#ab26ad56cd72bf43324563461fb44a918" title="The current effect that is playing. ">currentEffects</a>.back().channel = playedChannel;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    Mix_ChannelFinished(AudioHandler::channelDone);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="a00019.html#a9ba64ddfcd3f79c45b74ec1c1a16c396" title="Loads image from a path. ">loadFrom</a>(<span class="keyword">const</span> std::string&amp; path_);</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="code" href="a00004.html#a5b50cf59bb164ebc877956ddf2de5563">   81</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00004.html#a5b50cf59bb164ebc877956ddf2de5563" title="Sets the volume for the effects. ">AudioHandler::setEffectVolume</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> percent_) {</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> value = percent_ * MIX_MAX_VOLUME/100;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    Mix_Volume(-1, value);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno"><a class="code" href="a00004.html#a1763c666b7181b8f89c00477948df9ba">   86</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00004.html#a1763c666b7181b8f89c00477948df9ba" title="Changes current music. ">AudioHandler::changeMusic</a>(<span class="keyword">const</span> std::string&amp; path_) {</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <a class="code" href="a00004.html#aeff0546d72fab5587f86c830efb6f40e" title="Stops playing the current music. ">stopMusic</a>();</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="a00004.html#aca81071ce7b30e1cdf5970fcd6a4adc8" title="Sets the current music. ">setCurrentMusic</a>(path_);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="a00004.html#aa2a12ba2a153edefb2d9229767f04b47" title="Plays the current music. ">playMusic</a>(MIX_LOOP);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keywordtype">void</span> AudioHandler::clearChannel(<span class="keyword">const</span> <span class="keywordtype">int</span> channel_) {</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    std::vector&lt;SoundEffect&gt;::iterator it;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">for</span>(it = this-&gt;<a class="code" href="a00004.html#ab26ad56cd72bf43324563461fb44a918" title="The current effect that is playing. ">currentEffects</a>.begin(); it != this-&gt;<a class="code" href="a00004.html#ab26ad56cd72bf43324563461fb44a918" title="The current effect that is playing. ">currentEffects</a>.end();) {</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordflow">if</span>(it-&gt;channel == channel_){</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            Mix_FreeChunk(it-&gt;effect);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            it-&gt;effect = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            this-&gt;<a class="code" href="a00004.html#ab26ad56cd72bf43324563461fb44a918" title="The current effect that is playing. ">currentEffects</a>.erase(it);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        }</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">else</span>{</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            it++;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        }</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    }</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="keywordtype">void</span> AudioHandler::channelDone(<span class="keywordtype">int</span> channel_) {</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="comment">// Log(DEBUG) &lt;&lt; &quot;Channel [&quot; &lt;&lt; channel_ &lt;&lt; &quot;] done. (CALLBACK)&quot;;</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <a class="code" href="a00010.html#ac213e6d3a4e566d901413f62f6408858" title="Singleton imeplementation for Game. ">Game::instance</a>().<a class="code" href="a00010.html#aefdf22987b627adf4ee9cdcc178fc11c">getAudioHandler</a>().clearChannel(channel_);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        SDL_Texture* surfaceToTexture(SDL_Surface* <span class="keyword">const</span> surface_);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="code" href="a00019.html#a546d109413d8f3541ffde26701075bd1">   83</a></span>&#160;        SDL_Texture* <a class="code" href="a00019.html#a546d109413d8f3541ffde26701075bd1" title="The SDL texture to use as the image. ">sdlTexture</a>; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordtype">void</span> setBlendMode(SDL_BlendMode blending_);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="code" href="a00019.html#a950adad23da17ce64e6e759b0b64fadd">   87</a></span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="a00019.html#a950adad23da17ce64e6e759b0b64fadd" title="The loaded image&#39;s width. ">width</a>; </div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="code" href="a00019.html#a4d34b71316c3456acb51c3c7e57a94e2">   88</a></span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="a00019.html#a4d34b71316c3456acb51c3c7e57a94e2" title="The loaded image&#39;s width. ">height</a>; </div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="code" href="a00019.html#a2bd9395c3ebb407e632723c3aae2a267">   89</a></span>&#160;        <span class="keyword">const</span> std::string <a class="code" href="a00019.html#a2bd9395c3ebb407e632723c3aae2a267" title="Holds the path from where the Sprite was loaded. ">path</a>; </div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="code" href="a00019.html#aa70e85ab29425537f1b0e41abbbfe852">   90</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="a00019.html#aa70e85ab29425537f1b0e41abbbfe852" title="When true flip the image. ">flipHorizontal</a>; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><b>AudioHandler.cpp</b></li>
-    <li class="footer">Generated on Fri Jul 11 2014 00:17:01 for sdl2-engine by
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><b>Sprite.h</b></li>
+    <li class="footer">Generated on Sun Jul 20 2014 18:16:34 for sdl2-engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>sdl2-engine: src/Animation.cpp Source File</title>
+<title>sdl2-engine: include/SoundEffect.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -46,6 +46,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -91,7 +92,7 @@ $(document).ready(function(){initNavTree('a00048_source.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -102,107 +103,37 @@ $(document).ready(function(){initNavTree('a00048_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Animation.cpp</div>  </div>
+<div class="title">SoundEffect.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;Animation.h&quot;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keywordtype">int</span> animationCount = 0;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="code" href="a00003.html#ad8ecf86aeb455e42a943eab212cd149d">    5</a></span>&#160;<a class="code" href="a00003.html#ad8ecf86aeb455e42a943eab212cd149d" title="The constructor. ">Animation::Animation</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> x_, <span class="keyword">const</span> <span class="keywordtype">int</span> y_, <span class="keyword">const</span> <span class="keywordtype">int</span> spriteWidth_,</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> spriteHeight_, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> numberOfImages_, <span class="keyword">const</span> <span class="keywordtype">bool</span> loop_) :</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    ANIMATION_LIMIT(10),</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    x(x_),</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    y(y_),</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    initialX(0),</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    initialY(0),</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    spriteWidth(spriteWidth_),</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    spriteHeight(spriteHeight_),</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    numberOfImages(0),</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    loop(loop_),</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    totalElapsedTime(0.0),</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    totalTime(0.0)</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    this-&gt;<a class="code" href="a00003.html#aa74f5c2a1d5a6afd4f3b21e0f7582ab0" title="The number of images to animate inside the spritesheet. ">numberOfImages</a> = (numberOfImages_ == 0) ? 1 : numberOfImages_;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="code" href="a00003.html#a401b68793d4fbf48d481c030ee4b2a16">   23</a></span>&#160;<a class="code" href="a00003.html#a401b68793d4fbf48d481c030ee4b2a16" title="The destructor. ">Animation::~Animation</a>() {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="code" href="a00003.html#a7017337003829eef3787b4a10a31e8fb">   27</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00003.html#a7017337003829eef3787b4a10a31e8fb" title="Updates the animation clip. ">Animation::update</a>(SDL_Rect&amp; clip, <span class="keyword">const</span> <span class="keywordtype">double</span> dt_) {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="comment">// Compare the position on the sprite with the number of positions to know if is the</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">// end of the animation.</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">bool</span> endOfAnimation = ((animationCount + 1) &gt;= this-&gt;<a class="code" href="a00003.html#aa74f5c2a1d5a6afd4f3b21e0f7582ab0" title="The number of images to animate inside the spritesheet. ">numberOfImages</a>);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> deltaT = (this-&gt;<a class="code" href="a00003.html#a6315668e311f54415bdd708b076bb35d" title="Total time for each animation loop. ">totalTime</a> / this-&gt;<a class="code" href="a00003.html#aa74f5c2a1d5a6afd4f3b21e0f7582ab0" title="The number of images to animate inside the spritesheet. ">numberOfImages</a>);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">// Check if the frame has changed.</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    this-&gt;<a class="code" href="a00003.html#a23cf823fb939c2ed05a98e5a1239bac1" title="                      Total time elapsed on the animation, to check if the  frame changed...">totalElapsedTime</a> += dt_;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">if</span>(this-&gt;<a class="code" href="a00003.html#a23cf823fb939c2ed05a98e5a1239bac1" title="                      Total time elapsed on the animation, to check if the  frame changed...">totalElapsedTime</a> &gt;= deltaT) {</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        this-&gt;<a class="code" href="a00003.html#a23cf823fb939c2ed05a98e5a1239bac1" title="                      Total time elapsed on the animation, to check if the  frame changed...">totalElapsedTime</a> = 0;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        animationCount += 1;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">if</span>(Animation::animationCount &lt;= this-&gt;<a class="code" href="a00003.html#aa74f5c2a1d5a6afd4f3b21e0f7582ab0" title="The number of images to animate inside the spritesheet. ">numberOfImages</a>){</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">if</span>(this-&gt;<a class="code" href="a00003.html#afd5c86707e8b565c868cbee56496dcd7" title="The position on x axis on the sprite. ">x</a> &lt; (<span class="keywordtype">int</span>)ANIMATION_LIMIT){</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                this-&gt;<a class="code" href="a00003.html#afd5c86707e8b565c868cbee56496dcd7" title="The position on x axis on the sprite. ">x</a> += 1;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            }</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keywordflow">else</span>{</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                this-&gt;<a class="code" href="a00003.html#a72467306123dccc6abee23b0fe86d046" title="The position on x axis on the sprite. ">y</a> += 1;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                this-&gt;<a class="code" href="a00003.html#afd5c86707e8b565c868cbee56496dcd7" title="The position on x axis on the sprite. ">x</a> = 0;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            }</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        }</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">if</span>(endOfAnimation){</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            this-&gt;<a class="code" href="a00003.html#afd5c86707e8b565c868cbee56496dcd7" title="The position on x axis on the sprite. ">x</a>= this-&gt;<a class="code" href="a00003.html#aba49daee599cf1c73ec12fe9adf7a424" title="Where to start/restart the animation on x. ">initialX</a>;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            this-&gt;<a class="code" href="a00003.html#a72467306123dccc6abee23b0fe86d046" title="The position on x axis on the sprite. ">y</a>= this-&gt;<a class="code" href="a00003.html#a8aae31b208d2ecbebdd4a3d0827fdef6" title="Where to start/restart the animation on y. ">initialY</a>;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            Animation::animationCount = 0;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        }</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> positionX_ = this-&gt;<a class="code" href="a00003.html#afd5c86707e8b565c868cbee56496dcd7" title="The position on x axis on the sprite. ">x</a> * this-&gt;<a class="code" href="a00003.html#a030a8f97b36c7e77ba8ce544ea3b3132" title="The sprite width. ">spriteWidth</a>;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> positionY_ = this-&gt;<a class="code" href="a00003.html#a72467306123dccc6abee23b0fe86d046" title="The position on x axis on the sprite. ">y</a> * this-&gt;<a class="code" href="a00003.html#abf5b6b0b0178b93bf86e0a2551ac1c06" title="The sprite height. ">spriteHeight</a>;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="a00003.html#ae21a900626722558a17ee0a9a30398b3" title="Updates the clip to a new position. ">updateClip</a>(clip, positionX_, positionY_);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="code" href="a00003.html#ab38a22155cd8c367669c29b3a447c25b">   64</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00003.html#ab38a22155cd8c367669c29b3a447c25b" title="Changes the animation to another. ">Animation::changeAnimation</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> x_, <span class="keyword">const</span> <span class="keywordtype">int</span> y_, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> numberOfImages_,</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">bool</span> loop_, <span class="keyword">const</span> <span class="keywordtype">double</span> totalTime_) {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    this-&gt;<a class="code" href="a00003.html#afd5c86707e8b565c868cbee56496dcd7" title="The position on x axis on the sprite. ">x</a> = x_;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    this-&gt;<a class="code" href="a00003.html#a72467306123dccc6abee23b0fe86d046" title="The position on x axis on the sprite. ">y</a> = y_;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    this-&gt;<a class="code" href="a00003.html#aba49daee599cf1c73ec12fe9adf7a424" title="Where to start/restart the animation on x. ">initialX</a> = x_;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    this-&gt;<a class="code" href="a00003.html#a8aae31b208d2ecbebdd4a3d0827fdef6" title="Where to start/restart the animation on y. ">initialY</a> = y_;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    this-&gt;<a class="code" href="a00003.html#aa74f5c2a1d5a6afd4f3b21e0f7582ab0" title="The number of images to animate inside the spritesheet. ">numberOfImages</a> = (numberOfImages_ == 0) ? 1 : numberOfImages_;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    this-&gt;<a class="code" href="a00003.html#a951ff207e048c16b7c5dde293eb5419b" title="Whether to loop or not. ">loop</a> = loop_;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    this-&gt;<a class="code" href="a00003.html#a6315668e311f54415bdd708b076bb35d" title="Total time for each animation loop. ">totalTime</a> = totalTime_;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    animationCount = 0;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno"><a class="code" href="a00003.html#ae21a900626722558a17ee0a9a30398b3">   77</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00003.html#ae21a900626722558a17ee0a9a30398b3" title="Updates the clip to a new position. ">Animation::updateClip</a>(SDL_Rect&amp; clip, <span class="keyword">const</span> <span class="keywordtype">int</span> x_, <span class="keyword">const</span> <span class="keywordtype">int</span> y_) {</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    clip.x = x_;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    clip.y = y_;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    clip.w = this-&gt;<a class="code" href="a00003.html#a030a8f97b36c7e77ba8ce544ea3b3132" title="The sprite width. ">spriteWidth</a>;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    clip.h = this-&gt;<a class="code" href="a00003.html#abf5b6b0b0178b93bf86e0a2551ac1c06" title="The sprite height. ">spriteHeight</a>;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno"><a class="code" href="a00003.html#aa8d56fa75366fc4f4d8b37ea29c1b64a">   84</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="a00003.html#aa8d56fa75366fc4f4d8b37ea29c1b64a">Animation::getCurrentFrame</a>() {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">return</span> (animationCount + 1);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keywordtype">void</span> Animation::changeWidthHeight(<span class="keyword">const</span> <span class="keywordtype">int</span> width_, <span class="keyword">const</span> <span class="keywordtype">int</span> height_) {</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    this-&gt;<a class="code" href="a00003.html#a030a8f97b36c7e77ba8ce544ea3b3132" title="The sprite width. ">spriteWidth</a> = width_;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    this-&gt;<a class="code" href="a00003.html#abf5b6b0b0178b93bf86e0a2551ac1c06" title="The sprite height. ">spriteHeight</a> = height_;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;SDL_Libs.h&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="code" href="a00018.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00018.html">SoundEffect</a> {</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="a00018.html">SoundEffect</a>(<span class="keyword">const</span> std::string&amp; path_);</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        ~<a class="code" href="a00018.html">SoundEffect</a>();</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        Mix_Chunk* getMixChunk();</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        std::string getPath();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keywordtype">int</span> channel;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        Mix_Chunk* mixChunk;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keyword">const</span> std::string path;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><b>Animation.cpp</b></li>
-    <li class="footer">Generated on Fri Jul 11 2014 00:17:01 for sdl2-engine by
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><b>SoundEffect.h</b></li>
+    <li class="footer">Generated on Sun Jul 20 2014 18:16:34 for sdl2-engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

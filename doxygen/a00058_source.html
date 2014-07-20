@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>sdl2-engine: src/InputHandler.cpp Source File</title>
+<title>sdl2-engine: src/Animation.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -46,6 +46,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -91,7 +92,7 @@ $(document).ready(function(){initNavTree('a00058_source.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -102,127 +103,107 @@ $(document).ready(function(){initNavTree('a00058_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">InputHandler.cpp</div>  </div>
+<div class="title">Animation.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;InputHandler.h&quot;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;UsefulDefines.h&quot;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;Logger.h&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="code" href="a00013.html#a698aa4af4f326a9881835fda251ca996">    5</a></span>&#160;<a class="code" href="a00013.html#a698aa4af4f326a9881835fda251ca996" title="The constructor. ">InputHandler::InputHandler</a>() :</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    controllerHandler(new <a class="code" href="a00008.html" title="The input handler for joysticks. ">ControllerHandler</a>()),</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    quitFlag(false)</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    this-&gt;<a class="code" href="a00013.html#af8e03451ccf5a1028b2bc38ed85fad19" title="                   Boolean array that controls which keys are  pressed or not. ">keyStates</a>.fill(<span class="keyword">false</span>);</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;}</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="code" href="a00013.html#ac1f7efb54b34d433d6ffba62627452b6">   12</a></span>&#160;<a class="code" href="a00013.html#ac1f7efb54b34d433d6ffba62627452b6" title="The destructor. ">InputHandler::~InputHandler</a>() {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    SAFE_DELETE(this-&gt;<a class="code" href="a00013.html#a50ac48002b081c2c03af8f638c47dbe7" title="Handles input if joystick is present. ">controllerHandler</a>);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="code" href="a00013.html#a820f483265aa3f6da39b9d93c1311966">   16</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00013.html#a820f483265aa3f6da39b9d93c1311966" title="Handles the input. ">InputHandler::handleInput</a>() {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">int</span> pendingEvent = 0;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">do</span>{</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        pendingEvent = SDL_PollEvent(&amp;this-&gt;<a class="code" href="a00013.html#ab2fa06988077060c7a3dca6c3d643dd3" title="SDL internal event structure. ">sdlEvent</a>); </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordflow">if</span>(this-&gt;<a class="code" href="a00013.html#ab2fa06988077060c7a3dca6c3d643dd3" title="SDL internal event structure. ">sdlEvent</a>.type == SDL_CONTROLLERBUTTONDOWN </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            || this-&gt;sdlEvent.type == SDL_CONTROLLERBUTTONUP </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            || this-&gt;sdlEvent.type == SDL_CONTROLLERAXISMOTION){</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            this-&gt;<a class="code" href="a00013.html#a50ac48002b081c2c03af8f638c47dbe7" title="Handles input if joystick is present. ">controllerHandler</a>-&gt;<a class="code" href="a00008.html#a79e2adab7291ab5589e907860d046046" title="Handles controller the input. ">handleInput</a>(this-&gt;<a class="code" href="a00013.html#ab2fa06988077060c7a3dca6c3d643dd3" title="SDL internal event structure. ">sdlEvent</a>);</div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;Animation.h&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
+<div class="line"><a name="l00003"></a><span class="lineno"><a class="code" href="a00001.html#a6a64a03b291d22ab4c747470b74b8531">    3</a></span>&#160;<a class="code" href="a00001.html#a6a64a03b291d22ab4c747470b74b8531" title="The constructor. ">Animation::Animation</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> x_, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> y_,</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> spriteWidth_, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> spriteHeight_,</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> numberOfImages_, <span class="keyword">const</span> <span class="keywordtype">double</span> totalTime_) :</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    x(x_),</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    y(y_),</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    initialX(x_),</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    initialY(y_),</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    spriteWidth(spriteWidth_),</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    spriteHeight(spriteHeight_),</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    numberOfImages(numberOfImages_),</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    totalElapsedTime(0.0),</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    totalTime(totalTime_),</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    animationCount(0)</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    this-&gt;<a class="code" href="a00001.html#af20f66365564581376b13cf776d0aae1" title="                          The number of images to animate inside the  spritesheet. ">numberOfImages</a> = (numberOfImages_ == 0) ? 1 : numberOfImages_;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="code" href="a00001.html#a401b68793d4fbf48d481c030ee4b2a16">   21</a></span>&#160;<a class="code" href="a00001.html#a401b68793d4fbf48d481c030ee4b2a16" title="The destructor. ">Animation::~Animation</a>() {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="code" href="a00001.html#a7017337003829eef3787b4a10a31e8fb">   25</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00001.html#a7017337003829eef3787b4a10a31e8fb" title="Updates the animation clip. ">Animation::update</a>(SDL_Rect&amp; clip, <span class="keyword">const</span> <span class="keywordtype">double</span> dt_) {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="comment">// Compare the position on the sprite with the number of positions to know if is the</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">// end of the animation.</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">bool</span> endOfAnimation = (<a class="code" href="a00001.html#a56354acb39435a9d41fbeaa2e321eb25">getCurrentFrame</a>() &gt;= this-&gt;<a class="code" href="a00001.html#af20f66365564581376b13cf776d0aae1" title="                          The number of images to animate inside the  spritesheet. ">numberOfImages</a>);</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; this-&gt;<a class="code" href="a00013.html#af8e03451ccf5a1028b2bc38ed85fad19" title="                   Boolean array that controls which keys are  pressed or not. ">keyStates</a>.size(); i++){</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                this-&gt;<a class="code" href="a00013.html#af8e03451ccf5a1028b2bc38ed85fad19" title="                   Boolean array that controls which keys are  pressed or not. ">keyStates</a>[i] = this-&gt;<a class="code" href="a00013.html#a50ac48002b081c2c03af8f638c47dbe7" title="Handles input if joystick is present. ">controllerHandler</a>-&gt;<a class="code" href="a00008.html#ac40f0381dd876419404a52a7d1b515d6" title="                       Boolean array that controls which keys are  pressed or not. ">keyStates</a>[i];</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            }</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        }</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="comment">// On keydown.</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">if</span>(this-&gt;<a class="code" href="a00013.html#ab2fa06988077060c7a3dca6c3d643dd3" title="SDL internal event structure. ">sdlEvent</a>.type == SDL_KEYDOWN){</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <span class="keywordflow">switch</span>(this-&gt;<a class="code" href="a00013.html#ab2fa06988077060c7a3dca6c3d643dd3" title="SDL internal event structure. ">sdlEvent</a>.key.keysym.sym){</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                <span class="keywordflow">case</span> SDLK_SPACE: <span class="comment">// SPACEBAR.</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                    this-&gt;<a class="code" href="a00013.html#af8e03451ccf5a1028b2bc38ed85fad19" title="                   Boolean array that controls which keys are  pressed or not. ">keyStates</a>[GameKeys::SPACE] = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                <span class="keywordflow">case</span> SDLK_UP: <span class="comment">// UP ARROW.</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                    this-&gt;<a class="code" href="a00013.html#af8e03451ccf5a1028b2bc38ed85fad19" title="                   Boolean array that controls which keys are  pressed or not. ">keyStates</a>[GameKeys::UP] = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                <span class="keywordflow">case</span> SDLK_DOWN: <span class="comment">// DOWN ARROW.</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                    this-&gt;<a class="code" href="a00013.html#af8e03451ccf5a1028b2bc38ed85fad19" title="                   Boolean array that controls which keys are  pressed or not. ">keyStates</a>[GameKeys::DOWN] = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                <span class="keywordflow">case</span> SDLK_LEFT: <span class="comment">// LEFT ARROW.</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                    this-&gt;<a class="code" href="a00013.html#af8e03451ccf5a1028b2bc38ed85fad19" title="                   Boolean array that controls which keys are  pressed or not. ">keyStates</a>[GameKeys::LEFT] = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                <span class="keywordflow">case</span> SDLK_RIGHT: <span class="comment">// RIGHT ARROW.</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                    this-&gt;<a class="code" href="a00013.html#af8e03451ccf5a1028b2bc38ed85fad19" title="                   Boolean array that controls which keys are  pressed or not. ">keyStates</a>[GameKeys::RIGHT] = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                <span class="keywordflow">case</span> SDLK_ESCAPE: <span class="comment">// ESCAPE.</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                    this-&gt;<a class="code" href="a00013.html#af8e03451ccf5a1028b2bc38ed85fad19" title="                   Boolean array that controls which keys are  pressed or not. ">keyStates</a>[GameKeys::ESCAPE] = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            }</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> timeForEachFrame = (this-&gt;<a class="code" href="a00001.html#a6315668e311f54415bdd708b076bb35d" title="Total time in seconds for each animation loop. ">totalTime</a> / this-&gt;<a class="code" href="a00001.html#af20f66365564581376b13cf776d0aae1" title="                          The number of images to animate inside the  spritesheet. ">numberOfImages</a>);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    this-&gt;<a class="code" href="a00001.html#a23cf823fb939c2ed05a98e5a1239bac1" title="                      Total time elapsed on the animation, to check if the  frame changed...">totalElapsedTime</a> += dt_;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">// Check if the frame has changed.</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">if</span>(this-&gt;<a class="code" href="a00001.html#a23cf823fb939c2ed05a98e5a1239bac1" title="                      Total time elapsed on the animation, to check if the  frame changed...">totalElapsedTime</a> &gt;= timeForEachFrame) {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        this-&gt;<a class="code" href="a00001.html#a23cf823fb939c2ed05a98e5a1239bac1" title="                      Total time elapsed on the animation, to check if the  frame changed...">totalElapsedTime</a> = 0;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        this-&gt;<a class="code" href="a00001.html#a1e6128b6da5ccb39a73cb8bca0faaf6f" title="                          Index of the current image relative to the number of  images. ">animationCount</a> += 1;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="comment">// Apparently defines the max horizontal sprites in the spritesheet.</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> animationLimit = 10;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">if</span>(this-&gt;animationCount &lt;= this-&gt;<a class="code" href="a00001.html#af20f66365564581376b13cf776d0aae1" title="                          The number of images to animate inside the  spritesheet. ">numberOfImages</a>) {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">if</span>(this-&gt;<a class="code" href="a00001.html#a9639a9e1352cb0e0e853149171c44840" title="The position on x axis on the sprite. ">x</a> &lt; animationLimit) {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                this-&gt;<a class="code" href="a00001.html#a9639a9e1352cb0e0e853149171c44840" title="The position on x axis on the sprite. ">x</a> += 1;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                this-&gt;<a class="code" href="a00001.html#aaf9cc4d9267529d4e19f6380d4623805" title="The position on x axis on the sprite. ">y</a> += 1;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                this-&gt;<a class="code" href="a00001.html#a9639a9e1352cb0e0e853149171c44840" title="The position on x axis on the sprite. ">x</a> = 0;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">if</span>(endOfAnimation) {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            this-&gt;<a class="code" href="a00001.html#a9639a9e1352cb0e0e853149171c44840" title="The position on x axis on the sprite. ">x</a> = this-&gt;<a class="code" href="a00001.html#aaf8398cc1bd20bcb4fe834f6462af8b8" title="Where to start/restart the animation on x. ">initialX</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            this-&gt;<a class="code" href="a00001.html#aaf9cc4d9267529d4e19f6380d4623805" title="The position on x axis on the sprite. ">y</a> = this-&gt;<a class="code" href="a00001.html#a367086d31c5d7bf8b5b73cb8301607b7" title="Where to start/restart the animation on y. ">initialY</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            this-&gt;<a class="code" href="a00001.html#a1e6128b6da5ccb39a73cb8bca0faaf6f" title="                          Index of the current image relative to the number of  images. ">animationCount</a> = 0;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> positionX_ = this-&gt;<a class="code" href="a00001.html#a9639a9e1352cb0e0e853149171c44840" title="The position on x axis on the sprite. ">x</a> * this-&gt;<a class="code" href="a00001.html#a313a8988b9eb64f84dcb3dcb2b4b17d1" title="The sprite width. ">spriteWidth</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> positionY_ = this-&gt;<a class="code" href="a00001.html#aaf9cc4d9267529d4e19f6380d4623805" title="The position on x axis on the sprite. ">y</a> * this-&gt;<a class="code" href="a00001.html#abcdcc399e4459bcbcd1a93818fefb3cc" title="The sprite height. ">spriteHeight</a>;</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="comment">// On keyup.</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(this-&gt;<a class="code" href="a00013.html#ab2fa06988077060c7a3dca6c3d643dd3" title="SDL internal event structure. ">sdlEvent</a>.type == SDL_KEYUP){</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="a00001.html#ad86524ca999883c40965d04990a2762e" title="Updates the clip to a new position. ">updateClip</a>(clip, positionX_, positionY_);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordflow">switch</span>(this-&gt;<a class="code" href="a00013.html#ab2fa06988077060c7a3dca6c3d643dd3" title="SDL internal event structure. ">sdlEvent</a>.key.keysym.sym){</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                <span class="keywordflow">case</span> SDLK_SPACE: <span class="comment">// SPACEBAR.</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                    this-&gt;<a class="code" href="a00013.html#af8e03451ccf5a1028b2bc38ed85fad19" title="                   Boolean array that controls which keys are  pressed or not. ">keyStates</a>[GameKeys::SPACE] = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                <span class="keywordflow">case</span> SDLK_UP: <span class="comment">// UP ARROW.</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                    this-&gt;<a class="code" href="a00013.html#af8e03451ccf5a1028b2bc38ed85fad19" title="                   Boolean array that controls which keys are  pressed or not. ">keyStates</a>[GameKeys::UP] = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                <span class="keywordflow">case</span> SDLK_DOWN: <span class="comment">// DOWN ARROW.</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                    this-&gt;<a class="code" href="a00013.html#af8e03451ccf5a1028b2bc38ed85fad19" title="                   Boolean array that controls which keys are  pressed or not. ">keyStates</a>[GameKeys::DOWN] = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                <span class="keywordflow">case</span> SDLK_LEFT: <span class="comment">// LEFT ARROW.</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                    this-&gt;<a class="code" href="a00013.html#af8e03451ccf5a1028b2bc38ed85fad19" title="                   Boolean array that controls which keys are  pressed or not. ">keyStates</a>[GameKeys::LEFT] = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                <span class="keywordflow">case</span> SDLK_RIGHT: <span class="comment">// RIGHT ARROW.</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                    this-&gt;<a class="code" href="a00013.html#af8e03451ccf5a1028b2bc38ed85fad19" title="                   Boolean array that controls which keys are  pressed or not. ">keyStates</a>[GameKeys::RIGHT] = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                <span class="keywordflow">case</span> SDLK_ESCAPE: <span class="comment">// ESCAPE.</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                    this-&gt;<a class="code" href="a00013.html#af8e03451ccf5a1028b2bc38ed85fad19" title="                   Boolean array that controls which keys are  pressed or not. ">keyStates</a>[GameKeys::ESCAPE] = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            }</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        }</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="comment">// On window exit (X).</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(this-&gt;<a class="code" href="a00013.html#ab2fa06988077060c7a3dca6c3d643dd3" title="SDL internal event structure. ">sdlEvent</a>.type == SDL_QUIT){</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <a class="code" href="a00013.html#ae3546fa674d3db49d755b4047503f4e8" title="Sets InputHandler::quitFlag to true. ">signalExit</a>();</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        }</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    } <span class="keywordflow">while</span>(pendingEvent != 0);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno"><a class="code" href="a00013.html#af7087290a2fd7d973a47768049cfe5eb">   97</a></span>&#160;std::array&lt;bool, GameKeys::MAX&gt; <a class="code" href="a00013.html#af7087290a2fd7d973a47768049cfe5eb">InputHandler::getKeyStates</a>() {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">return</span> this-&gt;<a class="code" href="a00013.html#af8e03451ccf5a1028b2bc38ed85fad19" title="                   Boolean array that controls which keys are  pressed or not. ">keyStates</a>;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno"><a class="code" href="a00013.html#a7d103ecce85288f454876b5bef8b3aee">  101</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="a00013.html#a7d103ecce85288f454876b5bef8b3aee">InputHandler::isQuitFlag</a>() {</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">return</span> this-&gt;<a class="code" href="a00013.html#a6bd166e013cbd6313609eab276f00abd" title="If the quit signal was recieved or not. ">quitFlag</a>;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno"><a class="code" href="a00013.html#ae3546fa674d3db49d755b4047503f4e8">  105</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00013.html#ae3546fa674d3db49d755b4047503f4e8" title="Sets InputHandler::quitFlag to true. ">InputHandler::signalExit</a>() {</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    this-&gt;<a class="code" href="a00013.html#a6bd166e013cbd6313609eab276f00abd" title="If the quit signal was recieved or not. ">quitFlag</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;}</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="keywordtype">void</span> InputHandler::clearKey(<span class="keyword">const</span> GameKeys key_) {</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    this-&gt;<a class="code" href="a00013.html#af8e03451ccf5a1028b2bc38ed85fad19" title="                   Boolean array that controls which keys are  pressed or not. ">keyStates</a>.at(key_) = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="code" href="a00001.html#a633f597780d760edf4d8852538b894c0">   65</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00001.html#a633f597780d760edf4d8852538b894c0" title="Changes the animation to another. ">Animation::changeAnimation</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> x_, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> y_,</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> numberOfImages_, <span class="keyword">const</span> <span class="keywordtype">double</span> totalTime_) {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    this-&gt;<a class="code" href="a00001.html#a9639a9e1352cb0e0e853149171c44840" title="The position on x axis on the sprite. ">x</a> = x_;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    this-&gt;<a class="code" href="a00001.html#aaf9cc4d9267529d4e19f6380d4623805" title="The position on x axis on the sprite. ">y</a> = y_;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    this-&gt;<a class="code" href="a00001.html#aaf8398cc1bd20bcb4fe834f6462af8b8" title="Where to start/restart the animation on x. ">initialX</a> = x_;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    this-&gt;<a class="code" href="a00001.html#a367086d31c5d7bf8b5b73cb8301607b7" title="Where to start/restart the animation on y. ">initialY</a> = y_;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    this-&gt;<a class="code" href="a00001.html#af20f66365564581376b13cf776d0aae1" title="                          The number of images to animate inside the  spritesheet. ">numberOfImages</a> = (numberOfImages_ == 0) ? 1 : numberOfImages_;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    this-&gt;<a class="code" href="a00001.html#a6315668e311f54415bdd708b076bb35d" title="Total time in seconds for each animation loop. ">totalTime</a> = totalTime_;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    this-&gt;<a class="code" href="a00001.html#a1e6128b6da5ccb39a73cb8bca0faaf6f" title="                          Index of the current image relative to the number of  images. ">animationCount</a> = 0;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="code" href="a00001.html#ad86524ca999883c40965d04990a2762e">   77</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00001.html#ad86524ca999883c40965d04990a2762e" title="Updates the clip to a new position. ">Animation::updateClip</a>(SDL_Rect&amp; clip, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> x_, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> y_) {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    clip.x = (int) x_;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    clip.y = (int) y_;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    clip.w = (int) this-&gt;<a class="code" href="a00001.html#a313a8988b9eb64f84dcb3dcb2b4b17d1" title="The sprite width. ">spriteWidth</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    clip.h = (int) this-&gt;<a class="code" href="a00001.html#abcdcc399e4459bcbcd1a93818fefb3cc" title="The sprite height. ">spriteHeight</a>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="code" href="a00001.html#a56354acb39435a9d41fbeaa2e321eb25">   84</a></span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="a00001.html#a56354acb39435a9d41fbeaa2e321eb25">Animation::getCurrentFrame</a>() {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">return</span> (this-&gt;<a class="code" href="a00001.html#a1e6128b6da5ccb39a73cb8bca0faaf6f" title="                          Index of the current image relative to the number of  images. ">animationCount</a> + 1);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="code" href="a00001.html#a230bc5afad74e9d4ee9213e8eb49685f">   88</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00001.html#a230bc5afad74e9d4ee9213e8eb49685f" title="Changes the dimensions of the clip on the spritesheet. ">Animation::changeWidthHeight</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> width_, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> height_) {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    this-&gt;<a class="code" href="a00001.html#a313a8988b9eb64f84dcb3dcb2b4b17d1" title="The sprite width. ">spriteWidth</a> = width_;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    this-&gt;<a class="code" href="a00001.html#abcdcc399e4459bcbcd1a93818fefb3cc" title="The sprite height. ">spriteHeight</a> = height_;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><b>InputHandler.cpp</b></li>
-    <li class="footer">Generated on Fri Jul 11 2014 00:17:01 for sdl2-engine by
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><b>Animation.cpp</b></li>
+    <li class="footer">Generated on Sun Jul 20 2014 18:16:34 for sdl2-engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

@@ -1,12 +1,9 @@
 var a00006 =
 [
-    [ "RectangleSide", "a00006.html#aff63033fba1bd69e0ff7c267aadd58ca", [
-      [ "TOP", "a00006.html#aff63033fba1bd69e0ff7c267aadd58caab3585528912fcffefd91466901f5084a", null ],
-      [ "BOTTOM", "a00006.html#aff63033fba1bd69e0ff7c267aadd58caa367442e81d48643a0e2656137f0c14f8", null ],
-      [ "LEFT", "a00006.html#aff63033fba1bd69e0ff7c267aadd58caa40ce8f929fa88db7a8180880de3647ac", null ],
-      [ "RIGHT", "a00006.html#aff63033fba1bd69e0ff7c267aadd58caa5c829c9373cb66b9147da30571213aff", null ],
-      [ "NONE", "a00006.html#aff63033fba1bd69e0ff7c267aadd58caab92ccbc24e2c5a8f725d19b70045a453", null ]
-    ] ],
-    [ "rectsCollided", "a00006.html#a1ca688777eff8626a0dd950d69c0371c", null ],
-    [ "rectsCollidedSide", "a00006.html#a271d4cfeafc94b90fad82437b55f56a6", null ]
+    [ "ControllerHandler", "a00006.html#a2a6b8a51a3165d65606addb743f45964", null ],
+    [ "~ControllerHandler", "a00006.html#a33f16779eef5a5304b64fbd3303386a7", null ],
+    [ "getKeyStates", "a00006.html#a1c4161545fdc54bf1d406f6acd2d67d6", null ],
+    [ "handleInput", "a00006.html#a79e2adab7291ab5589e907860d046046", null ],
+    [ "gameController", "a00006.html#a65bbcf23b90f3ab1b4087acd136518b2", null ],
+    [ "keyStates", "a00006.html#ac40f0381dd876419404a52a7d1b515d6", null ]
 ];

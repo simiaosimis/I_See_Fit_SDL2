@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>sdl2-engine: src/Configuration.cpp Source File</title>
+<title>sdl2-engine: include/Text.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -46,6 +46,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -91,7 +92,7 @@ $(document).ready(function(){initNavTree('a00052_source.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -102,82 +103,43 @@ $(document).ready(function(){initNavTree('a00052_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Configuration.cpp</div>  </div>
+<div class="title">Text.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;Configuration.h&quot;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// Resolution = 16:10</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="a00007.html#a5b733811a9215c5bba90d16604cfabcf" title="The game&#39;s width resolution. ">Configuration::resolutionWidth</a> = 192;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="a00007.html#a469e15c3c77e7eced8d2682aa127e10b" title="The game&#39;s height resolution. ">Configuration::resolutionHeight</a> = 108;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;uint32_t <a class="code" href="a00007.html#ae0480202acc37209e339ad7da33c89a2" title="The game&#39;s max framerate. ">Configuration::maxFramerate</a> = 0;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;std::string <a class="code" href="a00007.html#ab5fa690a270bfcb7e34416a952eebe00" title="The game window&#39;s title. ">Configuration::windowTitle</a> = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="a00007.html#a9c18ad1f19aa75b6c8fa4a626cc206f0" title="The size of the logical rendering. ">Configuration::logicalRenderSize</a> = 0;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="a00007.html#aef24b67543ea3560d93544769d7aa2b8" title="The screen width. ">Configuration::screenWidth</a> = 0;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="a00007.html#a5c49a9e882e7acb0aced8e6bd63d212d" title="The screen height. ">Configuration::screenHeight</a> = 0;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="a00007.html#ab4c70c72580771e9f7d9925388355bb5" title="The width distance of the camera. ">Configuration::cameraDistanceWidth</a> = 0;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="a00007.html#ab1df391e86cd95764b62bf817d11f0ef" title="The height distance of the camera. ">Configuration::cameraDistanceHeight</a> = 0;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="code" href="a00007.html#aa04cb3c24d2d5557fd519963fa0cb345">   17</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00007.html#aa04cb3c24d2d5557fd519963fa0cb345" title="Initializes all the attributes. ">Configuration::initialize</a>(){</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="a00007.html#ae0480202acc37209e339ad7da33c89a2" title="The game&#39;s max framerate. ">Configuration::maxFramerate</a> = 60;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="a00007.html#ab5fa690a270bfcb7e34416a952eebe00" title="The game window&#39;s title. ">Configuration::windowTitle</a> = <span class="stringliteral">&quot;sdl2-engine&quot;</span>;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="a00007.html#a9c18ad1f19aa75b6c8fa4a626cc206f0" title="The size of the logical rendering. ">Configuration::logicalRenderSize</a> = 8;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="a00007.html#ab4c70c72580771e9f7d9925388355bb5" title="The width distance of the camera. ">Configuration::cameraDistanceWidth</a> =</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="a00007.html#a5b733811a9215c5bba90d16604cfabcf" title="The game&#39;s width resolution. ">Configuration::resolutionWidth</a> * <a class="code" href="a00007.html#a9c18ad1f19aa75b6c8fa4a626cc206f0" title="The size of the logical rendering. ">Configuration::logicalRenderSize</a>;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="a00007.html#ab1df391e86cd95764b62bf817d11f0ef" title="The height distance of the camera. ">Configuration::cameraDistanceHeight</a> =</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="a00007.html#a469e15c3c77e7eced8d2682aa127e10b" title="The game&#39;s height resolution. ">Configuration::resolutionHeight</a> * <a class="code" href="a00007.html#a9c18ad1f19aa75b6c8fa4a626cc206f0" title="The size of the logical rendering. ">Configuration::logicalRenderSize</a>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="a00007.html#aef24b67543ea3560d93544769d7aa2b8" title="The screen width. ">Configuration::screenWidth</a> = 1920 / 2;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="a00007.html#a5c49a9e882e7acb0aced8e6bd63d212d" title="The screen height. ">Configuration::screenHeight</a> = 1080 / 2;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="code" href="a00007.html#a7ba0944628b1828721c99027797c29d1">   34</a></span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="a00007.html#a7ba0944628b1828721c99027797c29d1">Configuration::getResolutionWidth</a>(){</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="a00007.html#a5b733811a9215c5bba90d16604cfabcf" title="The game&#39;s width resolution. ">Configuration::resolutionWidth</a>;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="code" href="a00007.html#aec8b7cf23825cfc8e4d8440fab006b56">   38</a></span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="a00007.html#aec8b7cf23825cfc8e4d8440fab006b56">Configuration::getResolutionHeight</a>(){</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="a00007.html#a469e15c3c77e7eced8d2682aa127e10b" title="The game&#39;s height resolution. ">Configuration::resolutionHeight</a>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="code" href="a00007.html#aafc1e20b38ec523edfa494ecf373d6c5">   42</a></span>&#160;uint32_t <a class="code" href="a00007.html#aafc1e20b38ec523edfa494ecf373d6c5">Configuration::getMaxFramerate</a>(){</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="a00007.html#ae0480202acc37209e339ad7da33c89a2" title="The game&#39;s max framerate. ">Configuration::maxFramerate</a>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="code" href="a00007.html#a5d557ba14dce27bf2353e2bf509742bb">   46</a></span>&#160;std::string <a class="code" href="a00007.html#a5d557ba14dce27bf2353e2bf509742bb">Configuration::getWindowTitle</a>(){</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="a00007.html#ab5fa690a270bfcb7e34416a952eebe00" title="The game window&#39;s title. ">Configuration::windowTitle</a>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="code" href="a00007.html#a6b7e62e989bfea784eb78ceff3825f11">   50</a></span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="a00007.html#a6b7e62e989bfea784eb78ceff3825f11">Configuration::getLogicalRenderSize</a>(){</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="a00007.html#a9c18ad1f19aa75b6c8fa4a626cc206f0" title="The size of the logical rendering. ">Configuration::logicalRenderSize</a>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="code" href="a00007.html#a492a60b34681cbfaf813e94524cc92d4">   54</a></span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="a00007.html#a492a60b34681cbfaf813e94524cc92d4">Configuration::getScreenWidth</a>(){</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="a00007.html#aef24b67543ea3560d93544769d7aa2b8" title="The screen width. ">Configuration::screenWidth</a>;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="code" href="a00007.html#a1b3606b352023365c918603e4151effe">   58</a></span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="a00007.html#a1b3606b352023365c918603e4151effe">Configuration::getScreenHeight</a>(){</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="a00007.html#a5c49a9e882e7acb0aced8e6bd63d212d" title="The screen height. ">Configuration::screenHeight</a>;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="code" href="a00007.html#aca07033d9bb9876e06d41375efb9c0c7">   62</a></span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="a00007.html#aca07033d9bb9876e06d41375efb9c0c7">Configuration::getCameraDistanceWidth</a>(){</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="a00007.html#ab4c70c72580771e9f7d9925388355bb5" title="The width distance of the camera. ">Configuration::cameraDistanceWidth</a>;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="code" href="a00007.html#a722602faba9b9a85986134b2e402ee2e">   66</a></span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="a00007.html#a722602faba9b9a85986134b2e402ee2e">Configuration::getCameraDistanceHeight</a>(){</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="a00007.html#ab1df391e86cd95764b62bf817d11f0ef" title="The height distance of the camera. ">Configuration::cameraDistanceHeight</a>;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;SDL_Libs.h&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;GameObject.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="code" href="a00022.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00022.html">Text</a> : <span class="keyword">public</span> <a class="code" href="a00009.html" title="Base class for all game objects (gameObjects). ">GameObject</a> {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <a class="code" href="a00022.html#a3115f4a81c0c42f80768fd53c32377cd">Text</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> x_, <span class="keyword">const</span> <span class="keywordtype">double</span> y_, <span class="keyword">const</span> <span class="keywordtype">char</span>* path_, <span class="keyword">const</span> <span class="keywordtype">int</span> size_,</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">char</span>* text_, <span class="keyword">const</span> SDL_Color color_);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <a class="code" href="a00022.html#a3115f4a81c0c42f80768fd53c32377cd">Text</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> x_, <span class="keyword">const</span> <span class="keywordtype">double</span> y_, <span class="keyword">const</span> <span class="keywordtype">char</span>* path_, <span class="keyword">const</span> <span class="keywordtype">int</span> size_,</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">char</span>* text_);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="a00022.html">Text</a>();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="a00022.html#a84093d4d7ac0cc29c1c9ef8c7fe99f76" title="Updates the text. ">update</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> dt_);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="a00022.html#a61dff362532c385dbc0650b397138635" title="Renders the text. ">render</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> cameraX_, <span class="keyword">const</span> <span class="keywordtype">double</span> cameraY_);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="a00022.html#a91b8cdda1b4527cf8ac2c25f53397e69">changeText</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* text_, <span class="keyword">const</span> SDL_Color color_);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="a00022.html#a91b8cdda1b4527cf8ac2c25f53397e69">changeText</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* text_);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        TTF_Font* font;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><b>Configuration.cpp</b></li>
-    <li class="footer">Generated on Fri Jul 11 2014 00:17:01 for sdl2-engine by
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><b>Text.h</b></li>
+    <li class="footer">Generated on Sun Jul 20 2014 18:16:34 for sdl2-engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

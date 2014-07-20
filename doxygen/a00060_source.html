@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>sdl2-engine: src/main.cpp Source File</title>
+<title>sdl2-engine: src/Camera.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -46,6 +46,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -91,7 +92,7 @@ $(document).ready(function(){initNavTree('a00060_source.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -102,46 +103,71 @@ $(document).ready(function(){initNavTree('a00060_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">main.cpp</div>  </div>
+<div class="title">Camera.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;Game.h&quot;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;Logger.h&quot;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;Configuration.h&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;UsefulDefines.h&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv){</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="comment">// Unused.</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    UNUSED(argc);</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    UNUSED(argv);</div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;Camera.h&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;Configuration.h&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="code" href="a00003.html#a38fcce2d132182fda695f2627cc841e9">    4</a></span>&#160;<a class="code" href="a00003.html#a38fcce2d132182fda695f2627cc841e9" title="The constructor. ">Camera::Camera</a>(<a class="code" href="a00009.html" title="Base class for all game objects (gameObjects). ">GameObject</a>* <span class="keyword">const</span> gameObject_):</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    gameObject(gameObject_),</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    levelW(0),</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    levelH(0),</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    clip{0, 0, (int)<a class="code" href="a00005.html#aca07033d9bb9876e06d41375efb9c0c7">Configuration::getCameraDistanceWidth</a>(),</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        (int)<a class="code" href="a00005.html#a722602faba9b9a85986134b2e402ee2e">Configuration::getCameraDistanceHeight</a>()}</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    Log(DEBUG) &lt;&lt; <span class="stringliteral">&quot;Starting sdl2-engine...&quot;</span>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;}</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="a00007.html#aa04cb3c24d2d5557fd519963fa0cb345" title="Initializes all the attributes. ">Configuration::initialize</a>();</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="code" href="a00003.html#ad1897942d0ccf91052386388a497349f">   14</a></span>&#160;<a class="code" href="a00003.html#ad1897942d0ccf91052386388a497349f" title="The destructor. ">Camera::~Camera</a>() {</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">bool</span> systemsInitialized = <a class="code" href="a00017.html#ae5be8c09a030f8b7809eb1957871820b" title="The system initializer. ">SDLWrapper::initialize</a>();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">if</span>(systemsInitialized){</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="a00010.html#ac213e6d3a4e566d901413f62f6408858" title="Singleton imeplementation for Game. ">Game::instance</a>().<a class="code" href="a00010.html#abc9436a9d18e48c6e1e4fbc4ea879449" title="The main game loop. ">runGame</a>();</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">delete</span> &amp;<a class="code" href="a00010.html#ac213e6d3a4e566d901413f62f6408858" title="Singleton imeplementation for Game. ">Game::instance</a>();</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">else</span>{</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        Log(ERROR) &lt;&lt; <span class="stringliteral">&quot;Systems were not initialized.&quot;</span>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    }</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="code" href="a00003.html#a42cda7239981a5618660d04bd5893556">   18</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00003.html#a42cda7239981a5618660d04bd5893556" title="Updates the camera. ">Camera::update</a>() {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="a00003.html#aecf07f908ef1bfa2c2f1bb5cd4192d8d" title="Updates the cameras position. ">updatePosition</a>();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="code" href="a00003.html#a4bff0d442826eaf1e0337c4cd15532c5">   22</a></span>&#160;SDL_Rect&amp; <a class="code" href="a00003.html#a4bff0d442826eaf1e0337c4cd15532c5">Camera::getClip</a>() {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">return</span> this-&gt;<a class="code" href="a00003.html#a3e33feaa65673d9de0067aecabdbe249" title="            Clip which will be used to clip the rendering only to the extent of  the camera...">clip</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="a00017.html#abc531dfce7f782dc0af1e1b1f217fef2" title="Closes all open systems. ">SDLWrapper::close</a>();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    Log(DEBUG) &lt;&lt; <span class="stringliteral">&quot;Exiting sdl2-engine...&quot;</span>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="code" href="a00003.html#aecf07f908ef1bfa2c2f1bb5cd4192d8d">   26</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00003.html#aecf07f908ef1bfa2c2f1bb5cd4192d8d" title="Updates the cameras position. ">Camera::updatePosition</a>() {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    this-&gt;<a class="code" href="a00003.html#a3e33feaa65673d9de0067aecabdbe249" title="            Clip which will be used to clip the rendering only to the extent of  the camera...">clip</a>.x = (this-&gt;<a class="code" href="a00003.html#ac9b5a1f9deecf080f38a6196b3bb706f" title="Reference to the entity. ">gameObject</a>-&gt;<a class="code" href="a00009.html#a77ae10ff022a6cfe7419d4acdcffe2a4" title="The position in the x axis. ">x</a> + this-&gt;<a class="code" href="a00003.html#ac9b5a1f9deecf080f38a6196b3bb706f" title="Reference to the entity. ">gameObject</a>-&gt;<a class="code" href="a00009.html#affec43dec5bbc848a02bb28ecf46d144">getWidth</a>() / 2) - (this-&gt;<a class="code" href="a00003.html#a3e33feaa65673d9de0067aecabdbe249" title="            Clip which will be used to clip the rendering only to the extent of  the camera...">clip</a>.w / 2);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    this-&gt;<a class="code" href="a00003.html#a3e33feaa65673d9de0067aecabdbe249" title="            Clip which will be used to clip the rendering only to the extent of  the camera...">clip</a>.y = (this-&gt;<a class="code" href="a00003.html#ac9b5a1f9deecf080f38a6196b3bb706f" title="Reference to the entity. ">gameObject</a>-&gt;<a class="code" href="a00009.html#af3f4a42c92fa6f6ac04d57bf4b11d43f" title="The position in the y axis. ">y</a> + this-&gt;<a class="code" href="a00003.html#ac9b5a1f9deecf080f38a6196b3bb706f" title="Reference to the entity. ">gameObject</a>-&gt;<a class="code" href="a00009.html#a0036a87bdab17027a635d570fb6cf34e">getHeight</a>() / 2) - (this-&gt;<a class="code" href="a00003.html#a3e33feaa65673d9de0067aecabdbe249" title="            Clip which will be used to clip the rendering only to the extent of  the camera...">clip</a>.h / 2);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="comment">// Left wall.</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">if</span>(this-&gt;<a class="code" href="a00003.html#a3e33feaa65673d9de0067aecabdbe249" title="            Clip which will be used to clip the rendering only to the extent of  the camera...">clip</a>.x &lt; 0) {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        this-&gt;<a class="code" href="a00003.html#a3e33feaa65673d9de0067aecabdbe249" title="            Clip which will be used to clip the rendering only to the extent of  the camera...">clip</a>.x = 0;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">// Right wall.</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(this-&gt;<a class="code" href="a00003.html#a3e33feaa65673d9de0067aecabdbe249" title="            Clip which will be used to clip the rendering only to the extent of  the camera...">clip</a>.x &gt; (<span class="keywordtype">int</span>)this-&gt;<a class="code" href="a00003.html#afcf1ecd0a79a95e8097109be04dd1779" title="The width of the level. ">levelW</a> - this-&gt;<a class="code" href="a00003.html#a3e33feaa65673d9de0067aecabdbe249" title="            Clip which will be used to clip the rendering only to the extent of  the camera...">clip</a>.w) {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        this-&gt;<a class="code" href="a00003.html#a3e33feaa65673d9de0067aecabdbe249" title="            Clip which will be used to clip the rendering only to the extent of  the camera...">clip</a>.x = (int)this-&gt;<a class="code" href="a00003.html#afcf1ecd0a79a95e8097109be04dd1779" title="The width of the level. ">levelW</a> - this-&gt;<a class="code" href="a00003.html#a3e33feaa65673d9de0067aecabdbe249" title="            Clip which will be used to clip the rendering only to the extent of  the camera...">clip</a>.w;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="comment">// Top wall.</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">if</span>(this-&gt;<a class="code" href="a00003.html#a3e33feaa65673d9de0067aecabdbe249" title="            Clip which will be used to clip the rendering only to the extent of  the camera...">clip</a>.y &lt; 0) {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        this-&gt;<a class="code" href="a00003.html#a3e33feaa65673d9de0067aecabdbe249" title="            Clip which will be used to clip the rendering only to the extent of  the camera...">clip</a>.y = 0;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="comment">// Bottom wall.</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(this-&gt;<a class="code" href="a00003.html#a3e33feaa65673d9de0067aecabdbe249" title="            Clip which will be used to clip the rendering only to the extent of  the camera...">clip</a>.y &gt; (<span class="keywordtype">int</span>)this-&gt;<a class="code" href="a00003.html#a561e153f11f640088936dcb63cd2924a" title="The height of the level. ">levelH</a> - this-&gt;<a class="code" href="a00003.html#a3e33feaa65673d9de0067aecabdbe249" title="            Clip which will be used to clip the rendering only to the extent of  the camera...">clip</a>.h) {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        this-&gt;<a class="code" href="a00003.html#a3e33feaa65673d9de0067aecabdbe249" title="            Clip which will be used to clip the rendering only to the extent of  the camera...">clip</a>.y = (int)this-&gt;<a class="code" href="a00003.html#a561e153f11f640088936dcb63cd2924a" title="The height of the level. ">levelH</a> - this-&gt;<a class="code" href="a00003.html#a3e33feaa65673d9de0067aecabdbe249" title="            Clip which will be used to clip the rendering only to the extent of  the camera...">clip</a>.h;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="code" href="a00003.html#a355fb77bfae549d28293662aa675d85b">   48</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00003.html#a355fb77bfae549d28293662aa675d85b" title="Changes the entity to centralize upon. ">Camera::centralizeOn</a>(<a class="code" href="a00009.html" title="Base class for all game objects (gameObjects). ">GameObject</a>* <span class="keyword">const</span> gameObject_) {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    this-&gt;<a class="code" href="a00003.html#ac9b5a1f9deecf080f38a6196b3bb706f" title="Reference to the entity. ">gameObject</a> = gameObject_;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="code" href="a00003.html#a6768fadda07535ae32ff269f255b7a79">   52</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00003.html#a6768fadda07535ae32ff269f255b7a79">Camera::setLevelWH</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> width_, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> height_) {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    this-&gt;<a class="code" href="a00003.html#afcf1ecd0a79a95e8097109be04dd1779" title="The width of the level. ">levelW</a> = width_;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    this-&gt;<a class="code" href="a00003.html#a561e153f11f640088936dcb63cd2924a" title="The height of the level. ">levelH</a> = height_;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><b>main.cpp</b></li>
-    <li class="footer">Generated on Fri Jul 11 2014 00:17:01 for sdl2-engine by
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><b>Camera.cpp</b></li>
+    <li class="footer">Generated on Sun Jul 20 2014 18:16:34 for sdl2-engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

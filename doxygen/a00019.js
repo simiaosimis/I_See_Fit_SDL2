@@ -1,11 +1,22 @@
 var a00019 =
 [
-    [ "~StateGame", "a00019.html#afbdf7c96f1f13b3686a744fd7ca97949", null ],
-    [ "addEntity", "a00019.html#a6f5b65eb8fe275ba9a9a3d85e88927a7", null ],
-    [ "cleanEntities", "a00019.html#a996bc9fb1ac73c0a71cefac045b7d1a5", null ],
-    [ "load", "a00019.html#a924e531e28b8afcbb82858eecef0a084", null ],
-    [ "render", "a00019.html#a9e181e234d99aa11beead047152a8e92", null ],
-    [ "unload", "a00019.html#aa7114cda03ff5ef57dc37c2e720e5634", null ],
-    [ "update", "a00019.html#a300539fe737d6bbab4b4d6fe4b6a2e98", null ],
-    [ "gameObjects", "a00019.html#ae4b0e8ceb5cc37fe469b5e4f978ceea9", null ]
+    [ "Sprite", "a00019.html#a0c5597fedd9b09878ec8acddca54c2f7", null ],
+    [ "Sprite", "a00019.html#a29730aadf31a6433746f5fa5bee9550f", null ],
+    [ "~Sprite", "a00019.html#a8accab430f9d90ae5117b57d67e32b84", null ],
+    [ "getAlpha", "a00019.html#a0aa4e1217226e29f1181e8d44c48dea3", null ],
+    [ "getHeight", "a00019.html#a02fcba350f07d226b110f7d0712f5154", null ],
+    [ "getPath", "a00019.html#a38399275797600991cd2d95cc803fa0a", null ],
+    [ "getWidth", "a00019.html#a8f425d524e48eea595ef74dc310e0417", null ],
+    [ "loadFrom", "a00019.html#a9ba64ddfcd3f79c45b74ec1c1a16c396", null ],
+    [ "render", "a00019.html#ac82a01b98130b9b1403667059640163b", null ],
+    [ "setAlpha", "a00019.html#a59cf52a8669c1b91a47b00ee32a6bfaf", null ],
+    [ "setBlendMode", "a00019.html#a5fe515e7c3a54a8d82d27612ee6dc4c4", null ],
+    [ "setHeight", "a00019.html#acc2ba583261bbcda5b3e37d923bb7ad2", null ],
+    [ "setWidth", "a00019.html#a5105482cff23d7b13899aa834b23ad83", null ],
+    [ "surfaceToTexture", "a00019.html#a98bb8afceb93d82270c9e5e7e8f9b49d", null ],
+    [ "flipHorizontal", "a00019.html#aa70e85ab29425537f1b0e41abbbfe852", null ],
+    [ "height", "a00019.html#a4d34b71316c3456acb51c3c7e57a94e2", null ],
+    [ "path", "a00019.html#a2bd9395c3ebb407e632723c3aae2a267", null ],
+    [ "sdlTexture", "a00019.html#a546d109413d8f3541ffde26701075bd1", null ],
+    [ "width", "a00019.html#a950adad23da17ce64e6e759b0b64fadd", null ]
 ];

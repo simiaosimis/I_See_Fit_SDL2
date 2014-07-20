@@ -46,6 +46,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -86,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('a00023.html','');});
+$(document).ready(function(){initNavTree('a00005.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -94,7 +95,7 @@ $(document).ready(function(){initNavTree('a00023.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -105,33 +106,37 @@ $(document).ready(function(){initNavTree('a00023.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Window Member List</div>  </div>
+<div class="title">Configuration Member List</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="a00023.html">Window</a>, including all inherited members.</p>
+<p>This is the complete list of members for <a class="el" href="a00005.html">Configuration</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="a00023.html#a38bc43bdd1a97e5de7f346ba4c3957ef">clear</a>()</td><td class="entry"><a class="el" href="a00023.html">Window</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a00023.html#a25b4e6d9c7d514cbb63b7851de2526e5">create</a>(const unsigned int width_, const unsigned int height_)</td><td class="entry"><a class="el" href="a00023.html">Window</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00023.html#aa89262ad2538473c8d7e4d8dd641849d">destroy</a>()</td><td class="entry"><a class="el" href="a00023.html">Window</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>getLogicalSize</b>(int *w, int *h) (defined in <a class="el" href="a00023.html">Window</a>)</td><td class="entry"><a class="el" href="a00023.html">Window</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00023.html#ae2418ad8ae2af2f4c5badd9cbb8656c1">getRenderer</a>()</td><td class="entry"><a class="el" href="a00023.html">Window</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr><td class="entry"><a class="el" href="a00023.html#a652b249e69ee5ff3ba8aa3bd4feccdae">maximize</a>()</td><td class="entry"><a class="el" href="a00023.html">Window</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00023.html#a97078387be519b16401c3bb0f299aa01">minimize</a>()</td><td class="entry"><a class="el" href="a00023.html">Window</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a00023.html#a0a2093bd2ed34740c08a6a2fdfc059c9">render</a>()</td><td class="entry"><a class="el" href="a00023.html">Window</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00023.html#a0d7c171a31ea6cf664a0f92ce4f29aaa">rescale</a>(unsigned int size_)</td><td class="entry"><a class="el" href="a00023.html">Window</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr><td class="entry"><a class="el" href="a00023.html#a3c322c6691e9180b98ad18545013954c">resize</a>(const unsigned int width_, const unsigned int height_)</td><td class="entry"><a class="el" href="a00023.html">Window</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00023.html#a3c56f31300b017074ab06800b2164e40">sdlRenderer</a></td><td class="entry"><a class="el" href="a00023.html">Window</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">static</span></td></tr>
-  <tr><td class="entry"><a class="el" href="a00023.html#a6be667ef970fd951a4853e7bcc933ac8">sdlWindow</a></td><td class="entry"><a class="el" href="a00023.html">Window</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00023.html#aad1e09c01ead81481270e00b9b86add9">Window</a>(const unsigned int width_, const unsigned int height_, const std::string &amp;title_=&quot;SDL Window&quot;)</td><td class="entry"><a class="el" href="a00023.html">Window</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a00023.html#a003d840446d3c6bdb4a4b0cabfc3f182">windowTitle</a></td><td class="entry"><a class="el" href="a00023.html">Window</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00023.html#a245d821e6016fa1f6970ccbbedd635f6">~Window</a>()</td><td class="entry"><a class="el" href="a00023.html">Window</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00005.html#ab1df391e86cd95764b62bf817d11f0ef">cameraDistanceHeight</a></td><td class="entry"><a class="el" href="a00005.html">Configuration</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="a00005.html#ab4c70c72580771e9f7d9925388355bb5">cameraDistanceWidth</a></td><td class="entry"><a class="el" href="a00005.html">Configuration</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00005.html#a722602faba9b9a85986134b2e402ee2e">getCameraDistanceHeight</a>()</td><td class="entry"><a class="el" href="a00005.html">Configuration</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="a00005.html#aca07033d9bb9876e06d41375efb9c0c7">getCameraDistanceWidth</a>()</td><td class="entry"><a class="el" href="a00005.html">Configuration</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00005.html#a6b7e62e989bfea784eb78ceff3825f11">getLogicalRenderSize</a>()</td><td class="entry"><a class="el" href="a00005.html">Configuration</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="a00005.html#aafc1e20b38ec523edfa494ecf373d6c5">getMaxFramerate</a>()</td><td class="entry"><a class="el" href="a00005.html">Configuration</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00005.html#aec8b7cf23825cfc8e4d8440fab006b56">getResolutionHeight</a>()</td><td class="entry"><a class="el" href="a00005.html">Configuration</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="a00005.html#a7ba0944628b1828721c99027797c29d1">getResolutionWidth</a>()</td><td class="entry"><a class="el" href="a00005.html">Configuration</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00005.html#a1b3606b352023365c918603e4151effe">getScreenHeight</a>()</td><td class="entry"><a class="el" href="a00005.html">Configuration</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="a00005.html#a492a60b34681cbfaf813e94524cc92d4">getScreenWidth</a>()</td><td class="entry"><a class="el" href="a00005.html">Configuration</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00005.html#a5d557ba14dce27bf2353e2bf509742bb">getWindowTitle</a>()</td><td class="entry"><a class="el" href="a00005.html">Configuration</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="a00005.html#aa04cb3c24d2d5557fd519963fa0cb345">initialize</a>()</td><td class="entry"><a class="el" href="a00005.html">Configuration</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00005.html#a9c18ad1f19aa75b6c8fa4a626cc206f0">logicalRenderSize</a></td><td class="entry"><a class="el" href="a00005.html">Configuration</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="a00005.html#ae0480202acc37209e339ad7da33c89a2">maxFramerate</a></td><td class="entry"><a class="el" href="a00005.html">Configuration</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00005.html#a469e15c3c77e7eced8d2682aa127e10b">resolutionHeight</a></td><td class="entry"><a class="el" href="a00005.html">Configuration</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="a00005.html#a5b733811a9215c5bba90d16604cfabcf">resolutionWidth</a></td><td class="entry"><a class="el" href="a00005.html">Configuration</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00005.html#a5c49a9e882e7acb0aced8e6bd63d212d">screenHeight</a></td><td class="entry"><a class="el" href="a00005.html">Configuration</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="a00005.html#aef24b67543ea3560d93544769d7aa2b8">screenWidth</a></td><td class="entry"><a class="el" href="a00005.html">Configuration</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00005.html#ab5fa690a270bfcb7e34416a952eebe00">windowTitle</a></td><td class="entry"><a class="el" href="a00005.html">Configuration</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">static</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Fri Jul 11 2014 00:17:01 for sdl2-engine by
+    <li class="footer">Generated on Sun Jul 20 2014 18:16:34 for sdl2-engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

@@ -1,9 +1,8 @@
 var a00012 =
 [
-    [ "GStatePlaceholder", "a00012.html#adfbf36156052798e8f7907c212aa84c9", null ],
-    [ "~GStatePlaceholder", "a00012.html#ab4808cf40cc146893275f46b8556fe95", null ],
-    [ "load", "a00012.html#a177ff2bfd8c9f911c6e4e7c6b6b50bdf", null ],
-    [ "render", "a00012.html#ad48aea57e922a0f83dc140f6e9a1078b", null ],
-    [ "unload", "a00012.html#ae67aed58f73d4cc73a322cfee0a61b8e", null ],
-    [ "update", "a00012.html#a0a9fa0b0d389cf691001d90076ae602b", null ]
+    [ "Logger", "a00012.html#abc41bfb031d896170c7675fa96a6b30c", null ],
+    [ "~Logger", "a00012.html#acb668a9e186a25fbaad2e4af6d1ed00a", null ],
+    [ "log", "a00012.html#a8582d8febe452622ddb8b878f8fc8100", null ],
+    [ "logLevelToString", "a00012.html#adbe89cab928ca98edfe34ef538b2f96f", null ],
+    [ "os", "a00012.html#af1b3baedac2e1b8b4d02257725a4df1f", null ]
 ];

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>sdl2-engine: src/Game.cpp Source File</title>
+<title>sdl2-engine: include/UsefulDefines.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -46,6 +46,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -91,7 +92,7 @@ $(document).ready(function(){initNavTree('a00055_source.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -102,154 +103,29 @@ $(document).ready(function(){initNavTree('a00055_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Game.cpp</div>  </div>
+<div class="title">UsefulDefines.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;Game.h&quot;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;FPSWrapper.h&quot;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;Configuration.h&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;Util.h&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;Sprite.h&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;Logger.h&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;UsefulDefines.h&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;cassert&gt;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;GStatePlaceholder.h&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define ADD_STATE_EMPLACE(stateEnum, stateClass) this-&gt;statesMap.emplace(stateEnum, new stateClass())</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ADD_STATE_INSERT(stateEnum, stateClass) this-&gt;statesMap.insert(std::make_pair&lt;GStates, StateGame*&gt;(stateEnum, new stateClass()))</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="code" href="a00010.html#ac213e6d3a4e566d901413f62f6408858">   15</a></span>&#160;<a class="code" href="a00010.html" title="Main structure class for the game. ">Game</a>&amp; <a class="code" href="a00010.html#ac213e6d3a4e566d901413f62f6408858" title="Singleton imeplementation for Game. ">Game::instance</a>(){</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">static</span> <a class="code" href="a00010.html" title="Main structure class for the game. ">Game</a>* <a class="code" href="a00010.html#ac213e6d3a4e566d901413f62f6408858" title="Singleton imeplementation for Game. ">instance</a> = <span class="keyword">new</span> <a class="code" href="a00010.html#ad59df6562a58a614fda24622d3715b65" title="The constructor. ">Game</a>();</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">return</span> *<a class="code" href="a00010.html#ac213e6d3a4e566d901413f62f6408858" title="Singleton imeplementation for Game. ">instance</a>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="code" href="a00010.html#ad59df6562a58a614fda24622d3715b65">   20</a></span>&#160;<a class="code" href="a00010.html#ad59df6562a58a614fda24622d3715b65" title="The constructor. ">Game::Game</a>() :</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    window(nullptr),</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    isRunning(false),</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    audioHandler(new <a class="code" href="a00004.html" title="The audio handler. ">AudioHandler</a>()),</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    inputHandler(new <a class="code" href="a00013.html" title="Handles player input. ">InputHandler</a>()),</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    resourceManager(new <a class="code" href="a00016.html" title="General resource management class. ">ResourceManager</a>()),</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    currentState(nullptr),</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    statesMap()</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    this-&gt;<a class="code" href="a00010.html#a553924bcccf9f9b1c04e385041852f17" title="The game Window. ">window</a> = <span class="keyword">new</span> <a class="code" href="a00023.html" title="Represents actual window that game runs on. ">Window</a>(<a class="code" href="a00007.html#a492a60b34681cbfaf813e94524cc92d4">Configuration::getScreenWidth</a>(),</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="a00007.html#a1b3606b352023365c918603e4151effe">Configuration::getScreenHeight</a>(), <a class="code" href="a00007.html#a5d557ba14dce27bf2353e2bf509742bb">Configuration::getWindowTitle</a>());</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    assert(this-&gt;<a class="code" href="a00010.html#a553924bcccf9f9b1c04e385041852f17" title="The game Window. ">window</a> != <span class="keyword">nullptr</span> &amp;&amp; <span class="stringliteral">&quot;The window should not be null!&quot;</span>);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="a00010.html#afc16bd0d077c53218c27f16e0bf56cbb" title="Loads all the states. ">initializeStates</a>();</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    this-&gt;<a class="code" href="a00010.html#adb424734b2454f9ed1e6d6bd44e6dfaf" title="Whether the game is currently running/looping or not. ">isRunning</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="a00009.html#ac5849b5e6229efba666b19282f08bfa0" title="Initializes FPS managing. ">FPSWrapper::initialize</a>(this-&gt;<a class="code" href="a00010.html#a5817ea6f0896abffc6ab8bc893382a31" title="The FPSManager from SDL2_GFX. ">fpsManager</a>);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="code" href="a00010.html#ae3d112ca6e0e55150d2fdbc704474530">   40</a></span>&#160;<a class="code" href="a00010.html#ae3d112ca6e0e55150d2fdbc704474530" title="The destructor. ">Game::~Game</a>(){</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">if</span>(this-&gt;<a class="code" href="a00010.html#a39cc30f3e086ce1279ad01967d7694fe" title="The current state, which the game is in. ">currentState</a> != <span class="keyword">nullptr</span>){</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        this-&gt;<a class="code" href="a00010.html#a39cc30f3e086ce1279ad01967d7694fe" title="The current state, which the game is in. ">currentState</a>-&gt;<a class="code" href="a00019.html#aa7114cda03ff5ef57dc37c2e720e5634" title="Unloads necessary objects. ">unload</a>();</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="a00010.html#a684834abb420aba6d30094d1fe273818" title="Deletes all the loaded states. ">destroyStates</a>();</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    SAFE_DELETE(<a class="code" href="a00010.html#a0669fc05427f97820f44f2ac5cc7cef0" title="The Game AudioHandler. ">audioHandler</a>);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    SAFE_DELETE(<a class="code" href="a00010.html#aa0ca10b15de880181ddcfede0de9226c" title="The Game InputHandler. ">inputHandler</a>);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    SAFE_DELETE(<a class="code" href="a00010.html#a0380dd032f09020e98149414fe501c96" title="The Game ResourceManager. ">resourceManager</a>);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    SAFE_DELETE(<a class="code" href="a00010.html#a553924bcccf9f9b1c04e385041852f17" title="The game Window. ">window</a>);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="code" href="a00010.html#abc9436a9d18e48c6e1e4fbc4ea879449">   53</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00010.html#abc9436a9d18e48c6e1e4fbc4ea879449" title="The main game loop. ">Game::runGame</a>(){</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">// Load the first state of the game.</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    this-&gt;<a class="code" href="a00010.html#a39cc30f3e086ce1279ad01967d7694fe" title="The current state, which the game is in. ">currentState</a> = this-&gt;<a class="code" href="a00010.html#a9d6b3d33b550f2ac3425d324d5e235e8" title="Map containing all possible states. ">statesMap</a>.at(GStates::PLACEHOLDER);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    this-&gt;<a class="code" href="a00010.html#a39cc30f3e086ce1279ad01967d7694fe" title="The current state, which the game is in. ">currentState</a>-&gt;<a class="code" href="a00019.html#a924e531e28b8afcbb82858eecef0a084" title="Loads necessary objects. ">load</a>();</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="comment">// Get the first game time.</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">double</span> totalGameTime = 0.0;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> deltaTime = 1.0 / 60.0;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">double</span> accumulatedTime = 0.0;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="comment">// This is the main game loop.</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">while</span>(this-&gt;<a class="code" href="a00010.html#adb424734b2454f9ed1e6d6bd44e6dfaf" title="Whether the game is currently running/looping or not. ">isRunning</a>){</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> frameTime = <a class="code" href="a00009.html#a0b51b864d5b77665f2cdc843af0bd530" title="Delays execution and calculates FPS. ">FPSWrapper::delay</a>(this-&gt;<a class="code" href="a00010.html#a5817ea6f0896abffc6ab8bc893382a31" title="The FPSManager from SDL2_GFX. ">fpsManager</a>);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        accumulatedTime += frameTime;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="comment">// Update.</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">while</span>(accumulatedTime &gt;= deltaTime){</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            this-&gt;<a class="code" href="a00010.html#aa0ca10b15de880181ddcfede0de9226c" title="The Game InputHandler. ">inputHandler</a>-&gt;<a class="code" href="a00013.html#a820f483265aa3f6da39b9d93c1311966" title="Handles the input. ">handleInput</a>();</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="comment">// Check for an exit signal from input.</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keywordflow">if</span>(this-&gt;<a class="code" href="a00010.html#aa0ca10b15de880181ddcfede0de9226c" title="The Game InputHandler. ">inputHandler</a>-&gt;<a class="code" href="a00013.html#a7d103ecce85288f454876b5bef8b3aee">isQuitFlag</a>() == <span class="keyword">true</span>){</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                <a class="code" href="a00010.html#a17fbb36fd4a2085f9ff4f1fa93d7d08b" title="Stops execution and closes the game. ">stop</a>();</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            this-&gt;<a class="code" href="a00010.html#a39cc30f3e086ce1279ad01967d7694fe" title="The current state, which the game is in. ">currentState</a>-&gt;<a class="code" href="a00019.html#a300539fe737d6bbab4b4d6fe4b6a2e98" title="Update all gameObjects. ">update</a>(deltaTime);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            accumulatedTime -= deltaTime;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            totalGameTime += deltaTime;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        }</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="comment">// Render.</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <a class="code" href="a00010.html#a553924bcccf9f9b1c04e385041852f17" title="The game Window. ">window</a>-&gt;<a class="code" href="a00023.html#a38bc43bdd1a97e5de7f346ba4c3957ef" title="Clears the renderer. ">clear</a>();</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        this-&gt;<a class="code" href="a00010.html#a39cc30f3e086ce1279ad01967d7694fe" title="The current state, which the game is in. ">currentState</a>-&gt;<a class="code" href="a00019.html#a9e181e234d99aa11beead047152a8e92" title="Renders the level. ">render</a>();                   </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <a class="code" href="a00010.html#a553924bcccf9f9b1c04e385041852f17" title="The game Window. ">window</a>-&gt;<a class="code" href="a00023.html#a0a2093bd2ed34740c08a6a2fdfc059c9" title="Renders to screen. ">render</a>();</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    }</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno"><a class="code" href="a00010.html#a34a67034d7aea701ce9a161786d3006d">   96</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00010.html#a34a67034d7aea701ce9a161786d3006d" title="Sets the current game state. ">Game::changeState</a>(<span class="keyword">const</span> <a class="code" href="a00010.html#a738b70d48686f5774e6f5882bd871256" title="All possible game states. ">GStates</a> state_){</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    this-&gt;<a class="code" href="a00010.html#a39cc30f3e086ce1279ad01967d7694fe" title="The current state, which the game is in. ">currentState</a>-&gt;<a class="code" href="a00019.html#aa7114cda03ff5ef57dc37c2e720e5634" title="Unloads necessary objects. ">unload</a>();</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    this-&gt;<a class="code" href="a00010.html#a39cc30f3e086ce1279ad01967d7694fe" title="The current state, which the game is in. ">currentState</a> = this-&gt;<a class="code" href="a00010.html#a9d6b3d33b550f2ac3425d324d5e235e8" title="Map containing all possible states. ">statesMap</a>.at(state_);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    this-&gt;<a class="code" href="a00010.html#a39cc30f3e086ce1279ad01967d7694fe" title="The current state, which the game is in. ">currentState</a>-&gt;<a class="code" href="a00019.html#a924e531e28b8afcbb82858eecef0a084" title="Loads necessary objects. ">load</a>();</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno"><a class="code" href="a00010.html#afc16bd0d077c53218c27f16e0bf56cbb">  103</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00010.html#afc16bd0d077c53218c27f16e0bf56cbb" title="Loads all the states. ">Game::initializeStates</a>(){</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="comment">// Initialize all the states in Game here.</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="comment">// Emplace the states pointers onto the map.</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    ADD_STATE_INSERT(PLACEHOLDER, <a class="code" href="a00012.html" title="The state for the initial splash screen. ">GStatePlaceholder</a>);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
-<div class="line"><a name="l00110"></a><span class="lineno"><a class="code" href="a00010.html#a684834abb420aba6d30094d1fe273818">  110</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00010.html#a684834abb420aba6d30094d1fe273818" title="Deletes all the loaded states. ">Game::destroyStates</a>(){</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    std::map&lt;GStates, StateGame*&gt;::const_iterator it;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordflow">for</span>(it = this-&gt;<a class="code" href="a00010.html#a9d6b3d33b550f2ac3425d324d5e235e8" title="Map containing all possible states. ">statesMap</a>.begin(); it != this-&gt;<a class="code" href="a00010.html#a9d6b3d33b550f2ac3425d324d5e235e8" title="Map containing all possible states. ">statesMap</a>.end(); it++){</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keyword">delete</span> it-&gt;second;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    }</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
-<div class="line"><a name="l00117"></a><span class="lineno"><a class="code" href="a00010.html#aefdf22987b627adf4ee9cdcc178fc11c">  117</a></span>&#160;<a class="code" href="a00004.html" title="The audio handler. ">AudioHandler</a>&amp; <a class="code" href="a00010.html#aefdf22987b627adf4ee9cdcc178fc11c">Game::getAudioHandler</a>(){</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">return</span> (*(this-&gt;<a class="code" href="a00010.html#a0669fc05427f97820f44f2ac5cc7cef0" title="The Game AudioHandler. ">audioHandler</a>));</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;}</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
-<div class="line"><a name="l00121"></a><span class="lineno"><a class="code" href="a00010.html#a76067c5eab048e88307d0a1c75328eda">  121</a></span>&#160;std::array&lt;bool, GameKeys::MAX&gt; <a class="code" href="a00010.html#a76067c5eab048e88307d0a1c75328eda">Game::getInput</a>(){</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordflow">return</span> this-&gt;<a class="code" href="a00010.html#aa0ca10b15de880181ddcfede0de9226c" title="The Game InputHandler. ">inputHandler</a>-&gt;<a class="code" href="a00013.html#af7087290a2fd7d973a47768049cfe5eb">getKeyStates</a>();</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;}</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
-<div class="line"><a name="l00125"></a><span class="lineno"><a class="code" href="a00010.html#a4e4876901d3284ae8778c52afa834d4d">  125</a></span>&#160;<a class="code" href="a00016.html" title="General resource management class. ">ResourceManager</a>&amp; <a class="code" href="a00010.html#a4e4876901d3284ae8778c52afa834d4d">Game::getResources</a>(){</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordflow">return</span> (*(this-&gt;<a class="code" href="a00010.html#a0380dd032f09020e98149414fe501c96" title="The Game ResourceManager. ">resourceManager</a>));</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;}</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
-<div class="line"><a name="l00129"></a><span class="lineno"><a class="code" href="a00010.html#a17fbb36fd4a2085f9ff4f1fa93d7d08b">  129</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00010.html#a17fbb36fd4a2085f9ff4f1fa93d7d08b" title="Stops execution and closes the game. ">Game::stop</a>(){</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    this-&gt;<a class="code" href="a00010.html#adb424734b2454f9ed1e6d6bd44e6dfaf" title="Whether the game is currently running/looping or not. ">isRunning</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;}</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="keywordtype">void</span> Game::clearKeyFromInput(<span class="keyword">const</span> GameKeys key_){</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    this-&gt;<a class="code" href="a00010.html#aa0ca10b15de880181ddcfede0de9226c" title="The Game InputHandler. ">inputHandler</a>-&gt;clearKey(key_);</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;}</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="keywordtype">void</span> Game::resizeWindow(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> width_, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> height_){</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    this-&gt;<a class="code" href="a00010.html#a553924bcccf9f9b1c04e385041852f17" title="The game Window. ">window</a>-&gt;<a class="code" href="a00023.html#a3c322c6691e9180b98ad18545013954c" title="Resizes the window. ">resize</a>(width_, height_);</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define SAFE_DELETE(object);    if(object != nullptr) {\</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">                                    delete object;\</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">                                    object = nullptr;\</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">                                }</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define SAFE_DELETE_WITH_FUNCTION(function, object);    if(object != nullptr) {\</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">                                                            function(object);\</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">                                                            object = nullptr;\</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">                                                        }</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define UNUSED(x) ((void) x)</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><b>Game.cpp</b></li>
-    <li class="footer">Generated on Fri Jul 11 2014 00:17:01 for sdl2-engine by
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><b>UsefulDefines.h</b></li>
+    <li class="footer">Generated on Sun Jul 20 2014 18:16:34 for sdl2-engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

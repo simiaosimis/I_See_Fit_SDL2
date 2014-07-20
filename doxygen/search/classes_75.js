@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['util',['Util',['../a00022.html',1,'']]]
+  ['uncopyable',['Uncopyable',['../a00024.html',1,'']]],
+  ['util',['Util',['../a00025.html',1,'']]]
 ];

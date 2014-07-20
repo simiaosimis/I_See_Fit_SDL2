@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.4"/>
-<title>sdl2-engine: AudioHandler Class Reference</title>
+<title>sdl2-engine: Collision Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -46,6 +46,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -94,7 +95,7 @@ $(document).ready(function(){initNavTree('a00004.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -105,99 +106,46 @@ $(document).ready(function(){initNavTree('a00004.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
-<a href="a00074.html">List of all members</a>  </div>
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="a00092.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">AudioHandler Class Reference</div>  </div>
+<div class="title">Collision Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>The audio handler.  
+<p>Simple collision detection.  
  <a href="a00004.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00025_source.html">AudioHandler.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00030_source.html">Collision.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a605b5c91270eb7cad7a0ac60b354b56b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00004.html#a605b5c91270eb7cad7a0ac60b354b56b">AudioHandler</a> ()</td></tr>
-<tr class="memdesc:a605b5c91270eb7cad7a0ac60b354b56b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor.  <a href="#a605b5c91270eb7cad7a0ac60b354b56b">More...</a><br/></td></tr>
-<tr class="separator:a605b5c91270eb7cad7a0ac60b354b56b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61a1e88ca69c4021792400389eec3f27"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00004.html#a61a1e88ca69c4021792400389eec3f27">~AudioHandler</a> ()</td></tr>
-<tr class="memdesc:a61a1e88ca69c4021792400389eec3f27"><td class="mdescLeft">&#160;</td><td class="mdescRight">The destructor.  <a href="#a61a1e88ca69c4021792400389eec3f27">More...</a><br/></td></tr>
-<tr class="separator:a61a1e88ca69c4021792400389eec3f27"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2a12ba2a153edefb2d9229767f04b47"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00004.html#aa2a12ba2a153edefb2d9229767f04b47">playMusic</a> (const int times_)</td></tr>
-<tr class="memdesc:aa2a12ba2a153edefb2d9229767f04b47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plays the current music.  <a href="#aa2a12ba2a153edefb2d9229767f04b47">More...</a><br/></td></tr>
-<tr class="separator:aa2a12ba2a153edefb2d9229767f04b47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51383b60963be06458c1dbfe7a73ac14"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00004.html#a51383b60963be06458c1dbfe7a73ac14">playEffect</a> (const int times_)</td></tr>
-<tr class="memdesc:a51383b60963be06458c1dbfe7a73ac14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plays the current effect.  <a href="#a51383b60963be06458c1dbfe7a73ac14">More...</a><br/></td></tr>
-<tr class="separator:a51383b60963be06458c1dbfe7a73ac14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeff0546d72fab5587f86c830efb6f40e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeff0546d72fab5587f86c830efb6f40e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00004.html#aeff0546d72fab5587f86c830efb6f40e">stopMusic</a> ()</td></tr>
-<tr class="memdesc:aeff0546d72fab5587f86c830efb6f40e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops playing the current music. <br/></td></tr>
-<tr class="separator:aeff0546d72fab5587f86c830efb6f40e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68d00941dddc05e756d6eea507990f56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00004.html#a68d00941dddc05e756d6eea507990f56">setMusicVolume</a> (const unsigned int percent_)</td></tr>
-<tr class="memdesc:a68d00941dddc05e756d6eea507990f56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the volume for the music.  <a href="#a68d00941dddc05e756d6eea507990f56">More...</a><br/></td></tr>
-<tr class="separator:a68d00941dddc05e756d6eea507990f56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b50cf59bb164ebc877956ddf2de5563"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00004.html#a5b50cf59bb164ebc877956ddf2de5563">setEffectVolume</a> (const unsigned int percent_)</td></tr>
-<tr class="memdesc:a5b50cf59bb164ebc877956ddf2de5563"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the volume for the effects.  <a href="#a5b50cf59bb164ebc877956ddf2de5563">More...</a><br/></td></tr>
-<tr class="separator:a5b50cf59bb164ebc877956ddf2de5563"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1763c666b7181b8f89c00477948df9ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00004.html#a1763c666b7181b8f89c00477948df9ba">changeMusic</a> (const std::string &amp;path_)</td></tr>
-<tr class="memdesc:a1763c666b7181b8f89c00477948df9ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes current music.  <a href="#a1763c666b7181b8f89c00477948df9ba">More...</a><br/></td></tr>
-<tr class="separator:a1763c666b7181b8f89c00477948df9ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca81071ce7b30e1cdf5970fcd6a4adc8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00004.html#aca81071ce7b30e1cdf5970fcd6a4adc8">setCurrentMusic</a> (const std::string &amp;path_)</td></tr>
-<tr class="memdesc:aca81071ce7b30e1cdf5970fcd6a4adc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current music.  <a href="#aca81071ce7b30e1cdf5970fcd6a4adc8">More...</a><br/></td></tr>
-<tr class="separator:aca81071ce7b30e1cdf5970fcd6a4adc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55ad80b02e3e02240a66257e383b3e55"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00004.html#a55ad80b02e3e02240a66257e383b3e55">addSoundEffect</a> (const std::string &amp;path_)</td></tr>
-<tr class="memdesc:a55ad80b02e3e02240a66257e383b3e55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current effect.  <a href="#a55ad80b02e3e02240a66257e383b3e55">More...</a><br/></td></tr>
-<tr class="separator:a55ad80b02e3e02240a66257e383b3e55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a180869ddf060cd7071b7db83bccb9031"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a180869ddf060cd7071b7db83bccb9031"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>clearChannel</b> (const int channel_)</td></tr>
-<tr class="separator:a180869ddf060cd7071b7db83bccb9031"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:aff63033fba1bd69e0ff7c267aadd58ca"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00004.html#aff63033fba1bd69e0ff7c267aadd58ca">RectangleSide</a> : uint8_t { <br/>
+&#160;&#160;<b>TOP</b> = 0, 
+<b>BOTTOM</b>, 
+<b>LEFT</b>, 
+<b>RIGHT</b>, 
+<br/>
+&#160;&#160;<b>NONE</b>
+<br/>
+ }</td></tr>
+<tr class="memdesc:aff63033fba1bd69e0ff7c267aadd58ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Possible sides a rectangle can collide. <br/></td></tr>
+<tr class="separator:aff63033fba1bd69e0ff7c267aadd58ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
-Static Private Member Functions</h2></td></tr>
-<tr class="memitem:a2e436fb7f0709f9a1d9da82e60e7315e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2e436fb7f0709f9a1d9da82e60e7315e"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>channelDone</b> (int channel_)</td></tr>
-<tr class="separator:a2e436fb7f0709f9a1d9da82e60e7315e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:ab42c5517df5e910b7f7abdbf2e1aeba3"><td class="memItemLeft" align="right" valign="top">Mix_Music *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00004.html#ab42c5517df5e910b7f7abdbf2e1aeba3">currentMusic</a></td></tr>
-<tr class="memdesc:ab42c5517df5e910b7f7abdbf2e1aeba3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current music that is playing.  <a href="#ab42c5517df5e910b7f7abdbf2e1aeba3">More...</a><br/></td></tr>
-<tr class="separator:ab42c5517df5e910b7f7abdbf2e1aeba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab26ad56cd72bf43324563461fb44a918"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="a00002.html">SoundEffect</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00004.html#ab26ad56cd72bf43324563461fb44a918">currentEffects</a></td></tr>
-<tr class="memdesc:ab26ad56cd72bf43324563461fb44a918"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current effect that is playing.  <a href="#ab26ad56cd72bf43324563461fb44a918">More...</a><br/></td></tr>
-<tr class="separator:ab26ad56cd72bf43324563461fb44a918"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a1ca688777eff8626a0dd950d69c0371c"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00004.html#a1ca688777eff8626a0dd950d69c0371c">rectsCollided</a> (const SDL_Rect &amp;a_, const SDL_Rect &amp;b_)</td></tr>
+<tr class="separator:a1ca688777eff8626a0dd950d69c0371c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a271d4cfeafc94b90fad82437b55f56a6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00004.html#aff63033fba1bd69e0ff7c267aadd58ca">RectangleSide</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00004.html#a271d4cfeafc94b90fad82437b55f56a6">rectsCollidedSide</a> (const SDL_Rect &amp;a_, const SDL_Rect &amp;b_)</td></tr>
+<tr class="separator:a271d4cfeafc94b90fad82437b55f56a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The audio handler. </p>
-<p>Class that handles all the audio in the game. Is a singleton, so should be called in each state. </p>
+<div class="textblock"><p>Simple collision detection. </p>
 
-<p>Definition at line <a class="el" href="a00025_source.html#l00021">21</a> of file <a class="el" href="a00025_source.html">AudioHandler.h</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a605b5c91270eb7cad7a0ac60b354b56b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">AudioHandler::AudioHandler </td>
-          <td>(</td>
-          <td class="paramname">)</td><td></td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>The constructor. </p>
-<p>Initializes all the attributes. </p>
-
-<p>Definition at line <a class="el" href="a00049_source.html#l00005">5</a> of file <a class="el" href="a00049_source.html">AudioHandler.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a61a1e88ca69c4021792400389eec3f27"></a>
+<p>Definition at line <a class="el" href="a00030_source.html#l00009">9</a> of file <a class="el" href="a00030_source.html">Collision.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a1ca688777eff8626a0dd950d69c0371c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -205,219 +153,42 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">AudioHandler::~AudioHandler </td>
+          <td class="memname">bool Collision::rectsCollided </td>
           <td>(</td>
-          <td class="paramname">)</td><td></td>
+          <td class="paramtype">const SDL_Rect &amp;&#160;</td>
+          <td class="paramname"><em>a_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const SDL_Rect &amp;&#160;</td>
+          <td class="paramname"><em>b_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>The destructor. </p>
-<p>Frees the allocated attributes. </p>
-
-<p>Definition at line <a class="el" href="a00049_source.html#l00012">12</a> of file <a class="el" href="a00049_source.html">AudioHandler.cpp</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a55ad80b02e3e02240a66257e383b3e55"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void AudioHandler::addSoundEffect </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>path_</em>)</td><td></td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sets the current effect. </p>
-<p>If one already exists, frees it first. </p>
+<dl class="section return"><dt>Returns</dt><dd>Whether two SDL_Rects collided. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">path_</td><td>: The path to the desired effect. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="todo"><dt><b><a class="el" href="a00071.html#_todo000006">Todo:</a></b></dt><dd>Resource manager for audio. </dd></dl>
-
-<p>Definition at line <a class="el" href="a00049_source.html#l00054">54</a> of file <a class="el" href="a00049_source.html">AudioHandler.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a1763c666b7181b8f89c00477948df9ba"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void AudioHandler::changeMusic </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>path_</em>)</td><td></td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Changes current music. </p>
-<p>Stops the music, sets it, and plays it with infinite looping. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">path_</td><td>: The path to the desired music. </td></tr>
+    <tr><td class="paramname">a_,b_</td><td>: The rectangles to check. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="a00049_source.html#l00086">86</a> of file <a class="el" href="a00049_source.html">AudioHandler.cpp</a>.</p>
+<p>Definition at line <a class="el" href="a00061_source.html#l00004">4</a> of file <a class="el" href="a00061_source.html">Collision.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a51383b60963be06458c1dbfe7a73ac14"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void AudioHandler::playEffect </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>times_</em>)</td><td></td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Plays the current effect. </p>
-<dl class="section note"><dt>Note</dt><dd>Will warn if there is no effect loaded. </dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">times_</td><td>: Times to loop the song. MIX_LOOP (or -1) for infinite looping. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Definition at line <a class="el" href="a00049_source.html#l00068">68</a> of file <a class="el" href="a00049_source.html">AudioHandler.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aa2a12ba2a153edefb2d9229767f04b47"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void AudioHandler::playMusic </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>times_</em>)</td><td></td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Plays the current music. </p>
-<dl class="section note"><dt>Note</dt><dd>Will warn if there is no music loaded. </dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">times_</td><td>: Times to loop the song. MIX_LOOP (or -1) for infinite looping. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Definition at line <a class="el" href="a00049_source.html#l00036">36</a> of file <a class="el" href="a00049_source.html">AudioHandler.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aca81071ce7b30e1cdf5970fcd6a4adc8"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void AudioHandler::setCurrentMusic </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>path_</em>)</td><td></td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sets the current music. </p>
-<p>If one already exists, frees it first. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">path_</td><td>: The path to the desired music. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Definition at line <a class="el" href="a00049_source.html#l00027">27</a> of file <a class="el" href="a00049_source.html">AudioHandler.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a5b50cf59bb164ebc877956ddf2de5563"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void AudioHandler::setEffectVolume </td>
-          <td>(</td>
-          <td class="paramtype">const unsigned int&#160;</td>
-          <td class="paramname"><em>percent_</em>)</td><td></td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sets the volume for the effects. </p>
-<p>If the percent_ is over 100, will be set to 100. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">percent_</td><td>: The volume percentage (0-100). </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Definition at line <a class="el" href="a00049_source.html#l00081">81</a> of file <a class="el" href="a00049_source.html">AudioHandler.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a68d00941dddc05e756d6eea507990f56"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void AudioHandler::setMusicVolume </td>
-          <td>(</td>
-          <td class="paramtype">const unsigned int&#160;</td>
-          <td class="paramname"><em>percent_</em>)</td><td></td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sets the volume for the music. </p>
-<p>If the percent_ is over 100, will be set to 100. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">percent_</td><td>: The volume percentage (0-100). </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Definition at line <a class="el" href="a00049_source.html#l00049">49</a> of file <a class="el" href="a00049_source.html">AudioHandler.cpp</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="ab26ad56cd72bf43324563461fb44a918"></a>
+<a class="anchor" id="a271d4cfeafc94b90fad82437b55f56a6"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -425,57 +196,52 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="a00002.html">SoundEffect</a>&gt; AudioHandler::currentEffects</td>
+          <td class="memname"><a class="el" href="a00004.html#aff63033fba1bd69e0ff7c267aadd58ca">Collision::RectangleSide</a> Collision::rectsCollidedSide </td>
+          <td>(</td>
+          <td class="paramtype">const SDL_Rect &amp;&#160;</td>
+          <td class="paramname"><em>a_</em>, </td>
         </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>The current effect that is playing. </p>
-
-<p>Definition at line <a class="el" href="a00025_source.html#l00096">96</a> of file <a class="el" href="a00025_source.html">AudioHandler.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ab42c5517df5e910b7f7abdbf2e1aeba3"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
         <tr>
-          <td class="memname">Mix_Music* AudioHandler::currentMusic</td>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const SDL_Rect &amp;&#160;</td>
+          <td class="paramname"><em>b_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>The side (RectangleSide) which two SDL_Rects collided on. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a_,b_</td><td>: The rectangles to check. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>The current music that is playing. </p>
-
-<p>Definition at line <a class="el" href="a00025_source.html#l00095">95</a> of file <a class="el" href="a00025_source.html">AudioHandler.h</a>.</p>
+<p>Definition at line <a class="el" href="a00061_source.html#l00031">31</a> of file <a class="el" href="a00061_source.html">Collision.cpp</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/<a class="el" href="a00025_source.html">AudioHandler.h</a></li>
-<li>src/<a class="el" href="a00049_source.html">AudioHandler.cpp</a></li>
+<li>include/<a class="el" href="a00030_source.html">Collision.h</a></li>
+<li>src/<a class="el" href="a00061_source.html">Collision.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00004.html">AudioHandler</a></li>
-    <li class="footer">Generated on Fri Jul 11 2014 00:17:01 for sdl2-engine by
+    <li class="navelem"><a class="el" href="a00004.html">Collision</a></li>
+    <li class="footer">Generated on Sun Jul 20 2014 18:16:34 for sdl2-engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>
