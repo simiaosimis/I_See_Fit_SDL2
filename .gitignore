@@ -31,3 +31,6 @@ gh-pages/
 #cpplint
 cpplint.py
 lint.log
+
+# Any kind of log file (especially the valgrind ones I forget to delete)
+*.log
