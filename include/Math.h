@@ -1,9 +1,10 @@
 #pragma once
 
-class Math {
+namespace Math {
 
-	public:
-		static int sign(const int number_);
-		static int sign(const double number_);
+	template <typename Type>
+	int sign(const Type number_);
 
-};
+}
+
+#include "Math.tpp"
