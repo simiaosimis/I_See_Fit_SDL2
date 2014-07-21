@@ -21,7 +21,7 @@ void AudioHandler::changeMusic(const std::string& path_, const int times_) {
 }
 
 void AudioHandler::pushSoundEffect(const std::string& path_, const int times_) {
-	SoundEffect* sfx = Game::instance().getSoundEffect(path_);
+	SoundEffect* sfx = Game::instance().getResource().soundEffect(path_);
 	this->currentEffects.push_back(sfx);
 	playEffect(times_);
 }
@@ -81,7 +81,7 @@ void AudioHandler::stopMusic() {
 }
 
 void AudioHandler::setCurrentMusic(const std::string& path_) {
-	this->currentMusic = Game::instance().getMusic(path_);
+	this->currentMusic = Game::instance().getResource().music(path_);
 }
 
 void AudioHandler::playMusic(const int times_) {

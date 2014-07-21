@@ -22,7 +22,7 @@ void GStatePlaceholder::load() {
 
 	this->animation = new Animation(0, 4, 32, 32, 5, 5.0);
 	this->animationClip = {0, 0, 0, 0};
-	this->image = Game::instance().getSprite("res/images/spritesheet.png");
+	this->image = Game::instance().getResource().sprite("res/images/spritesheet.png");
 
 	Game::instance().getAudioHandler().changeMusic("res/audio/music/test_music.flac");
 }

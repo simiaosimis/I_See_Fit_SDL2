@@ -19,8 +19,11 @@
 	this->statesMap.insert(std::make_pair(stateEnum, new stateClass()))
 
 Game& Game::instance() {
+	// "C++11 mandates that the initializer for a local static variable is only run once, even
+	// in the presence of concurrency. So, assuming you’ve got a modern C++ compiler, this code
+	// is thread-safe[...]"
 	static Game* instance = new Game();
-	return *instance;
+	return (*instance);
 }
 
 Game::Game() :
@@ -28,9 +31,7 @@ Game::Game() :
 	isRunning(false),
 	audioHandler(new AudioHandler()),
 	inputHandler(new InputHandler()),
-	spriteResources(new SpriteManager()),
-	musicResources(new MusicManager()),
-	sfxResources(new SFXManager()),
+	resourceHandler(new ResourceHandler()),
 	currentState(nullptr),
 	statesMap()
 {
@@ -52,12 +53,10 @@ Game::~Game() {
 
 	destroyStates();
 
-	SAFE_DELETE(audioHandler);
-	SAFE_DELETE(inputHandler);
-	SAFE_DELETE(spriteResources);
-	SAFE_DELETE(musicResources);
-	SAFE_DELETE(sfxResources);
-	SAFE_DELETE(window);
+	SAFE_DELETE(this->audioHandler);
+	SAFE_DELETE(this->inputHandler);
+	SAFE_DELETE(this->resourceHandler);
+	SAFE_DELETE(this->window);
 }
 
 void Game::runGame() {
@@ -132,18 +131,6 @@ std::array<bool, GameKeys::MAX> Game::getInput() {
 	return this->inputHandler->getKeyStates();
 }
 
-Sprite* Game::getSprite(const std::string& path_) {
-	return this->spriteResources->get(path_);
-}
-
-Music* Game::getMusic(const std::string& path_) {
-	return this->musicResources->get(path_);
-}
-
-SoundEffect* Game::getSoundEffect(const std::string& path_) {
-	return this->sfxResources->get(path_);
-}
-
 void Game::stop() {
 	this->isRunning = false;
 }
@@ -158,4 +145,8 @@ void Game::resizeWindow(const unsigned int width_, const unsigned int height_) {
 
 Renderer* Game::getRenderer() {
 	return this->window->getRenderer();
+}
+
+ResourceHandler& Game::getResource() {
+	return (*(this->resourceHandler));
 }

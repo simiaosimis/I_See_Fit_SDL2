@@ -5,9 +5,7 @@
 #include "StateGame.h"
 #include "AudioHandler.h"
 #include "InputHandler.h"
-#include "SpriteManager.h"
-#include "MusicManager.h"
-#include "SFXManager.h"
+#include "ResourceHandler.h"
 #include <map>
 #include <memory>
 #include <string>
@@ -64,24 +62,11 @@ class Game {
 		std::array<bool, GameKeys::MAX> getInput();
 
 		/**
-		* @return The desired Sprite.
-		*/
-		Sprite* getSprite(const std::string& path_);
-
-		/**
-		* @return The desired Music.
-		*/
-		Music* getMusic(const std::string& path_);
-
-		/**
-		* @return The desired SoundEffect.
-		*/
-		SoundEffect* getSoundEffect(const std::string& path_);
-
-		/**
 		* @return The SDL_Renderer.
 		*/
 		Renderer* getRenderer();
+
+		ResourceHandler& getResource();
 
 		/**
 		* Stops execution and closes the game.
@@ -117,9 +102,7 @@ class Game {
 
 		AudioHandler* audioHandler; /**< The Game AudioHandler. */
 		InputHandler* inputHandler; /**< The Game InputHandler. */
-		SpriteManager* spriteResources; /**< The Game SpriteManager. */
-		MusicManager* musicResources; /**< The Game MusicManager. */
-		SFXManager* sfxResources; /**< The Game SFXManager. */
+		ResourceHandler* resourceHandler;
 
 		StateGame* currentState; /**< The current state, which the game is in. */
 
