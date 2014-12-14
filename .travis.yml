@@ -1,0 +1,20 @@
+language: cpp
+
+compiler: gcc
+
+before_install:
+  - echo "Running before_install"
+  - sudo apt-add-repository -y ppa:libreoffice/libreoffice-4-2
+
+install:
+  - sudo apt-get update
+  - sudo apt-get install python-software-properties doxygen
+
+script:
+  - make
+
+branches:
+  only:
+    - master
+
+os: linux
