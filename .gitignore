@@ -1,36 +1,66 @@
-# The executables
-sdl2-engine
-*.exe
-
-# The build folder
-build/
+# ------------------- CPP -------------------
 
 # Compiled Object files
 *.slo
 *.lo
 *.o
+*.obj
+*.ko
+*.elf
+
+# Precompiled Headers
+*.gch
+*.pch
 
 # Compiled Dynamic libraries
 *.so
+*.so.*
 *.dylib
+*.dll
+
+# Fortran module files
+*.mod
 
 # Compiled Static libraries
 *.lai
 *.la
 *.a
+*.lib
+*.lo
 
-# Temporary files, just in case
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# ------------------- CMAKE -------------------
+
+CMakeCache.txt
+CMakeFiles
+Makefile
+cmake_install.cmake
+install_manifest.txt
+cmake_install.cmake
+
+# ------------------- MISC -------------------
+
+build/*
 *~
 
-# Kate files
-*.kate-swp
+.*.kate-swp
+.swp.*
 
-# Doxygen gh-pages folder
-gh-pages/
+*.bak
 
-#cpplint
-cpplint.py
-lint.log
+CPackConfig.cmake
+CPackSourceConfig.cmake
+doc/Doxyfile
+doc/html/
+CTestTestfile.cmake
 
-# Any kind of log file (especially the valgrind ones I forget to delete)
-*.log
+test/gtest/
+*_exec
+*_GTest

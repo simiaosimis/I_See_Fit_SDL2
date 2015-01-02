@@ -22,9 +22,9 @@ void GStatePlaceholder::load() {
 
 	this->animation = new Animation(0, 4, 32, 32, 5, 5.0);
 	this->animationClip = {0, 0, 0, 0};
-	this->image = Game::instance().getResource().sprite("res/images/spritesheet.png");
+	this->image = Game::instance().getResource().sprite("assets/images/spritesheet.png");
 
-	Game::instance().getAudioHandler().changeMusic("res/audio/music/test_music.flac");
+	Game::instance().getAudioHandler().changeMusic("assets/audio/music/test_music.flac");
 }
 
 void GStatePlaceholder::unload() {
@@ -37,7 +37,7 @@ void GStatePlaceholder::update(const double dt_) {
 	const std::array<bool, GameKeys::MAX> keyStates = Game::instance().getInput();
 
 	if(keyStates[GameKeys::SPACE] == true) {
-		Game::instance().getAudioHandler().pushSoundEffect("res/audio/sfx/test_sfx.wav");
+		Game::instance().getAudioHandler().pushSoundEffect("assets/audio/sfx/test_sfx.wav");
 	}
 
 	this->animation->update(this->animationClip, dt_);

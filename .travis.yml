@@ -1,21 +1,29 @@
 language: cpp
 
-compiler: gcc
+compiler:
+    - gcc
 
 before_install:
-  - sudo add-apt-repository --yes ppa:ubuntu-toolchain-r/test # g++-4.8
-  - sudo apt-add-repository --yes ppa:zoogie/sdl2-snapshots # SDL2
-  - sudo apt-get update -qq
+    - sudo add-apt-repository --yes ppa:ubuntu-toolchain-r/test
+    - sudo apt-add-repository --yes ppa:zoogie/sdl2-snapshots
+    - sudo apt-get update -qq
 
 install:
-  - sudo apt-get install g++-4.8 doxygen libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev
-  - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 90
+    # C++ TEMPLATE #
+    - sudo apt-get install -qq cmake doxygen g++-4.8 python-pip cppcheck valgrind
+    - sudo pip install Pygments
+    - sudo pip install gcovr
+    - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 90
+    # sdl2-engine #
+    - sudo apt-get install libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev
 
-script:
-  - make
+script: ./build.sh debug
 
-branches:
-  only:
-    - master
+after_success:
+    - ./utils/publish_doxygen.sh
 
-os: linux
+env:
+  global:
+    - secure: EAh+5LSC4DlIqvXTrYJUAq8isa0Jfp/Ko5xAsVWJrkmAFfsQsaO4XRXG0U964LKROv0GHISDJtBCEkxnhBu5nRJ3dGkNd/pmElhUAiPK6qXPBEfrJAUQldCvFZ/7p8u6Jrn5r3/bFY3yos4hkn/EsFNYRb9Bj/NlqxisyyYUyag=
+    - GH_USR=CaioIcy
+    - GH_REF=github.com/CaioIcy/sdl2-engine.git
