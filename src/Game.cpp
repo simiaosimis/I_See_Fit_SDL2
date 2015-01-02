@@ -1,5 +1,4 @@
 #include "Game.h"
-#include "FPSWrapper.h"
 #include "Configuration.h"
 #include "Util.h"
 #include "Sprite.h"
@@ -11,6 +10,7 @@
 // End Game States includes
 
 #include <cassert>
+#include <chrono>
 
 #define ADD_STATE_EMPLACE(stateEnum, stateClass) \
 	this->statesMap.emplace(stateEnum, new stateClass())
@@ -43,7 +43,6 @@ Game::Game() :
 	initializeStates();
 
 	this->isRunning = true;
-	FPSWrapper::initialize(this->fpsManager);
 }
 
 Game::~Game() {
@@ -65,18 +64,24 @@ void Game::runGame() {
 	this->currentState->load();
 
 	// Get the first game time.
-	double totalGameTime = 0.0;
 	const double deltaTime = 1.0 / 60.0;
-	double accumulatedTime = 0.0;
+	double originalTotalGameTime = 0.0;
+	double originalAccumulatedTime = 0.0;
+
+	using s_clock = std::chrono::steady_clock;
+	s_clock::time_point lastTime = s_clock::now();
 
 	// This is the main game loop.
 	while(this->isRunning) {
 
-		const double frameTime = FPSWrapper::delay(this->fpsManager);
-		accumulatedTime += frameTime;
+		s_clock::time_point now = s_clock::now();
+		s_clock::duration dt{now - lastTime};
+
+		const double frameTime = std::chrono::duration_cast<std::chrono::duration<double, std::ratio<1, 1>>>(dt).count();
+		originalAccumulatedTime += frameTime;
 
 		// Update.
-		while(accumulatedTime >= deltaTime) {
+		while(originalAccumulatedTime >= deltaTime) {
 			this->inputHandler->handleInput();
 
 			// Check for an exit signal from input.
@@ -87,16 +92,16 @@ void Game::runGame() {
 
 			this->currentState->update(deltaTime);
 
-			accumulatedTime -= deltaTime;
-			totalGameTime += deltaTime;
+			originalAccumulatedTime -= deltaTime;
+			originalTotalGameTime += deltaTime;
 		}
 
 		// Render.
 		this->window->getRenderer()->clear();
-
 		this->currentState->render();
-
 		this->window->getRenderer()->render();
+
+		lastTime = now;
 
 	}
 

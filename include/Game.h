@@ -108,7 +108,4 @@ class Game {
 
 		std::map<GStates, StateGame*> statesMap; /**< Map containing all possible states. */
 
-		FPSmanager fpsManager; /**< The FPSManager from SDL2_GFX. Handles the framerate
-			capping. */
-
 };
