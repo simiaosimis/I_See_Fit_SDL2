@@ -1,0 +1,25 @@
+var classGame =
+[
+    [ "GStates", "classGame.html#acb5aff30c92015e8ed51e1d35d0d97ea", null ],
+    [ "~Game", "classGame.html#ae3d112ca6e0e55150d2fdbc704474530", null ],
+    [ "Game", "classGame.html#ad59df6562a58a614fda24622d3715b65", null ],
+    [ "changeState", "classGame.html#a34a67034d7aea701ce9a161786d3006d", null ],
+    [ "clearKeyFromInput", "classGame.html#a598440545d40cf36982a1b551c9ec13a", null ],
+    [ "destroyStates", "classGame.html#a684834abb420aba6d30094d1fe273818", null ],
+    [ "getAudioHandler", "classGame.html#aefdf22987b627adf4ee9cdcc178fc11c", null ],
+    [ "getInput", "classGame.html#a76067c5eab048e88307d0a1c75328eda", null ],
+    [ "getRenderer", "classGame.html#af4f1ce14a3cf7017942fdf0d183d24c3", null ],
+    [ "getResource", "classGame.html#a0a5dc2bb1e4b2b80415919aa20cce38f", null ],
+    [ "initializeStates", "classGame.html#afc16bd0d077c53218c27f16e0bf56cbb", null ],
+    [ "instance", "classGame.html#ac213e6d3a4e566d901413f62f6408858", null ],
+    [ "resizeWindow", "classGame.html#a7cb479310ef55f4c28c55c04a7d9731e", null ],
+    [ "runGame", "classGame.html#abc9436a9d18e48c6e1e4fbc4ea879449", null ],
+    [ "stop", "classGame.html#a17fbb36fd4a2085f9ff4f1fa93d7d08b", null ],
+    [ "audioHandler", "classGame.html#a0669fc05427f97820f44f2ac5cc7cef0", null ],
+    [ "currentState", "classGame.html#a39cc30f3e086ce1279ad01967d7694fe", null ],
+    [ "inputHandler", "classGame.html#aa0ca10b15de880181ddcfede0de9226c", null ],
+    [ "isRunning", "classGame.html#adb424734b2454f9ed1e6d6bd44e6dfaf", null ],
+    [ "resourceHandler", "classGame.html#a3b57f1111dc0f153b72f73b207b89901", null ],
+    [ "statesMap", "classGame.html#a9d6b3d33b550f2ac3425d324d5e235e8", null ],
+    [ "window", "classGame.html#a553924bcccf9f9b1c04e385041852f17", null ]
+];

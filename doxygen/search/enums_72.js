@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rectangleside',['RectangleSide',['../a00004.html#aff63033fba1bd69e0ff7c267aadd58ca',1,'Collision']]]
+  ['rectangleside',['RectangleSide',['../classCollision.html#ad0cb871520c093a590edbc9606ff0850',1,'Collision']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gstates',['GStates',['../a00008.html#a738b70d48686f5774e6f5882bd871256',1,'Game']]]
+  ['gstates',['GStates',['../classGame.html#acb5aff30c92015e8ed51e1d35d0d97ea',1,'Game']]]
 ];
