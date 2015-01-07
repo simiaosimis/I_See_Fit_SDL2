@@ -8,6 +8,19 @@
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="javascripts/respond.js"></script>
+
+    <script type="text/javascript">
+
+      // GitHub info
+      var GitHub_User = 'CaioIcy';
+      var GitHub_Project_Name = 'sdl2-engine';
+      var GitHub_Web_Page = 'https://' + GitHub_User + '.github.io/' + GitHub_Project_Name + '/';
+
+      // Project name (same as the build name defined in .travis.yml file)
+      var Project_Name = 'sdl2-engine';
+      var Project_Build_Linux = Project_Name + '-Linux.zip';
+
+    </script>
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -18,36 +31,54 @@
 
   </head>
   <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/CaioIcy/sdl2-engine">GitHub</a></li>
-          <li class="fork"><a href="https://caioicy.github.io/sdl2-engine/doxygen/">Doxygen</a></li>
-          <li class="fork"><a href="https://caioicy.github.io/sdl2-engine/reports/cppcheck-reports/">CPPCheck</a></li>
-          <li class="fork"><a href="https://caioicy.github.io/sdl2-engine/reports/cpplint-reports/">CPPLint</a></li>
-          <li class="fork"><a href="https://caioicy.github.io/sdl2-engine/reports/gcovr-reports/">GCovr</a></li>
-          <li class="fork"><a href="https://caioicy.github.io/sdl2-engine/reports/gtest-report.xml">GTest</a></li>
-          <li class="fork"><a href="https://caioicy.github.io/sdl2-engine/reports/valgrind-My_Project_exec-report.xml">Valgrind</a></li>
-          <!-- <li class="downloads"><a href="https://github.com/CaioIcy/sdl2-engine/zipball/master">ZIP</a></li>
-          <li class="downloads"><a href="https://github.com/CaioIcy/sdl2-engine/tarball/master">TAR</a></li> -->
-          <li class="title">LINKS</li>
-        </nav>
-      </div><!-- end header -->
+    <script type="text/javascript">
+      document.write('\
+\
+        <div id="header">\
+        <nav>\
+          <li class="fork"><a href="'+ GitHub_Web_Page +'">GitHub</a></li>\
+          <li class="fork"><a href="'+ GitHub_Web_Page +'doxygen/">Doxygen</a></li>\
+          <li class="fork"><a href="'+ GitHub_Web_Page +'reports/cppcheck-reports/">CPPCheck</a></li>\
+          <li class="fork"><a href="'+ GitHub_Web_Page +'reports/cpplint-reports/">CPPLint</a></li>\
+          <li class="fork"><a href="'+ GitHub_Web_Page +'reports/gcovr-reports/">GCovr</a></li>\
+          <li class="fork"><a href="'+ GitHub_Web_Page +'reports/gtest-report.xml">GTest</a></li>\
+          <li class="fork"><a href="'+ GitHub_Web_Page +'reports/valgrind-exec-report.xml">Valgrind</a></li>\
+          <li class="title">LINKS</li>\
+        </nav>\
+        </div> end header -->\
+\
+      ');
+    </script>
 
     <div class="wrapper">
-
       <section>
         <div id="title">
           <h1>sdl2-engine</h1>
-          <p>A personal SDL2 study project</p>
+          <p>Personal SDL2 study project</p>
           <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/CaioIcy">CaioIcy</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+          <script type="text/javascript">
+            document.write('\
+          <span class="credits left">Project maintained by <a href="https://github.com/'+GitHub_User+'">'+GitHub_User+'</a></span>\
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>\
+          ');
+          </script>
         </div>
 
         <h3>
-<a id="welcome-thing" class="anchor" href="#Welcome" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome</h3>
+          <a id="testing-links" class="anchor" href="#Welcome" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome
+        </h3>
 
-    This project is a little something I wanted to do, after my work on <a href="https://github.com/Alke-Games/Dauphine">Dauphine</a>. Any questions or suggestions, open an issue or message me. Hoping to learn more about C++11 with this.
+        <p>This project is a little something I wanted to do, after my work on <a href="https://github.com/Alke-Games/Dauphine">Dauphine</a>. Any questions or suggestions, open an issue or message me. Hoping to learn more about C++11 with this.</p>
+
+        <h3>
+          <a id="testing-links" class="anchor" href="#Download" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project build download
+        </h3>
+
+        <script type="text/javascript">
+          document.write('<ul>\
+            <li><a href="'+ GitHub_Web_Page + 'cpack/' + Project_Build_Linux +'">'+Project_Build_Linux+'</a>\
+          </ul>');
+        </script>
 
       </section>
 
