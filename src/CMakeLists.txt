@@ -1,5 +1,6 @@
-message("*** Starting subdir 'src' cmake")
+message("\n*** src/ subdir")
 
+###################################################################
 message(AUTHOR_WARNING "Getting source files by using glob")
 file(GLOB_RECURSE MyCppSources RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} *.cpp)
 
@@ -14,18 +15,29 @@ find_package(SDL2_image REQUIRED)
 find_package(SDL2_mixer REQUIRED)
 find_package(SDL2_ttf REQUIRED)
 
-add_library(${MyProjectLib} STATIC ${MySourcesNoMain})
-# add_library(${MyProjectLib}Shared SHARED ${MySourcesNoMain})
-add_executable(${ExecTarget} ${MyCppSources}) # '_exec' suffix to make gitignore's life easy
+###################################################################
+# Adding warning and standard flags here so we don't get an insane amount of warnings from
+# externals, just from our project
+if(MY_SHARED_LIB_ENABLED)
+	add_library(${MyProjectLib} SHARED ${MySourcesNoMain})
+else()
+	add_library(${MyProjectLib} STATIC ${MySourcesNoMain})
+endif()
+set_target_properties(${MyProjectLib} PROPERTIES COMPILE_FLAGS "${FLAGS_MY_PROJECT}")
 
+###################################################################
+# Adding warning and standard flags here so we don't get an insane amount of warnings from
+# externals, just from our project
+add_executable(${ExecTarget} ${MyCppSources})
+set_target_properties(${ExecTarget} PROPERTIES COMPILE_FLAGS "${FLAGS_MY_PROJECT}")
 target_link_libraries(${ExecTarget}
-	${MyProjectLib}
 	${SDL2_LIBRARY}
 	${SDL2_IMAGE_LIBRARY}
 	${SDL2_MIXER_LIBRARY}
 	${SDL2_TTF_LIBRARY}
 )
 
+###################################################################
 # Used to be '/include', but is now '/src' due to remodeling of the project structure
 include_directories(
 	${PROJECT_SOURCE_DIR}/src
@@ -36,14 +48,26 @@ include_directories(
 )
 
 # Files that are packed with CPack
-install(TARGETS ${ExecTarget} #${MyProjectLib}Shared
+install(TARGETS ${ExecTarget}
 	RUNTIME DESTINATION bin
 	COMPONENT executables
 )
+
+if(MY_SHARED_LIB_ENABLED)
+	install(TARGETS ${MyProjectLib}
+		LIBRARY DESTINATION bin
+		COMPONENT executables
+	)
+endif()
 
 install(DIRECTORY ${PROJECT_SOURCE_DIR}/assets
 	DESTINATION bin
 	COMPONENT assets
 )
 
-message("*** Finish subdir 'src' cmake")
+# Licensing and stuff like that
+install(FILES
+	${ReadmeFile}
+	${LicenseFile}
+	DESTINATION .
+)
