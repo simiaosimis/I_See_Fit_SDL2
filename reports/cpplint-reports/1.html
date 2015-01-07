@@ -112,7 +112,7 @@
       <div id="menu" dir="rtl">
        <a href="index.html">Defect list</a>
        <br>
-<a href='1.html#line-34'> readability/braces 34</a><a href='1.html#line-83'> build/include_what_you_use 83</a><a href='1.html#line-96'> readability/braces 96</a><a href='1.html#line-102'> build/include_what_you_use 102</a><a href='1.html#line-108'> readability/braces 108</a>
+<a href='1.html#line-83'> build/include_what_you_use 83</a><a href='1.html#line-102'> build/include_what_you_use 102</a>
       </div>
       <div id="content">
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
@@ -263,8 +263,8 @@
 <a name="line-31"></a>	<span class="k">if</span><span class="p">(</span><span class="n">musicIsPlaying</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
 <a name="line-32"></a>		<span class="n">Mix_PauseMusic</span><span class="p">();</span>
 <a name="line-33"></a>	<span class="p">}</span>
-<a name="line-34"></a><span class="hll">	<span class="k">else</span> <span class="p">{</span><span class='error2'>&lt;--- If an else has a brace on one side, it should have it on both  </span>
-</span><a name="line-35"></a>		<span class="n">Log</span><span class="p">(</span><span class="n">WARN</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Trying to pause music that is not playing.&quot;</span><span class="p">;</span>
+<a name="line-34"></a>	<span class="k">else</span> <span class="p">{</span>
+<a name="line-35"></a>		<span class="n">Log</span><span class="p">(</span><span class="n">WARN</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Trying to pause music that is not playing.&quot;</span><span class="p">;</span>
 <a name="line-36"></a>	<span class="p">}</span>
 <a name="line-37"></a><span class="p">}</span>
 <a name="line-38"></a>
@@ -325,8 +325,8 @@
 <a name="line-93"></a>				<span class="o">&lt;&lt;</span> <span class="n">Mix_GetError</span><span class="p">();</span>
 <a name="line-94"></a>		<span class="p">}</span>
 <a name="line-95"></a>	<span class="p">}</span>
-<a name="line-96"></a><span class="hll">	<span class="k">else</span> <span class="p">{</span><span class='error2'>&lt;--- If an else has a brace on one side, it should have it on both  </span>
-</span><a name="line-97"></a>		<span class="n">Log</span><span class="p">(</span><span class="n">ERROR</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Can&#39;t play a null music.&quot;</span><span class="p">;</span>
+<a name="line-96"></a>	<span class="k">else</span> <span class="p">{</span>
+<a name="line-97"></a>		<span class="n">Log</span><span class="p">(</span><span class="n">ERROR</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Can&#39;t play a null music.&quot;</span><span class="p">;</span>
 <a name="line-98"></a>	<span class="p">}</span>
 <a name="line-99"></a><span class="p">}</span>
 <a name="line-100"></a>
@@ -337,8 +337,8 @@
 <a name="line-105"></a>		<span class="k">if</span><span class="p">((</span><span class="o">*</span><span class="n">it</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">channel</span> <span class="o">==</span> <span class="n">channel_</span><span class="p">)</span> <span class="p">{</span>
 <a name="line-106"></a>			<span class="k">this</span><span class="o">-&gt;</span><span class="n">currentEffects</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">it</span><span class="p">);</span>
 <a name="line-107"></a>		<span class="p">}</span>
-<a name="line-108"></a><span class="hll">		<span class="k">else</span> <span class="p">{</span><span class='error2'>&lt;--- If an else has a brace on one side, it should have it on both  </span>
-</span><a name="line-109"></a>			<span class="n">it</span><span class="o">++</span><span class="p">;</span>
+<a name="line-108"></a>		<span class="k">else</span> <span class="p">{</span>
+<a name="line-109"></a>			<span class="n">it</span><span class="o">++</span><span class="p">;</span>
 <a name="line-110"></a>		<span class="p">}</span>
 <a name="line-111"></a>	<span class="p">}</span>
 <a name="line-112"></a><span class="p">}</span>

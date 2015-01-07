@@ -107,12 +107,12 @@
   </head>
   <body onload="init_expandables()">
       <div id="header">
-        <h1>Cppcheck report - sdl2-engine: /home/travis/build/CaioIcy/sdl2-engine/src/GameObject.cpp </h1>
+        <h1>Cppcheck report - sdl2-engine: /home/travis/build/CaioIcy/sdl2-engine/src/Logger.cpp </h1>
       </div>
       <div id="menu" dir="rtl">
        <a href="index.html">Defect list</a>
        <br>
-<a href='6.html#line-6'> build/include_what_you_use 6</a><a href='6.html#line-14'> readability/casting 14</a><a href='6.html#line-25'> readability/braces 25</a><a href='6.html#line-38'> readability/casting 38</a>
+<a href='6.html#line-19'> build/include_what_you_use 19</a>
       </div>
       <div id="content">
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -138,104 +138,30 @@
 21
 22
 23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60
-61</pre></div></td><td class="code"><div class="highlight"><pre><a name="line-1"></a><span class="cp">#include &quot;GameObject.h&quot;</span>
-<a name="line-2"></a><span class="cp">#include &quot;Game.h&quot;</span>
-<a name="line-3"></a><span class="cp">#include &quot;SDL_Libs.h&quot;</span>
-<a name="line-4"></a><span class="cp">#include &quot;Logger.h&quot;</span>
+24</pre></div></td><td class="code"><div class="highlight"><pre><a name="line-1"></a><span class="cp">#include &quot;Logger.h&quot;</span>
+<a name="line-2"></a><span class="cp">#include &lt;cstdio&gt;</span>
+<a name="line-3"></a>
+<a name="line-4"></a><span class="n">Logger</span><span class="o">::</span><span class="n">Logger</span><span class="p">()</span> <span class="p">{</span>
 <a name="line-5"></a>
-<a name="line-6"></a><span class="hll"><span class="n">GameObject</span><span class="o">::</span><span class="n">GameObject</span><span class="p">(</span><span class="k">const</span> <span class="kt">double</span> <span class="n">x_</span><span class="p">,</span> <span class="k">const</span> <span class="kt">double</span> <span class="n">y_</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">path_</span><span class="p">)</span> <span class="o">:</span><span class='error2'>&lt;--- Add #include &lt;string&gt; for string  </span>
-</span><a name="line-7"></a>    <span class="n">x</span><span class="p">(</span><span class="n">x_</span><span class="p">),</span>
-<a name="line-8"></a>    <span class="n">y</span><span class="p">(</span><span class="n">y_</span><span class="p">),</span>
-<a name="line-9"></a>    <span class="n">isRight</span><span class="p">(</span><span class="nb">true</span><span class="p">),</span>
-<a name="line-10"></a>    <span class="n">sprite</span><span class="p">(</span><span class="n">Game</span><span class="o">::</span><span class="n">instance</span><span class="p">().</span><span class="n">getResource</span><span class="p">().</span><span class="n">sprite</span><span class="p">(</span><span class="n">path_</span><span class="p">)),</span>
-<a name="line-11"></a>    <span class="n">width</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span>
-<a name="line-12"></a>    <span class="n">height</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span>
-<a name="line-13"></a>    <span class="n">animationClip</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
-<a name="line-14"></a><span class="hll">    <span class="n">boundingBox</span><span class="p">{(</span><span class="kt">int</span><span class="p">)</span><span class="n">x_</span><span class="p">,</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">y_</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">}</span><span class='error2'>&lt;--- Using C-style cast.  Use static_cast&lt;int&gt;(...) instead  </span>
-</span><a name="line-15"></a><span class="p">{</span>
-<a name="line-16"></a>    <span class="c1">// Only serves as the initializer for the derived classes.</span>
-<a name="line-17"></a>
-<a name="line-18"></a>    <span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">sprite</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-19"></a>        <span class="k">this</span><span class="o">-&gt;</span><span class="n">width</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">sprite</span><span class="o">-&gt;</span><span class="n">getWidth</span><span class="p">();</span>
-<a name="line-20"></a>        <span class="k">this</span><span class="o">-&gt;</span><span class="n">height</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">sprite</span><span class="o">-&gt;</span><span class="n">getHeight</span><span class="p">();</span>
-<a name="line-21"></a>
-<a name="line-22"></a>        <span class="k">this</span><span class="o">-&gt;</span><span class="n">boundingBox</span><span class="p">.</span><span class="n">w</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">width</span><span class="p">;</span>
-<a name="line-23"></a>        <span class="k">this</span><span class="o">-&gt;</span><span class="n">boundingBox</span><span class="p">.</span><span class="n">h</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">height</span><span class="p">;</span>
-<a name="line-24"></a>    <span class="p">}</span>
-<a name="line-25"></a><span class="hll">    <span class="k">else</span> <span class="p">{</span><span class='error2'>&lt;--- If an else has a brace on one side, it should have it on both  </span>
-</span><a name="line-26"></a>        <span class="n">Log</span><span class="p">(</span><span class="n">WARN</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;GameObject sprite is null, width and height will be undefined.&quot;</span><span class="p">;</span>
-<a name="line-27"></a>    <span class="p">}</span>
-<a name="line-28"></a><span class="p">}</span>
-<a name="line-29"></a>
-<a name="line-30"></a><span class="n">GameObject</span><span class="o">::</span><span class="n">GameObject</span><span class="p">(</span><span class="k">const</span> <span class="kt">double</span> <span class="n">x_</span><span class="p">,</span> <span class="k">const</span> <span class="kt">double</span> <span class="n">y_</span><span class="p">)</span> <span class="o">:</span>
-<a name="line-31"></a>    <span class="n">x</span><span class="p">(</span><span class="n">x_</span><span class="p">),</span>
-<a name="line-32"></a>    <span class="n">y</span><span class="p">(</span><span class="n">y_</span><span class="p">),</span>
-<a name="line-33"></a>    <span class="n">isRight</span><span class="p">(</span><span class="nb">true</span><span class="p">),</span>
-<a name="line-34"></a>    <span class="n">sprite</span><span class="p">(</span><span class="k">nullptr</span><span class="p">),</span>
-<a name="line-35"></a>    <span class="n">width</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span>
-<a name="line-36"></a>    <span class="n">height</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span>
-<a name="line-37"></a>    <span class="n">animationClip</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
-<a name="line-38"></a><span class="hll">    <span class="n">boundingBox</span><span class="p">{(</span><span class="kt">int</span><span class="p">)</span><span class="n">x_</span><span class="p">,</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">y_</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">}</span><span class='error2'>&lt;--- Using C-style cast.  Use static_cast&lt;int&gt;(...) instead  </span>
-</span><a name="line-39"></a><span class="p">{</span>
-<a name="line-40"></a>    <span class="c1">// Only serves as the initializer for the derived classes.</span>
-<a name="line-41"></a><span class="p">}</span>
-<a name="line-42"></a>
-<a name="line-43"></a><span class="n">GameObject</span><span class="o">::~</span><span class="n">GameObject</span><span class="p">()</span> <span class="p">{</span>
-<a name="line-44"></a>
-<a name="line-45"></a><span class="p">}</span>
-<a name="line-46"></a>
-<a name="line-47"></a><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">GameObject</span><span class="o">::</span><span class="n">getWidth</span><span class="p">()</span> <span class="p">{</span>
-<a name="line-48"></a>	<span class="k">return</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">width</span><span class="p">;</span>
-<a name="line-49"></a><span class="p">}</span>
-<a name="line-50"></a>
-<a name="line-51"></a><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">GameObject</span><span class="o">::</span><span class="n">getHeight</span><span class="p">()</span> <span class="p">{</span>
-<a name="line-52"></a>	<span class="k">return</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">height</span><span class="p">;</span>
-<a name="line-53"></a><span class="p">}</span>
-<a name="line-54"></a>
-<a name="line-55"></a><span class="n">SDL_Rect</span><span class="o">&amp;</span> <span class="n">GameObject</span><span class="o">::</span><span class="n">getAnimationClip</span><span class="p">()</span> <span class="p">{</span>
-<a name="line-56"></a>	<span class="k">return</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">animationClip</span><span class="p">;</span>
-<a name="line-57"></a><span class="p">}</span>
-<a name="line-58"></a>
-<a name="line-59"></a><span class="n">SDL_Rect</span><span class="o">&amp;</span> <span class="n">GameObject</span><span class="o">::</span><span class="n">getBoundingBox</span><span class="p">()</span> <span class="p">{</span>
-<a name="line-60"></a>    <span class="k">return</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">boundingBox</span><span class="p">;</span>
-<a name="line-61"></a><span class="p">}</span>
+<a name="line-6"></a><span class="p">}</span>
+<a name="line-7"></a>
+<a name="line-8"></a><span class="n">Logger</span><span class="o">::~</span><span class="n">Logger</span><span class="p">()</span> <span class="p">{</span>
+<a name="line-9"></a>	<span class="k">this</span><span class="o">-&gt;</span><span class="n">os</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<a name="line-10"></a>	<span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;%s&quot;</span><span class="p">,</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">os</span><span class="p">.</span><span class="n">str</span><span class="p">().</span><span class="n">c_str</span><span class="p">());</span>
+<a name="line-11"></a>	<span class="n">fflush</span><span class="p">(</span><span class="n">stderr</span><span class="p">);</span>
+<a name="line-12"></a><span class="p">}</span>
+<a name="line-13"></a>
+<a name="line-14"></a><span class="n">std</span><span class="o">::</span><span class="n">ostringstream</span><span class="o">&amp;</span> <span class="n">Logger</span><span class="o">::</span><span class="n">log</span><span class="p">(</span><span class="k">const</span> <span class="n">LogLevel</span> <span class="n">level_</span><span class="p">)</span> <span class="p">{</span>
+<a name="line-15"></a>	<span class="k">this</span><span class="o">-&gt;</span><span class="n">os</span> <span class="o">&lt;&lt;</span> <span class="n">logLevelToString</span><span class="p">(</span><span class="n">level_</span><span class="p">);</span>
+<a name="line-16"></a>	<span class="k">return</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">os</span><span class="p">;</span>
+<a name="line-17"></a><span class="p">}</span>
+<a name="line-18"></a>
+<a name="line-19"></a><span class="hll"><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">Logger</span><span class="o">::</span><span class="n">logLevelToString</span><span class="p">(</span><span class="k">const</span> <span class="n">LogLevel</span> <span class="n">level_</span><span class="p">)</span> <span class="p">{</span><span class='error2'>&lt;--- Add #include &lt;string&gt; for string  </span>
+</span><a name="line-20"></a>	<span class="k">static</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="k">const</span> <span class="n">buffer</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="s">&quot;[Info]:    &quot;</span><span class="p">,</span> <span class="s">&quot;[Warning]: &quot;</span><span class="p">,</span> <span class="s">&quot;[Error]:  &quot;</span><span class="p">,</span>
+<a name="line-21"></a>		<span class="s">&quot;[Debug]:   &quot;</span><span class="p">};</span>
+<a name="line-22"></a>
+<a name="line-23"></a>	<span class="k">return</span> <span class="n">buffer</span><span class="p">[</span><span class="n">level_</span><span class="p">];</span>
+<a name="line-24"></a><span class="p">}</span>
 </pre></div>
 </td></tr></table>
       </div>
