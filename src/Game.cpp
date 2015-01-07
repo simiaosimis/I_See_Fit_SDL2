@@ -65,8 +65,8 @@ void Game::runGame() {
 
 	// Get the first game time.
 	const double deltaTime = 1.0 / 60.0;
-	double originalTotalGameTime = 0.0;
-	double originalAccumulatedTime = 0.0;
+	double totalGameTime = 0.0;
+	double accumulatedTime = 0.0;
 
 	using s_clock = std::chrono::steady_clock;
 	s_clock::time_point lastTime = s_clock::now();
@@ -74,14 +74,18 @@ void Game::runGame() {
 	// This is the main game loop.
 	while(this->isRunning) {
 
+		if(totalGameTime >= 2.0) {
+			this->isRunning = false;
+		}
+
 		s_clock::time_point now = s_clock::now();
 		s_clock::duration dt{now - lastTime};
 
 		const double frameTime = std::chrono::duration_cast<std::chrono::duration<double, std::ratio<1, 1>>>(dt).count();
-		originalAccumulatedTime += frameTime;
+		accumulatedTime += frameTime;
 
 		// Update.
-		while(originalAccumulatedTime >= deltaTime) {
+		while(accumulatedTime >= deltaTime) {
 			this->inputHandler->handleInput();
 
 			// Check for an exit signal from input.
@@ -92,8 +96,8 @@ void Game::runGame() {
 
 			this->currentState->update(deltaTime);
 
-			originalAccumulatedTime -= deltaTime;
-			originalTotalGameTime += deltaTime;
+			accumulatedTime -= deltaTime;
+			totalGameTime += deltaTime;
 		}
 
 		// Render.

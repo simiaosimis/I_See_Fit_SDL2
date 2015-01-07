@@ -133,9 +133,9 @@ function do_valgrind {
 	attention_echo "Valgrind"
 
 	# Don't do valgrind report for actual project, it will be stuck forever
-	# valgrind --xml=yes\
-		# --xml-file=${DIR_REPORTS}/valgrind-exec-report.xml\
-		# ${DIR_BUILD_SRC}/${TARGET_PROJECT}
+	valgrind --xml=yes\
+		--xml-file=${DIR_REPORTS}/valgrind-exec-report.xml\
+		${DIR_BUILD_SRC}/${TARGET_PROJECT}
 
 	# Test suite valgrind report + Test report
 	valgrind --xml=yes\
