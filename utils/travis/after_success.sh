@@ -110,7 +110,9 @@ function do_cpplint {
 	mkdir -p ${DIR_REPORTS_CPPLINT} || exit $?
 
 	# Generate cppcheck-style xml from cpplint output
-	${DIR_UTILS}/cpplint.py --filter=-whitespace,-legal,-readability/braces ${DIR_SRC}/*.cpp 2>&1|\
+	${DIR_UTILS}/cpplint.py --linelength=95 --extensions=h,cpp --verbose=0\
+		--filter=-whitespace/blank_line,-whitespace/tab,-whitespace/comments,-whitespace/newline,-whitespace/braces,-legal,-readability/braces,-readability/multiline_comment,-build/header_guard\
+		${DIR_SRC}/*.* 2>&1|\
 		sed 's/"/\&quot;/g' >&1| sed 's/</\&lt;/g' >&1| sed 's/>/\&gt;/g' >&1|\
 		sed "s/'/\&apos;/g" >&1| sed 's/\&/\&amp;/g' >&1|\
 		${DIR_UTILS}/cpplint_to_cppcheckxml.py &> cpplint-cppcheck-result.xml
