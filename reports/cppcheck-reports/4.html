@@ -112,7 +112,7 @@
       <div id="menu" dir="rtl">
        <a href="index.html">Defect list</a>
        <br>
-<a href='4.html#line-68'> unreadVariable 68</a><a href='4.html#line-126'> postfixOperator 126</a>
+<a href='4.html#line-130'> postfixOperator 130</a>
       </div>
       <div id="content">
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
@@ -271,7 +271,11 @@
 154
 155
 156
-157</pre></div></td><td class="code"><div class="highlight"><pre><a name="line-1"></a><span class="cp">#include &quot;Game.h&quot;</span>
+157
+158
+159
+160
+161</pre></div></td><td class="code"><div class="highlight"><pre><a name="line-1"></a><span class="cp">#include &quot;Game.h&quot;</span>
 <a name="line-2"></a><span class="cp">#include &quot;Configuration.h&quot;</span>
 <a name="line-3"></a><span class="cp">#include &quot;Util.h&quot;</span>
 <a name="line-4"></a><span class="cp">#include &quot;Sprite.h&quot;</span>
@@ -338,8 +342,8 @@
 <a name="line-65"></a>
 <a name="line-66"></a>	<span class="c1">// Get the first game time.</span>
 <a name="line-67"></a>	<span class="k">const</span> <span class="kt">double</span> <span class="n">deltaTime</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="mf">60.0</span><span class="p">;</span>
-<a name="line-68"></a><span class="hll">	<span class="kt">double</span> <span class="n">originalTotalGameTime</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span><span class='error2'>&lt;--- Variable 'originalTotalGameTime' is assigned a value that is never used</span>
-</span><a name="line-69"></a>	<span class="kt">double</span> <span class="n">originalAccumulatedTime</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
+<a name="line-68"></a>	<span class="kt">double</span> <span class="n">totalGameTime</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
+<a name="line-69"></a>	<span class="kt">double</span> <span class="n">accumulatedTime</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
 <a name="line-70"></a>
 <a name="line-71"></a>	<span class="k">using</span> <span class="n">s_clock</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">steady_clock</span><span class="p">;</span>
 <a name="line-72"></a>	<span class="n">s_clock</span><span class="o">::</span><span class="n">time_point</span> <span class="n">lastTime</span> <span class="o">=</span> <span class="n">s_clock</span><span class="o">::</span><span class="n">now</span><span class="p">();</span>
@@ -347,87 +351,91 @@
 <a name="line-74"></a>	<span class="c1">// This is the main game loop.</span>
 <a name="line-75"></a>	<span class="k">while</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">isRunning</span><span class="p">)</span> <span class="p">{</span>
 <a name="line-76"></a>
-<a name="line-77"></a>		<span class="n">s_clock</span><span class="o">::</span><span class="n">time_point</span> <span class="n">now</span> <span class="o">=</span> <span class="n">s_clock</span><span class="o">::</span><span class="n">now</span><span class="p">();</span>
-<a name="line-78"></a>		<span class="n">s_clock</span><span class="o">::</span><span class="n">duration</span> <span class="n">dt</span><span class="p">{</span><span class="n">now</span> <span class="o">-</span> <span class="n">lastTime</span><span class="p">};</span>
-<a name="line-79"></a>
-<a name="line-80"></a>		<span class="k">const</span> <span class="kt">double</span> <span class="n">frameTime</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">duration_cast</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">duration</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">ratio</span><span class="o">&lt;</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="o">&gt;&gt;&gt;</span><span class="p">(</span><span class="n">dt</span><span class="p">).</span><span class="n">count</span><span class="p">();</span>
-<a name="line-81"></a>		<span class="n">originalAccumulatedTime</span> <span class="o">+=</span> <span class="n">frameTime</span><span class="p">;</span>
-<a name="line-82"></a>
-<a name="line-83"></a>		<span class="c1">// Update.</span>
-<a name="line-84"></a>		<span class="k">while</span><span class="p">(</span><span class="n">originalAccumulatedTime</span> <span class="o">&gt;=</span> <span class="n">deltaTime</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-85"></a>			<span class="k">this</span><span class="o">-&gt;</span><span class="n">inputHandler</span><span class="o">-&gt;</span><span class="n">handleInput</span><span class="p">();</span>
+<a name="line-77"></a>		<span class="k">if</span><span class="p">(</span><span class="n">totalGameTime</span> <span class="o">&gt;=</span> <span class="mf">2.0</span><span class="p">)</span> <span class="p">{</span>
+<a name="line-78"></a>			<span class="k">this</span><span class="o">-&gt;</span><span class="n">isRunning</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+<a name="line-79"></a>		<span class="p">}</span>
+<a name="line-80"></a>
+<a name="line-81"></a>		<span class="n">s_clock</span><span class="o">::</span><span class="n">time_point</span> <span class="n">now</span> <span class="o">=</span> <span class="n">s_clock</span><span class="o">::</span><span class="n">now</span><span class="p">();</span>
+<a name="line-82"></a>		<span class="n">s_clock</span><span class="o">::</span><span class="n">duration</span> <span class="n">dt</span><span class="p">{</span><span class="n">now</span> <span class="o">-</span> <span class="n">lastTime</span><span class="p">};</span>
+<a name="line-83"></a>
+<a name="line-84"></a>		<span class="k">const</span> <span class="kt">double</span> <span class="n">frameTime</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">duration_cast</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">duration</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">ratio</span><span class="o">&lt;</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="o">&gt;&gt;&gt;</span><span class="p">(</span><span class="n">dt</span><span class="p">).</span><span class="n">count</span><span class="p">();</span>
+<a name="line-85"></a>		<span class="n">accumulatedTime</span> <span class="o">+=</span> <span class="n">frameTime</span><span class="p">;</span>
 <a name="line-86"></a>
-<a name="line-87"></a>			<span class="c1">// Check for an exit signal from input.</span>
-<a name="line-88"></a>			<span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">inputHandler</span><span class="o">-&gt;</span><span class="n">isQuitFlag</span><span class="p">()</span> <span class="o">==</span> <span class="nb">true</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-89"></a>				<span class="n">stop</span><span class="p">();</span>
-<a name="line-90"></a>				<span class="k">return</span><span class="p">;</span>
-<a name="line-91"></a>			<span class="p">}</span>
-<a name="line-92"></a>
-<a name="line-93"></a>			<span class="k">this</span><span class="o">-&gt;</span><span class="n">currentState</span><span class="o">-&gt;</span><span class="n">update</span><span class="p">(</span><span class="n">deltaTime</span><span class="p">);</span>
-<a name="line-94"></a>
-<a name="line-95"></a>			<span class="n">originalAccumulatedTime</span> <span class="o">-=</span> <span class="n">deltaTime</span><span class="p">;</span>
-<a name="line-96"></a>			<span class="n">originalTotalGameTime</span> <span class="o">+=</span> <span class="n">deltaTime</span><span class="p">;</span>
-<a name="line-97"></a>		<span class="p">}</span>
+<a name="line-87"></a>		<span class="c1">// Update.</span>
+<a name="line-88"></a>		<span class="k">while</span><span class="p">(</span><span class="n">accumulatedTime</span> <span class="o">&gt;=</span> <span class="n">deltaTime</span><span class="p">)</span> <span class="p">{</span>
+<a name="line-89"></a>			<span class="k">this</span><span class="o">-&gt;</span><span class="n">inputHandler</span><span class="o">-&gt;</span><span class="n">handleInput</span><span class="p">();</span>
+<a name="line-90"></a>
+<a name="line-91"></a>			<span class="c1">// Check for an exit signal from input.</span>
+<a name="line-92"></a>			<span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">inputHandler</span><span class="o">-&gt;</span><span class="n">isQuitFlag</span><span class="p">()</span> <span class="o">==</span> <span class="nb">true</span><span class="p">)</span> <span class="p">{</span>
+<a name="line-93"></a>				<span class="n">stop</span><span class="p">();</span>
+<a name="line-94"></a>				<span class="k">return</span><span class="p">;</span>
+<a name="line-95"></a>			<span class="p">}</span>
+<a name="line-96"></a>
+<a name="line-97"></a>			<span class="k">this</span><span class="o">-&gt;</span><span class="n">currentState</span><span class="o">-&gt;</span><span class="n">update</span><span class="p">(</span><span class="n">deltaTime</span><span class="p">);</span>
 <a name="line-98"></a>
-<a name="line-99"></a>		<span class="c1">// Render.</span>
-<a name="line-100"></a>		<span class="k">this</span><span class="o">-&gt;</span><span class="n">window</span><span class="o">-&gt;</span><span class="n">getRenderer</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">clear</span><span class="p">();</span>
-<a name="line-101"></a>		<span class="k">this</span><span class="o">-&gt;</span><span class="n">currentState</span><span class="o">-&gt;</span><span class="n">render</span><span class="p">();</span>
-<a name="line-102"></a>		<span class="k">this</span><span class="o">-&gt;</span><span class="n">window</span><span class="o">-&gt;</span><span class="n">getRenderer</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">render</span><span class="p">();</span>
-<a name="line-103"></a>
-<a name="line-104"></a>		<span class="n">lastTime</span> <span class="o">=</span> <span class="n">now</span><span class="p">;</span>
-<a name="line-105"></a>
-<a name="line-106"></a>	<span class="p">}</span>
+<a name="line-99"></a>			<span class="n">accumulatedTime</span> <span class="o">-=</span> <span class="n">deltaTime</span><span class="p">;</span>
+<a name="line-100"></a>			<span class="n">totalGameTime</span> <span class="o">+=</span> <span class="n">deltaTime</span><span class="p">;</span>
+<a name="line-101"></a>		<span class="p">}</span>
+<a name="line-102"></a>
+<a name="line-103"></a>		<span class="c1">// Render.</span>
+<a name="line-104"></a>		<span class="k">this</span><span class="o">-&gt;</span><span class="n">window</span><span class="o">-&gt;</span><span class="n">getRenderer</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">clear</span><span class="p">();</span>
+<a name="line-105"></a>		<span class="k">this</span><span class="o">-&gt;</span><span class="n">currentState</span><span class="o">-&gt;</span><span class="n">render</span><span class="p">();</span>
+<a name="line-106"></a>		<span class="k">this</span><span class="o">-&gt;</span><span class="n">window</span><span class="o">-&gt;</span><span class="n">getRenderer</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">render</span><span class="p">();</span>
 <a name="line-107"></a>
-<a name="line-108"></a><span class="p">}</span>
+<a name="line-108"></a>		<span class="n">lastTime</span> <span class="o">=</span> <span class="n">now</span><span class="p">;</span>
 <a name="line-109"></a>
-<a name="line-110"></a><span class="kt">void</span> <span class="n">Game</span><span class="o">::</span><span class="n">changeState</span><span class="p">(</span><span class="k">const</span> <span class="n">GStates</span> <span class="n">state_</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-111"></a>	<span class="c1">/// @todo Implement the transition between states.</span>
-<a name="line-112"></a>	<span class="k">this</span><span class="o">-&gt;</span><span class="n">currentState</span><span class="o">-&gt;</span><span class="n">unload</span><span class="p">();</span>
-<a name="line-113"></a>	<span class="k">this</span><span class="o">-&gt;</span><span class="n">currentState</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">statesMap</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">state_</span><span class="p">);</span>
-<a name="line-114"></a>	<span class="k">this</span><span class="o">-&gt;</span><span class="n">currentState</span><span class="o">-&gt;</span><span class="n">load</span><span class="p">();</span>
-<a name="line-115"></a><span class="p">}</span>
-<a name="line-116"></a>
-<a name="line-117"></a><span class="kt">void</span> <span class="n">Game</span><span class="o">::</span><span class="n">initializeStates</span><span class="p">()</span> <span class="p">{</span>
-<a name="line-118"></a>	<span class="c1">// Initialize all the states in Game here.</span>
-<a name="line-119"></a>
-<a name="line-120"></a>	<span class="c1">// Emplace the states pointers onto the map.</span>
-<a name="line-121"></a>	<span class="n">ADD_STATE_INSERT</span><span class="p">(</span><span class="n">PLACEHOLDER</span><span class="p">,</span> <span class="n">GStatePlaceholder</span><span class="p">);</span>
-<a name="line-122"></a><span class="p">}</span>
+<a name="line-110"></a>	<span class="p">}</span>
+<a name="line-111"></a>
+<a name="line-112"></a><span class="p">}</span>
+<a name="line-113"></a>
+<a name="line-114"></a><span class="kt">void</span> <span class="n">Game</span><span class="o">::</span><span class="n">changeState</span><span class="p">(</span><span class="k">const</span> <span class="n">GStates</span> <span class="n">state_</span><span class="p">)</span> <span class="p">{</span>
+<a name="line-115"></a>	<span class="c1">/// @todo Implement the transition between states.</span>
+<a name="line-116"></a>	<span class="k">this</span><span class="o">-&gt;</span><span class="n">currentState</span><span class="o">-&gt;</span><span class="n">unload</span><span class="p">();</span>
+<a name="line-117"></a>	<span class="k">this</span><span class="o">-&gt;</span><span class="n">currentState</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">statesMap</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">state_</span><span class="p">);</span>
+<a name="line-118"></a>	<span class="k">this</span><span class="o">-&gt;</span><span class="n">currentState</span><span class="o">-&gt;</span><span class="n">load</span><span class="p">();</span>
+<a name="line-119"></a><span class="p">}</span>
+<a name="line-120"></a>
+<a name="line-121"></a><span class="kt">void</span> <span class="n">Game</span><span class="o">::</span><span class="n">initializeStates</span><span class="p">()</span> <span class="p">{</span>
+<a name="line-122"></a>	<span class="c1">// Initialize all the states in Game here.</span>
 <a name="line-123"></a>
-<a name="line-124"></a><span class="kt">void</span> <span class="n">Game</span><span class="o">::</span><span class="n">destroyStates</span><span class="p">()</span> <span class="p">{</span>
-<a name="line-125"></a>	<span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">GStates</span><span class="p">,</span> <span class="n">StateGame</span><span class="o">*&gt;::</span><span class="n">const_iterator</span> <span class="n">it</span><span class="p">;</span>
-<a name="line-126"></a><span class="hll">    <span class="k">for</span><span class="p">(</span><span class="n">it</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">statesMap</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span> <span class="n">it</span> <span class="o">!=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">statesMap</span><span class="p">.</span><span class="n">end</span><span class="p">();</span> <span class="n">it</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span><div class='verbose expandable'><span class='error2'>&lt;--- Prefer prefix ++/-- operators for non-primitive types. <span class='marker'>[+]</span></span><div class='content'>Prefix ++/-- operators should be preferred for non-primitive types. Pre-increment/decrement can be more efficient than post-increment/decrement. Post-increment/decrement usually involves keeping a copy of the previous value around and adds a little extra code.</div></div>
-</span><a name="line-127"></a>        <span class="k">delete</span> <span class="n">it</span><span class="o">-&gt;</span><span class="n">second</span><span class="p">;</span>
-<a name="line-128"></a>    <span class="p">}</span>
-<a name="line-129"></a><span class="p">}</span>
-<a name="line-130"></a>
-<a name="line-131"></a><span class="n">AudioHandler</span><span class="o">&amp;</span> <span class="n">Game</span><span class="o">::</span><span class="n">getAudioHandler</span><span class="p">()</span> <span class="p">{</span>
-<a name="line-132"></a>	<span class="k">return</span> <span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">audioHandler</span><span class="p">));</span>
+<a name="line-124"></a>	<span class="c1">// Emplace the states pointers onto the map.</span>
+<a name="line-125"></a>	<span class="n">ADD_STATE_INSERT</span><span class="p">(</span><span class="n">PLACEHOLDER</span><span class="p">,</span> <span class="n">GStatePlaceholder</span><span class="p">);</span>
+<a name="line-126"></a><span class="p">}</span>
+<a name="line-127"></a>
+<a name="line-128"></a><span class="kt">void</span> <span class="n">Game</span><span class="o">::</span><span class="n">destroyStates</span><span class="p">()</span> <span class="p">{</span>
+<a name="line-129"></a>	<span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">GStates</span><span class="p">,</span> <span class="n">StateGame</span><span class="o">*&gt;::</span><span class="n">const_iterator</span> <span class="n">it</span><span class="p">;</span>
+<a name="line-130"></a><span class="hll">    <span class="k">for</span><span class="p">(</span><span class="n">it</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">statesMap</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span> <span class="n">it</span> <span class="o">!=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">statesMap</span><span class="p">.</span><span class="n">end</span><span class="p">();</span> <span class="n">it</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span><div class='verbose expandable'><span class='error2'>&lt;--- Prefer prefix ++/-- operators for non-primitive types. <span class='marker'>[+]</span></span><div class='content'>Prefix ++/-- operators should be preferred for non-primitive types. Pre-increment/decrement can be more efficient than post-increment/decrement. Post-increment/decrement usually involves keeping a copy of the previous value around and adds a little extra code.</div></div>
+</span><a name="line-131"></a>        <span class="k">delete</span> <span class="n">it</span><span class="o">-&gt;</span><span class="n">second</span><span class="p">;</span>
+<a name="line-132"></a>    <span class="p">}</span>
 <a name="line-133"></a><span class="p">}</span>
 <a name="line-134"></a>
-<a name="line-135"></a><span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="kt">bool</span><span class="p">,</span> <span class="n">GameKeys</span><span class="o">::</span><span class="n">MAX</span><span class="o">&gt;</span> <span class="n">Game</span><span class="o">::</span><span class="n">getInput</span><span class="p">()</span> <span class="p">{</span>
-<a name="line-136"></a>	<span class="k">return</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">inputHandler</span><span class="o">-&gt;</span><span class="n">getKeyStates</span><span class="p">();</span>
+<a name="line-135"></a><span class="n">AudioHandler</span><span class="o">&amp;</span> <span class="n">Game</span><span class="o">::</span><span class="n">getAudioHandler</span><span class="p">()</span> <span class="p">{</span>
+<a name="line-136"></a>	<span class="k">return</span> <span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">audioHandler</span><span class="p">));</span>
 <a name="line-137"></a><span class="p">}</span>
 <a name="line-138"></a>
-<a name="line-139"></a><span class="kt">void</span> <span class="n">Game</span><span class="o">::</span><span class="n">stop</span><span class="p">()</span> <span class="p">{</span>
-<a name="line-140"></a>	<span class="k">this</span><span class="o">-&gt;</span><span class="n">isRunning</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+<a name="line-139"></a><span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="kt">bool</span><span class="p">,</span> <span class="n">GameKeys</span><span class="o">::</span><span class="n">MAX</span><span class="o">&gt;</span> <span class="n">Game</span><span class="o">::</span><span class="n">getInput</span><span class="p">()</span> <span class="p">{</span>
+<a name="line-140"></a>	<span class="k">return</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">inputHandler</span><span class="o">-&gt;</span><span class="n">getKeyStates</span><span class="p">();</span>
 <a name="line-141"></a><span class="p">}</span>
 <a name="line-142"></a>
-<a name="line-143"></a><span class="kt">void</span> <span class="n">Game</span><span class="o">::</span><span class="n">clearKeyFromInput</span><span class="p">(</span><span class="k">const</span> <span class="n">GameKeys</span> <span class="n">key_</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-144"></a>	<span class="k">this</span><span class="o">-&gt;</span><span class="n">inputHandler</span><span class="o">-&gt;</span><span class="n">clearKey</span><span class="p">(</span><span class="n">key_</span><span class="p">);</span>
+<a name="line-143"></a><span class="kt">void</span> <span class="n">Game</span><span class="o">::</span><span class="n">stop</span><span class="p">()</span> <span class="p">{</span>
+<a name="line-144"></a>	<span class="k">this</span><span class="o">-&gt;</span><span class="n">isRunning</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
 <a name="line-145"></a><span class="p">}</span>
 <a name="line-146"></a>
-<a name="line-147"></a><span class="kt">void</span> <span class="n">Game</span><span class="o">::</span><span class="n">resizeWindow</span><span class="p">(</span><span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">width_</span><span class="p">,</span> <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">height_</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-148"></a>	<span class="k">this</span><span class="o">-&gt;</span><span class="n">window</span><span class="o">-&gt;</span><span class="n">resize</span><span class="p">(</span><span class="n">width_</span><span class="p">,</span> <span class="n">height_</span><span class="p">);</span>
+<a name="line-147"></a><span class="kt">void</span> <span class="n">Game</span><span class="o">::</span><span class="n">clearKeyFromInput</span><span class="p">(</span><span class="k">const</span> <span class="n">GameKeys</span> <span class="n">key_</span><span class="p">)</span> <span class="p">{</span>
+<a name="line-148"></a>	<span class="k">this</span><span class="o">-&gt;</span><span class="n">inputHandler</span><span class="o">-&gt;</span><span class="n">clearKey</span><span class="p">(</span><span class="n">key_</span><span class="p">);</span>
 <a name="line-149"></a><span class="p">}</span>
 <a name="line-150"></a>
-<a name="line-151"></a><span class="n">Renderer</span><span class="o">*</span> <span class="n">Game</span><span class="o">::</span><span class="n">getRenderer</span><span class="p">()</span> <span class="p">{</span>
-<a name="line-152"></a>	<span class="k">return</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">window</span><span class="o">-&gt;</span><span class="n">getRenderer</span><span class="p">();</span>
+<a name="line-151"></a><span class="kt">void</span> <span class="n">Game</span><span class="o">::</span><span class="n">resizeWindow</span><span class="p">(</span><span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">width_</span><span class="p">,</span> <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">height_</span><span class="p">)</span> <span class="p">{</span>
+<a name="line-152"></a>	<span class="k">this</span><span class="o">-&gt;</span><span class="n">window</span><span class="o">-&gt;</span><span class="n">resize</span><span class="p">(</span><span class="n">width_</span><span class="p">,</span> <span class="n">height_</span><span class="p">);</span>
 <a name="line-153"></a><span class="p">}</span>
 <a name="line-154"></a>
-<a name="line-155"></a><span class="n">ResourceHandler</span><span class="o">&amp;</span> <span class="n">Game</span><span class="o">::</span><span class="n">getResource</span><span class="p">()</span> <span class="p">{</span>
-<a name="line-156"></a>	<span class="k">return</span> <span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">resourceHandler</span><span class="p">));</span>
+<a name="line-155"></a><span class="n">Renderer</span><span class="o">*</span> <span class="n">Game</span><span class="o">::</span><span class="n">getRenderer</span><span class="p">()</span> <span class="p">{</span>
+<a name="line-156"></a>	<span class="k">return</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">window</span><span class="o">-&gt;</span><span class="n">getRenderer</span><span class="p">();</span>
 <a name="line-157"></a><span class="p">}</span>
+<a name="line-158"></a>
+<a name="line-159"></a><span class="n">ResourceHandler</span><span class="o">&amp;</span> <span class="n">Game</span><span class="o">::</span><span class="n">getResource</span><span class="p">()</span> <span class="p">{</span>
+<a name="line-160"></a>	<span class="k">return</span> <span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">resourceHandler</span><span class="p">));</span>
+<a name="line-161"></a><span class="p">}</span>
 </pre></div>
 </td></tr></table>
       </div>

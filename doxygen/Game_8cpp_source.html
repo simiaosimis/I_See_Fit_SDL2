@@ -33,7 +33,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v7</span>
+   &#160;<span id="projectnumber">v8</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -165,8 +165,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00065"></a>00065 
 <a name="l00066"></a>00066     <span class="comment">// Get the first game time.</span>
 <a name="l00067"></a>00067     <span class="keyword">const</span> <span class="keywordtype">double</span> deltaTime = 1.0 / 60.0;
-<a name="l00068"></a>00068     <span class="keywordtype">double</span> originalTotalGameTime = 0.0;
-<a name="l00069"></a>00069     <span class="keywordtype">double</span> originalAccumulatedTime = 0.0;
+<a name="l00068"></a>00068     <span class="keywordtype">double</span> totalGameTime = 0.0;
+<a name="l00069"></a>00069     <span class="keywordtype">double</span> accumulatedTime = 0.0;
 <a name="l00070"></a>00070 
 <a name="l00071"></a>00071     <span class="keyword">using</span> s_clock = std::chrono::steady_clock;
 <a name="l00072"></a>00072     s_clock::time_point lastTime = s_clock::now();
@@ -174,86 +174,90 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00074"></a>00074     <span class="comment">// This is the main game loop.</span>
 <a name="l00075"></a>00075     <span class="keywordflow">while</span>(this-&gt;<a class="code" href="classGame.html#adb424734b2454f9ed1e6d6bd44e6dfaf" title="Whether the game is currently running/looping or not.">isRunning</a>) {
 <a name="l00076"></a>00076 
-<a name="l00077"></a>00077         s_clock::time_point now = s_clock::now();
-<a name="l00078"></a>00078         s_clock::duration dt{now - lastTime};
-<a name="l00079"></a>00079 
-<a name="l00080"></a>00080         <span class="keyword">const</span> <span class="keywordtype">double</span> frameTime = std::chrono::duration_cast&lt;std::chrono::duration&lt;double, std::ratio&lt;1, 1&gt;&gt;&gt;(dt).count();
-<a name="l00081"></a>00081         originalAccumulatedTime += frameTime;
-<a name="l00082"></a>00082 
-<a name="l00083"></a>00083         <span class="comment">// Update.</span>
-<a name="l00084"></a>00084         <span class="keywordflow">while</span>(originalAccumulatedTime &gt;= deltaTime) {
-<a name="l00085"></a>00085             this-&gt;<a class="code" href="classGame.html#aa0ca10b15de880181ddcfede0de9226c" title="The Game InputHandler.">inputHandler</a>-&gt;<a class="code" href="classInputHandler.html#a820f483265aa3f6da39b9d93c1311966" title="Handles the input.">handleInput</a>();
+<a name="l00077"></a>00077         <span class="keywordflow">if</span>(totalGameTime &gt;= 2.0) {
+<a name="l00078"></a>00078             this-&gt;<a class="code" href="classGame.html#adb424734b2454f9ed1e6d6bd44e6dfaf" title="Whether the game is currently running/looping or not.">isRunning</a> = <span class="keyword">false</span>;
+<a name="l00079"></a>00079         }
+<a name="l00080"></a>00080 
+<a name="l00081"></a>00081         s_clock::time_point now = s_clock::now();
+<a name="l00082"></a>00082         s_clock::duration dt{now - lastTime};
+<a name="l00083"></a>00083 
+<a name="l00084"></a>00084         <span class="keyword">const</span> <span class="keywordtype">double</span> frameTime = std::chrono::duration_cast&lt;std::chrono::duration&lt;double, std::ratio&lt;1, 1&gt;&gt;&gt;(dt).count();
+<a name="l00085"></a>00085         accumulatedTime += frameTime;
 <a name="l00086"></a>00086 
-<a name="l00087"></a>00087             <span class="comment">// Check for an exit signal from input.</span>
-<a name="l00088"></a>00088             <span class="keywordflow">if</span>(this-&gt;<a class="code" href="classGame.html#aa0ca10b15de880181ddcfede0de9226c" title="The Game InputHandler.">inputHandler</a>-&gt;<a class="code" href="classInputHandler.html#a7d103ecce85288f454876b5bef8b3aee">isQuitFlag</a>() == <span class="keyword">true</span>) {
-<a name="l00089"></a>00089                 <a class="code" href="classGame.html#a17fbb36fd4a2085f9ff4f1fa93d7d08b" title="Stops execution and closes the game.">stop</a>();
-<a name="l00090"></a>00090                 <span class="keywordflow">return</span>;
-<a name="l00091"></a>00091             }
-<a name="l00092"></a>00092 
-<a name="l00093"></a>00093             this-&gt;<a class="code" href="classGame.html#a39cc30f3e086ce1279ad01967d7694fe" title="The current state, which the game is in.">currentState</a>-&gt;<a class="code" href="classStateGame.html#a300539fe737d6bbab4b4d6fe4b6a2e98" title="Update all gameObjects.">update</a>(deltaTime);
-<a name="l00094"></a>00094 
-<a name="l00095"></a>00095             originalAccumulatedTime -= deltaTime;
-<a name="l00096"></a>00096             originalTotalGameTime += deltaTime;
-<a name="l00097"></a>00097         }
+<a name="l00087"></a>00087         <span class="comment">// Update.</span>
+<a name="l00088"></a>00088         <span class="keywordflow">while</span>(accumulatedTime &gt;= deltaTime) {
+<a name="l00089"></a>00089             this-&gt;<a class="code" href="classGame.html#aa0ca10b15de880181ddcfede0de9226c" title="The Game InputHandler.">inputHandler</a>-&gt;<a class="code" href="classInputHandler.html#a820f483265aa3f6da39b9d93c1311966" title="Handles the input.">handleInput</a>();
+<a name="l00090"></a>00090 
+<a name="l00091"></a>00091             <span class="comment">// Check for an exit signal from input.</span>
+<a name="l00092"></a>00092             <span class="keywordflow">if</span>(this-&gt;<a class="code" href="classGame.html#aa0ca10b15de880181ddcfede0de9226c" title="The Game InputHandler.">inputHandler</a>-&gt;<a class="code" href="classInputHandler.html#a7d103ecce85288f454876b5bef8b3aee">isQuitFlag</a>() == <span class="keyword">true</span>) {
+<a name="l00093"></a>00093                 <a class="code" href="classGame.html#a17fbb36fd4a2085f9ff4f1fa93d7d08b" title="Stops execution and closes the game.">stop</a>();
+<a name="l00094"></a>00094                 <span class="keywordflow">return</span>;
+<a name="l00095"></a>00095             }
+<a name="l00096"></a>00096 
+<a name="l00097"></a>00097             this-&gt;<a class="code" href="classGame.html#a39cc30f3e086ce1279ad01967d7694fe" title="The current state, which the game is in.">currentState</a>-&gt;<a class="code" href="classStateGame.html#a300539fe737d6bbab4b4d6fe4b6a2e98" title="Update all gameObjects.">update</a>(deltaTime);
 <a name="l00098"></a>00098 
-<a name="l00099"></a>00099         <span class="comment">// Render.</span>
-<a name="l00100"></a>00100         this-&gt;<a class="code" href="classGame.html#a553924bcccf9f9b1c04e385041852f17" title="The game Window.">window</a>-&gt;<a class="code" href="classWindow.html#ac5ec376703205dff00ffdbae115f93b1">getRenderer</a>()-&gt;clear();
-<a name="l00101"></a>00101         this-&gt;<a class="code" href="classGame.html#a39cc30f3e086ce1279ad01967d7694fe" title="The current state, which the game is in.">currentState</a>-&gt;<a class="code" href="classStateGame.html#a9e181e234d99aa11beead047152a8e92" title="Renders the state.">render</a>();
-<a name="l00102"></a>00102         this-&gt;<a class="code" href="classGame.html#a553924bcccf9f9b1c04e385041852f17" title="The game Window.">window</a>-&gt;<a class="code" href="classWindow.html#ac5ec376703205dff00ffdbae115f93b1">getRenderer</a>()-&gt;render();
-<a name="l00103"></a>00103 
-<a name="l00104"></a>00104         lastTime = now;
-<a name="l00105"></a>00105 
-<a name="l00106"></a>00106     }
+<a name="l00099"></a>00099             accumulatedTime -= deltaTime;
+<a name="l00100"></a>00100             totalGameTime += deltaTime;
+<a name="l00101"></a>00101         }
+<a name="l00102"></a>00102 
+<a name="l00103"></a>00103         <span class="comment">// Render.</span>
+<a name="l00104"></a>00104         this-&gt;<a class="code" href="classGame.html#a553924bcccf9f9b1c04e385041852f17" title="The game Window.">window</a>-&gt;<a class="code" href="classWindow.html#ac5ec376703205dff00ffdbae115f93b1">getRenderer</a>()-&gt;clear();
+<a name="l00105"></a>00105         this-&gt;<a class="code" href="classGame.html#a39cc30f3e086ce1279ad01967d7694fe" title="The current state, which the game is in.">currentState</a>-&gt;<a class="code" href="classStateGame.html#a9e181e234d99aa11beead047152a8e92" title="Renders the state.">render</a>();
+<a name="l00106"></a>00106         this-&gt;<a class="code" href="classGame.html#a553924bcccf9f9b1c04e385041852f17" title="The game Window.">window</a>-&gt;<a class="code" href="classWindow.html#ac5ec376703205dff00ffdbae115f93b1">getRenderer</a>()-&gt;render();
 <a name="l00107"></a>00107 
-<a name="l00108"></a>00108 }
+<a name="l00108"></a>00108         lastTime = now;
 <a name="l00109"></a>00109 
-<a name="l00110"></a><a class="code" href="classGame.html#a34a67034d7aea701ce9a161786d3006d">00110</a> <span class="keywordtype">void</span> <a class="code" href="classGame.html#a34a67034d7aea701ce9a161786d3006d" title="Sets the current game state.">Game::changeState</a>(<span class="keyword">const</span> <a class="code" href="classGame.html#acb5aff30c92015e8ed51e1d35d0d97ea" title="All possible game states.">GStates</a> state_) {
-<a name="l00112"></a>00112     this-&gt;<a class="code" href="classGame.html#a39cc30f3e086ce1279ad01967d7694fe" title="The current state, which the game is in.">currentState</a>-&gt;<a class="code" href="classStateGame.html#aa215f7b6d37658dead89448afacc713d" title="Unloads necessary objects.">unload</a>();
-<a name="l00113"></a>00113     this-&gt;<a class="code" href="classGame.html#a39cc30f3e086ce1279ad01967d7694fe" title="The current state, which the game is in.">currentState</a> = this-&gt;<a class="code" href="classGame.html#a9d6b3d33b550f2ac3425d324d5e235e8" title="Map containing all possible states.">statesMap</a>.at(state_);
-<a name="l00114"></a>00114     this-&gt;<a class="code" href="classGame.html#a39cc30f3e086ce1279ad01967d7694fe" title="The current state, which the game is in.">currentState</a>-&gt;<a class="code" href="classStateGame.html#a924e531e28b8afcbb82858eecef0a084" title="Loads necessary objects.">load</a>();
-<a name="l00115"></a>00115 }
-<a name="l00116"></a>00116 
-<a name="l00117"></a><a class="code" href="classGame.html#afc16bd0d077c53218c27f16e0bf56cbb">00117</a> <span class="keywordtype">void</span> <a class="code" href="classGame.html#afc16bd0d077c53218c27f16e0bf56cbb" title="Loads all the states.">Game::initializeStates</a>() {
-<a name="l00118"></a>00118     <span class="comment">// Initialize all the states in Game here.</span>
-<a name="l00119"></a>00119 
-<a name="l00120"></a>00120     <span class="comment">// Emplace the states pointers onto the map.</span>
-<a name="l00121"></a>00121     ADD_STATE_INSERT(PLACEHOLDER, <a class="code" href="classGStatePlaceholder.html" title="The state used for testing the engine.">GStatePlaceholder</a>);
-<a name="l00122"></a>00122 }
+<a name="l00110"></a>00110     }
+<a name="l00111"></a>00111 
+<a name="l00112"></a>00112 }
+<a name="l00113"></a>00113 
+<a name="l00114"></a><a class="code" href="classGame.html#a34a67034d7aea701ce9a161786d3006d">00114</a> <span class="keywordtype">void</span> <a class="code" href="classGame.html#a34a67034d7aea701ce9a161786d3006d" title="Sets the current game state.">Game::changeState</a>(<span class="keyword">const</span> <a class="code" href="classGame.html#acb5aff30c92015e8ed51e1d35d0d97ea" title="All possible game states.">GStates</a> state_) {
+<a name="l00116"></a>00116     this-&gt;<a class="code" href="classGame.html#a39cc30f3e086ce1279ad01967d7694fe" title="The current state, which the game is in.">currentState</a>-&gt;<a class="code" href="classStateGame.html#aa215f7b6d37658dead89448afacc713d" title="Unloads necessary objects.">unload</a>();
+<a name="l00117"></a>00117     this-&gt;<a class="code" href="classGame.html#a39cc30f3e086ce1279ad01967d7694fe" title="The current state, which the game is in.">currentState</a> = this-&gt;<a class="code" href="classGame.html#a9d6b3d33b550f2ac3425d324d5e235e8" title="Map containing all possible states.">statesMap</a>.at(state_);
+<a name="l00118"></a>00118     this-&gt;<a class="code" href="classGame.html#a39cc30f3e086ce1279ad01967d7694fe" title="The current state, which the game is in.">currentState</a>-&gt;<a class="code" href="classStateGame.html#a924e531e28b8afcbb82858eecef0a084" title="Loads necessary objects.">load</a>();
+<a name="l00119"></a>00119 }
+<a name="l00120"></a>00120 
+<a name="l00121"></a><a class="code" href="classGame.html#afc16bd0d077c53218c27f16e0bf56cbb">00121</a> <span class="keywordtype">void</span> <a class="code" href="classGame.html#afc16bd0d077c53218c27f16e0bf56cbb" title="Loads all the states.">Game::initializeStates</a>() {
+<a name="l00122"></a>00122     <span class="comment">// Initialize all the states in Game here.</span>
 <a name="l00123"></a>00123 
-<a name="l00124"></a><a class="code" href="classGame.html#a684834abb420aba6d30094d1fe273818">00124</a> <span class="keywordtype">void</span> <a class="code" href="classGame.html#a684834abb420aba6d30094d1fe273818" title="Deletes all the loaded states.">Game::destroyStates</a>() {
-<a name="l00125"></a>00125     std::map&lt;GStates, StateGame*&gt;::const_iterator it;
-<a name="l00126"></a>00126     <span class="keywordflow">for</span>(it = this-&gt;<a class="code" href="classGame.html#a9d6b3d33b550f2ac3425d324d5e235e8" title="Map containing all possible states.">statesMap</a>.begin(); it != this-&gt;<a class="code" href="classGame.html#a9d6b3d33b550f2ac3425d324d5e235e8" title="Map containing all possible states.">statesMap</a>.end(); it++) {
-<a name="l00127"></a>00127         <span class="keyword">delete</span> it-&gt;second;
-<a name="l00128"></a>00128     }
-<a name="l00129"></a>00129 }
-<a name="l00130"></a>00130 
-<a name="l00131"></a><a class="code" href="classGame.html#aefdf22987b627adf4ee9cdcc178fc11c">00131</a> <a class="code" href="classAudioHandler.html" title="The audio handler.">AudioHandler</a>&amp; <a class="code" href="classGame.html#aefdf22987b627adf4ee9cdcc178fc11c">Game::getAudioHandler</a>() {
-<a name="l00132"></a>00132     <span class="keywordflow">return</span> (*(this-&gt;<a class="code" href="classGame.html#a0669fc05427f97820f44f2ac5cc7cef0" title="The Game AudioHandler.">audioHandler</a>));
+<a name="l00124"></a>00124     <span class="comment">// Emplace the states pointers onto the map.</span>
+<a name="l00125"></a>00125     ADD_STATE_INSERT(PLACEHOLDER, <a class="code" href="classGStatePlaceholder.html" title="The state used for testing the engine.">GStatePlaceholder</a>);
+<a name="l00126"></a>00126 }
+<a name="l00127"></a>00127 
+<a name="l00128"></a><a class="code" href="classGame.html#a684834abb420aba6d30094d1fe273818">00128</a> <span class="keywordtype">void</span> <a class="code" href="classGame.html#a684834abb420aba6d30094d1fe273818" title="Deletes all the loaded states.">Game::destroyStates</a>() {
+<a name="l00129"></a>00129     std::map&lt;GStates, StateGame*&gt;::const_iterator it;
+<a name="l00130"></a>00130     <span class="keywordflow">for</span>(it = this-&gt;<a class="code" href="classGame.html#a9d6b3d33b550f2ac3425d324d5e235e8" title="Map containing all possible states.">statesMap</a>.begin(); it != this-&gt;<a class="code" href="classGame.html#a9d6b3d33b550f2ac3425d324d5e235e8" title="Map containing all possible states.">statesMap</a>.end(); it++) {
+<a name="l00131"></a>00131         <span class="keyword">delete</span> it-&gt;second;
+<a name="l00132"></a>00132     }
 <a name="l00133"></a>00133 }
 <a name="l00134"></a>00134 
-<a name="l00135"></a><a class="code" href="classGame.html#a76067c5eab048e88307d0a1c75328eda">00135</a> std::array&lt;bool, GameKeys::MAX&gt; <a class="code" href="classGame.html#a76067c5eab048e88307d0a1c75328eda">Game::getInput</a>() {
-<a name="l00136"></a>00136     <span class="keywordflow">return</span> this-&gt;<a class="code" href="classGame.html#aa0ca10b15de880181ddcfede0de9226c" title="The Game InputHandler.">inputHandler</a>-&gt;<a class="code" href="classInputHandler.html#af7087290a2fd7d973a47768049cfe5eb">getKeyStates</a>();
+<a name="l00135"></a><a class="code" href="classGame.html#aefdf22987b627adf4ee9cdcc178fc11c">00135</a> <a class="code" href="classAudioHandler.html" title="The audio handler.">AudioHandler</a>&amp; <a class="code" href="classGame.html#aefdf22987b627adf4ee9cdcc178fc11c">Game::getAudioHandler</a>() {
+<a name="l00136"></a>00136     <span class="keywordflow">return</span> (*(this-&gt;<a class="code" href="classGame.html#a0669fc05427f97820f44f2ac5cc7cef0" title="The Game AudioHandler.">audioHandler</a>));
 <a name="l00137"></a>00137 }
 <a name="l00138"></a>00138 
-<a name="l00139"></a><a class="code" href="classGame.html#a17fbb36fd4a2085f9ff4f1fa93d7d08b">00139</a> <span class="keywordtype">void</span> <a class="code" href="classGame.html#a17fbb36fd4a2085f9ff4f1fa93d7d08b" title="Stops execution and closes the game.">Game::stop</a>() {
-<a name="l00140"></a>00140     this-&gt;<a class="code" href="classGame.html#adb424734b2454f9ed1e6d6bd44e6dfaf" title="Whether the game is currently running/looping or not.">isRunning</a> = <span class="keyword">false</span>;
+<a name="l00139"></a><a class="code" href="classGame.html#a76067c5eab048e88307d0a1c75328eda">00139</a> std::array&lt;bool, GameKeys::MAX&gt; <a class="code" href="classGame.html#a76067c5eab048e88307d0a1c75328eda">Game::getInput</a>() {
+<a name="l00140"></a>00140     <span class="keywordflow">return</span> this-&gt;<a class="code" href="classGame.html#aa0ca10b15de880181ddcfede0de9226c" title="The Game InputHandler.">inputHandler</a>-&gt;<a class="code" href="classInputHandler.html#af7087290a2fd7d973a47768049cfe5eb">getKeyStates</a>();
 <a name="l00141"></a>00141 }
 <a name="l00142"></a>00142 
-<a name="l00143"></a>00143 <span class="keywordtype">void</span> Game::clearKeyFromInput(<span class="keyword">const</span> GameKeys key_) {
-<a name="l00144"></a>00144     this-&gt;<a class="code" href="classGame.html#aa0ca10b15de880181ddcfede0de9226c" title="The Game InputHandler.">inputHandler</a>-&gt;clearKey(key_);
+<a name="l00143"></a><a class="code" href="classGame.html#a17fbb36fd4a2085f9ff4f1fa93d7d08b">00143</a> <span class="keywordtype">void</span> <a class="code" href="classGame.html#a17fbb36fd4a2085f9ff4f1fa93d7d08b" title="Stops execution and closes the game.">Game::stop</a>() {
+<a name="l00144"></a>00144     this-&gt;<a class="code" href="classGame.html#adb424734b2454f9ed1e6d6bd44e6dfaf" title="Whether the game is currently running/looping or not.">isRunning</a> = <span class="keyword">false</span>;
 <a name="l00145"></a>00145 }
 <a name="l00146"></a>00146 
-<a name="l00147"></a>00147 <span class="keywordtype">void</span> Game::resizeWindow(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> width_, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> height_) {
-<a name="l00148"></a>00148     this-&gt;<a class="code" href="classGame.html#a553924bcccf9f9b1c04e385041852f17" title="The game Window.">window</a>-&gt;<a class="code" href="classWindow.html#a3c322c6691e9180b98ad18545013954c" title="Resizes the window.">resize</a>(width_, height_);
+<a name="l00147"></a>00147 <span class="keywordtype">void</span> Game::clearKeyFromInput(<span class="keyword">const</span> GameKeys key_) {
+<a name="l00148"></a>00148     this-&gt;<a class="code" href="classGame.html#aa0ca10b15de880181ddcfede0de9226c" title="The Game InputHandler.">inputHandler</a>-&gt;clearKey(key_);
 <a name="l00149"></a>00149 }
 <a name="l00150"></a>00150 
-<a name="l00151"></a><a class="code" href="classGame.html#af4f1ce14a3cf7017942fdf0d183d24c3">00151</a> <a class="code" href="classRenderer.html">Renderer</a>* <a class="code" href="classGame.html#af4f1ce14a3cf7017942fdf0d183d24c3">Game::getRenderer</a>() {
-<a name="l00152"></a>00152     <span class="keywordflow">return</span> this-&gt;<a class="code" href="classGame.html#a553924bcccf9f9b1c04e385041852f17" title="The game Window.">window</a>-&gt;<a class="code" href="classWindow.html#ac5ec376703205dff00ffdbae115f93b1">getRenderer</a>();
+<a name="l00151"></a>00151 <span class="keywordtype">void</span> Game::resizeWindow(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> width_, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> height_) {
+<a name="l00152"></a>00152     this-&gt;<a class="code" href="classGame.html#a553924bcccf9f9b1c04e385041852f17" title="The game Window.">window</a>-&gt;<a class="code" href="classWindow.html#a3c322c6691e9180b98ad18545013954c" title="Resizes the window.">resize</a>(width_, height_);
 <a name="l00153"></a>00153 }
 <a name="l00154"></a>00154 
-<a name="l00155"></a>00155 <a class="code" href="classResourceHandler.html">ResourceHandler</a>&amp; Game::getResource() {
-<a name="l00156"></a>00156     <span class="keywordflow">return</span> (*(this-&gt;resourceHandler));
+<a name="l00155"></a><a class="code" href="classGame.html#af4f1ce14a3cf7017942fdf0d183d24c3">00155</a> <a class="code" href="classRenderer.html">Renderer</a>* <a class="code" href="classGame.html#af4f1ce14a3cf7017942fdf0d183d24c3">Game::getRenderer</a>() {
+<a name="l00156"></a>00156     <span class="keywordflow">return</span> this-&gt;<a class="code" href="classGame.html#a553924bcccf9f9b1c04e385041852f17" title="The game Window.">window</a>-&gt;<a class="code" href="classWindow.html#ac5ec376703205dff00ffdbae115f93b1">getRenderer</a>();
 <a name="l00157"></a>00157 }
+<a name="l00158"></a>00158 
+<a name="l00159"></a>00159 <a class="code" href="classResourceHandler.html">ResourceHandler</a>&amp; Game::getResource() {
+<a name="l00160"></a>00160     <span class="keywordflow">return</span> (*(this-&gt;resourceHandler));
+<a name="l00161"></a>00161 }
 </pre></div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -274,7 +278,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><b>Game.cpp</b>      </li>
 
-    <li class="footer">Generated on Wed Jan 7 2015 00:47:24 for sdl2-engine by
+    <li class="footer">Generated on Wed Jan 7 2015 02:43:29 for sdl2-engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>
