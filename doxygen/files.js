@@ -52,7 +52,6 @@ var files =
     [ "Text.cpp", null, null ],
     [ "Text.h", null, null ],
     [ "Uncopyable.h", null, null ],
-    [ "UsefulDefines.h", null, null ],
     [ "Util.cpp", null, null ],
     [ "Util.h", null, null ],
     [ "WELCOME.md", null, null ],

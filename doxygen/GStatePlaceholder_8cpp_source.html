@@ -33,7 +33,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v9</span>
+   &#160;<span id="projectnumber">v10</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -101,51 +101,50 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;GStatePlaceholder.h&quot;</span>
 <a name="l00002"></a>00002 <span class="preprocessor">#include &quot;Game.h&quot;</span>
 <a name="l00003"></a>00003 <span class="preprocessor">#include &quot;Logger.h&quot;</span>
-<a name="l00004"></a>00004 <span class="preprocessor">#include &quot;UsefulDefines.h&quot;</span>
-<a name="l00005"></a>00005 
-<a name="l00006"></a><a class="code" href="classGStatePlaceholder.html#adfbf36156052798e8f7907c212aa84c9">00006</a> <a class="code" href="classGStatePlaceholder.html#adfbf36156052798e8f7907c212aa84c9" title="The constructor.">GStatePlaceholder::GStatePlaceholder</a>() :
-<a name="l00007"></a>00007     image(nullptr),
-<a name="l00008"></a>00008     animation(nullptr),
-<a name="l00009"></a>00009     animationClip{0, 0, 0, 0}
-<a name="l00010"></a>00010 {
-<a name="l00011"></a>00011 
-<a name="l00012"></a>00012 }
-<a name="l00013"></a>00013 
-<a name="l00014"></a>00014 <a class="code" href="classGStatePlaceholder.html#abfe13fd6fe0b6d258734c188f62c167c" title="The destructor.">GStatePlaceholder::~GStatePlaceholder</a>() {
-<a name="l00015"></a>00015     SAFE_DELETE(this-&gt;animation);
-<a name="l00016"></a>00016 }
-<a name="l00017"></a>00017 
-<a name="l00018"></a>00018 <span class="keywordtype">void</span> <a class="code" href="classGStatePlaceholder.html#ac61770a40ac7b0ab200da46e731fa127" title="Loads the state.">GStatePlaceholder::load</a>() {
-<a name="l00019"></a>00019     Log(DEBUG) &lt;&lt; <span class="stringliteral">&quot;Loading STATE placeholder...&quot;</span>;
-<a name="l00020"></a>00020 
-<a name="l00021"></a>00021     Log(INFO) &lt;&lt; <span class="stringliteral">&quot;Press SPACEBAR for the SFX.&quot;</span>;
-<a name="l00022"></a>00022 
-<a name="l00023"></a>00023     this-&gt;animation = <span class="keyword">new</span> <a class="code" href="classAnimation.html" title="Class in control of animating a sprite.">Animation</a>(0, 4, 32, 32, 5, 5.0);
-<a name="l00024"></a>00024     this-&gt;animationClip = {0, 0, 0, 0};
-<a name="l00025"></a>00025     this-&gt;image = <a class="code" href="classGame.html#ac213e6d3a4e566d901413f62f6408858" title="Singleton imeplementation for Game.">Game::instance</a>().getResource().<a class="code" href="classResourceHandler.html#a100b91478b0fd631bf14fcdf3a268090">sprite</a>(<span class="stringliteral">&quot;assets/images/spritesheet.png&quot;</span>);
-<a name="l00026"></a>00026 
-<a name="l00027"></a>00027     <a class="code" href="classGame.html#ac213e6d3a4e566d901413f62f6408858" title="Singleton imeplementation for Game.">Game::instance</a>().<a class="code" href="classGame.html#aefdf22987b627adf4ee9cdcc178fc11c">getAudioHandler</a>().<a class="code" href="classAudioHandler.html#ade21a192403784c3ea99f7d8382cd13c" title="Changes current music.">changeMusic</a>(<span class="stringliteral">&quot;assets/audio/music/test_music.flac&quot;</span>);
-<a name="l00028"></a>00028 }
-<a name="l00029"></a>00029 
-<a name="l00030"></a>00030 <span class="keywordtype">void</span> <a class="code" href="classGStatePlaceholder.html#ab2b6a671368d55c5437a658cc9bca44d" title="Unloads everything that was loaded.">GStatePlaceholder::unload</a>() {
-<a name="l00031"></a>00031     Log(DEBUG) &lt;&lt; <span class="stringliteral">&quot;\tUnloading STATE placeholder...&quot;</span>;
-<a name="l00032"></a>00032 
-<a name="l00033"></a>00033     <a class="code" href="classGStatePlaceholder.html#ab2b6a671368d55c5437a658cc9bca44d" title="Unloads everything that was loaded.">StateGame::unload</a>();
-<a name="l00034"></a>00034 }
-<a name="l00035"></a>00035 
-<a name="l00036"></a>00036 <span class="keywordtype">void</span> <a class="code" href="classGStatePlaceholder.html#a943b34fe563ef4de7a433b5b813ede13" title="Updates the objects within the StateGame.">GStatePlaceholder::update</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> dt_) {
-<a name="l00037"></a>00037     <span class="keyword">const</span> std::array&lt;bool, GameKeys::MAX&gt; keyStates = <a class="code" href="classGame.html#ac213e6d3a4e566d901413f62f6408858" title="Singleton imeplementation for Game.">Game::instance</a>().<a class="code" href="classGame.html#a76067c5eab048e88307d0a1c75328eda">getInput</a>();
-<a name="l00038"></a>00038 
-<a name="l00039"></a>00039     <span class="keywordflow">if</span>(keyStates[GameKeys::SPACE] == <span class="keyword">true</span>) {
-<a name="l00040"></a>00040         <a class="code" href="classGame.html#ac213e6d3a4e566d901413f62f6408858" title="Singleton imeplementation for Game.">Game::instance</a>().<a class="code" href="classGame.html#aefdf22987b627adf4ee9cdcc178fc11c">getAudioHandler</a>().<a class="code" href="classAudioHandler.html#aa9129a39ffe72a114d667c116493988f" title="Pushes a new sound effect onto the vector, and plays it.">pushSoundEffect</a>(<span class="stringliteral">&quot;assets/audio/sfx/test_sfx.wav&quot;</span>);
-<a name="l00041"></a>00041     }
-<a name="l00042"></a>00042 
-<a name="l00043"></a>00043     this-&gt;animation-&gt;<a class="code" href="classAnimation.html#a7017337003829eef3787b4a10a31e8fb" title="Updates the animation clip.">update</a>(this-&gt;animationClip, dt_);
-<a name="l00044"></a>00044 }
-<a name="l00045"></a>00045 
-<a name="l00046"></a>00046 <span class="keywordtype">void</span> <a class="code" href="classGStatePlaceholder.html#aac74087ca575c21a54e85733b58fb5be" title="Renders the state.">GStatePlaceholder::render</a>() {
-<a name="l00047"></a>00047     this-&gt;image-&gt;<a class="code" href="classSprite.html#ac82a01b98130b9b1403667059640163b" title="Renders the sprite.">render</a>(0, 0, &amp;this-&gt;animationClip, <span class="keyword">true</span>);
-<a name="l00048"></a>00048 }
+<a name="l00004"></a>00004 
+<a name="l00005"></a><a class="code" href="classGStatePlaceholder.html#adfbf36156052798e8f7907c212aa84c9">00005</a> <a class="code" href="classGStatePlaceholder.html#adfbf36156052798e8f7907c212aa84c9" title="The constructor.">GStatePlaceholder::GStatePlaceholder</a>() :
+<a name="l00006"></a>00006     image(nullptr),
+<a name="l00007"></a>00007     animation(nullptr),
+<a name="l00008"></a>00008     animationClip{0, 0, 0, 0}
+<a name="l00009"></a>00009 {
+<a name="l00010"></a>00010 
+<a name="l00011"></a>00011 }
+<a name="l00012"></a>00012 
+<a name="l00013"></a>00013 <a class="code" href="classGStatePlaceholder.html#abfe13fd6fe0b6d258734c188f62c167c" title="The destructor.">GStatePlaceholder::~GStatePlaceholder</a>() {
+<a name="l00014"></a>00014     <span class="keyword">delete</span> this-&gt;animation;
+<a name="l00015"></a>00015 }
+<a name="l00016"></a>00016 
+<a name="l00017"></a>00017 <span class="keywordtype">void</span> <a class="code" href="classGStatePlaceholder.html#ac61770a40ac7b0ab200da46e731fa127" title="Loads the state.">GStatePlaceholder::load</a>() {
+<a name="l00018"></a>00018     Log(DEBUG) &lt;&lt; <span class="stringliteral">&quot;Loading STATE placeholder...&quot;</span>;
+<a name="l00019"></a>00019 
+<a name="l00020"></a>00020     Log(INFO) &lt;&lt; <span class="stringliteral">&quot;Press SPACEBAR for the SFX.&quot;</span>;
+<a name="l00021"></a>00021 
+<a name="l00022"></a>00022     this-&gt;animation = <span class="keyword">new</span> <a class="code" href="classAnimation.html" title="Class in control of animating a sprite.">Animation</a>(0, 4, 32, 32, 5, 5.0);
+<a name="l00023"></a>00023     this-&gt;animationClip = {0, 0, 0, 0};
+<a name="l00024"></a>00024     this-&gt;image = <a class="code" href="classGame.html#ac213e6d3a4e566d901413f62f6408858" title="Singleton imeplementation for Game.">Game::instance</a>().getResource().<a class="code" href="classResourceHandler.html#a100b91478b0fd631bf14fcdf3a268090">sprite</a>(<span class="stringliteral">&quot;assets/images/spritesheet.png&quot;</span>);
+<a name="l00025"></a>00025 
+<a name="l00026"></a>00026     <a class="code" href="classGame.html#ac213e6d3a4e566d901413f62f6408858" title="Singleton imeplementation for Game.">Game::instance</a>().<a class="code" href="classGame.html#aefdf22987b627adf4ee9cdcc178fc11c">getAudioHandler</a>().<a class="code" href="classAudioHandler.html#ade21a192403784c3ea99f7d8382cd13c" title="Changes current music.">changeMusic</a>(<span class="stringliteral">&quot;assets/audio/music/test_music.flac&quot;</span>);
+<a name="l00027"></a>00027 }
+<a name="l00028"></a>00028 
+<a name="l00029"></a>00029 <span class="keywordtype">void</span> <a class="code" href="classGStatePlaceholder.html#ab2b6a671368d55c5437a658cc9bca44d" title="Unloads everything that was loaded.">GStatePlaceholder::unload</a>() {
+<a name="l00030"></a>00030     Log(DEBUG) &lt;&lt; <span class="stringliteral">&quot;\tUnloading STATE placeholder...&quot;</span>;
+<a name="l00031"></a>00031 
+<a name="l00032"></a>00032     <a class="code" href="classGStatePlaceholder.html#ab2b6a671368d55c5437a658cc9bca44d" title="Unloads everything that was loaded.">StateGame::unload</a>();
+<a name="l00033"></a>00033 }
+<a name="l00034"></a>00034 
+<a name="l00035"></a>00035 <span class="keywordtype">void</span> <a class="code" href="classGStatePlaceholder.html#a943b34fe563ef4de7a433b5b813ede13" title="Updates the objects within the StateGame.">GStatePlaceholder::update</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> dt_) {
+<a name="l00036"></a>00036     <span class="keyword">const</span> std::array&lt;bool, GameKeys::MAX&gt; keyStates = <a class="code" href="classGame.html#ac213e6d3a4e566d901413f62f6408858" title="Singleton imeplementation for Game.">Game::instance</a>().<a class="code" href="classGame.html#a76067c5eab048e88307d0a1c75328eda">getInput</a>();
+<a name="l00037"></a>00037 
+<a name="l00038"></a>00038     <span class="keywordflow">if</span>(keyStates[GameKeys::SPACE] == <span class="keyword">true</span>) {
+<a name="l00039"></a>00039         <a class="code" href="classGame.html#ac213e6d3a4e566d901413f62f6408858" title="Singleton imeplementation for Game.">Game::instance</a>().<a class="code" href="classGame.html#aefdf22987b627adf4ee9cdcc178fc11c">getAudioHandler</a>().<a class="code" href="classAudioHandler.html#aa9129a39ffe72a114d667c116493988f" title="Pushes a new sound effect onto the vector, and plays it.">pushSoundEffect</a>(<span class="stringliteral">&quot;assets/audio/sfx/test_sfx.wav&quot;</span>);
+<a name="l00040"></a>00040     }
+<a name="l00041"></a>00041 
+<a name="l00042"></a>00042     this-&gt;animation-&gt;<a class="code" href="classAnimation.html#a7017337003829eef3787b4a10a31e8fb" title="Updates the animation clip.">update</a>(this-&gt;animationClip, dt_);
+<a name="l00043"></a>00043 }
+<a name="l00044"></a>00044 
+<a name="l00045"></a>00045 <span class="keywordtype">void</span> <a class="code" href="classGStatePlaceholder.html#aac74087ca575c21a54e85733b58fb5be" title="Renders the state.">GStatePlaceholder::render</a>() {
+<a name="l00046"></a>00046     this-&gt;image-&gt;<a class="code" href="classSprite.html#ac82a01b98130b9b1403667059640163b" title="Renders the sprite.">render</a>(0, 0, &amp;this-&gt;animationClip, <span class="keyword">true</span>);
+<a name="l00047"></a>00047 }
 </pre></div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -166,7 +165,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><b>GStatePlaceholder.cpp</b>      </li>
 
-    <li class="footer">Generated on Wed Jan 7 2015 03:09:35 for sdl2-engine by
+    <li class="footer">Generated on Wed Jan 7 2015 23:42:33 for sdl2-engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

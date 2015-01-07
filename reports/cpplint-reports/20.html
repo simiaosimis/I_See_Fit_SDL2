@@ -107,12 +107,12 @@
   </head>
   <body onload="init_expandables()">
       <div id="header">
-        <h1>Cppcheck report - sdl2-engine: /home/travis/build/CaioIcy/sdl2-engine/src/ResourceHandler.cpp </h1>
+        <h1>Cppcheck report - sdl2-engine: /home/travis/build/CaioIcy/sdl2-engine/src/SoundEffect.cpp </h1>
       </div>
       <div id="menu" dir="rtl">
        <a href="index.html">Defect list</a>
        <br>
-<a href='13.html#line-25'> build/include_what_you_use 25</a>
+<a href='20.html#line-26'> build/include_what_you_use 26</a>
       </div>
       <div id="content">
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -141,33 +141,35 @@
 24
 25
 26
-27</pre></div></td><td class="code"><div class="highlight"><pre><a name="line-1"></a><span class="cp">#include &quot;ResourceHandler.h&quot;</span>
-<a name="line-2"></a>
-<a name="line-3"></a><span class="n">ResourceHandler</span><span class="o">::</span><span class="n">ResourceHandler</span><span class="p">()</span> <span class="o">:</span>
-<a name="line-4"></a>	<span class="n">spriteManager</span><span class="p">(</span><span class="k">new</span> <span class="n">SpriteManager</span><span class="p">()),</span>
-<a name="line-5"></a>	<span class="n">musicManager</span><span class="p">(</span><span class="k">new</span> <span class="n">MusicManager</span><span class="p">()),</span>
-<a name="line-6"></a>	<span class="n">sfxManager</span><span class="p">(</span><span class="k">new</span> <span class="n">SFXManager</span><span class="p">())</span>
-<a name="line-7"></a><span class="p">{</span>
-<a name="line-8"></a>
-<a name="line-9"></a><span class="p">}</span>
+27
+28</pre></div></td><td class="code"><div class="highlight"><pre><a name="line-1"></a><span class="cp">#include &quot;SoundEffect.h&quot;</span>
+<a name="line-2"></a><span class="cp">#include &quot;Logger.h&quot;</span>
+<a name="line-3"></a>
+<a name="line-4"></a><span class="n">SoundEffect</span><span class="o">::</span><span class="n">SoundEffect</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">path_</span><span class="p">)</span> <span class="o">:</span>
+<a name="line-5"></a>	<span class="n">channel</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span>
+<a name="line-6"></a>	<span class="n">mixChunk</span><span class="p">(</span><span class="k">nullptr</span><span class="p">),</span>
+<a name="line-7"></a>	<span class="n">path</span><span class="p">(</span><span class="n">path_</span><span class="p">)</span>
+<a name="line-8"></a><span class="p">{</span>
+<a name="line-9"></a>	<span class="k">this</span><span class="o">-&gt;</span><span class="n">mixChunk</span> <span class="o">=</span> <span class="n">Mix_LoadWAV</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">path</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
 <a name="line-10"></a>
-<a name="line-11"></a><span class="n">ResourceHandler</span><span class="o">::~</span><span class="n">ResourceHandler</span><span class="p">()</span> <span class="p">{</span>
-<a name="line-12"></a>	<span class="k">delete</span> <span class="n">spriteManager</span><span class="p">;</span>
-<a name="line-13"></a>	<span class="k">delete</span> <span class="n">musicManager</span><span class="p">;</span>
-<a name="line-14"></a>	<span class="k">delete</span> <span class="n">sfxManager</span><span class="p">;</span>
-<a name="line-15"></a><span class="p">}</span>
-<a name="line-16"></a>
-<a name="line-17"></a><span class="n">Sprite</span><span class="o">*</span> <span class="n">ResourceHandler</span><span class="o">::</span><span class="n">sprite</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">path_</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-18"></a>	<span class="k">return</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">spriteManager</span><span class="o">-&gt;</span><span class="n">get</span><span class="p">(</span><span class="n">path_</span><span class="p">);</span>
-<a name="line-19"></a><span class="p">}</span>
-<a name="line-20"></a>
-<a name="line-21"></a><span class="n">Music</span><span class="o">*</span> <span class="n">ResourceHandler</span><span class="o">::</span><span class="n">music</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">path_</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-22"></a>	<span class="k">return</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">musicManager</span><span class="o">-&gt;</span><span class="n">get</span><span class="p">(</span><span class="n">path_</span><span class="p">);</span>
-<a name="line-23"></a><span class="p">}</span>
-<a name="line-24"></a>
-<a name="line-25"></a><span class="hll"><span class="n">SoundEffect</span><span class="o">*</span> <span class="n">ResourceHandler</span><span class="o">::</span><span class="n">soundEffect</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">path_</span><span class="p">)</span> <span class="p">{</span><span class='error2'>&lt;--- Add #include &lt;string&gt; for string  </span>
-</span><a name="line-26"></a>	<span class="k">return</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">sfxManager</span><span class="o">-&gt;</span><span class="n">get</span><span class="p">(</span><span class="n">path_</span><span class="p">);</span>
-<a name="line-27"></a><span class="p">}</span>
+<a name="line-11"></a>	<span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">mixChunk</span> <span class="o">==</span> <span class="k">nullptr</span><span class="p">)</span> <span class="p">{</span>
+<a name="line-12"></a>		<span class="n">Log</span><span class="p">(</span><span class="n">ERROR</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Couldn&#39;t load sound effect (&quot;</span> <span class="o">&lt;&lt;</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">path</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;). &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">Mix_GetError</span><span class="p">();</span>
+<a name="line-13"></a>	<span class="p">}</span>
+<a name="line-14"></a><span class="p">}</span>
+<a name="line-15"></a>
+<a name="line-16"></a><span class="n">SoundEffect</span><span class="o">::~</span><span class="n">SoundEffect</span><span class="p">()</span> <span class="p">{</span>
+<a name="line-17"></a>	<span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">mixChunk</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span> <span class="p">{</span>
+<a name="line-18"></a>		<span class="n">Mix_FreeChunk</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">mixChunk</span><span class="p">);</span>
+<a name="line-19"></a>	<span class="p">}</span>
+<a name="line-20"></a><span class="p">}</span>
+<a name="line-21"></a>
+<a name="line-22"></a><span class="n">Mix_Chunk</span><span class="o">*</span> <span class="n">SoundEffect</span><span class="o">::</span><span class="n">getMixChunk</span><span class="p">()</span> <span class="p">{</span>
+<a name="line-23"></a>	<span class="k">return</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">mixChunk</span><span class="p">;</span>
+<a name="line-24"></a><span class="p">}</span>
+<a name="line-25"></a>
+<a name="line-26"></a><span class="hll"><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">SoundEffect</span><span class="o">::</span><span class="n">getPath</span><span class="p">()</span> <span class="p">{</span><span class='error2'>&lt;--- Add #include &lt;string&gt; for string  </span>
+</span><a name="line-27"></a>	<span class="k">return</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">path</span><span class="p">;</span>
+<a name="line-28"></a><span class="p">}</span>
 </pre></div>
 </td></tr></table>
       </div>

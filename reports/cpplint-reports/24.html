@@ -112,7 +112,7 @@
       <div id="menu" dir="rtl">
        <a href="index.html">Defect list</a>
        <br>
-<a href='4.html#line-48'> wrongmathcall 48</a>
+<a href='24.html#line-5'> whitespace/line_length 5</a><a href='24.html#line-5'> build/include_what_you_use 5</a>
       </div>
       <div id="content">
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -192,8 +192,8 @@
 <a name="line-2"></a><span class="cp">#include &quot;Logger.h&quot;</span>
 <a name="line-3"></a><span class="cp">#include &quot;Configuration.h&quot;</span>
 <a name="line-4"></a>
-<a name="line-5"></a><span class="n">Window</span><span class="o">::</span><span class="n">Window</span><span class="p">(</span><span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">width_</span><span class="p">,</span> <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">height_</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">title_</span><span class="p">)</span> <span class="o">:</span>
-<a name="line-6"></a>	<span class="n">windowTitle</span><span class="p">(</span><span class="n">title_</span><span class="p">),</span>
+<a name="line-5"></a><span class="hll"><span class="n">Window</span><span class="o">::</span><span class="n">Window</span><span class="p">(</span><span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">width_</span><span class="p">,</span> <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">height_</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">title_</span><span class="p">)</span> <span class="o">:</span><span class='error2'>&lt;--- Lines should be &lt;= 95 characters long  </span><span class='error2'>&lt;--- Add #include &lt;string&gt; for string  </span>
+</span><a name="line-6"></a>	<span class="n">windowTitle</span><span class="p">(</span><span class="n">title_</span><span class="p">),</span>
 <a name="line-7"></a>	<span class="n">sdlWindow</span><span class="p">(</span><span class="k">nullptr</span><span class="p">),</span>
 <a name="line-8"></a>	<span class="n">renderer</span><span class="p">(</span><span class="k">nullptr</span><span class="p">)</span>
 <a name="line-9"></a><span class="p">{</span>
@@ -235,8 +235,8 @@
 <a name="line-45"></a>			<span class="n">SDL_bool</span> <span class="n">linearFilter</span> <span class="o">=</span> <span class="n">SDL_SetHint</span><span class="p">(</span><span class="n">SDL_HINT_RENDER_SCALE_QUALITY</span><span class="p">,</span> <span class="s">&quot;nearest&quot;</span><span class="p">);</span>
 <a name="line-46"></a>
 <a name="line-47"></a>			<span class="k">if</span><span class="p">(</span><span class="n">linearFilter</span> <span class="o">==</span> <span class="n">SDL_TRUE</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-48"></a><span class="hll">				<span class="n">Log</span><span class="p">(</span><span class="n">INFO</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Linear texture filtering enabled!&quot;</span><span class="p">;</span><span class='error2'>&lt;--- Passing value 0 to log() leads to undefined result</span>
-</span><a name="line-49"></a>				<span class="k">this</span><span class="o">-&gt;</span><span class="n">renderer</span><span class="o">-&gt;</span><span class="n">setLogicalSize</span><span class="p">(</span><span class="n">Configuration</span><span class="o">::</span><span class="n">getLogicalRenderSize</span><span class="p">());</span>
+<a name="line-48"></a>				<span class="n">Log</span><span class="p">(</span><span class="n">INFO</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Linear texture filtering enabled!&quot;</span><span class="p">;</span>
+<a name="line-49"></a>				<span class="k">this</span><span class="o">-&gt;</span><span class="n">renderer</span><span class="o">-&gt;</span><span class="n">setLogicalSize</span><span class="p">(</span><span class="n">Configuration</span><span class="o">::</span><span class="n">getLogicalRenderSize</span><span class="p">());</span>
 <a name="line-50"></a>			<span class="p">}</span>
 <a name="line-51"></a>			<span class="k">else</span> <span class="p">{</span>
 <a name="line-52"></a>				<span class="n">Log</span><span class="p">(</span><span class="n">WARN</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Linear texture filtering disabled!&quot;</span><span class="p">;</span>
@@ -267,7 +267,7 @@
       </div>
       <div id="footer">
         <p>
-         Cppcheck 1.52 - a tool for static C/C++ code analysis</br>
+         Cppcheck  - a tool for static C/C++ code analysis</br>
          </br>
          Internet: <a href="http://cppcheck.sourceforge.net">http://cppcheck.sourceforge.net</a></br>
          IRC: <a href="irc://irc.freenode.net/cppcheck">irc://irc.freenode.net/cppcheck</a></br>

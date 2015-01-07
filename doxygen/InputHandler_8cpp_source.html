@@ -33,7 +33,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v9</span>
+   &#160;<span id="projectnumber">v10</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -99,116 +99,115 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;InputHandler.h&quot;</span>
-<a name="l00002"></a>00002 <span class="preprocessor">#include &quot;UsefulDefines.h&quot;</span>
-<a name="l00003"></a>00003 <span class="preprocessor">#include &quot;Logger.h&quot;</span>
-<a name="l00004"></a>00004 
-<a name="l00005"></a><a class="code" href="classInputHandler.html#a698aa4af4f326a9881835fda251ca996">00005</a> <a class="code" href="classInputHandler.html#a698aa4af4f326a9881835fda251ca996" title="The constructor.">InputHandler::InputHandler</a>() :
-<a name="l00006"></a>00006     controllerHandler(new <a class="code" href="classControllerHandler.html" title="The input handler for joysticks.">ControllerHandler</a>()),
-<a name="l00007"></a>00007     quitFlag(false)
-<a name="l00008"></a>00008 {
-<a name="l00009"></a>00009     this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19" title="Boolean array that controls which keys are pressed or not.">keyStates</a>.fill(<span class="keyword">false</span>);
-<a name="l00010"></a>00010 }
-<a name="l00011"></a>00011 
-<a name="l00012"></a><a class="code" href="classInputHandler.html#ac1f7efb54b34d433d6ffba62627452b6">00012</a> <a class="code" href="classInputHandler.html#ac1f7efb54b34d433d6ffba62627452b6" title="The destructor.">InputHandler::~InputHandler</a>() {
-<a name="l00013"></a>00013     SAFE_DELETE(this-&gt;<a class="code" href="classInputHandler.html#a50ac48002b081c2c03af8f638c47dbe7" title="Handles input if joystick is present.">controllerHandler</a>);
-<a name="l00014"></a>00014 }
-<a name="l00015"></a>00015 
-<a name="l00016"></a><a class="code" href="classInputHandler.html#a820f483265aa3f6da39b9d93c1311966">00016</a> <span class="keywordtype">void</span> <a class="code" href="classInputHandler.html#a820f483265aa3f6da39b9d93c1311966" title="Handles the input.">InputHandler::handleInput</a>() {
-<a name="l00017"></a>00017 
-<a name="l00018"></a>00018     <span class="keywordtype">int</span> pendingEvent = 0;
-<a name="l00019"></a>00019 
-<a name="l00020"></a>00020     <span class="keywordflow">do</span> {
-<a name="l00021"></a>00021 
-<a name="l00022"></a>00022         pendingEvent = SDL_PollEvent(&amp;this-&gt;<a class="code" href="classInputHandler.html#ab2fa06988077060c7a3dca6c3d643dd3" title="SDL internal event structure.">sdlEvent</a>);
-<a name="l00023"></a>00023 
-<a name="l00024"></a>00024         <span class="keywordflow">if</span>(this-&gt;<a class="code" href="classInputHandler.html#ab2fa06988077060c7a3dca6c3d643dd3" title="SDL internal event structure.">sdlEvent</a>.type == SDL_CONTROLLERBUTTONDOWN
-<a name="l00025"></a>00025             || this-&gt;sdlEvent.type == SDL_CONTROLLERBUTTONUP
-<a name="l00026"></a>00026             || this-&gt;sdlEvent.type == SDL_CONTROLLERAXISMOTION) {
-<a name="l00027"></a>00027 
-<a name="l00028"></a>00028             this-&gt;<a class="code" href="classInputHandler.html#a50ac48002b081c2c03af8f638c47dbe7" title="Handles input if joystick is present.">controllerHandler</a>-&gt;<a class="code" href="classControllerHandler.html#a79e2adab7291ab5589e907860d046046" title="Handles controller the input.">handleInput</a>(this-&gt;<a class="code" href="classInputHandler.html#ab2fa06988077060c7a3dca6c3d643dd3" title="SDL internal event structure.">sdlEvent</a>);
-<a name="l00029"></a>00029 
-<a name="l00030"></a>00030             <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19" title="Boolean array that controls which keys are pressed or not.">keyStates</a>.size(); i++) {
-<a name="l00031"></a>00031                 this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19" title="Boolean array that controls which keys are pressed or not.">keyStates</a>[i] = this-&gt;<a class="code" href="classInputHandler.html#a50ac48002b081c2c03af8f638c47dbe7" title="Handles input if joystick is present.">controllerHandler</a>-&gt;getKeyStates()[i];
-<a name="l00032"></a>00032             }
-<a name="l00033"></a>00033 
-<a name="l00034"></a>00034         }
-<a name="l00035"></a>00035         <span class="comment">// On keydown.</span>
-<a name="l00036"></a>00036         <span class="keywordflow">if</span>(this-&gt;<a class="code" href="classInputHandler.html#ab2fa06988077060c7a3dca6c3d643dd3" title="SDL internal event structure.">sdlEvent</a>.type == SDL_KEYDOWN) {
-<a name="l00037"></a>00037 
-<a name="l00038"></a>00038             <span class="keywordflow">switch</span>(this-&gt;<a class="code" href="classInputHandler.html#ab2fa06988077060c7a3dca6c3d643dd3" title="SDL internal event structure.">sdlEvent</a>.key.keysym.sym) {
-<a name="l00039"></a>00039                 <span class="keywordflow">case</span> SDLK_SPACE: <span class="comment">// SPACEBAR.</span>
-<a name="l00040"></a>00040                     this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19" title="Boolean array that controls which keys are pressed or not.">keyStates</a>[GameKeys::SPACE] = <span class="keyword">true</span>;
-<a name="l00041"></a>00041                     <span class="keywordflow">break</span>;
-<a name="l00042"></a>00042                 <span class="keywordflow">case</span> SDLK_UP: <span class="comment">// UP ARROW.</span>
-<a name="l00043"></a>00043                     this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19" title="Boolean array that controls which keys are pressed or not.">keyStates</a>[GameKeys::UP] = <span class="keyword">true</span>;
-<a name="l00044"></a>00044                     <span class="keywordflow">break</span>;
-<a name="l00045"></a>00045                 <span class="keywordflow">case</span> SDLK_DOWN: <span class="comment">// DOWN ARROW.</span>
-<a name="l00046"></a>00046                     this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19" title="Boolean array that controls which keys are pressed or not.">keyStates</a>[GameKeys::DOWN] = <span class="keyword">true</span>;
-<a name="l00047"></a>00047                     <span class="keywordflow">break</span>;
-<a name="l00048"></a>00048                 <span class="keywordflow">case</span> SDLK_LEFT: <span class="comment">// LEFT ARROW.</span>
-<a name="l00049"></a>00049                     this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19" title="Boolean array that controls which keys are pressed or not.">keyStates</a>[GameKeys::LEFT] = <span class="keyword">true</span>;
-<a name="l00050"></a>00050                     <span class="keywordflow">break</span>;
-<a name="l00051"></a>00051                 <span class="keywordflow">case</span> SDLK_RIGHT: <span class="comment">// RIGHT ARROW.</span>
-<a name="l00052"></a>00052                     this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19" title="Boolean array that controls which keys are pressed or not.">keyStates</a>[GameKeys::RIGHT] = <span class="keyword">true</span>;
-<a name="l00053"></a>00053                     <span class="keywordflow">break</span>;
-<a name="l00054"></a>00054                 <span class="keywordflow">case</span> SDLK_ESCAPE: <span class="comment">// ESCAPE.</span>
-<a name="l00055"></a>00055                     this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19" title="Boolean array that controls which keys are pressed or not.">keyStates</a>[GameKeys::ESCAPE] = <span class="keyword">true</span>;
-<a name="l00056"></a>00056                     <span class="keywordflow">break</span>;
-<a name="l00057"></a>00057                 <span class="keywordflow">default</span>:
-<a name="l00058"></a>00058                     <span class="keywordflow">break</span>;
-<a name="l00059"></a>00059             }
-<a name="l00060"></a>00060         }
-<a name="l00061"></a>00061 
-<a name="l00062"></a>00062         <span class="comment">// On keyup.</span>
-<a name="l00063"></a>00063         <span class="keywordflow">else</span> <span class="keywordflow">if</span>(this-&gt;<a class="code" href="classInputHandler.html#ab2fa06988077060c7a3dca6c3d643dd3" title="SDL internal event structure.">sdlEvent</a>.type == SDL_KEYUP) {
-<a name="l00064"></a>00064 
-<a name="l00065"></a>00065             <span class="keywordflow">switch</span>(this-&gt;<a class="code" href="classInputHandler.html#ab2fa06988077060c7a3dca6c3d643dd3" title="SDL internal event structure.">sdlEvent</a>.key.keysym.sym) {
-<a name="l00066"></a>00066                 <span class="keywordflow">case</span> SDLK_SPACE: <span class="comment">// SPACEBAR.</span>
-<a name="l00067"></a>00067                     this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19" title="Boolean array that controls which keys are pressed or not.">keyStates</a>[GameKeys::SPACE] = <span class="keyword">false</span>;
-<a name="l00068"></a>00068                     <span class="keywordflow">break</span>;
-<a name="l00069"></a>00069                 <span class="keywordflow">case</span> SDLK_UP: <span class="comment">// UP ARROW.</span>
-<a name="l00070"></a>00070                     this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19" title="Boolean array that controls which keys are pressed or not.">keyStates</a>[GameKeys::UP] = <span class="keyword">false</span>;
-<a name="l00071"></a>00071                     <span class="keywordflow">break</span>;
-<a name="l00072"></a>00072                 <span class="keywordflow">case</span> SDLK_DOWN: <span class="comment">// DOWN ARROW.</span>
-<a name="l00073"></a>00073                     this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19" title="Boolean array that controls which keys are pressed or not.">keyStates</a>[GameKeys::DOWN] = <span class="keyword">false</span>;
-<a name="l00074"></a>00074                     <span class="keywordflow">break</span>;
-<a name="l00075"></a>00075                 <span class="keywordflow">case</span> SDLK_LEFT: <span class="comment">// LEFT ARROW.</span>
-<a name="l00076"></a>00076                     this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19" title="Boolean array that controls which keys are pressed or not.">keyStates</a>[GameKeys::LEFT] = <span class="keyword">false</span>;
-<a name="l00077"></a>00077                     <span class="keywordflow">break</span>;
-<a name="l00078"></a>00078                 <span class="keywordflow">case</span> SDLK_RIGHT: <span class="comment">// RIGHT ARROW.</span>
-<a name="l00079"></a>00079                     this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19" title="Boolean array that controls which keys are pressed or not.">keyStates</a>[GameKeys::RIGHT] = <span class="keyword">false</span>;
-<a name="l00080"></a>00080                     <span class="keywordflow">break</span>;
-<a name="l00081"></a>00081                 <span class="keywordflow">case</span> SDLK_ESCAPE: <span class="comment">// ESCAPE.</span>
-<a name="l00082"></a>00082                     this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19" title="Boolean array that controls which keys are pressed or not.">keyStates</a>[GameKeys::ESCAPE] = <span class="keyword">false</span>;
-<a name="l00083"></a>00083                     <span class="keywordflow">break</span>;
-<a name="l00084"></a>00084                 <span class="keywordflow">default</span>:
-<a name="l00085"></a>00085                     <span class="keywordflow">break</span>;
-<a name="l00086"></a>00086             }
-<a name="l00087"></a>00087         }
-<a name="l00088"></a>00088 
-<a name="l00089"></a>00089         <span class="comment">// On window exit (X).</span>
-<a name="l00090"></a>00090         <span class="keywordflow">else</span> <span class="keywordflow">if</span>(this-&gt;<a class="code" href="classInputHandler.html#ab2fa06988077060c7a3dca6c3d643dd3" title="SDL internal event structure.">sdlEvent</a>.type == SDL_QUIT) {
-<a name="l00091"></a>00091             <a class="code" href="classInputHandler.html#ae3546fa674d3db49d755b4047503f4e8" title="Sets InputHandler::quitFlag to true.">signalExit</a>();
-<a name="l00092"></a>00092         }
-<a name="l00093"></a>00093 
-<a name="l00094"></a>00094     } <span class="keywordflow">while</span>(pendingEvent != 0);
-<a name="l00095"></a>00095 }
-<a name="l00096"></a>00096 
-<a name="l00097"></a><a class="code" href="classInputHandler.html#af7087290a2fd7d973a47768049cfe5eb">00097</a> std::array&lt;bool, GameKeys::MAX&gt; <a class="code" href="classInputHandler.html#af7087290a2fd7d973a47768049cfe5eb">InputHandler::getKeyStates</a>() {
-<a name="l00098"></a>00098     <span class="keywordflow">return</span> this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19" title="Boolean array that controls which keys are pressed or not.">keyStates</a>;
-<a name="l00099"></a>00099 }
-<a name="l00100"></a>00100 
-<a name="l00101"></a><a class="code" href="classInputHandler.html#a7d103ecce85288f454876b5bef8b3aee">00101</a> <span class="keywordtype">bool</span> <a class="code" href="classInputHandler.html#a7d103ecce85288f454876b5bef8b3aee">InputHandler::isQuitFlag</a>() {
-<a name="l00102"></a>00102     <span class="keywordflow">return</span> this-&gt;<a class="code" href="classInputHandler.html#a6bd166e013cbd6313609eab276f00abd" title="If the quit signal was recieved or not.">quitFlag</a>;
-<a name="l00103"></a>00103 }
-<a name="l00104"></a>00104 
-<a name="l00105"></a><a class="code" href="classInputHandler.html#ae3546fa674d3db49d755b4047503f4e8">00105</a> <span class="keywordtype">void</span> <a class="code" href="classInputHandler.html#ae3546fa674d3db49d755b4047503f4e8" title="Sets InputHandler::quitFlag to true.">InputHandler::signalExit</a>() {
-<a name="l00106"></a>00106     this-&gt;<a class="code" href="classInputHandler.html#a6bd166e013cbd6313609eab276f00abd" title="If the quit signal was recieved or not.">quitFlag</a> = <span class="keyword">true</span>;
-<a name="l00107"></a>00107 }
-<a name="l00108"></a>00108 
-<a name="l00109"></a>00109 <span class="keywordtype">void</span> InputHandler::clearKey(<span class="keyword">const</span> GameKeys key_) {
-<a name="l00110"></a>00110     this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19" title="Boolean array that controls which keys are pressed or not.">keyStates</a>.at(key_) = <span class="keyword">false</span>;
-<a name="l00111"></a>00111 }
+<a name="l00002"></a>00002 <span class="preprocessor">#include &quot;Logger.h&quot;</span>
+<a name="l00003"></a>00003 
+<a name="l00004"></a><a class="code" href="classInputHandler.html#a698aa4af4f326a9881835fda251ca996">00004</a> <a class="code" href="classInputHandler.html#a698aa4af4f326a9881835fda251ca996" title="The constructor.">InputHandler::InputHandler</a>() :
+<a name="l00005"></a>00005     controllerHandler(new <a class="code" href="classControllerHandler.html" title="The input handler for joysticks.">ControllerHandler</a>()),
+<a name="l00006"></a>00006     quitFlag(false)
+<a name="l00007"></a>00007 {
+<a name="l00008"></a>00008     this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19" title="Boolean array that controls which keys are pressed or not.">keyStates</a>.fill(<span class="keyword">false</span>);
+<a name="l00009"></a>00009 }
+<a name="l00010"></a>00010 
+<a name="l00011"></a><a class="code" href="classInputHandler.html#ac1f7efb54b34d433d6ffba62627452b6">00011</a> <a class="code" href="classInputHandler.html#ac1f7efb54b34d433d6ffba62627452b6" title="The destructor.">InputHandler::~InputHandler</a>() {
+<a name="l00012"></a>00012     <span class="keyword">delete</span> this-&gt;<a class="code" href="classInputHandler.html#a50ac48002b081c2c03af8f638c47dbe7" title="Handles input if joystick is present.">controllerHandler</a>;
+<a name="l00013"></a>00013 }
+<a name="l00014"></a>00014 
+<a name="l00015"></a><a class="code" href="classInputHandler.html#a820f483265aa3f6da39b9d93c1311966">00015</a> <span class="keywordtype">void</span> <a class="code" href="classInputHandler.html#a820f483265aa3f6da39b9d93c1311966" title="Handles the input.">InputHandler::handleInput</a>() {
+<a name="l00016"></a>00016 
+<a name="l00017"></a>00017     <span class="keywordtype">int</span> pendingEvent = 0;
+<a name="l00018"></a>00018 
+<a name="l00019"></a>00019     <span class="keywordflow">do</span> {
+<a name="l00020"></a>00020 
+<a name="l00021"></a>00021         pendingEvent = SDL_PollEvent(&amp;this-&gt;<a class="code" href="classInputHandler.html#ab2fa06988077060c7a3dca6c3d643dd3" title="SDL internal event structure.">sdlEvent</a>);
+<a name="l00022"></a>00022 
+<a name="l00023"></a>00023         <span class="keywordflow">if</span>(this-&gt;<a class="code" href="classInputHandler.html#ab2fa06988077060c7a3dca6c3d643dd3" title="SDL internal event structure.">sdlEvent</a>.type == SDL_CONTROLLERBUTTONDOWN
+<a name="l00024"></a>00024             || this-&gt;sdlEvent.type == SDL_CONTROLLERBUTTONUP
+<a name="l00025"></a>00025             || this-&gt;sdlEvent.type == SDL_CONTROLLERAXISMOTION) {
+<a name="l00026"></a>00026 
+<a name="l00027"></a>00027             this-&gt;<a class="code" href="classInputHandler.html#a50ac48002b081c2c03af8f638c47dbe7" title="Handles input if joystick is present.">controllerHandler</a>-&gt;<a class="code" href="classControllerHandler.html#a79e2adab7291ab5589e907860d046046" title="Handles controller the input.">handleInput</a>(this-&gt;<a class="code" href="classInputHandler.html#ab2fa06988077060c7a3dca6c3d643dd3" title="SDL internal event structure.">sdlEvent</a>);
+<a name="l00028"></a>00028 
+<a name="l00029"></a>00029             <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19" title="Boolean array that controls which keys are pressed or not.">keyStates</a>.size(); i++) {
+<a name="l00030"></a>00030                 this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19" title="Boolean array that controls which keys are pressed or not.">keyStates</a>[i] = this-&gt;<a class="code" href="classInputHandler.html#a50ac48002b081c2c03af8f638c47dbe7" title="Handles input if joystick is present.">controllerHandler</a>-&gt;getKeyStates()[i];
+<a name="l00031"></a>00031             }
+<a name="l00032"></a>00032 
+<a name="l00033"></a>00033         }
+<a name="l00034"></a>00034         <span class="comment">// On keydown.</span>
+<a name="l00035"></a>00035         <span class="keywordflow">if</span>(this-&gt;<a class="code" href="classInputHandler.html#ab2fa06988077060c7a3dca6c3d643dd3" title="SDL internal event structure.">sdlEvent</a>.type == SDL_KEYDOWN) {
+<a name="l00036"></a>00036 
+<a name="l00037"></a>00037             <span class="keywordflow">switch</span>(this-&gt;<a class="code" href="classInputHandler.html#ab2fa06988077060c7a3dca6c3d643dd3" title="SDL internal event structure.">sdlEvent</a>.key.keysym.sym) {
+<a name="l00038"></a>00038                 <span class="keywordflow">case</span> SDLK_SPACE: <span class="comment">// SPACEBAR.</span>
+<a name="l00039"></a>00039                     this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19" title="Boolean array that controls which keys are pressed or not.">keyStates</a>[GameKeys::SPACE] = <span class="keyword">true</span>;
+<a name="l00040"></a>00040                     <span class="keywordflow">break</span>;
+<a name="l00041"></a>00041                 <span class="keywordflow">case</span> SDLK_UP: <span class="comment">// UP ARROW.</span>
+<a name="l00042"></a>00042                     this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19" title="Boolean array that controls which keys are pressed or not.">keyStates</a>[GameKeys::UP] = <span class="keyword">true</span>;
+<a name="l00043"></a>00043                     <span class="keywordflow">break</span>;
+<a name="l00044"></a>00044                 <span class="keywordflow">case</span> SDLK_DOWN: <span class="comment">// DOWN ARROW.</span>
+<a name="l00045"></a>00045                     this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19" title="Boolean array that controls which keys are pressed or not.">keyStates</a>[GameKeys::DOWN] = <span class="keyword">true</span>;
+<a name="l00046"></a>00046                     <span class="keywordflow">break</span>;
+<a name="l00047"></a>00047                 <span class="keywordflow">case</span> SDLK_LEFT: <span class="comment">// LEFT ARROW.</span>
+<a name="l00048"></a>00048                     this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19" title="Boolean array that controls which keys are pressed or not.">keyStates</a>[GameKeys::LEFT] = <span class="keyword">true</span>;
+<a name="l00049"></a>00049                     <span class="keywordflow">break</span>;
+<a name="l00050"></a>00050                 <span class="keywordflow">case</span> SDLK_RIGHT: <span class="comment">// RIGHT ARROW.</span>
+<a name="l00051"></a>00051                     this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19" title="Boolean array that controls which keys are pressed or not.">keyStates</a>[GameKeys::RIGHT] = <span class="keyword">true</span>;
+<a name="l00052"></a>00052                     <span class="keywordflow">break</span>;
+<a name="l00053"></a>00053                 <span class="keywordflow">case</span> SDLK_ESCAPE: <span class="comment">// ESCAPE.</span>
+<a name="l00054"></a>00054                     this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19" title="Boolean array that controls which keys are pressed or not.">keyStates</a>[GameKeys::ESCAPE] = <span class="keyword">true</span>;
+<a name="l00055"></a>00055                     <span class="keywordflow">break</span>;
+<a name="l00056"></a>00056                 <span class="keywordflow">default</span>:
+<a name="l00057"></a>00057                     <span class="keywordflow">break</span>;
+<a name="l00058"></a>00058             }
+<a name="l00059"></a>00059         }
+<a name="l00060"></a>00060 
+<a name="l00061"></a>00061         <span class="comment">// On keyup.</span>
+<a name="l00062"></a>00062         <span class="keywordflow">else</span> <span class="keywordflow">if</span>(this-&gt;<a class="code" href="classInputHandler.html#ab2fa06988077060c7a3dca6c3d643dd3" title="SDL internal event structure.">sdlEvent</a>.type == SDL_KEYUP) {
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064             <span class="keywordflow">switch</span>(this-&gt;<a class="code" href="classInputHandler.html#ab2fa06988077060c7a3dca6c3d643dd3" title="SDL internal event structure.">sdlEvent</a>.key.keysym.sym) {
+<a name="l00065"></a>00065                 <span class="keywordflow">case</span> SDLK_SPACE: <span class="comment">// SPACEBAR.</span>
+<a name="l00066"></a>00066                     this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19" title="Boolean array that controls which keys are pressed or not.">keyStates</a>[GameKeys::SPACE] = <span class="keyword">false</span>;
+<a name="l00067"></a>00067                     <span class="keywordflow">break</span>;
+<a name="l00068"></a>00068                 <span class="keywordflow">case</span> SDLK_UP: <span class="comment">// UP ARROW.</span>
+<a name="l00069"></a>00069                     this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19" title="Boolean array that controls which keys are pressed or not.">keyStates</a>[GameKeys::UP] = <span class="keyword">false</span>;
+<a name="l00070"></a>00070                     <span class="keywordflow">break</span>;
+<a name="l00071"></a>00071                 <span class="keywordflow">case</span> SDLK_DOWN: <span class="comment">// DOWN ARROW.</span>
+<a name="l00072"></a>00072                     this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19" title="Boolean array that controls which keys are pressed or not.">keyStates</a>[GameKeys::DOWN] = <span class="keyword">false</span>;
+<a name="l00073"></a>00073                     <span class="keywordflow">break</span>;
+<a name="l00074"></a>00074                 <span class="keywordflow">case</span> SDLK_LEFT: <span class="comment">// LEFT ARROW.</span>
+<a name="l00075"></a>00075                     this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19" title="Boolean array that controls which keys are pressed or not.">keyStates</a>[GameKeys::LEFT] = <span class="keyword">false</span>;
+<a name="l00076"></a>00076                     <span class="keywordflow">break</span>;
+<a name="l00077"></a>00077                 <span class="keywordflow">case</span> SDLK_RIGHT: <span class="comment">// RIGHT ARROW.</span>
+<a name="l00078"></a>00078                     this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19" title="Boolean array that controls which keys are pressed or not.">keyStates</a>[GameKeys::RIGHT] = <span class="keyword">false</span>;
+<a name="l00079"></a>00079                     <span class="keywordflow">break</span>;
+<a name="l00080"></a>00080                 <span class="keywordflow">case</span> SDLK_ESCAPE: <span class="comment">// ESCAPE.</span>
+<a name="l00081"></a>00081                     this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19" title="Boolean array that controls which keys are pressed or not.">keyStates</a>[GameKeys::ESCAPE] = <span class="keyword">false</span>;
+<a name="l00082"></a>00082                     <span class="keywordflow">break</span>;
+<a name="l00083"></a>00083                 <span class="keywordflow">default</span>:
+<a name="l00084"></a>00084                     <span class="keywordflow">break</span>;
+<a name="l00085"></a>00085             }
+<a name="l00086"></a>00086         }
+<a name="l00087"></a>00087 
+<a name="l00088"></a>00088         <span class="comment">// On window exit (X).</span>
+<a name="l00089"></a>00089         <span class="keywordflow">else</span> <span class="keywordflow">if</span>(this-&gt;<a class="code" href="classInputHandler.html#ab2fa06988077060c7a3dca6c3d643dd3" title="SDL internal event structure.">sdlEvent</a>.type == SDL_QUIT) {
+<a name="l00090"></a>00090             <a class="code" href="classInputHandler.html#ae3546fa674d3db49d755b4047503f4e8" title="Sets InputHandler::quitFlag to true.">signalExit</a>();
+<a name="l00091"></a>00091         }
+<a name="l00092"></a>00092 
+<a name="l00093"></a>00093     } <span class="keywordflow">while</span>(pendingEvent != 0);
+<a name="l00094"></a>00094 }
+<a name="l00095"></a>00095 
+<a name="l00096"></a><a class="code" href="classInputHandler.html#af7087290a2fd7d973a47768049cfe5eb">00096</a> std::array&lt;bool, GameKeys::MAX&gt; <a class="code" href="classInputHandler.html#af7087290a2fd7d973a47768049cfe5eb">InputHandler::getKeyStates</a>() {
+<a name="l00097"></a>00097     <span class="keywordflow">return</span> this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19" title="Boolean array that controls which keys are pressed or not.">keyStates</a>;
+<a name="l00098"></a>00098 }
+<a name="l00099"></a>00099 
+<a name="l00100"></a><a class="code" href="classInputHandler.html#a7d103ecce85288f454876b5bef8b3aee">00100</a> <span class="keywordtype">bool</span> <a class="code" href="classInputHandler.html#a7d103ecce85288f454876b5bef8b3aee">InputHandler::isQuitFlag</a>() {
+<a name="l00101"></a>00101     <span class="keywordflow">return</span> this-&gt;<a class="code" href="classInputHandler.html#a6bd166e013cbd6313609eab276f00abd" title="If the quit signal was recieved or not.">quitFlag</a>;
+<a name="l00102"></a>00102 }
+<a name="l00103"></a>00103 
+<a name="l00104"></a><a class="code" href="classInputHandler.html#ae3546fa674d3db49d755b4047503f4e8">00104</a> <span class="keywordtype">void</span> <a class="code" href="classInputHandler.html#ae3546fa674d3db49d755b4047503f4e8" title="Sets InputHandler::quitFlag to true.">InputHandler::signalExit</a>() {
+<a name="l00105"></a>00105     this-&gt;<a class="code" href="classInputHandler.html#a6bd166e013cbd6313609eab276f00abd" title="If the quit signal was recieved or not.">quitFlag</a> = <span class="keyword">true</span>;
+<a name="l00106"></a>00106 }
+<a name="l00107"></a>00107 
+<a name="l00108"></a>00108 <span class="keywordtype">void</span> InputHandler::clearKey(<span class="keyword">const</span> GameKeys key_) {
+<a name="l00109"></a>00109     this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19" title="Boolean array that controls which keys are pressed or not.">keyStates</a>.at(key_) = <span class="keyword">false</span>;
+<a name="l00110"></a>00110 }
 </pre></div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -229,7 +228,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><b>InputHandler.cpp</b>      </li>
 
-    <li class="footer">Generated on Wed Jan 7 2015 03:09:35 for sdl2-engine by
+    <li class="footer">Generated on Wed Jan 7 2015 23:42:33 for sdl2-engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

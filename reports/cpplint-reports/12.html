@@ -107,7 +107,7 @@
   </head>
   <body onload="init_expandables()">
       <div id="header">
-        <h1>Cppcheck report - sdl2-engine: /home/travis/build/CaioIcy/sdl2-engine/src/SFXManager.cpp </h1>
+        <h1>Cppcheck report - sdl2-engine: /home/travis/build/CaioIcy/sdl2-engine/src/MusicManager.cpp </h1>
       </div>
       <div id="menu" dir="rtl">
        <a href="index.html">Defect list</a>
@@ -121,12 +121,12 @@
 4
 5
 6
-7</pre></div></td><td class="code"><div class="highlight"><pre><a name="line-1"></a><span class="cp">#include &quot;SFXManager.h&quot;</span>
+7</pre></div></td><td class="code"><div class="highlight"><pre><a name="line-1"></a><span class="cp">#include &quot;MusicManager.h&quot;</span>
 <a name="line-2"></a>
-<a name="line-3"></a><span class="hll"><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">SoundEffect</span><span class="o">&gt;</span> <span class="n">SFXManager</span><span class="o">::</span><span class="n">load</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">path_</span><span class="p">)</span> <span class="p">{</span><span class='error2'>&lt;--- Add #include &lt;string&gt; for string  </span>
-</span><a name="line-4"></a>	<span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">SoundEffect</span><span class="o">&gt;</span> <span class="n">soundEffect</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">SoundEffect</span><span class="o">&gt;</span><span class="p">(</span><span class="n">path_</span><span class="p">);</span>
-<a name="line-5"></a>	<span class="n">registerResource</span><span class="p">(</span><span class="n">path_</span><span class="p">,</span> <span class="n">soundEffect</span><span class="p">);</span>
-<a name="line-6"></a>	<span class="k">return</span> <span class="n">soundEffect</span><span class="p">;</span>
+<a name="line-3"></a><span class="hll"><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Music</span><span class="o">&gt;</span> <span class="n">MusicManager</span><span class="o">::</span><span class="n">load</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">path_</span><span class="p">)</span> <span class="p">{</span><span class='error2'>&lt;--- Add #include &lt;string&gt; for string  </span>
+</span><a name="line-4"></a>	<span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Music</span><span class="o">&gt;</span> <span class="n">music</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">Music</span><span class="o">&gt;</span><span class="p">(</span><span class="n">path_</span><span class="p">);</span>
+<a name="line-5"></a>	<span class="n">registerResource</span><span class="p">(</span><span class="n">path_</span><span class="p">,</span> <span class="n">music</span><span class="p">);</span>
+<a name="line-6"></a>	<span class="k">return</span> <span class="n">music</span><span class="p">;</span>
 <a name="line-7"></a><span class="p">}</span>
 </pre></div>
 </td></tr></table>
