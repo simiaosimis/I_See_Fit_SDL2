@@ -18,6 +18,16 @@ else
 	echo "Using '$NAME_PROJECT' as project name"
 fi
 
+# Run with timed run or not
+TIMED_RUN="OFF"
+# If there is a T_DO_TIMED_RUN, assign it to TIMED_RUN
+if [ ! -z $T_DO_TIMED_RUN ]
+then
+	TIMED_RUN=${T_DO_TIMED_RUN}
+fi
+
+attention_echo "TIMED_RUN='$TIMED_RUN'"
+
 # The possible arguments to pass to this script
 ARG_BUILD_DEBUG="debug"
 ARG_BUILD_RELEASE="release"
@@ -36,6 +46,7 @@ function build {
 		attention_echo "Using CMake (build mode Debug)"
 		cmake -DSH_NAME_PROJECT=${NAME_PROJECT}\
 			-DCMAKE_BUILD_TYPE=Debug\
+			-DMY_TIMED_RUN_ENABLED=${TIMED_RUN}\
 			${DIR_PROJECT_ROOT} || exit $?
 
 	# Target is for RELEASE
@@ -44,6 +55,7 @@ function build {
 		attention_echo "Using CMake (build mode Release)"
 		cmake -DSH_NAME_PROJECT=${NAME_PROJECT}\
 			-DCMAKE_BUILD_TYPE=Release\
+			-DMY_TIMED_RUN_ENABLED=${TIMED_RUN}\
 			${DIR_PROJECT_ROOT} || exit $?
 
 	# Invalid target for argument

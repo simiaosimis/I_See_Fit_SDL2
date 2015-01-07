@@ -74,9 +74,12 @@ void Game::runGame() {
 	// This is the main game loop.
 	while(this->isRunning) {
 
+#ifdef ICYTIMEDRUN
+		// Auto-close the game in 2 seconds so TravisCI doesn't loop forever
 		if(totalGameTime >= 2.0) {
 			this->isRunning = false;
 		}
+#endif
 
 		s_clock::time_point now = s_clock::now();
 		s_clock::duration dt{now - lastTime};

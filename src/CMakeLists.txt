@@ -37,6 +37,11 @@ target_link_libraries(${ExecTarget}
 	${SDL2_TTF_LIBRARY}
 )
 
+# If built with enabled timed run flag (from .travis.yml)
+if(MY_TIMED_RUN_ENABLED)
+	add_definitions(-DICYTIMEDRUN)
+endif()
+
 ###################################################################
 # Used to be '/include', but is now '/src' due to remodeling of the project structure
 include_directories(
