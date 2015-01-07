@@ -1,5 +1,4 @@
 #include "ResourceHandler.h"
-#include "UsefulDefines.h"
 
 ResourceHandler::ResourceHandler() :
 	spriteManager(new SpriteManager()),
@@ -10,9 +9,9 @@ ResourceHandler::ResourceHandler() :
 }
 
 ResourceHandler::~ResourceHandler() {
-	SAFE_DELETE(spriteManager);
-	SAFE_DELETE(musicManager);
-	SAFE_DELETE(sfxManager);
+	delete spriteManager;
+	delete musicManager;
+	delete sfxManager;
 }
 
 Sprite* ResourceHandler::sprite(const std::string& path_) {

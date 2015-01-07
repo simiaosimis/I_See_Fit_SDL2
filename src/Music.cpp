@@ -1,6 +1,5 @@
 #include "Music.h"
 #include "Logger.h"
-#include "UsefulDefines.h"
 
 Music::Music(const std::string& path_) :
 	mixMusic(nullptr),
@@ -14,7 +13,9 @@ Music::Music(const std::string& path_) :
 }
 
 Music::~Music() {
-	SAFE_DELETE_WITH_FUNCTION(Mix_FreeMusic, this->mixMusic);
+	if(this->mixMusic != nullptr) {
+		Mix_FreeMusic(this->mixMusic);
+	}
 }
 
 Mix_Music* Music::getMixMusic() {

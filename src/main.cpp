@@ -2,13 +2,12 @@
 #include "Logger.h"
 #include "Configuration.h"
 #include "SDL_Systems.h"
-#include "UsefulDefines.h"
 
 int main(int argc, char** argv) {
 
-	// Unused.
-	UNUSED(argc);
-	UNUSED(argv);
+	// Unused for now, so avoiding compiler warnings.
+	(static_cast<void>(argc));
+	(static_cast<void>(argv));
 
 	Log(DEBUG) << "Starting sdl2-engine...";
 

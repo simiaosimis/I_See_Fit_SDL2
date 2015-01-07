@@ -1,6 +1,5 @@
 #include "SoundEffect.h"
 #include "Logger.h"
-#include "UsefulDefines.h"
 
 SoundEffect::SoundEffect(const std::string& path_) :
 	channel(-1),
@@ -15,7 +14,9 @@ SoundEffect::SoundEffect(const std::string& path_) :
 }
 
 SoundEffect::~SoundEffect() {
-	SAFE_DELETE_WITH_FUNCTION(Mix_FreeChunk, this->mixChunk);
+	if(this->mixChunk != nullptr) {
+		Mix_FreeChunk(this->mixChunk);
+	}
 }
 
 Mix_Chunk* SoundEffect::getMixChunk() {

@@ -1,5 +1,4 @@
 #include "InputHandler.h"
-#include "UsefulDefines.h"
 #include "Logger.h"
 
 InputHandler::InputHandler() :
@@ -10,7 +9,7 @@ InputHandler::InputHandler() :
 }
 
 InputHandler::~InputHandler() {
-	SAFE_DELETE(this->controllerHandler);
+	delete this->controllerHandler;
 }
 
 void InputHandler::handleInput() {

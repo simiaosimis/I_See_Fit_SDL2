@@ -3,7 +3,6 @@
 #include "Util.h"
 #include "Sprite.h"
 #include "Logger.h"
-#include "UsefulDefines.h"
 
 // Begin Game States includes
 #include "GStatePlaceholder.h"
@@ -52,10 +51,10 @@ Game::~Game() {
 
 	destroyStates();
 
-	SAFE_DELETE(this->audioHandler);
-	SAFE_DELETE(this->inputHandler);
-	SAFE_DELETE(this->resourceHandler);
-	SAFE_DELETE(this->window);
+	delete this->audioHandler;
+	delete this->inputHandler;
+	delete this->resourceHandler;
+	delete this->window;
 }
 
 void Game::runGame() {

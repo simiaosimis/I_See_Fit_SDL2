@@ -1,7 +1,6 @@
 #include "GStatePlaceholder.h"
 #include "Game.h"
 #include "Logger.h"
-#include "UsefulDefines.h"
 
 GStatePlaceholder::GStatePlaceholder() :
 	image(nullptr),
@@ -12,7 +11,7 @@ GStatePlaceholder::GStatePlaceholder() :
 }
 
 GStatePlaceholder::~GStatePlaceholder() {
-	SAFE_DELETE(this->animation);
+	delete this->animation;
 }
 
 void GStatePlaceholder::load() {

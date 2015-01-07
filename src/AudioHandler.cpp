@@ -1,7 +1,9 @@
-#include "AudioHandler.h"
+// asdsad
+
 #include "Game.h"
+#include <algorithm>
+#include "AudioHandler.h"
 #include "Logger.h"
-#include "UsefulDefines.h"
 
 AudioHandler::AudioHandler() :
 	currentMusic(nullptr),
@@ -99,16 +101,9 @@ void AudioHandler::playMusic(const int times_) {
 }
 
 void AudioHandler::clearChannel(const int channel_) {
-	std::vector<SoundEffect*>::iterator it;
-
-	for(it = this->currentEffects.begin(); it != this->currentEffects.end();) {
-		if((*it)->channel == channel_) {
-			this->currentEffects.erase(it);
-		}
-		else {
-			it++;
-		}
-	}
+	std::vector<SoundEffect*>::iterator it = std::remove_if(this->currentEffects.begin(),
+		this->currentEffects.end(), [=](SoundEffect* se){ return se->channel == channel_; });
+	this->currentEffects.erase(it, this->currentEffects.end());
 }
 
 void AudioHandler::channelDone(int channel_) {

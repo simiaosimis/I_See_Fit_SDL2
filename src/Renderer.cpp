@@ -1,7 +1,6 @@
 #include "Renderer.h"
 #include "Configuration.h"
 #include "Logger.h"
-#include "UsefulDefines.h"
 
 Renderer::Renderer(SDL_Window* const sdlWindow_, const Uint32 flags_) :
 	sdlRenderer(nullptr)
@@ -13,7 +12,9 @@ Renderer::Renderer(SDL_Window* const sdlWindow_, const Uint32 flags_) :
 }
 
 Renderer::~Renderer() {
-	SAFE_DELETE_WITH_FUNCTION(SDL_DestroyRenderer, this->sdlRenderer);
+	if(this->sdlRenderer != nullptr) {
+		SDL_DestroyRenderer(this->sdlRenderer);
+	}
 }
 
 void Renderer::clear() {

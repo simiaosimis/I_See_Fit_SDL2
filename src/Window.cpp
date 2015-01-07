@@ -1,7 +1,6 @@
 #include "Window.h"
 #include "Logger.h"
 #include "Configuration.h"
-#include "UsefulDefines.h"
 
 Window::Window(const unsigned int width_, const unsigned int height_, const std::string& title_) :
 	windowTitle(title_),
@@ -12,8 +11,10 @@ Window::Window(const unsigned int width_, const unsigned int height_, const std:
 }
 
 Window::~Window() {
-	SAFE_DELETE(this->renderer);
-	SAFE_DELETE_WITH_FUNCTION(SDL_DestroyWindow, this->sdlWindow);
+	delete this->renderer;
+	if(this->sdlWindow != nullptr) {
+		SDL_DestroyWindow(this->sdlWindow);
+	}
 }
 
 void Window::minimize() {
