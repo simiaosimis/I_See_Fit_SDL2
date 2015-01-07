@@ -11,7 +11,7 @@ GameObject::GameObject(const double x_, const double y_, const std::string& path
     width(0),
     height(0),
     animationClip{0, 0, 0, 0},
-    boundingBox{(int)x_, (int)y_, 0, 0}
+    boundingBox{static_cast<int>(x_), static_cast<int>(y_), 0, 0}
 {
     // Only serves as the initializer for the derived classes.
 
@@ -35,7 +35,7 @@ GameObject::GameObject(const double x_, const double y_) :
     width(0),
     height(0),
     animationClip{0, 0, 0, 0},
-    boundingBox{(int)x_, (int)y_, 0, 0}
+    boundingBox{static_cast<int>(x_), static_cast<int>(y_), 0, 0}
 {
     // Only serves as the initializer for the derived classes.
 }

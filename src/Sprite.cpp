@@ -57,7 +57,7 @@ void Sprite::render(const double x_, const double y_, SDL_Rect* const clip_,
 	SDL_RendererFlip flip_) {
 
 	// This is the destination SDL_Rect structure.
-	SDL_Rect renderQuad = {(int)x_, (int)y_, (int)this->width, (int)this->height};
+	SDL_Rect renderQuad = {static_cast<int>(x_), static_cast<int>(y_), static_cast<int>(this->width), static_cast<int>(this->height)};
 
 	if(clip_ != nullptr) {
 		renderQuad.w = clip_->w;
@@ -70,7 +70,7 @@ void Sprite::render(const double x_, const double y_, SDL_Rect* const clip_,
 	int logicalW = 0;
 	int logicalH = 0;
 	Game::instance().getRenderer()->getLogicalSize(&logicalW, &logicalH);
-	SDL_Rect stretch = {(int)x_, (int)y_, logicalW, logicalH};
+	SDL_Rect stretch = {static_cast<int>(x_), static_cast<int>(y_), logicalW, logicalH};
 
 	const int successfullRender = (!stretch_) ?
 		SDL_RenderCopyEx(Game::instance().getRenderer()->getSdlRenderer(), this->sdlTexture, clip_,
@@ -139,7 +139,7 @@ double Sprite::getAlpha() {
 		Log(ERROR) << "Could not get alpha value from Sprite (" << this->path << "). " << SDL_GetError();
 	}
 
-	return ((double)alpha);
+	return static_cast<double>(alpha);
 }
 
 void Sprite::setAlpha(int alpha_) {

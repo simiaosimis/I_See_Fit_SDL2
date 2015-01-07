@@ -75,10 +75,10 @@ void Animation::changeAnimation(const unsigned int x_, const unsigned int y_,
 }
 
 void Animation::updateClip(SDL_Rect& clip, const unsigned int x_, const unsigned int y_) {
-	clip.x = (int) x_;
-	clip.y = (int) y_;
-	clip.w = (int) this->spriteWidth;
-	clip.h = (int) this->spriteHeight;
+	clip.x = static_cast<int>(x_);
+	clip.y = static_cast<int>(y_);
+	clip.w = static_cast<int>(this->spriteWidth);
+	clip.h = static_cast<int>(this->spriteHeight);
 }
 
 unsigned int Animation::getCurrentFrame() {
