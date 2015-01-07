@@ -107,12 +107,12 @@
   </head>
   <body onload="init_expandables()">
       <div id="header">
-        <h1>Cppcheck report - sdl2-engine: /home/travis/build/CaioIcy/sdl2-engine/src/Animation.cpp </h1>
+        <h1>Cppcheck report - sdl2-engine: /home/travis/build/CaioIcy/sdl2-engine/src/Animation.h </h1>
       </div>
       <div id="menu" dir="rtl">
        <a href="index.html">Defect list</a>
        <br>
-<a href='0.html#line-78'> readability/casting 78</a><a href='0.html#line-79'> readability/casting 79</a><a href='0.html#line-80'> readability/casting 80</a><a href='0.html#line-81'> readability/casting 81</a>
+<a href='0.html#line-36'> runtime/references 36</a><a href='0.html#line-62'> runtime/references 62</a>
       </div>
       <div id="content">
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -192,110 +192,84 @@
 75
 76
 77
-78
-79
-80
-81
-82
-83
-84
-85
-86
-87
-88
-89
-90
-91</pre></div></td><td class="code"><div class="highlight"><pre><a name="line-1"></a><span class="cp">#include &quot;Animation.h&quot;</span>
+78</pre></div></td><td class="code"><div class="highlight"><pre><a name="line-1"></a><span class="cp">#pragma once</span>
 <a name="line-2"></a>
-<a name="line-3"></a><span class="n">Animation</span><span class="o">::</span><span class="n">Animation</span><span class="p">(</span><span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">x_</span><span class="p">,</span> <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">y_</span><span class="p">,</span>
-<a name="line-4"></a>	<span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">spriteWidth_</span><span class="p">,</span> <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">spriteHeight_</span><span class="p">,</span>
-<a name="line-5"></a>	<span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">numberOfImages_</span><span class="p">,</span> <span class="k">const</span> <span class="kt">double</span> <span class="n">totalTime_</span><span class="p">)</span> <span class="o">:</span>
-<a name="line-6"></a>
-<a name="line-7"></a>	<span class="n">x</span><span class="p">(</span><span class="n">x_</span><span class="p">),</span>
-<a name="line-8"></a>	<span class="n">y</span><span class="p">(</span><span class="n">y_</span><span class="p">),</span>
-<a name="line-9"></a>	<span class="n">initialX</span><span class="p">(</span><span class="n">x_</span><span class="p">),</span>
-<a name="line-10"></a>	<span class="n">initialY</span><span class="p">(</span><span class="n">y_</span><span class="p">),</span>
-<a name="line-11"></a>	<span class="n">spriteWidth</span><span class="p">(</span><span class="n">spriteWidth_</span><span class="p">),</span>
-<a name="line-12"></a>	<span class="n">spriteHeight</span><span class="p">(</span><span class="n">spriteHeight_</span><span class="p">),</span>
-<a name="line-13"></a>	<span class="n">numberOfImages</span><span class="p">(</span><span class="n">numberOfImages_</span><span class="p">),</span>
-<a name="line-14"></a>	<span class="n">totalElapsedTime</span><span class="p">(</span><span class="mf">0.0</span><span class="p">),</span>
-<a name="line-15"></a>	<span class="n">totalTime</span><span class="p">(</span><span class="n">totalTime_</span><span class="p">),</span>
-<a name="line-16"></a>	<span class="n">animationCount</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<a name="line-17"></a><span class="p">{</span>
-<a name="line-18"></a>	<span class="k">this</span><span class="o">-&gt;</span><span class="n">numberOfImages</span> <span class="o">=</span> <span class="p">(</span><span class="n">numberOfImages_</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="o">?</span> <span class="mi">1</span> <span class="o">:</span> <span class="n">numberOfImages_</span><span class="p">;</span>
-<a name="line-19"></a><span class="p">}</span>
-<a name="line-20"></a>
-<a name="line-21"></a><span class="n">Animation</span><span class="o">::~</span><span class="n">Animation</span><span class="p">()</span> <span class="p">{</span>
-<a name="line-22"></a>
-<a name="line-23"></a><span class="p">}</span>
+<a name="line-3"></a><span class="cp">#include &quot;SDL_Libs.h&quot;</span>
+<a name="line-4"></a>
+<a name="line-5"></a><span class="cm">/**</span>
+<a name="line-6"></a><span class="cm">* Class in control of animating a sprite.</span>
+<a name="line-7"></a><span class="cm">* @todo Control if animation should loop or not.</span>
+<a name="line-8"></a><span class="cm">*/</span>
+<a name="line-9"></a><span class="n">class</span> <span class="n">Animation</span> <span class="p">{</span>
+<a name="line-10"></a>
+<a name="line-11"></a>	<span class="nl">public</span><span class="p">:</span>
+<a name="line-12"></a>		<span class="cm">/**</span>
+<a name="line-13"></a><span class="cm">		* The constructor.</span>
+<a name="line-14"></a><span class="cm">		* @param x_ : The initial x position on the spritesheet.</span>
+<a name="line-15"></a><span class="cm">		* @param y_ : The initial y position on the spritesheet.</span>
+<a name="line-16"></a><span class="cm">		* @param spriteWidth_ : The width of the sprite to animate (in pixels).</span>
+<a name="line-17"></a><span class="cm">		* @param spriteHeight_ : The height of the sprite to animate (in pixels).</span>
+<a name="line-18"></a><span class="cm">		* @param numberOfImages_ : The number of images to animate inside the spritesheet.</span>
+<a name="line-19"></a><span class="cm">		* @param totalTime_ : The time in seconds each animation loop takes.</span>
+<a name="line-20"></a><span class="cm">		*/</span>
+<a name="line-21"></a>		<span class="n">Animation</span><span class="p">(</span><span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">x_</span><span class="p">,</span> <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">y_</span><span class="p">,</span>
+<a name="line-22"></a>			<span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">spriteWidth_</span><span class="p">,</span> <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">spriteHeight_</span><span class="p">,</span>
+<a name="line-23"></a>			<span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">numberOfImages_</span><span class="p">,</span> <span class="k">const</span> <span class="kt">double</span> <span class="n">totalTime_</span><span class="p">);</span>
 <a name="line-24"></a>
-<a name="line-25"></a><span class="kt">void</span> <span class="n">Animation</span><span class="o">::</span><span class="n">update</span><span class="p">(</span><span class="n">SDL_Rect</span><span class="o">&amp;</span> <span class="n">clip</span><span class="p">,</span> <span class="k">const</span> <span class="kt">double</span> <span class="n">dt_</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-26"></a>	<span class="c1">// Compare the position on the sprite with the number of positions to know if is the</span>
-<a name="line-27"></a>	<span class="c1">// end of the animation.</span>
-<a name="line-28"></a>	<span class="k">const</span> <span class="kt">bool</span> <span class="n">endOfAnimation</span> <span class="o">=</span> <span class="p">(</span><span class="n">getCurrentFrame</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">numberOfImages</span><span class="p">);</span>
+<a name="line-25"></a>		<span class="cm">/**</span>
+<a name="line-26"></a><span class="cm">		* The destructor.</span>
+<a name="line-27"></a><span class="cm">		*/</span>
+<a name="line-28"></a>		<span class="o">~</span><span class="n">Animation</span><span class="p">();</span>
 <a name="line-29"></a>
-<a name="line-30"></a>	<span class="k">const</span> <span class="kt">double</span> <span class="n">timeForEachFrame</span> <span class="o">=</span> <span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">totalTime</span> <span class="o">/</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">numberOfImages</span><span class="p">);</span>
-<a name="line-31"></a>
-<a name="line-32"></a>	<span class="k">this</span><span class="o">-&gt;</span><span class="n">totalElapsedTime</span> <span class="o">+=</span> <span class="n">dt_</span><span class="p">;</span>
-<a name="line-33"></a>
-<a name="line-34"></a>	<span class="c1">// Check if the frame has changed.</span>
-<a name="line-35"></a>	<span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">totalElapsedTime</span> <span class="o">&gt;=</span> <span class="n">timeForEachFrame</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-36"></a>		<span class="k">this</span><span class="o">-&gt;</span><span class="n">totalElapsedTime</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<a name="line-37"></a>		<span class="k">this</span><span class="o">-&gt;</span><span class="n">animationCount</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
-<a name="line-38"></a>
-<a name="line-39"></a>		<span class="c1">// Apparently defines the max horizontal sprites in the spritesheet.</span>
-<a name="line-40"></a>		<span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">animationLimit</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
-<a name="line-41"></a>
-<a name="line-42"></a>		<span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">animationCount</span> <span class="o">&lt;=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">numberOfImages</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-43"></a>			<span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">x</span> <span class="o">&lt;</span> <span class="n">animationLimit</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-44"></a>				<span class="k">this</span><span class="o">-&gt;</span><span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
-<a name="line-45"></a>			<span class="p">}</span>
-<a name="line-46"></a>			<span class="k">else</span> <span class="p">{</span>
-<a name="line-47"></a>				<span class="k">this</span><span class="o">-&gt;</span><span class="n">y</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
-<a name="line-48"></a>				<span class="k">this</span><span class="o">-&gt;</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<a name="line-49"></a>			<span class="p">}</span>
-<a name="line-50"></a>		<span class="p">}</span>
-<a name="line-51"></a>
-<a name="line-52"></a>		<span class="k">if</span><span class="p">(</span><span class="n">endOfAnimation</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-53"></a>			<span class="k">this</span><span class="o">-&gt;</span><span class="n">x</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">initialX</span><span class="p">;</span>
-<a name="line-54"></a>			<span class="k">this</span><span class="o">-&gt;</span><span class="n">y</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">initialY</span><span class="p">;</span>
-<a name="line-55"></a>			<span class="k">this</span><span class="o">-&gt;</span><span class="n">animationCount</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<a name="line-56"></a>		<span class="p">}</span>
-<a name="line-57"></a>	<span class="p">}</span>
-<a name="line-58"></a>
-<a name="line-59"></a>	<span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">positionX_</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">x</span> <span class="o">*</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">spriteWidth</span><span class="p">;</span>
-<a name="line-60"></a>	<span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">positionY_</span> <span class="o">=</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">y</span> <span class="o">*</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">spriteHeight</span><span class="p">;</span>
-<a name="line-61"></a>
-<a name="line-62"></a>	<span class="n">updateClip</span><span class="p">(</span><span class="n">clip</span><span class="p">,</span> <span class="n">positionX_</span><span class="p">,</span> <span class="n">positionY_</span><span class="p">);</span>
-<a name="line-63"></a><span class="p">}</span>
-<a name="line-64"></a>
-<a name="line-65"></a><span class="kt">void</span> <span class="n">Animation</span><span class="o">::</span><span class="n">changeAnimation</span><span class="p">(</span><span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">x_</span><span class="p">,</span> <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">y_</span><span class="p">,</span>
-<a name="line-66"></a>	<span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">numberOfImages_</span><span class="p">,</span> <span class="k">const</span> <span class="kt">double</span> <span class="n">totalTime_</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-67"></a>
-<a name="line-68"></a>	<span class="k">this</span><span class="o">-&gt;</span><span class="n">x</span> <span class="o">=</span> <span class="n">x_</span><span class="p">;</span>
-<a name="line-69"></a>	<span class="k">this</span><span class="o">-&gt;</span><span class="n">y</span> <span class="o">=</span> <span class="n">y_</span><span class="p">;</span>
-<a name="line-70"></a>	<span class="k">this</span><span class="o">-&gt;</span><span class="n">initialX</span> <span class="o">=</span> <span class="n">x_</span><span class="p">;</span>
-<a name="line-71"></a>	<span class="k">this</span><span class="o">-&gt;</span><span class="n">initialY</span> <span class="o">=</span> <span class="n">y_</span><span class="p">;</span>
-<a name="line-72"></a>	<span class="k">this</span><span class="o">-&gt;</span><span class="n">numberOfImages</span> <span class="o">=</span> <span class="p">(</span><span class="n">numberOfImages_</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="o">?</span> <span class="mi">1</span> <span class="o">:</span> <span class="n">numberOfImages_</span><span class="p">;</span>
-<a name="line-73"></a>	<span class="k">this</span><span class="o">-&gt;</span><span class="n">totalTime</span> <span class="o">=</span> <span class="n">totalTime_</span><span class="p">;</span>
-<a name="line-74"></a>	<span class="k">this</span><span class="o">-&gt;</span><span class="n">animationCount</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<a name="line-75"></a><span class="p">}</span>
-<a name="line-76"></a>
-<a name="line-77"></a><span class="kt">void</span> <span class="n">Animation</span><span class="o">::</span><span class="n">updateClip</span><span class="p">(</span><span class="n">SDL_Rect</span><span class="o">&amp;</span> <span class="n">clip</span><span class="p">,</span> <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">x_</span><span class="p">,</span> <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">y_</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-78"></a><span class="hll">	<span class="n">clip</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="n">x_</span><span class="p">;</span><span class='error2'>&lt;--- Using C-style cast.  Use static_cast&lt;int&gt;(...) instead  </span>
-</span><a name="line-79"></a><span class="hll">	<span class="n">clip</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="n">y_</span><span class="p">;</span><span class='error2'>&lt;--- Using C-style cast.  Use static_cast&lt;int&gt;(...) instead  </span>
-</span><a name="line-80"></a><span class="hll">	<span class="n">clip</span><span class="p">.</span><span class="n">w</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">spriteWidth</span><span class="p">;</span><span class='error2'>&lt;--- Using C-style cast.  Use static_cast&lt;int&gt;(...) instead  </span>
-</span><a name="line-81"></a><span class="hll">	<span class="n">clip</span><span class="p">.</span><span class="n">h</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">spriteHeight</span><span class="p">;</span><span class='error2'>&lt;--- Using C-style cast.  Use static_cast&lt;int&gt;(...) instead  </span>
-</span><a name="line-82"></a><span class="p">}</span>
-<a name="line-83"></a>
-<a name="line-84"></a><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">Animation</span><span class="o">::</span><span class="n">getCurrentFrame</span><span class="p">()</span> <span class="p">{</span>
-<a name="line-85"></a>	<span class="k">return</span> <span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">animationCount</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
-<a name="line-86"></a><span class="p">}</span>
-<a name="line-87"></a>
-<a name="line-88"></a><span class="kt">void</span> <span class="n">Animation</span><span class="o">::</span><span class="n">changeWidthHeight</span><span class="p">(</span><span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">width_</span><span class="p">,</span> <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">height_</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-89"></a>	<span class="k">this</span><span class="o">-&gt;</span><span class="n">spriteWidth</span> <span class="o">=</span> <span class="n">width_</span><span class="p">;</span>
-<a name="line-90"></a>	<span class="k">this</span><span class="o">-&gt;</span><span class="n">spriteHeight</span> <span class="o">=</span> <span class="n">height_</span><span class="p">;</span>
-<a name="line-91"></a><span class="p">}</span>
+<a name="line-30"></a>		<span class="cm">/**</span>
+<a name="line-31"></a><span class="cm">		* Updates the animation clip.</span>
+<a name="line-32"></a><span class="cm">		* @param clip_ : Reference to the clip of whatever object the animation is a part of.</span>
+<a name="line-33"></a><span class="cm">		* @param dt_ : Delta time. Time elapsed between one frame and the other, independent</span>
+<a name="line-34"></a><span class="cm">		* 	of processing speed.</span>
+<a name="line-35"></a><span class="cm">		*/</span>
+<a name="line-36"></a><span class="hll">		<span class="kt">void</span> <span class="nf">update</span><span class="p">(</span><span class="n">SDL_Rect</span><span class="o">&amp;</span> <span class="n">clip_</span><span class="p">,</span> <span class="k">const</span> <span class="kt">double</span> <span class="n">dt_</span><span class="p">);</span><span class='error2'>&lt;--- Is this a non-const reference? If so, make const or use a pointer: SDL_Rect& clip_  </span>
+</span><a name="line-37"></a>
+<a name="line-38"></a>		<span class="cm">/**</span>
+<a name="line-39"></a><span class="cm">		* @return The current frame the animation is in.</span>
+<a name="line-40"></a><span class="cm">		*/</span>
+<a name="line-41"></a>		<span class="kt">unsigned</span> <span class="kt">int</span> <span class="nf">getCurrentFrame</span><span class="p">();</span>
+<a name="line-42"></a>
+<a name="line-43"></a>		<span class="cm">/**</span>
+<a name="line-44"></a><span class="cm">		* Changes the dimensions of the clip on the spritesheet.</span>
+<a name="line-45"></a><span class="cm">		*/</span>
+<a name="line-46"></a>		<span class="kt">void</span> <span class="nf">changeWidthHeight</span><span class="p">(</span><span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">width_</span><span class="p">,</span> <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">height_</span><span class="p">);</span>
+<a name="line-47"></a>
+<a name="line-48"></a>		<span class="cm">/**</span>
+<a name="line-49"></a><span class="cm">		* Changes the animation to another.</span>
+<a name="line-50"></a><span class="cm">		* @note See Animation::Animation for the parameters descriptions.</span>
+<a name="line-51"></a><span class="cm">		*/</span>
+<a name="line-52"></a>		<span class="kt">void</span> <span class="nf">changeAnimation</span><span class="p">(</span><span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">x_</span><span class="p">,</span> <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">y_</span><span class="p">,</span>
+<a name="line-53"></a>			<span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">numberOfImages_</span><span class="p">,</span>	<span class="k">const</span> <span class="kt">double</span> <span class="n">totalTime_</span><span class="p">);</span>
+<a name="line-54"></a>
+<a name="line-55"></a>	<span class="nl">private</span><span class="p">:</span>
+<a name="line-56"></a>		<span class="cm">/**</span>
+<a name="line-57"></a><span class="cm">		* Updates the clip to a new position.</span>
+<a name="line-58"></a><span class="cm">		* @param clip_ : The clip to update.</span>
+<a name="line-59"></a><span class="cm">		* @param x_ : New x position.</span>
+<a name="line-60"></a><span class="cm">		* @param y_ : New y position.</span>
+<a name="line-61"></a><span class="cm">		*/</span>
+<a name="line-62"></a><span class="hll">		<span class="kt">void</span> <span class="n">updateClip</span><span class="p">(</span><span class="n">SDL_Rect</span><span class="o">&amp;</span> <span class="n">clip_</span><span class="p">,</span> <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">x_</span><span class="p">,</span> <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">y_</span><span class="p">);</span><span class='error2'>&lt;--- Is this a non-const reference? If so, make const or use a pointer: SDL_Rect& clip_  </span>
+</span><a name="line-63"></a>
+<a name="line-64"></a>		<span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">x</span><span class="p">;</span> <span class="cm">/**&lt; The position on x axis on the sprite. */</span>
+<a name="line-65"></a>		<span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">y</span><span class="p">;</span> <span class="cm">/**&lt; The position on x axis on the sprite. */</span>
+<a name="line-66"></a>		<span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">initialX</span><span class="p">;</span> <span class="cm">/**&lt; Where to start/restart the animation on x. */</span>
+<a name="line-67"></a>		<span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">initialY</span><span class="p">;</span> <span class="cm">/**&lt; Where to start/restart the animation on y. */</span>
+<a name="line-68"></a>		<span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">spriteWidth</span><span class="p">;</span> <span class="cm">/**&lt; The sprite width. (in pixels) */</span>
+<a name="line-69"></a>		<span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">spriteHeight</span><span class="p">;</span> <span class="cm">/**&lt; The sprite height. (in pixels) */</span>
+<a name="line-70"></a>		<span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">numberOfImages</span><span class="p">;</span> <span class="cm">/**&lt; The number of images to animate inside the</span>
+<a name="line-71"></a><span class="cm">			spritesheet. */</span>
+<a name="line-72"></a>		<span class="kt">double</span> <span class="n">totalElapsedTime</span><span class="p">;</span> <span class="cm">/**&lt; Total time elapsed on the animation, to check if the</span>
+<a name="line-73"></a><span class="cm">			frame changed. */</span>
+<a name="line-74"></a>		<span class="kt">double</span> <span class="n">totalTime</span><span class="p">;</span> <span class="cm">/**&lt; Total time in seconds for each animation loop. */</span>
+<a name="line-75"></a>		<span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">animationCount</span><span class="p">;</span> <span class="cm">/**&lt; Index of the current image relative to the number of</span>
+<a name="line-76"></a><span class="cm">			images. */</span>
+<a name="line-77"></a>
+<a name="line-78"></a><span class="p">};</span>
 </pre></div>
 </td></tr></table>
       </div>

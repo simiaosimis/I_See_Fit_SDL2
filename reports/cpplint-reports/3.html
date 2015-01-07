@@ -107,12 +107,12 @@
   </head>
   <body onload="init_expandables()">
       <div id="header">
-        <h1>Cppcheck report - sdl2-engine: /home/travis/build/CaioIcy/sdl2-engine/src/Camera.cpp </h1>
+        <h1>Cppcheck report - sdl2-engine: /home/travis/build/CaioIcy/sdl2-engine/src/Collision.cpp </h1>
       </div>
       <div id="menu" dir="rtl">
        <a href="index.html">Defect list</a>
        <br>
-<a href='3.html#line-8'> readability/casting 8</a><a href='3.html#line-9'> readability/casting 9</a><a href='3.html#line-35'> whitespace/parens 35</a><a href='3.html#line-35'> readability/casting 35</a><a href='3.html#line-36'> readability/casting 36</a><a href='3.html#line-43'> whitespace/parens 43</a><a href='3.html#line-43'> readability/casting 43</a><a href='3.html#line-44'> readability/casting 44</a>
+<a href='3.html#line-20'> whitespace/parens 20</a>
       </div>
       <div id="content">
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -169,61 +169,87 @@
 52
 53
 54
-55</pre></div></td><td class="code"><div class="highlight"><pre><a name="line-1"></a><span class="cp">#include &quot;Camera.h&quot;</span>
-<a name="line-2"></a><span class="cp">#include &quot;Configuration.h&quot;</span>
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68</pre></div></td><td class="code"><div class="highlight"><pre><a name="line-1"></a><span class="cp">#include &quot;Collision.h&quot;</span>
+<a name="line-2"></a><span class="cp">#include &lt;cmath&gt;</span>
 <a name="line-3"></a>
-<a name="line-4"></a><span class="n">Camera</span><span class="o">::</span><span class="n">Camera</span><span class="p">(</span><span class="n">GameObject</span><span class="o">*</span> <span class="k">const</span> <span class="n">gameObject_</span><span class="p">)</span><span class="o">:</span>
-<a name="line-5"></a>	<span class="n">gameObject</span><span class="p">(</span><span class="n">gameObject_</span><span class="p">),</span>
-<a name="line-6"></a>	<span class="n">levelW</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span>
-<a name="line-7"></a>	<span class="n">levelH</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span>
-<a name="line-8"></a><span class="hll">	<span class="n">clip</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">Configuration</span><span class="o">::</span><span class="n">getCameraDistanceWidth</span><span class="p">(),</span><span class='error2'>&lt;--- Using C-style cast.  Use static_cast&lt;int&gt;(...) instead  </span>
-</span><a name="line-9"></a><span class="hll">		<span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">Configuration</span><span class="o">::</span><span class="n">getCameraDistanceHeight</span><span class="p">()}</span><span class='error2'>&lt;--- Using C-style cast.  Use static_cast&lt;int&gt;(...) instead  </span>
-</span><a name="line-10"></a><span class="p">{</span>
-<a name="line-11"></a>
-<a name="line-12"></a><span class="p">}</span>
-<a name="line-13"></a>
-<a name="line-14"></a><span class="n">Camera</span><span class="o">::~</span><span class="n">Camera</span><span class="p">()</span> <span class="p">{</span>
-<a name="line-15"></a>
-<a name="line-16"></a><span class="p">}</span>
-<a name="line-17"></a>
-<a name="line-18"></a><span class="kt">void</span> <span class="n">Camera</span><span class="o">::</span><span class="n">update</span><span class="p">()</span> <span class="p">{</span>
-<a name="line-19"></a>	<span class="n">updatePosition</span><span class="p">();</span>
-<a name="line-20"></a><span class="p">}</span>
-<a name="line-21"></a>
-<a name="line-22"></a><span class="n">SDL_Rect</span><span class="o">&amp;</span> <span class="n">Camera</span><span class="o">::</span><span class="n">getClip</span><span class="p">()</span> <span class="p">{</span>
-<a name="line-23"></a>	<span class="k">return</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">clip</span><span class="p">;</span>
-<a name="line-24"></a><span class="p">}</span>
-<a name="line-25"></a>
-<a name="line-26"></a><span class="kt">void</span> <span class="n">Camera</span><span class="o">::</span><span class="n">updatePosition</span><span class="p">()</span> <span class="p">{</span>
-<a name="line-27"></a>	<span class="k">this</span><span class="o">-&gt;</span><span class="n">clip</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">gameObject</span><span class="o">-&gt;</span><span class="n">x</span> <span class="o">+</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">gameObject</span><span class="o">-&gt;</span><span class="n">getWidth</span><span class="p">()</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">clip</span><span class="p">.</span><span class="n">w</span> <span class="o">/</span> <span class="mi">2</span><span class="p">);</span>
-<a name="line-28"></a>	<span class="k">this</span><span class="o">-&gt;</span><span class="n">clip</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">gameObject</span><span class="o">-&gt;</span><span class="n">y</span> <span class="o">+</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">gameObject</span><span class="o">-&gt;</span><span class="n">getHeight</span><span class="p">()</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">clip</span><span class="p">.</span><span class="n">h</span> <span class="o">/</span> <span class="mi">2</span><span class="p">);</span>
-<a name="line-29"></a>
-<a name="line-30"></a>	<span class="c1">// Left wall.</span>
-<a name="line-31"></a>	<span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">clip</span><span class="p">.</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-32"></a>		<span class="k">this</span><span class="o">-&gt;</span><span class="n">clip</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<a name="line-33"></a>	<span class="p">}</span>
-<a name="line-34"></a>	<span class="c1">// Right wall.</span>
-<a name="line-35"></a><span class="hll">	<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">clip</span><span class="p">.</span><span class="n">x</span> <span class="o">&gt;</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">levelW</span> <span class="o">-</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">clip</span><span class="p">.</span><span class="n">w</span><span class="p">)</span> <span class="p">{</span><span class='error2'>&lt;--- Missing space before ( in if(  </span><span class='error2'>&lt;--- Using C-style cast.  Use static_cast&lt;int&gt;(...) instead  </span>
-</span><a name="line-36"></a><span class="hll">		<span class="k">this</span><span class="o">-&gt;</span><span class="n">clip</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">levelW</span> <span class="o">-</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">clip</span><span class="p">.</span><span class="n">w</span><span class="p">;</span><span class='error2'>&lt;--- Using C-style cast.  Use static_cast&lt;int&gt;(...) instead  </span>
-</span><a name="line-37"></a>	<span class="p">}</span>
-<a name="line-38"></a>	<span class="c1">// Top wall.</span>
-<a name="line-39"></a>	<span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">clip</span><span class="p">.</span><span class="n">y</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-40"></a>		<span class="k">this</span><span class="o">-&gt;</span><span class="n">clip</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<a name="line-41"></a>	<span class="p">}</span>
-<a name="line-42"></a>	<span class="c1">// Bottom wall.</span>
-<a name="line-43"></a><span class="hll">	<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">clip</span><span class="p">.</span><span class="n">y</span> <span class="o">&gt;</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">levelH</span> <span class="o">-</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">clip</span><span class="p">.</span><span class="n">h</span><span class="p">)</span> <span class="p">{</span><span class='error2'>&lt;--- Missing space before ( in if(  </span><span class='error2'>&lt;--- Using C-style cast.  Use static_cast&lt;int&gt;(...) instead  </span>
-</span><a name="line-44"></a><span class="hll">		<span class="k">this</span><span class="o">-&gt;</span><span class="n">clip</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">levelH</span> <span class="o">-</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">clip</span><span class="p">.</span><span class="n">h</span><span class="p">;</span><span class='error2'>&lt;--- Using C-style cast.  Use static_cast&lt;int&gt;(...) instead  </span>
-</span><a name="line-45"></a>	<span class="p">}</span>
-<a name="line-46"></a><span class="p">}</span>
+<a name="line-4"></a><span class="kt">bool</span> <span class="n">Collision</span><span class="o">::</span><span class="n">rectsCollided</span><span class="p">(</span><span class="k">const</span> <span class="n">SDL_Rect</span><span class="o">&amp;</span> <span class="n">a_</span><span class="p">,</span> <span class="k">const</span> <span class="n">SDL_Rect</span><span class="o">&amp;</span> <span class="n">b_</span><span class="p">)</span> <span class="p">{</span>
+<a name="line-5"></a>    <span class="c1">// Calculate the sides of rect A.</span>
+<a name="line-6"></a>    <span class="k">const</span> <span class="kt">int</span> <span class="n">leftA</span> <span class="o">=</span> <span class="n">a_</span><span class="p">.</span><span class="n">x</span><span class="p">;</span>
+<a name="line-7"></a>    <span class="k">const</span> <span class="kt">int</span> <span class="n">rightA</span> <span class="o">=</span> <span class="n">a_</span><span class="p">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">a_</span><span class="p">.</span><span class="n">w</span><span class="p">;</span>
+<a name="line-8"></a>    <span class="k">const</span> <span class="kt">int</span> <span class="n">topA</span> <span class="o">=</span> <span class="n">a_</span><span class="p">.</span><span class="n">y</span><span class="p">;</span>
+<a name="line-9"></a>    <span class="k">const</span> <span class="kt">int</span> <span class="n">bottomA</span> <span class="o">=</span> <span class="n">a_</span><span class="p">.</span><span class="n">y</span> <span class="o">+</span> <span class="n">a_</span><span class="p">.</span><span class="n">h</span><span class="p">;</span>
+<a name="line-10"></a>
+<a name="line-11"></a>    <span class="c1">// Calculate the sides of rect B.</span>
+<a name="line-12"></a>    <span class="k">const</span> <span class="kt">int</span> <span class="n">leftB</span> <span class="o">=</span> <span class="n">b_</span><span class="p">.</span><span class="n">x</span><span class="p">;</span>
+<a name="line-13"></a>    <span class="k">const</span> <span class="kt">int</span> <span class="n">rightB</span> <span class="o">=</span> <span class="n">b_</span><span class="p">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">b_</span><span class="p">.</span><span class="n">w</span><span class="p">;</span>
+<a name="line-14"></a>    <span class="k">const</span> <span class="kt">int</span> <span class="n">topB</span> <span class="o">=</span> <span class="n">b_</span><span class="p">.</span><span class="n">y</span><span class="p">;</span>
+<a name="line-15"></a>    <span class="k">const</span> <span class="kt">int</span> <span class="n">bottomB</span> <span class="o">=</span> <span class="n">b_</span><span class="p">.</span><span class="n">y</span> <span class="o">+</span> <span class="n">b_</span><span class="p">.</span><span class="n">h</span><span class="p">;</span>
+<a name="line-16"></a>
+<a name="line-17"></a>    <span class="kt">bool</span> <span class="n">collided</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+<a name="line-18"></a>
+<a name="line-19"></a>    <span class="c1">// If any of the sides from A are outside of B.</span>
+<a name="line-20"></a><span class="hll">    <span class="k">if</span><span class="p">(</span><span class="n">bottomA</span> <span class="o">&lt;=</span> <span class="n">topB</span> <span class="o">||</span> <span class="n">topA</span> <span class="o">&gt;=</span> <span class="n">bottomB</span> <span class="o">||</span> <span class="n">rightA</span> <span class="o">&lt;=</span> <span class="n">leftB</span> <span class="o">||</span> <span class="n">leftA</span> <span class="o">&gt;=</span> <span class="n">rightB</span><span class="p">)</span> <span class="p">{</span><span class='error2'>&lt;--- Missing space before ( in if(  </span>
+</span><a name="line-21"></a>        <span class="n">collided</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+<a name="line-22"></a>    <span class="p">}</span>
+<a name="line-23"></a>    <span class="c1">// If none of the sides from A are outside B.</span>
+<a name="line-24"></a>    <span class="k">else</span> <span class="p">{</span>
+<a name="line-25"></a>        <span class="n">collided</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+<a name="line-26"></a>    <span class="p">}</span>
+<a name="line-27"></a>
+<a name="line-28"></a>    <span class="k">return</span> <span class="n">collided</span><span class="p">;</span>
+<a name="line-29"></a><span class="p">}</span>
+<a name="line-30"></a>
+<a name="line-31"></a><span class="n">Collision</span><span class="o">::</span><span class="n">RectangleSide</span> <span class="n">Collision</span><span class="o">::</span><span class="n">rectsCollidedSide</span><span class="p">(</span><span class="k">const</span> <span class="n">SDL_Rect</span><span class="o">&amp;</span> <span class="n">a_</span><span class="p">,</span> <span class="k">const</span> <span class="n">SDL_Rect</span><span class="o">&amp;</span> <span class="n">b_</span><span class="p">)</span> <span class="p">{</span>
+<a name="line-32"></a>    <span class="k">const</span> <span class="kt">double</span> <span class="n">w</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">a_</span><span class="p">.</span><span class="n">w</span> <span class="o">+</span> <span class="n">b_</span><span class="p">.</span><span class="n">w</span><span class="p">);</span>
+<a name="line-33"></a>    <span class="k">const</span> <span class="kt">double</span> <span class="n">h</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">a_</span><span class="p">.</span><span class="n">h</span> <span class="o">+</span> <span class="n">b_</span><span class="p">.</span><span class="n">h</span><span class="p">);</span>
+<a name="line-34"></a>
+<a name="line-35"></a>    <span class="k">const</span> <span class="kt">double</span> <span class="n">centerAx</span> <span class="o">=</span> <span class="n">a_</span><span class="p">.</span><span class="n">x</span> <span class="o">+</span> <span class="p">(</span><span class="n">a_</span><span class="p">.</span><span class="n">w</span> <span class="o">/</span> <span class="mi">2</span><span class="p">);</span>
+<a name="line-36"></a>    <span class="k">const</span> <span class="kt">double</span> <span class="n">centerAy</span> <span class="o">=</span> <span class="n">a_</span><span class="p">.</span><span class="n">y</span> <span class="o">+</span> <span class="p">(</span><span class="n">a_</span><span class="p">.</span><span class="n">h</span> <span class="o">/</span> <span class="mi">2</span><span class="p">);</span>
+<a name="line-37"></a>    <span class="k">const</span> <span class="kt">double</span> <span class="n">centerBx</span> <span class="o">=</span> <span class="n">b_</span><span class="p">.</span><span class="n">x</span> <span class="o">+</span> <span class="p">(</span><span class="n">b_</span><span class="p">.</span><span class="n">w</span> <span class="o">/</span> <span class="mi">2</span><span class="p">);</span>
+<a name="line-38"></a>    <span class="k">const</span> <span class="kt">double</span> <span class="n">centerBy</span> <span class="o">=</span> <span class="n">b_</span><span class="p">.</span><span class="n">y</span> <span class="o">+</span> <span class="p">(</span><span class="n">b_</span><span class="p">.</span><span class="n">h</span> <span class="o">/</span> <span class="mi">2</span><span class="p">);</span>
+<a name="line-39"></a>
+<a name="line-40"></a>    <span class="k">const</span> <span class="kt">double</span> <span class="n">dx</span> <span class="o">=</span> <span class="n">centerAx</span> <span class="o">-</span> <span class="n">centerBx</span><span class="p">;</span>
+<a name="line-41"></a>    <span class="k">const</span> <span class="kt">double</span> <span class="n">dy</span> <span class="o">=</span> <span class="n">centerAy</span> <span class="o">-</span> <span class="n">centerBy</span><span class="p">;</span>
+<a name="line-42"></a>
+<a name="line-43"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">abs</span><span class="p">(</span><span class="n">dx</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">w</span> <span class="o">&amp;&amp;</span> <span class="n">abs</span><span class="p">(</span><span class="n">dy</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">h</span><span class="p">)</span> <span class="p">{</span>
+<a name="line-44"></a>        <span class="cm">/* collision! */</span>
+<a name="line-45"></a>        <span class="k">const</span> <span class="kt">double</span> <span class="n">wy</span> <span class="o">=</span> <span class="n">w</span> <span class="o">*</span> <span class="n">dy</span><span class="p">;</span>
+<a name="line-46"></a>        <span class="k">const</span> <span class="kt">double</span> <span class="n">hx</span> <span class="o">=</span> <span class="n">h</span> <span class="o">*</span> <span class="n">dx</span><span class="p">;</span>
 <a name="line-47"></a>
-<a name="line-48"></a><span class="kt">void</span> <span class="n">Camera</span><span class="o">::</span><span class="n">centralizeOn</span><span class="p">(</span><span class="n">GameObject</span><span class="o">*</span> <span class="k">const</span> <span class="n">gameObject_</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-49"></a>	<span class="k">this</span><span class="o">-&gt;</span><span class="n">gameObject</span> <span class="o">=</span> <span class="n">gameObject_</span><span class="p">;</span>
-<a name="line-50"></a><span class="p">}</span>
-<a name="line-51"></a>
-<a name="line-52"></a><span class="kt">void</span> <span class="n">Camera</span><span class="o">::</span><span class="n">setLevelWH</span><span class="p">(</span><span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">width_</span><span class="p">,</span> <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">height_</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-53"></a>	<span class="k">this</span><span class="o">-&gt;</span><span class="n">levelW</span> <span class="o">=</span> <span class="n">width_</span><span class="p">;</span>
-<a name="line-54"></a>	<span class="k">this</span><span class="o">-&gt;</span><span class="n">levelH</span> <span class="o">=</span> <span class="n">height_</span><span class="p">;</span>
-<a name="line-55"></a><span class="p">}</span>
+<a name="line-48"></a>        <span class="k">if</span> <span class="p">(</span><span class="n">wy</span> <span class="o">&gt;</span> <span class="n">hx</span><span class="p">)</span> <span class="p">{</span>
+<a name="line-49"></a>            <span class="k">if</span> <span class="p">(</span><span class="n">wy</span> <span class="o">&gt;</span> <span class="o">-</span><span class="n">hx</span><span class="p">)</span> <span class="p">{</span>
+<a name="line-50"></a>                <span class="k">return</span> <span class="n">RectangleSide</span><span class="o">::</span><span class="n">TOP</span><span class="p">;</span>
+<a name="line-51"></a>            <span class="p">}</span>
+<a name="line-52"></a>            <span class="k">else</span> <span class="p">{</span>
+<a name="line-53"></a>                <span class="k">return</span> <span class="n">RectangleSide</span><span class="o">::</span><span class="n">LEFT</span><span class="p">;</span>
+<a name="line-54"></a>            <span class="p">}</span>
+<a name="line-55"></a>        <span class="p">}</span>
+<a name="line-56"></a>        <span class="k">else</span> <span class="p">{</span>
+<a name="line-57"></a>            <span class="k">if</span> <span class="p">(</span><span class="n">wy</span> <span class="o">&gt;</span> <span class="o">-</span><span class="n">hx</span><span class="p">)</span> <span class="p">{</span>
+<a name="line-58"></a>                <span class="k">return</span> <span class="n">RectangleSide</span><span class="o">::</span><span class="n">RIGHT</span><span class="p">;</span>
+<a name="line-59"></a>            <span class="p">}</span>
+<a name="line-60"></a>            <span class="k">else</span> <span class="p">{</span>
+<a name="line-61"></a>                <span class="k">return</span> <span class="n">RectangleSide</span><span class="o">::</span><span class="n">BOTTOM</span><span class="p">;</span>
+<a name="line-62"></a>            <span class="p">}</span>
+<a name="line-63"></a>        <span class="p">}</span>
+<a name="line-64"></a>    <span class="p">}</span>
+<a name="line-65"></a>    <span class="k">else</span> <span class="p">{</span>
+<a name="line-66"></a>        <span class="k">return</span> <span class="n">RectangleSide</span><span class="o">::</span><span class="n">NONE</span><span class="p">;</span>
+<a name="line-67"></a>    <span class="p">}</span>
+<a name="line-68"></a><span class="p">}</span>
 </pre></div>
 </td></tr></table>
       </div>

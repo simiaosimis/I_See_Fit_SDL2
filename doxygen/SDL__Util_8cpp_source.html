@@ -33,7 +33,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v10</span>
+   &#160;<span id="projectnumber">v11</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -104,8 +104,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00004"></a><a class="code" href="namespaceSDL__Wrapper_1_1SDL__Wrapper__detail.html#a9f0387e1ea9e4d50de0ba422f0ebfb12">00004</a> <span class="keywordtype">void</span> <a class="code" href="namespaceSDL__Wrapper_1_1SDL__Wrapper__detail.html#a9f0387e1ea9e4d50de0ba422f0ebfb12" title="Logs the SDL API version.">SDL_Wrapper::SDL_Wrapper_detail::logSDLVersion</a>(<span class="keyword">const</span> std::string&amp; what_,
 <a name="l00005"></a>00005     <span class="keyword">const</span> SDL_version&amp; compiled_, std::string revision_) {
 <a name="l00006"></a>00006 
-<a name="l00007"></a>00007     Log(DEBUG) &lt;&lt; what_ &lt;&lt; <span class="stringliteral">&quot; Version (Compiled): &quot;</span> &lt;&lt; (int)compiled_.major &lt;&lt; <span class="stringliteral">&quot;.&quot;</span> &lt;&lt;
-<a name="l00008"></a>00008         (<span class="keywordtype">int</span>)compiled_.minor &lt;&lt; <span class="stringliteral">&quot;.&quot;</span> &lt;&lt; (int)compiled_.patch &lt;&lt;
+<a name="l00007"></a>00007     Log(DEBUG) &lt;&lt; what_ &lt;&lt; <span class="stringliteral">&quot; Version (Compiled): &quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(compiled_.major) &lt;&lt; <span class="stringliteral">&quot;.&quot;</span> &lt;&lt;
+<a name="l00008"></a>00008         static_cast&lt;int&gt;(compiled_.minor) &lt;&lt; <span class="stringliteral">&quot;.&quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(compiled_.patch) &lt;&lt;
 <a name="l00009"></a>00009         ((!revision_.empty()) ? revision_ : <span class="stringliteral">&quot;&quot;</span>);
 <a name="l00010"></a>00010 }
 </pre></div></div><!-- contents -->
@@ -128,7 +128,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><b>SDL_Util.cpp</b>      </li>
 
-    <li class="footer">Generated on Wed Jan 7 2015 23:42:33 for sdl2-engine by
+    <li class="footer">Generated on Wed Jan 7 2015 23:51:55 for sdl2-engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

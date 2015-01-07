@@ -329,13 +329,13 @@
     <tr>
     <td align="right" class="lineno"><pre>8</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	clip{0, 0, (int)Configuration::getCameraDistanceWidth(),</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	clip{0, 0, static_cast&lt;int&gt;(Configuration::getCameraDistanceWidth()),</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>9</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>		(int)Configuration::getCameraDistanceHeight()}</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>		static_cast&lt;int&gt;(Configuration::getCameraDistanceHeight())}</pre></td>
     </tr>
 
     <tr>
@@ -491,13 +491,13 @@
     <tr>
     <td align="right" class="lineno"><pre>35</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	else if(this-&gt;clip.x &gt; (int)this-&gt;levelW - this-&gt;clip.w) {</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	else if(this-&gt;clip.x &gt; static_cast&lt;int&gt;(this-&gt;levelW) - this-&gt;clip.w) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>36</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>		this-&gt;clip.x = (int)this-&gt;levelW - this-&gt;clip.w;</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>		this-&gt;clip.x = static_cast&lt;int&gt;(this-&gt;levelW) - this-&gt;clip.w;</pre></td>
     </tr>
 
     <tr>
@@ -539,13 +539,13 @@
     <tr>
     <td align="right" class="lineno"><pre>43</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	else if(this-&gt;clip.y &gt; (int)this-&gt;levelH - this-&gt;clip.h) {</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	else if(this-&gt;clip.y &gt; static_cast&lt;int&gt;(this-&gt;levelH) - this-&gt;clip.h) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>44</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>		this-&gt;clip.y = (int)this-&gt;levelH - this-&gt;clip.h;</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>		this-&gt;clip.y = static_cast&lt;int&gt;(this-&gt;levelH) - this-&gt;clip.h;</pre></td>
     </tr>
 
     <tr>

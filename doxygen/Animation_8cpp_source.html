@@ -33,7 +33,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v10</span>
+   &#160;<span id="projectnumber">v11</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -175,10 +175,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00075"></a>00075 }
 <a name="l00076"></a>00076 
 <a name="l00077"></a><a class="code" href="classAnimation.html#ad86524ca999883c40965d04990a2762e">00077</a> <span class="keywordtype">void</span> <a class="code" href="classAnimation.html#ad86524ca999883c40965d04990a2762e" title="Updates the clip to a new position.">Animation::updateClip</a>(SDL_Rect&amp; clip, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> x_, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> y_) {
-<a name="l00078"></a>00078     clip.x = (int) x_;
-<a name="l00079"></a>00079     clip.y = (int) y_;
-<a name="l00080"></a>00080     clip.w = (int) this-&gt;<a class="code" href="classAnimation.html#a313a8988b9eb64f84dcb3dcb2b4b17d1" title="The sprite width.">spriteWidth</a>;
-<a name="l00081"></a>00081     clip.h = (int) this-&gt;<a class="code" href="classAnimation.html#abcdcc399e4459bcbcd1a93818fefb3cc" title="The sprite height.">spriteHeight</a>;
+<a name="l00078"></a>00078     clip.x = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(x_);
+<a name="l00079"></a>00079     clip.y = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(y_);
+<a name="l00080"></a>00080     clip.w = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(this-&gt;<a class="code" href="classAnimation.html#a313a8988b9eb64f84dcb3dcb2b4b17d1" title="The sprite width.">spriteWidth</a>);
+<a name="l00081"></a>00081     clip.h = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(this-&gt;<a class="code" href="classAnimation.html#abcdcc399e4459bcbcd1a93818fefb3cc" title="The sprite height.">spriteHeight</a>);
 <a name="l00082"></a>00082 }
 <a name="l00083"></a>00083 
 <a name="l00084"></a><a class="code" href="classAnimation.html#a56354acb39435a9d41fbeaa2e321eb25">00084</a> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classAnimation.html#a56354acb39435a9d41fbeaa2e321eb25">Animation::getCurrentFrame</a>() {
@@ -209,7 +209,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><b>Animation.cpp</b>      </li>
 
-    <li class="footer">Generated on Wed Jan 7 2015 23:42:33 for sdl2-engine by
+    <li class="footer">Generated on Wed Jan 7 2015 23:51:55 for sdl2-engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

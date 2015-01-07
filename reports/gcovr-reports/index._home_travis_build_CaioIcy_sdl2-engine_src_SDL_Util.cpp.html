@@ -323,13 +323,13 @@
     <tr>
     <td align="right" class="lineno"><pre>7</pre></td>
     <td align="right" class="linecount coveredLine"><pre>4</pre></td>
-    <td align="left" class="src coveredLine"><pre>	Log(DEBUG) &lt;&lt; what_ &lt;&lt; " Version (Compiled): " &lt;&lt; (int)compiled_.major &lt;&lt; "." &lt;&lt;</pre></td>
+    <td align="left" class="src coveredLine"><pre>	Log(DEBUG) &lt;&lt; what_ &lt;&lt; " Version (Compiled): " &lt;&lt; static_cast&lt;int&gt;(compiled_.major) &lt;&lt; "." &lt;&lt;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>8</pre></td>
     <td align="right" class="linecount coveredLine"><pre>4</pre></td>
-    <td align="left" class="src coveredLine"><pre>		(int)compiled_.minor &lt;&lt; "." &lt;&lt; (int)compiled_.patch &lt;&lt;</pre></td>
+    <td align="left" class="src coveredLine"><pre>		static_cast&lt;int&gt;(compiled_.minor) &lt;&lt; "." &lt;&lt; static_cast&lt;int&gt;(compiled_.patch) &lt;&lt;</pre></td>
     </tr>
 
     <tr>

@@ -641,7 +641,7 @@
     <tr>
     <td align="right" class="lineno"><pre>60</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	SDL_Rect renderQuad = {(int)x_, (int)y_, (int)this-&gt;width, (int)this-&gt;height};</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	SDL_Rect renderQuad = {static_cast&lt;int&gt;(x_), static_cast&lt;int&gt;(y_), static_cast&lt;int&gt;(this-&gt;width), static_cast&lt;int&gt;(this-&gt;height)};</pre></td>
     </tr>
 
     <tr>
@@ -719,7 +719,7 @@
     <tr>
     <td align="right" class="lineno"><pre>73</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	SDL_Rect stretch = {(int)x_, (int)y_, logicalW, logicalH};</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	SDL_Rect stretch = {static_cast&lt;int&gt;(x_), static_cast&lt;int&gt;(y_), logicalW, logicalH};</pre></td>
     </tr>
 
     <tr>
@@ -1133,7 +1133,7 @@
     <tr>
     <td align="right" class="lineno"><pre>142</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	return ((double)alpha);</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	return static_cast&lt;double&gt;(alpha);</pre></td>
     </tr>
 
     <tr>
