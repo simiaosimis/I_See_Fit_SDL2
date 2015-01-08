@@ -39,7 +39,7 @@ void GStatePlaceholder::update(const double dt_) {
 		Game::instance().getAudioHandler().pushSoundEffect("assets/audio/sfx/test_sfx.wav");
 	}
 
-	this->animation->update(this->animationClip, dt_);
+	this->animation->Update(this->animationClip, dt_);
 }
 
 void GStatePlaceholder::render() {

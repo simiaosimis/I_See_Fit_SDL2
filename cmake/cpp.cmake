@@ -19,7 +19,7 @@ set(CMAKE_CXX_FLAGS_DEBUG ${FLAGS_DEBUG})
 set(CMAKE_EXE_LINKER_FLAGS_DEBUG "${CMAKE_EXE_LINKER_FLAGS} --coverage")
 
 # Release build info
-set(FLAGS_RELEASE "-O3 -Werror")
+set(FLAGS_RELEASE "-O3 -DNDEBUG -Werror")
 set(CMAKE_CXX_FLAGS_RELEASE ${FLAGS_RELEASE})
 
 # https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html

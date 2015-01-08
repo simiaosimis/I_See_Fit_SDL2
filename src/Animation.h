@@ -4,6 +4,7 @@
 
 /**
 * Class in control of animating a sprite.
+*
 * @todo Control if animation should loop or not.
 */
 class Animation {
@@ -11,16 +12,16 @@ class Animation {
 	public:
 		/**
 		* The constructor.
-		* @param x_ : The initial x position on the spritesheet.
-		* @param y_ : The initial y position on the spritesheet.
-		* @param spriteWidth_ : The width of the sprite to animate (in pixels).
-		* @param spriteHeight_ : The height of the sprite to animate (in pixels).
-		* @param numberOfImages_ : The number of images to animate inside the spritesheet.
-		* @param totalTime_ : The time in seconds each animation loop takes.
+		*
+		* @param x : The initial x position on the spritesheet.
+		* @param y : The initial y position on the spritesheet.
+		* @param sprite_width : The width of the sprite to animate (in pixels).
+		* @param sprite_height : The height of the sprite to animate (in pixels).
+		* @param number_of_images : The number of images to animate inside the spritesheet.
+		* @param total_time : The time in seconds each animation loop takes.
 		*/
-		Animation(const unsigned int x_, const unsigned int y_,
-			const unsigned int spriteWidth_, const unsigned int spriteHeight_,
-			const unsigned int numberOfImages_, const double totalTime_);
+		Animation(const int x, const int y,	const int sprite_width, const int sprite_height,
+			const int number_of_images, const double total_time);
 
 		/**
 		* The destructor.
@@ -29,50 +30,57 @@ class Animation {
 
 		/**
 		* Updates the animation clip.
-		* @param clip_ : Reference to the clip of whatever object the animation is a part of.
-		* @param dt_ : Delta time. Time elapsed between one frame and the other, independent
-		* 	of processing speed.
+		*
+		* @param clip : Reference to the clip of whatever object the animation is a part of.
+		* @param delta_time : Time elapsed between one frame and the other, independent	of
+		*	processing speed.
 		*/
-		void update(SDL_Rect& clip_, const double dt_);
+		void Update(SDL_Rect& clip, const double delta_time);
 
 		/**
 		* @return The current frame the animation is in.
 		*/
-		unsigned int getCurrentFrame();
+		int CurrentFrame();
 
 		/**
 		* Changes the dimensions of the clip on the spritesheet.
+		*
+		* @param width : New width of the spritesheet clip;
+		* @param height : New height of the spritesheet clip;
 		*/
-		void changeWidthHeight(const unsigned int width_, const unsigned int height_);
+		void SetWidthHeight(const int width, const int height);
 
 		/**
 		* Changes the animation to another.
-		* @note See Animation::Animation for the parameters descriptions.
+		*
+		* @param x : The initial x position on the spritesheet.
+		* @param y : The initial y position on the spritesheet.
+		* @param number_of_images : The number of images to animate inside the spritesheet.
+		* @param total_time : The time in seconds each animation loop takes.
 		*/
-		void changeAnimation(const unsigned int x_, const unsigned int y_,
-			const unsigned int numberOfImages_,	const double totalTime_);
+		void ChangeAnimation(const int x, const int y, const int number_of_images,
+			const double total_time);
 
 	private:
 		/**
 		* Updates the clip to a new position.
-		* @param clip_ : The clip to update.
-		* @param x_ : New x position.
-		* @param y_ : New y position.
+		*
+		* @param clip : The clip to update.
+		* @param x : New x position.
+		* @param y : New y position.
 		*/
-		void updateClip(SDL_Rect& clip_, const unsigned int x_, const unsigned int y_);
+		void UpdateClip(SDL_Rect& clip, const int x, const int y);
 
-		unsigned int x; /**< The position on x axis on the sprite. */
-		unsigned int y; /**< The position on x axis on the sprite. */
-		unsigned int initialX; /**< Where to start/restart the animation on x. */
-		unsigned int initialY; /**< Where to start/restart the animation on y. */
-		unsigned int spriteWidth; /**< The sprite width. (in pixels) */
-		unsigned int spriteHeight; /**< The sprite height. (in pixels) */
-		unsigned int numberOfImages; /**< The number of images to animate inside the
-			spritesheet. */
-		double totalElapsedTime; /**< Total time elapsed on the animation, to check if the
+		int m_x; /**< The position on x axis on the sprite. */
+		int m_y; /**< The position on x axis on the sprite. */
+		int m_initial_x; /**< Where to start/restart the animation on x. */
+		int m_initial_y; /**< Where to start/restart the animation on y. */
+		int m_sprite_width; /**< The sprite width. (in pixels) */
+		int m_sprite_height; /**< The sprite height. (in pixels) */
+		int m_number_of_images; /**< The number of images to animate inside the	spritesheet. */
+		double m_total_elapsed_time; /**< Total time elapsed on the animation, to check if the
 			frame changed. */
-		double totalTime; /**< Total time in seconds for each animation loop. */
-		unsigned int animationCount; /**< Index of the current image relative to the number of
+		double m_total_time; /**< Total time in seconds for each animation loop. */
+		int m_animation_count; /**< Index of the current image relative to the number of
 			images. */
-
 };
