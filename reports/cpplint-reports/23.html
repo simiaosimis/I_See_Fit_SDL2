@@ -107,12 +107,12 @@
   </head>
   <body onload="init_expandables()">
       <div id="header">
-        <h1>Cppcheck report - sdl2-engine: /home/travis/build/CaioIcy/sdl2-engine/src/Window.cpp </h1>
+        <h1>Cppcheck report - sdl2-engine: /home/travis/build/CaioIcy/sdl2-engine/src/Util.cpp </h1>
       </div>
       <div id="menu" dir="rtl">
        <a href="index.html">Defect list</a>
        <br>
-<a href='23.html#line-5'> whitespace/line_length 5</a><a href='23.html#line-5'> build/include_what_you_use 5</a>
+<a href='23.html#line-5'> build/include_what_you_use 5</a>
       </div>
       <div id="content">
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -126,142 +126,18 @@
  9
 10
 11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63
-64
-65
-66
-67
-68
-69
-70
-71
-72
-73
-74</pre></div></td><td class="code"><div class="highlight"><pre><a name="line-1"></a><span class="cp">#include &quot;Window.h&quot;</span>
-<a name="line-2"></a><span class="cp">#include &quot;Logger.h&quot;</span>
-<a name="line-3"></a><span class="cp">#include &quot;Configuration.h&quot;</span>
-<a name="line-4"></a>
-<a name="line-5"></a><span class="hll"><span class="n">Window</span><span class="o">::</span><span class="n">Window</span><span class="p">(</span><span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">width_</span><span class="p">,</span> <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">height_</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">title_</span><span class="p">)</span> <span class="o">:</span><span class='error2'>&lt;--- Lines should be &lt;= 95 characters long  </span><span class='error2'>&lt;--- Add #include &lt;string&gt; for string  </span>
-</span><a name="line-6"></a>	<span class="n">windowTitle</span><span class="p">(</span><span class="n">title_</span><span class="p">),</span>
-<a name="line-7"></a>	<span class="n">sdlWindow</span><span class="p">(</span><span class="k">nullptr</span><span class="p">),</span>
-<a name="line-8"></a>	<span class="n">renderer</span><span class="p">(</span><span class="k">nullptr</span><span class="p">)</span>
-<a name="line-9"></a><span class="p">{</span>
-<a name="line-10"></a>	<span class="n">create</span><span class="p">(</span><span class="n">width_</span><span class="p">,</span> <span class="n">height_</span><span class="p">);</span>
-<a name="line-11"></a><span class="p">}</span>
-<a name="line-12"></a>
-<a name="line-13"></a><span class="n">Window</span><span class="o">::~</span><span class="n">Window</span><span class="p">()</span> <span class="p">{</span>
-<a name="line-14"></a>	<span class="k">delete</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">renderer</span><span class="p">;</span>
-<a name="line-15"></a>	<span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">sdlWindow</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-16"></a>		<span class="n">SDL_DestroyWindow</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">sdlWindow</span><span class="p">);</span>
-<a name="line-17"></a>	<span class="p">}</span>
-<a name="line-18"></a><span class="p">}</span>
-<a name="line-19"></a>
-<a name="line-20"></a><span class="kt">void</span> <span class="n">Window</span><span class="o">::</span><span class="n">minimize</span><span class="p">()</span> <span class="p">{</span>
-<a name="line-21"></a>	<span class="n">SDL_MinimizeWindow</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">sdlWindow</span><span class="p">);</span>
-<a name="line-22"></a><span class="p">}</span>
-<a name="line-23"></a>
-<a name="line-24"></a><span class="kt">void</span> <span class="n">Window</span><span class="o">::</span><span class="n">maximize</span><span class="p">()</span> <span class="p">{</span>
-<a name="line-25"></a>	<span class="n">SDL_MaximizeWindow</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">sdlWindow</span><span class="p">);</span>
-<a name="line-26"></a><span class="p">}</span>
-<a name="line-27"></a>
-<a name="line-28"></a><span class="kt">void</span> <span class="n">Window</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">width_</span><span class="p">,</span> <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">height_</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-29"></a>	<span class="c1">/// @todo Toggle VSync.</span>
-<a name="line-30"></a>
-<a name="line-31"></a>	<span class="c1">// Creates the SDL window.</span>
-<a name="line-32"></a>	<span class="k">const</span> <span class="n">Uint32</span> <span class="n">windowFlags</span> <span class="o">=</span> <span class="n">SDL_WINDOW_SHOWN</span><span class="p">;</span>
-<a name="line-33"></a>	<span class="k">this</span><span class="o">-&gt;</span><span class="n">sdlWindow</span> <span class="o">=</span> <span class="n">SDL_CreateWindow</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">windowTitle</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span> <span class="n">SDL_WINDOWPOS_CENTERED</span><span class="p">,</span>
-<a name="line-34"></a>		<span class="n">SDL_WINDOWPOS_CENTERED</span><span class="p">,</span> <span class="n">width_</span><span class="p">,</span> <span class="n">height_</span><span class="p">,</span> <span class="n">windowFlags</span><span class="p">);</span>
-<a name="line-35"></a>
-<a name="line-36"></a>	<span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">sdlWindow</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-37"></a>
-<a name="line-38"></a>		<span class="c1">// Creates the SDL renderer.</span>
-<a name="line-39"></a>		<span class="k">const</span> <span class="n">Uint32</span> <span class="n">rendererFlags</span> <span class="o">=</span> <span class="n">SDL_RENDERER_ACCELERATED</span><span class="p">;</span>
-<a name="line-40"></a>		<span class="k">this</span><span class="o">-&gt;</span><span class="n">renderer</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Renderer</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">sdlWindow</span><span class="p">,</span> <span class="n">rendererFlags</span><span class="p">);</span>
-<a name="line-41"></a>
-<a name="line-42"></a>		<span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">renderer</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-43"></a>
-<a name="line-44"></a>			<span class="c1">// Set texture filtering to linear.</span>
-<a name="line-45"></a>			<span class="n">SDL_bool</span> <span class="n">linearFilter</span> <span class="o">=</span> <span class="n">SDL_SetHint</span><span class="p">(</span><span class="n">SDL_HINT_RENDER_SCALE_QUALITY</span><span class="p">,</span> <span class="s">&quot;nearest&quot;</span><span class="p">);</span>
-<a name="line-46"></a>
-<a name="line-47"></a>			<span class="k">if</span><span class="p">(</span><span class="n">linearFilter</span> <span class="o">==</span> <span class="n">SDL_TRUE</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-48"></a>				<span class="n">Log</span><span class="p">(</span><span class="n">INFO</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Linear texture filtering enabled!&quot;</span><span class="p">;</span>
-<a name="line-49"></a>				<span class="k">this</span><span class="o">-&gt;</span><span class="n">renderer</span><span class="o">-&gt;</span><span class="n">setLogicalSize</span><span class="p">(</span><span class="n">Configuration</span><span class="o">::</span><span class="n">getLogicalRenderSize</span><span class="p">());</span>
-<a name="line-50"></a>			<span class="p">}</span>
-<a name="line-51"></a>			<span class="k">else</span> <span class="p">{</span>
-<a name="line-52"></a>				<span class="n">Log</span><span class="p">(</span><span class="n">WARN</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Linear texture filtering disabled!&quot;</span><span class="p">;</span>
-<a name="line-53"></a>			<span class="p">}</span>
-<a name="line-54"></a>
-<a name="line-55"></a>			<span class="n">Log</span><span class="p">(</span><span class="n">DEBUG</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Game successfully loaded.&quot;</span><span class="p">;</span>
-<a name="line-56"></a>
-<a name="line-57"></a>		<span class="p">}</span>
-<a name="line-58"></a>		<span class="k">else</span> <span class="p">{</span>
-<a name="line-59"></a>			<span class="n">Log</span><span class="p">(</span><span class="n">ERROR</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Renderer could not be created, while creating window. &quot;</span> <span class="o">&lt;&lt;</span>
-<a name="line-60"></a>				<span class="n">SDL_GetError</span><span class="p">();</span>
-<a name="line-61"></a>		<span class="p">}</span>
-<a name="line-62"></a>	<span class="p">}</span>
-<a name="line-63"></a>	<span class="k">else</span> <span class="p">{</span>
-<a name="line-64"></a>		<span class="n">Log</span><span class="p">(</span><span class="n">ERROR</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Window failed to be created. &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">SDL_GetError</span><span class="p">();</span>
-<a name="line-65"></a>	<span class="p">}</span>
-<a name="line-66"></a><span class="p">}</span>
-<a name="line-67"></a>
-<a name="line-68"></a><span class="kt">void</span> <span class="n">Window</span><span class="o">::</span><span class="n">resize</span><span class="p">(</span><span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">width_</span><span class="p">,</span> <span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">height_</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-69"></a>	<span class="n">SDL_SetWindowSize</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">sdlWindow</span><span class="p">,</span> <span class="n">width_</span><span class="p">,</span> <span class="n">height_</span><span class="p">);</span>
-<a name="line-70"></a><span class="p">}</span>
-<a name="line-71"></a>
-<a name="line-72"></a><span class="n">Renderer</span><span class="o">*</span> <span class="n">Window</span><span class="o">::</span><span class="n">getRenderer</span><span class="p">()</span> <span class="p">{</span>
-<a name="line-73"></a>	<span class="k">return</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">renderer</span><span class="p">;</span>
-<a name="line-74"></a><span class="p">}</span>
+12</pre></div></td><td class="code"><div class="highlight"><pre><a name="line-1"></a><span class="cp">#include &quot;Util.h&quot;</span>
+<a name="line-2"></a><span class="cp">#include &lt;sstream&gt;</span>
+<a name="line-3"></a>
+<a name="line-4"></a><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">Util</span><span class="o">::</span><span class="n">toString</span><span class="p">(</span><span class="k">const</span> <span class="kt">int</span> <span class="n">number_</span><span class="p">)</span> <span class="p">{</span>
+<a name="line-5"></a><span class="hll">	<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">result</span><span class="p">;</span><span class='error2'>&lt;--- Add #include &lt;string&gt; for string  </span>
+</span><a name="line-6"></a>	<span class="n">std</span><span class="o">::</span><span class="n">ostringstream</span> <span class="n">oss</span><span class="p">;</span>
+<a name="line-7"></a>	<span class="n">oss</span><span class="p">.</span><span class="n">str</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">);</span>
+<a name="line-8"></a>	<span class="n">oss</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+<a name="line-9"></a>	<span class="n">oss</span> <span class="o">&lt;&lt;</span> <span class="n">number_</span><span class="p">;</span>
+<a name="line-10"></a>	<span class="n">result</span> <span class="o">=</span> <span class="n">oss</span><span class="p">.</span><span class="n">str</span><span class="p">();</span>
+<a name="line-11"></a>	<span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+<a name="line-12"></a><span class="p">}</span>
 </pre></div>
 </td></tr></table>
       </div>

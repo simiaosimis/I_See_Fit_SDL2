@@ -8,7 +8,6 @@ var searchData=
   ['getcameradistanceheight',['getCameraDistanceHeight',['../classConfiguration.html#a722602faba9b9a85986134b2e402ee2e',1,'Configuration']]],
   ['getcameradistancewidth',['getCameraDistanceWidth',['../classConfiguration.html#aca07033d9bb9876e06d41375efb9c0c7',1,'Configuration']]],
   ['getclip',['getClip',['../classCamera.html#a88cddc06987c3665a26a8d5c86f7d6c8',1,'Camera']]],
-  ['getcurrentframe',['getCurrentFrame',['../classAnimation.html#a56354acb39435a9d41fbeaa2e321eb25',1,'Animation']]],
   ['getheight',['getHeight',['../classGameObject.html#a0036a87bdab17027a635d570fb6cf34e',1,'GameObject::getHeight()'],['../classSprite.html#a02fcba350f07d226b110f7d0712f5154',1,'Sprite::getHeight()']]],
   ['getinput',['getInput',['../classGame.html#a76067c5eab048e88307d0a1c75328eda',1,'Game']]],
   ['getkeystates',['getKeyStates',['../classInputHandler.html#af7087290a2fd7d973a47768049cfe5eb',1,'InputHandler']]],

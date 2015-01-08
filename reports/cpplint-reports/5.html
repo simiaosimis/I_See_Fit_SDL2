@@ -107,12 +107,12 @@
   </head>
   <body onload="init_expandables()">
       <div id="header">
-        <h1>Cppcheck report - sdl2-engine: /home/travis/build/CaioIcy/sdl2-engine/src/ControllerHandler.h </h1>
+        <h1>Cppcheck report - sdl2-engine: /home/travis/build/CaioIcy/sdl2-engine/src/Configuration.cpp </h1>
       </div>
       <div id="menu" dir="rtl">
        <a href="index.html">Defect list</a>
        <br>
-<a href='5.html#line-17'> whitespace/indent 17</a><a href='5.html#line-18'> whitespace/indent 18</a><a href='5.html#line-19'> whitespace/indent 19</a><a href='5.html#line-20'> whitespace/indent 20</a><a href='5.html#line-22'> whitespace/indent 22</a><a href='5.html#line-23'> whitespace/indent 23</a><a href='5.html#line-24'> whitespace/indent 24</a><a href='5.html#line-26'> whitespace/indent 26</a><a href='5.html#line-27'> whitespace/indent 27</a><a href='5.html#line-29'> whitespace/indent 29</a><a href='5.html#line-30'> whitespace/indent 30</a><a href='5.html#line-32'> whitespace/indent 32</a><a href='5.html#line-33'> whitespace/indent 33</a><a href='5.html#line-34'> whitespace/indent 34</a><a href='5.html#line-35'> whitespace/indent 35</a><a href='5.html#line-37'> whitespace/indent 37</a><a href='5.html#line-38'> whitespace/indent 38</a><a href='5.html#line-51'> readability/namespace 51</a><a href='5.html#line-76'> runtime/references 76</a>
+<a href='5.html#line-46'> build/include_what_you_use 46</a>
       </div>
       <div id="content">
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -182,110 +182,74 @@
 65
 66
 67
-68
-69
-70
-71
-72
-73
-74
-75
-76
-77
-78
-79
-80
-81
-82
-83
-84
-85
-86</pre></div></td><td class="code"><div class="highlight"><pre><a name="line-1"></a><span class="cp">#pragma once</span>
+68</pre></div></td><td class="code"><div class="highlight"><pre><a name="line-1"></a><span class="cp">#include &quot;Configuration.h&quot;</span>
 <a name="line-2"></a>
-<a name="line-3"></a><span class="cp">#define CONTROLLERSTICK_DEAD_ZONE 8000</span>
-<a name="line-4"></a><span class="cp">#define TRIGGER_DEAD_ZONE 8000</span>
-<a name="line-5"></a>
-<a name="line-6"></a><span class="cp">#include &quot;SDL_Libs.h&quot;</span>
-<a name="line-7"></a><span class="cp">#include &quot;InputKeys.h&quot;</span>
-<a name="line-8"></a><span class="cp">#include &lt;array&gt;</span>
-<a name="line-9"></a>
-<a name="line-10"></a><span class="n">namespace</span> <span class="n">controllerMap</span> <span class="p">{</span>
-<a name="line-11"></a>
-<a name="line-12"></a>	<span class="cm">/**</span>
-<a name="line-13"></a><span class="cm">	* Button Enumeration for the Joystick</span>
-<a name="line-14"></a><span class="cm">	*/</span>
+<a name="line-3"></a>
+<a name="line-4"></a><span class="c1">// Resolution = 16:10</span>
+<a name="line-5"></a><span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">Configuration</span><span class="o">::</span><span class="n">resolutionWidth</span> <span class="o">=</span> <span class="mi">192</span><span class="p">;</span>
+<a name="line-6"></a><span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">Configuration</span><span class="o">::</span><span class="n">resolutionHeight</span> <span class="o">=</span> <span class="mi">108</span><span class="p">;</span>
+<a name="line-7"></a>
+<a name="line-8"></a><span class="kt">uint32_t</span> <span class="n">Configuration</span><span class="o">::</span><span class="n">maxFramerate</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<a name="line-9"></a><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">Configuration</span><span class="o">::</span><span class="n">windowTitle</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">;</span>
+<a name="line-10"></a><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">Configuration</span><span class="o">::</span><span class="n">logicalRenderSize</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<a name="line-11"></a><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">Configuration</span><span class="o">::</span><span class="n">screenWidth</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<a name="line-12"></a><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">Configuration</span><span class="o">::</span><span class="n">screenHeight</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<a name="line-13"></a><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">Configuration</span><span class="o">::</span><span class="n">cameraDistanceWidth</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<a name="line-14"></a><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">Configuration</span><span class="o">::</span><span class="n">cameraDistanceHeight</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 <a name="line-15"></a>
-<a name="line-16"></a>	<span class="k">enum</span> <span class="n">buttons</span> <span class="p">{</span>
-<a name="line-17"></a><span class="hll"> 		<span class="n">FACE_DOWN</span><span class="p">,</span> <span class="c1">// X on PS4 controller - 0</span><span class='error2'>&lt;--- Weird number of spaces at line-start.  Are you using a 2-space indent?  </span>
-</span><a name="line-18"></a><span class="hll"> 		<span class="n">FACE_RIGHT</span><span class="p">,</span> <span class="c1">// O on PS4 controller - 1</span><span class='error2'>&lt;--- Weird number of spaces at line-start.  Are you using a 2-space indent?  </span>
-</span><a name="line-19"></a><span class="hll"> 		<span class="n">FACE_LEFT</span><span class="p">,</span> <span class="c1">// [] on PS4 controller - 2</span><span class='error2'>&lt;--- Weird number of spaces at line-start.  Are you using a 2-space indent?  </span>
-</span><a name="line-20"></a><span class="hll"> 		<span class="n">FACE_UP</span><span class="p">,</span> <span class="c1">// /\ on PS4 controller - 3</span><span class='error2'>&lt;--- Weird number of spaces at line-start.  Are you using a 2-space indent?  </span>
-</span><a name="line-21"></a>
-<a name="line-22"></a><span class="hll"> 		<span class="n">SELECT</span><span class="p">,</span> <span class="c1">// SHARE on PS4 controller - 4</span><span class='error2'>&lt;--- Weird number of spaces at line-start.  Are you using a 2-space indent?  </span>
-</span><a name="line-23"></a><span class="hll"> 		<span class="n">HOME</span><span class="p">,</span> <span class="c1">// PS Button on PS4 controller - 5</span><span class='error2'>&lt;--- Weird number of spaces at line-start.  Are you using a 2-space indent?  </span>
-</span><a name="line-24"></a><span class="hll"> 		<span class="n">START</span><span class="p">,</span> <span class="c1">// OPTIONS on PS4 controller - 6</span><span class='error2'>&lt;--- Weird number of spaces at line-start.  Are you using a 2-space indent?  </span>
-</span><a name="line-25"></a>
-<a name="line-26"></a><span class="hll"> 		<span class="n">L3</span><span class="p">,</span> <span class="c1">// Left analogue button - 7</span><span class='error2'>&lt;--- Weird number of spaces at line-start.  Are you using a 2-space indent?  </span>
-</span><a name="line-27"></a><span class="hll"> 		<span class="n">R3</span><span class="p">,</span> <span class="c1">// Right analogue button  - 8</span><span class='error2'>&lt;--- Weird number of spaces at line-start.  Are you using a 2-space indent?  </span>
-</span><a name="line-28"></a>
-<a name="line-29"></a><span class="hll"> 		<span class="n">LDTRIGGER</span><span class="p">,</span> <span class="c1">// Left Digital Trigger - 9</span><span class='error2'>&lt;--- Weird number of spaces at line-start.  Are you using a 2-space indent?  </span>
-</span><a name="line-30"></a><span class="hll"> 		<span class="n">RDTRIGGER</span><span class="p">,</span> <span class="c1">// Right Digital Trigger  - 10</span><span class='error2'>&lt;--- Weird number of spaces at line-start.  Are you using a 2-space indent?  </span>
-</span><a name="line-31"></a>
-<a name="line-32"></a><span class="hll"> 		<span class="n">DUP</span><span class="p">,</span> <span class="c1">// D-Pad up - 11</span><span class='error2'>&lt;--- Weird number of spaces at line-start.  Are you using a 2-space indent?  </span>
-</span><a name="line-33"></a><span class="hll"> 		<span class="n">DDOWN</span><span class="p">,</span> <span class="c1">// D-Pad down - 12</span><span class='error2'>&lt;--- Weird number of spaces at line-start.  Are you using a 2-space indent?  </span>
-</span><a name="line-34"></a><span class="hll"> 		<span class="n">DLEFT</span><span class="p">,</span> <span class="c1">// D-Pad left - 13</span><span class='error2'>&lt;--- Weird number of spaces at line-start.  Are you using a 2-space indent?  </span>
-</span><a name="line-35"></a><span class="hll"> 		<span class="n">DRIGHT</span><span class="p">,</span> <span class="c1">// D-Pad rigth - 14</span><span class='error2'>&lt;--- Weird number of spaces at line-start.  Are you using a 2-space indent?  </span>
-</span><a name="line-36"></a>
-<a name="line-37"></a><span class="hll"> 		<span class="n">PRESSED</span><span class="p">,</span><span class='error2'>&lt;--- Weird number of spaces at line-start.  Are you using a 2-space indent?  </span>
-</span><a name="line-38"></a><span class="hll"> 		<span class="n">RELEASED</span><span class='error2'>&lt;--- Weird number of spaces at line-start.  Are you using a 2-space indent?  </span>
-</span><a name="line-39"></a>	<span class="p">};</span>
-<a name="line-40"></a>
-<a name="line-41"></a>	<span class="k">enum</span> <span class="n">axes</span> <span class="p">{</span>
-<a name="line-42"></a>		<span class="n">LHORIZONTAL</span><span class="p">,</span> <span class="c1">// Left Analogue Stick X - 0</span>
-<a name="line-43"></a>		<span class="n">LVERTICAL</span><span class="p">,</span> <span class="c1">// Left Analogue Stick Y - 1</span>
-<a name="line-44"></a>
-<a name="line-45"></a>		<span class="n">RHORIZONTAL</span><span class="p">,</span> <span class="c1">// Left Analogue Stick X - 2</span>
-<a name="line-46"></a>		<span class="n">RVERTICAL</span><span class="p">,</span> <span class="c1">// Left Analogue Stick Y - 3</span>
-<a name="line-47"></a>
-<a name="line-48"></a>		<span class="n">LATRIGGER</span><span class="p">,</span> <span class="c1">// Left Analogue Trigger - 4</span>
-<a name="line-49"></a>		<span class="n">RATRIGGER</span> <span class="c1">// Left Analogue Trigger Y - 5</span>
-<a name="line-50"></a>	<span class="p">};</span>
-<a name="line-51"></a><span class="hll"><span class="p">}</span><span class='error2'>&lt;--- Namespace should be terminated with &quot;// namespace controllerMap&quot;  </span>
-</span><a name="line-52"></a>
-<a name="line-53"></a><span class="cm">/**</span>
-<a name="line-54"></a><span class="cm">* The input handler for joysticks.</span>
-<a name="line-55"></a><span class="cm">*/</span>
-<a name="line-56"></a><span class="n">class</span> <span class="n">ControllerHandler</span> <span class="p">{</span>
+<a name="line-16"></a>
+<a name="line-17"></a><span class="kt">void</span> <span class="n">Configuration</span><span class="o">::</span><span class="n">initialize</span><span class="p">()</span> <span class="p">{</span>
+<a name="line-18"></a>	<span class="c1">/// @todo Read this information from a configuration file.</span>
+<a name="line-19"></a>	<span class="c1">/// @todo Make sure recieved integers are not negative.</span>
+<a name="line-20"></a>
+<a name="line-21"></a>	<span class="n">Configuration</span><span class="o">::</span><span class="n">maxFramerate</span> <span class="o">=</span> <span class="mi">60</span><span class="p">;</span>
+<a name="line-22"></a>	<span class="n">Configuration</span><span class="o">::</span><span class="n">windowTitle</span> <span class="o">=</span> <span class="s">&quot;sdl2-engine&quot;</span><span class="p">;</span>
+<a name="line-23"></a>	<span class="n">Configuration</span><span class="o">::</span><span class="n">logicalRenderSize</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
+<a name="line-24"></a>	<span class="n">Configuration</span><span class="o">::</span><span class="n">cameraDistanceWidth</span> <span class="o">=</span>
+<a name="line-25"></a>		<span class="n">Configuration</span><span class="o">::</span><span class="n">resolutionWidth</span> <span class="o">*</span> <span class="n">Configuration</span><span class="o">::</span><span class="n">logicalRenderSize</span><span class="p">;</span>
+<a name="line-26"></a>
+<a name="line-27"></a>	<span class="n">Configuration</span><span class="o">::</span><span class="n">cameraDistanceHeight</span> <span class="o">=</span>
+<a name="line-28"></a>		<span class="n">Configuration</span><span class="o">::</span><span class="n">resolutionHeight</span> <span class="o">*</span> <span class="n">Configuration</span><span class="o">::</span><span class="n">logicalRenderSize</span><span class="p">;</span>
+<a name="line-29"></a>
+<a name="line-30"></a>	<span class="n">Configuration</span><span class="o">::</span><span class="n">screenWidth</span> <span class="o">=</span> <span class="mi">1920</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+<a name="line-31"></a>	<span class="n">Configuration</span><span class="o">::</span><span class="n">screenHeight</span> <span class="o">=</span> <span class="mi">1080</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+<a name="line-32"></a><span class="p">}</span>
+<a name="line-33"></a>
+<a name="line-34"></a><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">Configuration</span><span class="o">::</span><span class="n">getResolutionWidth</span><span class="p">()</span> <span class="p">{</span>
+<a name="line-35"></a>	<span class="k">return</span> <span class="n">Configuration</span><span class="o">::</span><span class="n">resolutionWidth</span><span class="p">;</span>
+<a name="line-36"></a><span class="p">}</span>
+<a name="line-37"></a>
+<a name="line-38"></a><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">Configuration</span><span class="o">::</span><span class="n">getResolutionHeight</span><span class="p">()</span> <span class="p">{</span>
+<a name="line-39"></a>	<span class="k">return</span> <span class="n">Configuration</span><span class="o">::</span><span class="n">resolutionHeight</span><span class="p">;</span>
+<a name="line-40"></a><span class="p">}</span>
+<a name="line-41"></a>
+<a name="line-42"></a><span class="kt">uint32_t</span> <span class="n">Configuration</span><span class="o">::</span><span class="n">getMaxFramerate</span><span class="p">()</span> <span class="p">{</span>
+<a name="line-43"></a>	<span class="k">return</span> <span class="n">Configuration</span><span class="o">::</span><span class="n">maxFramerate</span><span class="p">;</span>
+<a name="line-44"></a><span class="p">}</span>
+<a name="line-45"></a>
+<a name="line-46"></a><span class="hll"><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">Configuration</span><span class="o">::</span><span class="n">getWindowTitle</span><span class="p">()</span> <span class="p">{</span><span class='error2'>&lt;--- Add #include &lt;string&gt; for string  </span>
+</span><a name="line-47"></a>	<span class="k">return</span> <span class="n">Configuration</span><span class="o">::</span><span class="n">windowTitle</span><span class="p">;</span>
+<a name="line-48"></a><span class="p">}</span>
+<a name="line-49"></a>
+<a name="line-50"></a><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">Configuration</span><span class="o">::</span><span class="n">getLogicalRenderSize</span><span class="p">()</span> <span class="p">{</span>
+<a name="line-51"></a>	<span class="k">return</span> <span class="n">Configuration</span><span class="o">::</span><span class="n">logicalRenderSize</span><span class="p">;</span>
+<a name="line-52"></a><span class="p">}</span>
+<a name="line-53"></a>
+<a name="line-54"></a><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">Configuration</span><span class="o">::</span><span class="n">getScreenWidth</span><span class="p">()</span> <span class="p">{</span>
+<a name="line-55"></a>	<span class="k">return</span> <span class="n">Configuration</span><span class="o">::</span><span class="n">screenWidth</span><span class="p">;</span>
+<a name="line-56"></a><span class="p">}</span>
 <a name="line-57"></a>
-<a name="line-58"></a>	<span class="nl">public</span><span class="p">:</span>
-<a name="line-59"></a>		<span class="cm">/**</span>
-<a name="line-60"></a><span class="cm">		* The constructor.</span>
-<a name="line-61"></a><span class="cm">		* Verifies if there is a joystick present.</span>
-<a name="line-62"></a><span class="cm">		*/</span>
-<a name="line-63"></a>		<span class="n">ControllerHandler</span><span class="p">();</span>
-<a name="line-64"></a>
-<a name="line-65"></a>		<span class="cm">/**</span>
-<a name="line-66"></a><span class="cm">		* The destructor.</span>
-<a name="line-67"></a><span class="cm">		*/</span>
-<a name="line-68"></a>		<span class="o">~</span><span class="n">ControllerHandler</span><span class="p">();</span>
-<a name="line-69"></a>
-<a name="line-70"></a>		<span class="cm">/**</span>
-<a name="line-71"></a><span class="cm">		* Handles controller the input.</span>
-<a name="line-72"></a><span class="cm">		* Detects the pending events, and simulates an appropriate KeyEvent by pushing one into</span>
-<a name="line-73"></a><span class="cm">		* 	a stack.</span>
-<a name="line-74"></a><span class="cm">		* @param sdlEvent_ : The SDL internal event structure.</span>
-<a name="line-75"></a><span class="cm">		*/</span>
-<a name="line-76"></a><span class="hll">		<span class="kt">void</span> <span class="nf">handleInput</span><span class="p">(</span><span class="n">SDL_Event</span><span class="o">&amp;</span> <span class="n">sdlEvent_</span><span class="p">);</span><span class='error2'>&lt;--- Is this a non-const reference? If so, make const or use a pointer: SDL_Event& sdlEvent_  </span>
-</span><a name="line-77"></a>
-<a name="line-78"></a>		<span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="kt">bool</span><span class="p">,</span> <span class="n">GameKeys</span><span class="o">::</span><span class="n">MAX</span><span class="o">&gt;</span> <span class="n">getKeyStates</span><span class="p">();</span>
-<a name="line-79"></a>
-<a name="line-80"></a>	<span class="nl">private</span><span class="p">:</span>
-<a name="line-81"></a>		<span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="kt">bool</span><span class="p">,</span> <span class="n">GameKeys</span><span class="o">::</span><span class="n">MAX</span><span class="o">&gt;</span> <span class="n">keyStates</span><span class="p">;</span> <span class="cm">/**&lt; Boolean array that controls which keys</span>
-<a name="line-82"></a><span class="cm">		are pressed or not. */</span>
-<a name="line-83"></a>
-<a name="line-84"></a>		<span class="n">SDL_GameController</span><span class="o">*</span> <span class="n">gameController</span><span class="p">;</span> <span class="cm">/**&lt; Pointer to the controller. */</span>
-<a name="line-85"></a>
-<a name="line-86"></a><span class="p">};</span>
+<a name="line-58"></a><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">Configuration</span><span class="o">::</span><span class="n">getScreenHeight</span><span class="p">()</span> <span class="p">{</span>
+<a name="line-59"></a>	<span class="k">return</span> <span class="n">Configuration</span><span class="o">::</span><span class="n">screenHeight</span><span class="p">;</span>
+<a name="line-60"></a><span class="p">}</span>
+<a name="line-61"></a>
+<a name="line-62"></a><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">Configuration</span><span class="o">::</span><span class="n">getCameraDistanceWidth</span><span class="p">()</span> <span class="p">{</span>
+<a name="line-63"></a>	<span class="k">return</span> <span class="n">Configuration</span><span class="o">::</span><span class="n">cameraDistanceWidth</span><span class="p">;</span>
+<a name="line-64"></a><span class="p">}</span>
+<a name="line-65"></a>
+<a name="line-66"></a><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">Configuration</span><span class="o">::</span><span class="n">getCameraDistanceHeight</span><span class="p">()</span> <span class="p">{</span>
+<a name="line-67"></a>	<span class="k">return</span> <span class="n">Configuration</span><span class="o">::</span><span class="n">cameraDistanceHeight</span><span class="p">;</span>
+<a name="line-68"></a><span class="p">}</span>
 </pre></div>
 </td></tr></table>
       </div>

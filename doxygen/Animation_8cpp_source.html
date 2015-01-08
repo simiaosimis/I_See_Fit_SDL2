@@ -33,7 +33,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v11</span>
+   &#160;<span id="projectnumber">v12</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -99,96 +99,117 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;Animation.h&quot;</span>
-<a name="l00002"></a>00002 
-<a name="l00003"></a><a class="code" href="classAnimation.html#a6a64a03b291d22ab4c747470b74b8531">00003</a> <a class="code" href="classAnimation.html#a6a64a03b291d22ab4c747470b74b8531" title="The constructor.">Animation::Animation</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> x_, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> y_,
-<a name="l00004"></a>00004     <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> spriteWidth_, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> spriteHeight_,
-<a name="l00005"></a>00005     <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> numberOfImages_, <span class="keyword">const</span> <span class="keywordtype">double</span> totalTime_) :
-<a name="l00006"></a>00006 
-<a name="l00007"></a>00007     x(x_),
-<a name="l00008"></a>00008     y(y_),
-<a name="l00009"></a>00009     initialX(x_),
-<a name="l00010"></a>00010     initialY(y_),
-<a name="l00011"></a>00011     spriteWidth(spriteWidth_),
-<a name="l00012"></a>00012     spriteHeight(spriteHeight_),
-<a name="l00013"></a>00013     numberOfImages(numberOfImages_),
-<a name="l00014"></a>00014     totalElapsedTime(0.0),
-<a name="l00015"></a>00015     totalTime(totalTime_),
-<a name="l00016"></a>00016     animationCount(0)
-<a name="l00017"></a>00017 {
-<a name="l00018"></a>00018     this-&gt;<a class="code" href="classAnimation.html#af20f66365564581376b13cf776d0aae1" title="The number of images to animate inside the spritesheet.">numberOfImages</a> = (numberOfImages_ == 0) ? 1 : numberOfImages_;
-<a name="l00019"></a>00019 }
-<a name="l00020"></a>00020 
-<a name="l00021"></a><a class="code" href="classAnimation.html#a401b68793d4fbf48d481c030ee4b2a16">00021</a> <a class="code" href="classAnimation.html#a401b68793d4fbf48d481c030ee4b2a16" title="The destructor.">Animation::~Animation</a>() {
-<a name="l00022"></a>00022 
-<a name="l00023"></a>00023 }
-<a name="l00024"></a>00024 
-<a name="l00025"></a><a class="code" href="classAnimation.html#a7017337003829eef3787b4a10a31e8fb">00025</a> <span class="keywordtype">void</span> <a class="code" href="classAnimation.html#a7017337003829eef3787b4a10a31e8fb" title="Updates the animation clip.">Animation::update</a>(SDL_Rect&amp; clip, <span class="keyword">const</span> <span class="keywordtype">double</span> dt_) {
-<a name="l00026"></a>00026     <span class="comment">// Compare the position on the sprite with the number of positions to know if is the</span>
-<a name="l00027"></a>00027     <span class="comment">// end of the animation.</span>
-<a name="l00028"></a>00028     <span class="keyword">const</span> <span class="keywordtype">bool</span> endOfAnimation = (<a class="code" href="classAnimation.html#a56354acb39435a9d41fbeaa2e321eb25">getCurrentFrame</a>() &gt;= this-&gt;<a class="code" href="classAnimation.html#af20f66365564581376b13cf776d0aae1" title="The number of images to animate inside the spritesheet.">numberOfImages</a>);
-<a name="l00029"></a>00029 
-<a name="l00030"></a>00030     <span class="keyword">const</span> <span class="keywordtype">double</span> timeForEachFrame = (this-&gt;<a class="code" href="classAnimation.html#a6315668e311f54415bdd708b076bb35d" title="Total time in seconds for each animation loop.">totalTime</a> / this-&gt;<a class="code" href="classAnimation.html#af20f66365564581376b13cf776d0aae1" title="The number of images to animate inside the spritesheet.">numberOfImages</a>);
+<a name="l00002"></a>00002 <span class="preprocessor">#include &lt;cassert&gt;</span>
+<a name="l00003"></a>00003 
+<a name="l00004"></a><a class="code" href="classAnimation.html#af43c723abf0f83a1bd71dd83cff7841e">00004</a> <a class="code" href="classAnimation.html#af43c723abf0f83a1bd71dd83cff7841e" title="The constructor.">Animation::Animation</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> x, <span class="keyword">const</span> <span class="keywordtype">int</span> y, <span class="keyword">const</span> <span class="keywordtype">int</span> sprite_width, <span class="keyword">const</span> <span class="keywordtype">int</span> sprite_height,
+<a name="l00005"></a>00005         <span class="keyword">const</span> <span class="keywordtype">int</span> number_of_images, <span class="keyword">const</span> <span class="keywordtype">double</span> total_time) :
+<a name="l00006"></a>00006     m_x{x},
+<a name="l00007"></a>00007     m_y{y},
+<a name="l00008"></a>00008     m_initial_x{x},
+<a name="l00009"></a>00009     m_initial_y{y},
+<a name="l00010"></a>00010     m_sprite_width{sprite_width},
+<a name="l00011"></a>00011     m_sprite_height{sprite_height},
+<a name="l00012"></a>00012     m_number_of_images{(number_of_images == 0) ? 1 : number_of_images},
+<a name="l00013"></a>00013     m_total_elapsed_time{0.0},
+<a name="l00014"></a>00014     m_total_time{total_time},
+<a name="l00015"></a>00015     m_animation_count{0}
+<a name="l00016"></a>00016 {
+<a name="l00017"></a>00017     assert(m_x &gt;= 0                  &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);
+<a name="l00018"></a>00018     assert(m_y &gt;= 0                  &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);
+<a name="l00019"></a>00019     assert(m_initial_x &gt;= 0          &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);
+<a name="l00020"></a>00020     assert(m_initial_y &gt;= 0          &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);
+<a name="l00021"></a>00021     assert(m_sprite_width &gt;= 0       &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);
+<a name="l00022"></a>00022     assert(m_sprite_height &gt;= 0      &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);
+<a name="l00023"></a>00023     assert(m_number_of_images &gt;= 1   &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 1&quot;</span>);
+<a name="l00024"></a>00024     assert(m_total_elapsed_time &gt;= 0 &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);
+<a name="l00025"></a>00025     assert(m_total_time &gt;= 0         &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);
+<a name="l00026"></a>00026     assert(m_animation_count &gt;= 0    &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);
+<a name="l00027"></a>00027 }
+<a name="l00028"></a>00028 
+<a name="l00029"></a>00029 <a class="code" href="classAnimation.html#a401b68793d4fbf48d481c030ee4b2a16" title="The destructor.">Animation::~Animation</a>() {
+<a name="l00030"></a>00030 }
 <a name="l00031"></a>00031 
-<a name="l00032"></a>00032     this-&gt;<a class="code" href="classAnimation.html#a23cf823fb939c2ed05a98e5a1239bac1" title="Total time elapsed on the animation, to check if the frame changed.">totalElapsedTime</a> += dt_;
-<a name="l00033"></a>00033 
-<a name="l00034"></a>00034     <span class="comment">// Check if the frame has changed.</span>
-<a name="l00035"></a>00035     <span class="keywordflow">if</span>(this-&gt;<a class="code" href="classAnimation.html#a23cf823fb939c2ed05a98e5a1239bac1" title="Total time elapsed on the animation, to check if the frame changed.">totalElapsedTime</a> &gt;= timeForEachFrame) {
-<a name="l00036"></a>00036         this-&gt;<a class="code" href="classAnimation.html#a23cf823fb939c2ed05a98e5a1239bac1" title="Total time elapsed on the animation, to check if the frame changed.">totalElapsedTime</a> = 0;
-<a name="l00037"></a>00037         this-&gt;<a class="code" href="classAnimation.html#a1e6128b6da5ccb39a73cb8bca0faaf6f" title="Index of the current image relative to the number of images.">animationCount</a> += 1;
-<a name="l00038"></a>00038 
-<a name="l00039"></a>00039         <span class="comment">// Apparently defines the max horizontal sprites in the spritesheet.</span>
-<a name="l00040"></a>00040         <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> animationLimit = 10;
-<a name="l00041"></a>00041 
-<a name="l00042"></a>00042         <span class="keywordflow">if</span>(this-&gt;animationCount &lt;= this-&gt;<a class="code" href="classAnimation.html#af20f66365564581376b13cf776d0aae1" title="The number of images to animate inside the spritesheet.">numberOfImages</a>) {
-<a name="l00043"></a>00043             <span class="keywordflow">if</span>(this-&gt;<a class="code" href="classAnimation.html#a9639a9e1352cb0e0e853149171c44840" title="The position on x axis on the sprite.">x</a> &lt; animationLimit) {
-<a name="l00044"></a>00044                 this-&gt;<a class="code" href="classAnimation.html#a9639a9e1352cb0e0e853149171c44840" title="The position on x axis on the sprite.">x</a> += 1;
-<a name="l00045"></a>00045             }
-<a name="l00046"></a>00046             <span class="keywordflow">else</span> {
-<a name="l00047"></a>00047                 this-&gt;<a class="code" href="classAnimation.html#aaf9cc4d9267529d4e19f6380d4623805" title="The position on x axis on the sprite.">y</a> += 1;
-<a name="l00048"></a>00048                 this-&gt;<a class="code" href="classAnimation.html#a9639a9e1352cb0e0e853149171c44840" title="The position on x axis on the sprite.">x</a> = 0;
-<a name="l00049"></a>00049             }
-<a name="l00050"></a>00050         }
-<a name="l00051"></a>00051 
-<a name="l00052"></a>00052         <span class="keywordflow">if</span>(endOfAnimation) {
-<a name="l00053"></a>00053             this-&gt;<a class="code" href="classAnimation.html#a9639a9e1352cb0e0e853149171c44840" title="The position on x axis on the sprite.">x</a> = this-&gt;<a class="code" href="classAnimation.html#aaf8398cc1bd20bcb4fe834f6462af8b8" title="Where to start/restart the animation on x.">initialX</a>;
-<a name="l00054"></a>00054             this-&gt;<a class="code" href="classAnimation.html#aaf9cc4d9267529d4e19f6380d4623805" title="The position on x axis on the sprite.">y</a> = this-&gt;<a class="code" href="classAnimation.html#a367086d31c5d7bf8b5b73cb8301607b7" title="Where to start/restart the animation on y.">initialY</a>;
-<a name="l00055"></a>00055             this-&gt;<a class="code" href="classAnimation.html#a1e6128b6da5ccb39a73cb8bca0faaf6f" title="Index of the current image relative to the number of images.">animationCount</a> = 0;
-<a name="l00056"></a>00056         }
-<a name="l00057"></a>00057     }
-<a name="l00058"></a>00058 
-<a name="l00059"></a>00059     <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> positionX_ = this-&gt;<a class="code" href="classAnimation.html#a9639a9e1352cb0e0e853149171c44840" title="The position on x axis on the sprite.">x</a> * this-&gt;<a class="code" href="classAnimation.html#a313a8988b9eb64f84dcb3dcb2b4b17d1" title="The sprite width.">spriteWidth</a>;
-<a name="l00060"></a>00060     <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> positionY_ = this-&gt;<a class="code" href="classAnimation.html#aaf9cc4d9267529d4e19f6380d4623805" title="The position on x axis on the sprite.">y</a> * this-&gt;<a class="code" href="classAnimation.html#abcdcc399e4459bcbcd1a93818fefb3cc" title="The sprite height.">spriteHeight</a>;
-<a name="l00061"></a>00061 
-<a name="l00062"></a>00062     <a class="code" href="classAnimation.html#ad86524ca999883c40965d04990a2762e" title="Updates the clip to a new position.">updateClip</a>(clip, positionX_, positionY_);
-<a name="l00063"></a>00063 }
-<a name="l00064"></a>00064 
-<a name="l00065"></a><a class="code" href="classAnimation.html#a633f597780d760edf4d8852538b894c0">00065</a> <span class="keywordtype">void</span> <a class="code" href="classAnimation.html#a633f597780d760edf4d8852538b894c0" title="Changes the animation to another.">Animation::changeAnimation</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> x_, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> y_,
-<a name="l00066"></a>00066     <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> numberOfImages_, <span class="keyword">const</span> <span class="keywordtype">double</span> totalTime_) {
-<a name="l00067"></a>00067 
-<a name="l00068"></a>00068     this-&gt;<a class="code" href="classAnimation.html#a9639a9e1352cb0e0e853149171c44840" title="The position on x axis on the sprite.">x</a> = x_;
-<a name="l00069"></a>00069     this-&gt;<a class="code" href="classAnimation.html#aaf9cc4d9267529d4e19f6380d4623805" title="The position on x axis on the sprite.">y</a> = y_;
-<a name="l00070"></a>00070     this-&gt;<a class="code" href="classAnimation.html#aaf8398cc1bd20bcb4fe834f6462af8b8" title="Where to start/restart the animation on x.">initialX</a> = x_;
-<a name="l00071"></a>00071     this-&gt;<a class="code" href="classAnimation.html#a367086d31c5d7bf8b5b73cb8301607b7" title="Where to start/restart the animation on y.">initialY</a> = y_;
-<a name="l00072"></a>00072     this-&gt;<a class="code" href="classAnimation.html#af20f66365564581376b13cf776d0aae1" title="The number of images to animate inside the spritesheet.">numberOfImages</a> = (numberOfImages_ == 0) ? 1 : numberOfImages_;
-<a name="l00073"></a>00073     this-&gt;<a class="code" href="classAnimation.html#a6315668e311f54415bdd708b076bb35d" title="Total time in seconds for each animation loop.">totalTime</a> = totalTime_;
-<a name="l00074"></a>00074     this-&gt;<a class="code" href="classAnimation.html#a1e6128b6da5ccb39a73cb8bca0faaf6f" title="Index of the current image relative to the number of images.">animationCount</a> = 0;
-<a name="l00075"></a>00075 }
-<a name="l00076"></a>00076 
-<a name="l00077"></a><a class="code" href="classAnimation.html#ad86524ca999883c40965d04990a2762e">00077</a> <span class="keywordtype">void</span> <a class="code" href="classAnimation.html#ad86524ca999883c40965d04990a2762e" title="Updates the clip to a new position.">Animation::updateClip</a>(SDL_Rect&amp; clip, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> x_, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> y_) {
-<a name="l00078"></a>00078     clip.x = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(x_);
-<a name="l00079"></a>00079     clip.y = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(y_);
-<a name="l00080"></a>00080     clip.w = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(this-&gt;<a class="code" href="classAnimation.html#a313a8988b9eb64f84dcb3dcb2b4b17d1" title="The sprite width.">spriteWidth</a>);
-<a name="l00081"></a>00081     clip.h = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(this-&gt;<a class="code" href="classAnimation.html#abcdcc399e4459bcbcd1a93818fefb3cc" title="The sprite height.">spriteHeight</a>);
-<a name="l00082"></a>00082 }
-<a name="l00083"></a>00083 
-<a name="l00084"></a><a class="code" href="classAnimation.html#a56354acb39435a9d41fbeaa2e321eb25">00084</a> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classAnimation.html#a56354acb39435a9d41fbeaa2e321eb25">Animation::getCurrentFrame</a>() {
-<a name="l00085"></a>00085     <span class="keywordflow">return</span> (this-&gt;<a class="code" href="classAnimation.html#a1e6128b6da5ccb39a73cb8bca0faaf6f" title="Index of the current image relative to the number of images.">animationCount</a> + 1);
-<a name="l00086"></a>00086 }
-<a name="l00087"></a>00087 
-<a name="l00088"></a><a class="code" href="classAnimation.html#a230bc5afad74e9d4ee9213e8eb49685f">00088</a> <span class="keywordtype">void</span> <a class="code" href="classAnimation.html#a230bc5afad74e9d4ee9213e8eb49685f" title="Changes the dimensions of the clip on the spritesheet.">Animation::changeWidthHeight</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> width_, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> height_) {
-<a name="l00089"></a>00089     this-&gt;<a class="code" href="classAnimation.html#a313a8988b9eb64f84dcb3dcb2b4b17d1" title="The sprite width.">spriteWidth</a> = width_;
-<a name="l00090"></a>00090     this-&gt;<a class="code" href="classAnimation.html#abcdcc399e4459bcbcd1a93818fefb3cc" title="The sprite height.">spriteHeight</a> = height_;
-<a name="l00091"></a>00091 }
+<a name="l00032"></a>00032 <span class="keywordtype">void</span> <a class="code" href="classAnimation.html#ae252ccc56d5bc314891406d1c35d0960" title="Updates the animation clip.">Animation::Update</a>(SDL_Rect&amp; clip, <span class="keyword">const</span> <span class="keywordtype">double</span> delta_time) {
+<a name="l00033"></a>00033     <span class="comment">// Compare the position on the sprite with the number of positions to know if is the</span>
+<a name="l00034"></a>00034     <span class="comment">// end of the animation.</span>
+<a name="l00035"></a>00035     <span class="keyword">const</span> <span class="keywordtype">bool</span> k_end_of_animation = (<a class="code" href="classAnimation.html#af77b1bda4e1129c743da1d32197f400d">CurrentFrame</a>() &gt;= <a class="code" href="classAnimation.html#af4689e9b23f8d0db85f7b4c259457d04" title="The number of images to animate inside the spritesheet.">m_number_of_images</a>);
+<a name="l00036"></a>00036     <span class="keyword">const</span> <span class="keywordtype">double</span> k_time_for_each_frame = (<a class="code" href="classAnimation.html#a685e8622d6e1e5f8728a7962c97650be" title="Total time in seconds for each animation loop.">m_total_time</a> / <a class="code" href="classAnimation.html#af4689e9b23f8d0db85f7b4c259457d04" title="The number of images to animate inside the spritesheet.">m_number_of_images</a>);
+<a name="l00037"></a>00037 
+<a name="l00038"></a>00038     <a class="code" href="classAnimation.html#af1e90acbc50f30e1a2d30fbf6438d91a" title="Total time elapsed on the animation, to check if the frame changed.">m_total_elapsed_time</a> += delta_time;
+<a name="l00039"></a>00039 
+<a name="l00040"></a>00040     <span class="comment">// Check if the frame has changed.</span>
+<a name="l00041"></a>00041     <span class="keywordflow">if</span>(<a class="code" href="classAnimation.html#af1e90acbc50f30e1a2d30fbf6438d91a" title="Total time elapsed on the animation, to check if the frame changed.">m_total_elapsed_time</a> &gt;= k_time_for_each_frame) {
+<a name="l00042"></a>00042         <a class="code" href="classAnimation.html#af1e90acbc50f30e1a2d30fbf6438d91a" title="Total time elapsed on the animation, to check if the frame changed.">m_total_elapsed_time</a> = 0;
+<a name="l00043"></a>00043         <a class="code" href="classAnimation.html#a1fc4107edaf976258ad769b23bcfd172" title="Index of the current image relative to the number of images.">m_animation_count</a> += 1;
+<a name="l00044"></a>00044 
+<a name="l00045"></a>00045         <span class="comment">// Apparently defines the max horizontal sprites in the spritesheet.</span>
+<a name="l00047"></a>00047 <span class="comment"></span>        <span class="keyword">const</span> <span class="keywordtype">int</span> k_animation_limit = 10;
+<a name="l00048"></a>00048         assert(k_animation_limit &gt;= 0 &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);
+<a name="l00049"></a>00049 
+<a name="l00050"></a>00050         <span class="keywordflow">if</span>(<a class="code" href="classAnimation.html#a1fc4107edaf976258ad769b23bcfd172" title="Index of the current image relative to the number of images.">m_animation_count</a> &lt;= <a class="code" href="classAnimation.html#af4689e9b23f8d0db85f7b4c259457d04" title="The number of images to animate inside the spritesheet.">m_number_of_images</a>) {
+<a name="l00051"></a>00051             <span class="keywordflow">if</span>(<a class="code" href="classAnimation.html#a2865bfd75a6998dbfdef9ec236941c3f" title="The position on x axis on the sprite.">m_x</a> &lt; k_animation_limit) {
+<a name="l00052"></a>00052                 <a class="code" href="classAnimation.html#a2865bfd75a6998dbfdef9ec236941c3f" title="The position on x axis on the sprite.">m_x</a> += 1;
+<a name="l00053"></a>00053             }
+<a name="l00054"></a>00054             <span class="keywordflow">else</span> {
+<a name="l00055"></a>00055                 <a class="code" href="classAnimation.html#a4530e5f9e7b90e17774273c22e5212bd" title="The position on x axis on the sprite.">m_y</a> += 1;
+<a name="l00056"></a>00056                 <a class="code" href="classAnimation.html#a2865bfd75a6998dbfdef9ec236941c3f" title="The position on x axis on the sprite.">m_x</a> = 0;
+<a name="l00057"></a>00057             }
+<a name="l00058"></a>00058         }
+<a name="l00059"></a>00059 
+<a name="l00060"></a>00060         <span class="keywordflow">if</span>(k_end_of_animation) {
+<a name="l00061"></a>00061             <a class="code" href="classAnimation.html#a2865bfd75a6998dbfdef9ec236941c3f" title="The position on x axis on the sprite.">m_x</a> = <a class="code" href="classAnimation.html#a4b6af681755538265d8a021e95c47937" title="Where to start/restart the animation on x.">m_initial_x</a>;
+<a name="l00062"></a>00062             <a class="code" href="classAnimation.html#a4530e5f9e7b90e17774273c22e5212bd" title="The position on x axis on the sprite.">m_y</a> = <a class="code" href="classAnimation.html#a2aff0a2348feee0d1cee57ebf3374004" title="Where to start/restart the animation on y.">m_initial_y</a>;
+<a name="l00063"></a>00063             <a class="code" href="classAnimation.html#a1fc4107edaf976258ad769b23bcfd172" title="Index of the current image relative to the number of images.">m_animation_count</a> = 0;
+<a name="l00064"></a>00064         }
+<a name="l00065"></a>00065     }
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067     <span class="keyword">const</span> <span class="keywordtype">int</span> k_position_x = <a class="code" href="classAnimation.html#a2865bfd75a6998dbfdef9ec236941c3f" title="The position on x axis on the sprite.">m_x</a> * <a class="code" href="classAnimation.html#adc29af12fe9271f6e3ae1c5e352b9e7d" title="The sprite width.">m_sprite_width</a>;
+<a name="l00068"></a>00068     <span class="keyword">const</span> <span class="keywordtype">int</span> k_position_y = <a class="code" href="classAnimation.html#a4530e5f9e7b90e17774273c22e5212bd" title="The position on x axis on the sprite.">m_y</a> * <a class="code" href="classAnimation.html#acbf3b1bdaec5696640c01049b937c864" title="The sprite height.">m_sprite_height</a>;
+<a name="l00069"></a>00069     <a class="code" href="classAnimation.html#ac50d5816cd4a1acdf83a98945a1b57ca" title="Updates the clip to a new position.">UpdateClip</a>(clip, k_position_x, k_position_y);
+<a name="l00070"></a>00070 }
+<a name="l00071"></a>00071 
+<a name="l00072"></a>00072 <span class="keywordtype">void</span> <a class="code" href="classAnimation.html#aeb9e022d9ee9d0b76e538dcfba420e4b" title="Changes the animation to another.">Animation::ChangeAnimation</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> x, <span class="keyword">const</span> <span class="keywordtype">int</span> y, <span class="keyword">const</span> <span class="keywordtype">int</span> number_of_images,
+<a name="l00073"></a>00073         <span class="keyword">const</span> <span class="keywordtype">double</span> total_time) {
+<a name="l00074"></a>00074     <a class="code" href="classAnimation.html#a2865bfd75a6998dbfdef9ec236941c3f" title="The position on x axis on the sprite.">m_x</a> = x;
+<a name="l00075"></a>00075     <a class="code" href="classAnimation.html#a4530e5f9e7b90e17774273c22e5212bd" title="The position on x axis on the sprite.">m_y</a> = y;
+<a name="l00076"></a>00076     <a class="code" href="classAnimation.html#a4b6af681755538265d8a021e95c47937" title="Where to start/restart the animation on x.">m_initial_x</a> = x;
+<a name="l00077"></a>00077     <a class="code" href="classAnimation.html#a2aff0a2348feee0d1cee57ebf3374004" title="Where to start/restart the animation on y.">m_initial_y</a> = y;
+<a name="l00078"></a>00078     <a class="code" href="classAnimation.html#af4689e9b23f8d0db85f7b4c259457d04" title="The number of images to animate inside the spritesheet.">m_number_of_images</a> = (number_of_images == 0) ? 1 : number_of_images;
+<a name="l00079"></a>00079     <a class="code" href="classAnimation.html#a685e8622d6e1e5f8728a7962c97650be" title="Total time in seconds for each animation loop.">m_total_time</a> = total_time;
+<a name="l00080"></a>00080     <a class="code" href="classAnimation.html#a1fc4107edaf976258ad769b23bcfd172" title="Index of the current image relative to the number of images.">m_animation_count</a> = 0;
+<a name="l00081"></a>00081 
+<a name="l00082"></a>00082     assert(<a class="code" href="classAnimation.html#a2865bfd75a6998dbfdef9ec236941c3f" title="The position on x axis on the sprite.">m_x</a> &gt;= 0                  &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);
+<a name="l00083"></a>00083     assert(<a class="code" href="classAnimation.html#a4530e5f9e7b90e17774273c22e5212bd" title="The position on x axis on the sprite.">m_y</a> &gt;= 0                  &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);
+<a name="l00084"></a>00084     assert(<a class="code" href="classAnimation.html#a4b6af681755538265d8a021e95c47937" title="Where to start/restart the animation on x.">m_initial_x</a> &gt;= 0          &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);
+<a name="l00085"></a>00085     assert(<a class="code" href="classAnimation.html#a2aff0a2348feee0d1cee57ebf3374004" title="Where to start/restart the animation on y.">m_initial_y</a> &gt;= 0          &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);
+<a name="l00086"></a>00086     assert(<a class="code" href="classAnimation.html#af4689e9b23f8d0db85f7b4c259457d04" title="The number of images to animate inside the spritesheet.">m_number_of_images</a> &gt;= 1   &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 1&quot;</span>);
+<a name="l00087"></a>00087     assert(<a class="code" href="classAnimation.html#a685e8622d6e1e5f8728a7962c97650be" title="Total time in seconds for each animation loop.">m_total_time</a> &gt;= 0         &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);
+<a name="l00088"></a>00088     assert(<a class="code" href="classAnimation.html#a1fc4107edaf976258ad769b23bcfd172" title="Index of the current image relative to the number of images.">m_animation_count</a> &gt;= 0    &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);
+<a name="l00089"></a>00089 }
+<a name="l00090"></a>00090 
+<a name="l00091"></a>00091 <span class="keywordtype">void</span> <a class="code" href="classAnimation.html#ac50d5816cd4a1acdf83a98945a1b57ca" title="Updates the clip to a new position.">Animation::UpdateClip</a>(SDL_Rect&amp; clip, <span class="keyword">const</span> <span class="keywordtype">int</span> x, <span class="keyword">const</span> <span class="keywordtype">int</span> y) {
+<a name="l00092"></a>00092     assert(x &gt;= 0 &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);
+<a name="l00093"></a>00093     assert(y &gt;= 0 &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);
+<a name="l00094"></a>00094 
+<a name="l00095"></a>00095     clip.x = x;
+<a name="l00096"></a>00096     clip.y = y;
+<a name="l00097"></a>00097     clip.w = <a class="code" href="classAnimation.html#adc29af12fe9271f6e3ae1c5e352b9e7d" title="The sprite width.">m_sprite_width</a>;
+<a name="l00098"></a>00098     clip.h = <a class="code" href="classAnimation.html#acbf3b1bdaec5696640c01049b937c864" title="The sprite height.">m_sprite_height</a>;
+<a name="l00099"></a>00099 }
+<a name="l00100"></a>00100 
+<a name="l00101"></a>00101 <span class="keywordtype">int</span> <a class="code" href="classAnimation.html#af77b1bda4e1129c743da1d32197f400d">Animation::CurrentFrame</a>() {
+<a name="l00102"></a>00102     <span class="keyword">const</span> <span class="keywordtype">int</span> k_current_frame = <a class="code" href="classAnimation.html#a1fc4107edaf976258ad769b23bcfd172" title="Index of the current image relative to the number of images.">m_animation_count</a> + 1;
+<a name="l00103"></a>00103     assert(k_current_frame &gt;= 0 &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);
+<a name="l00104"></a>00104     <span class="keywordflow">return</span> k_current_frame;
+<a name="l00105"></a>00105 }
+<a name="l00106"></a>00106 
+<a name="l00107"></a>00107 <span class="keywordtype">void</span> <a class="code" href="classAnimation.html#a408200db42a46e18f478841a8ee108d4" title="Changes the dimensions of the clip on the spritesheet.">Animation::SetWidthHeight</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> width, <span class="keyword">const</span> <span class="keywordtype">int</span> height) {
+<a name="l00108"></a>00108     <a class="code" href="classAnimation.html#adc29af12fe9271f6e3ae1c5e352b9e7d" title="The sprite width.">m_sprite_width</a> = width;
+<a name="l00109"></a>00109     <a class="code" href="classAnimation.html#acbf3b1bdaec5696640c01049b937c864" title="The sprite height.">m_sprite_height</a> = height;
+<a name="l00110"></a>00110 
+<a name="l00111"></a>00111     assert(<a class="code" href="classAnimation.html#adc29af12fe9271f6e3ae1c5e352b9e7d" title="The sprite width.">m_sprite_width</a> &gt;= 0  &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);
+<a name="l00112"></a>00112     assert(<a class="code" href="classAnimation.html#acbf3b1bdaec5696640c01049b937c864" title="The sprite height.">m_sprite_height</a> &gt;= 0 &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);
+<a name="l00113"></a>00113 }
 </pre></div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -209,7 +230,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><b>Animation.cpp</b>      </li>
 
-    <li class="footer">Generated on Wed Jan 7 2015 23:51:55 for sdl2-engine by
+    <li class="footer">Generated on Thu Jan 8 2015 23:55:10 for sdl2-engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

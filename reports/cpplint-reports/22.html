@@ -107,37 +107,27 @@
   </head>
   <body onload="init_expandables()">
       <div id="header">
-        <h1>Cppcheck report - sdl2-engine: /home/travis/build/CaioIcy/sdl2-engine/src/Util.cpp </h1>
+        <h1>Cppcheck report - sdl2-engine: /home/travis/build/CaioIcy/sdl2-engine/src/SpriteManager.cpp </h1>
       </div>
       <div id="menu" dir="rtl">
        <a href="index.html">Defect list</a>
        <br>
-<a href='22.html#line-5'> build/include_what_you_use 5</a>
+<a href='22.html#line-3'> build/include_what_you_use 3</a>
       </div>
       <div id="content">
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12</pre></div></td><td class="code"><div class="highlight"><pre><a name="line-1"></a><span class="cp">#include &quot;Util.h&quot;</span>
-<a name="line-2"></a><span class="cp">#include &lt;sstream&gt;</span>
-<a name="line-3"></a>
-<a name="line-4"></a><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">Util</span><span class="o">::</span><span class="n">toString</span><span class="p">(</span><span class="k">const</span> <span class="kt">int</span> <span class="n">number_</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-5"></a><span class="hll">	<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">result</span><span class="p">;</span><span class='error2'>&lt;--- Add #include &lt;string&gt; for string  </span>
-</span><a name="line-6"></a>	<span class="n">std</span><span class="o">::</span><span class="n">ostringstream</span> <span class="n">oss</span><span class="p">;</span>
-<a name="line-7"></a>	<span class="n">oss</span><span class="p">.</span><span class="n">str</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">);</span>
-<a name="line-8"></a>	<span class="n">oss</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
-<a name="line-9"></a>	<span class="n">oss</span> <span class="o">&lt;&lt;</span> <span class="n">number_</span><span class="p">;</span>
-<a name="line-10"></a>	<span class="n">result</span> <span class="o">=</span> <span class="n">oss</span><span class="p">.</span><span class="n">str</span><span class="p">();</span>
-<a name="line-11"></a>	<span class="k">return</span> <span class="n">result</span><span class="p">;</span>
-<a name="line-12"></a><span class="p">}</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><a name="line-1"></a><span class="cp">#include &quot;SpriteManager.h&quot;</span>
+<a name="line-2"></a>
+<a name="line-3"></a><span class="hll"><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Sprite</span><span class="o">&gt;</span> <span class="n">SpriteManager</span><span class="o">::</span><span class="n">load</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">path_</span><span class="p">)</span> <span class="p">{</span><span class='error2'>&lt;--- Add #include &lt;string&gt; for string  </span>
+</span><a name="line-4"></a>	<span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Sprite</span><span class="o">&gt;</span> <span class="n">sprite</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">Sprite</span><span class="o">&gt;</span><span class="p">(</span><span class="n">path_</span><span class="p">);</span>
+<a name="line-5"></a>	<span class="n">registerResource</span><span class="p">(</span><span class="n">path_</span><span class="p">,</span> <span class="n">sprite</span><span class="p">);</span>
+<a name="line-6"></a>	<span class="k">return</span> <span class="n">sprite</span><span class="p">;</span>
+<a name="line-7"></a><span class="p">}</span>
 </pre></div>
 </td></tr></table>
       </div>

@@ -107,12 +107,12 @@
   </head>
   <body onload="init_expandables()">
       <div id="header">
-        <h1>Cppcheck report - sdl2-engine: /home/travis/build/CaioIcy/sdl2-engine/src/Music.cpp </h1>
+        <h1>Cppcheck report - sdl2-engine: /home/travis/build/CaioIcy/sdl2-engine/src/Logger.cpp </h1>
       </div>
       <div id="menu" dir="rtl">
        <a href="index.html">Defect list</a>
        <br>
-<a href='10.html#line-25'> build/include_what_you_use 25</a>
+<a href='10.html#line-19'> build/include_what_you_use 19</a>
       </div>
       <div id="content">
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -138,36 +138,30 @@
 21
 22
 23
-24
-25
-26
-27</pre></div></td><td class="code"><div class="highlight"><pre><a name="line-1"></a><span class="cp">#include &quot;Music.h&quot;</span>
-<a name="line-2"></a><span class="cp">#include &quot;Logger.h&quot;</span>
+24</pre></div></td><td class="code"><div class="highlight"><pre><a name="line-1"></a><span class="cp">#include &quot;Logger.h&quot;</span>
+<a name="line-2"></a><span class="cp">#include &lt;cstdio&gt;</span>
 <a name="line-3"></a>
-<a name="line-4"></a><span class="n">Music</span><span class="o">::</span><span class="n">Music</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">path_</span><span class="p">)</span> <span class="o">:</span>
-<a name="line-5"></a>	<span class="n">mixMusic</span><span class="p">(</span><span class="k">nullptr</span><span class="p">),</span>
-<a name="line-6"></a>	<span class="n">path</span><span class="p">(</span><span class="n">path_</span><span class="p">)</span>
-<a name="line-7"></a><span class="p">{</span>
-<a name="line-8"></a>	<span class="k">this</span><span class="o">-&gt;</span><span class="n">mixMusic</span> <span class="o">=</span> <span class="n">Mix_LoadMUS</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">path</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
-<a name="line-9"></a>
-<a name="line-10"></a>	<span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">mixMusic</span> <span class="o">==</span> <span class="k">nullptr</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-11"></a>		<span class="n">Log</span><span class="p">(</span><span class="n">ERROR</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Couldn&#39;t load music (&quot;</span> <span class="o">&lt;&lt;</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">path</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;). &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">Mix_GetError</span><span class="p">();</span>
-<a name="line-12"></a>	<span class="p">}</span>
-<a name="line-13"></a><span class="p">}</span>
-<a name="line-14"></a>
-<a name="line-15"></a><span class="n">Music</span><span class="o">::~</span><span class="n">Music</span><span class="p">()</span> <span class="p">{</span>
-<a name="line-16"></a>	<span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">mixMusic</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-17"></a>		<span class="n">Mix_FreeMusic</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">mixMusic</span><span class="p">);</span>
-<a name="line-18"></a>	<span class="p">}</span>
-<a name="line-19"></a><span class="p">}</span>
-<a name="line-20"></a>
-<a name="line-21"></a><span class="n">Mix_Music</span><span class="o">*</span> <span class="n">Music</span><span class="o">::</span><span class="n">getMixMusic</span><span class="p">()</span> <span class="p">{</span>
-<a name="line-22"></a>	<span class="k">return</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">mixMusic</span><span class="p">;</span>
-<a name="line-23"></a><span class="p">}</span>
-<a name="line-24"></a>
-<a name="line-25"></a><span class="hll"><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">Music</span><span class="o">::</span><span class="n">getPath</span><span class="p">()</span> <span class="p">{</span><span class='error2'>&lt;--- Add #include &lt;string&gt; for string  </span>
-</span><a name="line-26"></a>	<span class="k">return</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">path</span><span class="p">;</span>
-<a name="line-27"></a><span class="p">}</span>
+<a name="line-4"></a><span class="n">Logger</span><span class="o">::</span><span class="n">Logger</span><span class="p">()</span> <span class="p">{</span>
+<a name="line-5"></a>
+<a name="line-6"></a><span class="p">}</span>
+<a name="line-7"></a>
+<a name="line-8"></a><span class="n">Logger</span><span class="o">::~</span><span class="n">Logger</span><span class="p">()</span> <span class="p">{</span>
+<a name="line-9"></a>	<span class="k">this</span><span class="o">-&gt;</span><span class="n">os</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<a name="line-10"></a>	<span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;%s&quot;</span><span class="p">,</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">os</span><span class="p">.</span><span class="n">str</span><span class="p">().</span><span class="n">c_str</span><span class="p">());</span>
+<a name="line-11"></a>	<span class="n">fflush</span><span class="p">(</span><span class="n">stderr</span><span class="p">);</span>
+<a name="line-12"></a><span class="p">}</span>
+<a name="line-13"></a>
+<a name="line-14"></a><span class="n">std</span><span class="o">::</span><span class="n">ostringstream</span><span class="o">&amp;</span> <span class="n">Logger</span><span class="o">::</span><span class="n">log</span><span class="p">(</span><span class="k">const</span> <span class="n">LogLevel</span> <span class="n">level_</span><span class="p">)</span> <span class="p">{</span>
+<a name="line-15"></a>	<span class="k">this</span><span class="o">-&gt;</span><span class="n">os</span> <span class="o">&lt;&lt;</span> <span class="n">logLevelToString</span><span class="p">(</span><span class="n">level_</span><span class="p">);</span>
+<a name="line-16"></a>	<span class="k">return</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">os</span><span class="p">;</span>
+<a name="line-17"></a><span class="p">}</span>
+<a name="line-18"></a>
+<a name="line-19"></a><span class="hll"><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">Logger</span><span class="o">::</span><span class="n">logLevelToString</span><span class="p">(</span><span class="k">const</span> <span class="n">LogLevel</span> <span class="n">level_</span><span class="p">)</span> <span class="p">{</span><span class='error2'>&lt;--- Add #include &lt;string&gt; for string  </span>
+</span><a name="line-20"></a>	<span class="k">static</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="k">const</span> <span class="n">buffer</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="s">&quot;[Info]:    &quot;</span><span class="p">,</span> <span class="s">&quot;[Warning]: &quot;</span><span class="p">,</span> <span class="s">&quot;[Error]:  &quot;</span><span class="p">,</span>
+<a name="line-21"></a>		<span class="s">&quot;[Debug]:   &quot;</span><span class="p">};</span>
+<a name="line-22"></a>
+<a name="line-23"></a>	<span class="k">return</span> <span class="n">buffer</span><span class="p">[</span><span class="n">level_</span><span class="p">];</span>
+<a name="line-24"></a><span class="p">}</span>
 </pre></div>
 </td></tr></table>
       </div>
