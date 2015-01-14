@@ -1,106 +1,153 @@
 #pragma once
 
-#ifndef MIX_LOOP
-#define MIX_LOOP -1
-#endif
-
-#ifndef ALL_CHANNELS
-#define ALL_CHANNELS -1
-#endif
-
+#include <string>
+#include <vector>
 #include "SDL_Libs.h"
 #include "Music.h"
 #include "SoundEffect.h"
-#include <string>
-#include <vector>
 
 /**
-* The audio handler.
 * Class that handles all the audio in the game.
+*
 * @todo Figure out the best way to design music logic apart from SFX logic.
 * @todo Add support for multiple music. Example: you pause the game, the game music pauses, and
 * 	the pause menu plays a different music. When you unpause, it resumes the game music.
+* @todo Unecessary pointers?
 */
 class AudioHandler {
 
 	public:
 		/**
-		* The constructor.
+		* @brief The constructor.
 		*/
 		AudioHandler();
 
 		/**
-		* The destructor.
+		* @brief The destructor.
 		*/
 		~AudioHandler();
 
 		/**
-		* Changes current music.
-		* Stops the music, sets it to the new one, and plays it.
-		* @param path_ : The path to the desired music.
-		* @param times_ : The amount of times to loop the music. Defaults to infinite looping.
+		* @brief Sets new music for given path, infinitely looping.
+		*
+		* Stops the music, sets it to the new one, and plays it as an infinite loop.
+		*
+		* @param path : The path to the desired music.
 		*/
-		void changeMusic(const std::string& path_, const int times_ = MIX_LOOP);
+		void ChangeMusic(const std::string& path);
 
 		/**
-		* Pushes a new sound effect onto the vector, and plays it.
-		* @param path_ : The path to the desired sound effect.
-		* @param times_ : The amount of times to loop the sound effect. Defaults to infinite
-		* 	looping.
+		* @brief Sets new music for given path.
+		*
+		* Stops the music, sets it to the new one, and plays it for the determined amount of
+		* loops.
+		*
+		* @param path : The path to the desired music.
+		* @param times : The amount of times to loop the music.
 		*/
-		void pushSoundEffect(const std::string& path_, const int times_ = 0);
-
-		void pauseMusic();
-		void pauseEffects();
-
-		void resumeMusic();
-		void resumeEffects();
+		void ChangeMusic(const std::string& path, const int times);
 
 		/**
-		* Sets the volume for the music.
-		* If the percent_ is over 100, will be set to 100.
-		* @param percent_ : The volume percentage (0-100).
+		* @brief Plays a sound effect once.
+		*
+		* @param path : The path to the desired sound effect.
 		*/
-		void setVolumeMusic(const unsigned int percent_);
+		void PlaySoundEffect(const std::string& path);
 
 		/**
-		* Sets the volume for the effects.
-		* If the percent_ is over 100, will be set to 100.
-		* @param percent_ : The volume percentage (0-100).
+		* @brief Plays a sound effect a given amount of times.
+		*
+		* Should only be used if you either want to play the effect 2+ times or infinitely, in
+		* which case you should pass k_infinite_loop.
+		*
+		* @param path : The path to the desired sound effect.
+		* @param times : The amount of times to loop the sound effect.
 		*/
-		void setVolumeEffects(const unsigned int percent_);
+		void PlaySoundEffect(const std::string& path, const int times);
+
+		/**
+		* @brief Sets the volume for the music.
+		*
+		* @param percent : The volume percentage (0-100).
+		*/
+		void SetMusicVolume(const int percent);
+
+		/**
+		* @brief Sets the volume for the sound effects.
+		*
+		* @param percent : The volume percentage (0-100).
+		*/
+		void SetEffectsVolume(const int percent);
+
+		/**
+		* @brief Pauses the music.
+		*/
+		void PauseMusic();
+
+		/**
+		* @brief Pauses all sound effects.
+		*/
+		void PauseEffects();
+
+		/**
+		* @brief Resumes the music.
+		*/
+		void ResumeMusic();
+
+		/**
+		* @brief Resumes all sound effects.
+		*/
+		void ResumeEffects();
 
 	private:
 		/**
-		* Plays the current effect.
-		* @note Will warn if there is no effect loaded.
-		* @param times_ : Times to loop the song. MIX_LOOP (or -1) for infinite looping.
-		*/
-		void playEffect(const int times_);
-
-		/**
-		* Stops playing the current music.
-		*/
-		void stopMusic();
-
-		/**
-		* Sets the current music.
-		* If one already exists, frees it first.
-		* @param path_ : The path to the desired music.
-		*/
-		void setCurrentMusic(const std::string& path_);
-
-		/**
-		* Plays the current music.
+		* @brief Plays the current music as an infinite loop.
+		*
 		* @note Will warn if there is no music loaded.
-		* @param times_ : Times to loop the song. MIX_LOOP (or -1) for infinite looping.
 		*/
-		void playMusic(const int times_);
+		void PlayMusic();
 
-		void clearChannel(const int channel_);
-		static void channelDone(int channel_);
+		/**
+		* @brief Plays the current music.
+		*
+		* @note Will warn if there is no music loaded.
+		*
+		* @param times : Times to loop the song (1+).
+		*/
+		void PlayMusic(const int times);
 
-		Music* currentMusic; /**< The current music that is playing. */
-		std::vector<SoundEffect*> currentEffects; /**< The current effect that is playing. */
+		/**
+		* @brief Stops playing the current music.
+		*/
+		void StopMusic();
 
+		/**
+		* @brief Sets the current music.
+		*
+		* If one already exists, frees it first.
+		*
+		* @param path : The path to the desired music.
+		*/
+		void SetMusic(const std::string& path);
+
+		/**
+		* @brief Removes any sound effects from a given channel.
+		*
+		* @param channel : The channel to remove all sound effects from.
+		*/
+		void ClearChannel(const int channel);
+
+		/**
+		* @brief Callback that gets called everytime a channel is done playing.
+		*
+		* @note Calls AudioHandler::ClearChannel.
+		*/
+		static void ChannelDone(const int channel);
+
+		static constexpr int k_infinite_loop = -1;
+		static constexpr int k_all_channels = -1;
+		static constexpr int k_any_channel = -1;
+
+		Music* m_current_music; /**< The current music that is playing. */
+		std::vector<SoundEffect*> m_effects; /**< The current effects that are playing. */
 };

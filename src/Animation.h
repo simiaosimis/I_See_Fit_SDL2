@@ -11,7 +11,7 @@ class Animation {
 
 	public:
 		/**
-		* The constructor.
+		* @brief The constructor.
 		*
 		* @param x : The initial x position on the spritesheet.
 		* @param y : The initial y position on the spritesheet.
@@ -24,12 +24,12 @@ class Animation {
 			const int number_of_images, const double total_time);
 
 		/**
-		* The destructor.
+		* @brief The destructor.
 		*/
 		~Animation();
 
 		/**
-		* Updates the animation clip.
+		* @brief Updates the animation clip.
 		*
 		* @param clip : Reference to the clip of whatever object the animation is a part of.
 		* @param delta_time : Time elapsed between one frame and the other, independent	of
@@ -43,7 +43,7 @@ class Animation {
 		int CurrentFrame();
 
 		/**
-		* Changes the dimensions of the clip on the spritesheet.
+		* @brief Changes the dimensions of the clip on the spritesheet.
 		*
 		* @param width : New width of the spritesheet clip;
 		* @param height : New height of the spritesheet clip;
@@ -51,7 +51,7 @@ class Animation {
 		void SetWidthHeight(const int width, const int height);
 
 		/**
-		* Changes the animation to another.
+		* @brief Changes the animation to another.
 		*
 		* @param x : The initial x position on the spritesheet.
 		* @param y : The initial y position on the spritesheet.
@@ -63,7 +63,7 @@ class Animation {
 
 	private:
 		/**
-		* Updates the clip to a new position.
+		* @brief Updates the clip to a new position.
 		*
 		* @param clip : The clip to update.
 		* @param x : New x position.
