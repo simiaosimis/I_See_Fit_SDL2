@@ -33,7 +33,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v12</span>
+   &#160;<span id="projectnumber">v13</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -102,67 +102,67 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00002"></a>00002 
 <a name="l00003"></a>00003 
 <a name="l00004"></a>00004 <span class="comment">// Resolution = 16:10</span>
-<a name="l00005"></a>00005 <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classConfiguration.html#a5b733811a9215c5bba90d16604cfabcf" title="The game&#39;s width resolution.">Configuration::resolutionWidth</a> = 192;
-<a name="l00006"></a>00006 <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classConfiguration.html#a469e15c3c77e7eced8d2682aa127e10b" title="The game&#39;s height resolution.">Configuration::resolutionHeight</a> = 108;
+<a name="l00005"></a>00005 <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classConfiguration.html#a5b733811a9215c5bba90d16604cfabcf">Configuration::resolutionWidth</a> = 192;
+<a name="l00006"></a>00006 <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classConfiguration.html#a469e15c3c77e7eced8d2682aa127e10b">Configuration::resolutionHeight</a> = 108;
 <a name="l00007"></a>00007 
-<a name="l00008"></a>00008 uint32_t <a class="code" href="classConfiguration.html#ae0480202acc37209e339ad7da33c89a2" title="The game&#39;s max framerate.">Configuration::maxFramerate</a> = 0;
-<a name="l00009"></a>00009 std::string <a class="code" href="classConfiguration.html#ab5fa690a270bfcb7e34416a952eebe00" title="The game window&#39;s title.">Configuration::windowTitle</a> = <span class="stringliteral">&quot;&quot;</span>;
-<a name="l00010"></a>00010 <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classConfiguration.html#a9c18ad1f19aa75b6c8fa4a626cc206f0" title="The size of the logical rendering.">Configuration::logicalRenderSize</a> = 0;
-<a name="l00011"></a>00011 <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classConfiguration.html#aef24b67543ea3560d93544769d7aa2b8" title="The screen width.">Configuration::screenWidth</a> = 0;
-<a name="l00012"></a>00012 <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classConfiguration.html#a5c49a9e882e7acb0aced8e6bd63d212d" title="The screen height.">Configuration::screenHeight</a> = 0;
-<a name="l00013"></a>00013 <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classConfiguration.html#ab4c70c72580771e9f7d9925388355bb5" title="The width distance of the camera.">Configuration::cameraDistanceWidth</a> = 0;
-<a name="l00014"></a>00014 <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classConfiguration.html#ab1df391e86cd95764b62bf817d11f0ef" title="The height distance of the camera.">Configuration::cameraDistanceHeight</a> = 0;
+<a name="l00008"></a>00008 uint32_t <a class="code" href="classConfiguration.html#ae0480202acc37209e339ad7da33c89a2">Configuration::maxFramerate</a> = 0;
+<a name="l00009"></a>00009 std::string <a class="code" href="classConfiguration.html#ab5fa690a270bfcb7e34416a952eebe00">Configuration::windowTitle</a> = <span class="stringliteral">&quot;&quot;</span>;
+<a name="l00010"></a>00010 <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classConfiguration.html#a9c18ad1f19aa75b6c8fa4a626cc206f0">Configuration::logicalRenderSize</a> = 0;
+<a name="l00011"></a>00011 <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classConfiguration.html#aef24b67543ea3560d93544769d7aa2b8">Configuration::screenWidth</a> = 0;
+<a name="l00012"></a>00012 <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classConfiguration.html#a5c49a9e882e7acb0aced8e6bd63d212d">Configuration::screenHeight</a> = 0;
+<a name="l00013"></a>00013 <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classConfiguration.html#ab4c70c72580771e9f7d9925388355bb5">Configuration::cameraDistanceWidth</a> = 0;
+<a name="l00014"></a>00014 <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classConfiguration.html#ab1df391e86cd95764b62bf817d11f0ef">Configuration::cameraDistanceHeight</a> = 0;
 <a name="l00015"></a>00015 
 <a name="l00016"></a>00016 
-<a name="l00017"></a><a class="code" href="classConfiguration.html#aa04cb3c24d2d5557fd519963fa0cb345">00017</a> <span class="keywordtype">void</span> <a class="code" href="classConfiguration.html#aa04cb3c24d2d5557fd519963fa0cb345" title="Initializes all the attributes.">Configuration::initialize</a>() {
+<a name="l00017"></a><a class="code" href="classConfiguration.html#aa04cb3c24d2d5557fd519963fa0cb345">00017</a> <span class="keywordtype">void</span> <a class="code" href="classConfiguration.html#aa04cb3c24d2d5557fd519963fa0cb345">Configuration::initialize</a>() {
 <a name="l00020"></a>00020 
-<a name="l00021"></a>00021     <a class="code" href="classConfiguration.html#ae0480202acc37209e339ad7da33c89a2" title="The game&#39;s max framerate.">Configuration::maxFramerate</a> = 60;
-<a name="l00022"></a>00022     <a class="code" href="classConfiguration.html#ab5fa690a270bfcb7e34416a952eebe00" title="The game window&#39;s title.">Configuration::windowTitle</a> = <span class="stringliteral">&quot;sdl2-engine&quot;</span>;
-<a name="l00023"></a>00023     <a class="code" href="classConfiguration.html#a9c18ad1f19aa75b6c8fa4a626cc206f0" title="The size of the logical rendering.">Configuration::logicalRenderSize</a> = 8;
-<a name="l00024"></a>00024     <a class="code" href="classConfiguration.html#ab4c70c72580771e9f7d9925388355bb5" title="The width distance of the camera.">Configuration::cameraDistanceWidth</a> =
-<a name="l00025"></a>00025         <a class="code" href="classConfiguration.html#a5b733811a9215c5bba90d16604cfabcf" title="The game&#39;s width resolution.">Configuration::resolutionWidth</a> * <a class="code" href="classConfiguration.html#a9c18ad1f19aa75b6c8fa4a626cc206f0" title="The size of the logical rendering.">Configuration::logicalRenderSize</a>;
+<a name="l00021"></a>00021     <a class="code" href="classConfiguration.html#ae0480202acc37209e339ad7da33c89a2">Configuration::maxFramerate</a> = 60;
+<a name="l00022"></a>00022     <a class="code" href="classConfiguration.html#ab5fa690a270bfcb7e34416a952eebe00">Configuration::windowTitle</a> = <span class="stringliteral">&quot;sdl2-engine&quot;</span>;
+<a name="l00023"></a>00023     <a class="code" href="classConfiguration.html#a9c18ad1f19aa75b6c8fa4a626cc206f0">Configuration::logicalRenderSize</a> = 8;
+<a name="l00024"></a>00024     <a class="code" href="classConfiguration.html#ab4c70c72580771e9f7d9925388355bb5">Configuration::cameraDistanceWidth</a> =
+<a name="l00025"></a>00025         <a class="code" href="classConfiguration.html#a5b733811a9215c5bba90d16604cfabcf">Configuration::resolutionWidth</a> * <a class="code" href="classConfiguration.html#a9c18ad1f19aa75b6c8fa4a626cc206f0">Configuration::logicalRenderSize</a>;
 <a name="l00026"></a>00026 
-<a name="l00027"></a>00027     <a class="code" href="classConfiguration.html#ab1df391e86cd95764b62bf817d11f0ef" title="The height distance of the camera.">Configuration::cameraDistanceHeight</a> =
-<a name="l00028"></a>00028         <a class="code" href="classConfiguration.html#a469e15c3c77e7eced8d2682aa127e10b" title="The game&#39;s height resolution.">Configuration::resolutionHeight</a> * <a class="code" href="classConfiguration.html#a9c18ad1f19aa75b6c8fa4a626cc206f0" title="The size of the logical rendering.">Configuration::logicalRenderSize</a>;
+<a name="l00027"></a>00027     <a class="code" href="classConfiguration.html#ab1df391e86cd95764b62bf817d11f0ef">Configuration::cameraDistanceHeight</a> =
+<a name="l00028"></a>00028         <a class="code" href="classConfiguration.html#a469e15c3c77e7eced8d2682aa127e10b">Configuration::resolutionHeight</a> * <a class="code" href="classConfiguration.html#a9c18ad1f19aa75b6c8fa4a626cc206f0">Configuration::logicalRenderSize</a>;
 <a name="l00029"></a>00029 
-<a name="l00030"></a>00030     <a class="code" href="classConfiguration.html#aef24b67543ea3560d93544769d7aa2b8" title="The screen width.">Configuration::screenWidth</a> = 1920 / 2;
-<a name="l00031"></a>00031     <a class="code" href="classConfiguration.html#a5c49a9e882e7acb0aced8e6bd63d212d" title="The screen height.">Configuration::screenHeight</a> = 1080 / 2;
+<a name="l00030"></a>00030     <a class="code" href="classConfiguration.html#aef24b67543ea3560d93544769d7aa2b8">Configuration::screenWidth</a> = 1920 / 2;
+<a name="l00031"></a>00031     <a class="code" href="classConfiguration.html#a5c49a9e882e7acb0aced8e6bd63d212d">Configuration::screenHeight</a> = 1080 / 2;
 <a name="l00032"></a>00032 }
 <a name="l00033"></a>00033 
 <a name="l00034"></a><a class="code" href="classConfiguration.html#a7ba0944628b1828721c99027797c29d1">00034</a> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classConfiguration.html#a7ba0944628b1828721c99027797c29d1">Configuration::getResolutionWidth</a>() {
-<a name="l00035"></a>00035     <span class="keywordflow">return</span> <a class="code" href="classConfiguration.html#a5b733811a9215c5bba90d16604cfabcf" title="The game&#39;s width resolution.">Configuration::resolutionWidth</a>;
+<a name="l00035"></a>00035     <span class="keywordflow">return</span> <a class="code" href="classConfiguration.html#a5b733811a9215c5bba90d16604cfabcf">Configuration::resolutionWidth</a>;
 <a name="l00036"></a>00036 }
 <a name="l00037"></a>00037 
 <a name="l00038"></a><a class="code" href="classConfiguration.html#aec8b7cf23825cfc8e4d8440fab006b56">00038</a> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classConfiguration.html#aec8b7cf23825cfc8e4d8440fab006b56">Configuration::getResolutionHeight</a>() {
-<a name="l00039"></a>00039     <span class="keywordflow">return</span> <a class="code" href="classConfiguration.html#a469e15c3c77e7eced8d2682aa127e10b" title="The game&#39;s height resolution.">Configuration::resolutionHeight</a>;
+<a name="l00039"></a>00039     <span class="keywordflow">return</span> <a class="code" href="classConfiguration.html#a469e15c3c77e7eced8d2682aa127e10b">Configuration::resolutionHeight</a>;
 <a name="l00040"></a>00040 }
 <a name="l00041"></a>00041 
 <a name="l00042"></a><a class="code" href="classConfiguration.html#aafc1e20b38ec523edfa494ecf373d6c5">00042</a> uint32_t <a class="code" href="classConfiguration.html#aafc1e20b38ec523edfa494ecf373d6c5">Configuration::getMaxFramerate</a>() {
-<a name="l00043"></a>00043     <span class="keywordflow">return</span> <a class="code" href="classConfiguration.html#ae0480202acc37209e339ad7da33c89a2" title="The game&#39;s max framerate.">Configuration::maxFramerate</a>;
+<a name="l00043"></a>00043     <span class="keywordflow">return</span> <a class="code" href="classConfiguration.html#ae0480202acc37209e339ad7da33c89a2">Configuration::maxFramerate</a>;
 <a name="l00044"></a>00044 }
 <a name="l00045"></a>00045 
 <a name="l00046"></a><a class="code" href="classConfiguration.html#a5d557ba14dce27bf2353e2bf509742bb">00046</a> std::string <a class="code" href="classConfiguration.html#a5d557ba14dce27bf2353e2bf509742bb">Configuration::getWindowTitle</a>() {
-<a name="l00047"></a>00047     <span class="keywordflow">return</span> <a class="code" href="classConfiguration.html#ab5fa690a270bfcb7e34416a952eebe00" title="The game window&#39;s title.">Configuration::windowTitle</a>;
+<a name="l00047"></a>00047     <span class="keywordflow">return</span> <a class="code" href="classConfiguration.html#ab5fa690a270bfcb7e34416a952eebe00">Configuration::windowTitle</a>;
 <a name="l00048"></a>00048 }
 <a name="l00049"></a>00049 
 <a name="l00050"></a><a class="code" href="classConfiguration.html#a6b7e62e989bfea784eb78ceff3825f11">00050</a> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classConfiguration.html#a6b7e62e989bfea784eb78ceff3825f11">Configuration::getLogicalRenderSize</a>() {
-<a name="l00051"></a>00051     <span class="keywordflow">return</span> <a class="code" href="classConfiguration.html#a9c18ad1f19aa75b6c8fa4a626cc206f0" title="The size of the logical rendering.">Configuration::logicalRenderSize</a>;
+<a name="l00051"></a>00051     <span class="keywordflow">return</span> <a class="code" href="classConfiguration.html#a9c18ad1f19aa75b6c8fa4a626cc206f0">Configuration::logicalRenderSize</a>;
 <a name="l00052"></a>00052 }
 <a name="l00053"></a>00053 
 <a name="l00054"></a><a class="code" href="classConfiguration.html#a492a60b34681cbfaf813e94524cc92d4">00054</a> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classConfiguration.html#a492a60b34681cbfaf813e94524cc92d4">Configuration::getScreenWidth</a>() {
-<a name="l00055"></a>00055     <span class="keywordflow">return</span> <a class="code" href="classConfiguration.html#aef24b67543ea3560d93544769d7aa2b8" title="The screen width.">Configuration::screenWidth</a>;
+<a name="l00055"></a>00055     <span class="keywordflow">return</span> <a class="code" href="classConfiguration.html#aef24b67543ea3560d93544769d7aa2b8">Configuration::screenWidth</a>;
 <a name="l00056"></a>00056 }
 <a name="l00057"></a>00057 
 <a name="l00058"></a><a class="code" href="classConfiguration.html#a1b3606b352023365c918603e4151effe">00058</a> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classConfiguration.html#a1b3606b352023365c918603e4151effe">Configuration::getScreenHeight</a>() {
-<a name="l00059"></a>00059     <span class="keywordflow">return</span> <a class="code" href="classConfiguration.html#a5c49a9e882e7acb0aced8e6bd63d212d" title="The screen height.">Configuration::screenHeight</a>;
+<a name="l00059"></a>00059     <span class="keywordflow">return</span> <a class="code" href="classConfiguration.html#a5c49a9e882e7acb0aced8e6bd63d212d">Configuration::screenHeight</a>;
 <a name="l00060"></a>00060 }
 <a name="l00061"></a>00061 
 <a name="l00062"></a><a class="code" href="classConfiguration.html#aca07033d9bb9876e06d41375efb9c0c7">00062</a> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classConfiguration.html#aca07033d9bb9876e06d41375efb9c0c7">Configuration::getCameraDistanceWidth</a>() {
-<a name="l00063"></a>00063     <span class="keywordflow">return</span> <a class="code" href="classConfiguration.html#ab4c70c72580771e9f7d9925388355bb5" title="The width distance of the camera.">Configuration::cameraDistanceWidth</a>;
+<a name="l00063"></a>00063     <span class="keywordflow">return</span> <a class="code" href="classConfiguration.html#ab4c70c72580771e9f7d9925388355bb5">Configuration::cameraDistanceWidth</a>;
 <a name="l00064"></a>00064 }
 <a name="l00065"></a>00065 
 <a name="l00066"></a><a class="code" href="classConfiguration.html#a722602faba9b9a85986134b2e402ee2e">00066</a> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classConfiguration.html#a722602faba9b9a85986134b2e402ee2e">Configuration::getCameraDistanceHeight</a>() {
-<a name="l00067"></a>00067     <span class="keywordflow">return</span> <a class="code" href="classConfiguration.html#ab1df391e86cd95764b62bf817d11f0ef" title="The height distance of the camera.">Configuration::cameraDistanceHeight</a>;
+<a name="l00067"></a>00067     <span class="keywordflow">return</span> <a class="code" href="classConfiguration.html#ab1df391e86cd95764b62bf817d11f0ef">Configuration::cameraDistanceHeight</a>;
 <a name="l00068"></a>00068 }
 </pre></div></div><!-- contents -->
 </div>
@@ -184,7 +184,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><b>Configuration.cpp</b>      </li>
 
-    <li class="footer">Generated on Thu Jan 8 2015 23:55:10 for sdl2-engine by
+    <li class="footer">Generated on Wed Jan 14 2015 22:39:13 for sdl2-engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

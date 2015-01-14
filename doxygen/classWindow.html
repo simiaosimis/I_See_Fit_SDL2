@@ -33,7 +33,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v12</span>
+   &#160;<span id="projectnumber">v13</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -106,42 +106,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <!-- doxytag: class="Window" -->
-<p>Represents the actual window that the game runs on.  
- <a href="classWindow.html#details">More...</a></p>
-
 <p><code>#include &lt;<a class="el" href="Window_8h_source.html">Window.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#aad1e09c01ead81481270e00b9b86add9">Window</a> (const unsigned int width_, const unsigned int height_, const std::string &amp;title_=&quot;SDL <a class="el" href="classWindow.html">Window</a>&quot;)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor.  <a href="#aad1e09c01ead81481270e00b9b86add9"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a245d821e6016fa1f6970ccbbedd635f6">~Window</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The destructor.  <a href="#a245d821e6016fa1f6970ccbbedd635f6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a3c322c6691e9180b98ad18545013954c">resize</a> (const unsigned int width_, const unsigned int height_)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Resizes the window.  <a href="#a3c322c6691e9180b98ad18545013954c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a97078387be519b16401c3bb0f299aa01">minimize</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimizes window.  <a href="#a97078387be519b16401c3bb0f299aa01"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a652b249e69ee5ff3ba8aa3bd4feccdae">maximize</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximizes window.  <a href="#a652b249e69ee5ff3ba8aa3bd4feccdae"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRenderer.html">Renderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#ac5ec376703205dff00ffdbae115f93b1">getRenderer</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a25b4e6d9c7d514cbb63b7851de2526e5">create</a> (const unsigned int width_, const unsigned int height_)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the <a class="el" href="classWindow.html" title="Represents the actual window that the game runs on.">Window</a>, with specified width and height.  <a href="#a25b4e6d9c7d514cbb63b7851de2526e5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a0d7c171a31ea6cf664a0f92ce4f29aaa">rescale</a> (unsigned int size_)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Rescales the renderization.  <a href="#a0d7c171a31ea6cf664a0f92ce4f29aaa"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a003d840446d3c6bdb4a4b0cabfc3f182">windowTitle</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The game <a class="el" href="classWindow.html" title="Represents the actual window that the game runs on.">Window</a> title.  <a href="#a003d840446d3c6bdb4a4b0cabfc3f182"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">SDL_Window *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a6be667ef970fd951a4853e7bcc933ac8">sdlWindow</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The SDL window, that will be the actual game window.  <a href="#a6be667ef970fd951a4853e7bcc933ac8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRenderer.html">Renderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a3977079c96d190e22c70e91a5792073f">renderer</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The SDL renderer to render onto.  <a href="#a3977079c96d190e22c70e91a5792073f"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Represents the actual window that the game runs on. </p>
-<p>Contains the SDL_Window and the SDL_Renderer, and methods related to these. </p>
+<div class="textblock"><p>Represents the actual window that the game runs on. Contains the SDL_Window and the SDL_Renderer, and methods related to these. </p>
 
 <p>Definition at line <a class="el" href="Window_8h_source.html#l00011">11</a> of file <a class="el" href="Window_8h_source.html">Window.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
@@ -175,9 +161,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>The constructor. </p>
-<p>Sets all attributes, and calls the initialize method. </p>
+<p>The constructor. Sets all attributes, and calls the initialize method. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">width_</td><td>: The desired window width. </td></tr>
@@ -206,9 +190,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>The destructor. </p>
-<p>Uses the destroy method to delete window. </p>
+<p>The destructor. Uses the destroy method to delete window. </p>
 <dl class="see"><dt><b>See also:</b></dt><dd>Window::destroy </dd></dl>
 
 <p>Definition at line <a class="el" href="Window_8cpp_source.html#l00013">13</a> of file <a class="el" href="Window_8cpp_source.html">Window.cpp</a>.</p>
@@ -240,9 +222,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Creates the <a class="el" href="classWindow.html" title="Represents the actual window that the game runs on.">Window</a>, with specified width and height. </p>
-<p>Can be used either as the creator, or as the resizer. </p>
+<p>Creates the <a class="el" href="classWindow.html">Window</a>, with specified width and height. Can be used either as the creator, or as the resizer. </p>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000011">Todo:</a></b></dt><dd>Toggle VSync. </dd></dl>
 
 <p>Definition at line <a class="el" href="Window_8cpp_source.html#l00028">28</a> of file <a class="el" href="Window_8cpp_source.html">Window.cpp</a>.</p>
@@ -281,9 +261,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Maximizes window. </p>
-<p>Uses SDLs internal method to maximize the window. </p>
+<p>Maximizes window. Uses SDLs internal method to maximize the window. </p>
 
 <p>Definition at line <a class="el" href="Window_8cpp_source.html#l00024">24</a> of file <a class="el" href="Window_8cpp_source.html">Window.cpp</a>.</p>
 
@@ -302,9 +280,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Minimizes window. </p>
-<p>Uses SDLs internal method to minimize the window. </p>
+<p>Minimizes window. Uses SDLs internal method to minimize the window. </p>
 
 <p>Definition at line <a class="el" href="Window_8cpp_source.html#l00020">20</a> of file <a class="el" href="Window_8cpp_source.html">Window.cpp</a>.</p>
 
@@ -324,12 +300,10 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Rescales the renderization. </p>
-<p>Set a device independent resolution for rendering. </p>
+<p>Rescales the renderization. Set a device independent resolution for rendering. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">size_</td><td>: Multiplies <a class="el" href="classConfiguration.html#a5b733811a9215c5bba90d16604cfabcf" title="The game&#39;s width resolution.">Configuration::resolutionWidth</a> and <a class="el" href="classConfiguration.html#a469e15c3c77e7eced8d2682aa127e10b" title="The game&#39;s height resolution.">Configuration::resolutionHeight</a> for the new resolution. </td></tr>
+    <tr><td class="paramname">size_</td><td>: Multiplies <a class="el" href="classConfiguration.html#a5b733811a9215c5bba90d16604cfabcf">Configuration::resolutionWidth</a> and <a class="el" href="classConfiguration.html#a469e15c3c77e7eced8d2682aa127e10b">Configuration::resolutionHeight</a> for the new resolution. </td></tr>
   </table>
   </dd>
 </dl>
@@ -362,7 +336,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
 <p>Resizes the window. </p>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000012">Todo:</a></b></dt><dd>Instead of directly choosing width and height, choose from a pre-defined list of resolutions. </dd></dl>
 
@@ -381,7 +354,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
 <p>The SDL renderer to render onto. </p>
 
 <p>Definition at line <a class="el" href="Window_8h_source.html#l00077">77</a> of file <a class="el" href="Window_8h_source.html">Window.h</a>.</p>
@@ -398,7 +370,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
 <p>The SDL window, that will be the actual game window. </p>
 
 <p>Definition at line <a class="el" href="Window_8h_source.html#l00076">76</a> of file <a class="el" href="Window_8h_source.html">Window.h</a>.</p>
@@ -415,8 +386,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>The game <a class="el" href="classWindow.html" title="Represents the actual window that the game runs on.">Window</a> title. </p>
+<p>The game <a class="el" href="classWindow.html">Window</a> title. </p>
 
 <p>Definition at line <a class="el" href="Window_8h_source.html#l00075">75</a> of file <a class="el" href="Window_8h_source.html">Window.h</a>.</p>
 
@@ -446,7 +416,7 @@ Private Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="classWindow.html">Window</a>      </li>
 
-    <li class="footer">Generated on Thu Jan 8 2015 23:55:10 for sdl2-engine by
+    <li class="footer">Generated on Wed Jan 14 2015 22:39:13 for sdl2-engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

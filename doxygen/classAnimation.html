@@ -33,7 +33,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v12</span>
+   &#160;<span id="projectnumber">v13</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -106,9 +106,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <!-- doxytag: class="Animation" -->
-<p>Class in control of animating a sprite.  
- <a href="classAnimation.html#details">More...</a></p>
-
 <p><code>#include &lt;<a class="el" href="Animation_8h_source.html">Animation.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
@@ -132,28 +129,18 @@ Private Member Functions</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnimation.html#a2865bfd75a6998dbfdef9ec236941c3f">m_x</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The position on x axis on the sprite.  <a href="#a2865bfd75a6998dbfdef9ec236941c3f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnimation.html#a4530e5f9e7b90e17774273c22e5212bd">m_y</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The position on x axis on the sprite.  <a href="#a4530e5f9e7b90e17774273c22e5212bd"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnimation.html#a4b6af681755538265d8a021e95c47937">m_initial_x</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Where to start/restart the animation on x.  <a href="#a4b6af681755538265d8a021e95c47937"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnimation.html#a2aff0a2348feee0d1cee57ebf3374004">m_initial_y</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Where to start/restart the animation on y.  <a href="#a2aff0a2348feee0d1cee57ebf3374004"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnimation.html#adc29af12fe9271f6e3ae1c5e352b9e7d">m_sprite_width</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The sprite width.  <a href="#adc29af12fe9271f6e3ae1c5e352b9e7d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnimation.html#acbf3b1bdaec5696640c01049b937c864">m_sprite_height</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The sprite height.  <a href="#acbf3b1bdaec5696640c01049b937c864"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnimation.html#af4689e9b23f8d0db85f7b4c259457d04">m_number_of_images</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of images to animate inside the spritesheet.  <a href="#af4689e9b23f8d0db85f7b4c259457d04"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnimation.html#af1e90acbc50f30e1a2d30fbf6438d91a">m_total_elapsed_time</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Total time elapsed on the animation, to check if the frame changed.  <a href="#af1e90acbc50f30e1a2d30fbf6438d91a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnimation.html#a685e8622d6e1e5f8728a7962c97650be">m_total_time</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Total time in seconds for each animation loop.  <a href="#a685e8622d6e1e5f8728a7962c97650be"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnimation.html#a1fc4107edaf976258ad769b23bcfd172">m_animation_count</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Index of the current image relative to the number of images.  <a href="#a1fc4107edaf976258ad769b23bcfd172"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Class in control of animating a sprite. </p>
+<div class="textblock"><p>Class in control of animating a sprite.</p>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>Control if animation should loop or not. </dd></dl>
 
 <p>Definition at line <a class="el" href="Animation_8h_source.html#l00010">10</a> of file <a class="el" href="Animation_8h_source.html">Animation.h</a>.</p>
@@ -418,7 +405,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
 <p>Index of the current image relative to the number of images. </p>
 
 <p>Definition at line <a class="el" href="Animation_8h_source.html#l00084">84</a> of file <a class="el" href="Animation_8h_source.html">Animation.h</a>.</p>
@@ -435,7 +421,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
 <p>Where to start/restart the animation on x. </p>
 
 <p>Definition at line <a class="el" href="Animation_8h_source.html#l00076">76</a> of file <a class="el" href="Animation_8h_source.html">Animation.h</a>.</p>
@@ -452,7 +437,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
 <p>Where to start/restart the animation on y. </p>
 
 <p>Definition at line <a class="el" href="Animation_8h_source.html#l00077">77</a> of file <a class="el" href="Animation_8h_source.html">Animation.h</a>.</p>
@@ -469,7 +453,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
 <p>The number of images to animate inside the spritesheet. </p>
 
 <p>Definition at line <a class="el" href="Animation_8h_source.html#l00080">80</a> of file <a class="el" href="Animation_8h_source.html">Animation.h</a>.</p>
@@ -486,9 +469,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>The sprite height. </p>
-<p>(in pixels) </p>
+<p>The sprite height. (in pixels) </p>
 
 <p>Definition at line <a class="el" href="Animation_8h_source.html#l00079">79</a> of file <a class="el" href="Animation_8h_source.html">Animation.h</a>.</p>
 
@@ -504,9 +485,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>The sprite width. </p>
-<p>(in pixels) </p>
+<p>The sprite width. (in pixels) </p>
 
 <p>Definition at line <a class="el" href="Animation_8h_source.html#l00078">78</a> of file <a class="el" href="Animation_8h_source.html">Animation.h</a>.</p>
 
@@ -522,7 +501,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
 <p>Total time elapsed on the animation, to check if the frame changed. </p>
 
 <p>Definition at line <a class="el" href="Animation_8h_source.html#l00081">81</a> of file <a class="el" href="Animation_8h_source.html">Animation.h</a>.</p>
@@ -539,7 +517,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
 <p>Total time in seconds for each animation loop. </p>
 
 <p>Definition at line <a class="el" href="Animation_8h_source.html#l00083">83</a> of file <a class="el" href="Animation_8h_source.html">Animation.h</a>.</p>
@@ -556,7 +533,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
 <p>The position on x axis on the sprite. </p>
 
 <p>Definition at line <a class="el" href="Animation_8h_source.html#l00074">74</a> of file <a class="el" href="Animation_8h_source.html">Animation.h</a>.</p>
@@ -573,7 +549,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
 <p>The position on x axis on the sprite. </p>
 
 <p>Definition at line <a class="el" href="Animation_8h_source.html#l00075">75</a> of file <a class="el" href="Animation_8h_source.html">Animation.h</a>.</p>
@@ -604,7 +579,7 @@ Private Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="classAnimation.html">Animation</a>      </li>
 
-    <li class="footer">Generated on Thu Jan 8 2015 23:55:10 for sdl2-engine by
+    <li class="footer">Generated on Wed Jan 14 2015 22:39:13 for sdl2-engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

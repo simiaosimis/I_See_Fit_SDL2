@@ -33,7 +33,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v12</span>
+   &#160;<span id="projectnumber">v13</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -106,21 +106,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <!-- doxytag: class="Sprite" -->
-<p>Visual representation of game objects.  
- <a href="classSprite.html#details">More...</a></p>
-
 <p><code>#include &lt;<a class="el" href="Sprite_8h_source.html">Sprite.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a0c5597fedd9b09878ec8acddca54c2f7">Sprite</a> (const std::string &amp;path_)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor.  <a href="#a0c5597fedd9b09878ec8acddca54c2f7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a29730aadf31a6433746f5fa5bee9550f"></a><!-- doxytag: member="Sprite::Sprite" ref="a29730aadf31a6433746f5fa5bee9550f" args="(SDL_Surface *const surface_)" -->
 &#160;</td><td class="memItemRight" valign="bottom"><b>Sprite</b> (SDL_Surface *const surface_)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a8accab430f9d90ae5117b57d67e32b84">~Sprite</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The destructor.  <a href="#a8accab430f9d90ae5117b57d67e32b84"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#ac82a01b98130b9b1403667059640163b">render</a> (const double x_, const double y_, SDL_Rect *const clip_=nullptr, const bool stretch_=false, const double angle_=0.0, SDL_Point *const center_=nullptr, SDL_RendererFlip flip_=SDL_FLIP_NONE)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders the sprite.  <a href="#ac82a01b98130b9b1403667059640163b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a8f425d524e48eea595ef74dc310e0417">getWidth</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5105482cff23d7b13899aa834b23ad83"></a><!-- doxytag: member="Sprite::setWidth" ref="a5105482cff23d7b13899aa834b23ad83" args="(unsigned int width_)" -->
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setWidth</b> (unsigned int width_)</td></tr>
@@ -136,7 +130,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setAlpha</b> (int alp
 <tr><td colspan="2"><h2><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a9ba64ddfcd3f79c45b74ec1c1a16c396">loadFrom</a> (const std::string &amp;path_)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads image from a path.  <a href="#a9ba64ddfcd3f79c45b74ec1c1a16c396"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a98bb8afceb93d82270c9e5e7e8f9b49d"></a><!-- doxytag: member="Sprite::surfaceToTexture" ref="a98bb8afceb93d82270c9e5e7e8f9b49d" args="(SDL_Surface *const surface_)" -->
 SDL_Texture *&#160;</td><td class="memItemRight" valign="bottom"><b>surfaceToTexture</b> (SDL_Surface *const surface_)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5fe515e7c3a54a8d82d27612ee6dc4c4"></a><!-- doxytag: member="Sprite::setBlendMode" ref="a5fe515e7c3a54a8d82d27612ee6dc4c4" args="(SDL_BlendMode blending_)" -->
@@ -144,20 +137,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setBlendMode</b> (SDL
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">SDL_Texture *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a546d109413d8f3541ffde26701075bd1">sdlTexture</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The SDL texture to use as the image.  <a href="#a546d109413d8f3541ffde26701075bd1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a950adad23da17ce64e6e759b0b64fadd">width</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The loaded image's width.  <a href="#a950adad23da17ce64e6e759b0b64fadd"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a4d34b71316c3456acb51c3c7e57a94e2">height</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The loaded image's width.  <a href="#a4d34b71316c3456acb51c3c7e57a94e2"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a2bd9395c3ebb407e632723c3aae2a267">path</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds the path from where the <a class="el" href="classSprite.html" title="Visual representation of game objects.">Sprite</a> was loaded.  <a href="#a2bd9395c3ebb407e632723c3aae2a267"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa70e85ab29425537f1b0e41abbbfe852"></a><!-- doxytag: member="Sprite::flipHorizontal" ref="aa70e85ab29425537f1b0e41abbbfe852" args="" -->
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#aa70e85ab29425537f1b0e41abbbfe852">flipHorizontal</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">When true flip the image. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#aa70e85ab29425537f1b0e41abbbfe852">flipHorizontal</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Visual representation of game objects. </p>
-<p>Holds the SDL_Texture from the SDL2 library. </p>
+<div class="textblock"><p>Visual representation of game objects. Holds the SDL_Texture from the SDL2 library. </p>
 
 <p>Definition at line <a class="el" href="Sprite_8h_source.html#l00010">10</a> of file <a class="el" href="Sprite_8h_source.html">Sprite.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
@@ -175,16 +161,14 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
       </table>
 </div>
 <div class="memdoc">
-
-<p>The constructor. </p>
-<p>Initializes all the data, and sets the desired renderer. Loads image with the desired path. </p>
+<p>The constructor. Initializes all the data, and sets the desired renderer. Loads image with the desired path. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">path_</td><td>: the image path. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classSprite.html#a9ba64ddfcd3f79c45b74ec1c1a16c396" title="Loads image from a path.">Sprite::loadFrom</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classSprite.html#a9ba64ddfcd3f79c45b74ec1c1a16c396">Sprite::loadFrom</a> </dd></dl>
 
 <p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00006">6</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
 
@@ -203,9 +187,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
       </table>
 </div>
 <div class="memdoc">
-
-<p>The destructor. </p>
-<p>Destroys the SDL_Texture. </p>
+<p>The destructor. Destroys the SDL_Texture. </p>
 
 <p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00032">32</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
 
@@ -225,7 +207,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
       </table>
 </div>
 <div class="memdoc">
-<dl class="return"><dt><b>Returns:</b></dt><dd>The <a class="el" href="classSprite.html" title="Visual representation of game objects.">Sprite</a> height. </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>The <a class="el" href="classSprite.html">Sprite</a> height. </dd></dl>
 
 <p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00090">90</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
 
@@ -244,7 +226,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
       </table>
 </div>
 <div class="memdoc">
-<dl class="return"><dt><b>Returns:</b></dt><dd>The <a class="el" href="classSprite.html" title="Visual representation of game objects.">Sprite</a> width. </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>The <a class="el" href="classSprite.html">Sprite</a> width. </dd></dl>
 
 <p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00086">86</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
 
@@ -264,9 +246,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
       </table>
 </div>
 <div class="memdoc">
-
-<p>Loads image from a path. </p>
-<p>Given an existing path for an image, loads the SDL_Texture from it. </p>
+<p>Loads image from a path. Given an existing path for an image, loads the SDL_Texture from it. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">path_</td><td>: the image path. </td></tr>
@@ -333,9 +313,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
       </table>
 </div>
 <div class="memdoc">
-
-<p>Renders the sprite. </p>
-<p>Copy the SDL_Texture onto the renderer, at the desired x,y position. </p>
+<p>Renders the sprite. Copy the SDL_Texture onto the renderer, at the desired x,y position. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">x_</td><td>: The position on the x axis of the screen. </td></tr>
@@ -350,7 +328,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </dl>
 <dl class="note"><dt><b>Note:</b></dt><dd>The only obligatory parameters are x_ and y_. </dd>
 <dd>
-If the <a class="el" href="classWindow.html" title="Represents the actual window that the game runs on.">Window</a> renderer is null, will halt the game. </dd>
+If the <a class="el" href="classWindow.html">Window</a> renderer is null, will halt the game. </dd>
 <dd>
 If it fails to render, logs an error message. </dd></dl>
 
@@ -359,6 +337,22 @@ If it fails to render, logs an error message. </dd></dl>
 </div>
 </div>
 <hr/><h2>Field Documentation</h2>
+<a class="anchor" id="aa70e85ab29425537f1b0e41abbbfe852"></a><!-- doxytag: member="Sprite::flipHorizontal" ref="aa70e85ab29425537f1b0e41abbbfe852" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classSprite.html#aa70e85ab29425537f1b0e41abbbfe852">Sprite::flipHorizontal</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>When true flip the image </p>
+
+<p>Definition at line <a class="el" href="Sprite_8h_source.html#l00090">90</a> of file <a class="el" href="Sprite_8h_source.html">Sprite.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a4d34b71316c3456acb51c3c7e57a94e2"></a><!-- doxytag: member="Sprite::height" ref="a4d34b71316c3456acb51c3c7e57a94e2" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -369,7 +363,6 @@ If it fails to render, logs an error message. </dd></dl>
       </table>
 </div>
 <div class="memdoc">
-
 <p>The loaded image's width. </p>
 
 <p>Definition at line <a class="el" href="Sprite_8h_source.html#l00088">88</a> of file <a class="el" href="Sprite_8h_source.html">Sprite.h</a>.</p>
@@ -386,8 +379,7 @@ If it fails to render, logs an error message. </dd></dl>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Holds the path from where the <a class="el" href="classSprite.html" title="Visual representation of game objects.">Sprite</a> was loaded. </p>
+<p>Holds the path from where the <a class="el" href="classSprite.html">Sprite</a> was loaded. </p>
 
 <p>Definition at line <a class="el" href="Sprite_8h_source.html#l00089">89</a> of file <a class="el" href="Sprite_8h_source.html">Sprite.h</a>.</p>
 
@@ -403,7 +395,6 @@ If it fails to render, logs an error message. </dd></dl>
       </table>
 </div>
 <div class="memdoc">
-
 <p>The SDL texture to use as the image. </p>
 
 <p>Definition at line <a class="el" href="Sprite_8h_source.html#l00083">83</a> of file <a class="el" href="Sprite_8h_source.html">Sprite.h</a>.</p>
@@ -420,7 +411,6 @@ If it fails to render, logs an error message. </dd></dl>
       </table>
 </div>
 <div class="memdoc">
-
 <p>The loaded image's width. </p>
 
 <p>Definition at line <a class="el" href="Sprite_8h_source.html#l00087">87</a> of file <a class="el" href="Sprite_8h_source.html">Sprite.h</a>.</p>
@@ -451,7 +441,7 @@ If it fails to render, logs an error message. </dd></dl>
     <ul>
       <li class="navelem"><a class="el" href="classSprite.html">Sprite</a>      </li>
 
-    <li class="footer">Generated on Thu Jan 8 2015 23:55:10 for sdl2-engine by
+    <li class="footer">Generated on Wed Jan 14 2015 22:39:13 for sdl2-engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

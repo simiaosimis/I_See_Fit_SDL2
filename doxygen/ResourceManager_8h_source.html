@@ -33,7 +33,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v12</span>
+   &#160;<span id="projectnumber">v13</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -106,25 +106,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00006"></a>00006 <span class="preprocessor">#include &lt;memory&gt;</span>
 <a name="l00007"></a>00007 
 <a name="l00012"></a>00012 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Type&gt;
-<a name="l00013"></a><a class="code" href="classResourceManager.html">00013</a> <span class="keyword">class </span><a class="code" href="classResourceManager.html" title="Template resource management class.">ResourceManager</a> : <span class="keyword">private</span> <a class="code" href="classUncopyable.html" title="Allow construction and deconstruction of derived objects, but prevent copying.">Uncopyable</a> {
+<a name="l00013"></a><a class="code" href="classResourceManager.html">00013</a> <span class="keyword">class </span><a class="code" href="classResourceManager.html">ResourceManager</a> : <span class="keyword">private</span> <a class="code" href="classUncopyable.html">Uncopyable</a> {
 <a name="l00014"></a>00014 
 <a name="l00015"></a>00015     <span class="keyword">private</span>:
 <a name="l00016"></a>00016         <span class="keyword">typedef</span> std::shared_ptr&lt;Type&gt; typePtr;
 <a name="l00017"></a>00017         <span class="keyword">typedef</span> std::map&lt;std::string, typePtr&gt; typeMap;
 <a name="l00018"></a>00018 
 <a name="l00019"></a>00019     <span class="keyword">public</span>:
-<a name="l00024"></a>00024         <span class="keyword">virtual</span> <a class="code" href="classResourceManager.html#a2567a084acc246f85d33bac8ef114655" title="The destructor.">~ResourceManager</a>();
+<a name="l00024"></a>00024         <span class="keyword">virtual</span> <a class="code" href="classResourceManager.html#a2567a084acc246f85d33bac8ef114655">~ResourceManager</a>();
 <a name="l00025"></a>00025 
 <a name="l00031"></a>00031         Type* <span class="keyword">get</span>(<span class="keyword">const</span> std::string&amp; path_);
 <a name="l00032"></a>00032 
 <a name="l00033"></a>00033     <span class="keyword">protected</span>:
-<a name="l00038"></a>00038         <span class="keyword">virtual</span> typePtr <a class="code" href="classResourceManager.html#ad089e00823733954471f0719e8498a2f" title="Constructs the desired resource.">load</a>(<span class="keyword">const</span> std::string&amp; path_) = 0;
+<a name="l00038"></a>00038         <span class="keyword">virtual</span> typePtr <a class="code" href="classResourceManager.html#ad089e00823733954471f0719e8498a2f">load</a>(<span class="keyword">const</span> std::string&amp; path_) = 0;
 <a name="l00039"></a>00039 
-<a name="l00045"></a>00045         <span class="keywordtype">void</span> <a class="code" href="classResourceManager.html#a5e08aa5e0c56ab672011d997ff432230" title="Registers the resource on the resources map.">registerResource</a>(<span class="keyword">const</span> std::string&amp; path_, typePtr resource_);
+<a name="l00045"></a>00045         <span class="keywordtype">void</span> <a class="code" href="classResourceManager.html#a5e08aa5e0c56ab672011d997ff432230">registerResource</a>(<span class="keyword">const</span> std::string&amp; path_, typePtr resource_);
 <a name="l00046"></a>00046 
-<a name="l00051"></a>00051         <span class="keywordtype">void</span> <a class="code" href="classResourceManager.html#a99af4d3a53a604f5c3161a6b72d37ae1" title="Unregisters the resource on the resources map.">unregisterResource</a>(<span class="keyword">const</span> std::string&amp; path_);
+<a name="l00051"></a>00051         <span class="keywordtype">void</span> <a class="code" href="classResourceManager.html#a99af4d3a53a604f5c3161a6b72d37ae1">unregisterResource</a>(<span class="keyword">const</span> std::string&amp; path_);
 <a name="l00052"></a>00052 
-<a name="l00053"></a><a class="code" href="classResourceManager.html#a87e65c9b6ce65734a23ff51022e6681d">00053</a>         typeMap <a class="code" href="classResourceManager.html#a87e65c9b6ce65734a23ff51022e6681d" title="The map that contains all the Type resources.">resources</a>; 
+<a name="l00053"></a><a class="code" href="classResourceManager.html#a87e65c9b6ce65734a23ff51022e6681d">00053</a>         typeMap <a class="code" href="classResourceManager.html#a87e65c9b6ce65734a23ff51022e6681d">resources</a>; 
 <a name="l00055"></a>00055 };
 <a name="l00056"></a>00056 
 <a name="l00057"></a>00057 <span class="preprocessor">#include &quot;ResourceManager.tpp&quot;</span>
@@ -148,7 +148,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><b>ResourceManager.h</b>      </li>
 
-    <li class="footer">Generated on Thu Jan 8 2015 23:55:10 for sdl2-engine by
+    <li class="footer">Generated on Wed Jan 14 2015 22:39:13 for sdl2-engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

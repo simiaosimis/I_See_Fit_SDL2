@@ -16,5 +16,7 @@ var searchData=
   ['resourcemanager_3c_20soundeffect_20_3e',['ResourceManager< SoundEffect >',['../classResourceManager.html',1,'']]],
   ['resourcemanager_3c_20sprite_20_3e',['ResourceManager< Sprite >',['../classResourceManager.html',1,'']]],
   ['resources',['resources',['../classResourceManager.html#a87e65c9b6ce65734a23ff51022e6681d',1,'ResourceManager']]],
+  ['resumeeffects',['ResumeEffects',['../classAudioHandler.html#a3a6c5eefbbc868edb1ca3c0ab5dfc2cd',1,'AudioHandler']]],
+  ['resumemusic',['ResumeMusic',['../classAudioHandler.html#a70d9a27afa7f58e04ed78dd7c6027afe',1,'AudioHandler']]],
   ['rungame',['runGame',['../classGame.html#abc9436a9d18e48c6e1e4fbc4ea879449',1,'Game']]]
 ];

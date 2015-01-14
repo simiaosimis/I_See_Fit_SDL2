@@ -33,7 +33,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v12</span>
+   &#160;<span id="projectnumber">v13</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -106,42 +106,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <!-- doxytag: class="Camera" -->
-<p>The camera class.  
- <a href="classCamera.html#details">More...</a></p>
-
 <p><code>#include &lt;<a class="el" href="Camera_8h_source.html">Camera.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCamera.html#a38fcce2d132182fda695f2627cc841e9">Camera</a> (<a class="el" href="classGameObject.html">GameObject</a> *const gameObject_)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor.  <a href="#a38fcce2d132182fda695f2627cc841e9"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad1897942d0ccf91052386388a497349f"></a><!-- doxytag: member="Camera::~Camera" ref="ad1897942d0ccf91052386388a497349f" args="()" -->
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCamera.html#ad1897942d0ccf91052386388a497349f">~Camera</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The destructor. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCamera.html#ad1897942d0ccf91052386388a497349f">~Camera</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCamera.html#a42cda7239981a5618660d04bd5893556">update</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the camera.  <a href="#a42cda7239981a5618660d04bd5893556"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCamera.html#a355fb77bfae549d28293662aa675d85b">centralizeOn</a> (<a class="el" href="classGameObject.html">GameObject</a> *const gameObject_)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the entity to centralize upon.  <a href="#a355fb77bfae549d28293662aa675d85b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">SDL_Rect &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCamera.html#a88cddc06987c3665a26a8d5c86f7d6c8">getClip</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCamera.html#a6768fadda07535ae32ff269f255b7a79">setLevelWH</a> (const unsigned int width_, const unsigned int height_)</td></tr>
 <tr><td colspan="2"><h2><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCamera.html#aecf07f908ef1bfa2c2f1bb5cd4192d8d">updatePosition</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the cameras position.  <a href="#aecf07f908ef1bfa2c2f1bb5cd4192d8d"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGameObject.html">GameObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCamera.html#ac9b5a1f9deecf080f38a6196b3bb706f">gameObject</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference to the entity.  <a href="#ac9b5a1f9deecf080f38a6196b3bb706f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCamera.html#afcf1ecd0a79a95e8097109be04dd1779">levelW</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The width of the level.  <a href="#afcf1ecd0a79a95e8097109be04dd1779"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCamera.html#a561e153f11f640088936dcb63cd2924a">levelH</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The height of the level.  <a href="#a561e153f11f640088936dcb63cd2924a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">SDL_Rect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCamera.html#a3e33feaa65673d9de0067aecabdbe249">clip</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Clip which will be used to clip the rendering only to the extent of the camera.  <a href="#a3e33feaa65673d9de0067aecabdbe249"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>The camera class. </p>
-<p>Contains all the relevant implementation relative to the camera. </p>
+<div class="textblock"><p>The camera class. Contains all the relevant implementation relative to the camera. </p>
 
 <p>Definition at line <a class="el" href="Camera_8h_source.html#l00010">10</a> of file <a class="el" href="Camera_8h_source.html">Camera.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
@@ -159,17 +145,32 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>The constructor. </p>
-<p>Initializes all the attributes. </p>
+<p>The constructor. Initializes all the attributes. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">gameObject_</td><td>: The <a class="el" href="classGameObject.html" title="Base class for all game objects (gameObjects).">GameObject</a> to centralize the camera on. </td></tr>
+    <tr><td class="paramname">gameObject_</td><td>: The <a class="el" href="classGameObject.html">GameObject</a> to centralize the camera on. </td></tr>
   </table>
   </dd>
 </dl>
 
 <p>Definition at line <a class="el" href="Camera_8cpp_source.html#l00004">4</a> of file <a class="el" href="Camera_8cpp_source.html">Camera.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad1897942d0ccf91052386388a497349f"></a><!-- doxytag: member="Camera::~Camera" ref="ad1897942d0ccf91052386388a497349f" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classCamera.html#ad1897942d0ccf91052386388a497349f">Camera::~Camera</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>The destructor. </p>
 
 </div>
 </div>
@@ -188,7 +189,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
 <p>Changes the entity to centralize upon. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
@@ -263,9 +263,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
 <p>Updates the camera. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classCamera.html#aecf07f908ef1bfa2c2f1bb5cd4192d8d" title="Updates the cameras position.">Camera::updatePosition</a> Centralizes the player on the screen. </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classCamera.html#aecf07f908ef1bfa2c2f1bb5cd4192d8d">Camera::updatePosition</a> Centralizes the player on the screen. </dd></dl>
 
 </div>
 </div>
@@ -282,9 +281,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Updates the cameras position. </p>
-<p>Based on the players position, change cameras position. </p>
+<p>Updates the cameras position. Based on the players position, change cameras position. </p>
 
 </div>
 </div>
@@ -299,7 +296,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
 <p>Clip which will be used to clip the rendering only to the extent of the camera. </p>
 
 <p>Definition at line <a class="el" href="Camera_8h_source.html#l00059">59</a> of file <a class="el" href="Camera_8h_source.html">Camera.h</a>.</p>
@@ -316,7 +312,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
 <p>Reference to the entity. </p>
 
 <p>Definition at line <a class="el" href="Camera_8h_source.html#l00056">56</a> of file <a class="el" href="Camera_8h_source.html">Camera.h</a>.</p>
@@ -333,7 +328,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
 <p>The height of the level. </p>
 
 <p>Definition at line <a class="el" href="Camera_8h_source.html#l00058">58</a> of file <a class="el" href="Camera_8h_source.html">Camera.h</a>.</p>
@@ -350,7 +344,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
 <p>The width of the level. </p>
 
 <p>Definition at line <a class="el" href="Camera_8h_source.html#l00057">57</a> of file <a class="el" href="Camera_8h_source.html">Camera.h</a>.</p>
@@ -381,7 +374,7 @@ Private Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="classCamera.html">Camera</a>      </li>
 
-    <li class="footer">Generated on Thu Jan 8 2015 23:55:10 for sdl2-engine by
+    <li class="footer">Generated on Wed Jan 14 2015 22:39:13 for sdl2-engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

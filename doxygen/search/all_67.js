@@ -2,7 +2,7 @@ var searchData=
 [
   ['game',['Game',['../classGame.html',1,'Game'],['../classGame.html#ad59df6562a58a614fda24622d3715b65',1,'Game::Game()']]],
   ['gamecontroller',['gameController',['../classControllerHandler.html#a65bbcf23b90f3ab1b4087acd136518b2',1,'ControllerHandler']]],
-  ['gameobject',['GameObject',['../classGameObject.html',1,'GameObject'],['../classCamera.html#ac9b5a1f9deecf080f38a6196b3bb706f',1,'Camera::gameObject()'],['../classGameObject.html#aaeb95e7f576dd73ebcceed18b7a8cce1',1,'GameObject::GameObject(const double x_, const double y_, const std::string &amp;path_)'],['../classGameObject.html#a128ddbbeaecfc3d43758d9b4a94bb853',1,'GameObject::GameObject(const double x_, const double y_)']]],
+  ['gameobject',['GameObject',['../classGameObject.html',1,'GameObject'],['../classGameObject.html#aaeb95e7f576dd73ebcceed18b7a8cce1',1,'GameObject::GameObject(const double x_, const double y_, const std::string &amp;path_)'],['../classGameObject.html#a128ddbbeaecfc3d43758d9b4a94bb853',1,'GameObject::GameObject(const double x_, const double y_)'],['../classCamera.html#ac9b5a1f9deecf080f38a6196b3bb706f',1,'Camera::gameObject()']]],
   ['gameobjects',['gameObjects',['../classStateGame.html#ae4b0e8ceb5cc37fe469b5e4f978ceea9',1,'StateGame']]],
   ['get',['get',['../classResourceManager.html#affb9c13363097d4602766101f2f8212f',1,'ResourceManager']]],
   ['getanimationclip',['getAnimationClip',['../classGameObject.html#a75c4556a9513069fc021a2b8d7ebfc5b',1,'GameObject']]],

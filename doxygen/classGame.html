@@ -33,7 +33,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v12</span>
+   &#160;<span id="projectnumber">v13</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -108,32 +108,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <!-- doxytag: class="Game" -->
-<p>Main structure class for the game.  
- <a href="classGame.html#details">More...</a></p>
-
 <p><code>#include &lt;<a class="el" href="Game_8h_source.html">Game.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#acb5aff30c92015e8ed51e1d35d0d97ea">GStates</a> { <b>PLACEHOLDER</b> =  0
  }</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">All possible game states. <br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#ae3d112ca6e0e55150d2fdbc704474530">~Game</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The destructor.  <a href="#ae3d112ca6e0e55150d2fdbc704474530"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#abc9436a9d18e48c6e1e4fbc4ea879449">runGame</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The main game loop.  <a href="#abc9436a9d18e48c6e1e4fbc4ea879449"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#a34a67034d7aea701ce9a161786d3006d">changeState</a> (const <a class="el" href="classGame.html#acb5aff30c92015e8ed51e1d35d0d97ea">GStates</a> state_)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current game state.  <a href="#a34a67034d7aea701ce9a161786d3006d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAudioHandler.html">AudioHandler</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#aefdf22987b627adf4ee9cdcc178fc11c">getAudioHandler</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::array&lt; bool, GameKeys::MAX &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#a76067c5eab048e88307d0a1c75328eda">getInput</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRenderer.html">Renderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#af4f1ce14a3cf7017942fdf0d183d24c3">getRenderer</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0a5dc2bb1e4b2b80415919aa20cce38f"></a><!-- doxytag: member="Game::getResource" ref="a0a5dc2bb1e4b2b80415919aa20cce38f" args="()" -->
 <a class="el" href="classResourceHandler.html">ResourceHandler</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getResource</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a17fbb36fd4a2085f9ff4f1fa93d7d08b"></a><!-- doxytag: member="Game::stop" ref="a17fbb36fd4a2085f9ff4f1fa93d7d08b" args="()" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#a17fbb36fd4a2085f9ff4f1fa93d7d08b">stop</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops execution and closes the game. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#a17fbb36fd4a2085f9ff4f1fa93d7d08b">stop</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a598440545d40cf36982a1b551c9ec13a"></a><!-- doxytag: member="Game::clearKeyFromInput" ref="a598440545d40cf36982a1b551c9ec13a" args="(const GameKeys key_)" -->
 void&#160;</td><td class="memItemRight" valign="bottom"><b>clearKeyFromInput</b> (const GameKeys key_)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7cb479310ef55f4c28c55c04a7d9731e"></a><!-- doxytag: member="Game::resizeWindow" ref="a7cb479310ef55f4c28c55c04a7d9731e" args="(const unsigned int width_, const unsigned int height_)" -->
@@ -141,38 +132,44 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>resizeWindow</b> (con
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classGame.html">Game</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#ac213e6d3a4e566d901413f62f6408858">instance</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Singleton imeplementation for <a class="el" href="classGame.html" title="Main structure class for the game.">Game</a>.  <a href="#ac213e6d3a4e566d901413f62f6408858"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#ad59df6562a58a614fda24622d3715b65">Game</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor.  <a href="#ad59df6562a58a614fda24622d3715b65"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#afc16bd0d077c53218c27f16e0bf56cbb">initializeStates</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads all the states.  <a href="#afc16bd0d077c53218c27f16e0bf56cbb"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#a684834abb420aba6d30094d1fe273818">destroyStates</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes all the loaded states.  <a href="#a684834abb420aba6d30094d1fe273818"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWindow.html">Window</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#a553924bcccf9f9b1c04e385041852f17">window</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The game <a class="el" href="classWindow.html" title="Represents the actual window that the game runs on.">Window</a>.  <a href="#a553924bcccf9f9b1c04e385041852f17"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#adb424734b2454f9ed1e6d6bd44e6dfaf">isRunning</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the game is currently running/looping or not.  <a href="#adb424734b2454f9ed1e6d6bd44e6dfaf"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAudioHandler.html">AudioHandler</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#a0669fc05427f97820f44f2ac5cc7cef0">audioHandler</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="classGame.html" title="Main structure class for the game.">Game</a> <a class="el" href="classAudioHandler.html" title="The audio handler.">AudioHandler</a>.  <a href="#a0669fc05427f97820f44f2ac5cc7cef0"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classInputHandler.html">InputHandler</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#aa0ca10b15de880181ddcfede0de9226c">inputHandler</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="classGame.html" title="Main structure class for the game.">Game</a> <a class="el" href="classInputHandler.html" title="Handles player input.">InputHandler</a>.  <a href="#aa0ca10b15de880181ddcfede0de9226c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3b57f1111dc0f153b72f73b207b89901"></a><!-- doxytag: member="Game::resourceHandler" ref="a3b57f1111dc0f153b72f73b207b89901" args="" -->
 <a class="el" href="classResourceHandler.html">ResourceHandler</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>resourceHandler</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classStateGame.html">StateGame</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#a39cc30f3e086ce1279ad01967d7694fe">currentState</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The current state, which the game is in.  <a href="#a39cc30f3e086ce1279ad01967d7694fe"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::map&lt; <a class="el" href="classGame.html#acb5aff30c92015e8ed51e1d35d0d97ea">GStates</a>, <a class="el" href="classStateGame.html">StateGame</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#a9d6b3d33b550f2ac3425d324d5e235e8">statesMap</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Map containing all possible states.  <a href="#a9d6b3d33b550f2ac3425d324d5e235e8"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Main structure class for the game. </p>
-<p>Contains all the necessary functionalities to loop and update the game. Is the state machine (controls current state), contains all the different possible states. </p>
+<div class="textblock"><p>Main structure class for the game. Contains all the necessary functionalities to loop and update the game. Is the state machine (controls current state), contains all the different possible states. </p>
 
 <p>Definition at line <a class="el" href="Game_8h_source.html#l00018">18</a> of file <a class="el" href="Game_8h_source.html">Game.h</a>.</p>
-</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+</div><hr/><h2>Member Enumeration Documentation</h2>
+<a class="anchor" id="acb5aff30c92015e8ed51e1d35d0d97ea"></a><!-- doxytag: member="Game::GStates" ref="acb5aff30c92015e8ed51e1d35d0d97ea" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classGame.html#acb5aff30c92015e8ed51e1d35d0d97ea">Game::GStates</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>All possible game states. </p>
+
+<p>Definition at line <a class="el" href="Game_8h_source.html#l00024">24</a> of file <a class="el" href="Game_8h_source.html">Game.h</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ae3d112ca6e0e55150d2fdbc704474530"></a><!-- doxytag: member="Game::~Game" ref="ae3d112ca6e0e55150d2fdbc704474530" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -186,9 +183,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>The destructor. </p>
-<p>Destroys the game's <a class="el" href="classWindow.html" title="Represents the actual window that the game runs on.">Window</a> and states, and unloads current state. </p>
+<p>The destructor. Destroys the game's <a class="el" href="classWindow.html">Window</a> and states, and unloads current state. </p>
 
 <p>Definition at line <a class="el" href="Game_8cpp_source.html#l00047">47</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
 
@@ -207,10 +202,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>The constructor. </p>
-<p>Sets the game window and tells the game that it is OK to begin looping. Also, it begins the FPS manager. </p>
-<dl class="note"><dt><b>Note:</b></dt><dd>If the <a class="el" href="classWindow.html" title="Represents the actual window that the game runs on.">Window</a> cannot be created, the game will not begin. </dd></dl>
+<p>The constructor. Sets the game window and tells the game that it is OK to begin looping. Also, it begins the FPS manager. </p>
+<dl class="note"><dt><b>Note:</b></dt><dd>If the <a class="el" href="classWindow.html">Window</a> cannot be created, the game will not begin. </dd></dl>
 
 <p>Definition at line <a class="el" href="Game_8cpp_source.html#l00028">28</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
 
@@ -231,11 +224,10 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
 <p>Sets the current game state. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classStateGame.html#a924e531e28b8afcbb82858eecef0a084" title="Loads necessary objects.">StateGame::load()</a> </dd>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classStateGame.html#a924e531e28b8afcbb82858eecef0a084">StateGame::load()</a> </dd>
 <dd>
-<a class="el" href="classStateGame.html#aa215f7b6d37658dead89448afacc713d" title="Unloads necessary objects.">StateGame::unload()</a> </dd></dl>
+<a class="el" href="classStateGame.html#aa215f7b6d37658dead89448afacc713d">StateGame::unload()</a> </dd></dl>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">state_</td><td>: The state you want to be changed into. </td></tr>
@@ -261,9 +253,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Deletes all the loaded states. </p>
-<p>Every new state implemented should be deleted here. </p>
+<p>Deletes all the loaded states. Every new state implemented should be deleted here. </p>
 
 <p>Definition at line <a class="el" href="Game_8cpp_source.html#l00130">130</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
 
@@ -282,7 +272,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<dl class="return"><dt><b>Returns:</b></dt><dd>The <a class="el" href="classGame.html" title="Main structure class for the game.">Game</a> audioHandler. </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>The <a class="el" href="classGame.html">Game</a> audioHandler. </dd></dl>
 
 <p>Definition at line <a class="el" href="Game_8cpp_source.html#l00137">137</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
 
@@ -301,7 +291,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<dl class="return"><dt><b>Returns:</b></dt><dd>The boolean array recieved from the <a class="el" href="classInputHandler.html" title="Handles player input.">InputHandler</a>. </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>The boolean array recieved from the <a class="el" href="classInputHandler.html">InputHandler</a>. </dd></dl>
 
 <p>Definition at line <a class="el" href="Game_8cpp_source.html#l00141">141</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
 
@@ -339,9 +329,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Loads all the states. </p>
-<p>Every new state implemented should be initialized here. </p>
+<p>Loads all the states. Every new state implemented should be initialized here. </p>
 
 <p>Definition at line <a class="el" href="Game_8cpp_source.html#l00123">123</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
 
@@ -360,9 +348,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Singleton imeplementation for <a class="el" href="classGame.html" title="Main structure class for the game.">Game</a>. </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>The instance for a <a class="el" href="classGame.html" title="Main structure class for the game.">Game</a>. </dd></dl>
+<p>Singleton imeplementation for <a class="el" href="classGame.html">Game</a>. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>The instance for a <a class="el" href="classGame.html">Game</a>. </dd></dl>
 
 <p>Definition at line <a class="el" href="Game_8cpp_source.html#l00020">20</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
 
@@ -381,11 +368,28 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>The main game loop. </p>
-<p>Orders the game structure, such as inputs, updates, and rendering. </p>
+<p>The main game loop. Orders the game structure, such as inputs, updates, and rendering. </p>
 
 <p>Definition at line <a class="el" href="Game_8cpp_source.html#l00060">60</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a17fbb36fd4a2085f9ff4f1fa93d7d08b"></a><!-- doxytag: member="Game::stop" ref="a17fbb36fd4a2085f9ff4f1fa93d7d08b" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classGame.html#a17fbb36fd4a2085f9ff4f1fa93d7d08b">Game::stop</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Stops execution and closes the game. </p>
+
+<p>Definition at line <a class="el" href="Game_8cpp_source.html#l00145">145</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
 
 </div>
 </div>
@@ -400,8 +404,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>The <a class="el" href="classGame.html" title="Main structure class for the game.">Game</a> <a class="el" href="classAudioHandler.html" title="The audio handler.">AudioHandler</a>. </p>
+<p>The <a class="el" href="classGame.html">Game</a> <a class="el" href="classAudioHandler.html">AudioHandler</a>. </p>
 
 <p>Definition at line <a class="el" href="Game_8h_source.html#l00103">103</a> of file <a class="el" href="Game_8h_source.html">Game.h</a>.</p>
 
@@ -417,7 +420,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
 <p>The current state, which the game is in. </p>
 
 <p>Definition at line <a class="el" href="Game_8h_source.html#l00107">107</a> of file <a class="el" href="Game_8h_source.html">Game.h</a>.</p>
@@ -434,8 +436,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>The <a class="el" href="classGame.html" title="Main structure class for the game.">Game</a> <a class="el" href="classInputHandler.html" title="Handles player input.">InputHandler</a>. </p>
+<p>The <a class="el" href="classGame.html">Game</a> <a class="el" href="classInputHandler.html">InputHandler</a>. </p>
 
 <p>Definition at line <a class="el" href="Game_8h_source.html#l00104">104</a> of file <a class="el" href="Game_8h_source.html">Game.h</a>.</p>
 
@@ -451,7 +452,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
 <p>Whether the game is currently running/looping or not. </p>
 
 <p>Definition at line <a class="el" href="Game_8h_source.html#l00101">101</a> of file <a class="el" href="Game_8h_source.html">Game.h</a>.</p>
@@ -468,7 +468,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
 <p>Map containing all possible states. </p>
 
 <p>Definition at line <a class="el" href="Game_8h_source.html#l00109">109</a> of file <a class="el" href="Game_8h_source.html">Game.h</a>.</p>
@@ -485,8 +484,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>The game <a class="el" href="classWindow.html" title="Represents the actual window that the game runs on.">Window</a>. </p>
+<p>The game <a class="el" href="classWindow.html">Window</a>. </p>
 
 <p>Definition at line <a class="el" href="Game_8h_source.html#l00100">100</a> of file <a class="el" href="Game_8h_source.html">Game.h</a>.</p>
 
@@ -516,7 +514,7 @@ Private Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="classGame.html">Game</a>      </li>
 
-    <li class="footer">Generated on Thu Jan 8 2015 23:55:10 for sdl2-engine by
+    <li class="footer">Generated on Wed Jan 14 2015 22:39:13 for sdl2-engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

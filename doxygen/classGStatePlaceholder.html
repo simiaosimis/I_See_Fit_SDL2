@@ -33,7 +33,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v12</span>
+   &#160;<span id="projectnumber">v13</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -105,9 +105,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <!-- doxytag: class="GStatePlaceholder" --><!-- doxytag: inherits="StateGame" -->
-<p>The state used for testing the engine.  
- <a href="classGStatePlaceholder.html#details">More...</a></p>
-
 <p><code>#include &lt;<a class="el" href="GStatePlaceholder_8h_source.html">GStatePlaceholder.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for GStatePlaceholder:</div>
@@ -115,27 +112,18 @@ Inheritance diagram for GStatePlaceholder:</div>
  <div class="center">
   <img src="classGStatePlaceholder.png" usemap="#GStatePlaceholder_map" alt=""/>
   <map id="GStatePlaceholder_map" name="GStatePlaceholder_map">
-<area href="classStateGame.html" title="Parent class for other game states." alt="StateGame" shape="rect" coords="0,0,117,24"/>
+<area href="classStateGame.html" alt="StateGame" shape="rect" coords="0,0,117,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGStatePlaceholder.html#adfbf36156052798e8f7907c212aa84c9">GStatePlaceholder</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor.  <a href="#adfbf36156052798e8f7907c212aa84c9"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abfe13fd6fe0b6d258734c188f62c167c"></a><!-- doxytag: member="GStatePlaceholder::~GStatePlaceholder" ref="abfe13fd6fe0b6d258734c188f62c167c" args="()" -->
-virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGStatePlaceholder.html#abfe13fd6fe0b6d258734c188f62c167c">~GStatePlaceholder</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The destructor. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac61770a40ac7b0ab200da46e731fa127"></a><!-- doxytag: member="GStatePlaceholder::load" ref="ac61770a40ac7b0ab200da46e731fa127" args="()" -->
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGStatePlaceholder.html#ac61770a40ac7b0ab200da46e731fa127">load</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the state. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGStatePlaceholder.html#abfe13fd6fe0b6d258734c188f62c167c">~GStatePlaceholder</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGStatePlaceholder.html#ac61770a40ac7b0ab200da46e731fa127">load</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGStatePlaceholder.html#a943b34fe563ef4de7a433b5b813ede13">update</a> (const double dt_)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the objects within the <a class="el" href="classStateGame.html" title="Parent class for other game states.">StateGame</a>.  <a href="#a943b34fe563ef4de7a433b5b813ede13"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGStatePlaceholder.html#ab2b6a671368d55c5437a658cc9bca44d">unload</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Unloads everything that was loaded.  <a href="#ab2b6a671368d55c5437a658cc9bca44d"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aac74087ca575c21a54e85733b58fb5be"></a><!-- doxytag: member="GStatePlaceholder::render" ref="aac74087ca575c21a54e85733b58fb5be" args="()" -->
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGStatePlaceholder.html#aac74087ca575c21a54e85733b58fb5be">render</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders the state. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGStatePlaceholder.html#aac74087ca575c21a54e85733b58fb5be">render</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7453f629f02e6ddba49490f346ffe1ee"></a><!-- doxytag: member="GStatePlaceholder::image" ref="a7453f629f02e6ddba49490f346ffe1ee" args="" -->
@@ -146,8 +134,7 @@ Private Attributes</h2></td></tr>
 SDL_Rect&#160;</td><td class="memItemRight" valign="bottom"><b>animationClip</b></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>The state used for testing the engine. </p>
-<p>For now is just a placeholder, might have different states to test different things later. </p>
+<div class="textblock"><p>The state used for testing the engine. For now is just a placeholder, might have different states to test different things later. </p>
 
 <p>Definition at line <a class="el" href="GStatePlaceholder_8h_source.html#l00011">11</a> of file <a class="el" href="GStatePlaceholder_8h_source.html">GStatePlaceholder.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
@@ -164,15 +151,68 @@ SDL_Rect&#160;</td><td class="memItemRight" valign="bottom"><b>animationClip</b>
       </table>
 </div>
 <div class="memdoc">
-
-<p>The constructor. </p>
-<p>Initializes all the attributes. </p>
+<p>The constructor. Initializes all the attributes. </p>
 
 <p>Definition at line <a class="el" href="GStatePlaceholder_8cpp_source.html#l00005">5</a> of file <a class="el" href="GStatePlaceholder_8cpp_source.html">GStatePlaceholder.cpp</a>.</p>
 
 </div>
 </div>
+<a class="anchor" id="abfe13fd6fe0b6d258734c188f62c167c"></a><!-- doxytag: member="GStatePlaceholder::~GStatePlaceholder" ref="abfe13fd6fe0b6d258734c188f62c167c" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classGStatePlaceholder.html#abfe13fd6fe0b6d258734c188f62c167c">GStatePlaceholder::~GStatePlaceholder</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>The destructor. </p>
+
+</div>
+</div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="ac61770a40ac7b0ab200da46e731fa127"></a><!-- doxytag: member="GStatePlaceholder::load" ref="ac61770a40ac7b0ab200da46e731fa127" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="classGStatePlaceholder.html#ac61770a40ac7b0ab200da46e731fa127">GStatePlaceholder::load</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Loads the state. </p>
+
+<p>Implements <a class="el" href="classStateGame.html#a924e531e28b8afcbb82858eecef0a084">StateGame</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aac74087ca575c21a54e85733b58fb5be"></a><!-- doxytag: member="GStatePlaceholder::render" ref="aac74087ca575c21a54e85733b58fb5be" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="classGStatePlaceholder.html#aac74087ca575c21a54e85733b58fb5be">GStatePlaceholder::render</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Renders the state. </p>
+
+<p>Implements <a class="el" href="classStateGame.html#a9e181e234d99aa11beead047152a8e92">StateGame</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ab2b6a671368d55c5437a658cc9bca44d"></a><!-- doxytag: member="GStatePlaceholder::unload" ref="ab2b6a671368d55c5437a658cc9bca44d" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -186,9 +226,8 @@ SDL_Rect&#160;</td><td class="memItemRight" valign="bottom"><b>animationClip</b>
       </table>
 </div>
 <div class="memdoc">
-
 <p>Unloads everything that was loaded. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classGStatePlaceholder.html#ac61770a40ac7b0ab200da46e731fa127" title="Loads the state.">GStatePlaceholder::load</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classGStatePlaceholder.html#ac61770a40ac7b0ab200da46e731fa127">GStatePlaceholder::load</a> </dd></dl>
 
 <p>Implements <a class="el" href="classStateGame.html#aa215f7b6d37658dead89448afacc713d">StateGame</a>.</p>
 
@@ -208,8 +247,7 @@ SDL_Rect&#160;</td><td class="memItemRight" valign="bottom"><b>animationClip</b>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Updates the objects within the <a class="el" href="classStateGame.html" title="Parent class for other game states.">StateGame</a>. </p>
+<p>Updates the objects within the <a class="el" href="classStateGame.html">StateGame</a>. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">dt_</td><td>: Delta time. Time elapsed between one frame and the other. </td></tr>
@@ -245,7 +283,7 @@ SDL_Rect&#160;</td><td class="memItemRight" valign="bottom"><b>animationClip</b>
     <ul>
       <li class="navelem"><a class="el" href="classGStatePlaceholder.html">GStatePlaceholder</a>      </li>
 
-    <li class="footer">Generated on Thu Jan 8 2015 23:55:10 for sdl2-engine by
+    <li class="footer">Generated on Wed Jan 14 2015 22:39:13 for sdl2-engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

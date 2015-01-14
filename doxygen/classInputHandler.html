@@ -33,7 +33,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v12</span>
+   &#160;<span id="projectnumber">v13</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -106,42 +106,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <!-- doxytag: class="InputHandler" -->
-<p>Handles player input.  
- <a href="classInputHandler.html#details">More...</a></p>
-
 <p><code>#include &lt;<a class="el" href="InputHandler_8h_source.html">InputHandler.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputHandler.html#a698aa4af4f326a9881835fda251ca996">InputHandler</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor.  <a href="#a698aa4af4f326a9881835fda251ca996"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputHandler.html#ac1f7efb54b34d433d6ffba62627452b6">~InputHandler</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The destructor.  <a href="#ac1f7efb54b34d433d6ffba62627452b6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputHandler.html#a820f483265aa3f6da39b9d93c1311966">handleInput</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles the input.  <a href="#a820f483265aa3f6da39b9d93c1311966"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::array&lt; bool, GameKeys::MAX &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputHandler.html#af7087290a2fd7d973a47768049cfe5eb">getKeyStates</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputHandler.html#a7d103ecce85288f454876b5bef8b3aee">isQuitFlag</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac318051809c7764f010ca9d7f4b3eecd"></a><!-- doxytag: member="InputHandler::clearKey" ref="ac318051809c7764f010ca9d7f4b3eecd" args="(const GameKeys key_)" -->
 void&#160;</td><td class="memItemRight" valign="bottom"><b>clearKey</b> (const GameKeys key_)</td></tr>
 <tr><td colspan="2"><h2><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae3546fa674d3db49d755b4047503f4e8"></a><!-- doxytag: member="InputHandler::signalExit" ref="ae3546fa674d3db49d755b4047503f4e8" args="()" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputHandler.html#ae3546fa674d3db49d755b4047503f4e8">signalExit</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets <a class="el" href="classInputHandler.html#a6bd166e013cbd6313609eab276f00abd" title="If the quit signal was recieved or not.">InputHandler::quitFlag</a> to true. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputHandler.html#ae3546fa674d3db49d755b4047503f4e8">signalExit</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classControllerHandler.html">ControllerHandler</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputHandler.html#a50ac48002b081c2c03af8f638c47dbe7">controllerHandler</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles input if joystick is present.  <a href="#a50ac48002b081c2c03af8f638c47dbe7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::array&lt; bool, GameKeys::MAX &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19">keyStates</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Boolean array that controls which keys are pressed or not.  <a href="#af8e03451ccf5a1028b2bc38ed85fad19"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">SDL_Event&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputHandler.html#ab2fa06988077060c7a3dca6c3d643dd3">sdlEvent</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">SDL internal event structure.  <a href="#ab2fa06988077060c7a3dca6c3d643dd3"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputHandler.html#a6bd166e013cbd6313609eab276f00abd">quitFlag</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">If the quit signal was recieved or not.  <a href="#a6bd166e013cbd6313609eab276f00abd"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Handles player input. </p>
-<p>Using SDL event handling, recieves the player input accordingly. </p>
+<div class="textblock"><p>Handles player input. Using SDL event handling, recieves the player input accordingly. </p>
 
 <p>Definition at line <a class="el" href="InputHandler_8h_source.html#l00012">12</a> of file <a class="el" href="InputHandler_8h_source.html">InputHandler.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
@@ -158,9 +145,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>The constructor. </p>
-<p>Used to create the input handler instance. </p>
+<p>The constructor. Used to create the input handler instance. </p>
 
 <p>Definition at line <a class="el" href="InputHandler_8cpp_source.html#l00004">4</a> of file <a class="el" href="InputHandler_8cpp_source.html">InputHandler.cpp</a>.</p>
 
@@ -179,9 +164,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>The destructor. </p>
-<p>Deletes the <a class="el" href="classInputHandler.html" title="Handles player input.">InputHandler</a> instance. </p>
+<p>The destructor. Deletes the <a class="el" href="classInputHandler.html">InputHandler</a> instance. </p>
 
 <p>Definition at line <a class="el" href="InputHandler_8cpp_source.html#l00011">11</a> of file <a class="el" href="InputHandler_8cpp_source.html">InputHandler.cpp</a>.</p>
 
@@ -201,7 +184,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19" title="Boolean array that controls which keys are pressed or not.">InputHandler::keyStates</a> </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19">InputHandler::keyStates</a> </dd></dl>
 
 <p>Definition at line <a class="el" href="InputHandler_8cpp_source.html#l00096">96</a> of file <a class="el" href="InputHandler_8cpp_source.html">InputHandler.cpp</a>.</p>
 
@@ -220,9 +203,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Handles the input. </p>
-<p>Detects the pending events, and handles them appropriately. </p>
+<p>Handles the input. Detects the pending events, and handles them appropriately. </p>
 
 <p>Definition at line <a class="el" href="InputHandler_8cpp_source.html#l00015">15</a> of file <a class="el" href="InputHandler_8cpp_source.html">InputHandler.cpp</a>.</p>
 
@@ -241,9 +222,28 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="classInputHandler.html#a6bd166e013cbd6313609eab276f00abd" title="If the quit signal was recieved or not.">InputHandler::quitFlag</a> </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="classInputHandler.html#a6bd166e013cbd6313609eab276f00abd">InputHandler::quitFlag</a> </dd></dl>
 
 <p>Definition at line <a class="el" href="InputHandler_8cpp_source.html#l00100">100</a> of file <a class="el" href="InputHandler_8cpp_source.html">InputHandler.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae3546fa674d3db49d755b4047503f4e8"></a><!-- doxytag: member="InputHandler::signalExit" ref="ae3546fa674d3db49d755b4047503f4e8" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classInputHandler.html#ae3546fa674d3db49d755b4047503f4e8">InputHandler::signalExit</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Sets <a class="el" href="classInputHandler.html#a6bd166e013cbd6313609eab276f00abd">InputHandler::quitFlag</a> to true. </p>
+
+<p>Definition at line <a class="el" href="InputHandler_8cpp_source.html#l00104">104</a> of file <a class="el" href="InputHandler_8cpp_source.html">InputHandler.cpp</a>.</p>
 
 </div>
 </div>
@@ -258,7 +258,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
 <p>Handles input if joystick is present. </p>
 
 <p>Definition at line <a class="el" href="InputHandler_8h_source.html#l00051">51</a> of file <a class="el" href="InputHandler_8h_source.html">InputHandler.h</a>.</p>
@@ -275,7 +274,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
 <p>Boolean array that controls which keys are pressed or not. </p>
 
 <p>Definition at line <a class="el" href="InputHandler_8h_source.html#l00052">52</a> of file <a class="el" href="InputHandler_8h_source.html">InputHandler.h</a>.</p>
@@ -292,7 +290,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
 <p>If the quit signal was recieved or not. </p>
 
 <p>Definition at line <a class="el" href="InputHandler_8h_source.html#l00055">55</a> of file <a class="el" href="InputHandler_8h_source.html">InputHandler.h</a>.</p>
@@ -309,7 +306,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
 <p>SDL internal event structure. </p>
 
 <p>Definition at line <a class="el" href="InputHandler_8h_source.html#l00054">54</a> of file <a class="el" href="InputHandler_8h_source.html">InputHandler.h</a>.</p>
@@ -340,7 +336,7 @@ Private Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="classInputHandler.html">InputHandler</a>      </li>
 
-    <li class="footer">Generated on Thu Jan 8 2015 23:55:10 for sdl2-engine by
+    <li class="footer">Generated on Wed Jan 14 2015 22:39:13 for sdl2-engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

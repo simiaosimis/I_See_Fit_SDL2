@@ -33,7 +33,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v12</span>
+   &#160;<span id="projectnumber">v13</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -103,11 +103,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00003"></a>00003 <span class="preprocessor">#include &quot;SDL_Libs.h&quot;</span>
 <a name="l00004"></a>00004 <span class="preprocessor">#include &quot;Logger.h&quot;</span>
 <a name="l00005"></a>00005 
-<a name="l00006"></a><a class="code" href="classGameObject.html#aaeb95e7f576dd73ebcceed18b7a8cce1">00006</a> <a class="code" href="classGameObject.html#aaeb95e7f576dd73ebcceed18b7a8cce1" title="The constructor.">GameObject::GameObject</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> x_, <span class="keyword">const</span> <span class="keywordtype">double</span> y_, <span class="keyword">const</span> std::string&amp; path_) :
+<a name="l00006"></a><a class="code" href="classGameObject.html#aaeb95e7f576dd73ebcceed18b7a8cce1">00006</a> <a class="code" href="classGameObject.html#aaeb95e7f576dd73ebcceed18b7a8cce1">GameObject::GameObject</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> x_, <span class="keyword">const</span> <span class="keywordtype">double</span> y_, <span class="keyword">const</span> std::string&amp; path_) :
 <a name="l00007"></a>00007     x(x_),
 <a name="l00008"></a>00008     y(y_),
 <a name="l00009"></a>00009     isRight(true),
-<a name="l00010"></a>00010     sprite(<a class="code" href="classGame.html" title="Main structure class for the game.">Game</a>::instance().getResource().sprite(path_)),
+<a name="l00010"></a>00010     sprite(<a class="code" href="classGame.html">Game</a>::instance().getResource().sprite(path_)),
 <a name="l00011"></a>00011     width(0),
 <a name="l00012"></a>00012     height(0),
 <a name="l00013"></a>00013     animationClip{0, 0, 0, 0},
@@ -127,7 +127,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00027"></a>00027     }
 <a name="l00028"></a>00028 }
 <a name="l00029"></a>00029 
-<a name="l00030"></a>00030 <a class="code" href="classGameObject.html#aaeb95e7f576dd73ebcceed18b7a8cce1" title="The constructor.">GameObject::GameObject</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> x_, <span class="keyword">const</span> <span class="keywordtype">double</span> y_) :
+<a name="l00030"></a>00030 <a class="code" href="classGameObject.html#aaeb95e7f576dd73ebcceed18b7a8cce1">GameObject::GameObject</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> x_, <span class="keyword">const</span> <span class="keywordtype">double</span> y_) :
 <a name="l00031"></a>00031     x(x_),
 <a name="l00032"></a>00032     y(y_),
 <a name="l00033"></a>00033     isRight(true),
@@ -140,20 +140,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00040"></a>00040     <span class="comment">// Only serves as the initializer for the derived classes.</span>
 <a name="l00041"></a>00041 }
 <a name="l00042"></a>00042 
-<a name="l00043"></a>00043 <a class="code" href="classGameObject.html#a224d4f6d9dd75c8a6f9d022eaf586fd9" title="The destructor.">GameObject::~GameObject</a>() {
+<a name="l00043"></a>00043 <a class="code" href="classGameObject.html#a224d4f6d9dd75c8a6f9d022eaf586fd9">GameObject::~GameObject</a>() {
 <a name="l00044"></a>00044 
 <a name="l00045"></a>00045 }
 <a name="l00046"></a>00046 
 <a name="l00047"></a>00047 <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classGameObject.html#affec43dec5bbc848a02bb28ecf46d144">GameObject::getWidth</a>() {
-<a name="l00048"></a>00048     <span class="keywordflow">return</span> this-&gt;<a class="code" href="classGameObject.html#ade95bb86cc216d745edf8ea15101f2af" title="The entitys width, from its sprite.">width</a>;
+<a name="l00048"></a>00048     <span class="keywordflow">return</span> this-&gt;<a class="code" href="classGameObject.html#ade95bb86cc216d745edf8ea15101f2af">width</a>;
 <a name="l00049"></a>00049 }
 <a name="l00050"></a>00050 
 <a name="l00051"></a>00051 <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classGameObject.html#a0036a87bdab17027a635d570fb6cf34e">GameObject::getHeight</a>() {
-<a name="l00052"></a>00052     <span class="keywordflow">return</span> this-&gt;<a class="code" href="classGameObject.html#a033b30bb7caf6660beabef5a81574bfb" title="The entitys height, from its sprite.">height</a>;
+<a name="l00052"></a>00052     <span class="keywordflow">return</span> this-&gt;<a class="code" href="classGameObject.html#a033b30bb7caf6660beabef5a81574bfb">height</a>;
 <a name="l00053"></a>00053 }
 <a name="l00054"></a>00054 
 <a name="l00055"></a>00055 SDL_Rect&amp; <a class="code" href="classGameObject.html#a75c4556a9513069fc021a2b8d7ebfc5b">GameObject::getAnimationClip</a>() {
-<a name="l00056"></a>00056     <span class="keywordflow">return</span> this-&gt;<a class="code" href="classGameObject.html#aedbe7c552382ea0686d020661826c106" title="The current clip on the spritesheet, to determine animation.">animationClip</a>;
+<a name="l00056"></a>00056     <span class="keywordflow">return</span> this-&gt;<a class="code" href="classGameObject.html#aedbe7c552382ea0686d020661826c106">animationClip</a>;
 <a name="l00057"></a>00057 }
 <a name="l00058"></a>00058 
 <a name="l00059"></a>00059 SDL_Rect&amp; GameObject::getBoundingBox() {
@@ -179,7 +179,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><b>GameObject.cpp</b>      </li>
 
-    <li class="footer">Generated on Thu Jan 8 2015 23:55:10 for sdl2-engine by
+    <li class="footer">Generated on Wed Jan 14 2015 22:39:13 for sdl2-engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

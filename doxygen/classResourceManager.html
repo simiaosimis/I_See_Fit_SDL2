@@ -33,7 +33,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v12</span>
+   &#160;<span id="projectnumber">v13</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -107,9 +107,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <!-- doxytag: class="ResourceManager" --><!-- doxytag: inherits="Uncopyable" -->
-<p>Template resource management class.  
- <a href="classResourceManager.html#details">More...</a></p>
-
 <p><code>#include &lt;<a class="el" href="ResourceManager_8h_source.html">ResourceManager.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ResourceManager&lt; Type &gt;:</div>
@@ -117,28 +114,22 @@ Inheritance diagram for ResourceManager&lt; Type &gt;:</div>
  <div class="center">
   <img src="classResourceManager.png" usemap="#ResourceManager&lt; Type &gt;_map" alt=""/>
   <map id="ResourceManager&lt; Type &gt;_map" name="ResourceManager&lt; Type &gt;_map">
-<area href="classUncopyable.html" title="Allow construction and deconstruction of derived objects, but prevent copying." alt="Uncopyable" shape="rect" coords="0,0,169,24"/>
+<area href="classUncopyable.html" alt="Uncopyable" shape="rect" coords="0,0,169,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResourceManager.html#a2567a084acc246f85d33bac8ef114655">~ResourceManager</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The destructor.  <a href="#a2567a084acc246f85d33bac8ef114655"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Type *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResourceManager.html#affb9c13363097d4602766101f2f8212f">get</a> (const std::string &amp;path_)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the resource from the resources.  <a href="#affb9c13363097d4602766101f2f8212f"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual typePtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResourceManager.html#ad089e00823733954471f0719e8498a2f">load</a> (const std::string &amp;path_)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the desired resource.  <a href="#ad089e00823733954471f0719e8498a2f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResourceManager.html#a5e08aa5e0c56ab672011d997ff432230">registerResource</a> (const std::string &amp;path_, typePtr resource_)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers the resource on the resources map.  <a href="#a5e08aa5e0c56ab672011d997ff432230"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResourceManager.html#a99af4d3a53a604f5c3161a6b72d37ae1">unregisterResource</a> (const std::string &amp;path_)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Unregisters the resource on the resources map.  <a href="#a99af4d3a53a604f5c3161a6b72d37ae1"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typeMap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResourceManager.html#a87e65c9b6ce65734a23ff51022e6681d">resources</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The map that contains all the Type resources.  <a href="#a87e65c9b6ce65734a23ff51022e6681d"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pri-types"></a>
 Private Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aedac075bd3f088a45bcd17da3fd6f4f1"></a><!-- doxytag: member="ResourceManager::typePtr" ref="aedac075bd3f088a45bcd17da3fd6f4f1" args="" -->
@@ -170,7 +161,6 @@ template&lt;class Type&gt; </div>
       </table>
 </div>
 <div class="memdoc">
-
 <p>The destructor. </p>
 <dl class="note"><dt><b>Note:</b></dt><dd>Warns about resources being deleted with references still pointing to them. </dd></dl>
 
@@ -193,7 +183,6 @@ template&lt;class Type&gt; </div>
       </table>
 </div>
 <div class="memdoc">
-
 <p>Retrieves the resource from the resources. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>The pointer to the wanted resource. Creates it, if not already in resources. </dd></dl>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
@@ -221,7 +210,6 @@ template&lt;class Type&gt; </div>
       </table>
 </div>
 <div class="memdoc">
-
 <p>Constructs the desired resource. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
@@ -260,7 +248,6 @@ template&lt;class Type&gt; </div>
       </table>
 </div>
 <div class="memdoc">
-
 <p>Registers the resource on the resources map. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
@@ -288,7 +275,6 @@ template&lt;class Type&gt; </div>
       </table>
 </div>
 <div class="memdoc">
-
 <p>Unregisters the resource on the resources map. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
@@ -312,7 +298,6 @@ template&lt;class Type&gt; </div>
       </table>
 </div>
 <div class="memdoc">
-
 <p>The map that contains all the Type resources. </p>
 
 <p>Definition at line <a class="el" href="ResourceManager_8h_source.html#l00053">53</a> of file <a class="el" href="ResourceManager_8h_source.html">ResourceManager.h</a>.</p>
@@ -342,7 +327,7 @@ template&lt;class Type&gt; </div>
     <ul>
       <li class="navelem"><a class="el" href="classResourceManager.html">ResourceManager</a>      </li>
 
-    <li class="footer">Generated on Thu Jan 8 2015 23:55:10 for sdl2-engine by
+    <li class="footer">Generated on Wed Jan 14 2015 22:39:13 for sdl2-engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

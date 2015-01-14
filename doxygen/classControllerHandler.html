@@ -33,7 +33,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v12</span>
+   &#160;<span id="projectnumber">v13</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -105,28 +105,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <!-- doxytag: class="ControllerHandler" -->
-<p>The input handler for joysticks.  
- <a href="classControllerHandler.html#details">More...</a></p>
-
 <p><code>#include &lt;<a class="el" href="ControllerHandler_8h_source.html">ControllerHandler.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControllerHandler.html#a2a6b8a51a3165d65606addb743f45964">ControllerHandler</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor.  <a href="#a2a6b8a51a3165d65606addb743f45964"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a33f16779eef5a5304b64fbd3303386a7"></a><!-- doxytag: member="ControllerHandler::~ControllerHandler" ref="a33f16779eef5a5304b64fbd3303386a7" args="()" -->
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControllerHandler.html#a33f16779eef5a5304b64fbd3303386a7">~ControllerHandler</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The destructor. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControllerHandler.html#a33f16779eef5a5304b64fbd3303386a7">~ControllerHandler</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControllerHandler.html#a79e2adab7291ab5589e907860d046046">handleInput</a> (SDL_Event &amp;sdlEvent_)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles controller the input.  <a href="#a79e2adab7291ab5589e907860d046046"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1c4161545fdc54bf1d406f6acd2d67d6"></a><!-- doxytag: member="ControllerHandler::getKeyStates" ref="a1c4161545fdc54bf1d406f6acd2d67d6" args="()" -->
 std::array&lt; bool, GameKeys::MAX &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getKeyStates</b> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::array&lt; bool, GameKeys::MAX &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControllerHandler.html#ac40f0381dd876419404a52a7d1b515d6">keyStates</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Boolean array that controls which keys are pressed or not.  <a href="#ac40f0381dd876419404a52a7d1b515d6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">SDL_GameController *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControllerHandler.html#a65bbcf23b90f3ab1b4087acd136518b2">gameController</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the controller.  <a href="#a65bbcf23b90f3ab1b4087acd136518b2"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>The input handler for joysticks. </p>
@@ -146,11 +137,28 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>The constructor. </p>
-<p>Verifies if there is a joystick present. </p>
+<p>The constructor. Verifies if there is a joystick present. </p>
 
 <p>Definition at line <a class="el" href="ControllerHandler_8cpp_source.html#l00004">4</a> of file <a class="el" href="ControllerHandler_8cpp_source.html">ControllerHandler.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a33f16779eef5a5304b64fbd3303386a7"></a><!-- doxytag: member="ControllerHandler::~ControllerHandler" ref="a33f16779eef5a5304b64fbd3303386a7" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classControllerHandler.html#a33f16779eef5a5304b64fbd3303386a7">ControllerHandler::~ControllerHandler</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>The destructor. </p>
+
+<p>Definition at line <a class="el" href="ControllerHandler_8cpp_source.html#l00019">19</a> of file <a class="el" href="ControllerHandler_8cpp_source.html">ControllerHandler.cpp</a>.</p>
 
 </div>
 </div>
@@ -169,9 +177,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Handles controller the input. </p>
-<p>Detects the pending events, and simulates an appropriate KeyEvent by pushing one into a stack. </p>
+<p>Handles controller the input. Detects the pending events, and simulates an appropriate KeyEvent by pushing one into a stack. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">sdlEvent_</td><td>: The SDL internal event structure. </td></tr>
@@ -194,7 +200,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
 <p>Pointer to the controller. </p>
 
 <p>Definition at line <a class="el" href="ControllerHandler_8h_source.html#l00084">84</a> of file <a class="el" href="ControllerHandler_8h_source.html">ControllerHandler.h</a>.</p>
@@ -211,7 +216,6 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
 <p>Boolean array that controls which keys are pressed or not. </p>
 
 <p>Definition at line <a class="el" href="ControllerHandler_8h_source.html#l00081">81</a> of file <a class="el" href="ControllerHandler_8h_source.html">ControllerHandler.h</a>.</p>
@@ -242,7 +246,7 @@ Private Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="classControllerHandler.html">ControllerHandler</a>      </li>
 
-    <li class="footer">Generated on Thu Jan 8 2015 23:55:10 for sdl2-engine by
+    <li class="footer">Generated on Wed Jan 14 2015 22:39:13 for sdl2-engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

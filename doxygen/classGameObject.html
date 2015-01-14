@@ -33,7 +33,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v12</span>
+   &#160;<span id="projectnumber">v13</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -107,9 +107,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <!-- doxytag: class="GameObject" -->
-<p>Base class for all game objects (gameObjects).  
- <a href="classGameObject.html#details">More...</a></p>
-
 <p><code>#include &lt;<a class="el" href="GameObject_8h_source.html">GameObject.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for GameObject:</div>
@@ -123,13 +120,9 @@ Inheritance diagram for GameObject:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a224d4f6d9dd75c8a6f9d022eaf586fd9"></a><!-- doxytag: member="GameObject::~GameObject" ref="a224d4f6d9dd75c8a6f9d022eaf586fd9" args="()" -->
-virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#a224d4f6d9dd75c8a6f9d022eaf586fd9">~GameObject</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The destructor. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#a224d4f6d9dd75c8a6f9d022eaf586fd9">~GameObject</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#a1126cbf1a45d95a536fc244e65eb9183">update</a> (const double dt_)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the entity.  <a href="#a1126cbf1a45d95a536fc244e65eb9183"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#a74a00ec966eaa99bff468e0ba8efc754">render</a> (const double cameraX_, const double cameraY_)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders the entity.  <a href="#a74a00ec966eaa99bff468e0ba8efc754"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#affec43dec5bbc848a02bb28ecf46d144">getWidth</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#a0036a87bdab17027a635d570fb6cf34e">getHeight</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">SDL_Rect &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#a75c4556a9513069fc021a2b8d7ebfc5b">getAnimationClip</a> ()</td></tr>
@@ -138,36 +131,43 @@ SDL_Rect &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getBounding
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#a77ae10ff022a6cfe7419d4acdcffe2a4">x</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The position in the x axis.  <a href="#a77ae10ff022a6cfe7419d4acdcffe2a4"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#af3f4a42c92fa6f6ac04d57bf4b11d43f">y</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The position in the y axis.  <a href="#af3f4a42c92fa6f6ac04d57bf4b11d43f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#a095a894671d43674c0fe2966a0781e5f">isRight</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The direction in the x axis.  <a href="#a095a894671d43674c0fe2966a0781e5f"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#aaeb95e7f576dd73ebcceed18b7a8cce1">GameObject</a> (const double x_, const double y_, const std::string &amp;path_)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor.  <a href="#aaeb95e7f576dd73ebcceed18b7a8cce1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#a128ddbbeaecfc3d43758d9b4a94bb853">GameObject</a> (const double x_, const double y_)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor.  <a href="#a128ddbbeaecfc3d43758d9b4a94bb853"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSprite.html">Sprite</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#a00fecd21a33c990c4132f6f8e886135f">sprite</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="classSprite.html" title="Visual representation of game objects.">Sprite</a> attributed to the entity.  <a href="#a00fecd21a33c990c4132f6f8e886135f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#ade95bb86cc216d745edf8ea15101f2af">width</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The entitys width, from its sprite.  <a href="#ade95bb86cc216d745edf8ea15101f2af"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#a033b30bb7caf6660beabef5a81574bfb">height</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The entitys height, from its sprite.  <a href="#a033b30bb7caf6660beabef5a81574bfb"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">SDL_Rect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#aedbe7c552382ea0686d020661826c106">animationClip</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The current clip on the spritesheet, to determine animation.  <a href="#aedbe7c552382ea0686d020661826c106"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abf0f01c3312477754c9780fddc73ffa2"></a><!-- doxytag: member="GameObject::boundingBox" ref="abf0f01c3312477754c9780fddc73ffa2" args="" -->
 SDL_Rect&#160;</td><td class="memItemRight" valign="bottom"><b>boundingBox</b></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Base class for all game objects (gameObjects). </p>
-<p>The entity contains the (x,y) position, width and height, and a sprite. </p>
+<div class="textblock"><p>Base class for all game objects (gameObjects). The entity contains the (x,y) position, width and height, and a sprite. </p>
 
 <p>Definition at line <a class="el" href="GameObject_8h_source.html#l00011">11</a> of file <a class="el" href="GameObject_8h_source.html">GameObject.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a224d4f6d9dd75c8a6f9d022eaf586fd9"></a><!-- doxytag: member="GameObject::~GameObject" ref="a224d4f6d9dd75c8a6f9d022eaf586fd9" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classGameObject.html#a224d4f6d9dd75c8a6f9d022eaf586fd9">GameObject::~GameObject</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>The destructor. </p>
+
+</div>
+</div>
 <a class="anchor" id="aaeb95e7f576dd73ebcceed18b7a8cce1"></a><!-- doxytag: member="GameObject::GameObject" ref="aaeb95e7f576dd73ebcceed18b7a8cce1" args="(const double x_, const double y_, const std::string &amp;path_)" -->
 <div class="memitem">
 <div class="memproto">
@@ -198,9 +198,7 @@ SDL_Rect&#160;</td><td class="memItemRight" valign="bottom"><b>boundingBox</b></
       </table>
 </div>
 <div class="memdoc">
-
-<p>The constructor. </p>
-<p>Initializes all the attributes. </p>
+<p>The constructor. Initializes all the attributes. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">x_</td><td>: position in x axis. </td></tr>
@@ -238,9 +236,7 @@ SDL_Rect&#160;</td><td class="memItemRight" valign="bottom"><b>boundingBox</b></
       </table>
 </div>
 <div class="memdoc">
-
-<p>The constructor. </p>
-<p>Initializes all the attributes. </p>
+<p>The constructor. Initializes all the attributes. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">x_</td><td>: position in x axis. </td></tr>
@@ -265,7 +261,7 @@ SDL_Rect&#160;</td><td class="memItemRight" valign="bottom"><b>boundingBox</b></
       </table>
 </div>
 <div class="memdoc">
-<dl class="return"><dt><b>Returns:</b></dt><dd>The <a class="el" href="classGameObject.html#aedbe7c552382ea0686d020661826c106" title="The current clip on the spritesheet, to determine animation.">GameObject::animationClip</a>. </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>The <a class="el" href="classGameObject.html#aedbe7c552382ea0686d020661826c106">GameObject::animationClip</a>. </dd></dl>
 
 </div>
 </div>
@@ -282,7 +278,7 @@ SDL_Rect&#160;</td><td class="memItemRight" valign="bottom"><b>boundingBox</b></
       </table>
 </div>
 <div class="memdoc">
-<dl class="return"><dt><b>Returns:</b></dt><dd>The <a class="el" href="classGameObject.html" title="Base class for all game objects (gameObjects).">GameObject</a> height. </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>The <a class="el" href="classGameObject.html">GameObject</a> height. </dd></dl>
 
 </div>
 </div>
@@ -299,7 +295,7 @@ SDL_Rect&#160;</td><td class="memItemRight" valign="bottom"><b>boundingBox</b></
       </table>
 </div>
 <div class="memdoc">
-<dl class="return"><dt><b>Returns:</b></dt><dd>The <a class="el" href="classGameObject.html" title="Base class for all game objects (gameObjects).">GameObject</a> width. </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>The <a class="el" href="classGameObject.html">GameObject</a> width. </dd></dl>
 
 </div>
 </div>
@@ -327,10 +323,8 @@ SDL_Rect&#160;</td><td class="memItemRight" valign="bottom"><b>boundingBox</b></
       </table>
 </div>
 <div class="memdoc">
-
-<p>Renders the entity. </p>
-<p>Pure virtual function. Purpose is to copy the entity's texture onto the renderer. </p>
-<dl class="note"><dt><b>Note:</b></dt><dd>Usually just calls the render method from the <a class="el" href="classSprite.html" title="Visual representation of game objects.">Sprite</a> class. </dd></dl>
+<p>Renders the entity. Pure virtual function. Purpose is to copy the entity's texture onto the renderer. </p>
+<dl class="note"><dt><b>Note:</b></dt><dd>Usually just calls the render method from the <a class="el" href="classSprite.html">Sprite</a> class. </dd></dl>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">cameraX_</td><td>: The x position of the camera. </td></tr>
@@ -357,9 +351,7 @@ SDL_Rect&#160;</td><td class="memItemRight" valign="bottom"><b>boundingBox</b></
       </table>
 </div>
 <div class="memdoc">
-
-<p>Updates the entity. </p>
-<p>Pure virtual function. Purpose is to update whatever is necessary, relative to the entity. </p>
+<p>Updates the entity. Pure virtual function. Purpose is to update whatever is necessary, relative to the entity. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">dt_</td><td>: Delta time. Time elapsed between one frame and the other. </td></tr>
@@ -382,7 +374,6 @@ SDL_Rect&#160;</td><td class="memItemRight" valign="bottom"><b>boundingBox</b></
       </table>
 </div>
 <div class="memdoc">
-
 <p>The current clip on the spritesheet, to determine animation. </p>
 
 <p>Definition at line <a class="el" href="GameObject_8h_source.html#l00078">78</a> of file <a class="el" href="GameObject_8h_source.html">GameObject.h</a>.</p>
@@ -399,7 +390,6 @@ SDL_Rect&#160;</td><td class="memItemRight" valign="bottom"><b>boundingBox</b></
       </table>
 </div>
 <div class="memdoc">
-
 <p>The entitys height, from its sprite. </p>
 
 <p>Definition at line <a class="el" href="GameObject_8h_source.html#l00077">77</a> of file <a class="el" href="GameObject_8h_source.html">GameObject.h</a>.</p>
@@ -416,7 +406,6 @@ SDL_Rect&#160;</td><td class="memItemRight" valign="bottom"><b>boundingBox</b></
       </table>
 </div>
 <div class="memdoc">
-
 <p>The direction in the x axis. </p>
 
 <p>Definition at line <a class="el" href="GameObject_8h_source.html#l00055">55</a> of file <a class="el" href="GameObject_8h_source.html">GameObject.h</a>.</p>
@@ -433,8 +422,7 @@ SDL_Rect&#160;</td><td class="memItemRight" valign="bottom"><b>boundingBox</b></
       </table>
 </div>
 <div class="memdoc">
-
-<p>The <a class="el" href="classSprite.html" title="Visual representation of game objects.">Sprite</a> attributed to the entity. </p>
+<p>The <a class="el" href="classSprite.html">Sprite</a> attributed to the entity. </p>
 
 <p>Definition at line <a class="el" href="GameObject_8h_source.html#l00075">75</a> of file <a class="el" href="GameObject_8h_source.html">GameObject.h</a>.</p>
 
@@ -450,7 +438,6 @@ SDL_Rect&#160;</td><td class="memItemRight" valign="bottom"><b>boundingBox</b></
       </table>
 </div>
 <div class="memdoc">
-
 <p>The entitys width, from its sprite. </p>
 
 <p>Definition at line <a class="el" href="GameObject_8h_source.html#l00076">76</a> of file <a class="el" href="GameObject_8h_source.html">GameObject.h</a>.</p>
@@ -467,7 +454,6 @@ SDL_Rect&#160;</td><td class="memItemRight" valign="bottom"><b>boundingBox</b></
       </table>
 </div>
 <div class="memdoc">
-
 <p>The position in the x axis. </p>
 
 <p>Definition at line <a class="el" href="GameObject_8h_source.html#l00053">53</a> of file <a class="el" href="GameObject_8h_source.html">GameObject.h</a>.</p>
@@ -484,7 +470,6 @@ SDL_Rect&#160;</td><td class="memItemRight" valign="bottom"><b>boundingBox</b></
       </table>
 </div>
 <div class="memdoc">
-
 <p>The position in the y axis. </p>
 
 <p>Definition at line <a class="el" href="GameObject_8h_source.html#l00054">54</a> of file <a class="el" href="GameObject_8h_source.html">GameObject.h</a>.</p>
@@ -515,7 +500,7 @@ SDL_Rect&#160;</td><td class="memItemRight" valign="bottom"><b>boundingBox</b></
     <ul>
       <li class="navelem"><a class="el" href="classGameObject.html">GameObject</a>      </li>
 
-    <li class="footer">Generated on Thu Jan 8 2015 23:55:10 for sdl2-engine by
+    <li class="footer">Generated on Wed Jan 14 2015 22:39:13 for sdl2-engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

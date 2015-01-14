@@ -33,7 +33,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v12</span>
+   &#160;<span id="projectnumber">v13</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -105,9 +105,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <!-- doxytag: class="StateGame" -->
-<p>Parent class for other game states.  
- <a href="classStateGame.html#details">More...</a></p>
-
 <p><code>#include &lt;<a class="el" href="StateGame_8h_source.html">StateGame.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for StateGame:</div>
@@ -115,39 +112,87 @@ Inheritance diagram for StateGame:</div>
  <div class="center">
   <img src="classStateGame.png" usemap="#StateGame_map" alt=""/>
   <map id="StateGame_map" name="StateGame_map">
-<area href="classGStatePlaceholder.html" title="The state used for testing the engine." alt="GStatePlaceholder" shape="rect" coords="0,56,117,80"/>
+<area href="classGStatePlaceholder.html" alt="GStatePlaceholder" shape="rect" coords="0,56,117,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afbdf7c96f1f13b3686a744fd7ca97949"></a><!-- doxytag: member="StateGame::~StateGame" ref="afbdf7c96f1f13b3686a744fd7ca97949" args="()" -->
-virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGame.html#afbdf7c96f1f13b3686a744fd7ca97949">~StateGame</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The destructor. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGame.html#afbdf7c96f1f13b3686a744fd7ca97949">~StateGame</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGame.html#a924e531e28b8afcbb82858eecef0a084">load</a> ()=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads necessary objects.  <a href="#a924e531e28b8afcbb82858eecef0a084"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGame.html#a300539fe737d6bbab4b4d6fe4b6a2e98">update</a> (const double dt_)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Update all gameObjects.  <a href="#a300539fe737d6bbab4b4d6fe4b6a2e98"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGame.html#aa215f7b6d37658dead89448afacc713d">unload</a> ()=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Unloads necessary objects.  <a href="#aa215f7b6d37658dead89448afacc713d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGame.html#a9e181e234d99aa11beead047152a8e92">render</a> ()=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders the state.  <a href="#a9e181e234d99aa11beead047152a8e92"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff9992eece76c15e061cd86fe2e88619"></a><!-- doxytag: member="StateGame::addGameObject" ref="aff9992eece76c15e061cd86fe2e88619" args="(GameObject *const gameObject_)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGame.html#aff9992eece76c15e061cd86fe2e88619">addGameObject</a> (<a class="el" href="classGameObject.html">GameObject</a> *const gameObject_)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a <a class="el" href="classGameObject.html" title="Base class for all game objects (gameObjects).">GameObject</a> to the gameObjects vector. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7dd22dcc7c7474fed01942b3507f54b6"></a><!-- doxytag: member="StateGame::cleanGameObjects" ref="a7dd22dcc7c7474fed01942b3507f54b6" args="()" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGame.html#a7dd22dcc7c7474fed01942b3507f54b6">cleanGameObjects</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes all the gameObjects inside the gameObjects vector. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGame.html#aff9992eece76c15e061cd86fe2e88619">addGameObject</a> (<a class="el" href="classGameObject.html">GameObject</a> *const gameObject_)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGame.html#a7dd22dcc7c7474fed01942b3507f54b6">cleanGameObjects</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classGameObject.html">GameObject</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGame.html#ae4b0e8ceb5cc37fe469b5e4f978ceea9">gameObjects</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">List of all the GameObjects in the state.  <a href="#ae4b0e8ceb5cc37fe469b5e4f978ceea9"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Parent class for other game states. </p>
 
 <p>Definition at line <a class="el" href="StateGame_8h_source.html#l00009">9</a> of file <a class="el" href="StateGame_8h_source.html">StateGame.h</a>.</p>
-</div><hr/><h2>Member Function Documentation</h2>
+</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="afbdf7c96f1f13b3686a744fd7ca97949"></a><!-- doxytag: member="StateGame::~StateGame" ref="afbdf7c96f1f13b3686a744fd7ca97949" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classStateGame.html#afbdf7c96f1f13b3686a744fd7ca97949">StateGame::~StateGame</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>The destructor. </p>
+
+<p>Definition at line <a class="el" href="StateGame_8cpp_source.html#l00003">3</a> of file <a class="el" href="StateGame_8cpp_source.html">StateGame.cpp</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="aff9992eece76c15e061cd86fe2e88619"></a><!-- doxytag: member="StateGame::addGameObject" ref="aff9992eece76c15e061cd86fe2e88619" args="(GameObject *const gameObject_)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classStateGame.html#aff9992eece76c15e061cd86fe2e88619">StateGame::addGameObject</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classGameObject.html">GameObject</a> *const&#160;</td>
+          <td class="paramname"><em>gameObject_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Adds a <a class="el" href="classGameObject.html">GameObject</a> to the gameObjects vector. </p>
+
+<p>Definition at line <a class="el" href="StateGame_8cpp_source.html#l00011">11</a> of file <a class="el" href="StateGame_8cpp_source.html">StateGame.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7dd22dcc7c7474fed01942b3507f54b6"></a><!-- doxytag: member="StateGame::cleanGameObjects" ref="a7dd22dcc7c7474fed01942b3507f54b6" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classStateGame.html#a7dd22dcc7c7474fed01942b3507f54b6">StateGame::cleanGameObjects</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Deletes all the gameObjects inside the gameObjects vector. </p>
+
+<p>Definition at line <a class="el" href="StateGame_8cpp_source.html#l00015">15</a> of file <a class="el" href="StateGame_8cpp_source.html">StateGame.cpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a924e531e28b8afcbb82858eecef0a084"></a><!-- doxytag: member="StateGame::load" ref="a924e531e28b8afcbb82858eecef0a084" args="()=0" -->
 <div class="memitem">
 <div class="memproto">
@@ -161,9 +206,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Loads necessary objects. </p>
-<p>Pure virtual function. Purpose is to load all things relevant to the state. </p>
+<p>Loads necessary objects. Pure virtual function. Purpose is to load all things relevant to the state. </p>
 
 <p>Implemented in <a class="el" href="classGStatePlaceholder.html#ac61770a40ac7b0ab200da46e731fa127">GStatePlaceholder</a>.</p>
 
@@ -182,9 +225,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Renders the state. </p>
-<p>Pure virtual function. </p>
+<p>Renders the state. Pure virtual function. </p>
 
 <p>Implemented in <a class="el" href="classGStatePlaceholder.html#aac74087ca575c21a54e85733b58fb5be">GStatePlaceholder</a>.</p>
 
@@ -203,9 +244,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Unloads necessary objects. </p>
-<p>Purpose is to unload whatever was previously loaded. </p>
+<p>Unloads necessary objects. Purpose is to unload whatever was previously loaded. </p>
 
 <p>Implemented in <a class="el" href="classGStatePlaceholder.html#ab2b6a671368d55c5437a658cc9bca44d">GStatePlaceholder</a>.</p>
 
@@ -227,9 +266,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Update all gameObjects. </p>
-<p>Pure virtual function. Purpose is to update all the gameObjects in the vector. </p>
+<p>Update all gameObjects. Pure virtual function. Purpose is to update all the gameObjects in the vector. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">dt_</td><td>: Delta time. Time elapsed between one frame and the other. </td></tr>
@@ -252,7 +289,6 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
 <p>List of all the GameObjects in the state. </p>
 
 <p>Definition at line <a class="el" href="StateGame_8h_source.html#l00053">53</a> of file <a class="el" href="StateGame_8h_source.html">StateGame.h</a>.</p>
@@ -283,7 +319,7 @@ Protected Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="classStateGame.html">StateGame</a>      </li>
 
-    <li class="footer">Generated on Thu Jan 8 2015 23:55:10 for sdl2-engine by
+    <li class="footer">Generated on Wed Jan 14 2015 22:39:13 for sdl2-engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

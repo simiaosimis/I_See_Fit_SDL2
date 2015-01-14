@@ -1,6 +1,8 @@
 var searchData=
 [
   ['m_5fanimation_5fcount',['m_animation_count',['../classAnimation.html#a1fc4107edaf976258ad769b23bcfd172',1,'Animation']]],
+  ['m_5fcurrent_5fmusic',['m_current_music',['../classAudioHandler.html#a856351abecd7c5f8a81d359c4b45db5d',1,'AudioHandler']]],
+  ['m_5feffects',['m_effects',['../classAudioHandler.html#a1a55ee5dddc6eb9a2049785969111be3',1,'AudioHandler']]],
   ['m_5finitial_5fx',['m_initial_x',['../classAnimation.html#a4b6af681755538265d8a021e95c47937',1,'Animation']]],
   ['m_5finitial_5fy',['m_initial_y',['../classAnimation.html#a2aff0a2348feee0d1cee57ebf3374004',1,'Animation']]],
   ['m_5fnumber_5fof_5fimages',['m_number_of_images',['../classAnimation.html#af4689e9b23f8d0db85f7b4c259457d04',1,'Animation']]],
