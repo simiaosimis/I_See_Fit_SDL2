@@ -1,8 +1,8 @@
 #pragma once
 
+#include <SDL2/SDL_mixer.h>
 #include <string>
 #include <vector>
-#include "SDL_Libs.h"
 #include "Music.h"
 #include "SoundEffect.h"
 

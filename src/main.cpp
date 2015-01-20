@@ -13,7 +13,7 @@ int main(int argc, char** argv) {
 
 	Configuration::Initialize();
 
-	const bool systemsInitialized = SDL_Wrapper::initialize();
+	const bool systemsInitialized = sdl::Initialize();
 
 	if(systemsInitialized) {
 		Game::instance().runGame();
@@ -23,7 +23,7 @@ int main(int argc, char** argv) {
 		Log(ERROR) << "Systems were not initialized.";
 	}
 
-	SDL_Wrapper::close();
+	sdl::Close();
 
 	Log(DEBUG) << "Exiting sdl2-engine...";
 	return 0;

@@ -1,7 +1,6 @@
 #pragma once
 
-#include "SDL_Libs.h"
-// #include "GameObject.h"
+#include <SDL2/SDL.h>
 
 class GameObject;
 

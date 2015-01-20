@@ -1,85 +1,200 @@
 #include "SDL_Systems.h"
-#include "SDL_Util.h"
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
+#include <SDL2/SDL_ttf.h>
+#include <SDL2/SDL_mixer.h>
+#include <string>
 #include "Logger.h"
 
-bool SDL_Wrapper::initialize() {
-	bool successSDL = false;
-	bool successIMG = false;
-	bool successMixer = false;
-	bool successTTF = false;
+namespace {
+
+void CloseMixer() {
+	// Query the specifications of the opened audio, to figure out how many times we need to
+	// close the audio.
+	int frequency = 0;
+	int channels = 0;
+	Uint16 format = 0;
+	const int k_numbers_of_times_opened = Mix_QuerySpec(&frequency, &format, &channels);
+	int times_to_close = k_numbers_of_times_opened;
+
+	if(k_numbers_of_times_opened != 0) {
+		// Build a string with the format.
+		std::string format_text{"Unknown format"};
+	    switch(format) {
+	        case AUDIO_U8:
+	        	format_text = "U8";
+	        	break;
+	        case AUDIO_S8:
+		        format_text = "S8";
+	        	break;
+	        case AUDIO_U16LSB:
+		        format_text = "U16LSB";
+	        	break;
+	        case AUDIO_S16LSB:
+		        format_text = "S16LSB";
+	        	break;
+	        case AUDIO_U16MSB:
+		        format_text = "U16MSB";
+	        	break;
+	        case AUDIO_S16MSB:
+		        format_text = "S16MSB";
+	        	break;
+	        default:
+	        	// Already defined as "Unknown format".
+	        	break;
+	    }
+
+	    // Build a string with the channels type.
+	    std::string channels_text{"Unknown channels"};
+	    switch(channels) {
+	    	case 1:
+	    		channels_text = "(mono)";
+	    		break;
+	    	case 2:
+	    		channels_text = "(stereo)";
+	    		break;
+	    	default:
+	    		// Already defined as "Unknown channels".
+	    		break;
+	    }
+
+		Log(DEBUG) << "Audio opened " << k_numbers_of_times_opened <<
+			" time(s). Frequency: " << frequency << "Hz. Format: " << format_text <<
+			". Channels: " << channels << " " << channels_text << ".";
+	}
+	else {
+		Log(ERROR) << "Error querying the specifications of the audio. " << Mix_GetError();
+
+		// Set the amount of times to close the audio to one, just for safety.
+		times_to_close = 1;
+	}
+
+	// Close the audio the necessary amount of times.
+	while(times_to_close > 0){
+		Mix_CloseAudio();
+		times_to_close--;
+	}
+
+	// "Since each call to Mix_Init may set different flags, there is no way, currently, to
+	// request how many times each one was initted. In other words, the only way to quit for
+	// sure is to do a loop like so: "
+	while(Mix_Init(0)){
+		Mix_Quit();
+	}
+}
+
+/**
+* Logs the SDL API version.
+* @param library : What API/Library is being logged about.
+* @param version_compiled : The compiled version.
+* @param revision : If any, the revision.
+*/
+void LogSdlVersion(const std::string& library, const SDL_version& version_compiled) {
+	Log(DEBUG) << library << " Version (compiled): " <<
+		static_cast<int>(version_compiled.major) << "." <<
+		static_cast<int>(version_compiled.minor) << "." <<
+		static_cast<int>(version_compiled.patch);
+}
+
+/**
+* Logs the SDL API version.
+* @param library : What API/Library is being logged about.
+* @param version_compiled : The compiled version.
+* @param revision : If any, the revision.
+*/
+void LogSdlVersion(const std::string& library, const SDL_version& version_compiled,
+		const std::string& revision) {
+	Log(DEBUG) << library << " Version (Compiled): " <<
+		static_cast<int>(version_compiled.major) << "." <<
+		static_cast<int>(version_compiled.minor) << "." <<
+		static_cast<int>(version_compiled.patch) << revision;
+}
+
+} // namespace
+
+namespace sdl {
+
+bool Initialize() {
+	bool success_sdl = false;
+	bool success_img = false;
+	bool success_mixer = false;
+	bool success_ttf = false;
 
 	SDL_version compiled;
 
 	Log(DEBUG) << "Initializing systems...";
 
 	// Initializing SDL_TTF.
-	const int ttfInit = TTF_Init();
-	if(ttfInit == 0) {
-		successTTF = true;
+	const int k_ttf_init = TTF_Init();
+	if(k_ttf_init == 0) {
+		success_ttf = true;
 
 		SDL_TTF_VERSION(&compiled);
-		SDL_Wrapper_detail::logSDLVersion("SDL_TTF", compiled);
+		LogSdlVersion("SDL_TTF", compiled);
 	}
 	else {
 		Log(ERROR) << "Could not initialize TTF." << TTF_GetError();
 	}
 
-	// Initializing SDL with initFlags.
-	const Uint32 initFlags = SDL_INIT_EVERYTHING;
-	const int sdlInit = SDL_Init(initFlags);
+	// Initializing SDL with k_init_flags.
+	const Uint32 k_init_flags = SDL_INIT_EVERYTHING;
+	const int sdl_init = SDL_Init(k_init_flags);
 
-	if(sdlInit == 0) {
-		successSDL = true;
+	if(sdl_init == 0) {
+		success_sdl = true;
 
 		SDL_version linked;
 		SDL_VERSION(&compiled);
 		SDL_GetVersion(&linked);
 
-		SDL_Wrapper_detail::logSDLVersion("SDL", compiled, SDL_GetRevision());
+		LogSdlVersion("SDL", compiled, SDL_GetRevision());
 	}
 	else {
 		Log(ERROR) << "Could not initialize SDL." << SDL_GetError();
 	}
 
-	// Initializing SDL_image with imgFlags.
-	const Uint32 imgFlags = IMG_INIT_PNG;
-	successIMG = (static_cast<Uint32>(IMG_Init(imgFlags)) & imgFlags);
-	if(successIMG) {
+	// Initializing SDL_image with k_img_flags.
+	const Uint32 k_img_flags = IMG_INIT_PNG;
+	success_img = (static_cast<Uint32>(IMG_Init(k_img_flags)) & k_img_flags);
+	if(success_img) {
 		SDL_IMAGE_VERSION(&compiled);
-		SDL_Wrapper_detail::logSDLVersion("SDL_image", compiled);
+		LogSdlVersion("SDL_image", compiled);
 	}
 	else {
 		Log(ERROR) << "Could not initialize SDL_Image." << IMG_GetError();
 	}
 
 	// Initializing SDL_mixer.
-	const int frequency = 44100;
-	const int channels = 2;
-	const int chunksize = 4096;
-	const int initialized = Mix_OpenAudio(frequency, MIX_DEFAULT_FORMAT, channels, chunksize);
-	if(initialized == 0) {
-		successMixer = true;
+	const int k_frequency = 44100;
+	const int k_channels = 2;
+	const int k_chunk_size = 4096;
+	const int k_initialized_audio = Mix_OpenAudio(k_frequency, MIX_DEFAULT_FORMAT, k_channels,
+		k_chunk_size);
+	if(k_initialized_audio == 0) {
+		success_mixer = true;
 
 		SDL_MIXER_VERSION(&compiled);
-		SDL_Wrapper_detail::logSDLVersion("SDL_mixer", compiled);
+		LogSdlVersion("SDL_mixer", compiled);
 
-		const int channelsAllocated = Mix_AllocateChannels(25);
+		const int k_channels_to_allocated = 25;
+		const int k_channels_allocated = Mix_AllocateChannels(k_channels_to_allocated);
 
-		Log(DEBUG) << "Allocated " << channelsAllocated << " channels for the mixer.";
+		Log(DEBUG) << "Allocated (" << k_channels_allocated << "/" << k_channels_to_allocated
+			<< ") channels for the mixer.";
 	}
 	else {
 		Log(ERROR) << "Could not initialize SDL_Mixer" << Mix_GetError();
 	}
 
 	// If even one system fails to initialize, returns false.
-	return (successSDL && successIMG && successMixer && successTTF);
+	return (success_sdl && success_img && success_mixer && success_ttf);
 }
 
-void SDL_Wrapper::close() {
+void Close() {
 	Log(DEBUG) << "Closing SDL.";
 
 	// Quits SDL_mixer.
-	SDL_Wrapper_detail::closeMixer();
+	CloseMixer();
 
 	// Quits SDL_image.
 	IMG_Quit();
@@ -91,75 +206,4 @@ void SDL_Wrapper::close() {
 	TTF_Quit();
 }
 
-void SDL_Wrapper::SDL_Wrapper_detail::closeMixer() {
-	// Query the specifications of the opened audio, to figure out how many times we need to
-	// close the audio.
-	int frequency = 0;
-	int channels = 0;
-	Uint16 format = 0;
-	const int numberOfTimesOpened = Mix_QuerySpec(&frequency, &format, &channels);
-	int timesToClose = numberOfTimesOpened;
-
-	if(numberOfTimesOpened != 0) {
-		// Build a string with the format.
-		std::string format_str("Unknown format");
-	    switch(format) {
-	        case AUDIO_U8:
-	        	format_str="U8";
-	        	break;
-	        case AUDIO_S8:
-		        format_str="S8";
-	        	break;
-	        case AUDIO_U16LSB:
-		        format_str="U16LSB";
-	        	break;
-	        case AUDIO_S16LSB:
-		        format_str="S16LSB";
-	        	break;
-	        case AUDIO_U16MSB:
-		        format_str="U16MSB";
-	        	break;
-	        case AUDIO_S16MSB:
-		        format_str="S16MSB";
-	        	break;
-	        default:
-	        	break;
-	    }
-
-	    // Build a string with the channels type.
-	    std::string channels_str("Unknown channels");
-	    switch(channels) {
-	    	case 1:
-	    		channels_str = "(mono)";
-	    		break;
-	    	case 2:
-	    		channels_str = "(stereo)";
-	    		break;
-	    	default:
-	    		break;
-	    }
-
-		Log(DEBUG) << "Audio opened " << numberOfTimesOpened << " time(s). Frequency: " <<
-			frequency << "Hz. Format: " << format_str << ". Channels: " << channels << " " <<
-			channels_str << ".";
-	}
-	else {
-		Log(ERROR) << "Error querying the specifications of the audio. " << Mix_GetError();
-
-		// Set the amount of times to close the audio to one, just for safety.
-		timesToClose = 1;
-	}
-
-	// Close the audio the necessary amount of times.
-	while(timesToClose > 0){
-		Mix_CloseAudio();
-		timesToClose--;
-	}
-
-	// "Since each call to Mix_Init may set different flags, there is no way, currently, to
-	// request how many times each one was initted. In other words, the only way to quit for
-	// sure is to do a loop like so: "
-	while(Mix_Init(0)){
-		Mix_Quit();
-	}
-}
+} // namespace sdl

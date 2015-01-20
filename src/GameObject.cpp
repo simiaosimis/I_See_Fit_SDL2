@@ -1,7 +1,7 @@
 #include "GameObject.h"
 #include <cassert>
 #include "Game.h"
-#include "SDL_Libs.h"
+#include <SDL2/SDL.h>
 #include "Logger.h"
 
 GameObject::GameObject(const double x_, const double y_, const std::string& path_) :

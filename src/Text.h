@@ -1,6 +1,6 @@
 #pragma once
 
-#include "SDL_Libs.h"
+#include <SDL2/SDL_ttf.h>
 #include "GameObject.h"
 
 /**

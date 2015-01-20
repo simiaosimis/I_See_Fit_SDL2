@@ -1,6 +1,6 @@
 #pragma once
 
-#include "SDL_Libs.h"
+#include <SDL2/SDL.h>
 #include "Sprite.h"
 #include <string>
 

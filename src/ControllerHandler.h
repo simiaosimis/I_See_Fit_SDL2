@@ -3,7 +3,7 @@
 #define CONTROLLERSTICK_DEAD_ZONE 8000
 #define TRIGGER_DEAD_ZONE 8000
 
-#include "SDL_Libs.h"
+#include <SDL2/SDL.h>
 #include "InputKeys.h"
 #include <array>
 
