@@ -51,17 +51,16 @@
        <a href="index.html">Defect summary</a>
        <br>
        <p>
-        71 total<br/><br/>
-        18 build/include_what_you_use<br/>
+        59 total<br/><br/>
         17 whitespace/indent<br/>
+        16 build/include_what_you_use<br/>
         11 whitespace/parens<br/>
         6 whitespace/line_length<br/>
-        6 whitespace/operators<br/>
-        4 readability/namespace<br/>
         3 runtime/references<br/>
         2 build/c++11<br/>
-        2 runtime/indentation_namespace<br/>
         2 whitespace/end_of_line<br/>
+        1 build/include_order<br/>
+        1 readability/namespace<br/>
        </p>
       </div>
       <div id="content_index">
@@ -109,6 +108,7 @@
        <tr><td><a href='7.html#line-131'>131</a></td><td>build/include_what_you_use</td><td>warning</td><td >Add #include &lt;map&gt; for map&lt;&gt;  </td></tr>
        <tr><td><a href='7.html#line-132'>132</a></td><td>whitespace/parens</td><td>error</td><td class="error">Missing space before ( in for(  </td></tr>
        <tr><td colspan='4'><a href='8.html'>/home/travis/build/CaioIcy/sdl2-engine/src/GameObject.cpp</a></td></tr>
+       <tr><td><a href='8.html#line-4'>4</a></td><td>build/include_order</td><td>warning</td><td >Found C system header after C++ system header. Should be: GameObject.h, c system, c++ system, other.  </td></tr>
        <tr><td><a href='8.html#line-7'>7</a></td><td>build/include_what_you_use</td><td>warning</td><td >Add #include &lt;string&gt; for string  </td></tr>
        <tr><td><a href='8.html#line-19'>19</a></td><td>whitespace/parens</td><td>error</td><td class="error">Missing space before ( in if(  </td></tr>
        <tr><td colspan='4'><a href='9.html'>/home/travis/build/CaioIcy/sdl2-engine/src/InputHandler.cpp</a></td></tr>
@@ -128,42 +128,26 @@
        <tr><td colspan='4'><a href='15.html'>/home/travis/build/CaioIcy/sdl2-engine/src/ResourceHandler.h</a></td></tr>
        <tr><td><a href='15.html#line-26'>26</a></td><td>build/include_what_you_use</td><td>warning</td><td >Add #include &lt;string&gt; for string  </td></tr>
        <tr><td colspan='4'><a href='16.html'>/home/travis/build/CaioIcy/sdl2-engine/src/SDL_Systems.cpp</a></td></tr>
-       <tr><td><a href='16.html#line-106'>106</a></td><td>whitespace/parens</td><td>error</td><td class="error">Missing space before ( in switch(  </td></tr>
-       <tr><td><a href='16.html#line-108'>108</a></td><td>whitespace/operators</td><td>warning</td><td >Missing spaces around =  </td></tr>
-       <tr><td><a href='16.html#line-111'>111</a></td><td>whitespace/operators</td><td>warning</td><td >Missing spaces around =  </td></tr>
-       <tr><td><a href='16.html#line-114'>114</a></td><td>whitespace/operators</td><td>warning</td><td >Missing spaces around =  </td></tr>
-       <tr><td><a href='16.html#line-117'>117</a></td><td>whitespace/operators</td><td>warning</td><td >Missing spaces around =  </td></tr>
-       <tr><td><a href='16.html#line-120'>120</a></td><td>whitespace/operators</td><td>warning</td><td >Missing spaces around =  </td></tr>
-       <tr><td><a href='16.html#line-123'>123</a></td><td>whitespace/operators</td><td>warning</td><td >Missing spaces around =  </td></tr>
-       <tr><td><a href='16.html#line-130'>130</a></td><td>build/include_what_you_use</td><td>warning</td><td >Add #include &lt;string&gt; for string  </td></tr>
-       <tr><td><a href='16.html#line-131'>131</a></td><td>whitespace/parens</td><td>error</td><td class="error">Missing space before ( in switch(  </td></tr>
-       <tr><td colspan='4'><a href='17.html'>/home/travis/build/CaioIcy/sdl2-engine/src/SDL_Systems.h</a></td></tr>
-       <tr><td><a href='17.html#line-27'>27</a></td><td>runtime/indentation_namespace</td><td>warning</td><td >Do not indent within a namespace  </td></tr>
-       <tr><td><a href='17.html#line-34'>34</a></td><td>readability/namespace</td><td>error</td><td class="error">Namespace should be terminated with &quot;// namespace SDL_Wrapper&quot;  </td></tr>
-       <tr><td colspan='4'><a href='18.html'>/home/travis/build/CaioIcy/sdl2-engine/src/SDL_Util.cpp</a></td></tr>
-       <tr><td><a href='18.html#line-5'>5</a></td><td>build/include_what_you_use</td><td>warning</td><td >Add #include &lt;string&gt; for string  </td></tr>
-       <tr><td colspan='4'><a href='19.html'>/home/travis/build/CaioIcy/sdl2-engine/src/SDL_Util.h</a></td></tr>
-       <tr><td><a href='19.html#line-8'>8</a></td><td>runtime/indentation_namespace</td><td>warning</td><td >Do not indent within a namespace  </td></tr>
-       <tr><td><a href='19.html#line-18'>18</a></td><td>readability/namespace</td><td>error</td><td class="error">Namespace should be terminated with &quot;// namespace SDL_Wrapper_detail&quot;  </td></tr>
-       <tr><td><a href='19.html#line-20'>20</a></td><td>readability/namespace</td><td>error</td><td class="error">Namespace should be terminated with &quot;// namespace SDL_Wrapper&quot;  </td></tr>
-       <tr><td colspan='4'><a href='20.html'>/home/travis/build/CaioIcy/sdl2-engine/src/SFXManager.cpp</a></td></tr>
+       <tr><td><a href='16.html#line-23'>23</a></td><td>whitespace/parens</td><td>error</td><td class="error">Missing space before ( in switch(  </td></tr>
+       <tr><td><a href='16.html#line-49'>49</a></td><td>whitespace/parens</td><td>error</td><td class="error">Missing space before ( in switch(  </td></tr>
+       <tr><td colspan='4'><a href='17.html'>/home/travis/build/CaioIcy/sdl2-engine/src/SFXManager.cpp</a></td></tr>
+       <tr><td><a href='17.html#line-3'>3</a></td><td>build/include_what_you_use</td><td>warning</td><td >Add #include &lt;string&gt; for string  </td></tr>
+       <tr><td colspan='4'><a href='18.html'>/home/travis/build/CaioIcy/sdl2-engine/src/SoundEffect.cpp</a></td></tr>
+       <tr><td><a href='18.html#line-26'>26</a></td><td>build/include_what_you_use</td><td>warning</td><td >Add #include &lt;string&gt; for string  </td></tr>
+       <tr><td colspan='4'><a href='19.html'>/home/travis/build/CaioIcy/sdl2-engine/src/Sprite.cpp</a></td></tr>
+       <tr><td><a href='19.html#line-111'>111</a></td><td>whitespace/line_length</td><td>style</td><td >Lines should be &lt;= 95 characters long  </td></tr>
+       <tr><td><a href='19.html#line-118'>118</a></td><td>whitespace/line_length</td><td>style</td><td >Lines should be &lt;= 95 characters long  </td></tr>
+       <tr><td><a href='19.html#line-138'>138</a></td><td>build/include_what_you_use</td><td>warning</td><td >Add #include &lt;string&gt; for string  </td></tr>
+       <tr><td><a href='19.html#line-147'>147</a></td><td>whitespace/line_length</td><td>style</td><td >Lines should be &lt;= 95 characters long  </td></tr>
+       <tr><td><a href='19.html#line-157'>157</a></td><td>whitespace/parens</td><td>error</td><td class="error">Missing space before ( in if(  </td></tr>
+       <tr><td><a href='19.html#line-163'>163</a></td><td>whitespace/line_length</td><td>style</td><td >Lines should be &lt;= 95 characters long  </td></tr>
+       <tr><td><a href='19.html#line-170'>170</a></td><td>whitespace/line_length</td><td>style</td><td >Lines should be &lt;= 95 characters long  </td></tr>
+       <tr><td colspan='4'><a href='20.html'>/home/travis/build/CaioIcy/sdl2-engine/src/SpriteManager.cpp</a></td></tr>
        <tr><td><a href='20.html#line-3'>3</a></td><td>build/include_what_you_use</td><td>warning</td><td >Add #include &lt;string&gt; for string  </td></tr>
-       <tr><td colspan='4'><a href='21.html'>/home/travis/build/CaioIcy/sdl2-engine/src/SoundEffect.cpp</a></td></tr>
-       <tr><td><a href='21.html#line-26'>26</a></td><td>build/include_what_you_use</td><td>warning</td><td >Add #include &lt;string&gt; for string  </td></tr>
-       <tr><td colspan='4'><a href='22.html'>/home/travis/build/CaioIcy/sdl2-engine/src/Sprite.cpp</a></td></tr>
-       <tr><td><a href='22.html#line-111'>111</a></td><td>whitespace/line_length</td><td>style</td><td >Lines should be &lt;= 95 characters long  </td></tr>
-       <tr><td><a href='22.html#line-118'>118</a></td><td>whitespace/line_length</td><td>style</td><td >Lines should be &lt;= 95 characters long  </td></tr>
-       <tr><td><a href='22.html#line-138'>138</a></td><td>build/include_what_you_use</td><td>warning</td><td >Add #include &lt;string&gt; for string  </td></tr>
-       <tr><td><a href='22.html#line-147'>147</a></td><td>whitespace/line_length</td><td>style</td><td >Lines should be &lt;= 95 characters long  </td></tr>
-       <tr><td><a href='22.html#line-157'>157</a></td><td>whitespace/parens</td><td>error</td><td class="error">Missing space before ( in if(  </td></tr>
-       <tr><td><a href='22.html#line-163'>163</a></td><td>whitespace/line_length</td><td>style</td><td >Lines should be &lt;= 95 characters long  </td></tr>
-       <tr><td><a href='22.html#line-170'>170</a></td><td>whitespace/line_length</td><td>style</td><td >Lines should be &lt;= 95 characters long  </td></tr>
-       <tr><td colspan='4'><a href='23.html'>/home/travis/build/CaioIcy/sdl2-engine/src/SpriteManager.cpp</a></td></tr>
-       <tr><td><a href='23.html#line-3'>3</a></td><td>build/include_what_you_use</td><td>warning</td><td >Add #include &lt;string&gt; for string  </td></tr>
-       <tr><td colspan='4'><a href='24.html'>/home/travis/build/CaioIcy/sdl2-engine/src/Util.cpp</a></td></tr>
-       <tr><td><a href='24.html#line-5'>5</a></td><td>build/include_what_you_use</td><td>warning</td><td >Add #include &lt;string&gt; for string  </td></tr>
-       <tr><td colspan='4'><a href='25.html'>/home/travis/build/CaioIcy/sdl2-engine/src/Window.cpp</a></td></tr>
-       <tr><td><a href='25.html#line-6'>6</a></td><td>build/include_what_you_use</td><td>warning</td><td >Add #include &lt;string&gt; for string  </td></tr>
+       <tr><td colspan='4'><a href='21.html'>/home/travis/build/CaioIcy/sdl2-engine/src/Util.cpp</a></td></tr>
+       <tr><td><a href='21.html#line-5'>5</a></td><td>build/include_what_you_use</td><td>warning</td><td >Add #include &lt;string&gt; for string  </td></tr>
+       <tr><td colspan='4'><a href='22.html'>/home/travis/build/CaioIcy/sdl2-engine/src/Window.cpp</a></td></tr>
+       <tr><td><a href='22.html#line-6'>6</a></td><td>build/include_what_you_use</td><td>warning</td><td >Add #include &lt;string&gt; for string  </td></tr>
        </table>
       </div>
       <div id="footer">

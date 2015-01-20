@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>sdl2-engine: SDL_Util.cpp Source File</title>
+<title>sdl2-engine: sdl Namespace Reference</title>
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -33,7 +33,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v15</span>
+   &#160;<span id="projectnumber">v16</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -53,9 +53,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li class="current"><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
-      <li class="current"><a href="files.html"><span>Files</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -76,7 +76,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
-      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="namespaces.html"><span>Namespace&#160;List</span></a></li>
+      <li><a href="namespacemembers.html"><span>Namespace&#160;Members</span></a></li>
     </ul>
   </div>
 </div>
@@ -90,25 +91,66 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-  initNavTree('SDL__Util_8cpp.html','');
+  initNavTree('namespacesdl.html','');
 </script>
 <div id="doc-content">
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">SDL_Util.cpp</div>  </div>
+<div class="title">sdl Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;SDL_Util.h&quot;</span>
-<a name="l00002"></a>00002 <span class="preprocessor">#include &quot;Logger.h&quot;</span>
-<a name="l00003"></a>00003 
-<a name="l00004"></a><a class="code" href="namespaceSDL__Wrapper_1_1SDL__Wrapper__detail.html#a9f0387e1ea9e4d50de0ba422f0ebfb12">00004</a> <span class="keywordtype">void</span> <a class="code" href="namespaceSDL__Wrapper_1_1SDL__Wrapper__detail.html#a9f0387e1ea9e4d50de0ba422f0ebfb12">SDL_Wrapper::SDL_Wrapper_detail::logSDLVersion</a>(<span class="keyword">const</span> std::string&amp; what_,
-<a name="l00005"></a>00005     <span class="keyword">const</span> SDL_version&amp; compiled_, std::string revision_) {
-<a name="l00006"></a>00006 
-<a name="l00007"></a>00007     Log(DEBUG) &lt;&lt; what_ &lt;&lt; <span class="stringliteral">&quot; Version (Compiled): &quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(compiled_.major) &lt;&lt; <span class="stringliteral">&quot;.&quot;</span> &lt;&lt;
-<a name="l00008"></a>00008         static_cast&lt;int&gt;(compiled_.minor) &lt;&lt; <span class="stringliteral">&quot;.&quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(compiled_.patch) &lt;&lt;
-<a name="l00009"></a>00009         ((!revision_.empty()) ? revision_ : <span class="stringliteral">&quot;&quot;</span>);
-<a name="l00010"></a>00010 }
-</pre></div></div><!-- contents -->
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesdl.html#a3a90e2da909fa25cc7c570fbe3e25d5f">Initialize</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesdl.html#ad191ca5bcfbd36197f6959249e6cbcda">Close</a> ()</td></tr>
+</table>
+<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><p>Wraps the SDL libraries. And contains the initializing and closing functions for the system(s). No instances necessary. </p>
+</div><hr/><h2>Function Documentation</h2>
+<a class="anchor" id="ad191ca5bcfbd36197f6959249e6cbcda"></a><!-- doxytag: member="sdl::Close" ref="ad191ca5bcfbd36197f6959249e6cbcda" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="namespacesdl.html#ad191ca5bcfbd36197f6959249e6cbcda">sdl::Close</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Closes all open systems. Closes all systems and/or subsystems opened by the initializer method. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="namespacesdl.html#a3a90e2da909fa25cc7c570fbe3e25d5f">Initialize()</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="SDL__Systems_8cpp_source.html#l00193">193</a> of file <a class="el" href="SDL__Systems_8cpp_source.html">SDL_Systems.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3a90e2da909fa25cc7c570fbe3e25d5f"></a><!-- doxytag: member="sdl::Initialize" ref="a3a90e2da909fa25cc7c570fbe3e25d5f" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="namespacesdl.html#a3a90e2da909fa25cc7c570fbe3e25d5f">sdl::Initialize</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>The system initializer. Initializes all the SDL systems and/or subsystems. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>True if every system was initialized successfully, else it returns false. </dd></dl>
+
+<p>Definition at line <a class="el" href="SDL__Systems_8cpp_source.html#l00117">117</a> of file <a class="el" href="SDL__Systems_8cpp_source.html">SDL_Systems.cpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -126,9 +168,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><b>SDL_Util.cpp</b>      </li>
+      <li class="navelem"><a class="el" href="namespacesdl.html">sdl</a>      </li>
 
-    <li class="footer">Generated on Tue Jan 20 2015 06:04:36 for sdl2-engine by
+    <li class="footer">Generated on Tue Jan 20 2015 06:46:14 for sdl2-engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

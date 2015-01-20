@@ -2,8 +2,7 @@ var searchData=
 [
   ['screenheight',['ScreenHeight',['../classConfiguration.html#ac1b98514305ca2e97e54f9858d891488',1,'Configuration']]],
   ['screenwidth',['ScreenWidth',['../classConfiguration.html#a2abd3e10153cffe624981da2eedcd61a',1,'Configuration']]],
-  ['sdl_5fwrapper',['SDL_Wrapper',['../namespaceSDL__Wrapper.html',1,'']]],
-  ['sdl_5fwrapper_5fdetail',['SDL_Wrapper_detail',['../namespaceSDL__Wrapper_1_1SDL__Wrapper__detail.html',1,'SDL_Wrapper']]],
+  ['sdl',['sdl',['../namespacesdl.html',1,'']]],
   ['sdlevent',['sdlEvent',['../classInputHandler.html#ab2fa06988077060c7a3dca6c3d643dd3',1,'InputHandler']]],
   ['sdlrenderer',['sdlRenderer',['../classRenderer.html#a785de8b89acc27606fb022ce19bb1080',1,'Renderer']]],
   ['sdltexture',['sdlTexture',['../classSprite.html#a546d109413d8f3541ffde26701075bd1',1,'Sprite']]],

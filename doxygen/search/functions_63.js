@@ -12,8 +12,7 @@ var searchData=
   ['cleangameobjects',['cleanGameObjects',['../classStateGame.html#a7dd22dcc7c7474fed01942b3507f54b6',1,'StateGame']]],
   ['clearchannel',['ClearChannel',['../classAudioHandler.html#a0e3f228981eec17ede1e20368cd027bb',1,'AudioHandler']]],
   ['clip',['Clip',['../classCamera.html#af2a2532a58347832a69bb0b7035503f8',1,'Camera']]],
-  ['close',['close',['../namespaceSDL__Wrapper.html#a7bab08dd80babb1063a6caffcb05582c',1,'SDL_Wrapper']]],
-  ['closemixer',['closeMixer',['../namespaceSDL__Wrapper_1_1SDL__Wrapper__detail.html#affcbeafb0929bba88b4d354a69d82dab',1,'SDL_Wrapper::SDL_Wrapper_detail']]],
+  ['close',['Close',['../namespacesdl.html#ad191ca5bcfbd36197f6959249e6cbcda',1,'sdl']]],
   ['controllerhandler',['ControllerHandler',['../classControllerHandler.html#a2a6b8a51a3165d65606addb743f45964',1,'ControllerHandler']]],
   ['create',['create',['../classWindow.html#a7a1d09805521f508601c01cb7f851820',1,'Window']]],
   ['currentframe',['CurrentFrame',['../classAnimation.html#af77b1bda4e1129c743da1d32197f400d',1,'Animation']]]

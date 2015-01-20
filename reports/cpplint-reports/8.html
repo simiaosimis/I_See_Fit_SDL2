@@ -112,7 +112,7 @@
       <div id="menu" dir="rtl">
        <a href="index.html">Defect list</a>
        <br>
-<a href='8.html#line-7'> build/include_what_you_use 7</a><a href='8.html#line-19'> whitespace/parens 19</a>
+<a href='8.html#line-4'> build/include_order 4</a><a href='8.html#line-7'> build/include_what_you_use 7</a><a href='8.html#line-19'> whitespace/parens 19</a>
       </div>
       <div id="content">
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -182,8 +182,8 @@
 65</pre></div></td><td class="code"><div class="highlight"><pre><a name="line-1"></a><span class="cp">#include &quot;GameObject.h&quot;</span>
 <a name="line-2"></a><span class="cp">#include &lt;cassert&gt;</span>
 <a name="line-3"></a><span class="cp">#include &quot;Game.h&quot;</span>
-<a name="line-4"></a><span class="cp">#include &quot;SDL_Libs.h&quot;</span>
-<a name="line-5"></a><span class="cp">#include &quot;Logger.h&quot;</span>
+<a name="line-4"></a><span class="hll"><span class="cp">#include &lt;SDL2/SDL.h&gt;</span><span class='error2'>&lt;--- Found C system header after C++ system header. Should be: GameObject.h, c system, c++ system, other.  </span>
+</span><a name="line-5"></a><span class="cp">#include &quot;Logger.h&quot;</span>
 <a name="line-6"></a>
 <a name="line-7"></a><span class="hll"><span class="n">GameObject</span><span class="o">::</span><span class="n">GameObject</span><span class="p">(</span><span class="k">const</span> <span class="kt">double</span> <span class="n">x_</span><span class="p">,</span> <span class="k">const</span> <span class="kt">double</span> <span class="n">y_</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">path_</span><span class="p">)</span> <span class="o">:</span><span class='error2'>&lt;--- Add #include &lt;string&gt; for string  </span>
 </span><a name="line-8"></a>    <span class="n">x</span><span class="p">(</span><span class="n">x_</span><span class="p">),</span>

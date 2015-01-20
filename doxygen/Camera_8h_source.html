@@ -33,7 +33,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v15</span>
+   &#160;<span id="projectnumber">v16</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -100,34 +100,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#pragma once</span>
 <a name="l00002"></a>00002 <span class="preprocessor"></span>
-<a name="l00003"></a>00003 <span class="preprocessor">#include &quot;SDL_Libs.h&quot;</span>
-<a name="l00004"></a>00004 <span class="comment">// #include &quot;GameObject.h&quot;</span>
-<a name="l00005"></a>00005 
-<a name="l00006"></a>00006 <span class="keyword">class </span><a class="code" href="classGameObject.html">GameObject</a>;
-<a name="l00007"></a>00007 
-<a name="l00012"></a><a class="code" href="classCamera.html">00012</a> <span class="keyword">class </span><a class="code" href="classCamera.html">Camera</a> {
-<a name="l00013"></a>00013 
-<a name="l00014"></a>00014     <span class="keyword">public</span>:
-<a name="l00020"></a>00020         <span class="keyword">explicit</span> <a class="code" href="classCamera.html#a7de0abc03f0001c4aa211d54a9c8b6d7">Camera</a>(<a class="code" href="classGameObject.html">GameObject</a>* <span class="keyword">const</span> game_object);
-<a name="l00021"></a>00021 
-<a name="l00025"></a>00025         <a class="code" href="classCamera.html#ad1897942d0ccf91052386388a497349f">~Camera</a>();
-<a name="l00026"></a>00026 
-<a name="l00032"></a>00032         <span class="keywordtype">void</span> <a class="code" href="classCamera.html#a4a596a3ea1fdc7d244ba4268031a360b">Update</a>();
-<a name="l00033"></a>00033 
-<a name="l00038"></a>00038         <span class="keywordtype">void</span> <a class="code" href="classCamera.html#a7b7dee9529dc44be2ff7988f9122b055">CentralizeOn</a>(<a class="code" href="classGameObject.html">GameObject</a>* <span class="keyword">const</span> game_object);
-<a name="l00039"></a>00039 
-<a name="l00043"></a>00043         SDL_Rect&amp; <a class="code" href="classCamera.html#af2a2532a58347832a69bb0b7035503f8">Clip</a>();
-<a name="l00044"></a>00044 
-<a name="l00049"></a>00049         <span class="keywordtype">void</span> <a class="code" href="classCamera.html#a4ad2b8241bc293d27cea0de5377c1b70">SetLevelDimensions</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> width, <span class="keyword">const</span> <span class="keywordtype">int</span> height);
-<a name="l00050"></a>00050 
-<a name="l00051"></a>00051     <span class="keyword">private</span>:
-<a name="l00056"></a>00056         <span class="keywordtype">void</span> <a class="code" href="classCamera.html#a3e8d83c6bdebf82e15a9e9d4579d5613">UpdatePosition</a>();
-<a name="l00057"></a>00057 
-<a name="l00058"></a><a class="code" href="classCamera.html#abd97ebd6d1a67b6e226d70f30aa7f4fe">00058</a>         <a class="code" href="classGameObject.html">GameObject</a>* <a class="code" href="classCamera.html#abd97ebd6d1a67b6e226d70f30aa7f4fe">m_game_object</a>; 
-<a name="l00059"></a><a class="code" href="classCamera.html#aa81d8ca4c419d46b95de4d296090dbf0">00059</a>         <span class="keywordtype">int</span> <a class="code" href="classCamera.html#aa81d8ca4c419d46b95de4d296090dbf0">m_level_width</a>; 
-<a name="l00060"></a><a class="code" href="classCamera.html#af73c54bc9e42d1808be03b6e38aa31d1">00060</a>         <span class="keywordtype">int</span> <a class="code" href="classCamera.html#af73c54bc9e42d1808be03b6e38aa31d1">m_level_height</a>; 
-<a name="l00061"></a><a class="code" href="classCamera.html#a9cac076688c693b438026d0fcf083809">00061</a>         SDL_Rect <a class="code" href="classCamera.html#a9cac076688c693b438026d0fcf083809">m_clip</a>; 
-<a name="l00064"></a>00064 };
+<a name="l00003"></a>00003 <span class="preprocessor">#include &lt;SDL2/SDL.h&gt;</span>
+<a name="l00004"></a>00004 
+<a name="l00005"></a>00005 <span class="keyword">class </span><a class="code" href="classGameObject.html">GameObject</a>;
+<a name="l00006"></a>00006 
+<a name="l00011"></a><a class="code" href="classCamera.html">00011</a> <span class="keyword">class </span><a class="code" href="classCamera.html">Camera</a> {
+<a name="l00012"></a>00012 
+<a name="l00013"></a>00013     <span class="keyword">public</span>:
+<a name="l00019"></a>00019         <span class="keyword">explicit</span> <a class="code" href="classCamera.html#a7de0abc03f0001c4aa211d54a9c8b6d7">Camera</a>(<a class="code" href="classGameObject.html">GameObject</a>* <span class="keyword">const</span> game_object);
+<a name="l00020"></a>00020 
+<a name="l00024"></a>00024         <a class="code" href="classCamera.html#ad1897942d0ccf91052386388a497349f">~Camera</a>();
+<a name="l00025"></a>00025 
+<a name="l00031"></a>00031         <span class="keywordtype">void</span> <a class="code" href="classCamera.html#a4a596a3ea1fdc7d244ba4268031a360b">Update</a>();
+<a name="l00032"></a>00032 
+<a name="l00037"></a>00037         <span class="keywordtype">void</span> <a class="code" href="classCamera.html#a7b7dee9529dc44be2ff7988f9122b055">CentralizeOn</a>(<a class="code" href="classGameObject.html">GameObject</a>* <span class="keyword">const</span> game_object);
+<a name="l00038"></a>00038 
+<a name="l00042"></a>00042         SDL_Rect&amp; <a class="code" href="classCamera.html#af2a2532a58347832a69bb0b7035503f8">Clip</a>();
+<a name="l00043"></a>00043 
+<a name="l00048"></a>00048         <span class="keywordtype">void</span> <a class="code" href="classCamera.html#a4ad2b8241bc293d27cea0de5377c1b70">SetLevelDimensions</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> width, <span class="keyword">const</span> <span class="keywordtype">int</span> height);
+<a name="l00049"></a>00049 
+<a name="l00050"></a>00050     <span class="keyword">private</span>:
+<a name="l00055"></a>00055         <span class="keywordtype">void</span> <a class="code" href="classCamera.html#a3e8d83c6bdebf82e15a9e9d4579d5613">UpdatePosition</a>();
+<a name="l00056"></a>00056 
+<a name="l00057"></a><a class="code" href="classCamera.html#abd97ebd6d1a67b6e226d70f30aa7f4fe">00057</a>         <a class="code" href="classGameObject.html">GameObject</a>* <a class="code" href="classCamera.html#abd97ebd6d1a67b6e226d70f30aa7f4fe">m_game_object</a>; 
+<a name="l00058"></a><a class="code" href="classCamera.html#aa81d8ca4c419d46b95de4d296090dbf0">00058</a>         <span class="keywordtype">int</span> <a class="code" href="classCamera.html#aa81d8ca4c419d46b95de4d296090dbf0">m_level_width</a>; 
+<a name="l00059"></a><a class="code" href="classCamera.html#af73c54bc9e42d1808be03b6e38aa31d1">00059</a>         <span class="keywordtype">int</span> <a class="code" href="classCamera.html#af73c54bc9e42d1808be03b6e38aa31d1">m_level_height</a>; 
+<a name="l00060"></a><a class="code" href="classCamera.html#a9cac076688c693b438026d0fcf083809">00060</a>         SDL_Rect <a class="code" href="classCamera.html#a9cac076688c693b438026d0fcf083809">m_clip</a>; 
+<a name="l00063"></a>00063 };
 </pre></div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -148,7 +147,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><b>Camera.h</b>      </li>
 
-    <li class="footer">Generated on Tue Jan 20 2015 06:04:36 for sdl2-engine by
+    <li class="footer">Generated on Tue Jan 20 2015 06:46:14 for sdl2-engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>
