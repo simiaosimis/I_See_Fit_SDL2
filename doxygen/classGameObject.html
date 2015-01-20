@@ -33,7 +33,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v14</span>
+   &#160;<span id="projectnumber">v15</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -123,8 +123,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#a224d4f6d9dd75c8a6f9d022eaf586fd9">~GameObject</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#a1126cbf1a45d95a536fc244e65eb9183">update</a> (const double dt_)=0</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#a74a00ec966eaa99bff468e0ba8efc754">render</a> (const double cameraX_, const double cameraY_)=0</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#affec43dec5bbc848a02bb28ecf46d144">getWidth</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#a0036a87bdab17027a635d570fb6cf34e">getHeight</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#a7394724b15f0adae7938d27c749bda67">getWidth</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#abdf40e2aaa71b67120eec953a1e1ca02">getHeight</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">SDL_Rect &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#a75c4556a9513069fc021a2b8d7ebfc5b">getAnimationClip</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac9f6c642c2681f19f5d9a8ea2a0b2b9b"></a><!-- doxytag: member="GameObject::getBoundingBox" ref="ac9f6c642c2681f19f5d9a8ea2a0b2b9b" args="()" -->
 SDL_Rect &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getBoundingBox</b> ()</td></tr>
@@ -140,8 +140,8 @@ Protected Member Functions</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSprite.html">Sprite</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#a00fecd21a33c990c4132f6f8e886135f">sprite</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#ade95bb86cc216d745edf8ea15101f2af">width</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#a033b30bb7caf6660beabef5a81574bfb">height</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#a461647c775e04bffb85977084a196542">width</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#ae94d98451fb4345860810660a17b487b">height</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">SDL_Rect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#aedbe7c552382ea0686d020661826c106">animationClip</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abf0f01c3312477754c9780fddc73ffa2"></a><!-- doxytag: member="GameObject::boundingBox" ref="abf0f01c3312477754c9780fddc73ffa2" args="" -->
 SDL_Rect&#160;</td><td class="memItemRight" valign="bottom"><b>boundingBox</b></td></tr>
@@ -208,7 +208,7 @@ SDL_Rect&#160;</td><td class="memItemRight" valign="bottom"><b>boundingBox</b></
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="GameObject_8cpp_source.html#l00006">6</a> of file <a class="el" href="GameObject_8cpp_source.html">GameObject.cpp</a>.</p>
+<p>Definition at line <a class="el" href="GameObject_8cpp_source.html#l00007">7</a> of file <a class="el" href="GameObject_8cpp_source.html">GameObject.cpp</a>.</p>
 
 </div>
 </div>
@@ -265,12 +265,12 @@ SDL_Rect&#160;</td><td class="memItemRight" valign="bottom"><b>boundingBox</b></
 
 </div>
 </div>
-<a class="anchor" id="a0036a87bdab17027a635d570fb6cf34e"></a><!-- doxytag: member="GameObject::getHeight" ref="a0036a87bdab17027a635d570fb6cf34e" args="()" -->
+<a class="anchor" id="abdf40e2aaa71b67120eec953a1e1ca02"></a><!-- doxytag: member="GameObject::getHeight" ref="abdf40e2aaa71b67120eec953a1e1ca02" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int <a class="el" href="classGameObject.html#a0036a87bdab17027a635d570fb6cf34e">GameObject::getHeight</a> </td>
+          <td class="memname">int <a class="el" href="classGameObject.html#abdf40e2aaa71b67120eec953a1e1ca02">GameObject::getHeight</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -282,12 +282,12 @@ SDL_Rect&#160;</td><td class="memItemRight" valign="bottom"><b>boundingBox</b></
 
 </div>
 </div>
-<a class="anchor" id="affec43dec5bbc848a02bb28ecf46d144"></a><!-- doxytag: member="GameObject::getWidth" ref="affec43dec5bbc848a02bb28ecf46d144" args="()" -->
+<a class="anchor" id="a7394724b15f0adae7938d27c749bda67"></a><!-- doxytag: member="GameObject::getWidth" ref="a7394724b15f0adae7938d27c749bda67" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int <a class="el" href="classGameObject.html#affec43dec5bbc848a02bb28ecf46d144">GameObject::getWidth</a> </td>
+          <td class="memname">int <a class="el" href="classGameObject.html#a7394724b15f0adae7938d27c749bda67">GameObject::getWidth</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -380,12 +380,12 @@ SDL_Rect&#160;</td><td class="memItemRight" valign="bottom"><b>boundingBox</b></
 
 </div>
 </div>
-<a class="anchor" id="a033b30bb7caf6660beabef5a81574bfb"></a><!-- doxytag: member="GameObject::height" ref="a033b30bb7caf6660beabef5a81574bfb" args="" -->
+<a class="anchor" id="ae94d98451fb4345860810660a17b487b"></a><!-- doxytag: member="GameObject::height" ref="ae94d98451fb4345860810660a17b487b" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int <a class="el" href="classGameObject.html#a033b30bb7caf6660beabef5a81574bfb">GameObject::height</a><code> [protected]</code></td>
+          <td class="memname">int <a class="el" href="classGameObject.html#ae94d98451fb4345860810660a17b487b">GameObject::height</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -428,12 +428,12 @@ SDL_Rect&#160;</td><td class="memItemRight" valign="bottom"><b>boundingBox</b></
 
 </div>
 </div>
-<a class="anchor" id="ade95bb86cc216d745edf8ea15101f2af"></a><!-- doxytag: member="GameObject::width" ref="ade95bb86cc216d745edf8ea15101f2af" args="" -->
+<a class="anchor" id="a461647c775e04bffb85977084a196542"></a><!-- doxytag: member="GameObject::width" ref="a461647c775e04bffb85977084a196542" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int <a class="el" href="classGameObject.html#ade95bb86cc216d745edf8ea15101f2af">GameObject::width</a><code> [protected]</code></td>
+          <td class="memname">int <a class="el" href="classGameObject.html#a461647c775e04bffb85977084a196542">GameObject::width</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -500,7 +500,7 @@ SDL_Rect&#160;</td><td class="memItemRight" valign="bottom"><b>boundingBox</b></
     <ul>
       <li class="navelem"><a class="el" href="classGameObject.html">GameObject</a>      </li>
 
-    <li class="footer">Generated on Sat Jan 17 2015 00:57:40 for sdl2-engine by
+    <li class="footer">Generated on Tue Jan 20 2015 06:04:36 for sdl2-engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

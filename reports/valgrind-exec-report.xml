@@ -12,8 +12,8 @@
   <line>Command: /home/travis/build/CaioIcy/sdl2-engine/build/src/sdl2-engine_exec</line>
 </preamble>
 
-<pid>18436</pid>
-<ppid>18413</ppid>
+<pid>18443</pid>
+<ppid>18420</ppid>
 <tool>memcheck</tool>
 
 <args>
@@ -30,13 +30,13 @@
 
 <status>
   <state>RUNNING</state>
-  <time>00:00:00:00.051 </time>
+  <time>00:00:00:00.057 </time>
 </status>
 
 
 <status>
   <state>FINISHED</state>
-  <time>00:00:00:01.583 </time>
+  <time>00:00:00:01.819 </time>
 </status>
 
 <error>
@@ -70,12 +70,12 @@
       <fn>std::string::_M_replace_safe(unsigned long, unsigned long, char const*, unsigned long)</fn>
     </frame>
     <frame>
-      <ip>0x42509C</ip>
+      <ip>0x436380</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/build/src/sdl2-engine_exec</obj>
-      <fn>Configuration::initialize()</fn>
+      <fn>Configuration::Initialize()</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src</dir>
       <file>Configuration.cpp</file>
-      <line>22</line>
+      <line>20</line>
     </frame>
     <frame>
       <ip>0x421294</ip>
@@ -103,7 +103,7 @@
 
 <status>
   <state>FINISHED</state>
-  <time>00:00:00:02.657 </time>
+  <time>00:00:00:03.133 </time>
 </status>
 
 <error>

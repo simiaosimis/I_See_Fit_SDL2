@@ -1,14 +1,14 @@
 var classCamera =
 [
-    [ "Camera", "classCamera.html#a38fcce2d132182fda695f2627cc841e9", null ],
+    [ "Camera", "classCamera.html#a7de0abc03f0001c4aa211d54a9c8b6d7", null ],
     [ "~Camera", "classCamera.html#ad1897942d0ccf91052386388a497349f", null ],
-    [ "centralizeOn", "classCamera.html#a355fb77bfae549d28293662aa675d85b", null ],
-    [ "getClip", "classCamera.html#a88cddc06987c3665a26a8d5c86f7d6c8", null ],
-    [ "setLevelWH", "classCamera.html#a6768fadda07535ae32ff269f255b7a79", null ],
-    [ "update", "classCamera.html#a42cda7239981a5618660d04bd5893556", null ],
-    [ "updatePosition", "classCamera.html#aecf07f908ef1bfa2c2f1bb5cd4192d8d", null ],
-    [ "clip", "classCamera.html#a3e33feaa65673d9de0067aecabdbe249", null ],
-    [ "gameObject", "classCamera.html#ac9b5a1f9deecf080f38a6196b3bb706f", null ],
-    [ "levelH", "classCamera.html#a561e153f11f640088936dcb63cd2924a", null ],
-    [ "levelW", "classCamera.html#afcf1ecd0a79a95e8097109be04dd1779", null ]
+    [ "CentralizeOn", "classCamera.html#a7b7dee9529dc44be2ff7988f9122b055", null ],
+    [ "Clip", "classCamera.html#af2a2532a58347832a69bb0b7035503f8", null ],
+    [ "SetLevelDimensions", "classCamera.html#a4ad2b8241bc293d27cea0de5377c1b70", null ],
+    [ "Update", "classCamera.html#a4a596a3ea1fdc7d244ba4268031a360b", null ],
+    [ "UpdatePosition", "classCamera.html#a3e8d83c6bdebf82e15a9e9d4579d5613", null ],
+    [ "m_clip", "classCamera.html#a9cac076688c693b438026d0fcf083809", null ],
+    [ "m_game_object", "classCamera.html#abd97ebd6d1a67b6e226d70f30aa7f4fe", null ],
+    [ "m_level_height", "classCamera.html#af73c54bc9e42d1808be03b6e38aa31d1", null ],
+    [ "m_level_width", "classCamera.html#aa81d8ca4c419d46b95de4d296090dbf0", null ]
 ];

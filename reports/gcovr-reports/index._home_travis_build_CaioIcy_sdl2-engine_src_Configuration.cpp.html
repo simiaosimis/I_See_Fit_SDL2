@@ -255,17 +255,17 @@
             <td class="headerValue">/home/travis/build/CaioIcy/sdl2-engine/src/Configuration.cpp</td>
             <td></td>
             <td class="headerName">Lines:</td>
-            <td class="headerTableEntry">11</td>
-            <td class="headerTableEntry">29</td>
-            <td class="headerTableEntry" style="background-color:LightPink">37.9 %</td>
+            <td class="headerTableEntry">16</td>
+            <td class="headerTableEntry">34</td>
+            <td class="headerTableEntry" style="background-color:LightPink">47.1 %</td>
           </tr>
           <tr>
             <td class="headerName">Date:</td>
-            <td class="headerValue">2015-01-17</td>
+            <td class="headerValue">2015-01-20</td>
             <td></td>
             <td class="headerName">Branches:</td>
-            <td class="headerTableEntry">3</td>
-            <td class="headerTableEntry">6</td>
+            <td class="headerTableEntry">8</td>
+            <td class="headerTableEntry">16</td>
             <td class="headerTableEntry" style="background-color:LightPink">50.0 %</td>
           </tr>
         </table>
@@ -293,7 +293,7 @@
     <tr>
     <td align="right" class="lineno"><pre>2</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="left" class="src "><pre>#include &lt;cassert&gt;</pre></td>
     </tr>
 
     <tr>
@@ -311,13 +311,13 @@
     <tr>
     <td align="right" class="lineno"><pre>5</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>const unsigned int Configuration::resolutionWidth = 192;</pre></td>
+    <td align="left" class="src "><pre>const int Configuration::m_resolution_width = 192;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>6</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>const unsigned int Configuration::resolutionHeight = 108;</pre></td>
+    <td align="left" class="src "><pre>const int Configuration::m_resolution_height = 108;</pre></td>
     </tr>
 
     <tr>
@@ -329,43 +329,43 @@
     <tr>
     <td align="right" class="lineno"><pre>8</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>uint32_t Configuration::maxFramerate = 0;</pre></td>
+    <td align="left" class="src "><pre>uint32_t Configuration::m_max_framerate = 0;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>9</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>std::string Configuration::windowTitle = "";</pre></td>
+    <td align="left" class="src coveredLine"><pre>std::string Configuration::m_window_title = "";</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>10</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>unsigned int Configuration::logicalRenderSize = 0;</pre></td>
+    <td align="left" class="src "><pre>int Configuration::m_logical_render_size = 0;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>11</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>unsigned int Configuration::screenWidth = 0;</pre></td>
+    <td align="left" class="src "><pre>int Configuration::m_screen_width = 0;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>12</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>unsigned int Configuration::screenHeight = 0;</pre></td>
+    <td align="left" class="src "><pre>int Configuration::m_screen_height = 0;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>13</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>unsigned int Configuration::cameraDistanceWidth = 0;</pre></td>
+    <td align="left" class="src "><pre>int Configuration::m_camera_distance_width = 0;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>14</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>unsigned int Configuration::cameraDistanceHeight = 0;</pre></td>
+    <td align="left" class="src "><pre>int Configuration::m_camera_distance_height = 0;</pre></td>
     </tr>
 
     <tr>
@@ -383,7 +383,7 @@
     <tr>
     <td align="right" class="lineno"><pre>17</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>void Configuration::initialize() {</pre></td>
+    <td align="left" class="src coveredLine"><pre>void Configuration::Initialize() {</pre></td>
     </tr>
 
     <tr>
@@ -394,110 +394,110 @@
 
     <tr>
     <td align="right" class="lineno"><pre>19</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>	/// @todo Make sure recieved integers are not negative.</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>	Configuration::m_max_framerate = 60;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>20</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>	Configuration::m_window_title = "sdl2-engine";</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>21</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>	Configuration::maxFramerate = 60;</pre></td>
+    <td align="left" class="src coveredLine"><pre>	Configuration::m_logical_render_size = 8;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>22</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>	Configuration::windowTitle = "sdl2-engine";</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>	Configuration::m_camera_distance_width =</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>23</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>	Configuration::logicalRenderSize = 8;</pre></td>
+    <td align="left" class="src coveredLine"><pre>		Configuration::m_resolution_width * Configuration::m_logical_render_size;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>24</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>	Configuration::cameraDistanceWidth =</pre></td>
+    <td align="left" class="src "><pre>	Configuration::m_camera_distance_height =</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>25</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>		Configuration::resolutionWidth * Configuration::logicalRenderSize;</pre></td>
+    <td align="left" class="src coveredLine"><pre>		Configuration::m_resolution_height * Configuration::m_logical_render_size;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>26</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>	Configuration::m_screen_width = 1920 / 2;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>27</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>	Configuration::cameraDistanceHeight =</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>	Configuration::m_screen_height = 1080 / 2;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>28</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>		Configuration::resolutionHeight * Configuration::logicalRenderSize;</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>29</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="left" class="src "><pre>	assert(Configuration::m_resolution_width &gt;= 0 &amp;&amp; "Must be &gt;= 0");</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>30</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>	Configuration::screenWidth = 1920 / 2;</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>	assert(Configuration::m_resolution_height &gt;= 0 &amp;&amp; "Must be &gt;= 0");</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>31</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>	Configuration::screenHeight = 1080 / 2;</pre></td>
+    <td align="left" class="src coveredLine"><pre>	assert(Configuration::m_logical_render_size &gt;= 0 &amp;&amp; "Must be &gt;= 0");</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>32</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>}</pre></td>
+    <td align="left" class="src coveredLine"><pre>	assert(Configuration::m_screen_width &gt;= 0 &amp;&amp; "Must be &gt;= 0");</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>33</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>	assert(Configuration::m_screen_height &gt;= 0 &amp;&amp; "Must be &gt;= 0");</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>34</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>unsigned int Configuration::getResolutionWidth() {</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>	assert(Configuration::m_camera_distance_width &gt;= 0 &amp;&amp; "Must be &gt;= 0");</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>35</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	return Configuration::resolutionWidth;</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>	assert(Configuration::m_camera_distance_height &gt;= 0 &amp;&amp; "Must be &gt;= 0");</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>36</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>}</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>}</pre></td>
     </tr>
 
     <tr>
@@ -509,13 +509,13 @@
     <tr>
     <td align="right" class="lineno"><pre>38</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>unsigned int Configuration::getResolutionHeight() {</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>int Configuration::ResolutionWidth() {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>39</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	return Configuration::resolutionHeight;</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	return Configuration::m_resolution_width;</pre></td>
     </tr>
 
     <tr>
@@ -533,13 +533,13 @@
     <tr>
     <td align="right" class="lineno"><pre>42</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>uint32_t Configuration::getMaxFramerate() {</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>int Configuration::ResolutionHeight() {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>43</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	return Configuration::maxFramerate;</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	return Configuration::m_resolution_height;</pre></td>
     </tr>
 
     <tr>
@@ -557,13 +557,13 @@
     <tr>
     <td align="right" class="lineno"><pre>46</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>std::string Configuration::getWindowTitle() {</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>uint32_t Configuration::MaxFramerate() {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>47</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	return Configuration::windowTitle;</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	return Configuration::m_max_framerate;</pre></td>
     </tr>
 
     <tr>
@@ -581,13 +581,13 @@
     <tr>
     <td align="right" class="lineno"><pre>50</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>unsigned int Configuration::getLogicalRenderSize() {</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>std::string Configuration::WindowTitle() {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>51</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	return Configuration::logicalRenderSize;</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	return Configuration::m_window_title;</pre></td>
     </tr>
 
     <tr>
@@ -605,13 +605,13 @@
     <tr>
     <td align="right" class="lineno"><pre>54</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>unsigned int Configuration::getScreenWidth() {</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>int Configuration::LogicalRenderSize() {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>55</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	return Configuration::screenWidth;</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	return Configuration::m_logical_render_size;</pre></td>
     </tr>
 
     <tr>
@@ -629,13 +629,13 @@
     <tr>
     <td align="right" class="lineno"><pre>58</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>unsigned int Configuration::getScreenHeight() {</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>int Configuration::ScreenWidth() {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>59</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	return Configuration::screenHeight;</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	return Configuration::m_screen_width;</pre></td>
     </tr>
 
     <tr>
@@ -653,13 +653,13 @@
     <tr>
     <td align="right" class="lineno"><pre>62</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>unsigned int Configuration::getCameraDistanceWidth() {</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>int Configuration::ScreenHeight() {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>63</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	return Configuration::cameraDistanceWidth;</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	return Configuration::m_screen_height;</pre></td>
     </tr>
 
     <tr>
@@ -677,17 +677,41 @@
     <tr>
     <td align="right" class="lineno"><pre>66</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>unsigned int Configuration::getCameraDistanceHeight() {</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>int Configuration::CameraDistanceWidth() {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>67</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	return Configuration::cameraDistanceHeight;</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	return Configuration::m_camera_distance_width;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>68</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>}</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>69</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>70</pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>int Configuration::CameraDistanceHeight() {</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>71</pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	return Configuration::m_camera_distance_height;</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>72</pre></td>
     <td align="right" class="linecount coveredLine"><pre>3</pre></td>
     <td align="left" class="src coveredLine"><pre>}</pre></td>
     </tr>

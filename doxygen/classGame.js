@@ -12,7 +12,7 @@ var classGame =
     [ "getResource", "classGame.html#a0a5dc2bb1e4b2b80415919aa20cce38f", null ],
     [ "initializeStates", "classGame.html#afc16bd0d077c53218c27f16e0bf56cbb", null ],
     [ "instance", "classGame.html#ac213e6d3a4e566d901413f62f6408858", null ],
-    [ "resizeWindow", "classGame.html#a7cb479310ef55f4c28c55c04a7d9731e", null ],
+    [ "resizeWindow", "classGame.html#a47dd061c2db24fbb31535f8cba53c632", null ],
     [ "runGame", "classGame.html#abc9436a9d18e48c6e1e4fbc4ea879449", null ],
     [ "stop", "classGame.html#a17fbb36fd4a2085f9ff4f1fa93d7d08b", null ],
     [ "audioHandler", "classGame.html#a0669fc05427f97820f44f2ac5cc7cef0", null ],

@@ -33,7 +33,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v14</span>
+   &#160;<span id="projectnumber">v15</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -110,16 +110,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#aad1e09c01ead81481270e00b9b86add9">Window</a> (const unsigned int width_, const unsigned int height_, const std::string &amp;title_=&quot;SDL <a class="el" href="classWindow.html">Window</a>&quot;)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#aefac177bf15e963dea94b5555140c23d">Window</a> (const int width_, const int height_, const std::string &amp;title_=&quot;SDL <a class="el" href="classWindow.html">Window</a>&quot;)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a245d821e6016fa1f6970ccbbedd635f6">~Window</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a3c322c6691e9180b98ad18545013954c">resize</a> (const unsigned int width_, const unsigned int height_)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a89f8973f8f24e570d0f79782f6da8957">resize</a> (const int width_, const int height_)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a97078387be519b16401c3bb0f299aa01">minimize</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a652b249e69ee5ff3ba8aa3bd4feccdae">maximize</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRenderer.html">Renderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#ac5ec376703205dff00ffdbae115f93b1">getRenderer</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a25b4e6d9c7d514cbb63b7851de2526e5">create</a> (const unsigned int width_, const unsigned int height_)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a0d7c171a31ea6cf664a0f92ce4f29aaa">rescale</a> (unsigned int size_)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a7a1d09805521f508601c01cb7f851820">create</a> (const int width_, const int height_)</td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a003d840446d3c6bdb4a4b0cabfc3f182">windowTitle</a></td></tr>
@@ -131,20 +130,20 @@ Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Window_8h_source.html#l00011">11</a> of file <a class="el" href="Window_8h_source.html">Window.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="aad1e09c01ead81481270e00b9b86add9"></a><!-- doxytag: member="Window::Window" ref="aad1e09c01ead81481270e00b9b86add9" args="(const unsigned int width_, const unsigned int height_, const std::string &amp;title_=&quot;SDL Window&quot;)" -->
+<a class="anchor" id="aefac177bf15e963dea94b5555140c23d"></a><!-- doxytag: member="Window::Window" ref="aefac177bf15e963dea94b5555140c23d" args="(const int width_, const int height_, const std::string &amp;title_=&quot;SDL Window&quot;)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classWindow.html#aad1e09c01ead81481270e00b9b86add9">Window::Window</a> </td>
+          <td class="memname"><a class="el" href="classWindow.html#aefac177bf15e963dea94b5555140c23d">Window::Window</a> </td>
           <td>(</td>
-          <td class="paramtype">const unsigned int&#160;</td>
+          <td class="paramtype">const int&#160;</td>
           <td class="paramname"><em>width_</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const unsigned int&#160;</td>
+          <td class="paramtype">const int&#160;</td>
           <td class="paramname"><em>height_</em>, </td>
         </tr>
         <tr>
@@ -164,8 +163,8 @@ Private Attributes</h2></td></tr>
 <p>The constructor. Sets all attributes, and calls the initialize method. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">width_</td><td>: The desired window width. </td></tr>
-    <tr><td class="paramname">height_</td><td>: The desired window height. </td></tr>
+    <tr><td class="paramname">width_</td><td>: The desired window width (0+). </td></tr>
+    <tr><td class="paramname">height_</td><td>: The desired window height (0+). </td></tr>
     <tr><td class="paramname">title_</td><td>: The desired window title. </td></tr>
   </table>
   </dd>
@@ -173,7 +172,7 @@ Private Attributes</h2></td></tr>
 <dl class="note"><dt><b>Note:</b></dt><dd>If omitted, window title will be "SDL Window". </dd></dl>
 <dl class="see"><dt><b>See also:</b></dt><dd>Window::initialize </dd></dl>
 
-<p>Definition at line <a class="el" href="Window_8cpp_source.html#l00005">5</a> of file <a class="el" href="Window_8cpp_source.html">Window.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Window_8cpp_source.html#l00006">6</a> of file <a class="el" href="Window_8cpp_source.html">Window.cpp</a>.</p>
 
 </div>
 </div>
@@ -193,25 +192,25 @@ Private Attributes</h2></td></tr>
 <p>The destructor. Uses the destroy method to delete window. </p>
 <dl class="see"><dt><b>See also:</b></dt><dd>Window::destroy </dd></dl>
 
-<p>Definition at line <a class="el" href="Window_8cpp_source.html#l00013">13</a> of file <a class="el" href="Window_8cpp_source.html">Window.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Window_8cpp_source.html#l00016">16</a> of file <a class="el" href="Window_8cpp_source.html">Window.cpp</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a25b4e6d9c7d514cbb63b7851de2526e5"></a><!-- doxytag: member="Window::create" ref="a25b4e6d9c7d514cbb63b7851de2526e5" args="(const unsigned int width_, const unsigned int height_)" -->
+<a class="anchor" id="a7a1d09805521f508601c01cb7f851820"></a><!-- doxytag: member="Window::create" ref="a7a1d09805521f508601c01cb7f851820" args="(const int width_, const int height_)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classWindow.html#a25b4e6d9c7d514cbb63b7851de2526e5">Window::create</a> </td>
+          <td class="memname">void <a class="el" href="classWindow.html#a7a1d09805521f508601c01cb7f851820">Window::create</a> </td>
           <td>(</td>
-          <td class="paramtype">const unsigned int&#160;</td>
+          <td class="paramtype">const int&#160;</td>
           <td class="paramname"><em>width_</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const unsigned int&#160;</td>
+          <td class="paramtype">const int&#160;</td>
           <td class="paramname"><em>height_</em>&#160;</td>
         </tr>
         <tr>
@@ -223,9 +222,16 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 <p>Creates the <a class="el" href="classWindow.html">Window</a>, with specified width and height. Can be used either as the creator, or as the resizer. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000011">Todo:</a></b></dt><dd>Toggle VSync. </dd></dl>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width_</td><td>: The desired window width (0+). </td></tr>
+    <tr><td class="paramname">height_</td><td>: The desired window height (0+). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Todo:</a></b></dt><dd>Toggle VSync. </dd></dl>
 
-<p>Definition at line <a class="el" href="Window_8cpp_source.html#l00028">28</a> of file <a class="el" href="Window_8cpp_source.html">Window.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Window_8cpp_source.html#l00031">31</a> of file <a class="el" href="Window_8cpp_source.html">Window.cpp</a>.</p>
 
 </div>
 </div>
@@ -244,7 +250,7 @@ Private Attributes</h2></td></tr>
 <div class="memdoc">
 <dl class="return"><dt><b>Returns:</b></dt><dd>The <a class="el" href="classRenderer.html">Renderer</a>. </dd></dl>
 
-<p>Definition at line <a class="el" href="Window_8cpp_source.html#l00072">72</a> of file <a class="el" href="Window_8cpp_source.html">Window.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Window_8cpp_source.html#l00079">79</a> of file <a class="el" href="Window_8cpp_source.html">Window.cpp</a>.</p>
 
 </div>
 </div>
@@ -263,7 +269,7 @@ Private Attributes</h2></td></tr>
 <div class="memdoc">
 <p>Maximizes window. Uses SDLs internal method to maximize the window. </p>
 
-<p>Definition at line <a class="el" href="Window_8cpp_source.html#l00024">24</a> of file <a class="el" href="Window_8cpp_source.html">Window.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Window_8cpp_source.html#l00027">27</a> of file <a class="el" href="Window_8cpp_source.html">Window.cpp</a>.</p>
 
 </div>
 </div>
@@ -282,50 +288,24 @@ Private Attributes</h2></td></tr>
 <div class="memdoc">
 <p>Minimizes window. Uses SDLs internal method to minimize the window. </p>
 
-<p>Definition at line <a class="el" href="Window_8cpp_source.html#l00020">20</a> of file <a class="el" href="Window_8cpp_source.html">Window.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Window_8cpp_source.html#l00023">23</a> of file <a class="el" href="Window_8cpp_source.html">Window.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a0d7c171a31ea6cf664a0f92ce4f29aaa"></a><!-- doxytag: member="Window::rescale" ref="a0d7c171a31ea6cf664a0f92ce4f29aaa" args="(unsigned int size_)" -->
+<a class="anchor" id="a89f8973f8f24e570d0f79782f6da8957"></a><!-- doxytag: member="Window::resize" ref="a89f8973f8f24e570d0f79782f6da8957" args="(const int width_, const int height_)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classWindow.html#a0d7c171a31ea6cf664a0f92ce4f29aaa">Window::rescale</a> </td>
+          <td class="memname">void <a class="el" href="classWindow.html#a89f8973f8f24e570d0f79782f6da8957">Window::resize</a> </td>
           <td>(</td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>size_</em></td><td>)</td>
-          <td><code> [private]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Rescales the renderization. Set a device independent resolution for rendering. </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">size_</td><td>: Multiplies <a class="el" href="classConfiguration.html#a5b733811a9215c5bba90d16604cfabcf">Configuration::resolutionWidth</a> and <a class="el" href="classConfiguration.html#a469e15c3c77e7eced8d2682aa127e10b">Configuration::resolutionHeight</a> for the new resolution. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="note"><dt><b>Note:</b></dt><dd>Practically, it looks like the camera has a larger field of view, the bigger the size_ parameter is. </dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd>SDL_RenderSetLogicalSize </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a3c322c6691e9180b98ad18545013954c"></a><!-- doxytag: member="Window::resize" ref="a3c322c6691e9180b98ad18545013954c" args="(const unsigned int width_, const unsigned int height_)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classWindow.html#a3c322c6691e9180b98ad18545013954c">Window::resize</a> </td>
-          <td>(</td>
-          <td class="paramtype">const unsigned int&#160;</td>
+          <td class="paramtype">const int&#160;</td>
           <td class="paramname"><em>width_</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const unsigned int&#160;</td>
+          <td class="paramtype">const int&#160;</td>
           <td class="paramname"><em>height_</em>&#160;</td>
         </tr>
         <tr>
@@ -337,9 +317,16 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 <p>Resizes the window. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000012">Todo:</a></b></dt><dd>Instead of directly choosing width and height, choose from a pre-defined list of resolutions. </dd></dl>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width_</td><td>: The desired window width (0+). </td></tr>
+    <tr><td class="paramname">height_</td><td>: The desired window height (0+). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000011">Todo:</a></b></dt><dd>Instead of directly choosing width and height, choose from a pre-defined list of resolutions. </dd></dl>
 
-<p>Definition at line <a class="el" href="Window_8cpp_source.html#l00068">68</a> of file <a class="el" href="Window_8cpp_source.html">Window.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Window_8cpp_source.html#l00073">73</a> of file <a class="el" href="Window_8cpp_source.html">Window.cpp</a>.</p>
 
 </div>
 </div>
@@ -356,7 +343,7 @@ Private Attributes</h2></td></tr>
 <div class="memdoc">
 <p>The SDL renderer to render onto. </p>
 
-<p>Definition at line <a class="el" href="Window_8h_source.html#l00077">77</a> of file <a class="el" href="Window_8h_source.html">Window.h</a>.</p>
+<p>Definition at line <a class="el" href="Window_8h_source.html#l00070">70</a> of file <a class="el" href="Window_8h_source.html">Window.h</a>.</p>
 
 </div>
 </div>
@@ -372,7 +359,7 @@ Private Attributes</h2></td></tr>
 <div class="memdoc">
 <p>The SDL window, that will be the actual game window. </p>
 
-<p>Definition at line <a class="el" href="Window_8h_source.html#l00076">76</a> of file <a class="el" href="Window_8h_source.html">Window.h</a>.</p>
+<p>Definition at line <a class="el" href="Window_8h_source.html#l00069">69</a> of file <a class="el" href="Window_8h_source.html">Window.h</a>.</p>
 
 </div>
 </div>
@@ -388,7 +375,7 @@ Private Attributes</h2></td></tr>
 <div class="memdoc">
 <p>The game <a class="el" href="classWindow.html">Window</a> title. </p>
 
-<p>Definition at line <a class="el" href="Window_8h_source.html#l00075">75</a> of file <a class="el" href="Window_8h_source.html">Window.h</a>.</p>
+<p>Definition at line <a class="el" href="Window_8h_source.html#l00068">68</a> of file <a class="el" href="Window_8h_source.html">Window.h</a>.</p>
 
 </div>
 </div>
@@ -416,7 +403,7 @@ Private Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="classWindow.html">Window</a>      </li>
 
-    <li class="footer">Generated on Sat Jan 17 2015 00:57:40 for sdl2-engine by
+    <li class="footer">Generated on Tue Jan 20 2015 06:04:36 for sdl2-engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

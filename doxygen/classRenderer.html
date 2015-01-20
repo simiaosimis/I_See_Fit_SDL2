@@ -33,7 +33,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v14</span>
+   &#160;<span id="projectnumber">v15</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -113,8 +113,7 @@ Public Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af7e5f8f68742f198e315fb4683a605a4"></a><!-- doxytag: member="Renderer::render" ref="af7e5f8f68742f198e315fb4683a605a4" args="()" -->
 void&#160;</td><td class="memItemRight" valign="bottom"><b>render</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a85c7cac1811824da95a59fab7bdaf201"></a><!-- doxytag: member="Renderer::setLogicalSize" ref="a85c7cac1811824da95a59fab7bdaf201" args="(unsigned int size_)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setLogicalSize</b> (unsigned int size_)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderer.html#a96027c5201ec4056ec97f0f396e083fb">setLogicalSize</a> (int size_)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a72be652b574eb9e917bf057d58b7f0db"></a><!-- doxytag: member="Renderer::getLogicalSize" ref="a72be652b574eb9e917bf057d58b7f0db" args="(int *w, int *h)" -->
 void&#160;</td><td class="memItemRight" valign="bottom"><b>getLogicalSize</b> (int *w, int *h)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac10f6cf7dc7a1f9b8c0d8dea9a9c0c0e"></a><!-- doxytag: member="Renderer::getSdlRenderer" ref="ac10f6cf7dc7a1f9b8c0d8dea9a9c0c0e" args="()" -->
@@ -126,7 +125,36 @@ Private Attributes</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
 <p>Definition at line <a class="el" href="Renderer_8h_source.html#l00005">5</a> of file <a class="el" href="Renderer_8h_source.html">Renderer.h</a>.</p>
-</div><hr/><h2>Field Documentation</h2>
+</div><hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a96027c5201ec4056ec97f0f396e083fb"></a><!-- doxytag: member="Renderer::setLogicalSize" ref="a96027c5201ec4056ec97f0f396e083fb" args="(int size_)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classRenderer.html#a96027c5201ec4056ec97f0f396e083fb">Renderer::setLogicalSize</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Rescales the renderization. Set a device independent resolution for rendering. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size_</td><td>: Multiplies <a class="el" href="classConfiguration.html#aa55f2fb145dfe12ecc91eb2f76b6e0a8">Configuration::ResolutionWidth()</a> and <a class="el" href="classConfiguration.html#a002ef2d0a384e4d7ff04dd2d16ae3172">Configuration::ResolutionHeight()</a> for the new resolution (0+). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="note"><dt><b>Note:</b></dt><dd>Practically, it looks like the camera has a larger field of view, the bigger the size_ parameter is. </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd>SDL_RenderSetLogicalSize </dd></dl>
+
+<p>Definition at line <a class="el" href="Renderer_8cpp_source.html#l00037">37</a> of file <a class="el" href="Renderer_8cpp_source.html">Renderer.cpp</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Field Documentation</h2>
 <a class="anchor" id="a785de8b89acc27606fb022ce19bb1080"></a><!-- doxytag: member="Renderer::sdlRenderer" ref="a785de8b89acc27606fb022ce19bb1080" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -139,7 +167,7 @@ Private Attributes</h2></td></tr>
 <div class="memdoc">
 <p>The SDL renderer to render onto. </p>
 
-<p>Definition at line <a class="el" href="Renderer_8h_source.html#l00018">18</a> of file <a class="el" href="Renderer_8h_source.html">Renderer.h</a>.</p>
+<p>Definition at line <a class="el" href="Renderer_8h_source.html#l00029">29</a> of file <a class="el" href="Renderer_8h_source.html">Renderer.h</a>.</p>
 
 </div>
 </div>
@@ -167,7 +195,7 @@ Private Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="classRenderer.html">Renderer</a>      </li>
 
-    <li class="footer">Generated on Sat Jan 17 2015 00:57:40 for sdl2-engine by
+    <li class="footer">Generated on Tue Jan 20 2015 06:04:36 for sdl2-engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

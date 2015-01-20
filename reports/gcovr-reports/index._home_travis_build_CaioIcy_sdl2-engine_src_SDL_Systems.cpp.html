@@ -261,7 +261,7 @@
           </tr>
           <tr>
             <td class="headerName">Date:</td>
-            <td class="headerValue">2015-01-17</td>
+            <td class="headerValue">2015-01-20</td>
             <td></td>
             <td class="headerName">Branches:</td>
             <td class="headerTableEntry">42</td>
@@ -557,725 +557,719 @@
     <tr>
     <td align="right" class="lineno"><pre>46</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>	if((IMG_Init(imgFlags) &amp; imgFlags)) {</pre></td>
+    <td align="left" class="src coveredLine"><pre>	successIMG = (static_cast&lt;Uint32&gt;(IMG_Init(imgFlags)) &amp; imgFlags);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>47</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>		successIMG = true;</pre></td>
+    <td align="left" class="src coveredLine"><pre>	if(successIMG) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>48</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>49</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>		SDL_IMAGE_VERSION(&amp;compiled);</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>50</pre></td>
+    <td align="right" class="lineno"><pre>49</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>		SDL_Wrapper_detail::logSDLVersion("SDL_image", compiled);</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>51</pre></td>
+    <td align="right" class="lineno"><pre>50</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>52</pre></td>
+    <td align="right" class="lineno"><pre>51</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	else {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>53</pre></td>
+    <td align="right" class="lineno"><pre>52</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>		Log(ERROR) &lt;&lt; "Could not initialize SDL_Image." &lt;&lt; IMG_GetError();</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>54</pre></td>
+    <td align="right" class="lineno"><pre>53</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	}</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>54</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>55</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>56</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	// Initializing SDL_mixer.</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>57</pre></td>
+    <td align="right" class="lineno"><pre>56</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>	const int frequency = 44100;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>58</pre></td>
+    <td align="right" class="lineno"><pre>57</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>	const int channels = 2;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>59</pre></td>
+    <td align="right" class="lineno"><pre>58</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>	const int chunksize = 4096;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>60</pre></td>
+    <td align="right" class="lineno"><pre>59</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>	const int initialized = Mix_OpenAudio(frequency, MIX_DEFAULT_FORMAT, channels, chunksize);</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>61</pre></td>
+    <td align="right" class="lineno"><pre>60</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>	if(initialized == 0) {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>62</pre></td>
+    <td align="right" class="lineno"><pre>61</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>		successMixer = true;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>63</pre></td>
+    <td align="right" class="lineno"><pre>62</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>64</pre></td>
+    <td align="right" class="lineno"><pre>63</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>		SDL_MIXER_VERSION(&amp;compiled);</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>65</pre></td>
+    <td align="right" class="lineno"><pre>64</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>		SDL_Wrapper_detail::logSDLVersion("SDL_mixer", compiled);</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>66</pre></td>
+    <td align="right" class="lineno"><pre>65</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>67</pre></td>
+    <td align="right" class="lineno"><pre>66</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>		const int channelsAllocated = Mix_AllocateChannels(25);</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>68</pre></td>
+    <td align="right" class="lineno"><pre>67</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>69</pre></td>
+    <td align="right" class="lineno"><pre>68</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>		Log(DEBUG) &lt;&lt; "Allocated " &lt;&lt; channelsAllocated &lt;&lt; " channels for the mixer.";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>70</pre></td>
+    <td align="right" class="lineno"><pre>69</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>71</pre></td>
+    <td align="right" class="lineno"><pre>70</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	else {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>72</pre></td>
+    <td align="right" class="lineno"><pre>71</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>		Log(ERROR) &lt;&lt; "Could not initialize SDL_Mixer" &lt;&lt; Mix_GetError();</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>73</pre></td>
+    <td align="right" class="lineno"><pre>72</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	}</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>73</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>74</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>75</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	// If even one system fails to initialize, returns false.</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>76</pre></td>
+    <td align="right" class="lineno"><pre>75</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>	return (successSDL &amp;&amp; successIMG &amp;&amp; successMixer &amp;&amp; successTTF);</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>77</pre></td>
+    <td align="right" class="lineno"><pre>76</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>78</pre></td>
+    <td align="right" class="lineno"><pre>77</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>79</pre></td>
+    <td align="right" class="lineno"><pre>78</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>void SDL_Wrapper::close() {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>80</pre></td>
+    <td align="right" class="lineno"><pre>79</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>	Log(DEBUG) &lt;&lt; "Closing SDL.";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>81</pre></td>
+    <td align="right" class="lineno"><pre>80</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>82</pre></td>
+    <td align="right" class="lineno"><pre>81</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	// Quits SDL_mixer.</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>83</pre></td>
+    <td align="right" class="lineno"><pre>82</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>	SDL_Wrapper_detail::closeMixer();</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>84</pre></td>
+    <td align="right" class="lineno"><pre>83</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>85</pre></td>
+    <td align="right" class="lineno"><pre>84</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	// Quits SDL_image.</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>86</pre></td>
+    <td align="right" class="lineno"><pre>85</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>	IMG_Quit();</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>87</pre></td>
+    <td align="right" class="lineno"><pre>86</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>88</pre></td>
+    <td align="right" class="lineno"><pre>87</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	// Quits SDL.</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>89</pre></td>
+    <td align="right" class="lineno"><pre>88</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>	SDL_Quit();</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>90</pre></td>
+    <td align="right" class="lineno"><pre>89</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>91</pre></td>
+    <td align="right" class="lineno"><pre>90</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	// Quits SDL_TTF.</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>92</pre></td>
+    <td align="right" class="lineno"><pre>91</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>	TTF_Quit();</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>93</pre></td>
+    <td align="right" class="lineno"><pre>92</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>94</pre></td>
+    <td align="right" class="lineno"><pre>93</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>95</pre></td>
+    <td align="right" class="lineno"><pre>94</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>void SDL_Wrapper::SDL_Wrapper_detail::closeMixer() {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>96</pre></td>
+    <td align="right" class="lineno"><pre>95</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	// Query the specifications of the opened audio, to figure out how many times we need to</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>97</pre></td>
+    <td align="right" class="lineno"><pre>96</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	// close the audio.</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>98</pre></td>
+    <td align="right" class="lineno"><pre>97</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>	int frequency = 0;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>99</pre></td>
+    <td align="right" class="lineno"><pre>98</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>	int channels = 0;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>100</pre></td>
+    <td align="right" class="lineno"><pre>99</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>	Uint16 format = 0;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>101</pre></td>
+    <td align="right" class="lineno"><pre>100</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>	const int numberOfTimesOpened = Mix_QuerySpec(&amp;frequency, &amp;format, &amp;channels);</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>102</pre></td>
+    <td align="right" class="lineno"><pre>101</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>	int timesToClose = numberOfTimesOpened;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>103</pre></td>
+    <td align="right" class="lineno"><pre>102</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>104</pre></td>
+    <td align="right" class="lineno"><pre>103</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>	if(numberOfTimesOpened != 0) {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>105</pre></td>
+    <td align="right" class="lineno"><pre>104</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		// Build a string with the format.</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>106</pre></td>
+    <td align="right" class="lineno"><pre>105</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>		std::string format_str("Unknown format");</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>107</pre></td>
+    <td align="right" class="lineno"><pre>106</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	    switch(format) {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>108</pre></td>
+    <td align="right" class="lineno"><pre>107</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	        case AUDIO_U8:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>109</pre></td>
+    <td align="right" class="lineno"><pre>108</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	        	format_str="U8";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>110</pre></td>
+    <td align="right" class="lineno"><pre>109</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	        	break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>111</pre></td>
+    <td align="right" class="lineno"><pre>110</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	        case AUDIO_S8:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>112</pre></td>
+    <td align="right" class="lineno"><pre>111</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>		        format_str="S8";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>113</pre></td>
+    <td align="right" class="lineno"><pre>112</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	        	break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>114</pre></td>
+    <td align="right" class="lineno"><pre>113</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	        case AUDIO_U16LSB:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>115</pre></td>
+    <td align="right" class="lineno"><pre>114</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>		        format_str="U16LSB";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>116</pre></td>
+    <td align="right" class="lineno"><pre>115</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	        	break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>117</pre></td>
+    <td align="right" class="lineno"><pre>116</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	        case AUDIO_S16LSB:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>118</pre></td>
+    <td align="right" class="lineno"><pre>117</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>		        format_str="S16LSB";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>119</pre></td>
+    <td align="right" class="lineno"><pre>118</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	        	break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>120</pre></td>
+    <td align="right" class="lineno"><pre>119</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	        case AUDIO_U16MSB:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>121</pre></td>
+    <td align="right" class="lineno"><pre>120</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>		        format_str="U16MSB";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>122</pre></td>
+    <td align="right" class="lineno"><pre>121</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	        	break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>123</pre></td>
+    <td align="right" class="lineno"><pre>122</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	        case AUDIO_S16MSB:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>124</pre></td>
+    <td align="right" class="lineno"><pre>123</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>		        format_str="S16MSB";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>125</pre></td>
+    <td align="right" class="lineno"><pre>124</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	        	break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>126</pre></td>
+    <td align="right" class="lineno"><pre>125</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	        default:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>127</pre></td>
+    <td align="right" class="lineno"><pre>126</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	        	break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>128</pre></td>
+    <td align="right" class="lineno"><pre>127</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	    }</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>128</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>129</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>130</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	    // Build a string with the channels type.</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>131</pre></td>
+    <td align="right" class="lineno"><pre>130</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	    std::string channels_str("Unknown channels");</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>132</pre></td>
+    <td align="right" class="lineno"><pre>131</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	    switch(channels) {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>133</pre></td>
+    <td align="right" class="lineno"><pre>132</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	    	case 1:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>134</pre></td>
+    <td align="right" class="lineno"><pre>133</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	    		channels_str = "(mono)";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>135</pre></td>
+    <td align="right" class="lineno"><pre>134</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	    		break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>136</pre></td>
+    <td align="right" class="lineno"><pre>135</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	    	case 2:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>137</pre></td>
+    <td align="right" class="lineno"><pre>136</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	    		channels_str = "(stereo)";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>138</pre></td>
+    <td align="right" class="lineno"><pre>137</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	    		break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>139</pre></td>
+    <td align="right" class="lineno"><pre>138</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	    	default:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>140</pre></td>
+    <td align="right" class="lineno"><pre>139</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	    		break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>141</pre></td>
+    <td align="right" class="lineno"><pre>140</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	    }</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>142</pre></td>
+    <td align="right" class="lineno"><pre>141</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>143</pre></td>
+    <td align="right" class="lineno"><pre>142</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>		Log(DEBUG) &lt;&lt; "Audio opened " &lt;&lt; numberOfTimesOpened &lt;&lt; " time(s). Frequency: " &lt;&lt;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>144</pre></td>
+    <td align="right" class="lineno"><pre>143</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			frequency &lt;&lt; "Hz. Format: " &lt;&lt; format_str &lt;&lt; ". Channels: " &lt;&lt; channels &lt;&lt; " " &lt;&lt;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>145</pre></td>
+    <td align="right" class="lineno"><pre>144</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			channels_str &lt;&lt; ".";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>146</pre></td>
+    <td align="right" class="lineno"><pre>145</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>147</pre></td>
+    <td align="right" class="lineno"><pre>146</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	else {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>148</pre></td>
+    <td align="right" class="lineno"><pre>147</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>		Log(ERROR) &lt;&lt; "Error querying the specifications of the audio. " &lt;&lt; Mix_GetError();</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>149</pre></td>
+    <td align="right" class="lineno"><pre>148</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>150</pre></td>
+    <td align="right" class="lineno"><pre>149</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		// Set the amount of times to close the audio to one, just for safety.</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>151</pre></td>
+    <td align="right" class="lineno"><pre>150</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>		timesToClose = 1;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>152</pre></td>
+    <td align="right" class="lineno"><pre>151</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	}</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>152</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>153</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>154</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	// Close the audio the necessary amount of times.</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>155</pre></td>
+    <td align="right" class="lineno"><pre>154</pre></td>
     <td align="right" class="linecount coveredLine"><pre>3</pre></td>
     <td align="left" class="src coveredLine"><pre>	while(timesToClose &gt; 0){</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>156</pre></td>
+    <td align="right" class="lineno"><pre>155</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>		Mix_CloseAudio();</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>157</pre></td>
+    <td align="right" class="lineno"><pre>156</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>		timesToClose--;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>158</pre></td>
+    <td align="right" class="lineno"><pre>157</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>159</pre></td>
+    <td align="right" class="lineno"><pre>158</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>160</pre></td>
+    <td align="right" class="lineno"><pre>159</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	// "Since each call to Mix_Init may set different flags, there is no way, currently, to</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>161</pre></td>
+    <td align="right" class="lineno"><pre>160</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	// request how many times each one was initted. In other words, the only way to quit for</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>162</pre></td>
+    <td align="right" class="lineno"><pre>161</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	// sure is to do a loop like so: "</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>163</pre></td>
+    <td align="right" class="lineno"><pre>162</pre></td>
     <td align="right" class="linecount coveredLine"><pre>2</pre></td>
     <td align="left" class="src coveredLine"><pre>	while(Mix_Init(0)){</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>164</pre></td>
+    <td align="right" class="lineno"><pre>163</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>		Mix_Quit();</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>165</pre></td>
+    <td align="right" class="lineno"><pre>164</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>166</pre></td>
+    <td align="right" class="lineno"><pre>165</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>}</pre></td>
     </tr>

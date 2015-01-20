@@ -256,16 +256,16 @@
             <td></td>
             <td class="headerName">Lines:</td>
             <td class="headerTableEntry">0</td>
-            <td class="headerTableEntry">78</td>
+            <td class="headerTableEntry">80</td>
             <td class="headerTableEntry" style="background-color:LightPink">0.0 %</td>
           </tr>
           <tr>
             <td class="headerName">Date:</td>
-            <td class="headerValue">2015-01-17</td>
+            <td class="headerValue">2015-01-20</td>
             <td></td>
             <td class="headerName">Branches:</td>
             <td class="headerTableEntry">0</td>
-            <td class="headerTableEntry">98</td>
+            <td class="headerTableEntry">102</td>
             <td class="headerTableEntry" style="background-color:LightPink">0.0 %</td>
           </tr>
         </table>
@@ -503,13 +503,13 @@
     <tr>
     <td align="right" class="lineno"><pre>37</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>	this-&gt;window = new Window(Configuration::getScreenWidth(),</pre></td>
+    <td align="left" class="src "><pre>	this-&gt;window = new Window(Configuration::ScreenWidth(),	Configuration::ScreenHeight(),</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>38</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>		Configuration::getScreenHeight(), Configuration::getWindowTitle());</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>		Configuration::WindowTitle());</pre></td>
     </tr>
 
     <tr>
@@ -1199,65 +1199,77 @@
     <tr>
     <td align="right" class="lineno"><pre>153</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>void Game::resizeWindow(const unsigned int width_, const unsigned int height_) {</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>void Game::resizeWindow(const int width_, const int height_) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>154</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	this-&gt;window-&gt;resize(width_, height_);</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	assert(width_ &gt;= 0 &amp;&amp; "Must be &gt;= 0");</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>155</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>}</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	assert(height_ &gt;= 0 &amp;&amp; "Must be &gt;= 0");</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>156</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	this-&gt;window-&gt;resize(width_, height_);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>157</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>Renderer* Game::getRenderer() {</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>158</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	return this-&gt;window-&gt;getRenderer();</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>159</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>}</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>160</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
+    <td align="right" class="lineno"><pre>159</pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>Renderer* Game::getRenderer() {</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>160</pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	return this-&gt;window-&gt;getRenderer();</pre></td>
+    </tr>
+
+    <tr>
     <td align="right" class="lineno"><pre>161</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>}</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>162</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>163</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>ResourceHandler&amp; Game::getResource() {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>162</pre></td>
+    <td align="right" class="lineno"><pre>164</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	return (*(this-&gt;resourceHandler));</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>163</pre></td>
+    <td align="right" class="lineno"><pre>165</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>}</pre></td>
     </tr>

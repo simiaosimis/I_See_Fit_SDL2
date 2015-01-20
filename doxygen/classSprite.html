@@ -33,7 +33,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v14</span>
+   &#160;<span id="projectnumber">v15</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -115,12 +115,12 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Sprite</b> (SDL_Surface *const surface_)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a8accab430f9d90ae5117b57d67e32b84">~Sprite</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#ac82a01b98130b9b1403667059640163b">render</a> (const double x_, const double y_, SDL_Rect *const clip_=nullptr, const bool stretch_=false, const double angle_=0.0, SDL_Point *const center_=nullptr, SDL_RendererFlip flip_=SDL_FLIP_NONE)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a8f425d524e48eea595ef74dc310e0417">getWidth</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5105482cff23d7b13899aa834b23ad83"></a><!-- doxytag: member="Sprite::setWidth" ref="a5105482cff23d7b13899aa834b23ad83" args="(unsigned int width_)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setWidth</b> (unsigned int width_)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acc2ba583261bbcda5b3e37d923bb7ad2"></a><!-- doxytag: member="Sprite::setHeight" ref="acc2ba583261bbcda5b3e37d923bb7ad2" args="(unsigned int height_)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setHeight</b> (unsigned int height_)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a02fcba350f07d226b110f7d0712f5154">getHeight</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#aba3d4752461ec679fbf5de7ec4c34f61">getWidth</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaffa2ba841e7aee9f5513777599b7450"></a><!-- doxytag: member="Sprite::setWidth" ref="aaffa2ba841e7aee9f5513777599b7450" args="(int width_)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setWidth</b> (int width_)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac488c471dd289b14c4c3b64937b3e42d"></a><!-- doxytag: member="Sprite::setHeight" ref="ac488c471dd289b14c4c3b64937b3e42d" args="(int height_)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setHeight</b> (int height_)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a67b67082cfda90103d2d9eefea04cc4b">getHeight</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a38399275797600991cd2d95cc803fa0a"></a><!-- doxytag: member="Sprite::getPath" ref="a38399275797600991cd2d95cc803fa0a" args="()" -->
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getPath</b> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0aa4e1217226e29f1181e8d44c48dea3"></a><!-- doxytag: member="Sprite::getAlpha" ref="a0aa4e1217226e29f1181e8d44c48dea3" args="()" -->
@@ -137,8 +137,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setBlendMode</b> (SDL
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">SDL_Texture *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a546d109413d8f3541ffde26701075bd1">sdlTexture</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a950adad23da17ce64e6e759b0b64fadd">width</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a4d34b71316c3456acb51c3c7e57a94e2">height</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a0a3364944c5e361fc9e7ae406224d682">width</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a1f07c8f2080c193759aec0e13503d7ab">height</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a2bd9395c3ebb407e632723c3aae2a267">path</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#aa70e85ab29425537f1b0e41abbbfe852">flipHorizontal</a></td></tr>
 </table>
@@ -189,17 +189,17 @@ Private Attributes</h2></td></tr>
 <div class="memdoc">
 <p>The destructor. Destroys the SDL_Texture. </p>
 
-<p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00032">32</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00038">38</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a02fcba350f07d226b110f7d0712f5154"></a><!-- doxytag: member="Sprite::getHeight" ref="a02fcba350f07d226b110f7d0712f5154" args="()" -->
+<a class="anchor" id="a67b67082cfda90103d2d9eefea04cc4b"></a><!-- doxytag: member="Sprite::getHeight" ref="a67b67082cfda90103d2d9eefea04cc4b" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int <a class="el" href="classSprite.html#a02fcba350f07d226b110f7d0712f5154">Sprite::getHeight</a> </td>
+          <td class="memname">int <a class="el" href="classSprite.html#a67b67082cfda90103d2d9eefea04cc4b">Sprite::getHeight</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -209,16 +209,16 @@ Private Attributes</h2></td></tr>
 <div class="memdoc">
 <dl class="return"><dt><b>Returns:</b></dt><dd>The <a class="el" href="classSprite.html">Sprite</a> height. </dd></dl>
 
-<p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00090">90</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00096">96</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a8f425d524e48eea595ef74dc310e0417"></a><!-- doxytag: member="Sprite::getWidth" ref="a8f425d524e48eea595ef74dc310e0417" args="()" -->
+<a class="anchor" id="aba3d4752461ec679fbf5de7ec4c34f61"></a><!-- doxytag: member="Sprite::getWidth" ref="aba3d4752461ec679fbf5de7ec4c34f61" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int <a class="el" href="classSprite.html#a8f425d524e48eea595ef74dc310e0417">Sprite::getWidth</a> </td>
+          <td class="memname">int <a class="el" href="classSprite.html#aba3d4752461ec679fbf5de7ec4c34f61">Sprite::getWidth</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -228,7 +228,7 @@ Private Attributes</h2></td></tr>
 <div class="memdoc">
 <dl class="return"><dt><b>Returns:</b></dt><dd>The <a class="el" href="classSprite.html">Sprite</a> width. </dd></dl>
 
-<p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00086">86</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00092">92</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
 
 </div>
 </div>
@@ -255,7 +255,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="note"><dt><b>Note:</b></dt><dd>Error message is logged if the sprite's SDL_Texture (sdlTexture) is null after method. </dd></dl>
 
-<p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00039">39</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00045">45</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
 
 </div>
 </div>
@@ -332,7 +332,7 @@ If the <a class="el" href="classWindow.html">Window</a> renderer is null, will h
 <dd>
 If it fails to render, logs an error message. </dd></dl>
 
-<p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00055">55</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00061">61</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
 
 </div>
 </div>
@@ -353,12 +353,12 @@ If it fails to render, logs an error message. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a4d34b71316c3456acb51c3c7e57a94e2"></a><!-- doxytag: member="Sprite::height" ref="a4d34b71316c3456acb51c3c7e57a94e2" args="" -->
+<a class="anchor" id="a1f07c8f2080c193759aec0e13503d7ab"></a><!-- doxytag: member="Sprite::height" ref="a1f07c8f2080c193759aec0e13503d7ab" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int <a class="el" href="classSprite.html#a4d34b71316c3456acb51c3c7e57a94e2">Sprite::height</a><code> [private]</code></td>
+          <td class="memname">int <a class="el" href="classSprite.html#a1f07c8f2080c193759aec0e13503d7ab">Sprite::height</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
@@ -401,12 +401,12 @@ If it fails to render, logs an error message. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a950adad23da17ce64e6e759b0b64fadd"></a><!-- doxytag: member="Sprite::width" ref="a950adad23da17ce64e6e759b0b64fadd" args="" -->
+<a class="anchor" id="a0a3364944c5e361fc9e7ae406224d682"></a><!-- doxytag: member="Sprite::width" ref="a0a3364944c5e361fc9e7ae406224d682" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int <a class="el" href="classSprite.html#a950adad23da17ce64e6e759b0b64fadd">Sprite::width</a><code> [private]</code></td>
+          <td class="memname">int <a class="el" href="classSprite.html#a0a3364944c5e361fc9e7ae406224d682">Sprite::width</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
@@ -441,7 +441,7 @@ If it fails to render, logs an error message. </dd></dl>
     <ul>
       <li class="navelem"><a class="el" href="classSprite.html">Sprite</a>      </li>
 
-    <li class="footer">Generated on Sat Jan 17 2015 00:57:40 for sdl2-engine by
+    <li class="footer">Generated on Tue Jan 20 2015 06:04:36 for sdl2-engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>
