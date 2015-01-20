@@ -1,4 +1,5 @@
 #include "GameObject.h"
+#include <cassert>
 #include "Game.h"
 #include "SDL_Libs.h"
 #include "Logger.h"
@@ -25,6 +26,9 @@ GameObject::GameObject(const double x_, const double y_, const std::string& path
     else {
         Log(WARN) << "GameObject sprite is null, width and height will be undefined.";
     }
+
+    assert(width >= 0 && "Must be >= 0");
+    assert(height >= 0 && "Must be >= 0");
 }
 
 GameObject::GameObject(const double x_, const double y_) :
@@ -44,11 +48,11 @@ GameObject::~GameObject() {
 
 }
 
-unsigned int GameObject::getWidth() {
+int GameObject::getWidth() {
 	return this->width;
 }
 
-unsigned int GameObject::getHeight() {
+int GameObject::getHeight() {
 	return this->height;
 }
 

@@ -14,6 +14,9 @@ Sprite::Sprite(const std::string& path_) :
 
 	setBlendMode(SDL_BLENDMODE_BLEND);
 	setAlpha(255);
+
+	assert(width >= 0 && "Must be >= 0");
+	assert(height >= 0 && "Must be >= 0");
 }
 
 Sprite::Sprite(SDL_Surface* const surface_) :
@@ -27,6 +30,9 @@ Sprite::Sprite(SDL_Surface* const surface_) :
 	if(this->sdlTexture == nullptr) {
 		Log(ERROR) << "Sprite load failed: " << this->path;
 	}
+
+	assert(width >= 0 && "Must be >= 0");
+	assert(height >= 0 && "Must be >= 0");
 }
 
 Sprite::~Sprite() {
@@ -57,7 +63,7 @@ void Sprite::render(const double x_, const double y_, SDL_Rect* const clip_,
 	SDL_RendererFlip flip_) {
 
 	// This is the destination SDL_Rect structure.
-	SDL_Rect renderQuad = {static_cast<int>(x_), static_cast<int>(y_), static_cast<int>(this->width), static_cast<int>(this->height)};
+	SDL_Rect renderQuad = {static_cast<int>(x_), static_cast<int>(y_), this->width, this->height};
 
 	if(clip_ != nullptr) {
 		renderQuad.w = clip_->w;
@@ -83,19 +89,21 @@ void Sprite::render(const double x_, const double y_, SDL_Rect* const clip_,
 	}
 }
 
-unsigned int Sprite::getWidth() {
+int Sprite::getWidth() {
 	return this->width;
 }
 
-unsigned int Sprite::getHeight() {
+int Sprite::getHeight() {
 	return this->height;
 }
 
-void Sprite::setWidth(unsigned int width_) {
+void Sprite::setWidth(int width_) {
+	assert(width_ >= 0 && "Must be >= 0");
 	this->width = width_;
 }
 
-void Sprite::setHeight(unsigned int height_) {
+void Sprite::setHeight(int height_) {
+	assert(height_ >= 0 && "Must be >= 0");
 	this->height = height_;
 }
 

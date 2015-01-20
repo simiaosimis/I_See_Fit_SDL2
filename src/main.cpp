@@ -11,7 +11,7 @@ int main(int argc, char** argv) {
 
 	Log(DEBUG) << "Starting sdl2-engine...";
 
-	Configuration::initialize();
+	Configuration::Initialize();
 
 	const bool systemsInitialized = SDL_Wrapper::initialize();
 

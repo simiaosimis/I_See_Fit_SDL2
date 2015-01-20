@@ -10,67 +10,67 @@ class Configuration {
 		/**
 		* Initializes all the attributes.
 		*/
-		static void initialize();
+		static void Initialize();
 
 		/**
-		* @return resolutionWidth
+		* @return m_resolution_width
 		*/
-		static unsigned int getResolutionWidth();
+		static int ResolutionWidth();
 
 		/**
-		* @return resolutionHeight
+		* @return m_resolution_height
 		*/
-		static unsigned int getResolutionHeight();
+		static int ResolutionHeight();
 
 		/**
-		* @return maxFramerate
+		* @return m_max_framerate
 		*/
-		static uint32_t getMaxFramerate();
+		static uint32_t MaxFramerate();
 
 		/**
-		* @return windowTitle
+		* @return m_window_title
 		*/
-		static std::string getWindowTitle();
+		static std::string WindowTitle();
 
 		/**
 		* @return initialMultiplier
 		* @see Window::rescale
 		*/
-		static unsigned int getLogicalRenderSize();
+		static int LogicalRenderSize();
 
 		/**
-		* @return cameraDistanceWidth
+		* @return m_camera_distance_width
 		*/
-		static unsigned int getCameraDistanceWidth();
+		static int CameraDistanceWidth();
 
 		/**
-		* @return cameraDistanceHeight
+		* @return m_camera_distance_height
 		*/
-		static unsigned int getCameraDistanceHeight();
+		static int CameraDistanceHeight();
 
 		/**
 		* @return The current screen width.
 		*/
-		static unsigned int getScreenWidth();
+		static int ScreenWidth();
 
 		/**
 		* @return The current screen height.
 		*/
-		static unsigned int getScreenHeight();
+		static int ScreenHeight();
 
 	private:
-		static const unsigned int resolutionWidth; /**< The game's width resolution. (16) */
-		static const unsigned int resolutionHeight; /**< The game's height resolution. (10) */
+		static const int m_resolution_width; /**< The game's width resolution. (16) */
+		static const int m_resolution_height; /**< The game's height resolution. (10) */
 
-		static uint32_t maxFramerate; /**< The game's max framerate. */
-		static std::string windowTitle; /**< The game window's title. */
+		static uint32_t m_max_framerate; /**< The game's max framerate. */
+		static std::string m_window_title; /**< The game window's title. */
 
-		static unsigned int logicalRenderSize; /**< The size of the logical rendering. */
+		static int m_logical_render_size; /**< The size of the logical rendering. */
 
-		static unsigned int screenWidth; /**< The screen width. */
-		static unsigned int screenHeight; /**< The screen height. */
+		static int m_screen_width; /**< The screen width. */
+		static int m_screen_height; /**< The screen height. */
 
-		static unsigned int cameraDistanceWidth; /**< The width distance of the camera. */
-		static unsigned int cameraDistanceHeight; /**< The height distance of the camera. */
+		static int m_camera_distance_width; /**< The width distance of the camera. */
+		static int m_camera_distance_height; /**< The height distance of the camera. */
 
 };

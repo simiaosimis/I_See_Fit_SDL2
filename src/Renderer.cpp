@@ -1,4 +1,5 @@
 #include "Renderer.h"
+#include <cassert>
 #include "Configuration.h"
 #include "Logger.h"
 
@@ -33,18 +34,15 @@ void Renderer::render() {
 	SDL_RenderPresent(this->sdlRenderer);
 }
 
-void Renderer::setLogicalSize(unsigned int size_) {
-	// Just a precaution, so there is no abuse on the size.
-	const unsigned int safeSize = 10;
+void Renderer::setLogicalSize(int size_) {
+	assert(size_ >= 0 && "Must be >= 0");
 
-	if(size_ > safeSize) {
-		size_ = safeSize;
-		Log(WARN) << "Trying to set logical size for a value too big.";
-	}
+	// Just a precaution, so there is no abuse on the size.
+	const int safeSize = 10;
+	assert(size_ < safeSize && "Trying to set logical size for a value too big.");
 
 	const int setSize = SDL_RenderSetLogicalSize(this->sdlRenderer,
-		Configuration::getResolutionWidth() * size_,
-		Configuration::getResolutionHeight() * size_);
+		Configuration::ResolutionWidth() * size_, Configuration::ResolutionHeight() * size_);
 
 	if(setSize != 0) {
 		Log(ERROR) << "Failed to set the renderer logical size. " << SDL_GetError();

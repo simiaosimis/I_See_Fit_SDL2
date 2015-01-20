@@ -10,7 +10,18 @@ class Renderer {
 
 		void clear();
 		void render();
-		void setLogicalSize(unsigned int size_);
+
+		/**
+		* Rescales the renderization.
+		* Set a device independent resolution for rendering.
+		* @param size_ : Multiplies Configuration::ResolutionWidth() and
+		* 	Configuration::ResolutionHeight() for the new resolution (0+).
+		* @note Practically, it looks like the camera has a larger field of view, the bigger
+		* 	the size_ parameter is.
+		* @see SDL_RenderSetLogicalSize
+		*/
+		void setLogicalSize(int size_);
+		
 		void getLogicalSize(int* w, int* h);
 		SDL_Renderer* getSdlRenderer();
 

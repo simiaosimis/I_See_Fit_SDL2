@@ -14,13 +14,13 @@ class Window {
 		/**
 		* The constructor.
 		* Sets all attributes, and calls the initialize method.
-		* @param width_ : The desired window width.
-		* @param height_ : The desired window height.
+		* @param width_ : The desired window width (0+).
+		* @param height_ : The desired window height (0+).
 		* @param title_ : The desired window title.
 		* @note If omitted, window title will be "SDL Window".
 		* @see Window::initialize
 		*/
-		Window(const unsigned int width_, const unsigned int height_,
+		Window(const int width_, const int height_,
 			const std::string& title_ = "SDL Window");
 
 		/**
@@ -32,10 +32,12 @@ class Window {
 
 		/**
 		* Resizes the window.
+		* @param width_ : The desired window width (0+).
+		* @param height_ : The desired window height (0+).
 		* @todo Instead of directly choosing width and height, choose from a pre-defined list
 		* 	of resolutions.
 		*/
-		void resize(const unsigned int width_, const unsigned int height_);
+		void resize(const int width_, const int height_);
 
 		/**
 		* Minimizes window.
@@ -58,19 +60,10 @@ class Window {
 		/**
 		* Creates the Window, with specified width and height.
 		* Can be used either as the creator, or as the resizer.
+		* @param width_ : The desired window width (0+).
+		* @param height_ : The desired window height (0+).
 		*/
-		void create(const unsigned int width_, const unsigned int height_);
-
-		/**
-		* Rescales the renderization.
-		* Set a device independent resolution for rendering.
-		* @param size_ : Multiplies Configuration::resolutionWidth and
-		* 	Configuration::resolutionHeight for the new resolution.
-		* @note Practically, it looks like the camera has a larger field of view, the bigger
-		* 	the size_ parameter is.
-		* @see SDL_RenderSetLogicalSize
-		*/
-		void rescale(unsigned int size_);
+		void create(const int width_, const int height_);
 
 		const std::string windowTitle; /**< The game Window title. */
 		SDL_Window* sdlWindow; /**< The SDL window, that will be the actual game window. */

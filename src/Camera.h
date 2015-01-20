@@ -1,7 +1,9 @@
 #pragma once
 
 #include "SDL_Libs.h"
-#include "GameObject.h"
+// #include "GameObject.h"
+
+class GameObject;
 
 /**
 * The camera class.
@@ -13,9 +15,9 @@ class Camera {
 		/**
 		* The constructor.
 		* Initializes all the attributes.
-		* @param gameObject_ : The GameObject to centralize the camera on.
+		* @param game_object : The GameObject to centralize the camera on.
 		*/
-		explicit Camera(GameObject* const gameObject_);
+		explicit Camera(GameObject* const game_object);
 
 		/**
 		* The destructor.
@@ -24,39 +26,39 @@ class Camera {
 
 		/**
 		* Updates the camera.
-		* @see Camera::updatePosition
+		* @see Camera::UpdatePosition
 		* Centralizes the player on the screen.
 		*/
-		void update();
+		void Update();
 
 		/**
 		* Changes the entity to centralize upon.
 		* @param entity_ : The entity to centralize the camera on.
 		*/
-		void centralizeOn(GameObject* const gameObject_);
+		void CentralizeOn(GameObject* const game_object);
 
 		/**
 		* @return The camera clip (an SDL_Rect).
 		*/
-		SDL_Rect& getClip();
+		SDL_Rect& Clip();
 
 		/**
-		* @param width_,height_ : Tells the camera what the width and height of the level is.
+		* @param width,height : Tells the camera what the width and height of the level is.
 		* @see Level::update()
 		*/
-		void setLevelWH(const unsigned int width_, const unsigned int height_);
+		void SetLevelDimensions(const int width, const int height);
 
 	private:
 		/**
 		* Updates the cameras position.
 		* Based on the players position, change cameras position.
 		*/
-		void updatePosition();
+		void UpdatePosition();
 
-		GameObject* gameObject; /**< Reference to the entity. */
-		unsigned int levelW; /**< The width of the level. */
-		unsigned int levelH; /**< The height of the level. */
-		SDL_Rect clip; /**< Clip which will be used to clip the rendering only to the extent of
+		GameObject* m_game_object; /**< Reference to the entity. */
+		int m_level_width; /**< The width of the level. */
+		int m_level_height; /**< The height of the level. */
+		SDL_Rect m_clip; /**< Clip which will be used to clip the rendering only to the extent of
 			the camera. */
 
 };

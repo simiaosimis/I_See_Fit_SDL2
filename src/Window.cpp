@@ -1,12 +1,15 @@
 #include "Window.h"
+#include <cassert>
 #include "Logger.h"
 #include "Configuration.h"
 
-Window::Window(const unsigned int width_, const unsigned int height_, const std::string& title_) :
+Window::Window(const int width_, const int height_, const std::string& title_) :
 	windowTitle(title_),
 	sdlWindow(nullptr),
 	renderer(nullptr)
 {
+	assert(width_ >= 0 && "Must be >= 0");
+	assert(height_ >= 0 && "Must be >= 0");
 	create(width_, height_);
 }
 
@@ -25,8 +28,10 @@ void Window::maximize() {
 	SDL_MaximizeWindow(this->sdlWindow);
 }
 
-void Window::create(const unsigned int width_, const unsigned int height_) {
+void Window::create(const int width_, const int height_) {
 	/// @todo Toggle VSync.
+	assert(width_ >= 0 && "Must be >= 0");
+	assert(height_ >= 0 && "Must be >= 0");
 
 	// Creates the SDL window.
 	const Uint32 windowFlags = SDL_WINDOW_SHOWN;
@@ -46,7 +51,7 @@ void Window::create(const unsigned int width_, const unsigned int height_) {
 
 			if(linearFilter == SDL_TRUE) {
 				Log(INFO) << "Linear texture filtering enabled!";
-				this->renderer->setLogicalSize(Configuration::getLogicalRenderSize());
+				this->renderer->setLogicalSize(Configuration::LogicalRenderSize());
 			}
 			else {
 				Log(WARN) << "Linear texture filtering disabled!";
@@ -65,7 +70,9 @@ void Window::create(const unsigned int width_, const unsigned int height_) {
 	}
 }
 
-void Window::resize(const unsigned int width_, const unsigned int height_) {
+void Window::resize(const int width_, const int height_) {
+	assert(width_ >= 0 && "Must be >= 0");
+	assert(height_ >= 0 && "Must be >= 0");
 	SDL_SetWindowSize(this->sdlWindow, width_, height_);
 }
 

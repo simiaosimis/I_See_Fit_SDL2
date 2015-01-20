@@ -1,68 +1,72 @@
 #include "Configuration.h"
-
+#include <cassert>
 
 // Resolution = 16:10
-const unsigned int Configuration::resolutionWidth = 192;
-const unsigned int Configuration::resolutionHeight = 108;
+const int Configuration::m_resolution_width = 192;
+const int Configuration::m_resolution_height = 108;
 
-uint32_t Configuration::maxFramerate = 0;
-std::string Configuration::windowTitle = "";
-unsigned int Configuration::logicalRenderSize = 0;
-unsigned int Configuration::screenWidth = 0;
-unsigned int Configuration::screenHeight = 0;
-unsigned int Configuration::cameraDistanceWidth = 0;
-unsigned int Configuration::cameraDistanceHeight = 0;
+uint32_t Configuration::m_max_framerate = 0;
+std::string Configuration::m_window_title = "";
+int Configuration::m_logical_render_size = 0;
+int Configuration::m_screen_width = 0;
+int Configuration::m_screen_height = 0;
+int Configuration::m_camera_distance_width = 0;
+int Configuration::m_camera_distance_height = 0;
 
 
-void Configuration::initialize() {
+void Configuration::Initialize() {
 	/// @todo Read this information from a configuration file.
-	/// @todo Make sure recieved integers are not negative.
+	Configuration::m_max_framerate = 60;
+	Configuration::m_window_title = "sdl2-engine";
+	Configuration::m_logical_render_size = 8;
+	Configuration::m_camera_distance_width =
+		Configuration::m_resolution_width * Configuration::m_logical_render_size;
+	Configuration::m_camera_distance_height =
+		Configuration::m_resolution_height * Configuration::m_logical_render_size;
+	Configuration::m_screen_width = 1920 / 2;
+	Configuration::m_screen_height = 1080 / 2;
 
-	Configuration::maxFramerate = 60;
-	Configuration::windowTitle = "sdl2-engine";
-	Configuration::logicalRenderSize = 8;
-	Configuration::cameraDistanceWidth =
-		Configuration::resolutionWidth * Configuration::logicalRenderSize;
-
-	Configuration::cameraDistanceHeight =
-		Configuration::resolutionHeight * Configuration::logicalRenderSize;
-
-	Configuration::screenWidth = 1920 / 2;
-	Configuration::screenHeight = 1080 / 2;
+	assert(Configuration::m_resolution_width >= 0 && "Must be >= 0");
+	assert(Configuration::m_resolution_height >= 0 && "Must be >= 0");
+	assert(Configuration::m_logical_render_size >= 0 && "Must be >= 0");
+	assert(Configuration::m_screen_width >= 0 && "Must be >= 0");
+	assert(Configuration::m_screen_height >= 0 && "Must be >= 0");
+	assert(Configuration::m_camera_distance_width >= 0 && "Must be >= 0");
+	assert(Configuration::m_camera_distance_height >= 0 && "Must be >= 0");
 }
 
-unsigned int Configuration::getResolutionWidth() {
-	return Configuration::resolutionWidth;
+int Configuration::ResolutionWidth() {
+	return Configuration::m_resolution_width;
 }
 
-unsigned int Configuration::getResolutionHeight() {
-	return Configuration::resolutionHeight;
+int Configuration::ResolutionHeight() {
+	return Configuration::m_resolution_height;
 }
 
-uint32_t Configuration::getMaxFramerate() {
-	return Configuration::maxFramerate;
+uint32_t Configuration::MaxFramerate() {
+	return Configuration::m_max_framerate;
 }
 
-std::string Configuration::getWindowTitle() {
-	return Configuration::windowTitle;
+std::string Configuration::WindowTitle() {
+	return Configuration::m_window_title;
 }
 
-unsigned int Configuration::getLogicalRenderSize() {
-	return Configuration::logicalRenderSize;
+int Configuration::LogicalRenderSize() {
+	return Configuration::m_logical_render_size;
 }
 
-unsigned int Configuration::getScreenWidth() {
-	return Configuration::screenWidth;
+int Configuration::ScreenWidth() {
+	return Configuration::m_screen_width;
 }
 
-unsigned int Configuration::getScreenHeight() {
-	return Configuration::screenHeight;
+int Configuration::ScreenHeight() {
+	return Configuration::m_screen_height;
 }
 
-unsigned int Configuration::getCameraDistanceWidth() {
-	return Configuration::cameraDistanceWidth;
+int Configuration::CameraDistanceWidth() {
+	return Configuration::m_camera_distance_width;
 }
 
-unsigned int Configuration::getCameraDistanceHeight() {
-	return Configuration::cameraDistanceHeight;
+int Configuration::CameraDistanceHeight() {
+	return Configuration::m_camera_distance_height;
 }

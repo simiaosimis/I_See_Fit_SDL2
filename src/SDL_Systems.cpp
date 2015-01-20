@@ -43,9 +43,8 @@ bool SDL_Wrapper::initialize() {
 
 	// Initializing SDL_image with imgFlags.
 	const Uint32 imgFlags = IMG_INIT_PNG;
-	if((IMG_Init(imgFlags) & imgFlags)) {
-		successIMG = true;
-
+	successIMG = (static_cast<Uint32>(IMG_Init(imgFlags)) & imgFlags);
+	if(successIMG) {
 		SDL_IMAGE_VERSION(&compiled);
 		SDL_Wrapper_detail::logSDLVersion("SDL_image", compiled);
 	}

@@ -1,12 +1,13 @@
 #include "Camera.h"
+#include <cassert>
+#include "GameObject.h"
 #include "Configuration.h"
 
-Camera::Camera(GameObject* const gameObject_):
-	gameObject(gameObject_),
-	levelW(0),
-	levelH(0),
-	clip{0, 0, static_cast<int>(Configuration::getCameraDistanceWidth()),
-		static_cast<int>(Configuration::getCameraDistanceHeight())}
+Camera::Camera(GameObject* const game_object):
+	m_game_object{game_object},
+	m_level_width{0},
+	m_level_height{0},
+	m_clip{0, 0, Configuration::CameraDistanceWidth(), Configuration::CameraDistanceHeight()}
 {
 
 }
@@ -15,41 +16,43 @@ Camera::~Camera() {
 
 }
 
-void Camera::update() {
-	updatePosition();
+void Camera::Update() {
+	UpdatePosition();
 }
 
-SDL_Rect& Camera::getClip() {
-	return this->clip;
+SDL_Rect& Camera::Clip() {
+	return m_clip;
 }
 
-void Camera::updatePosition() {
-	this->clip.x = (this->gameObject->x + this->gameObject->getWidth() / 2) - (this->clip.w / 2);
-	this->clip.y = (this->gameObject->y + this->gameObject->getHeight() / 2) - (this->clip.h / 2);
+void Camera::UpdatePosition() {
+	m_clip.x = (m_game_object->x + m_game_object->getWidth() / 2) - (m_clip.w / 2);
+	m_clip.y = (m_game_object->y + m_game_object->getHeight() / 2) - (m_clip.h / 2);
 
 	// Left wall.
-	if(this->clip.x < 0) {
-		this->clip.x = 0;
+	if(m_clip.x < 0) {
+		m_clip.x = 0;
 	}
 	// Right wall.
-	else if(this->clip.x > static_cast<int>(this->levelW) - this->clip.w) {
-		this->clip.x = static_cast<int>(this->levelW) - this->clip.w;
+	else if(m_clip.x > m_level_width - m_clip.w) {
+		m_clip.x = m_level_width - m_clip.w;
 	}
 	// Top wall.
-	if(this->clip.y < 0) {
-		this->clip.y = 0;
+	if(m_clip.y < 0) {
+		m_clip.y = 0;
 	}
 	// Bottom wall.
-	else if(this->clip.y > static_cast<int>(this->levelH) - this->clip.h) {
-		this->clip.y = static_cast<int>(this->levelH) - this->clip.h;
+	else if(m_clip.y > m_level_height - m_clip.h) {
+		m_clip.y = m_level_height - m_clip.h;
 	}
 }
 
-void Camera::centralizeOn(GameObject* const gameObject_) {
-	this->gameObject = gameObject_;
+void Camera::CentralizeOn(GameObject* const game_object) {
+	m_game_object = game_object;
 }
 
-void Camera::setLevelWH(const unsigned int width_, const unsigned int height_) {
-	this->levelW = width_;
-	this->levelH = height_;
+void Camera::SetLevelDimensions(const int width, const int height) {
+	assert(width >= 0 && "Must be >= 0");
+	assert(height >= 0 && "Must be >= 0");
+	m_level_width = width;
+	m_level_height = height;
 }

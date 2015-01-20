@@ -52,16 +52,16 @@ class Sprite {
 		/**
 		* @return The Sprite width.
 		*/
-		unsigned int getWidth();
+		int getWidth();
 
-		void setWidth(unsigned int width_);
+		void setWidth(int width_);
 
-		void setHeight(unsigned int height_);
+		void setHeight(int height_);
 
 		/**
 		* @return The Sprite height.
 		*/
-		unsigned int getHeight();
+		int getHeight();
 
 		std::string getPath();
 
@@ -84,8 +84,8 @@ class Sprite {
 
 		void setBlendMode(SDL_BlendMode blending_);
 
-		unsigned int width; /**< The loaded image's width. */
-		unsigned int height; /**< The loaded image's width. */
+		int width; /**< The loaded image's width. */
+		int height; /**< The loaded image's width. */
 		const std::string path; /**< Holds the path from where the Sprite was loaded. */
 		bool flipHorizontal; /**< When true flip the image */
 

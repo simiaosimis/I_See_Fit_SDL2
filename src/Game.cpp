@@ -34,8 +34,8 @@ Game::Game() :
 	currentState(nullptr),
 	statesMap()
 {
-	this->window = new Window(Configuration::getScreenWidth(),
-		Configuration::getScreenHeight(), Configuration::getWindowTitle());
+	this->window = new Window(Configuration::ScreenWidth(),	Configuration::ScreenHeight(),
+		Configuration::WindowTitle());
 
 	assert(this->window != nullptr && "The window should not be null!");
 
@@ -150,7 +150,9 @@ void Game::clearKeyFromInput(const GameKeys key_) {
 	this->inputHandler->clearKey(key_);
 }
 
-void Game::resizeWindow(const unsigned int width_, const unsigned int height_) {
+void Game::resizeWindow(const int width_, const int height_) {
+	assert(width_ >= 0 && "Must be >= 0");
+	assert(height_ >= 0 && "Must be >= 0");
 	this->window->resize(width_, height_);
 }
 

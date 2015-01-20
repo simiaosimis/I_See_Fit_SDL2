@@ -36,12 +36,12 @@ class GameObject {
 		/**
 		* @return The GameObject width.
 		*/
-		unsigned int getWidth();
+		int getWidth();
 
 		/**
 		* @return The GameObject height.
 		*/
-		unsigned int getHeight();
+		int getHeight();
 
 		/**
 		* @return The GameObject::animationClip.
@@ -73,8 +73,8 @@ class GameObject {
 		GameObject(const double x_, const double y_);
 
 		Sprite* sprite; /**< The Sprite attributed to the entity. */
-		unsigned int width; /**< The entitys width, from its sprite. */
-		unsigned int height; /**< The entitys height, from its sprite. */
+		int width; /**< The entitys width, from its sprite. */
+		int height; /**< The entitys height, from its sprite. */
 		SDL_Rect animationClip; /**< The current clip on the spritesheet, to determine animation. */
 		SDL_Rect boundingBox;
 
