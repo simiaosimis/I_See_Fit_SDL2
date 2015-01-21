@@ -7,14 +7,9 @@
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
+
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
@@ -33,7 +28,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v18</span>
+   &#160;<span id="projectnumber">v19</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -78,24 +73,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
       <li><a href="classes.html"><span>Data&#160;Structure&#160;Index</span></a></li>
-      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Data&#160;Fields</span></a></li>
     </ul>
   </div>
 </div>
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-  initNavTree('classSprite.html','');
-</script>
-<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -111,29 +93,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a0c5597fedd9b09878ec8acddca54c2f7">Sprite</a> (const std::string &amp;path_)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a29730aadf31a6433746f5fa5bee9550f"></a><!-- doxytag: member="Sprite::Sprite" ref="a29730aadf31a6433746f5fa5bee9550f" args="(SDL_Surface *const surface_)" -->
-&#160;</td><td class="memItemRight" valign="bottom"><b>Sprite</b> (SDL_Surface *const surface_)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a29730aadf31a6433746f5fa5bee9550f">Sprite</a> (SDL_Surface *const surface_)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a8accab430f9d90ae5117b57d67e32b84">~Sprite</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#ac82a01b98130b9b1403667059640163b">render</a> (const double x_, const double y_, SDL_Rect *const clip_=nullptr, const bool stretch_=false, const double angle_=0.0, SDL_Point *const center_=nullptr, SDL_RendererFlip flip_=SDL_FLIP_NONE)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#aba3d4752461ec679fbf5de7ec4c34f61">getWidth</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaffa2ba841e7aee9f5513777599b7450"></a><!-- doxytag: member="Sprite::setWidth" ref="aaffa2ba841e7aee9f5513777599b7450" args="(int width_)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setWidth</b> (int width_)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac488c471dd289b14c4c3b64937b3e42d"></a><!-- doxytag: member="Sprite::setHeight" ref="ac488c471dd289b14c4c3b64937b3e42d" args="(int height_)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setHeight</b> (int height_)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#aaffa2ba841e7aee9f5513777599b7450">setWidth</a> (int width_)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#ac488c471dd289b14c4c3b64937b3e42d">setHeight</a> (int height_)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a67b67082cfda90103d2d9eefea04cc4b">getHeight</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a38399275797600991cd2d95cc803fa0a"></a><!-- doxytag: member="Sprite::getPath" ref="a38399275797600991cd2d95cc803fa0a" args="()" -->
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getPath</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0aa4e1217226e29f1181e8d44c48dea3"></a><!-- doxytag: member="Sprite::getAlpha" ref="a0aa4e1217226e29f1181e8d44c48dea3" args="()" -->
-double&#160;</td><td class="memItemRight" valign="bottom"><b>getAlpha</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a59cf52a8669c1b91a47b00ee32a6bfaf"></a><!-- doxytag: member="Sprite::setAlpha" ref="a59cf52a8669c1b91a47b00ee32a6bfaf" args="(int alpha_)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setAlpha</b> (int alpha_)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a38399275797600991cd2d95cc803fa0a">getPath</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a0aa4e1217226e29f1181e8d44c48dea3">getAlpha</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a59cf52a8669c1b91a47b00ee32a6bfaf">setAlpha</a> (int alpha_)</td></tr>
 <tr><td colspan="2"><h2><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a9ba64ddfcd3f79c45b74ec1c1a16c396">loadFrom</a> (const std::string &amp;path_)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a98bb8afceb93d82270c9e5e7e8f9b49d"></a><!-- doxytag: member="Sprite::surfaceToTexture" ref="a98bb8afceb93d82270c9e5e7e8f9b49d" args="(SDL_Surface *const surface_)" -->
-SDL_Texture *&#160;</td><td class="memItemRight" valign="bottom"><b>surfaceToTexture</b> (SDL_Surface *const surface_)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5fe515e7c3a54a8d82d27612ee6dc4c4"></a><!-- doxytag: member="Sprite::setBlendMode" ref="a5fe515e7c3a54a8d82d27612ee6dc4c4" args="(SDL_BlendMode blending_)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setBlendMode</b> (SDL_BlendMode blending_)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">SDL_Texture *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a98bb8afceb93d82270c9e5e7e8f9b49d">surfaceToTexture</a> (SDL_Surface *const surface_)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a5fe515e7c3a54a8d82d27612ee6dc4c4">setBlendMode</a> (SDL_BlendMode blending_)</td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">SDL_Texture *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a546d109413d8f3541ffde26701075bd1">sdlTexture</a></td></tr>
@@ -172,6 +146,34 @@ Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00006">6</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
 
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSprite_a0c5597fedd9b09878ec8acddca54c2f7_cgraph.png" border="0" usemap="#classSprite_a0c5597fedd9b09878ec8acddca54c2f7_cgraph" alt=""/></div>
+<map name="classSprite_a0c5597fedd9b09878ec8acddca54c2f7_cgraph" id="classSprite_a0c5597fedd9b09878ec8acddca54c2f7_cgraph">
+<area shape="rect" id="node3" href="classSprite.html#a9ba64ddfcd3f79c45b74ec1c1a16c396" title="Sprite::loadFrom" alt="" coords="167,85,284,115"/><area shape="rect" id="node19" href="classSprite.html#a5fe515e7c3a54a8d82d27612ee6dc4c4" title="Sprite::setBlendMode" alt="" coords="152,139,299,168"/><area shape="rect" id="node21" href="classSprite.html#a59cf52a8669c1b91a47b00ee32a6bfaf" title="Sprite::setAlpha" alt="" coords="168,192,283,221"/><area shape="rect" id="node5" href="classSprite.html#a98bb8afceb93d82270c9e5e7e8f9b49d" title="Sprite::surfaceToTexture" alt="" coords="348,85,513,115"/><area shape="rect" id="node7" href="classGame.html#ac213e6d3a4e566d901413f62f6408858" title="Game::instance" alt="" coords="563,85,677,115"/><area shape="rect" id="node9" href="classGame.html#ad59df6562a58a614fda24622d3715b65" title="Game::Game" alt="" coords="727,85,825,115"/><area shape="rect" id="node11" href="classConfiguration.html#a2abd3e10153cffe624981da2eedcd61a" title="Configuration::ScreenWidth" alt="" coords="877,5,1059,35"/><area shape="rect" id="node13" href="classConfiguration.html#ac1b98514305ca2e97e54f9858d891488" title="Configuration::ScreenHeight" alt="" coords="875,59,1061,88"/><area shape="rect" id="node15" href="classConfiguration.html#aa499bb12addd43ff8eacab01ab9e51ea" title="Configuration::WindowTitle" alt="" coords="879,112,1057,141"/><area shape="rect" id="node17" href="classGame.html#afc16bd0d077c53218c27f16e0bf56cbb" title="Game::initializeStates" alt="" coords="893,165,1043,195"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a29730aadf31a6433746f5fa5bee9550f"></a><!-- doxytag: member="Sprite::Sprite" ref="a29730aadf31a6433746f5fa5bee9550f" args="(SDL_Surface *const surface_)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSprite.html#a0c5597fedd9b09878ec8acddca54c2f7">Sprite::Sprite</a> </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Surface *const&#160;</td>
+          <td class="paramname"><em>surface_</em></td><td>)</td>
+          <td><code> [explicit]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00022">22</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a8accab430f9d90ae5117b57d67e32b84"></a><!-- doxytag: member="Sprite::~Sprite" ref="a8accab430f9d90ae5117b57d67e32b84" args="()" -->
@@ -194,6 +196,24 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a0aa4e1217226e29f1181e8d44c48dea3"></a><!-- doxytag: member="Sprite::getAlpha" ref="a0aa4e1217226e29f1181e8d44c48dea3" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double <a class="el" href="classSprite.html#a0aa4e1217226e29f1181e8d44c48dea3">Sprite::getAlpha</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00142">142</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a67b67082cfda90103d2d9eefea04cc4b"></a><!-- doxytag: member="Sprite::getHeight" ref="a67b67082cfda90103d2d9eefea04cc4b" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -210,6 +230,24 @@ Private Attributes</h2></td></tr>
 <dl class="return"><dt><b>Returns:</b></dt><dd>The <a class="el" href="classSprite.html">Sprite</a> height. </dd></dl>
 
 <p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00096">96</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a38399275797600991cd2d95cc803fa0a"></a><!-- doxytag: member="Sprite::getPath" ref="a38399275797600991cd2d95cc803fa0a" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string <a class="el" href="classSprite.html#a38399275797600991cd2d95cc803fa0a">Sprite::getPath</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00138">138</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
 
 </div>
 </div>
@@ -256,6 +294,24 @@ Private Attributes</h2></td></tr>
 <dl class="note"><dt><b>Note:</b></dt><dd>Error message is logged if the sprite's SDL_Texture (sdlTexture) is null after method. </dd></dl>
 
 <p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00045">45</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSprite_a9ba64ddfcd3f79c45b74ec1c1a16c396_cgraph.png" border="0" usemap="#classSprite_a9ba64ddfcd3f79c45b74ec1c1a16c396_cgraph" alt=""/></div>
+<map name="classSprite_a9ba64ddfcd3f79c45b74ec1c1a16c396_cgraph" id="classSprite_a9ba64ddfcd3f79c45b74ec1c1a16c396_cgraph">
+<area shape="rect" id="node3" href="classSprite.html#a98bb8afceb93d82270c9e5e7e8f9b49d" title="Sprite::surfaceToTexture" alt="" coords="175,85,340,115"/><area shape="rect" id="node5" href="classGame.html#ac213e6d3a4e566d901413f62f6408858" title="Game::instance" alt="" coords="389,85,504,115"/><area shape="rect" id="node7" href="classGame.html#ad59df6562a58a614fda24622d3715b65" title="Game::Game" alt="" coords="553,85,652,115"/><area shape="rect" id="node9" href="classConfiguration.html#a2abd3e10153cffe624981da2eedcd61a" title="Configuration::ScreenWidth" alt="" coords="704,5,885,35"/><area shape="rect" id="node11" href="classConfiguration.html#ac1b98514305ca2e97e54f9858d891488" title="Configuration::ScreenHeight" alt="" coords="701,59,888,88"/><area shape="rect" id="node13" href="classConfiguration.html#aa499bb12addd43ff8eacab01ab9e51ea" title="Configuration::WindowTitle" alt="" coords="705,112,884,141"/><area shape="rect" id="node15" href="classGame.html#afc16bd0d077c53218c27f16e0bf56cbb" title="Game::initializeStates" alt="" coords="720,165,869,195"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSprite_a9ba64ddfcd3f79c45b74ec1c1a16c396_icgraph.png" border="0" usemap="#classSprite_a9ba64ddfcd3f79c45b74ec1c1a16c396_icgraph" alt=""/></div>
+<map name="classSprite_a9ba64ddfcd3f79c45b74ec1c1a16c396_icgraph" id="classSprite_a9ba64ddfcd3f79c45b74ec1c1a16c396_icgraph">
+<area shape="rect" id="node3" href="classSprite.html#a0c5597fedd9b09878ec8acddca54c2f7" title="Sprite::Sprite" alt="" coords="173,5,272,35"/></map>
+</div>
+</p>
 
 </div>
 </div>
@@ -333,6 +389,173 @@ If the <a class="el" href="classWindow.html">Window</a> renderer is null, will h
 If it fails to render, logs an error message. </dd></dl>
 
 <p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00061">61</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSprite_ac82a01b98130b9b1403667059640163b_cgraph.png" border="0" usemap="#classSprite_ac82a01b98130b9b1403667059640163b_cgraph" alt=""/></div>
+<map name="classSprite_ac82a01b98130b9b1403667059640163b_cgraph" id="classSprite_ac82a01b98130b9b1403667059640163b_cgraph">
+<area shape="rect" id="node3" href="classGame.html#ac213e6d3a4e566d901413f62f6408858" title="Game::instance" alt="" coords="184,85,299,115"/><area shape="rect" id="node15" href="classGame.html#af4f1ce14a3cf7017942fdf0d183d24c3" title="Game::getRenderer" alt="" coords="173,139,309,168"/><area shape="rect" id="node19" href="classRenderer.html#a72be652b574eb9e917bf057d58b7f0db" title="Renderer::getLogicalSize" alt="" coords="157,192,325,221"/><area shape="rect" id="node21" href="classRenderer.html#ac10f6cf7dc7a1f9b8c0d8dea9a9c0c0e" title="Renderer::getSdlRenderer" alt="" coords="155,245,328,275"/><area shape="rect" id="node5" href="classGame.html#ad59df6562a58a614fda24622d3715b65" title="Game::Game" alt="" coords="401,85,500,115"/><area shape="rect" id="node7" href="classConfiguration.html#a2abd3e10153cffe624981da2eedcd61a" title="Configuration::ScreenWidth" alt="" coords="576,5,757,35"/><area shape="rect" id="node9" href="classConfiguration.html#ac1b98514305ca2e97e54f9858d891488" title="Configuration::ScreenHeight" alt="" coords="573,59,760,88"/><area shape="rect" id="node11" href="classConfiguration.html#aa499bb12addd43ff8eacab01ab9e51ea" title="Configuration::WindowTitle" alt="" coords="577,112,756,141"/><area shape="rect" id="node13" href="classGame.html#afc16bd0d077c53218c27f16e0bf56cbb" title="Game::initializeStates" alt="" coords="592,165,741,195"/><area shape="rect" id="node17" href="classWindow.html#ac5ec376703205dff00ffdbae115f93b1" title="Window::getRenderer" alt="" coords="377,139,524,168"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSprite_ac82a01b98130b9b1403667059640163b_icgraph.png" border="0" usemap="#classSprite_ac82a01b98130b9b1403667059640163b_icgraph" alt=""/></div>
+<map name="classSprite_ac82a01b98130b9b1403667059640163b_icgraph" id="classSprite_ac82a01b98130b9b1403667059640163b_icgraph">
+<area shape="rect" id="node3" href="classText.html#a61dff362532c385dbc0650b397138635" title="Text::render" alt="" coords="156,5,247,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a59cf52a8669c1b91a47b00ee32a6bfaf"></a><!-- doxytag: member="Sprite::setAlpha" ref="a59cf52a8669c1b91a47b00ee32a6bfaf" args="(int alpha_)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classSprite.html#a59cf52a8669c1b91a47b00ee32a6bfaf">Sprite::setAlpha</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>alpha_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00153">153</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSprite_a59cf52a8669c1b91a47b00ee32a6bfaf_icgraph.png" border="0" usemap="#classSprite_a59cf52a8669c1b91a47b00ee32a6bfaf_icgraph" alt=""/></div>
+<map name="classSprite_a59cf52a8669c1b91a47b00ee32a6bfaf_icgraph" id="classSprite_a59cf52a8669c1b91a47b00ee32a6bfaf_icgraph">
+<area shape="rect" id="node3" href="classSprite.html#a0c5597fedd9b09878ec8acddca54c2f7" title="Sprite::Sprite" alt="" coords="168,5,267,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a5fe515e7c3a54a8d82d27612ee6dc4c4"></a><!-- doxytag: member="Sprite::setBlendMode" ref="a5fe515e7c3a54a8d82d27612ee6dc4c4" args="(SDL_BlendMode blending_)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classSprite.html#a5fe515e7c3a54a8d82d27612ee6dc4c4">Sprite::setBlendMode</a> </td>
+          <td>(</td>
+          <td class="paramtype">SDL_BlendMode&#160;</td>
+          <td class="paramname"><em>blending_</em></td><td>)</td>
+          <td><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00167">167</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSprite_a5fe515e7c3a54a8d82d27612ee6dc4c4_icgraph.png" border="0" usemap="#classSprite_a5fe515e7c3a54a8d82d27612ee6dc4c4_icgraph" alt=""/></div>
+<map name="classSprite_a5fe515e7c3a54a8d82d27612ee6dc4c4_icgraph" id="classSprite_a5fe515e7c3a54a8d82d27612ee6dc4c4_icgraph">
+<area shape="rect" id="node3" href="classSprite.html#a0c5597fedd9b09878ec8acddca54c2f7" title="Sprite::Sprite" alt="" coords="200,5,299,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ac488c471dd289b14c4c3b64937b3e42d"></a><!-- doxytag: member="Sprite::setHeight" ref="ac488c471dd289b14c4c3b64937b3e42d" args="(int height_)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classSprite.html#ac488c471dd289b14c4c3b64937b3e42d">Sprite::setHeight</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00105">105</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSprite_ac488c471dd289b14c4c3b64937b3e42d_icgraph.png" border="0" usemap="#classSprite_ac488c471dd289b14c4c3b64937b3e42d_icgraph" alt=""/></div>
+<map name="classSprite_ac488c471dd289b14c4c3b64937b3e42d_icgraph" id="classSprite_ac488c471dd289b14c4c3b64937b3e42d_icgraph">
+<area shape="rect" id="node3" href="classText.html#a3115f4a81c0c42f80768fd53c32377cd" title="Text::Text" alt="" coords="195,5,277,35"/><area shape="rect" id="node5" href="classText.html#a91b8cdda1b4527cf8ac2c25f53397e69" title="Text::changeText" alt="" coords="175,59,297,88"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aaffa2ba841e7aee9f5513777599b7450"></a><!-- doxytag: member="Sprite::setWidth" ref="aaffa2ba841e7aee9f5513777599b7450" args="(int width_)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classSprite.html#aaffa2ba841e7aee9f5513777599b7450">Sprite::setWidth</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00100">100</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSprite_aaffa2ba841e7aee9f5513777599b7450_icgraph.png" border="0" usemap="#classSprite_aaffa2ba841e7aee9f5513777599b7450_icgraph" alt=""/></div>
+<map name="classSprite_aaffa2ba841e7aee9f5513777599b7450_icgraph" id="classSprite_aaffa2ba841e7aee9f5513777599b7450_icgraph">
+<area shape="rect" id="node3" href="classText.html#a3115f4a81c0c42f80768fd53c32377cd" title="Text::Text" alt="" coords="192,5,275,35"/><area shape="rect" id="node5" href="classText.html#a91b8cdda1b4527cf8ac2c25f53397e69" title="Text::changeText" alt="" coords="172,59,295,88"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a98bb8afceb93d82270c9e5e7e8f9b49d"></a><!-- doxytag: member="Sprite::surfaceToTexture" ref="a98bb8afceb93d82270c9e5e7e8f9b49d" args="(SDL_Surface *const surface_)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_Texture * <a class="el" href="classSprite.html#a98bb8afceb93d82270c9e5e7e8f9b49d">Sprite::surfaceToTexture</a> </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Surface *const&#160;</td>
+          <td class="paramname"><em>surface_</em></td><td>)</td>
+          <td><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00110">110</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSprite_a98bb8afceb93d82270c9e5e7e8f9b49d_cgraph.png" border="0" usemap="#classSprite_a98bb8afceb93d82270c9e5e7e8f9b49d_cgraph" alt=""/></div>
+<map name="classSprite_a98bb8afceb93d82270c9e5e7e8f9b49d_cgraph" id="classSprite_a98bb8afceb93d82270c9e5e7e8f9b49d_cgraph">
+<area shape="rect" id="node3" href="classGame.html#ac213e6d3a4e566d901413f62f6408858" title="Game::instance" alt="" coords="221,85,336,115"/><area shape="rect" id="node5" href="classGame.html#ad59df6562a58a614fda24622d3715b65" title="Game::Game" alt="" coords="385,85,484,115"/><area shape="rect" id="node7" href="classConfiguration.html#a2abd3e10153cffe624981da2eedcd61a" title="Configuration::ScreenWidth" alt="" coords="536,5,717,35"/><area shape="rect" id="node9" href="classConfiguration.html#ac1b98514305ca2e97e54f9858d891488" title="Configuration::ScreenHeight" alt="" coords="533,59,720,88"/><area shape="rect" id="node11" href="classConfiguration.html#aa499bb12addd43ff8eacab01ab9e51ea" title="Configuration::WindowTitle" alt="" coords="537,112,716,141"/><area shape="rect" id="node13" href="classGame.html#afc16bd0d077c53218c27f16e0bf56cbb" title="Game::initializeStates" alt="" coords="552,165,701,195"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSprite_a98bb8afceb93d82270c9e5e7e8f9b49d_icgraph.png" border="0" usemap="#classSprite_a98bb8afceb93d82270c9e5e7e8f9b49d_icgraph" alt=""/></div>
+<map name="classSprite_a98bb8afceb93d82270c9e5e7e8f9b49d_icgraph" id="classSprite_a98bb8afceb93d82270c9e5e7e8f9b49d_icgraph">
+<area shape="rect" id="node3" href="classSprite.html#a9ba64ddfcd3f79c45b74ec1c1a16c396" title="Sprite::loadFrom" alt="" coords="223,5,340,35"/><area shape="rect" id="node5" href="classSprite.html#a0c5597fedd9b09878ec8acddca54c2f7" title="Sprite::Sprite" alt="" coords="389,5,488,35"/></map>
+</div>
+</p>
 
 </div>
 </div>
@@ -422,13 +645,12 @@ If it fails to render, logs an error message. </dd></dl>
 <li><a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a></li>
 </ul>
 </div><!-- contents -->
-</div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -437,16 +659,13 @@ If it fails to render, logs an error message. </dd></dl>
 </iframe>
 </div>
 
-  <div id="nav-path" class="navpath">
-    <ul>
-      <li class="navelem"><a class="el" href="classSprite.html">Sprite</a>      </li>
 
-    <li class="footer">Generated on Wed Jan 21 2015 20:26:22 for sdl2-engine by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
-   </ul>
- </div>
 
+<hr class="footer"/><address class="footer"><small>
+Generated on Wed Jan 21 2015 21:38:34 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.6.1
+</small></address>
 
 </body>
 </html>

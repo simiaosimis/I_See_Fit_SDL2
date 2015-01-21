@@ -7,14 +7,9 @@
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
+
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
@@ -33,7 +28,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v18</span>
+   &#160;<span id="projectnumber">v19</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -77,35 +72,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>Globals</span></a></li>
     </ul>
   </div>
 </div>
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-  initNavTree('Animation_8h.html','');
-</script>
-<div id="doc-content">
 <div class="header">
   <div class="headertitle">
 <div class="title">Animation.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#pragma once</span>
+<a href="Animation_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#pragma once</span>
 <a name="l00002"></a>00002 <span class="preprocessor"></span>
 <a name="l00003"></a>00003 <span class="preprocessor">#include &lt;SDL2/SDL.h&gt;</span>
 <a name="l00004"></a>00004 
 <a name="l00010"></a><a class="code" href="classAnimation.html">00010</a> <span class="keyword">class </span><a class="code" href="classAnimation.html">Animation</a> {
 <a name="l00011"></a>00011 
 <a name="l00012"></a>00012     <span class="keyword">public</span>:
-<a name="l00023"></a>00023         <a class="code" href="classAnimation.html#af43c723abf0f83a1bd71dd83cff7841e" title="The constructor.">Animation</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> x, <span class="keyword">const</span> <span class="keywordtype">int</span> y, <span class="keyword">const</span> <span class="keywordtype">int</span> sprite_width, <span class="keyword">const</span> <span class="keywordtype">int</span> sprite_height,
+<a name="l00023"></a>00023         <a class="code" href="classAnimation.html#af43c723abf0f83a1bd71dd83cff7841e" title="The constructor.">Animation</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> x, <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="GameObject_8cpp.html#ae14e79366f6cd3a6c78dac0de89f171d">y</a>, <span class="keyword">const</span> <span class="keywordtype">int</span> sprite_width, <span class="keyword">const</span> <span class="keywordtype">int</span> sprite_height,
 <a name="l00024"></a>00024             <span class="keyword">const</span> <span class="keywordtype">int</span> number_of_images, <span class="keyword">const</span> <span class="keywordtype">double</span> total_time);
 <a name="l00025"></a>00025 
 <a name="l00029"></a>00029         <a class="code" href="classAnimation.html#a401b68793d4fbf48d481c030ee4b2a16" title="The destructor.">~Animation</a>();
@@ -114,7 +97,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00039"></a>00039 
 <a name="l00043"></a>00043         <span class="keywordtype">int</span> <a class="code" href="classAnimation.html#af77b1bda4e1129c743da1d32197f400d">CurrentFrame</a>();
 <a name="l00044"></a>00044 
-<a name="l00051"></a>00051         <span class="keywordtype">void</span> <a class="code" href="classAnimation.html#a408200db42a46e18f478841a8ee108d4" title="Changes the dimensions of the clip on the spritesheet.">SetWidthHeight</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> width, <span class="keyword">const</span> <span class="keywordtype">int</span> height);
+<a name="l00051"></a>00051         <span class="keywordtype">void</span> <a class="code" href="classAnimation.html#a408200db42a46e18f478841a8ee108d4" title="Changes the dimensions of the clip on the spritesheet.">SetWidthHeight</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="GameObject_8cpp.html#a5c81042c75ccdf93eab164afe5a3a52b">width</a>, <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="GameObject_8cpp.html#a6fdfb731a1e9728d19b6a5920a14705f">height</a>);
 <a name="l00052"></a>00052 
 <a name="l00061"></a>00061         <span class="keywordtype">void</span> <a class="code" href="classAnimation.html#aeb9e022d9ee9d0b76e538dcfba420e4b" title="Changes the animation to another.">ChangeAnimation</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> x, <span class="keyword">const</span> <span class="keywordtype">int</span> y, <span class="keyword">const</span> <span class="keywordtype">int</span> number_of_images,
 <a name="l00062"></a>00062             <span class="keyword">const</span> <span class="keywordtype">double</span> total_time);
@@ -134,13 +117,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00084"></a><a class="code" href="classAnimation.html#a1fc4107edaf976258ad769b23bcfd172">00084</a>         <span class="keywordtype">int</span> <a class="code" href="classAnimation.html#a1fc4107edaf976258ad769b23bcfd172">m_animation_count</a>; 
 <a name="l00086"></a>00086 };
 </pre></div></div><!-- contents -->
-</div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -149,16 +131,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-  <div id="nav-path" class="navpath">
-    <ul>
-      <li class="navelem"><b>Animation.h</b>      </li>
 
-    <li class="footer">Generated on Wed Jan 21 2015 20:26:22 for sdl2-engine by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
-   </ul>
- </div>
 
+<hr class="footer"/><address class="footer"><small>
+Generated on Wed Jan 21 2015 21:38:33 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.6.1
+</small></address>
 
 </body>
 </html>

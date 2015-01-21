@@ -7,14 +7,9 @@
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
+
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
@@ -33,7 +28,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v18</span>
+   &#160;<span id="projectnumber">v19</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -78,24 +73,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
       <li><a href="classes.html"><span>Data&#160;Structure&#160;Index</span></a></li>
-      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Data&#160;Fields</span></a></li>
     </ul>
   </div>
 </div>
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-  initNavTree('classMusicManager.html','');
-</script>
-<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pri-methods">Private Member Functions</a>  </div>
@@ -103,16 +85,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">MusicManager Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<!-- doxytag: class="MusicManager" --><!-- doxytag: inherits="ResourceManager&lt; Music &gt;" --><div class="dynheader">
+<!-- doxytag: class="MusicManager" --><!-- doxytag: inherits="ResourceManager&lt; Music &gt;" -->
+<p><code>#include &lt;<a class="el" href="MusicManager_8h_source.html">MusicManager.h</a>&gt;</code></p>
+<div class="dynheader">
 Inheritance diagram for MusicManager:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="classMusicManager.png" usemap="#MusicManager_map" alt=""/>
-  <map id="MusicManager_map" name="MusicManager_map">
-<area href="classResourceManager.html" alt="ResourceManager&lt; Music &gt;" shape="rect" coords="0,56,175,80"/>
-<area href="classUncopyable.html" alt="Uncopyable" shape="rect" coords="0,0,175,24"/>
-</map>
- </div></div>
+<div class="center"><img src="classMusicManager__inherit__graph.png" border="0" usemap="#MusicManager_inherit__map" alt="Inheritance graph"/></div>
+<map name="MusicManager_inherit__map" id="MusicManager_inherit__map">
+<area shape="rect" id="node2" href="classResourceManager.html" title="ResourceManager\&lt; Music \&gt;" alt="" coords="5,181,192,211"/><area shape="rect" id="node4" href="classUncopyable.html" title="Uncopyable" alt="" coords="72,5,163,35"/><area shape="rect" id="node6" href="classResourceManager.html" title="ResourceManager\&lt; Type \&gt;" alt="" coords="115,85,296,115"/></map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -148,6 +129,15 @@ Private Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="MusicManager_8cpp_source.html#l00003">3</a> of file <a class="el" href="MusicManager_8cpp_source.html">MusicManager.cpp</a>.</p>
 
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMusicManager_a929c1db1d4d5e48744c32c47ce6b63d1_cgraph.png" border="0" usemap="#classMusicManager_a929c1db1d4d5e48744c32c47ce6b63d1_cgraph" alt=""/></div>
+<map name="classMusicManager_a929c1db1d4d5e48744c32c47ce6b63d1_cgraph" id="classMusicManager_a929c1db1d4d5e48744c32c47ce6b63d1_cgraph">
+<area shape="rect" id="node3" href="classResourceManager.html#a5e08aa5e0c56ab672011d997ff432230" title="ResourceManager\&lt; Music \&gt;::registerResource" alt="" coords="193,5,487,35"/></map>
+</div>
+</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
@@ -155,13 +145,12 @@ Private Member Functions</h2></td></tr>
 <li><a class="el" href="MusicManager_8cpp_source.html">MusicManager.cpp</a></li>
 </ul>
 </div><!-- contents -->
-</div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -170,16 +159,13 @@ Private Member Functions</h2></td></tr>
 </iframe>
 </div>
 
-  <div id="nav-path" class="navpath">
-    <ul>
-      <li class="navelem"><a class="el" href="classMusicManager.html">MusicManager</a>      </li>
 
-    <li class="footer">Generated on Wed Jan 21 2015 20:26:22 for sdl2-engine by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
-   </ul>
- </div>
 
+<hr class="footer"/><address class="footer"><small>
+Generated on Wed Jan 21 2015 21:38:34 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.6.1
+</small></address>
 
 </body>
 </html>

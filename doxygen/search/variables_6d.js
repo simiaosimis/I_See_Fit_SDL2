@@ -11,6 +11,8 @@ var searchData=
   ['m_5finitial_5fy',['m_initial_y',['../classAnimation.html#a2aff0a2348feee0d1cee57ebf3374004',1,'Animation']]],
   ['m_5flevel_5fheight',['m_level_height',['../classCamera.html#af73c54bc9e42d1808be03b6e38aa31d1',1,'Camera']]],
   ['m_5flevel_5fwidth',['m_level_width',['../classCamera.html#aa81d8ca4c419d46b95de4d296090dbf0',1,'Camera']]],
+  ['m_5flog_5flevel',['m_log_level',['../classlogger_1_1detail_1_1LogBuffer.html#a559ad65987810936bf626925e685c60a',1,'logger::detail::LogBuffer']]],
+  ['m_5flog_5fstream',['m_log_stream',['../classlogger_1_1detail_1_1LogBuffer.html#a064d43cec8f2087273038eda02b9f126',1,'logger::detail::LogBuffer']]],
   ['m_5flogical_5frender_5fsize',['m_logical_render_size',['../classConfiguration.html#a9f97605a94e90b7b8049e1ceb5e88d65',1,'Configuration']]],
   ['m_5fmax_5fframerate',['m_max_framerate',['../classConfiguration.html#aaed1a842192a49f2d08a81347122dab9',1,'Configuration']]],
   ['m_5fnumber_5fof_5fimages',['m_number_of_images',['../classAnimation.html#af4689e9b23f8d0db85f7b4c259457d04',1,'Animation']]],
@@ -24,5 +26,8 @@ var searchData=
   ['m_5ftotal_5ftime',['m_total_time',['../classAnimation.html#a685e8622d6e1e5f8728a7962c97650be',1,'Animation']]],
   ['m_5fwindow_5ftitle',['m_window_title',['../classConfiguration.html#a3655c42a88134d31265bee4470dc8db5',1,'Configuration']]],
   ['m_5fx',['m_x',['../classAnimation.html#a2865bfd75a6998dbfdef9ec236941c3f',1,'Animation']]],
-  ['m_5fy',['m_y',['../classAnimation.html#a4530e5f9e7b90e17774273c22e5212bd',1,'Animation']]]
+  ['m_5fy',['m_y',['../classAnimation.html#a4530e5f9e7b90e17774273c22e5212bd',1,'Animation']]],
+  ['mixchunk',['mixChunk',['../classSoundEffect.html#a94fc9f085d1f6d1be521ca27a7b20ffa',1,'SoundEffect']]],
+  ['mixmusic',['mixMusic',['../classMusic.html#ae3f09da38d1502e55a2eeba06a985ab0',1,'Music']]],
+  ['musicmanager',['musicManager',['../classResourceHandler.html#a7f569158f6ed33846c4afba42f2ec174',1,'ResourceHandler']]]
 ];

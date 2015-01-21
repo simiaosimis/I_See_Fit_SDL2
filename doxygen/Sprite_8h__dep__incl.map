@@ -1,0 +1,22 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$Game_8cpp.html" title="Game.cpp" alt="" coords="11,315,94,344"/>
+<area shape="rect" id="node5" href="$GameObject_8h.html" title="GameObject.h" alt="" coords="361,83,467,112"/>
+<area shape="rect" id="node21" href="$Sprite_8cpp.html" title="Sprite.cpp" alt="" coords="823,315,903,344"/>
+<area shape="rect" id="node25" href="$GStatePlaceholder_8h.html" title="GStatePlaceholder.h" alt="" coords="22,237,163,267"/>
+<area shape="rect" id="node41" href="$SpriteManager_8h.html" title="SpriteManager.h" alt="" coords="682,83,799,112"/>
+<area shape="rect" id="node7" href="$Camera_8cpp.html" title="Camera.cpp" alt="" coords="367,160,461,189"/>
+<area shape="rect" id="node9" href="$GameObject_8cpp.html" title="GameObject.cpp" alt="" coords="297,315,417,344"/>
+<area shape="rect" id="node11" href="$StateGame_8h.html" title="StateGame.h" alt="" coords="194,160,293,189"/>
+<area shape="rect" id="node31" href="$Text_8h.html" title="Text.h" alt="" coords="485,160,543,189"/>
+<area shape="rect" id="node35" href="$Collision_8h.html" title="Collision.h" alt="" coords="567,160,650,189"/>
+<area shape="rect" id="node13" href="$Game_8h.html" title="Game.h" alt="" coords="470,237,537,267"/>
+<area shape="rect" id="node29" href="$StateGame_8cpp.html" title="StateGame.cpp" alt="" coords="187,237,299,267"/>
+<area shape="rect" id="node15" href="$AudioHandler_8cpp.html" title="AudioHandler.cpp" alt="" coords="441,315,566,344"/>
+<area shape="rect" id="node19" href="$GStatePlaceholder_8cpp.html" title="GStatePlaceholder.cpp" alt="" coords="118,315,273,344"/>
+<area shape="rect" id="node23" href="$main_8cpp.html" title="main.cpp" alt="" coords="590,315,665,344"/>
+<area shape="rect" id="node33" href="$Text_8cpp.html" title="Text.cpp" alt="" coords="374,237,446,267"/>
+<area shape="rect" id="node37" href="$Collision_8cpp.html" title="Collision.cpp" alt="" coords="561,237,657,267"/>
+<area shape="rect" id="node43" href="$ResourceHandler_8h.html" title="ResourceHandler.h" alt="" coords="674,160,807,189"/>
+<area shape="rect" id="node48" href="$SpriteManager_8cpp.html" title="SpriteManager.cpp" alt="" coords="831,160,962,189"/>
+<area shape="rect" id="node46" href="$ResourceHandler_8cpp.html" title="ResourceHandler.cpp" alt="" coords="681,237,827,267"/>
+</map>

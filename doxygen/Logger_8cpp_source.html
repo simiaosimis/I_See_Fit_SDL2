@@ -7,14 +7,9 @@
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
+
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
@@ -33,7 +28,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v18</span>
+   &#160;<span id="projectnumber">v19</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -77,32 +72,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>Globals</span></a></li>
     </ul>
   </div>
 </div>
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-  initNavTree('Logger_8cpp.html','');
-</script>
-<div id="doc-content">
 <div class="header">
   <div class="headertitle">
 <div class="title">Logger.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;Logger.h&quot;</span>
+<a href="Logger_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;<a class="code" href="Logger_8h.html">Logger.h</a>&quot;</span>
 <a name="l00002"></a>00002 <span class="preprocessor">#include &lt;iostream&gt;</span>
 <a name="l00003"></a>00003 
-<a name="l00004"></a>00004 <span class="keyword">namespace </span>logger {
-<a name="l00005"></a>00005 <span class="keyword">namespace </span>detail {
+<a name="l00004"></a><a class="code" href="namespacelogger.html">00004</a> <span class="keyword">namespace </span>logger {
+<a name="l00005"></a><a class="code" href="namespacelogger_1_1detail.html">00005</a> <span class="keyword">namespace </span>detail {
 <a name="l00006"></a>00006 
 <a name="l00007"></a>00007 <span class="comment">// constexpr implies const, but const is here to stop the compiler from yelling about</span>
 <a name="l00008"></a>00008 <span class="comment">// -Wwrite-strings</span>
@@ -113,44 +96,43 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00013"></a>00013     <span class="stringliteral">&quot;[ DEBUG ]&quot;</span>
 <a name="l00014"></a>00014 };
 <a name="l00015"></a>00015 
-<a name="l00016"></a>00016 LogBuffer::LogBuffer(<span class="keyword">const</span> <span class="keywordtype">int</span> level) :
+<a name="l00016"></a><a class="code" href="classlogger_1_1detail_1_1LogBuffer.html#a79e0a1e0ccd08d28edae2d07f8cb3ea4">00016</a> <a class="code" href="classlogger_1_1detail_1_1LogBuffer.html#a79e0a1e0ccd08d28edae2d07f8cb3ea4">LogBuffer::LogBuffer</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> level) :
 <a name="l00017"></a>00017     m_log_level{level},
 <a name="l00018"></a>00018     m_log_stream{}
 <a name="l00019"></a>00019 {
 <a name="l00020"></a>00020 }
 <a name="l00021"></a>00021 
-<a name="l00022"></a>00022 LogBuffer::LogBuffer(<span class="keyword">const</span> LogBuffer&amp; log_buffer) :
+<a name="l00022"></a>00022 <a class="code" href="classlogger_1_1detail_1_1LogBuffer.html#a79e0a1e0ccd08d28edae2d07f8cb3ea4">LogBuffer::LogBuffer</a>(<span class="keyword">const</span> LogBuffer&amp; log_buffer) :
 <a name="l00023"></a>00023     m_log_level{log_buffer.m_log_level},
 <a name="l00024"></a>00024     m_log_stream{}
 <a name="l00025"></a>00025 {
 <a name="l00026"></a>00026 }
 <a name="l00027"></a>00027 
-<a name="l00028"></a>00028 LogBuffer::~LogBuffer() {
-<a name="l00029"></a>00029     std::clog &lt;&lt; k_level_color_map[m_log_level] &lt;&lt; <span class="stringliteral">&quot; - &quot;</span> &lt;&lt; m_log_stream.str() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;
+<a name="l00028"></a>00028 <a class="code" href="classlogger_1_1detail_1_1LogBuffer.html#ab67a474cae11902828ec35f4ec108149">LogBuffer::~LogBuffer</a>() {
+<a name="l00029"></a>00029     std::clog &lt;&lt; k_level_color_map[<a class="code" href="classlogger_1_1detail_1_1LogBuffer.html#a559ad65987810936bf626925e685c60a">m_log_level</a>] &lt;&lt; <span class="stringliteral">&quot; - &quot;</span> &lt;&lt; <a class="code" href="classlogger_1_1detail_1_1LogBuffer.html#a064d43cec8f2087273038eda02b9f126">m_log_stream</a>.str() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;
 <a name="l00030"></a>00030 }
 <a name="l00031"></a>00031 
 <a name="l00032"></a>00032 } <span class="comment">// namespace detail</span>
 <a name="l00033"></a>00033 
 <a name="l00034"></a>00034 <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> level&gt;
-<a name="l00035"></a>00035 detail::LogBuffer log() {
-<a name="l00036"></a>00036     detail::LogBuffer log_buffer{level};
+<a name="l00035"></a><a class="code" href="namespacelogger.html#a173509d7daada8432c64a3195ce3c079">00035</a> <a class="code" href="classlogger_1_1detail_1_1LogBuffer.html">detail::LogBuffer</a> <a class="code" href="namespacelogger.html#a173509d7daada8432c64a3195ce3c079">log</a>() {
+<a name="l00036"></a>00036     <a class="code" href="classlogger_1_1detail_1_1LogBuffer.html">detail::LogBuffer</a> log_buffer{level};
 <a name="l00037"></a>00037     <span class="keywordflow">return</span> log_buffer;
 <a name="l00038"></a>00038 }
 <a name="l00039"></a>00039 
-<a name="l00040"></a>00040 <span class="keyword">template</span> detail::LogBuffer log&lt;0&gt;();
-<a name="l00041"></a>00041 <span class="keyword">template</span> detail::LogBuffer log&lt;1&gt;();
-<a name="l00042"></a>00042 <span class="keyword">template</span> detail::LogBuffer log&lt;2&gt;();
-<a name="l00043"></a>00043 <span class="keyword">template</span> detail::LogBuffer log&lt;3&gt;();
+<a name="l00040"></a>00040 <span class="keyword">template</span> detail::LogBuffer <a class="code" href="namespacelogger.html#aa31c60f12bb8e67426d821e8951b4c53">log&lt;0&gt;</a>();
+<a name="l00041"></a>00041 <span class="keyword">template</span> detail::LogBuffer <a class="code" href="namespacelogger.html#a7ec154244b6dcd0cf5725c7fb6304f66">log&lt;1&gt;</a>();
+<a name="l00042"></a>00042 <span class="keyword">template</span> detail::LogBuffer <a class="code" href="namespacelogger.html#a8e89ff6aee81fe6086dfb4c176140864">log&lt;2&gt;</a>();
+<a name="l00043"></a>00043 <span class="keyword">template</span> detail::LogBuffer <a class="code" href="namespacelogger.html#a9b07b533ce5bc52f39ed1c5ca33689b9">log&lt;3&gt;</a>();
 <a name="l00044"></a>00044 
 <a name="l00045"></a>00045 } <span class="comment">// namespace logger</span>
 </pre></div></div><!-- contents -->
-</div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -159,16 +141,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-  <div id="nav-path" class="navpath">
-    <ul>
-      <li class="navelem"><b>Logger.cpp</b>      </li>
 
-    <li class="footer">Generated on Wed Jan 21 2015 20:26:22 for sdl2-engine by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
-   </ul>
- </div>
 
+<hr class="footer"/><address class="footer"><small>
+Generated on Wed Jan 21 2015 21:38:33 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.6.1
+</small></address>
 
 </body>
 </html>

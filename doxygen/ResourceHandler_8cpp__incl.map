@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$ResourceHandler_8h.html" title="engine/ResourceHandler.h" alt="" coords="501,83,677,112"/>
+<area shape="rect" id="node5" href="$SpriteManager_8h.html" title="graphics/SpriteManager.h" alt="" coords="319,160,489,189"/>
+<area shape="rect" id="node27" href="$MusicManager_8h.html" title="audio/MusicManager.h" alt="" coords="513,160,665,189"/>
+<area shape="rect" id="node36" href="$SFXManager_8h.html" title="audio/SFXManager.h" alt="" coords="689,160,833,189"/>
+<area shape="rect" id="node9" href="$ResourceManager_8h.html" title="core/ResourceManager.h" alt="" coords="329,237,497,267"/>
+<area shape="rect" id="node22" href="$Sprite_8h.html" title="graphics/Sprite.h" alt="" coords="185,237,305,267"/>
+<area shape="rect" id="node16" href="$Logger_8h.html" title="core/Logger.h" alt="" coords="168,315,269,344"/>
+<area shape="rect" id="node20" href="$Uncopyable_8h.html" title="util/Uncopyable.h" alt="" coords="293,315,416,344"/>
+<area shape="rect" id="node31" href="$Music_8h.html" title="audio/Music.h" alt="" coords="623,237,724,267"/>
+<area shape="rect" id="node40" href="$SoundEffect_8h.html" title="audio/SoundEffect.h" alt="" coords="799,237,937,267"/>
+</map>

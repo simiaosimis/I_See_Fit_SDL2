@@ -1,0 +1,9 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classResourceManager.html" title="ResourceManager\&lt; Type \&gt;" alt="" coords="147,71,328,100"/>
+<area shape="rect" id="node5" href="$classResourceManager.html" title="ResourceManager\&lt; Sprite \&gt;" alt="" coords="496,5,683,35"/>
+<area shape="rect" id="node9" href="$classResourceManager.html" title="ResourceManager\&lt; SoundEffect \&gt;" alt="" coords="477,80,701,109"/>
+<area shape="rect" id="node13" href="$classResourceManager.html" title="ResourceManager\&lt; Music \&gt;" alt="" coords="496,176,683,205"/>
+<area shape="rect" id="node7" href="$classSpriteManager.html" title="SpriteManager" alt="" coords="752,5,859,35"/>
+<area shape="rect" id="node11" href="$classSFXManager.html" title="SFXManager" alt="" coords="756,80,855,109"/>
+<area shape="rect" id="node15" href="$classMusicManager.html" title="MusicManager" alt="" coords="752,176,859,205"/>
+</map>

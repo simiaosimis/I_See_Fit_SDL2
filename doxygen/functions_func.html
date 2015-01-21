@@ -7,14 +7,9 @@
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
+
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
@@ -33,7 +28,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v18</span>
+   &#160;<span id="projectnumber">v19</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -78,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
       <li><a href="classes.html"><span>Data&#160;Structure&#160;Index</span></a></li>
-      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li class="current"><a href="functions.html"><span>Data&#160;Fields</span></a></li>
     </ul>
   </div>
@@ -87,7 +82,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions.html"><span>All</span></a></li>
       <li class="current"><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
       <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
+      <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
     </ul>
   </div>
   <div id="navrow4" class="tabs3">
@@ -100,6 +97,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="#index_i"><span>i</span></a></li>
       <li><a href="#index_l"><span>l</span></a></li>
       <li><a href="#index_m"><span>m</span></a></li>
+      <li><a href="#index_o"><span>o</span></a></li>
       <li><a href="#index_p"><span>p</span></a></li>
       <li><a href="#index_r"><span>r</span></a></li>
       <li><a href="#index_s"><span>s</span></a></li>
@@ -110,19 +108,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     </ul>
   </div>
 </div>
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-  initNavTree('functions_func.html','');
-</script>
-<div id="doc-content">
 <div class="contents">
 &#160;
 
@@ -170,8 +155,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>cleanGameObjects()
 : <a class="el" href="classStateGame.html#a7dd22dcc7c7474fed01942b3507f54b6">StateGame</a>
 </li>
+<li>clear()
+: <a class="el" href="classRenderer.html#ac46720b3fc0dbb2fc37674766490a8c4">Renderer</a>
+</li>
 <li>ClearChannel()
 : <a class="el" href="classAudioHandler.html#a0e3f228981eec17ede1e20368cd027bb">AudioHandler</a>
+</li>
+<li>clearKey()
+: <a class="el" href="classInputHandler.html#ac318051809c7764f010ca9d7f4b3eecd">InputHandler</a>
+</li>
+<li>clearKeyFromInput()
+: <a class="el" href="classGame.html#a598440545d40cf36982a1b551c9ec13a">Game</a>
 </li>
 <li>Clip()
 : <a class="el" href="classCamera.html#af2a2532a58347832a69bb0b7035503f8">Camera</a>
@@ -205,25 +199,52 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>get()
 : <a class="el" href="classResourceManager.html#a77ca1b172f5c8bd12e0caa7fb2f8a0ee">ResourceManager&lt; Type &gt;</a>
 </li>
+<li>getAlpha()
+: <a class="el" href="classSprite.html#a0aa4e1217226e29f1181e8d44c48dea3">Sprite</a>
+</li>
 <li>getAnimationClip()
 : <a class="el" href="classGameObject.html#a75c4556a9513069fc021a2b8d7ebfc5b">GameObject</a>
 </li>
 <li>getAudioHandler()
 : <a class="el" href="classGame.html#aefdf22987b627adf4ee9cdcc178fc11c">Game</a>
 </li>
+<li>getBoundingBox()
+: <a class="el" href="classGameObject.html#ac9f6c642c2681f19f5d9a8ea2a0b2b9b">GameObject</a>
+</li>
 <li>getHeight()
-: <a class="el" href="classSprite.html#a67b67082cfda90103d2d9eefea04cc4b">Sprite</a>
-, <a class="el" href="classGameObject.html#abdf40e2aaa71b67120eec953a1e1ca02">GameObject</a>
+: <a class="el" href="classGameObject.html#abdf40e2aaa71b67120eec953a1e1ca02">GameObject</a>
+, <a class="el" href="classSprite.html#a67b67082cfda90103d2d9eefea04cc4b">Sprite</a>
 </li>
 <li>getInput()
 : <a class="el" href="classGame.html#a76067c5eab048e88307d0a1c75328eda">Game</a>
 </li>
 <li>getKeyStates()
-: <a class="el" href="classInputHandler.html#af7087290a2fd7d973a47768049cfe5eb">InputHandler</a>
+: <a class="el" href="classControllerHandler.html#a1c4161545fdc54bf1d406f6acd2d67d6">ControllerHandler</a>
+, <a class="el" href="classInputHandler.html#af7087290a2fd7d973a47768049cfe5eb">InputHandler</a>
+</li>
+<li>getLogicalSize()
+: <a class="el" href="classRenderer.html#a72be652b574eb9e917bf057d58b7f0db">Renderer</a>
+</li>
+<li>getMixChunk()
+: <a class="el" href="classSoundEffect.html#a2e0945e1a16acc410daffa9f0f001a5a">SoundEffect</a>
+</li>
+<li>getMixMusic()
+: <a class="el" href="classMusic.html#a09a2f7858a7487f1838e64f2e9dac330">Music</a>
+</li>
+<li>getPath()
+: <a class="el" href="classMusic.html#ab69332e32ab15a77d2c16cee0d457092">Music</a>
+, <a class="el" href="classSoundEffect.html#a3c6762a7ee716530da078986039e3231">SoundEffect</a>
+, <a class="el" href="classSprite.html#a38399275797600991cd2d95cc803fa0a">Sprite</a>
 </li>
 <li>getRenderer()
 : <a class="el" href="classGame.html#af4f1ce14a3cf7017942fdf0d183d24c3">Game</a>
 , <a class="el" href="classWindow.html#ac5ec376703205dff00ffdbae115f93b1">Window</a>
+</li>
+<li>getResource()
+: <a class="el" href="classGame.html#a0a5dc2bb1e4b2b80415919aa20cce38f">Game</a>
+</li>
+<li>getSdlRenderer()
+: <a class="el" href="classRenderer.html#ac10f6cf7dc7a1f9b8c0d8dea9a9c0c0e">Renderer</a>
 </li>
 <li>getWidth()
 : <a class="el" href="classGameObject.html#a7394724b15f0adae7938d27c749bda67">GameObject</a>
@@ -267,12 +288,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classMusicManager.html#a929c1db1d4d5e48744c32c47ce6b63d1">MusicManager</a>
 , <a class="el" href="classSFXManager.html#a61c913d68e0448dbaa3f11ff35026907">SFXManager</a>
 , <a class="el" href="classGStatePlaceholder.html#ac61770a40ac7b0ab200da46e731fa127">GStatePlaceholder</a>
-, <a class="el" href="classSpriteManager.html#ac2ca573f7d0c3c84fe487a5c16a305fa">SpriteManager</a>
 , <a class="el" href="classStateGame.html#a924e531e28b8afcbb82858eecef0a084">StateGame</a>
 , <a class="el" href="classResourceManager.html#ad089e00823733954471f0719e8498a2f">ResourceManager&lt; Type &gt;</a>
+, <a class="el" href="classSpriteManager.html#ac2ca573f7d0c3c84fe487a5c16a305fa">SpriteManager</a>
 </li>
 <li>loadFrom()
 : <a class="el" href="classSprite.html#a9ba64ddfcd3f79c45b74ec1c1a16c396">Sprite</a>
+</li>
+<li>LogBuffer()
+: <a class="el" href="classlogger_1_1detail_1_1LogBuffer.html#a79e0a1e0ccd08d28edae2d07f8cb3ea4">logger::detail::LogBuffer</a>
 </li>
 <li>LogicalRenderSize()
 : <a class="el" href="classConfiguration.html#a87978aa3909e9063f84a27e058018e70">Configuration</a>
@@ -292,6 +316,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>music()
 : <a class="el" href="classResourceHandler.html#a4d57a631c9906f50669d17a65fb1822d">ResourceHandler</a>
+</li>
+<li>Music()
+: <a class="el" href="classMusic.html#aacd7ffd6e4ac39cbc10d8a840b5becd6">Music</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_o"></a>- o -</h3><ul>
+<li>operator&lt;&lt;()
+: <a class="el" href="classlogger_1_1detail_1_1LogBuffer.html#ac543860574e693ce05240bb3c257fbb9">logger::detail::LogBuffer</a>
+</li>
+<li>operator=()
+: <a class="el" href="classUncopyable.html#a5a4f91e3216bd655de910722ef3ee8d0">Uncopyable</a>
 </li>
 </ul>
 
@@ -324,19 +361,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>render()
 : <a class="el" href="classGameObject.html#a74a00ec966eaa99bff468e0ba8efc754">GameObject</a>
+, <a class="el" href="classSprite.html#ac82a01b98130b9b1403667059640163b">Sprite</a>
 , <a class="el" href="classText.html#a61dff362532c385dbc0650b397138635">Text</a>
 , <a class="el" href="classGStatePlaceholder.html#aac74087ca575c21a54e85733b58fb5be">GStatePlaceholder</a>
 , <a class="el" href="classStateGame.html#a9e181e234d99aa11beead047152a8e92">StateGame</a>
-, <a class="el" href="classSprite.html#ac82a01b98130b9b1403667059640163b">Sprite</a>
+, <a class="el" href="classRenderer.html#af7e5f8f68742f198e315fb4683a605a4">Renderer</a>
+</li>
+<li>Renderer()
+: <a class="el" href="classRenderer.html#a4f4ab8fd8822434b7a6d303140155192">Renderer</a>
 </li>
 <li>resize()
 : <a class="el" href="classWindow.html#a89f8973f8f24e570d0f79782f6da8957">Window</a>
+</li>
+<li>resizeWindow()
+: <a class="el" href="classGame.html#a47dd061c2db24fbb31535f8cba53c632">Game</a>
 </li>
 <li>ResolutionHeight()
 : <a class="el" href="classConfiguration.html#a002ef2d0a384e4d7ff04dd2d16ae3172">Configuration</a>
 </li>
 <li>ResolutionWidth()
 : <a class="el" href="classConfiguration.html#aa55f2fb145dfe12ecc91eb2f76b6e0a8">Configuration</a>
+</li>
+<li>ResourceHandler()
+: <a class="el" href="classResourceHandler.html#a0a33aab3f38dba04b5dc3f4496d324df">ResourceHandler</a>
 </li>
 <li>ResumeEffects()
 : <a class="el" href="classAudioHandler.html#a3a6c5eefbbc868edb1ca3c0ab5dfc2cd">AudioHandler</a>
@@ -357,8 +404,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>ScreenWidth()
 : <a class="el" href="classConfiguration.html#a2abd3e10153cffe624981da2eedcd61a">Configuration</a>
 </li>
+<li>setAlpha()
+: <a class="el" href="classSprite.html#a59cf52a8669c1b91a47b00ee32a6bfaf">Sprite</a>
+</li>
+<li>setBlendMode()
+: <a class="el" href="classSprite.html#a5fe515e7c3a54a8d82d27612ee6dc4c4">Sprite</a>
+</li>
 <li>SetEffectsVolume()
 : <a class="el" href="classAudioHandler.html#acf4391313c0582dd3c213ad56b49b0b8">AudioHandler</a>
+</li>
+<li>setHeight()
+: <a class="el" href="classSprite.html#ac488c471dd289b14c4c3b64937b3e42d">Sprite</a>
 </li>
 <li>SetLevelDimensions()
 : <a class="el" href="classCamera.html#a4ad2b8241bc293d27cea0de5377c1b70">Camera</a>
@@ -372,11 +428,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>SetMusicVolume()
 : <a class="el" href="classAudioHandler.html#ac0f46319c59b177c99bfb37f4b53f20d">AudioHandler</a>
 </li>
+<li>setWidth()
+: <a class="el" href="classSprite.html#aaffa2ba841e7aee9f5513777599b7450">Sprite</a>
+</li>
 <li>SetWidthHeight()
 : <a class="el" href="classAnimation.html#a408200db42a46e18f478841a8ee108d4">Animation</a>
 </li>
 <li>signalExit()
 : <a class="el" href="classInputHandler.html#ae3546fa674d3db49d755b4047503f4e8">InputHandler</a>
+</li>
+<li>SoundEffect()
+: <a class="el" href="classSoundEffect.html#a0f775fa70348fcfe00c7abc113a4aae6">SoundEffect</a>
 </li>
 <li>soundEffect()
 : <a class="el" href="classResourceHandler.html#a9fd518ee03e07304d82d0b8422e12f42">ResourceHandler</a>
@@ -393,6 +455,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>StopMusic()
 : <a class="el" href="classAudioHandler.html#a7c6ecf8a46d19c3d4440f61f048df8e2">AudioHandler</a>
 </li>
+<li>surfaceToTexture()
+: <a class="el" href="classSprite.html#a98bb8afceb93d82270c9e5e7e8f9b49d">Sprite</a>
+</li>
 </ul>
 
 
@@ -400,32 +465,34 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>Text()
 : <a class="el" href="classText.html#a3115f4a81c0c42f80768fd53c32377cd">Text</a>
 </li>
+<li>toString()
+: <a class="el" href="classUtil.html#abcbcb5f6c525d10679dc0656d391f560">Util</a>
+</li>
 </ul>
 
 
 <h3><a class="anchor" id="index_u"></a>- u -</h3><ul>
+<li>Uncopyable()
+: <a class="el" href="classUncopyable.html#a6d493b6c92f001b8f136c2ae07161ff4">Uncopyable</a>
+</li>
 <li>unload()
-: <a class="el" href="classGStatePlaceholder.html#ab2b6a671368d55c5437a658cc9bca44d">GStatePlaceholder</a>
-, <a class="el" href="classStateGame.html#aa215f7b6d37658dead89448afacc713d">StateGame</a>
+: <a class="el" href="classStateGame.html#aa215f7b6d37658dead89448afacc713d">StateGame</a>
+, <a class="el" href="classGStatePlaceholder.html#ab2b6a671368d55c5437a658cc9bca44d">GStatePlaceholder</a>
 </li>
 <li>unregisterResource()
 : <a class="el" href="classResourceManager.html#a99af4d3a53a604f5c3161a6b72d37ae1">ResourceManager&lt; Type &gt;</a>
 </li>
 <li>update()
-: <a class="el" href="classText.html#a84093d4d7ac0cc29c1c9ef8c7fe99f76">Text</a>
-</li>
-<li>Update()
-: <a class="el" href="classAnimation.html#ae252ccc56d5bc314891406d1c35d0960">Animation</a>
-</li>
-<li>update()
-: <a class="el" href="classGStatePlaceholder.html#a943b34fe563ef4de7a433b5b813ede13">GStatePlaceholder</a>
-, <a class="el" href="classStateGame.html#a300539fe737d6bbab4b4d6fe4b6a2e98">StateGame</a>
+: <a class="el" href="classGameObject.html#a1126cbf1a45d95a536fc244e65eb9183">GameObject</a>
+, <a class="el" href="classGStatePlaceholder.html#a943b34fe563ef4de7a433b5b813ede13">GStatePlaceholder</a>
 </li>
 <li>Update()
 : <a class="el" href="classCamera.html#a4a596a3ea1fdc7d244ba4268031a360b">Camera</a>
+, <a class="el" href="classAnimation.html#ae252ccc56d5bc314891406d1c35d0960">Animation</a>
 </li>
 <li>update()
-: <a class="el" href="classGameObject.html#a1126cbf1a45d95a536fc244e65eb9183">GameObject</a>
+: <a class="el" href="classStateGame.html#a300539fe737d6bbab4b4d6fe4b6a2e98">StateGame</a>
+, <a class="el" href="classText.html#a84093d4d7ac0cc29c1c9ef8c7fe99f76">Text</a>
 </li>
 <li>UpdateClip()
 : <a class="el" href="classAnimation.html#ac50d5816cd4a1acdf83a98945a1b57ca">Animation</a>
@@ -471,14 +538,35 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>~InputHandler()
 : <a class="el" href="classInputHandler.html#ac1f7efb54b34d433d6ffba62627452b6">InputHandler</a>
 </li>
+<li>~LogBuffer()
+: <a class="el" href="classlogger_1_1detail_1_1LogBuffer.html#ab67a474cae11902828ec35f4ec108149">logger::detail::LogBuffer</a>
+</li>
+<li>~Music()
+: <a class="el" href="classMusic.html#a0b4f3b9a018207e0c08003505f1f87fe">Music</a>
+</li>
+<li>~Renderer()
+: <a class="el" href="classRenderer.html#afeee408862d5bd6255a6882d47e6d5cd">Renderer</a>
+</li>
+<li>~ResourceHandler()
+: <a class="el" href="classResourceHandler.html#a7d4d3c48a55160ea08b281636580595b">ResourceHandler</a>
+</li>
 <li>~ResourceManager()
 : <a class="el" href="classResourceManager.html#a1758182dd90a749408409215ed985be4">ResourceManager&lt; Type &gt;</a>
+</li>
+<li>~SoundEffect()
+: <a class="el" href="classSoundEffect.html#a5e03a7a8eb4c5b9d0548fb178b76a44c">SoundEffect</a>
 </li>
 <li>~Sprite()
 : <a class="el" href="classSprite.html#a8accab430f9d90ae5117b57d67e32b84">Sprite</a>
 </li>
 <li>~StateGame()
 : <a class="el" href="classStateGame.html#afbdf7c96f1f13b3686a744fd7ca97949">StateGame</a>
+</li>
+<li>~Text()
+: <a class="el" href="classText.html#a2d49e5c280e205125b149f7777ae30c7">Text</a>
+</li>
+<li>~Uncopyable()
+: <a class="el" href="classUncopyable.html#a1d888f1e1e9574d674bddb5a2a648ed1">Uncopyable</a>
 </li>
 <li>~Window()
 : <a class="el" href="classWindow.html#a245d821e6016fa1f6970ccbbedd635f6">Window</a>
@@ -490,7 +578,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -499,16 +587,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-</div>
-  <div id="nav-path" class="navpath">
-    <ul>
 
-    <li class="footer">Generated on Wed Jan 21 2015 20:26:22 for sdl2-engine by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
-   </ul>
- </div>
 
+<hr class="footer"/><address class="footer"><small>
+Generated on Wed Jan 21 2015 21:38:34 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.6.1
+</small></address>
 
 </body>
 </html>

@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classRenderer.html#a96027c5201ec4056ec97f0f396e083fb" title="Renderer::setLogicalSize" alt="" coords="192,32,360,61"/>
+<area shape="rect" id="node9" href="$classConfiguration.html#a87978aa3909e9063f84a27e058018e70" title="Configuration::LogicalRenderSize" alt="" coords="168,85,384,115"/>
+<area shape="rect" id="node5" href="$classConfiguration.html#aa55f2fb145dfe12ecc91eb2f76b6e0a8" title="Configuration::ResolutionWidth" alt="" coords="435,5,637,35"/>
+<area shape="rect" id="node7" href="$classConfiguration.html#a002ef2d0a384e4d7ff04dd2d16ae3172" title="Configuration::ResolutionHeight" alt="" coords="433,59,639,88"/>
+</map>

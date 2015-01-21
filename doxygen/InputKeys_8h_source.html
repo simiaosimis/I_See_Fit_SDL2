@@ -7,14 +7,9 @@
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
+
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
@@ -33,7 +28,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v18</span>
+   &#160;<span id="projectnumber">v19</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -77,46 +72,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>Globals</span></a></li>
     </ul>
   </div>
 </div>
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-  initNavTree('InputKeys_8h.html','');
-</script>
-<div id="doc-content">
 <div class="header">
   <div class="headertitle">
 <div class="title">InputKeys.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#pragma once</span>
+<a href="InputKeys_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#pragma once</span>
 <a name="l00002"></a>00002 <span class="preprocessor"></span>
-<a name="l00003"></a>00003 <span class="keyword">enum</span> GameKeys {
-<a name="l00004"></a>00004     UP = 0,
-<a name="l00005"></a>00005     LEFT,
-<a name="l00006"></a>00006     RIGHT,
-<a name="l00007"></a>00007     DOWN,
-<a name="l00008"></a>00008     SPACE,
-<a name="l00009"></a>00009     ESCAPE,
-<a name="l00010"></a>00010     MAX
+<a name="l00003"></a><a class="code" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5e">00003</a> <span class="keyword">enum</span> <a class="code" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5e">GameKeys</a> {
+<a name="l00004"></a><a class="code" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5eaba595d8bca8bc5e67c37c0a9d89becfa">00004</a>     <a class="code" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5eaba595d8bca8bc5e67c37c0a9d89becfa">UP</a> = 0,
+<a name="l00005"></a><a class="code" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5eadb45120aafd37a973140edee24708065">00005</a>     <a class="code" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5eadb45120aafd37a973140edee24708065">LEFT</a>,
+<a name="l00006"></a><a class="code" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5eaec8379af7490bb9eaaf579cf17876f38">00006</a>     <a class="code" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5eaec8379af7490bb9eaaf579cf17876f38">RIGHT</a>,
+<a name="l00007"></a><a class="code" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5ea9b0b4a95b99523966e0e34ffdadac9da">00007</a>     <a class="code" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5ea9b0b4a95b99523966e0e34ffdadac9da">DOWN</a>,
+<a name="l00008"></a><a class="code" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5eac08dae7edcb5c5bb959fee5971fbad95">00008</a>     <a class="code" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5eac08dae7edcb5c5bb959fee5971fbad95">SPACE</a>,
+<a name="l00009"></a><a class="code" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5ea0a311695a4f6c56869245418bebeb33d">00009</a>     <a class="code" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5ea0a311695a4f6c56869245418bebeb33d">ESCAPE</a>,
+<a name="l00010"></a><a class="code" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5ead7e097bda6d981de2520f49fe74c25b7">00010</a>     <a class="code" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5ead7e097bda6d981de2520f49fe74c25b7">MAX</a>
 <a name="l00011"></a>00011 };
 </pre></div></div><!-- contents -->
-</div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -125,16 +107,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-  <div id="nav-path" class="navpath">
-    <ul>
-      <li class="navelem"><b>InputKeys.h</b>      </li>
 
-    <li class="footer">Generated on Wed Jan 21 2015 20:26:22 for sdl2-engine by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
-   </ul>
- </div>
 
+<hr class="footer"/><address class="footer"><small>
+Generated on Wed Jan 21 2015 21:38:33 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.6.1
+</small></address>
 
 </body>
 </html>

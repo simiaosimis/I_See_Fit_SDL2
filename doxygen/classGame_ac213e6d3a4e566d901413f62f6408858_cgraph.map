@@ -1,0 +1,7 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classGame.html#ad59df6562a58a614fda24622d3715b65" title="Game::Game" alt="" coords="169,85,268,115"/>
+<area shape="rect" id="node5" href="$classConfiguration.html#a2abd3e10153cffe624981da2eedcd61a" title="Configuration::ScreenWidth" alt="" coords="320,5,501,35"/>
+<area shape="rect" id="node7" href="$classConfiguration.html#ac1b98514305ca2e97e54f9858d891488" title="Configuration::ScreenHeight" alt="" coords="317,59,504,88"/>
+<area shape="rect" id="node9" href="$classConfiguration.html#aa499bb12addd43ff8eacab01ab9e51ea" title="Configuration::WindowTitle" alt="" coords="321,112,500,141"/>
+<area shape="rect" id="node11" href="$classGame.html#afc16bd0d077c53218c27f16e0bf56cbb" title="Game::initializeStates" alt="" coords="336,165,485,195"/>
+</map>

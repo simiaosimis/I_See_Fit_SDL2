@@ -7,14 +7,9 @@
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
+
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
@@ -33,7 +28,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v18</span>
+   &#160;<span id="projectnumber">v19</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -78,24 +73,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
       <li><a href="classes.html"><span>Data&#160;Structure&#160;Index</span></a></li>
-      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Data&#160;Fields</span></a></li>
     </ul>
   </div>
 </div>
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-  initNavTree('classRenderer.html','');
-</script>
-<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -104,20 +86,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Renderer Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<!-- doxytag: class="Renderer" --><table class="memberdecls">
+<!-- doxytag: class="Renderer" -->
+<p><code>#include &lt;<a class="el" href="Renderer_8h_source.html">Renderer.h</a>&gt;</code></p>
+<table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4f4ab8fd8822434b7a6d303140155192"></a><!-- doxytag: member="Renderer::Renderer" ref="a4f4ab8fd8822434b7a6d303140155192" args="(SDL_Window *const sdlWindow_, const Uint32 flags_)" -->
-&#160;</td><td class="memItemRight" valign="bottom"><b>Renderer</b> (SDL_Window *const sdlWindow_, const Uint32 flags_)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac46720b3fc0dbb2fc37674766490a8c4"></a><!-- doxytag: member="Renderer::clear" ref="ac46720b3fc0dbb2fc37674766490a8c4" args="()" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af7e5f8f68742f198e315fb4683a605a4"></a><!-- doxytag: member="Renderer::render" ref="af7e5f8f68742f198e315fb4683a605a4" args="()" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>render</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderer.html#a4f4ab8fd8822434b7a6d303140155192">Renderer</a> (SDL_Window *const sdlWindow_, const Uint32 flags_)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderer.html#afeee408862d5bd6255a6882d47e6d5cd">~Renderer</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderer.html#ac46720b3fc0dbb2fc37674766490a8c4">clear</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderer.html#af7e5f8f68742f198e315fb4683a605a4">render</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderer.html#a96027c5201ec4056ec97f0f396e083fb">setLogicalSize</a> (int size_)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a72be652b574eb9e917bf057d58b7f0db"></a><!-- doxytag: member="Renderer::getLogicalSize" ref="a72be652b574eb9e917bf057d58b7f0db" args="(int *w, int *h)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>getLogicalSize</b> (int *w, int *h)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac10f6cf7dc7a1f9b8c0d8dea9a9c0c0e"></a><!-- doxytag: member="Renderer::getSdlRenderer" ref="ac10f6cf7dc7a1f9b8c0d8dea9a9c0c0e" args="()" -->
-SDL_Renderer *&#160;</td><td class="memItemRight" valign="bottom"><b>getSdlRenderer</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderer.html#a72be652b574eb9e917bf057d58b7f0db">getLogicalSize</a> (int *w, int *h)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">SDL_Renderer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderer.html#ac10f6cf7dc7a1f9b8c0d8dea9a9c0c0e">getSdlRenderer</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">SDL_Renderer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderer.html#a785de8b89acc27606fb022ce19bb1080">sdlRenderer</a></td></tr>
@@ -125,7 +105,174 @@ Private Attributes</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
 <p>Definition at line <a class="el" href="Renderer_8h_source.html#l00005">5</a> of file <a class="el" href="Renderer_8h_source.html">Renderer.h</a>.</p>
-</div><hr/><h2>Member Function Documentation</h2>
+</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a4f4ab8fd8822434b7a6d303140155192"></a><!-- doxytag: member="Renderer::Renderer" ref="a4f4ab8fd8822434b7a6d303140155192" args="(SDL_Window *const sdlWindow_, const Uint32 flags_)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRenderer.html#a4f4ab8fd8822434b7a6d303140155192">Renderer::Renderer</a> </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Window *const&#160;</td>
+          <td class="paramname"><em>sdlWindow_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Uint32&#160;</td>
+          <td class="paramname"><em>flags_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="Renderer_8cpp_source.html#l00006">6</a> of file <a class="el" href="Renderer_8cpp_source.html">Renderer.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afeee408862d5bd6255a6882d47e6d5cd"></a><!-- doxytag: member="Renderer::~Renderer" ref="afeee408862d5bd6255a6882d47e6d5cd" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRenderer.html#afeee408862d5bd6255a6882d47e6d5cd">Renderer::~Renderer</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="Renderer_8cpp_source.html#l00015">15</a> of file <a class="el" href="Renderer_8cpp_source.html">Renderer.cpp</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="ac46720b3fc0dbb2fc37674766490a8c4"></a><!-- doxytag: member="Renderer::clear" ref="ac46720b3fc0dbb2fc37674766490a8c4" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classRenderer.html#ac46720b3fc0dbb2fc37674766490a8c4">Renderer::clear</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="Renderer_8cpp_source.html#l00021">21</a> of file <a class="el" href="Renderer_8cpp_source.html">Renderer.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classRenderer_ac46720b3fc0dbb2fc37674766490a8c4_icgraph.png" border="0" usemap="#classRenderer_ac46720b3fc0dbb2fc37674766490a8c4_icgraph" alt=""/></div>
+<map name="classRenderer_ac46720b3fc0dbb2fc37674766490a8c4_icgraph" id="classRenderer_ac46720b3fc0dbb2fc37674766490a8c4_icgraph">
+<area shape="rect" id="node3" href="classGame.html#abc9436a9d18e48c6e1e4fbc4ea879449" title="Game::runGame" alt="" coords="167,5,284,35"/><area shape="rect" id="node5" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="333,5,384,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a72be652b574eb9e917bf057d58b7f0db"></a><!-- doxytag: member="Renderer::getLogicalSize" ref="a72be652b574eb9e917bf057d58b7f0db" args="(int *w, int *h)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classRenderer.html#a72be652b574eb9e917bf057d58b7f0db">Renderer::getLogicalSize</a> </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>h</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="Renderer_8cpp_source.html#l00052">52</a> of file <a class="el" href="Renderer_8cpp_source.html">Renderer.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classRenderer_a72be652b574eb9e917bf057d58b7f0db_icgraph.png" border="0" usemap="#classRenderer_a72be652b574eb9e917bf057d58b7f0db_icgraph" alt=""/></div>
+<map name="classRenderer_a72be652b574eb9e917bf057d58b7f0db_icgraph" id="classRenderer_a72be652b574eb9e917bf057d58b7f0db_icgraph">
+<area shape="rect" id="node3" href="classSprite.html#ac82a01b98130b9b1403667059640163b" title="Sprite::render" alt="" coords="223,5,321,35"/><area shape="rect" id="node5" href="classText.html#a61dff362532c385dbc0650b397138635" title="Text::render" alt="" coords="372,5,463,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ac10f6cf7dc7a1f9b8c0d8dea9a9c0c0e"></a><!-- doxytag: member="Renderer::getSdlRenderer" ref="ac10f6cf7dc7a1f9b8c0d8dea9a9c0c0e" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_Renderer * <a class="el" href="classRenderer.html#ac10f6cf7dc7a1f9b8c0d8dea9a9c0c0e">Renderer::getSdlRenderer</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="Renderer_8cpp_source.html#l00060">60</a> of file <a class="el" href="Renderer_8cpp_source.html">Renderer.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classRenderer_ac10f6cf7dc7a1f9b8c0d8dea9a9c0c0e_icgraph.png" border="0" usemap="#classRenderer_ac10f6cf7dc7a1f9b8c0d8dea9a9c0c0e_icgraph" alt=""/></div>
+<map name="classRenderer_ac10f6cf7dc7a1f9b8c0d8dea9a9c0c0e_icgraph" id="classRenderer_ac10f6cf7dc7a1f9b8c0d8dea9a9c0c0e_icgraph">
+<area shape="rect" id="node3" href="classSprite.html#ac82a01b98130b9b1403667059640163b" title="Sprite::render" alt="" coords="228,5,327,35"/><area shape="rect" id="node5" href="classText.html#a61dff362532c385dbc0650b397138635" title="Text::render" alt="" coords="377,5,468,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="af7e5f8f68742f198e315fb4683a605a4"></a><!-- doxytag: member="Renderer::render" ref="af7e5f8f68742f198e315fb4683a605a4" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classRenderer.html#af7e5f8f68742f198e315fb4683a605a4">Renderer::render</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="Renderer_8cpp_source.html#l00033">33</a> of file <a class="el" href="Renderer_8cpp_source.html">Renderer.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classRenderer_af7e5f8f68742f198e315fb4683a605a4_icgraph.png" border="0" usemap="#classRenderer_af7e5f8f68742f198e315fb4683a605a4_icgraph" alt=""/></div>
+<map name="classRenderer_af7e5f8f68742f198e315fb4683a605a4_icgraph" id="classRenderer_af7e5f8f68742f198e315fb4683a605a4_icgraph">
+<area shape="rect" id="node3" href="classGame.html#abc9436a9d18e48c6e1e4fbc4ea879449" title="Game::runGame" alt="" coords="175,5,292,35"/><area shape="rect" id="node5" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="341,5,392,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="a96027c5201ec4056ec97f0f396e083fb"></a><!-- doxytag: member="Renderer::setLogicalSize" ref="a96027c5201ec4056ec97f0f396e083fb" args="(int size_)" -->
 <div class="memitem">
 <div class="memproto">
@@ -152,6 +299,24 @@ Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Renderer_8cpp_source.html#l00037">37</a> of file <a class="el" href="Renderer_8cpp_source.html">Renderer.cpp</a>.</p>
 
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classRenderer_a96027c5201ec4056ec97f0f396e083fb_cgraph.png" border="0" usemap="#classRenderer_a96027c5201ec4056ec97f0f396e083fb_cgraph" alt=""/></div>
+<map name="classRenderer_a96027c5201ec4056ec97f0f396e083fb_cgraph" id="classRenderer_a96027c5201ec4056ec97f0f396e083fb_cgraph">
+<area shape="rect" id="node3" href="classConfiguration.html#aa55f2fb145dfe12ecc91eb2f76b6e0a8" title="Configuration::ResolutionWidth" alt="" coords="224,5,427,35"/><area shape="rect" id="node5" href="classConfiguration.html#a002ef2d0a384e4d7ff04dd2d16ae3172" title="Configuration::ResolutionHeight" alt="" coords="223,59,428,88"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classRenderer_a96027c5201ec4056ec97f0f396e083fb_icgraph.png" border="0" usemap="#classRenderer_a96027c5201ec4056ec97f0f396e083fb_icgraph" alt=""/></div>
+<map name="classRenderer_a96027c5201ec4056ec97f0f396e083fb_icgraph" id="classRenderer_a96027c5201ec4056ec97f0f396e083fb_icgraph">
+<area shape="rect" id="node3" href="classWindow.html#a7a1d09805521f508601c01cb7f851820" title="Window::create" alt="" coords="223,5,335,35"/><area shape="rect" id="node5" href="classWindow.html#aefac177bf15e963dea94b5555140c23d" title="Window::Window" alt="" coords="385,5,508,35"/></map>
+</div>
+</p>
+
 </div>
 </div>
 <hr/><h2>Field Documentation</h2>
@@ -176,13 +341,12 @@ Private Attributes</h2></td></tr>
 <li><a class="el" href="Renderer_8cpp_source.html">Renderer.cpp</a></li>
 </ul>
 </div><!-- contents -->
-</div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -191,16 +355,13 @@ Private Attributes</h2></td></tr>
 </iframe>
 </div>
 
-  <div id="nav-path" class="navpath">
-    <ul>
-      <li class="navelem"><a class="el" href="classRenderer.html">Renderer</a>      </li>
 
-    <li class="footer">Generated on Wed Jan 21 2015 20:26:22 for sdl2-engine by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
-   </ul>
- </div>
 
+<hr class="footer"/><address class="footer"><small>
+Generated on Wed Jan 21 2015 21:38:34 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.6.1
+</small></address>
 
 </body>
 </html>

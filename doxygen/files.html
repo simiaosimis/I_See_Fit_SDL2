@@ -7,14 +7,9 @@
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
+
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
@@ -33,7 +28,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v18</span>
+   &#160;<span id="projectnumber">v19</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -77,81 +72,69 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li class="current"><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>Globals</span></a></li>
     </ul>
   </div>
 </div>
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-  initNavTree('files.html','');
-</script>
-<div id="doc-content">
 <div class="header">
   <div class="headertitle">
 <div class="title">File List</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock">Here is a list of all documented files with brief descriptions:</div><table>
-  <tr><td class="indexkey"><b>Animation.cpp</b> <a href="Animation_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>Animation.h</b> <a href="Animation_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>AudioHandler.cpp</b> <a href="AudioHandler_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>AudioHandler.h</b> <a href="AudioHandler_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>Camera.cpp</b> <a href="Camera_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>Camera.h</b> <a href="Camera_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>Collision.cpp</b> <a href="Collision_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>Collision.h</b> <a href="Collision_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>Configuration.cpp</b> <a href="Configuration_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>Configuration.h</b> <a href="Configuration_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>ControllerHandler.cpp</b> <a href="ControllerHandler_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>ControllerHandler.h</b> <a href="ControllerHandler_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>Game.cpp</b> <a href="Game_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>Game.h</b> <a href="Game_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>GameObject.cpp</b> <a href="GameObject_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>GameObject.h</b> <a href="GameObject_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>GStatePlaceholder.cpp</b> <a href="GStatePlaceholder_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>GStatePlaceholder.h</b> <a href="GStatePlaceholder_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>InputHandler.cpp</b> <a href="InputHandler_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>InputHandler.h</b> <a href="InputHandler_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>InputKeys.h</b> <a href="InputKeys_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>Logger.cpp</b> <a href="Logger_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>Logger.h</b> <a href="Logger_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>main.cpp</b> <a href="main_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>Music.cpp</b> <a href="Music_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>Music.h</b> <a href="Music_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>MusicManager.cpp</b> <a href="MusicManager_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>MusicManager.h</b> <a href="MusicManager_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>Renderer.cpp</b> <a href="Renderer_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>Renderer.h</b> <a href="Renderer_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>ResourceHandler.cpp</b> <a href="ResourceHandler_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>ResourceHandler.h</b> <a href="ResourceHandler_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>ResourceManager.h</b> <a href="ResourceManager_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>SDL_Systems.cpp</b> <a href="SDL__Systems_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>SDL_Systems.h</b> <a href="SDL__Systems_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>SFXManager.cpp</b> <a href="SFXManager_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>SFXManager.h</b> <a href="SFXManager_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>SoundEffect.cpp</b> <a href="SoundEffect_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>SoundEffect.h</b> <a href="SoundEffect_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>Sprite.cpp</b> <a href="Sprite_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>Sprite.h</b> <a href="Sprite_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>SpriteManager.cpp</b> <a href="SpriteManager_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>SpriteManager.h</b> <a href="SpriteManager_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>StateGame.cpp</b> <a href="StateGame_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>StateGame.h</b> <a href="StateGame_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>Text.cpp</b> <a href="Text_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>Text.h</b> <a href="Text_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>Uncopyable.h</b> <a href="Uncopyable_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>Util.cpp</b> <a href="Util_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>Util.h</b> <a href="Util_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>WELCOME.md</b> <a href="WELCOME_8md_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>Window.cpp</b> <a href="Window_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><b>Window.h</b> <a href="Window_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+<div class="textblock">Here is a list of all files with brief descriptions:</div><table>
+  <tr><td class="indexkey"><a class="el" href="Animation_8cpp.html">Animation.cpp</a> <a href="Animation_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="Animation_8h.html">Animation.h</a> <a href="Animation_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="AudioHandler_8cpp.html">AudioHandler.cpp</a> <a href="AudioHandler_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="AudioHandler_8h.html">AudioHandler.h</a> <a href="AudioHandler_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="Camera_8cpp.html">Camera.cpp</a> <a href="Camera_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="Camera_8h.html">Camera.h</a> <a href="Camera_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="Collision_8cpp.html">Collision.cpp</a> <a href="Collision_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="Collision_8h.html">Collision.h</a> <a href="Collision_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="Configuration_8cpp.html">Configuration.cpp</a> <a href="Configuration_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="Configuration_8h.html">Configuration.h</a> <a href="Configuration_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="ControllerHandler_8cpp.html">ControllerHandler.cpp</a> <a href="ControllerHandler_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="ControllerHandler_8h.html">ControllerHandler.h</a> <a href="ControllerHandler_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="Game_8cpp.html">Game.cpp</a> <a href="Game_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="Game_8h.html">Game.h</a> <a href="Game_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="GameObject_8cpp.html">GameObject.cpp</a> <a href="GameObject_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="GameObject_8h.html">GameObject.h</a> <a href="GameObject_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="GStatePlaceholder_8cpp.html">GStatePlaceholder.cpp</a> <a href="GStatePlaceholder_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="GStatePlaceholder_8h.html">GStatePlaceholder.h</a> <a href="GStatePlaceholder_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="InputHandler_8cpp.html">InputHandler.cpp</a> <a href="InputHandler_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="InputHandler_8h.html">InputHandler.h</a> <a href="InputHandler_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="InputKeys_8h.html">InputKeys.h</a> <a href="InputKeys_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="Logger_8cpp.html">Logger.cpp</a> <a href="Logger_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="Logger_8h.html">Logger.h</a> <a href="Logger_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="main_8cpp.html">main.cpp</a> <a href="main_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="Music_8cpp.html">Music.cpp</a> <a href="Music_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="Music_8h.html">Music.h</a> <a href="Music_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="MusicManager_8cpp.html">MusicManager.cpp</a> <a href="MusicManager_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="MusicManager_8h.html">MusicManager.h</a> <a href="MusicManager_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="Renderer_8cpp.html">Renderer.cpp</a> <a href="Renderer_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="Renderer_8h.html">Renderer.h</a> <a href="Renderer_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="ResourceHandler_8cpp.html">ResourceHandler.cpp</a> <a href="ResourceHandler_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="ResourceHandler_8h.html">ResourceHandler.h</a> <a href="ResourceHandler_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="ResourceManager_8h.html">ResourceManager.h</a> <a href="ResourceManager_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="SDL__Systems_8cpp.html">SDL_Systems.cpp</a> <a href="SDL__Systems_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="SDL__Systems_8h.html">SDL_Systems.h</a> <a href="SDL__Systems_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="SFXManager_8cpp.html">SFXManager.cpp</a> <a href="SFXManager_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="SFXManager_8h.html">SFXManager.h</a> <a href="SFXManager_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="SoundEffect_8cpp.html">SoundEffect.cpp</a> <a href="SoundEffect_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="SoundEffect_8h.html">SoundEffect.h</a> <a href="SoundEffect_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="Sprite_8cpp.html">Sprite.cpp</a> <a href="Sprite_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="Sprite_8h.html">Sprite.h</a> <a href="Sprite_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="SpriteManager_8cpp.html">SpriteManager.cpp</a> <a href="SpriteManager_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="SpriteManager_8h.html">SpriteManager.h</a> <a href="SpriteManager_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="StateGame_8cpp.html">StateGame.cpp</a> <a href="StateGame_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="StateGame_8h.html">StateGame.h</a> <a href="StateGame_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="Text_8cpp.html">Text.cpp</a> <a href="Text_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="Text_8h.html">Text.h</a> <a href="Text_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="Uncopyable_8h.html">Uncopyable.h</a> <a href="Uncopyable_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="Util_8cpp.html">Util.cpp</a> <a href="Util_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="Util_8h.html">Util.h</a> <a href="Util_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="WELCOME_8md.html">WELCOME.md</a> <a href="WELCOME_8md_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="Window_8cpp.html">Window.cpp</a> <a href="Window_8cpp_source.html">[code]</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="Window_8h.html">Window.h</a> <a href="Window_8h_source.html">[code]</a></td><td class="indexvalue"></td></tr>
 </table>
 </div><!-- contents -->
 <!-- window showing the filter options -->
@@ -159,7 +142,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -168,16 +151,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-</div>
-  <div id="nav-path" class="navpath">
-    <ul>
 
-    <li class="footer">Generated on Wed Jan 21 2015 20:26:22 for sdl2-engine by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
-   </ul>
- </div>
 
+<hr class="footer"/><address class="footer"><small>
+Generated on Wed Jan 21 2015 21:38:34 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.6.1
+</small></address>
 
 </body>
 </html>

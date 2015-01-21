@@ -7,14 +7,9 @@
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
+
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
@@ -33,7 +28,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v18</span>
+   &#160;<span id="projectnumber">v19</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -78,24 +73,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
       <li><a href="classes.html"><span>Data&#160;Structure&#160;Index</span></a></li>
-      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Data&#160;Fields</span></a></li>
     </ul>
   </div>
 </div>
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-  initNavTree('classControllerHandler.html','');
-</script>
-<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -112,11 +94,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControllerHandler.html#a2a6b8a51a3165d65606addb743f45964">ControllerHandler</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControllerHandler.html#a33f16779eef5a5304b64fbd3303386a7">~ControllerHandler</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControllerHandler.html#a79e2adab7291ab5589e907860d046046">handleInput</a> (SDL_Event &amp;sdlEvent_)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1c4161545fdc54bf1d406f6acd2d67d6"></a><!-- doxytag: member="ControllerHandler::getKeyStates" ref="a1c4161545fdc54bf1d406f6acd2d67d6" args="()" -->
-std::array&lt; bool, GameKeys::MAX &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getKeyStates</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::array&lt; bool, <a class="el" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5ead7e097bda6d981de2520f49fe74c25b7">GameKeys::MAX</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControllerHandler.html#a1c4161545fdc54bf1d406f6acd2d67d6">getKeyStates</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">std::array&lt; bool, GameKeys::MAX &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControllerHandler.html#ac40f0381dd876419404a52a7d1b515d6">keyStates</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::array&lt; bool, <a class="el" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5ead7e097bda6d981de2520f49fe74c25b7">GameKeys::MAX</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControllerHandler.html#ac40f0381dd876419404a52a7d1b515d6">keyStates</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">SDL_GameController *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControllerHandler.html#a65bbcf23b90f3ab1b4087acd136518b2">gameController</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
@@ -163,6 +144,33 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a1c4161545fdc54bf1d406f6acd2d67d6"></a><!-- doxytag: member="ControllerHandler::getKeyStates" ref="a1c4161545fdc54bf1d406f6acd2d67d6" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt; bool, <a class="el" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5ead7e097bda6d981de2520f49fe74c25b7">GameKeys::MAX</a> &gt; <a class="el" href="classControllerHandler.html#a1c4161545fdc54bf1d406f6acd2d67d6">ControllerHandler::getKeyStates</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="ControllerHandler_8cpp_source.html#l00189">189</a> of file <a class="el" href="ControllerHandler_8cpp_source.html">ControllerHandler.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classControllerHandler_a1c4161545fdc54bf1d406f6acd2d67d6_icgraph.png" border="0" usemap="#classControllerHandler_a1c4161545fdc54bf1d406f6acd2d67d6_icgraph" alt=""/></div>
+<map name="classControllerHandler_a1c4161545fdc54bf1d406f6acd2d67d6_icgraph" id="classControllerHandler_a1c4161545fdc54bf1d406f6acd2d67d6_icgraph">
+<area shape="rect" id="node3" href="classInputHandler.html#a820f483265aa3f6da39b9d93c1311966" title="InputHandler::handleInput" alt="" coords="264,5,435,35"/><area shape="rect" id="node5" href="classGame.html#abc9436a9d18e48c6e1e4fbc4ea879449" title="Game::runGame" alt="" coords="484,5,601,35"/><area shape="rect" id="node7" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="651,5,701,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="a79e2adab7291ab5589e907860d046046"></a><!-- doxytag: member="ControllerHandler::handleInput" ref="a79e2adab7291ab5589e907860d046046" args="(SDL_Event &amp;sdlEvent_)" -->
 <div class="memitem">
 <div class="memproto">
@@ -186,6 +194,15 @@ Private Attributes</h2></td></tr>
 </dl>
 
 <p>Definition at line <a class="el" href="ControllerHandler_8cpp_source.html#l00023">23</a> of file <a class="el" href="ControllerHandler_8cpp_source.html">ControllerHandler.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classControllerHandler_a79e2adab7291ab5589e907860d046046_icgraph.png" border="0" usemap="#classControllerHandler_a79e2adab7291ab5589e907860d046046_icgraph" alt=""/></div>
+<map name="classControllerHandler_a79e2adab7291ab5589e907860d046046_icgraph" id="classControllerHandler_a79e2adab7291ab5589e907860d046046_icgraph">
+<area shape="rect" id="node3" href="classInputHandler.html#a820f483265aa3f6da39b9d93c1311966" title="InputHandler::handleInput" alt="" coords="253,5,424,35"/><area shape="rect" id="node5" href="classGame.html#abc9436a9d18e48c6e1e4fbc4ea879449" title="Game::runGame" alt="" coords="473,5,591,35"/><area shape="rect" id="node7" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="640,5,691,35"/></map>
+</div>
+</p>
 
 </div>
 </div>
@@ -211,7 +228,7 @@ Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::array&lt;bool, GameKeys::MAX&gt; <a class="el" href="classControllerHandler.html#ac40f0381dd876419404a52a7d1b515d6">ControllerHandler::keyStates</a><code> [private]</code></td>
+          <td class="memname">std::array&lt;bool, <a class="el" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5ead7e097bda6d981de2520f49fe74c25b7">GameKeys::MAX</a>&gt; <a class="el" href="classControllerHandler.html#ac40f0381dd876419404a52a7d1b515d6">ControllerHandler::keyStates</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
@@ -227,13 +244,12 @@ Private Attributes</h2></td></tr>
 <li><a class="el" href="ControllerHandler_8cpp_source.html">ControllerHandler.cpp</a></li>
 </ul>
 </div><!-- contents -->
-</div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -242,16 +258,13 @@ Private Attributes</h2></td></tr>
 </iframe>
 </div>
 
-  <div id="nav-path" class="navpath">
-    <ul>
-      <li class="navelem"><a class="el" href="classControllerHandler.html">ControllerHandler</a>      </li>
 
-    <li class="footer">Generated on Wed Jan 21 2015 20:26:22 for sdl2-engine by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
-   </ul>
- </div>
 
+<hr class="footer"/><address class="footer"><small>
+Generated on Wed Jan 21 2015 21:38:34 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.6.1
+</small></address>
 
 </body>
 </html>

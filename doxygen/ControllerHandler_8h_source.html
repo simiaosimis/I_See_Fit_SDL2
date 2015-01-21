@@ -7,14 +7,9 @@
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
+
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
@@ -33,7 +28,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v18</span>
+   &#160;<span id="projectnumber">v19</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -77,72 +72,60 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>Globals</span></a></li>
     </ul>
   </div>
 </div>
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-  initNavTree('ControllerHandler_8h.html','');
-</script>
-<div id="doc-content">
 <div class="header">
   <div class="headertitle">
 <div class="title">ControllerHandler.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#pragma once</span>
+<a href="ControllerHandler_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#pragma once</span>
 <a name="l00002"></a>00002 <span class="preprocessor"></span>
-<a name="l00003"></a>00003 <span class="preprocessor">#define CONTROLLERSTICK_DEAD_ZONE 8000</span>
-<a name="l00004"></a>00004 <span class="preprocessor"></span><span class="preprocessor">#define TRIGGER_DEAD_ZONE 8000</span>
+<a name="l00003"></a><a class="code" href="ControllerHandler_8h.html#abe9dee917d4bf7fc35da6983a3d5c960">00003</a> <span class="preprocessor">#define CONTROLLERSTICK_DEAD_ZONE 8000</span>
+<a name="l00004"></a><a class="code" href="ControllerHandler_8h.html#a21465bd61a15247f747581e6728bea4f">00004</a> <span class="preprocessor"></span><span class="preprocessor">#define TRIGGER_DEAD_ZONE 8000</span>
 <a name="l00005"></a>00005 <span class="preprocessor"></span>
 <a name="l00006"></a>00006 <span class="preprocessor">#include &lt;SDL2/SDL.h&gt;</span>
-<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;InputKeys.h&quot;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="InputKeys_8h.html">InputKeys.h</a>&quot;</span>
 <a name="l00008"></a>00008 <span class="preprocessor">#include &lt;array&gt;</span>
 <a name="l00009"></a>00009 
-<a name="l00010"></a>00010 <span class="keyword">namespace </span>controllerMap {
+<a name="l00010"></a><a class="code" href="namespacecontrollerMap.html">00010</a> <span class="keyword">namespace </span>controllerMap {
 <a name="l00011"></a>00011 
-<a name="l00016"></a>00016     <span class="keyword">enum</span> buttons {
-<a name="l00017"></a>00017         FACE_DOWN, <span class="comment">// X on PS4 controller - 0</span>
-<a name="l00018"></a>00018         FACE_RIGHT, <span class="comment">// O on PS4 controller - 1</span>
-<a name="l00019"></a>00019         FACE_LEFT, <span class="comment">// [] on PS4 controller - 2</span>
-<a name="l00020"></a>00020         FACE_UP, <span class="comment">// /\ on PS4 controller - 3</span>
+<a name="l00016"></a><a class="code" href="namespacecontrollerMap.html#aa4094854a8f9b7f96ce1e052d6c06223">00016</a>     <span class="keyword">enum</span> <a class="code" href="namespacecontrollerMap.html#aa4094854a8f9b7f96ce1e052d6c06223">buttons</a> {
+<a name="l00017"></a><a class="code" href="namespacecontrollerMap.html#aa4094854a8f9b7f96ce1e052d6c06223abd261bd7409ad323797074c7f39bed5e">00017</a>         <a class="code" href="namespacecontrollerMap.html#aa4094854a8f9b7f96ce1e052d6c06223abd261bd7409ad323797074c7f39bed5e">FACE_DOWN</a>, <span class="comment">// X on PS4 controller - 0</span>
+<a name="l00018"></a><a class="code" href="namespacecontrollerMap.html#aa4094854a8f9b7f96ce1e052d6c06223a71d97b4206e23886d1feedc46e088123">00018</a>         <a class="code" href="namespacecontrollerMap.html#aa4094854a8f9b7f96ce1e052d6c06223a71d97b4206e23886d1feedc46e088123">FACE_RIGHT</a>, <span class="comment">// O on PS4 controller - 1</span>
+<a name="l00019"></a><a class="code" href="namespacecontrollerMap.html#aa4094854a8f9b7f96ce1e052d6c06223a9dcae81738b2aa28afc64c5241a32b18">00019</a>         <a class="code" href="namespacecontrollerMap.html#aa4094854a8f9b7f96ce1e052d6c06223a9dcae81738b2aa28afc64c5241a32b18">FACE_LEFT</a>, <span class="comment">// [] on PS4 controller - 2</span>
+<a name="l00020"></a><a class="code" href="namespacecontrollerMap.html#aa4094854a8f9b7f96ce1e052d6c06223ae2efa01fc8f78e906648bd24fcc18b01">00020</a>         <a class="code" href="namespacecontrollerMap.html#aa4094854a8f9b7f96ce1e052d6c06223ae2efa01fc8f78e906648bd24fcc18b01">FACE_UP</a>, <span class="comment">// /\ on PS4 controller - 3</span>
 <a name="l00021"></a>00021 
-<a name="l00022"></a>00022         SELECT, <span class="comment">// SHARE on PS4 controller - 4</span>
-<a name="l00023"></a>00023         HOME, <span class="comment">// PS Button on PS4 controller - 5</span>
-<a name="l00024"></a>00024         START, <span class="comment">// OPTIONS on PS4 controller - 6</span>
+<a name="l00022"></a><a class="code" href="namespacecontrollerMap.html#aa4094854a8f9b7f96ce1e052d6c06223aad20e8c6876eef835bc2b4e441d345fb">00022</a>         <a class="code" href="namespacecontrollerMap.html#aa4094854a8f9b7f96ce1e052d6c06223aad20e8c6876eef835bc2b4e441d345fb">SELECT</a>, <span class="comment">// SHARE on PS4 controller - 4</span>
+<a name="l00023"></a><a class="code" href="namespacecontrollerMap.html#aa4094854a8f9b7f96ce1e052d6c06223ad8bb47425a83827ffc83fa5aefe38a27">00023</a>         <a class="code" href="namespacecontrollerMap.html#aa4094854a8f9b7f96ce1e052d6c06223ad8bb47425a83827ffc83fa5aefe38a27">HOME</a>, <span class="comment">// PS Button on PS4 controller - 5</span>
+<a name="l00024"></a><a class="code" href="namespacecontrollerMap.html#aa4094854a8f9b7f96ce1e052d6c06223a517cf2c92105d32bdf09d502839f1d89">00024</a>         <a class="code" href="namespacecontrollerMap.html#aa4094854a8f9b7f96ce1e052d6c06223a517cf2c92105d32bdf09d502839f1d89">START</a>, <span class="comment">// OPTIONS on PS4 controller - 6</span>
 <a name="l00025"></a>00025 
-<a name="l00026"></a>00026         L3, <span class="comment">// Left analogue button - 7</span>
-<a name="l00027"></a>00027         R3, <span class="comment">// Right analogue button  - 8</span>
+<a name="l00026"></a><a class="code" href="namespacecontrollerMap.html#aa4094854a8f9b7f96ce1e052d6c06223abca3d8b5e03ca1550bc15f3adf507eb5">00026</a>         <a class="code" href="namespacecontrollerMap.html#aa4094854a8f9b7f96ce1e052d6c06223abca3d8b5e03ca1550bc15f3adf507eb5">L3</a>, <span class="comment">// Left analogue button - 7</span>
+<a name="l00027"></a><a class="code" href="namespacecontrollerMap.html#aa4094854a8f9b7f96ce1e052d6c06223a6f1f6b04adb19e8ba2730e6ec9af8998">00027</a>         <a class="code" href="namespacecontrollerMap.html#aa4094854a8f9b7f96ce1e052d6c06223a6f1f6b04adb19e8ba2730e6ec9af8998">R3</a>, <span class="comment">// Right analogue button  - 8</span>
 <a name="l00028"></a>00028 
-<a name="l00029"></a>00029         LDTRIGGER, <span class="comment">// Left Digital Trigger - 9</span>
-<a name="l00030"></a>00030         RDTRIGGER, <span class="comment">// Right Digital Trigger  - 10</span>
+<a name="l00029"></a><a class="code" href="namespacecontrollerMap.html#aa4094854a8f9b7f96ce1e052d6c06223a026f0cb18450d72ac63c0d331aa0e31a">00029</a>         <a class="code" href="namespacecontrollerMap.html#aa4094854a8f9b7f96ce1e052d6c06223a026f0cb18450d72ac63c0d331aa0e31a">LDTRIGGER</a>, <span class="comment">// Left Digital Trigger - 9</span>
+<a name="l00030"></a><a class="code" href="namespacecontrollerMap.html#aa4094854a8f9b7f96ce1e052d6c06223a64ebffa97acc4e45b55f96da31ab2db5">00030</a>         <a class="code" href="namespacecontrollerMap.html#aa4094854a8f9b7f96ce1e052d6c06223a64ebffa97acc4e45b55f96da31ab2db5">RDTRIGGER</a>, <span class="comment">// Right Digital Trigger  - 10</span>
 <a name="l00031"></a>00031 
-<a name="l00032"></a>00032         DUP, <span class="comment">// D-Pad up - 11</span>
-<a name="l00033"></a>00033         DDOWN, <span class="comment">// D-Pad down - 12</span>
-<a name="l00034"></a>00034         DLEFT, <span class="comment">// D-Pad left - 13</span>
-<a name="l00035"></a>00035         DRIGHT, <span class="comment">// D-Pad rigth - 14</span>
+<a name="l00032"></a><a class="code" href="namespacecontrollerMap.html#aa4094854a8f9b7f96ce1e052d6c06223a98a20febf7c18a3502329b77623f74d7">00032</a>         <a class="code" href="namespacecontrollerMap.html#aa4094854a8f9b7f96ce1e052d6c06223a98a20febf7c18a3502329b77623f74d7">DUP</a>, <span class="comment">// D-Pad up - 11</span>
+<a name="l00033"></a><a class="code" href="namespacecontrollerMap.html#aa4094854a8f9b7f96ce1e052d6c06223a48a63fcb05fb565e339a5f660d94d67a">00033</a>         <a class="code" href="namespacecontrollerMap.html#aa4094854a8f9b7f96ce1e052d6c06223a48a63fcb05fb565e339a5f660d94d67a">DDOWN</a>, <span class="comment">// D-Pad down - 12</span>
+<a name="l00034"></a><a class="code" href="namespacecontrollerMap.html#aa4094854a8f9b7f96ce1e052d6c06223a79b2fdf14dc742c0705f488d2b4e956c">00034</a>         <a class="code" href="namespacecontrollerMap.html#aa4094854a8f9b7f96ce1e052d6c06223a79b2fdf14dc742c0705f488d2b4e956c">DLEFT</a>, <span class="comment">// D-Pad left - 13</span>
+<a name="l00035"></a><a class="code" href="namespacecontrollerMap.html#aa4094854a8f9b7f96ce1e052d6c06223a54f47a4fb86e6332b4aa3f6492fbc0ab">00035</a>         <a class="code" href="namespacecontrollerMap.html#aa4094854a8f9b7f96ce1e052d6c06223a54f47a4fb86e6332b4aa3f6492fbc0ab">DRIGHT</a>, <span class="comment">// D-Pad rigth - 14</span>
 <a name="l00036"></a>00036 
-<a name="l00037"></a>00037         PRESSED,
-<a name="l00038"></a>00038         RELEASED
+<a name="l00037"></a><a class="code" href="namespacecontrollerMap.html#aa4094854a8f9b7f96ce1e052d6c06223a9224eec070528ed805f56cada07b8ea1">00037</a>         <a class="code" href="namespacecontrollerMap.html#aa4094854a8f9b7f96ce1e052d6c06223a9224eec070528ed805f56cada07b8ea1">PRESSED</a>,
+<a name="l00038"></a><a class="code" href="namespacecontrollerMap.html#aa4094854a8f9b7f96ce1e052d6c06223a03e9c2bb00ff1e9194e589c998bcef49">00038</a>         <a class="code" href="namespacecontrollerMap.html#aa4094854a8f9b7f96ce1e052d6c06223a03e9c2bb00ff1e9194e589c998bcef49">RELEASED</a>
 <a name="l00039"></a>00039     };
 <a name="l00040"></a>00040 
-<a name="l00041"></a>00041     <span class="keyword">enum</span> axes {
-<a name="l00042"></a>00042         LHORIZONTAL, <span class="comment">// Left Analogue Stick X - 0</span>
-<a name="l00043"></a>00043         LVERTICAL, <span class="comment">// Left Analogue Stick Y - 1</span>
+<a name="l00041"></a><a class="code" href="namespacecontrollerMap.html#aade78d90d7679ba903121afd7fcceabe">00041</a>     <span class="keyword">enum</span> <a class="code" href="namespacecontrollerMap.html#aade78d90d7679ba903121afd7fcceabe">axes</a> {
+<a name="l00042"></a><a class="code" href="namespacecontrollerMap.html#aade78d90d7679ba903121afd7fcceabea22d1b4517d5b6854e33f0308ac42e46b">00042</a>         <a class="code" href="namespacecontrollerMap.html#aade78d90d7679ba903121afd7fcceabea22d1b4517d5b6854e33f0308ac42e46b">LHORIZONTAL</a>, <span class="comment">// Left Analogue Stick X - 0</span>
+<a name="l00043"></a><a class="code" href="namespacecontrollerMap.html#aade78d90d7679ba903121afd7fcceabea85db7abe2e7376d4cc2e6078bff341f2">00043</a>         <a class="code" href="namespacecontrollerMap.html#aade78d90d7679ba903121afd7fcceabea85db7abe2e7376d4cc2e6078bff341f2">LVERTICAL</a>, <span class="comment">// Left Analogue Stick Y - 1</span>
 <a name="l00044"></a>00044 
-<a name="l00045"></a>00045         RHORIZONTAL, <span class="comment">// Left Analogue Stick X - 2</span>
-<a name="l00046"></a>00046         RVERTICAL, <span class="comment">// Left Analogue Stick Y - 3</span>
+<a name="l00045"></a><a class="code" href="namespacecontrollerMap.html#aade78d90d7679ba903121afd7fcceabea56472a4034d53c6aa7b6088bb89b6159">00045</a>         <a class="code" href="namespacecontrollerMap.html#aade78d90d7679ba903121afd7fcceabea56472a4034d53c6aa7b6088bb89b6159">RHORIZONTAL</a>, <span class="comment">// Left Analogue Stick X - 2</span>
+<a name="l00046"></a><a class="code" href="namespacecontrollerMap.html#aade78d90d7679ba903121afd7fcceabea760b029449c986769c9b9923096e1265">00046</a>         <a class="code" href="namespacecontrollerMap.html#aade78d90d7679ba903121afd7fcceabea760b029449c986769c9b9923096e1265">RVERTICAL</a>, <span class="comment">// Left Analogue Stick Y - 3</span>
 <a name="l00047"></a>00047 
-<a name="l00048"></a>00048         LATRIGGER, <span class="comment">// Left Analogue Trigger - 4</span>
-<a name="l00049"></a>00049         RATRIGGER <span class="comment">// Left Analogue Trigger Y - 5</span>
+<a name="l00048"></a><a class="code" href="namespacecontrollerMap.html#aade78d90d7679ba903121afd7fcceabea895dc8f76e86ec47ec8a733b018c9f29">00048</a>         <a class="code" href="namespacecontrollerMap.html#aade78d90d7679ba903121afd7fcceabea895dc8f76e86ec47ec8a733b018c9f29">LATRIGGER</a>, <span class="comment">// Left Analogue Trigger - 4</span>
+<a name="l00049"></a><a class="code" href="namespacecontrollerMap.html#aade78d90d7679ba903121afd7fcceabeaa592786e4392bc9e4a1c90039f447b47">00049</a>         <a class="code" href="namespacecontrollerMap.html#aade78d90d7679ba903121afd7fcceabeaa592786e4392bc9e4a1c90039f447b47">RATRIGGER</a> <span class="comment">// Left Analogue Trigger Y - 5</span>
 <a name="l00050"></a>00050     };
 <a name="l00051"></a>00051 }
 <a name="l00052"></a>00052 
@@ -155,20 +138,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00069"></a>00069 
 <a name="l00076"></a>00076         <span class="keywordtype">void</span> <a class="code" href="classControllerHandler.html#a79e2adab7291ab5589e907860d046046">handleInput</a>(SDL_Event&amp; sdlEvent_);
 <a name="l00077"></a>00077 
-<a name="l00078"></a>00078         std::array&lt;bool, GameKeys::MAX&gt; getKeyStates();
+<a name="l00078"></a>00078         std::array&lt;bool, GameKeys::MAX&gt; <a class="code" href="classControllerHandler.html#a1c4161545fdc54bf1d406f6acd2d67d6">getKeyStates</a>();
 <a name="l00079"></a>00079 
 <a name="l00080"></a>00080     <span class="keyword">private</span>:
 <a name="l00081"></a><a class="code" href="classControllerHandler.html#ac40f0381dd876419404a52a7d1b515d6">00081</a>         std::array&lt;bool, GameKeys::MAX&gt; <a class="code" href="classControllerHandler.html#ac40f0381dd876419404a52a7d1b515d6">keyStates</a>; 
 <a name="l00084"></a><a class="code" href="classControllerHandler.html#a65bbcf23b90f3ab1b4087acd136518b2">00084</a>         SDL_GameController* <a class="code" href="classControllerHandler.html#a65bbcf23b90f3ab1b4087acd136518b2">gameController</a>; 
 <a name="l00086"></a>00086 };
 </pre></div></div><!-- contents -->
-</div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -177,16 +159,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-  <div id="nav-path" class="navpath">
-    <ul>
-      <li class="navelem"><b>ControllerHandler.h</b>      </li>
 
-    <li class="footer">Generated on Wed Jan 21 2015 20:26:22 for sdl2-engine by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
-   </ul>
- </div>
 
+<hr class="footer"/><address class="footer"><small>
+Generated on Wed Jan 21 2015 21:38:33 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.6.1
+</small></address>
 
 </body>
 </html>

@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classStateGame.html#aa215f7b6d37658dead89448afacc713d" title="StateGame::unload" alt="" coords="193,5,327,35"/>
+<area shape="rect" id="node7" href="$classStateGame.html#a924e531e28b8afcbb82858eecef0a084" title="StateGame::load" alt="" coords="200,59,320,88"/>
+<area shape="rect" id="node5" href="$classStateGame.html#a7dd22dcc7c7474fed01942b3507f54b6" title="StateGame::cleanGameObjects" alt="" coords="377,5,583,35"/>
+</map>

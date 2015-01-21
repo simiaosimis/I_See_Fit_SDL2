@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classGame.html#ad59df6562a58a614fda24622d3715b65" title="Game::Game" alt="" coords="241,59,340,88"/>
+<area shape="rect" id="node5" href="$classGame.html#ac213e6d3a4e566d901413f62f6408858" title="Game::instance" alt="" coords="389,59,504,88"/>
+<area shape="rect" id="node7" href="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="611,5,661,35"/>
+<area shape="rect" id="node9" href="$classSprite.html#ac82a01b98130b9b1403667059640163b" title="Sprite::render" alt="" coords="587,59,685,88"/>
+<area shape="rect" id="node13" href="$classSprite.html#a98bb8afceb93d82270c9e5e7e8f9b49d" title="Sprite::surfaceToTexture" alt="" coords="553,112,719,141"/>
+<area shape="rect" id="node11" href="$classText.html#a61dff362532c385dbc0650b397138635" title="Text::render" alt="" coords="783,59,873,88"/>
+<area shape="rect" id="node15" href="$classSprite.html#a9ba64ddfcd3f79c45b74ec1c1a16c396" title="Sprite::loadFrom" alt="" coords="769,112,887,141"/>
+<area shape="rect" id="node17" href="$classSprite.html#a0c5597fedd9b09878ec8acddca54c2f7" title="Sprite::Sprite" alt="" coords="936,112,1035,141"/>
+</map>

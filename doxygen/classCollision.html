@@ -7,14 +7,9 @@
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
+
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
@@ -33,7 +28,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v18</span>
+   &#160;<span id="projectnumber">v19</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -78,24 +73,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
       <li><a href="classes.html"><span>Data&#160;Structure&#160;Index</span></a></li>
-      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Data&#160;Fields</span></a></li>
     </ul>
   </div>
 </div>
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-  initNavTree('classCollision.html','');
-</script>
-<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
@@ -110,12 +92,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCollision.html#ad0cb871520c093a590edbc9606ff0850">RectangleSide</a> { <br/>
-&#160;&#160;<b>TOP</b> =  0, 
-<b>BOTTOM</b>, 
-<b>LEFT</b>, 
-<b>RIGHT</b>, 
+&#160;&#160;<a class="el" href="classCollision.html#ad0cb871520c093a590edbc9606ff0850ab3585528912fcffefd91466901f5084a">TOP</a> =  0, 
+<a class="el" href="classCollision.html#ad0cb871520c093a590edbc9606ff0850a367442e81d48643a0e2656137f0c14f8">BOTTOM</a>, 
+<a class="el" href="classCollision.html#ad0cb871520c093a590edbc9606ff0850a40ce8f929fa88db7a8180880de3647ac">LEFT</a>, 
+<a class="el" href="classCollision.html#ad0cb871520c093a590edbc9606ff0850a5c829c9373cb66b9147da30571213aff">RIGHT</a>, 
 <br/>
-&#160;&#160;<b>NONE</b>
+&#160;&#160;<a class="el" href="classCollision.html#ad0cb871520c093a590edbc9606ff0850ab92ccbc24e2c5a8f725d19b70045a453">NONE</a>
 <br/>
  }</td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
@@ -139,6 +121,20 @@ Static Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 <p>Possible sides a rectangle can collide. </p>
+<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="ad0cb871520c093a590edbc9606ff0850ab3585528912fcffefd91466901f5084a"></a><!-- doxytag: member="TOP" ref="ad0cb871520c093a590edbc9606ff0850ab3585528912fcffefd91466901f5084a" args="" -->TOP</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="ad0cb871520c093a590edbc9606ff0850a367442e81d48643a0e2656137f0c14f8"></a><!-- doxytag: member="BOTTOM" ref="ad0cb871520c093a590edbc9606ff0850a367442e81d48643a0e2656137f0c14f8" args="" -->BOTTOM</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="ad0cb871520c093a590edbc9606ff0850a40ce8f929fa88db7a8180880de3647ac"></a><!-- doxytag: member="LEFT" ref="ad0cb871520c093a590edbc9606ff0850a40ce8f929fa88db7a8180880de3647ac" args="" -->LEFT</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="ad0cb871520c093a590edbc9606ff0850a5c829c9373cb66b9147da30571213aff"></a><!-- doxytag: member="RIGHT" ref="ad0cb871520c093a590edbc9606ff0850a5c829c9373cb66b9147da30571213aff" args="" -->RIGHT</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="ad0cb871520c093a590edbc9606ff0850ab92ccbc24e2c5a8f725d19b70045a453"></a><!-- doxytag: member="NONE" ref="ad0cb871520c093a590edbc9606ff0850ab92ccbc24e2c5a8f725d19b70045a453" args="" -->NONE</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dd>
+</dl>
 
 <p>Definition at line <a class="el" href="Collision_8h_source.html#l00015">15</a> of file <a class="el" href="Collision_8h_source.html">Collision.h</a>.</p>
 
@@ -222,13 +218,12 @@ Static Public Member Functions</h2></td></tr>
 <li><a class="el" href="Collision_8cpp_source.html">Collision.cpp</a></li>
 </ul>
 </div><!-- contents -->
-</div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -237,16 +232,13 @@ Static Public Member Functions</h2></td></tr>
 </iframe>
 </div>
 
-  <div id="nav-path" class="navpath">
-    <ul>
-      <li class="navelem"><a class="el" href="classCollision.html">Collision</a>      </li>
 
-    <li class="footer">Generated on Wed Jan 21 2015 20:26:22 for sdl2-engine by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
-   </ul>
- </div>
 
+<hr class="footer"/><address class="footer"><small>
+Generated on Wed Jan 21 2015 21:38:34 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.6.1
+</small></address>
 
 </body>
 </html>

@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classControllerHandler.html#a79e2adab7291ab5589e907860d046046" title="ControllerHandler::handleInput" alt="" coords="231,5,428,35"/>
+<area shape="rect" id="node5" href="$classControllerHandler.html#a1c4161545fdc54bf1d406f6acd2d67d6" title="ControllerHandler::getKeyStates" alt="" coords="224,59,435,88"/>
+<area shape="rect" id="node7" href="$classInputHandler.html#ae3546fa674d3db49d755b4047503f4e8" title="InputHandler::signalExit" alt="" coords="249,112,409,141"/>
+</map>

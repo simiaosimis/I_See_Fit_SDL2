@@ -1,0 +1,27 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$AudioHandler_8cpp.html" title="AudioHandler.cpp" alt="" coords="5,392,131,421"/>
+<area shape="rect" id="node5" href="$Music_8cpp.html" title="Music.cpp" alt="" coords="913,83,996,112"/>
+<area shape="rect" id="node7" href="$SoundEffect_8cpp.html" title="SoundEffect.cpp" alt="" coords="1020,83,1137,112"/>
+<area shape="rect" id="node9" href="$Logger_8cpp.html" title="Logger.cpp" alt="" coords="1161,83,1247,112"/>
+<area shape="rect" id="node11" href="$ResourceManager_8h.html" title="ResourceManager.h" alt="" coords="465,83,604,112"/>
+<area shape="rect" id="node22" href="$Game_8cpp.html" title="Game.cpp" alt="" coords="272,392,355,421"/>
+<area shape="rect" id="node24" href="$GameObject_8cpp.html" title="GameObject.cpp" alt="" coords="437,392,557,421"/>
+<area shape="rect" id="node26" href="$GStatePlaceholder_8cpp.html" title="GStatePlaceholder.cpp" alt="" coords="581,392,736,421"/>
+<area shape="rect" id="node28" href="$Sprite_8cpp.html" title="Sprite.cpp" alt="" coords="760,392,840,421"/>
+<area shape="rect" id="node30" href="$main_8cpp.html" title="main.cpp" alt="" coords="864,392,939,421"/>
+<area shape="rect" id="node44" href="$SDL__Systems_8cpp.html" title="SDL_Systems.cpp" alt="" coords="1271,83,1401,112"/>
+<area shape="rect" id="node49" href="$Renderer_8cpp.html" title="Renderer.cpp" alt="" coords="1425,83,1524,112"/>
+<area shape="rect" id="node52" href="$Text_8cpp.html" title="Text.cpp" alt="" coords="1548,83,1620,112"/>
+<area shape="rect" id="node54" href="$Window_8cpp.html" title="Window.cpp" alt="" coords="1644,83,1737,112"/>
+<area shape="rect" id="node56" href="$ControllerHandler_8cpp.html" title="ControllerHandler.cpp" alt="" coords="1761,83,1908,112"/>
+<area shape="rect" id="node58" href="$InputHandler_8cpp.html" title="InputHandler.cpp" alt="" coords="1932,83,2052,112"/>
+<area shape="rect" id="node13" href="$MusicManager_8h.html" title="MusicManager.h" alt="" coords="269,160,387,189"/>
+<area shape="rect" id="node34" href="$SFXManager_8h.html" title="SFXManager.h" alt="" coords="411,160,520,189"/>
+<area shape="rect" id="node39" href="$SpriteManager_8h.html" title="SpriteManager.h" alt="" coords="544,160,661,189"/>
+<area shape="rect" id="node15" href="$MusicManager_8cpp.html" title="MusicManager.cpp" alt="" coords="97,237,228,267"/>
+<area shape="rect" id="node17" href="$ResourceHandler_8h.html" title="ResourceHandler.h" alt="" coords="399,237,532,267"/>
+<area shape="rect" id="node19" href="$Game_8h.html" title="Game.h" alt="" coords="513,315,580,344"/>
+<area shape="rect" id="node32" href="$ResourceHandler_8cpp.html" title="ResourceHandler.cpp" alt="" coords="343,315,489,344"/>
+<area shape="rect" id="node36" href="$SFXManager_8cpp.html" title="SFXManager.cpp" alt="" coords="252,237,375,267"/>
+<area shape="rect" id="node42" href="$SpriteManager_8cpp.html" title="SpriteManager.cpp" alt="" coords="556,237,687,267"/>
+</map>
