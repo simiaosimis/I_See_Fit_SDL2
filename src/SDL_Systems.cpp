@@ -58,12 +58,12 @@ void CloseMixer() {
 	    		break;
 	    }
 
-		Log(DEBUG) << "Audio opened " << k_numbers_of_times_opened <<
+		logger::debug() << "Audio opened " << k_numbers_of_times_opened <<
 			" time(s). Frequency: " << frequency << "Hz. Format: " << format_text <<
 			". Channels: " << channels << " " << channels_text << ".";
 	}
 	else {
-		Log(ERROR) << "Error querying the specifications of the audio. " << Mix_GetError();
+		logger::error() << "Error querying the specifications of the audio. " << Mix_GetError();
 
 		// Set the amount of times to close the audio to one, just for safety.
 		times_to_close = 1;
@@ -90,7 +90,7 @@ void CloseMixer() {
 * @param revision : If any, the revision.
 */
 void LogSdlVersion(const std::string& library, const SDL_version& version_compiled) {
-	Log(DEBUG) << library << " Version (compiled): " <<
+	logger::debug() << library << " Version (compiled): " <<
 		static_cast<int>(version_compiled.major) << "." <<
 		static_cast<int>(version_compiled.minor) << "." <<
 		static_cast<int>(version_compiled.patch);
@@ -104,7 +104,7 @@ void LogSdlVersion(const std::string& library, const SDL_version& version_compil
 */
 void LogSdlVersion(const std::string& library, const SDL_version& version_compiled,
 		const std::string& revision) {
-	Log(DEBUG) << library << " Version (Compiled): " <<
+	logger::debug() << library << " Version (Compiled): " <<
 		static_cast<int>(version_compiled.major) << "." <<
 		static_cast<int>(version_compiled.minor) << "." <<
 		static_cast<int>(version_compiled.patch) << revision;
@@ -122,7 +122,7 @@ bool Initialize() {
 
 	SDL_version compiled;
 
-	Log(DEBUG) << "Initializing systems...";
+	logger::debug() << "Initializing systems...";
 
 	// Initializing SDL_TTF.
 	const int k_ttf_init = TTF_Init();
@@ -133,7 +133,7 @@ bool Initialize() {
 		LogSdlVersion("SDL_TTF", compiled);
 	}
 	else {
-		Log(ERROR) << "Could not initialize TTF." << TTF_GetError();
+		logger::error() << "Could not initialize TTF." << TTF_GetError();
 	}
 
 	// Initializing SDL with k_init_flags.
@@ -150,7 +150,7 @@ bool Initialize() {
 		LogSdlVersion("SDL", compiled, SDL_GetRevision());
 	}
 	else {
-		Log(ERROR) << "Could not initialize SDL." << SDL_GetError();
+		logger::error() << "Could not initialize SDL." << SDL_GetError();
 	}
 
 	// Initializing SDL_image with k_img_flags.
@@ -161,7 +161,7 @@ bool Initialize() {
 		LogSdlVersion("SDL_image", compiled);
 	}
 	else {
-		Log(ERROR) << "Could not initialize SDL_Image." << IMG_GetError();
+		logger::error() << "Could not initialize SDL_Image." << IMG_GetError();
 	}
 
 	// Initializing SDL_mixer.
@@ -179,11 +179,11 @@ bool Initialize() {
 		const int k_channels_to_allocated = 25;
 		const int k_channels_allocated = Mix_AllocateChannels(k_channels_to_allocated);
 
-		Log(DEBUG) << "Allocated (" << k_channels_allocated << "/" << k_channels_to_allocated
+		logger::debug() << "Allocated (" << k_channels_allocated << "/" << k_channels_to_allocated
 			<< ") channels for the mixer.";
 	}
 	else {
-		Log(ERROR) << "Could not initialize SDL_Mixer" << Mix_GetError();
+		logger::error() << "Could not initialize SDL_Mixer" << Mix_GetError();
 	}
 
 	// If even one system fails to initialize, returns false.
@@ -191,7 +191,7 @@ bool Initialize() {
 }
 
 void Close() {
-	Log(DEBUG) << "Closing SDL.";
+	logger::debug() << "Closing SDL.";
 
 	// Quits SDL_mixer.
 	CloseMixer();

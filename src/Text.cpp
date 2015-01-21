@@ -9,7 +9,7 @@ Text::Text(const double x_, const double y_, const char* path_, const int size_,
 	this->font = TTF_OpenFont(path_, size_);
 
 	if(this->font == nullptr) {
-		Log(ERROR) << "Failed to open font." << TTF_GetError();
+		logger::error() << "Failed to open font." << TTF_GetError();
 	}
 
 	SDL_Surface* surface = TTF_RenderText_Blended(this->font, text_, color_);
@@ -24,7 +24,7 @@ Text::Text(const double x_, const double y_, const char* path_, const int size_,
 		this->sprite->setHeight(surfaceH);
 	}
 	else {
-		Log(ERROR) << "Could not load font surface.";
+		logger::error() << "Could not load font surface.";
 	}
 
 }
@@ -37,7 +37,7 @@ Text::Text(const double x_, const double y_, const char* path_, const int size_,
 	this->font = TTF_OpenFont(path_, size_);
 
 	if(this->font == nullptr) {
-		Log(ERROR) << "Failed to open font." << TTF_GetError();
+		logger::error() << "Failed to open font." << TTF_GetError();
 	}
 
 	SDL_Surface* surface = TTF_RenderText_Blended(this->font, text_, {0xCE, 0xCE, 0xCE, 255});
@@ -52,7 +52,7 @@ Text::Text(const double x_, const double y_, const char* path_, const int size_,
 		this->sprite->setHeight(surfaceH);
 	}
 	else {
-		Log(ERROR) << "Could not load font surface.";
+		logger::error() << "Could not load font surface.";
 	}
 
 }
@@ -85,7 +85,7 @@ void Text::changeText(const char* text_, const SDL_Color color_) {
 		this->sprite->setHeight(surfaceH);
 	}
 	else {
-		Log(ERROR) << "Could not load font surface.";
+		logger::error() << "Could not load font surface.";
 	}
 
 }
@@ -109,7 +109,7 @@ void Text::changeText(const char* text_) {
 		this->sprite->setHeight(surfaceH);
 	}
 	else {
-		Log(ERROR) << "Could not load font surface.";
+		logger::error() << "Could not load font surface.";
 	}
 
 }
@@ -126,6 +126,6 @@ void Text::render(const double cameraX_, const double cameraY_) {
 		this->sprite->render(dx, dy);
 	}
 	else {
-		Log(WARN) << "Null sprite for text";
+		logger::warn() << "Null sprite for text";
 	}
 }

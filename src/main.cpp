@@ -9,7 +9,7 @@ int main(int argc, char** argv) {
 	(static_cast<void>(argc));
 	(static_cast<void>(argv));
 
-	Log(DEBUG) << "Starting sdl2-engine...";
+	logger::debug() << "Starting sdl2-engine...";
 
 	Configuration::Initialize();
 
@@ -20,11 +20,11 @@ int main(int argc, char** argv) {
 		delete &Game::instance();
 	}
 	else {
-		Log(ERROR) << "Systems were not initialized.";
+		logger::error() << "Systems were not initialized.";
 	}
 
 	sdl::Close();
 
-	Log(DEBUG) << "Exiting sdl2-engine...";
+	logger::debug() << "Exiting sdl2-engine...";
 	return 0;
 }

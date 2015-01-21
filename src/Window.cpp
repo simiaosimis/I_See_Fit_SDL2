@@ -50,23 +50,23 @@ void Window::create(const int width_, const int height_) {
 			SDL_bool linearFilter = SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "nearest");
 
 			if(linearFilter == SDL_TRUE) {
-				Log(INFO) << "Linear texture filtering enabled!";
+				logger::info() << "Linear texture filtering enabled!";
 				this->renderer->setLogicalSize(Configuration::LogicalRenderSize());
 			}
 			else {
-				Log(WARN) << "Linear texture filtering disabled!";
+				logger::warn() << "Linear texture filtering disabled!";
 			}
 
-			Log(DEBUG) << "Game successfully loaded.";
+			logger::debug() << "Game successfully loaded.";
 
 		}
 		else {
-			Log(ERROR) << "Renderer could not be created, while creating window. " <<
+			logger::error() << "Renderer could not be created, while creating window. " <<
 				SDL_GetError();
 		}
 	}
 	else {
-		Log(ERROR) << "Window failed to be created. " << SDL_GetError();
+		logger::error() << "Window failed to be created. " << SDL_GetError();
 	}
 }
 

@@ -8,7 +8,7 @@ Music::Music(const std::string& path_) :
 	this->mixMusic = Mix_LoadMUS(this->path.c_str());
 
 	if(this->mixMusic == nullptr) {
-		Log(ERROR) << "Couldn't load music (" << this->path << "). " << Mix_GetError();
+		logger::error() << "Couldn't load music (" << this->path << "). " << Mix_GetError();
 	}
 }
 

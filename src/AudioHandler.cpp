@@ -36,7 +36,7 @@ void AudioHandler::PlaySoundEffect(const std::string& path) {
 	const int k_played_channel = Mix_PlayChannel(-1, m_effects.back()->getMixChunk(),
 		k_play_once);
 	if(k_played_channel == -1) {
-		Log(ERROR) << "Failed to play sound effect on channel " << k_played_channel << ". "
+		logger::error() << "Failed to play sound effect on channel " << k_played_channel << ". "
 			<< Mix_GetError();
 	}
 
@@ -51,7 +51,7 @@ void AudioHandler::PlaySoundEffect(const std::string& path, const int times) {
 	const int k_played_channel = Mix_PlayChannel(-1, m_effects.back()->getMixChunk(),
 		(times - 1));
 	if(k_played_channel == -1) {
-		Log(ERROR) << "Failed to play sound effect on channel " << k_played_channel << ". "
+		logger::error() << "Failed to play sound effect on channel " << k_played_channel << ". "
 			<< Mix_GetError();
 	}
 
@@ -84,7 +84,7 @@ void AudioHandler::PauseMusic() {
 		Mix_PauseMusic();
 	}
 	else {
-		Log(WARN) << "Trying to pause music that is not playing.";
+		logger::warn() << "Trying to pause music that is not playing.";
 	}
 }
 
@@ -105,12 +105,12 @@ void AudioHandler::PlayMusic() {
 		const int k_played_music = Mix_PlayMusic(m_current_music->getMixMusic(), -1);
 
 		if(k_played_music == -1) {
-			Log(ERROR) << "Couldn't play music (" << m_current_music->getPath() << "). "
+			logger::error() << "Couldn't play music (" << m_current_music->getPath() << "). "
 				<< Mix_GetError();
 		}
 	}
 	else {
-		Log(ERROR) << "Can't play a null music.";
+		logger::error() << "Can't play a null music.";
 	}
 }
 
@@ -120,12 +120,12 @@ void AudioHandler::PlayMusic(const int times) {
 		const int k_played_music = Mix_PlayMusic(m_current_music->getMixMusic(), times);
 
 		if(k_played_music == -1) {
-			Log(ERROR) << "Couldn't play music (" << m_current_music->getPath() << "). "
+			logger::error() << "Couldn't play music (" << m_current_music->getPath() << "). "
 				<< Mix_GetError();
 		}
 	}
 	else {
-		Log(ERROR) << "Can't play a null music.";
+		logger::error() << "Can't play a null music.";
 	}
 }
 
