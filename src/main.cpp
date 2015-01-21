@@ -1,7 +1,7 @@
-#include "Game.h"
-#include "Logger.h"
-#include "Configuration.h"
-#include "SDL_Systems.h"
+#include "core/SDL_Systems.h"
+#include "core/Logger.h"
+#include "engine/Game.h"
+#include "util/Configuration.h"
 
 int main(int argc, char** argv) {
 
