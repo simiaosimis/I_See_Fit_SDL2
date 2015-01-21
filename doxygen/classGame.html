@@ -33,7 +33,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v17</span>
+   &#160;<span id="projectnumber">v18</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -185,7 +185,7 @@ Private Attributes</h2></td></tr>
 <div class="memdoc">
 <p>The destructor. Destroys the game's <a class="el" href="classWindow.html">Window</a> and states, and unloads current state. </p>
 
-<p>Definition at line <a class="el" href="Game_8cpp_source.html#l00047">47</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Game_8cpp_source.html#l00042">42</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
 
 </div>
 </div>
@@ -205,7 +205,7 @@ Private Attributes</h2></td></tr>
 <p>The constructor. Sets the game window and tells the game that it is OK to begin looping. Also, it begins the FPS manager. </p>
 <dl class="note"><dt><b>Note:</b></dt><dd>If the <a class="el" href="classWindow.html">Window</a> cannot be created, the game will not begin. </dd></dl>
 
-<p>Definition at line <a class="el" href="Game_8cpp_source.html#l00028">28</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Game_8cpp_source.html#l00023">23</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
 
 </div>
 </div>
@@ -234,9 +234,9 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>Implement the transition between states. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>Implement the transition between states. </dd></dl>
 
-<p>Definition at line <a class="el" href="Game_8cpp_source.html#l00116">116</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Game_8cpp_source.html#l00111">111</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
 
 </div>
 </div>
@@ -255,7 +255,7 @@ Private Attributes</h2></td></tr>
 <div class="memdoc">
 <p>Deletes all the loaded states. Every new state implemented should be deleted here. </p>
 
-<p>Definition at line <a class="el" href="Game_8cpp_source.html#l00130">130</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Game_8cpp_source.html#l00126">126</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
 
 </div>
 </div>
@@ -274,7 +274,7 @@ Private Attributes</h2></td></tr>
 <div class="memdoc">
 <dl class="return"><dt><b>Returns:</b></dt><dd>The <a class="el" href="classGame.html">Game</a> audioHandler. </dd></dl>
 
-<p>Definition at line <a class="el" href="Game_8cpp_source.html#l00137">137</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Game_8cpp_source.html#l00133">133</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
 
 </div>
 </div>
@@ -293,7 +293,7 @@ Private Attributes</h2></td></tr>
 <div class="memdoc">
 <dl class="return"><dt><b>Returns:</b></dt><dd>The boolean array recieved from the <a class="el" href="classInputHandler.html">InputHandler</a>. </dd></dl>
 
-<p>Definition at line <a class="el" href="Game_8cpp_source.html#l00141">141</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Game_8cpp_source.html#l00137">137</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
 
 </div>
 </div>
@@ -312,7 +312,7 @@ Private Attributes</h2></td></tr>
 <div class="memdoc">
 <dl class="return"><dt><b>Returns:</b></dt><dd>The SDL_Renderer. </dd></dl>
 
-<p>Definition at line <a class="el" href="Game_8cpp_source.html#l00159">159</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Game_8cpp_source.html#l00155">155</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
 
 </div>
 </div>
@@ -330,8 +330,9 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 <p>Loads all the states. Every new state implemented should be initialized here. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>Emplace instead of insert. </dd></dl>
 
-<p>Definition at line <a class="el" href="Game_8cpp_source.html#l00123">123</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Game_8cpp_source.html#l00118">118</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
 
 </div>
 </div>
@@ -351,7 +352,7 @@ Private Attributes</h2></td></tr>
 <p>Singleton imeplementation for <a class="el" href="classGame.html">Game</a>. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>The instance for a <a class="el" href="classGame.html">Game</a>. </dd></dl>
 
-<p>Definition at line <a class="el" href="Game_8cpp_source.html#l00020">20</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Game_8cpp_source.html#l00015">15</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
 
 </div>
 </div>
@@ -370,7 +371,7 @@ Private Attributes</h2></td></tr>
 <div class="memdoc">
 <p>The main game loop. Orders the game structure, such as inputs, updates, and rendering. </p>
 
-<p>Definition at line <a class="el" href="Game_8cpp_source.html#l00060">60</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Game_8cpp_source.html#l00055">55</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
 
 </div>
 </div>
@@ -389,7 +390,7 @@ Private Attributes</h2></td></tr>
 <div class="memdoc">
 <p>Stops execution and closes the game. </p>
 
-<p>Definition at line <a class="el" href="Game_8cpp_source.html#l00145">145</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Game_8cpp_source.html#l00141">141</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
 
 </div>
 </div>
@@ -514,7 +515,7 @@ Private Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="classGame.html">Game</a>      </li>
 
-    <li class="footer">Generated on Wed Jan 21 2015 00:08:00 for sdl2-engine by
+    <li class="footer">Generated on Wed Jan 21 2015 20:26:22 for sdl2-engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

@@ -2,7 +2,7 @@ var searchData=
 [
   ['game',['Game',['../classGame.html#ad59df6562a58a614fda24622d3715b65',1,'Game']]],
   ['gameobject',['GameObject',['../classGameObject.html#aaeb95e7f576dd73ebcceed18b7a8cce1',1,'GameObject::GameObject(const double x_, const double y_, const std::string &amp;path_)'],['../classGameObject.html#a128ddbbeaecfc3d43758d9b4a94bb853',1,'GameObject::GameObject(const double x_, const double y_)']]],
-  ['get',['get',['../classResourceManager.html#affb9c13363097d4602766101f2f8212f',1,'ResourceManager']]],
+  ['get',['get',['../classResourceManager.html#a77ca1b172f5c8bd12e0caa7fb2f8a0ee',1,'ResourceManager']]],
   ['getanimationclip',['getAnimationClip',['../classGameObject.html#a75c4556a9513069fc021a2b8d7ebfc5b',1,'GameObject']]],
   ['getaudiohandler',['getAudioHandler',['../classGame.html#aefdf22987b627adf4ee9cdcc178fc11c',1,'Game']]],
   ['getheight',['getHeight',['../classGameObject.html#abdf40e2aaa71b67120eec953a1e1ca02',1,'GameObject::getHeight()'],['../classSprite.html#a67b67082cfda90103d2d9eefea04cc4b',1,'Sprite::getHeight()']]],

@@ -15,7 +15,7 @@ var searchData=
   ['close',['Close',['../namespacesdl.html#ad191ca5bcfbd36197f6959249e6cbcda',1,'sdl']]],
   ['collision',['Collision',['../classCollision.html',1,'']]],
   ['configuration',['Configuration',['../classConfiguration.html',1,'']]],
-  ['controllerhandler',['ControllerHandler',['../classControllerHandler.html',1,'ControllerHandler'],['../classInputHandler.html#a50ac48002b081c2c03af8f638c47dbe7',1,'InputHandler::controllerHandler()'],['../classControllerHandler.html#a2a6b8a51a3165d65606addb743f45964',1,'ControllerHandler::ControllerHandler()']]],
+  ['controllerhandler',['ControllerHandler',['../classControllerHandler.html',1,'ControllerHandler'],['../classControllerHandler.html#a2a6b8a51a3165d65606addb743f45964',1,'ControllerHandler::ControllerHandler()'],['../classInputHandler.html#a50ac48002b081c2c03af8f638c47dbe7',1,'InputHandler::controllerHandler()']]],
   ['create',['create',['../classWindow.html#a7a1d09805521f508601c01cb7f851820',1,'Window']]],
   ['currentframe',['CurrentFrame',['../classAnimation.html#af77b1bda4e1129c743da1d32197f400d',1,'Animation']]],
   ['currentstate',['currentState',['../classGame.html#a39cc30f3e086ce1279ad01967d7694fe',1,'Game']]]

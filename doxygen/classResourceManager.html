@@ -33,7 +33,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v17</span>
+   &#160;<span id="projectnumber">v18</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -120,8 +120,8 @@ Inheritance diagram for ResourceManager&lt; Type &gt;:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResourceManager.html#a2567a084acc246f85d33bac8ef114655">~ResourceManager</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">Type *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResourceManager.html#affb9c13363097d4602766101f2f8212f">get</a> (const std::string &amp;path_)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResourceManager.html#a1758182dd90a749408409215ed985be4">~ResourceManager</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Type *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResourceManager.html#a77ca1b172f5c8bd12e0caa7fb2f8a0ee">get</a> (const std::string &amp;path_)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual typePtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResourceManager.html#ad089e00823733954471f0719e8498a2f">load</a> (const std::string &amp;path_)=0</td></tr>
@@ -144,16 +144,16 @@ class ResourceManager&lt; Type &gt;</h3>
 
 <p>Template resource management class. </p>
 
-<p>Definition at line <a class="el" href="ResourceManager_8h_source.html#l00013">13</a> of file <a class="el" href="ResourceManager_8h_source.html">ResourceManager.h</a>.</p>
+<p>Definition at line <a class="el" href="ResourceManager_8h_source.html#l00014">14</a> of file <a class="el" href="ResourceManager_8h_source.html">ResourceManager.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a2567a084acc246f85d33bac8ef114655"></a><!-- doxytag: member="ResourceManager::~ResourceManager" ref="a2567a084acc246f85d33bac8ef114655" args="()" -->
+<a class="anchor" id="a1758182dd90a749408409215ed985be4"></a><!-- doxytag: member="ResourceManager::~ResourceManager" ref="a1758182dd90a749408409215ed985be4" args="()" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Type&gt; </div>
+template&lt;class Type &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classResourceManager.html">ResourceManager</a>&lt; Type &gt;::~<a class="el" href="classResourceManager.html">ResourceManager</a> </td>
+          <td class="memname"><a class="el" href="classResourceManager.html">ResourceManager</a>&lt; Type &gt;::~<a class="el" href="classResourceManager.html">ResourceManager</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td><code> [virtual]</code></td>
@@ -164,17 +164,19 @@ template&lt;class Type&gt; </div>
 <p>The destructor. </p>
 <dl class="note"><dt><b>Note:</b></dt><dd>Warns about resources being deleted with references still pointing to them. </dd></dl>
 
+<p>Definition at line <a class="el" href="ResourceManager_8h_source.html#l00059">59</a> of file <a class="el" href="ResourceManager_8h_source.html">ResourceManager.h</a>.</p>
+
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="affb9c13363097d4602766101f2f8212f"></a><!-- doxytag: member="ResourceManager::get" ref="affb9c13363097d4602766101f2f8212f" args="(const std::string &amp;path_)" -->
+<a class="anchor" id="a77ca1b172f5c8bd12e0caa7fb2f8a0ee"></a><!-- doxytag: member="ResourceManager::get" ref="a77ca1b172f5c8bd12e0caa7fb2f8a0ee" args="(const std::string &amp;path_)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Type&gt; </div>
+template&lt;class Type &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">Type* <a class="el" href="classResourceManager.html">ResourceManager</a>&lt; Type &gt;::<a class="el" href="classResourceManager.html#affb9c13363097d4602766101f2f8212f">get</a> </td>
+          <td class="memname">Type * <a class="el" href="classResourceManager.html">ResourceManager</a>&lt; Type &gt;::<a class="el" href="classResourceManager.html#a77ca1b172f5c8bd12e0caa7fb2f8a0ee">get</a> </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>path_</em></td><td>)</td>
@@ -191,6 +193,8 @@ template&lt;class Type&gt; </div>
   </table>
   </dd>
 </dl>
+
+<p>Definition at line <a class="el" href="ResourceManager_8h_source.html#l00071">71</a> of file <a class="el" href="ResourceManager_8h_source.html">ResourceManager.h</a>.</p>
 
 </div>
 </div>
@@ -226,7 +230,7 @@ template&lt;class Type&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Type&gt; </div>
+template&lt;class Type &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="classResourceManager.html">ResourceManager</a>&lt; Type &gt;::<a class="el" href="classResourceManager.html#a5e08aa5e0c56ab672011d997ff432230">registerResource</a> </td>
@@ -257,13 +261,15 @@ template&lt;class Type&gt; </div>
   </dd>
 </dl>
 
+<p>Definition at line <a class="el" href="ResourceManager_8h_source.html#l00088">88</a> of file <a class="el" href="ResourceManager_8h_source.html">ResourceManager.h</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a99af4d3a53a604f5c3161a6b72d37ae1"></a><!-- doxytag: member="ResourceManager::unregisterResource" ref="a99af4d3a53a604f5c3161a6b72d37ae1" args="(const std::string &amp;path_)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Type&gt; </div>
+template&lt;class Type &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="classResourceManager.html">ResourceManager</a>&lt; Type &gt;::<a class="el" href="classResourceManager.html#a99af4d3a53a604f5c3161a6b72d37ae1">unregisterResource</a> </td>
@@ -283,6 +289,8 @@ template&lt;class Type&gt; </div>
   </dd>
 </dl>
 
+<p>Definition at line <a class="el" href="ResourceManager_8h_source.html#l00093">93</a> of file <a class="el" href="ResourceManager_8h_source.html">ResourceManager.h</a>.</p>
+
 </div>
 </div>
 <hr/><h2>Field Documentation</h2>
@@ -300,7 +308,7 @@ template&lt;class Type&gt; </div>
 <div class="memdoc">
 <p>The map that contains all the Type resources. </p>
 
-<p>Definition at line <a class="el" href="ResourceManager_8h_source.html#l00053">53</a> of file <a class="el" href="ResourceManager_8h_source.html">ResourceManager.h</a>.</p>
+<p>Definition at line <a class="el" href="ResourceManager_8h_source.html#l00054">54</a> of file <a class="el" href="ResourceManager_8h_source.html">ResourceManager.h</a>.</p>
 
 </div>
 </div>
@@ -327,7 +335,7 @@ template&lt;class Type&gt; </div>
     <ul>
       <li class="navelem"><a class="el" href="classResourceManager.html">ResourceManager</a>      </li>
 
-    <li class="footer">Generated on Wed Jan 21 2015 00:08:01 for sdl2-engine by
+    <li class="footer">Generated on Wed Jan 21 2015 20:26:22 for sdl2-engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

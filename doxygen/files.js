@@ -24,7 +24,6 @@ var files =
     [ "Logger.cpp", null, null ],
     [ "Logger.h", null, null ],
     [ "main.cpp", null, null ],
-    [ "Math.h", null, null ],
     [ "Music.cpp", null, null ],
     [ "Music.h", null, null ],
     [ "MusicManager.cpp", null, null ],

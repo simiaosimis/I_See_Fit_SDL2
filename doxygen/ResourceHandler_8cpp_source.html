@@ -33,7 +33,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v17</span>
+   &#160;<span id="projectnumber">v18</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -98,7 +98,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">ResourceHandler.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;ResourceHandler.h&quot;</span>
+<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;engine/ResourceHandler.h&quot;</span>
 <a name="l00002"></a>00002 
 <a name="l00003"></a>00003 ResourceHandler::ResourceHandler() :
 <a name="l00004"></a>00004     spriteManager(new <a class="code" href="classSpriteManager.html">SpriteManager</a>()),
@@ -115,15 +115,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00015"></a>00015 }
 <a name="l00016"></a>00016 
 <a name="l00017"></a><a class="code" href="classResourceHandler.html#a100b91478b0fd631bf14fcdf3a268090">00017</a> <a class="code" href="classSprite.html">Sprite</a>* <a class="code" href="classResourceHandler.html#a100b91478b0fd631bf14fcdf3a268090">ResourceHandler::sprite</a>(<span class="keyword">const</span> std::string&amp; path_) {
-<a name="l00018"></a>00018     <span class="keywordflow">return</span> this-&gt;spriteManager-&gt;<a class="code" href="classResourceManager.html#affb9c13363097d4602766101f2f8212f">get</a>(path_);
+<a name="l00018"></a>00018     <span class="keywordflow">return</span> this-&gt;spriteManager-&gt;<a class="code" href="classResourceManager.html#a77ca1b172f5c8bd12e0caa7fb2f8a0ee">get</a>(path_);
 <a name="l00019"></a>00019 }
 <a name="l00020"></a>00020 
 <a name="l00021"></a><a class="code" href="classResourceHandler.html#a4d57a631c9906f50669d17a65fb1822d">00021</a> <a class="code" href="classMusic.html">Music</a>* <a class="code" href="classResourceHandler.html#a4d57a631c9906f50669d17a65fb1822d">ResourceHandler::music</a>(<span class="keyword">const</span> std::string&amp; path_) {
-<a name="l00022"></a>00022     <span class="keywordflow">return</span> this-&gt;musicManager-&gt;<a class="code" href="classResourceManager.html#affb9c13363097d4602766101f2f8212f">get</a>(path_);
+<a name="l00022"></a>00022     <span class="keywordflow">return</span> this-&gt;musicManager-&gt;<a class="code" href="classResourceManager.html#a77ca1b172f5c8bd12e0caa7fb2f8a0ee">get</a>(path_);
 <a name="l00023"></a>00023 }
 <a name="l00024"></a>00024 
 <a name="l00025"></a><a class="code" href="classResourceHandler.html#a9fd518ee03e07304d82d0b8422e12f42">00025</a> <a class="code" href="classSoundEffect.html">SoundEffect</a>* <a class="code" href="classResourceHandler.html#a9fd518ee03e07304d82d0b8422e12f42">ResourceHandler::soundEffect</a>(<span class="keyword">const</span> std::string&amp; path_) {
-<a name="l00026"></a>00026     <span class="keywordflow">return</span> this-&gt;sfxManager-&gt;<a class="code" href="classResourceManager.html#affb9c13363097d4602766101f2f8212f">get</a>(path_);
+<a name="l00026"></a>00026     <span class="keywordflow">return</span> this-&gt;sfxManager-&gt;<a class="code" href="classResourceManager.html#a77ca1b172f5c8bd12e0caa7fb2f8a0ee">get</a>(path_);
 <a name="l00027"></a>00027 }
 </pre></div></div><!-- contents -->
 </div>
@@ -145,7 +145,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><b>ResourceHandler.cpp</b>      </li>
 
-    <li class="footer">Generated on Wed Jan 21 2015 00:08:00 for sdl2-engine by
+    <li class="footer">Generated on Wed Jan 21 2015 20:26:22 for sdl2-engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>
