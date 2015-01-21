@@ -10,7 +10,7 @@ var annotated =
     [ "GameObject", "classGameObject.html", "classGameObject" ],
     [ "GStatePlaceholder", "classGStatePlaceholder.html", "classGStatePlaceholder" ],
     [ "InputHandler", "classInputHandler.html", "classInputHandler" ],
-    [ "Logger", "classLogger.html", "classLogger" ],
+    [ "logger::detail::LogBuffer", "classlogger_1_1detail_1_1LogBuffer.html", "classlogger_1_1detail_1_1LogBuffer" ],
     [ "Music", "classMusic.html", "classMusic" ],
     [ "MusicManager", "classMusicManager.html", "classMusicManager" ],
     [ "Renderer", "classRenderer.html", "classRenderer" ],

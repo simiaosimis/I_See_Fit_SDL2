@@ -261,12 +261,12 @@
           </tr>
           <tr>
             <td class="headerName">Date:</td>
-            <td class="headerValue">2015-01-20</td>
+            <td class="headerValue">2015-01-21</td>
             <td></td>
             <td class="headerName">Branches:</td>
-            <td class="headerTableEntry">48</td>
-            <td class="headerTableEntry">226</td>
-            <td class="headerTableEntry" style="background-color:LightPink">21.2 %</td>
+            <td class="headerTableEntry">43</td>
+            <td class="headerTableEntry">208</td>
+            <td class="headerTableEntry" style="background-color:LightPink">20.7 %</td>
           </tr>
         </table>
       </td>
@@ -647,7 +647,7 @@
     <tr>
     <td align="right" class="lineno"><pre>61</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>		Log(DEBUG) &lt;&lt; "Audio opened " &lt;&lt; k_numbers_of_times_opened &lt;&lt;</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>		logger::debug() &lt;&lt; "Audio opened " &lt;&lt; k_numbers_of_times_opened &lt;&lt;</pre></td>
     </tr>
 
     <tr>
@@ -677,7 +677,7 @@
     <tr>
     <td align="right" class="lineno"><pre>66</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>		Log(ERROR) &lt;&lt; "Error querying the specifications of the audio. " &lt;&lt; Mix_GetError();</pre></td>
+    <td align="left" class="src coveredLine"><pre>		logger::error() &lt;&lt; "Error querying the specifications of the audio. " &lt;&lt; Mix_GetError();</pre></td>
     </tr>
 
     <tr>
@@ -839,24 +839,24 @@
     <tr>
     <td align="right" class="lineno"><pre>93</pre></td>
     <td align="right" class="linecount coveredLine"><pre>4</pre></td>
-    <td align="left" class="src coveredLine"><pre>	Log(DEBUG) &lt;&lt; library &lt;&lt; " Version (compiled): " &lt;&lt;</pre></td>
+    <td align="left" class="src coveredLine"><pre>	logger::debug() &lt;&lt; library &lt;&lt; " Version (compiled): " &lt;&lt;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>94</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>4</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>6</pre></td>
     <td align="left" class="src coveredLine"><pre>		static_cast&lt;int&gt;(version_compiled.major) &lt;&lt; "." &lt;&lt;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>95</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>4</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>6</pre></td>
     <td align="left" class="src coveredLine"><pre>		static_cast&lt;int&gt;(version_compiled.minor) &lt;&lt; "." &lt;&lt;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>96</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>4</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>6</pre></td>
     <td align="left" class="src coveredLine"><pre>		static_cast&lt;int&gt;(version_compiled.patch);</pre></td>
     </tr>
 
@@ -923,7 +923,7 @@
     <tr>
     <td align="right" class="lineno"><pre>107</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	Log(DEBUG) &lt;&lt; library &lt;&lt; " Version (Compiled): " &lt;&lt;</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	logger::debug() &lt;&lt; library &lt;&lt; " Version (Compiled): " &lt;&lt;</pre></td>
     </tr>
 
     <tr>
@@ -1031,7 +1031,7 @@
     <tr>
     <td align="right" class="lineno"><pre>125</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>	Log(DEBUG) &lt;&lt; "Initializing systems...";</pre></td>
+    <td align="left" class="src coveredLine"><pre>	logger::debug() &lt;&lt; "Initializing systems...";</pre></td>
     </tr>
 
     <tr>
@@ -1097,7 +1097,7 @@
     <tr>
     <td align="right" class="lineno"><pre>136</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>		Log(ERROR) &lt;&lt; "Could not initialize TTF." &lt;&lt; TTF_GetError();</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>		logger::error() &lt;&lt; "Could not initialize TTF." &lt;&lt; TTF_GetError();</pre></td>
     </tr>
 
     <tr>
@@ -1199,7 +1199,7 @@
     <tr>
     <td align="right" class="lineno"><pre>153</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>		Log(ERROR) &lt;&lt; "Could not initialize SDL." &lt;&lt; SDL_GetError();</pre></td>
+    <td align="left" class="src coveredLine"><pre>		logger::error() &lt;&lt; "Could not initialize SDL." &lt;&lt; SDL_GetError();</pre></td>
     </tr>
 
     <tr>
@@ -1265,7 +1265,7 @@
     <tr>
     <td align="right" class="lineno"><pre>164</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>		Log(ERROR) &lt;&lt; "Could not initialize SDL_Image." &lt;&lt; IMG_GetError();</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>		logger::error() &lt;&lt; "Could not initialize SDL_Image." &lt;&lt; IMG_GetError();</pre></td>
     </tr>
 
     <tr>
@@ -1373,7 +1373,7 @@
     <tr>
     <td align="right" class="lineno"><pre>182</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>		Log(DEBUG) &lt;&lt; "Allocated (" &lt;&lt; k_channels_allocated &lt;&lt; "/" &lt;&lt; k_channels_to_allocated</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>		logger::debug() &lt;&lt; "Allocated (" &lt;&lt; k_channels_allocated &lt;&lt; "/" &lt;&lt; k_channels_to_allocated</pre></td>
     </tr>
 
     <tr>
@@ -1397,7 +1397,7 @@
     <tr>
     <td align="right" class="lineno"><pre>186</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>		Log(ERROR) &lt;&lt; "Could not initialize SDL_Mixer" &lt;&lt; Mix_GetError();</pre></td>
+    <td align="left" class="src coveredLine"><pre>		logger::error() &lt;&lt; "Could not initialize SDL_Mixer" &lt;&lt; Mix_GetError();</pre></td>
     </tr>
 
     <tr>
@@ -1445,7 +1445,7 @@
     <tr>
     <td align="right" class="lineno"><pre>194</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>	Log(DEBUG) &lt;&lt; "Closing SDL.";</pre></td>
+    <td align="left" class="src coveredLine"><pre>	logger::debug() &lt;&lt; "Closing SDL.";</pre></td>
     </tr>
 
     <tr>

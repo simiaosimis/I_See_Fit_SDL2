@@ -316,7 +316,7 @@
 <a name="line-28"></a><span class="p">{</span>
 <a name="line-29"></a>	<span class="c1">// Display error log if image wasn&#39;t loaded.</span>
 <a name="line-30"></a>	<span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">sdlTexture</span> <span class="o">==</span> <span class="k">nullptr</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-31"></a>		<span class="n">Log</span><span class="p">(</span><span class="n">ERROR</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Sprite load failed: &quot;</span> <span class="o">&lt;&lt;</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">path</span><span class="p">;</span>
+<a name="line-31"></a>		<span class="n">logger</span><span class="o">::</span><span class="n">error</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Sprite load failed: &quot;</span> <span class="o">&lt;&lt;</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">path</span><span class="p">;</span>
 <a name="line-32"></a>	<span class="p">}</span>
 <a name="line-33"></a>
 <a name="line-34"></a>	<span class="n">assert</span><span class="p">(</span><span class="n">width</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
@@ -337,12 +337,12 @@
 <a name="line-49"></a>		<span class="k">this</span><span class="o">-&gt;</span><span class="n">sdlTexture</span> <span class="o">=</span> <span class="n">surfaceToTexture</span><span class="p">(</span><span class="n">loadedSurface</span><span class="p">);</span>
 <a name="line-50"></a>	<span class="p">}</span>
 <a name="line-51"></a>	<span class="k">else</span> <span class="p">{</span>
-<a name="line-52"></a>		<span class="n">Log</span><span class="p">(</span><span class="n">ERROR</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Could not load surface from path.&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">IMG_GetError</span><span class="p">();</span>
+<a name="line-52"></a>		<span class="n">logger</span><span class="o">::</span><span class="n">error</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Could not load surface from path.&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">IMG_GetError</span><span class="p">();</span>
 <a name="line-53"></a>	<span class="p">}</span>
 <a name="line-54"></a>
 <a name="line-55"></a>	<span class="c1">// Display error log if image wasn&#39;t loaded.</span>
 <a name="line-56"></a>	<span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">sdlTexture</span> <span class="o">==</span> <span class="k">nullptr</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-57"></a>		<span class="n">Log</span><span class="p">(</span><span class="n">ERROR</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Sprite load failed: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">path_</span><span class="p">;</span>
+<a name="line-57"></a>		<span class="n">logger</span><span class="o">::</span><span class="n">error</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Sprite load failed: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">path_</span><span class="p">;</span>
 <a name="line-58"></a>	<span class="p">}</span>
 <a name="line-59"></a><span class="p">}</span>
 <a name="line-60"></a>
@@ -373,7 +373,7 @@
 <a name="line-85"></a>			<span class="o">&amp;</span><span class="n">stretch</span><span class="p">,</span> <span class="n">angle_</span><span class="p">,</span> <span class="n">center_</span><span class="p">,</span> <span class="n">flip_</span><span class="p">);</span>
 <a name="line-86"></a>
 <a name="line-87"></a>	<span class="k">if</span><span class="p">(</span><span class="n">successfullRender</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-88"></a>		<span class="n">Log</span><span class="p">(</span><span class="n">ERROR</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Failed to render sprite.&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">SDL_GetError</span><span class="p">();</span>
+<a name="line-88"></a>		<span class="n">logger</span><span class="o">::</span><span class="n">error</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Failed to render sprite.&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">SDL_GetError</span><span class="p">();</span>
 <a name="line-89"></a>	<span class="p">}</span>
 <a name="line-90"></a><span class="p">}</span>
 <a name="line-91"></a>
@@ -410,14 +410,14 @@
 <a name="line-122"></a>			<span class="k">this</span><span class="o">-&gt;</span><span class="n">height</span> <span class="o">=</span> <span class="n">surface_</span><span class="o">-&gt;</span><span class="n">h</span><span class="p">;</span>
 <a name="line-123"></a>		<span class="p">}</span>
 <a name="line-124"></a>		<span class="k">else</span> <span class="p">{</span>
-<a name="line-125"></a>			<span class="n">Log</span><span class="p">(</span><span class="n">ERROR</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Could not create texture from surface.&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">SDL_GetError</span><span class="p">();</span>
+<a name="line-125"></a>			<span class="n">logger</span><span class="o">::</span><span class="n">error</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Could not create texture from surface.&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">SDL_GetError</span><span class="p">();</span>
 <a name="line-126"></a>		<span class="p">}</span>
 <a name="line-127"></a>
 <a name="line-128"></a>		<span class="c1">// Free the loaded surface.</span>
 <a name="line-129"></a>		<span class="n">SDL_FreeSurface</span><span class="p">(</span><span class="n">surface_</span><span class="p">);</span>
 <a name="line-130"></a>	<span class="p">}</span>
 <a name="line-131"></a>	<span class="k">else</span> <span class="p">{</span>
-<a name="line-132"></a>		<span class="n">Log</span><span class="p">(</span><span class="n">WARN</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Trying to convert a null surface to a texture.&quot;</span><span class="p">;</span>
+<a name="line-132"></a>		<span class="n">logger</span><span class="o">::</span><span class="n">warn</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Trying to convert a null surface to a texture.&quot;</span><span class="p">;</span>
 <a name="line-133"></a>	<span class="p">}</span>
 <a name="line-134"></a>
 <a name="line-135"></a>	<span class="k">return</span> <span class="n">newTexture</span><span class="p">;</span>
@@ -432,7 +432,7 @@
 <a name="line-144"></a>
 <a name="line-145"></a>	<span class="k">const</span> <span class="kt">int</span> <span class="n">rc</span> <span class="o">=</span> <span class="n">SDL_GetTextureAlphaMod</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">sdlTexture</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">alpha</span><span class="p">);</span>
 <a name="line-146"></a>	<span class="k">if</span><span class="p">(</span><span class="n">rc</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-147"></a><span class="hll">		<span class="n">Log</span><span class="p">(</span><span class="n">ERROR</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Could not get alpha value from Sprite (&quot;</span> <span class="o">&lt;&lt;</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">path</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;). &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">SDL_GetError</span><span class="p">();</span><span class='error2'>&lt;--- Lines should be &lt;= 95 characters long  </span>
+<a name="line-147"></a><span class="hll">		<span class="n">logger</span><span class="o">::</span><span class="n">error</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Could not get alpha value from Sprite (&quot;</span> <span class="o">&lt;&lt;</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">path</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;). &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">SDL_GetError</span><span class="p">();</span><span class='error2'>&lt;--- Lines should be &lt;= 95 characters long  </span>
 </span><a name="line-148"></a>	<span class="p">}</span>
 <a name="line-149"></a>
 <a name="line-150"></a>	<span class="k">return</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="n">alpha</span><span class="p">);</span>
@@ -448,14 +448,14 @@
 <a name="line-160"></a>
 <a name="line-161"></a>	<span class="k">const</span> <span class="kt">int</span> <span class="n">rc</span> <span class="o">=</span> <span class="n">SDL_SetTextureAlphaMod</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">sdlTexture</span><span class="p">,</span> <span class="n">alpha_</span><span class="p">);</span>
 <a name="line-162"></a>	<span class="k">if</span><span class="p">(</span><span class="n">rc</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-163"></a><span class="hll">		<span class="n">Log</span><span class="p">(</span><span class="n">ERROR</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Could not set alpha value of Sprite (&quot;</span> <span class="o">&lt;&lt;</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">path</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;). &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">SDL_GetError</span><span class="p">();</span><span class='error2'>&lt;--- Lines should be &lt;= 95 characters long  </span>
+<a name="line-163"></a><span class="hll">		<span class="n">logger</span><span class="o">::</span><span class="n">error</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Could not set alpha value of Sprite (&quot;</span> <span class="o">&lt;&lt;</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">path</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;). &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">SDL_GetError</span><span class="p">();</span><span class='error2'>&lt;--- Lines should be &lt;= 95 characters long  </span>
 </span><a name="line-164"></a>	<span class="p">}</span>
 <a name="line-165"></a><span class="p">}</span>
 <a name="line-166"></a>
 <a name="line-167"></a><span class="kt">void</span> <span class="n">Sprite</span><span class="o">::</span><span class="n">setBlendMode</span><span class="p">(</span><span class="n">SDL_BlendMode</span> <span class="n">blending_</span><span class="p">)</span> <span class="p">{</span>
 <a name="line-168"></a>	<span class="k">const</span> <span class="kt">int</span> <span class="n">rc</span> <span class="o">=</span> <span class="n">SDL_SetTextureBlendMode</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">sdlTexture</span><span class="p">,</span> <span class="n">blending_</span><span class="p">);</span>
 <a name="line-169"></a>	<span class="k">if</span><span class="p">(</span><span class="n">rc</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-170"></a><span class="hll">		<span class="n">Log</span><span class="p">(</span><span class="n">ERROR</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Could not set blend mode of Sprite (&quot;</span> <span class="o">&lt;&lt;</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">path</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;). &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">SDL_GetError</span><span class="p">();</span><span class='error2'>&lt;--- Lines should be &lt;= 95 characters long  </span>
+<a name="line-170"></a><span class="hll">		<span class="n">logger</span><span class="o">::</span><span class="n">error</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Could not set blend mode of Sprite (&quot;</span> <span class="o">&lt;&lt;</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">path</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;). &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">SDL_GetError</span><span class="p">();</span><span class='error2'>&lt;--- Lines should be &lt;= 95 characters long  </span>
 </span><a name="line-171"></a>	<span class="p">}</span>
 <a name="line-172"></a><span class="p">}</span>
 </pre></div>

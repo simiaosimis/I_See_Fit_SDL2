@@ -151,7 +151,7 @@
 <a name="line-8"></a>	<span class="k">this</span><span class="o">-&gt;</span><span class="n">mixMusic</span> <span class="o">=</span> <span class="n">Mix_LoadMUS</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">path</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
 <a name="line-9"></a>
 <a name="line-10"></a>	<span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">mixMusic</span> <span class="o">==</span> <span class="k">nullptr</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-11"></a>		<span class="n">Log</span><span class="p">(</span><span class="n">ERROR</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Couldn&#39;t load music (&quot;</span> <span class="o">&lt;&lt;</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">path</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;). &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">Mix_GetError</span><span class="p">();</span>
+<a name="line-11"></a>		<span class="n">logger</span><span class="o">::</span><span class="n">error</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Couldn&#39;t load music (&quot;</span> <span class="o">&lt;&lt;</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">path</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;). &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">Mix_GetError</span><span class="p">();</span>
 <a name="line-12"></a>	<span class="p">}</span>
 <a name="line-13"></a><span class="p">}</span>
 <a name="line-14"></a>

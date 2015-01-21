@@ -11,7 +11,7 @@ var hierarchy =
       [ "Text", "classText.html", null ]
     ] ],
     [ "InputHandler", "classInputHandler.html", null ],
-    [ "Logger", "classLogger.html", null ],
+    [ "logger::detail::LogBuffer", "classlogger_1_1detail_1_1LogBuffer.html", null ],
     [ "Music", "classMusic.html", null ],
     [ "Renderer", "classRenderer.html", null ],
     [ "ResourceHandler", "classResourceHandler.html", null ],

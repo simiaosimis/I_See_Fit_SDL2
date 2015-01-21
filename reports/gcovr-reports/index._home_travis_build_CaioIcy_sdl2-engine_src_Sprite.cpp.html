@@ -261,11 +261,11 @@
           </tr>
           <tr>
             <td class="headerName">Date:</td>
-            <td class="headerValue">2015-01-20</td>
+            <td class="headerValue">2015-01-21</td>
             <td></td>
             <td class="headerName">Branches:</td>
             <td class="headerTableEntry">0</td>
-            <td class="headerTableEntry">148</td>
+            <td class="headerTableEntry">138</td>
             <td class="headerTableEntry" style="background-color:LightPink">0.0 %</td>
           </tr>
         </table>
@@ -467,7 +467,7 @@
     <tr>
     <td align="right" class="lineno"><pre>31</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>		Log(ERROR) &lt;&lt; "Sprite load failed: " &lt;&lt; this-&gt;path;</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>		logger::error() &lt;&lt; "Sprite load failed: " &lt;&lt; this-&gt;path;</pre></td>
     </tr>
 
     <tr>
@@ -593,7 +593,7 @@
     <tr>
     <td align="right" class="lineno"><pre>52</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>		Log(ERROR) &lt;&lt; "Could not load surface from path." &lt;&lt; IMG_GetError();</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>		logger::error() &lt;&lt; "Could not load surface from path." &lt;&lt; IMG_GetError();</pre></td>
     </tr>
 
     <tr>
@@ -623,7 +623,7 @@
     <tr>
     <td align="right" class="lineno"><pre>57</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>		Log(ERROR) &lt;&lt; "Sprite load failed: " &lt;&lt; path_;</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>		logger::error() &lt;&lt; "Sprite load failed: " &lt;&lt; path_;</pre></td>
     </tr>
 
     <tr>
@@ -809,7 +809,7 @@
     <tr>
     <td align="right" class="lineno"><pre>88</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>		Log(ERROR) &lt;&lt; "Failed to render sprite." &lt;&lt; SDL_GetError();</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>		logger::error() &lt;&lt; "Failed to render sprite." &lt;&lt; SDL_GetError();</pre></td>
     </tr>
 
     <tr>
@@ -1031,7 +1031,7 @@
     <tr>
     <td align="right" class="lineno"><pre>125</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>			Log(ERROR) &lt;&lt; "Could not create texture from surface." &lt;&lt; SDL_GetError();</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>			logger::error() &lt;&lt; "Could not create texture from surface." &lt;&lt; SDL_GetError();</pre></td>
     </tr>
 
     <tr>
@@ -1073,7 +1073,7 @@
     <tr>
     <td align="right" class="lineno"><pre>132</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>		Log(WARN) &lt;&lt; "Trying to convert a null surface to a texture.";</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>		logger::warn() &lt;&lt; "Trying to convert a null surface to a texture.";</pre></td>
     </tr>
 
     <tr>
@@ -1163,7 +1163,7 @@
     <tr>
     <td align="right" class="lineno"><pre>147</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>		Log(ERROR) &lt;&lt; "Could not get alpha value from Sprite (" &lt;&lt; this-&gt;path &lt;&lt; "). " &lt;&lt; SDL_GetError();</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>		logger::error() &lt;&lt; "Could not get alpha value from Sprite (" &lt;&lt; this-&gt;path &lt;&lt; "). " &lt;&lt; SDL_GetError();</pre></td>
     </tr>
 
     <tr>
@@ -1259,7 +1259,7 @@
     <tr>
     <td align="right" class="lineno"><pre>163</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>		Log(ERROR) &lt;&lt; "Could not set alpha value of Sprite (" &lt;&lt; this-&gt;path &lt;&lt; "). " &lt;&lt; SDL_GetError();</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>		logger::error() &lt;&lt; "Could not set alpha value of Sprite (" &lt;&lt; this-&gt;path &lt;&lt; "). " &lt;&lt; SDL_GetError();</pre></td>
     </tr>
 
     <tr>
@@ -1301,7 +1301,7 @@
     <tr>
     <td align="right" class="lineno"><pre>170</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>		Log(ERROR) &lt;&lt; "Could not set blend mode of Sprite (" &lt;&lt; this-&gt;path &lt;&lt; "). " &lt;&lt; SDL_GetError();</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>		logger::error() &lt;&lt; "Could not set blend mode of Sprite (" &lt;&lt; this-&gt;path &lt;&lt; "). " &lt;&lt; SDL_GetError();</pre></td>
     </tr>
 
     <tr>

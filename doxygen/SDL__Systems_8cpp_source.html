@@ -33,7 +33,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v16</span>
+   &#160;<span id="projectnumber">v17</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -158,12 +158,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00058"></a>00058                 <span class="keywordflow">break</span>;
 <a name="l00059"></a>00059         }
 <a name="l00060"></a>00060 
-<a name="l00061"></a>00061         Log(DEBUG) &lt;&lt; <span class="stringliteral">&quot;Audio opened &quot;</span> &lt;&lt; k_numbers_of_times_opened &lt;&lt;
+<a name="l00061"></a>00061         logger::debug() &lt;&lt; <span class="stringliteral">&quot;Audio opened &quot;</span> &lt;&lt; k_numbers_of_times_opened &lt;&lt;
 <a name="l00062"></a>00062             <span class="stringliteral">&quot; time(s). Frequency: &quot;</span> &lt;&lt; frequency &lt;&lt; <span class="stringliteral">&quot;Hz. Format: &quot;</span> &lt;&lt; format_text &lt;&lt;
 <a name="l00063"></a>00063             <span class="stringliteral">&quot;. Channels: &quot;</span> &lt;&lt; channels &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; channels_text &lt;&lt; <span class="stringliteral">&quot;.&quot;</span>;
 <a name="l00064"></a>00064     }
 <a name="l00065"></a>00065     <span class="keywordflow">else</span> {
-<a name="l00066"></a>00066         Log(ERROR) &lt;&lt; <span class="stringliteral">&quot;Error querying the specifications of the audio. &quot;</span> &lt;&lt; Mix_GetError();
+<a name="l00066"></a>00066         logger::error() &lt;&lt; <span class="stringliteral">&quot;Error querying the specifications of the audio. &quot;</span> &lt;&lt; Mix_GetError();
 <a name="l00067"></a>00067 
 <a name="l00068"></a>00068         <span class="comment">// Set the amount of times to close the audio to one, just for safety.</span>
 <a name="l00069"></a>00069         times_to_close = 1;
@@ -184,7 +184,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00084"></a>00084 }
 <a name="l00085"></a>00085 
 <a name="l00092"></a>00092 <span class="keywordtype">void</span> LogSdlVersion(<span class="keyword">const</span> std::string&amp; library, <span class="keyword">const</span> SDL_version&amp; version_compiled) {
-<a name="l00093"></a>00093     Log(DEBUG) &lt;&lt; library &lt;&lt; <span class="stringliteral">&quot; Version (compiled): &quot;</span> &lt;&lt;
+<a name="l00093"></a>00093     logger::debug() &lt;&lt; library &lt;&lt; <span class="stringliteral">&quot; Version (compiled): &quot;</span> &lt;&lt;
 <a name="l00094"></a>00094         <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(version_compiled.major) &lt;&lt; <span class="stringliteral">&quot;.&quot;</span> &lt;&lt;
 <a name="l00095"></a>00095         static_cast&lt;int&gt;(version_compiled.minor) &lt;&lt; <span class="stringliteral">&quot;.&quot;</span> &lt;&lt;
 <a name="l00096"></a>00096         <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(version_compiled.patch);
@@ -192,7 +192,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00098"></a>00098 
 <a name="l00105"></a>00105 <span class="keywordtype">void</span> LogSdlVersion(<span class="keyword">const</span> std::string&amp; library, <span class="keyword">const</span> SDL_version&amp; version_compiled,
 <a name="l00106"></a>00106         <span class="keyword">const</span> std::string&amp; revision) {
-<a name="l00107"></a>00107     Log(DEBUG) &lt;&lt; library &lt;&lt; <span class="stringliteral">&quot; Version (Compiled): &quot;</span> &lt;&lt;
+<a name="l00107"></a>00107     logger::debug() &lt;&lt; library &lt;&lt; <span class="stringliteral">&quot; Version (Compiled): &quot;</span> &lt;&lt;
 <a name="l00108"></a>00108         <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(version_compiled.major) &lt;&lt; <span class="stringliteral">&quot;.&quot;</span> &lt;&lt;
 <a name="l00109"></a>00109         static_cast&lt;int&gt;(version_compiled.minor) &lt;&lt; <span class="stringliteral">&quot;.&quot;</span> &lt;&lt;
 <a name="l00110"></a>00110         <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(version_compiled.patch) &lt;&lt; revision;
@@ -210,7 +210,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00122"></a>00122 
 <a name="l00123"></a>00123     SDL_version compiled;
 <a name="l00124"></a>00124 
-<a name="l00125"></a>00125     Log(DEBUG) &lt;&lt; <span class="stringliteral">&quot;Initializing systems...&quot;</span>;
+<a name="l00125"></a>00125     logger::debug() &lt;&lt; <span class="stringliteral">&quot;Initializing systems...&quot;</span>;
 <a name="l00126"></a>00126 
 <a name="l00127"></a>00127     <span class="comment">// Initializing SDL_TTF.</span>
 <a name="l00128"></a>00128     <span class="keyword">const</span> <span class="keywordtype">int</span> k_ttf_init = TTF_Init();
@@ -221,7 +221,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00133"></a>00133         LogSdlVersion(<span class="stringliteral">&quot;SDL_TTF&quot;</span>, compiled);
 <a name="l00134"></a>00134     }
 <a name="l00135"></a>00135     <span class="keywordflow">else</span> {
-<a name="l00136"></a>00136         Log(ERROR) &lt;&lt; <span class="stringliteral">&quot;Could not initialize TTF.&quot;</span> &lt;&lt; TTF_GetError();
+<a name="l00136"></a>00136         logger::error() &lt;&lt; <span class="stringliteral">&quot;Could not initialize TTF.&quot;</span> &lt;&lt; TTF_GetError();
 <a name="l00137"></a>00137     }
 <a name="l00138"></a>00138 
 <a name="l00139"></a>00139     <span class="comment">// Initializing SDL with k_init_flags.</span>
@@ -238,7 +238,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00150"></a>00150         LogSdlVersion(<span class="stringliteral">&quot;SDL&quot;</span>, compiled, SDL_GetRevision());
 <a name="l00151"></a>00151     }
 <a name="l00152"></a>00152     <span class="keywordflow">else</span> {
-<a name="l00153"></a>00153         Log(ERROR) &lt;&lt; <span class="stringliteral">&quot;Could not initialize SDL.&quot;</span> &lt;&lt; SDL_GetError();
+<a name="l00153"></a>00153         logger::error() &lt;&lt; <span class="stringliteral">&quot;Could not initialize SDL.&quot;</span> &lt;&lt; SDL_GetError();
 <a name="l00154"></a>00154     }
 <a name="l00155"></a>00155 
 <a name="l00156"></a>00156     <span class="comment">// Initializing SDL_image with k_img_flags.</span>
@@ -249,7 +249,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00161"></a>00161         LogSdlVersion(<span class="stringliteral">&quot;SDL_image&quot;</span>, compiled);
 <a name="l00162"></a>00162     }
 <a name="l00163"></a>00163     <span class="keywordflow">else</span> {
-<a name="l00164"></a>00164         Log(ERROR) &lt;&lt; <span class="stringliteral">&quot;Could not initialize SDL_Image.&quot;</span> &lt;&lt; IMG_GetError();
+<a name="l00164"></a>00164         logger::error() &lt;&lt; <span class="stringliteral">&quot;Could not initialize SDL_Image.&quot;</span> &lt;&lt; IMG_GetError();
 <a name="l00165"></a>00165     }
 <a name="l00166"></a>00166 
 <a name="l00167"></a>00167     <span class="comment">// Initializing SDL_mixer.</span>
@@ -267,11 +267,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00179"></a>00179         <span class="keyword">const</span> <span class="keywordtype">int</span> k_channels_to_allocated = 25;
 <a name="l00180"></a>00180         <span class="keyword">const</span> <span class="keywordtype">int</span> k_channels_allocated = Mix_AllocateChannels(k_channels_to_allocated);
 <a name="l00181"></a>00181 
-<a name="l00182"></a>00182         Log(DEBUG) &lt;&lt; <span class="stringliteral">&quot;Allocated (&quot;</span> &lt;&lt; k_channels_allocated &lt;&lt; <span class="stringliteral">&quot;/&quot;</span> &lt;&lt; k_channels_to_allocated
+<a name="l00182"></a>00182         logger::debug() &lt;&lt; <span class="stringliteral">&quot;Allocated (&quot;</span> &lt;&lt; k_channels_allocated &lt;&lt; <span class="stringliteral">&quot;/&quot;</span> &lt;&lt; k_channels_to_allocated
 <a name="l00183"></a>00183             &lt;&lt; <span class="stringliteral">&quot;) channels for the mixer.&quot;</span>;
 <a name="l00184"></a>00184     }
 <a name="l00185"></a>00185     <span class="keywordflow">else</span> {
-<a name="l00186"></a>00186         Log(ERROR) &lt;&lt; <span class="stringliteral">&quot;Could not initialize SDL_Mixer&quot;</span> &lt;&lt; Mix_GetError();
+<a name="l00186"></a>00186         logger::error() &lt;&lt; <span class="stringliteral">&quot;Could not initialize SDL_Mixer&quot;</span> &lt;&lt; Mix_GetError();
 <a name="l00187"></a>00187     }
 <a name="l00188"></a>00188 
 <a name="l00189"></a>00189     <span class="comment">// If even one system fails to initialize, returns false.</span>
@@ -279,7 +279,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00191"></a>00191 }
 <a name="l00192"></a>00192 
 <a name="l00193"></a><a class="code" href="namespacesdl.html#ad191ca5bcfbd36197f6959249e6cbcda">00193</a> <span class="keywordtype">void</span> <a class="code" href="namespacesdl.html#ad191ca5bcfbd36197f6959249e6cbcda">Close</a>() {
-<a name="l00194"></a>00194     Log(DEBUG) &lt;&lt; <span class="stringliteral">&quot;Closing SDL.&quot;</span>;
+<a name="l00194"></a>00194     logger::debug() &lt;&lt; <span class="stringliteral">&quot;Closing SDL.&quot;</span>;
 <a name="l00195"></a>00195 
 <a name="l00196"></a>00196     <span class="comment">// Quits SDL_mixer.</span>
 <a name="l00197"></a>00197     CloseMixer();
@@ -315,7 +315,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><b>SDL_Systems.cpp</b>      </li>
 
-    <li class="footer">Generated on Tue Jan 20 2015 06:46:14 for sdl2-engine by
+    <li class="footer">Generated on Wed Jan 21 2015 00:08:00 for sdl2-engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

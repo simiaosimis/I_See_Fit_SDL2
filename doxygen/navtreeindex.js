@@ -18,7 +18,7 @@ var NAVTREEINDEX =
 "classGameObject.html":[2,0,7],
 "classGStatePlaceholder.html":[2,0,8],
 "classInputHandler.html":[2,0,9],
-"classLogger.html":[2,0,10],
+"classlogger_1_1detail_1_1LogBuffer.html":[2,0,10],
 "classMusic.html":[2,0,11],
 "classMusicManager.html":[2,0,12],
 "classRenderer.html":[2,0,13],

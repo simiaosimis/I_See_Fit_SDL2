@@ -383,12 +383,12 @@
 <a name="line-58"></a>	    		<span class="k">break</span><span class="p">;</span>
 <a name="line-59"></a>	    <span class="p">}</span>
 <a name="line-60"></a>
-<a name="line-61"></a>		<span class="n">Log</span><span class="p">(</span><span class="n">DEBUG</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Audio opened &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">k_numbers_of_times_opened</span> <span class="o">&lt;&lt;</span>
+<a name="line-61"></a>		<span class="n">logger</span><span class="o">::</span><span class="n">debug</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Audio opened &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">k_numbers_of_times_opened</span> <span class="o">&lt;&lt;</span>
 <a name="line-62"></a>			<span class="s">&quot; time(s). Frequency: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">frequency</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Hz. Format: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">format_text</span> <span class="o">&lt;&lt;</span>
 <a name="line-63"></a>			<span class="s">&quot;. Channels: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">channels</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">channels_text</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;.&quot;</span><span class="p">;</span>
 <a name="line-64"></a>	<span class="p">}</span>
 <a name="line-65"></a>	<span class="k">else</span> <span class="p">{</span>
-<a name="line-66"></a>		<span class="n">Log</span><span class="p">(</span><span class="n">ERROR</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Error querying the specifications of the audio. &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">Mix_GetError</span><span class="p">();</span>
+<a name="line-66"></a>		<span class="n">logger</span><span class="o">::</span><span class="n">error</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Error querying the specifications of the audio. &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">Mix_GetError</span><span class="p">();</span>
 <a name="line-67"></a>
 <a name="line-68"></a>		<span class="c1">// Set the amount of times to close the audio to one, just for safety.</span>
 <a name="line-69"></a>		<span class="n">times_to_close</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
@@ -415,7 +415,7 @@
 <a name="line-90"></a><span class="cm">* @param revision : If any, the revision.</span>
 <a name="line-91"></a><span class="cm">*/</span>
 <a name="line-92"></a><span class="kt">void</span> <span class="n">LogSdlVersion</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">library</span><span class="p">,</span> <span class="k">const</span> <span class="n">SDL_version</span><span class="o">&amp;</span> <span class="n">version_compiled</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-93"></a>	<span class="n">Log</span><span class="p">(</span><span class="n">DEBUG</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">library</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; Version (compiled): &quot;</span> <span class="o">&lt;&lt;</span>
+<a name="line-93"></a>	<span class="n">logger</span><span class="o">::</span><span class="n">debug</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">library</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; Version (compiled): &quot;</span> <span class="o">&lt;&lt;</span>
 <a name="line-94"></a>		<span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">version_compiled</span><span class="p">.</span><span class="n">major</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;.&quot;</span> <span class="o">&lt;&lt;</span>
 <a name="line-95"></a>		<span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">version_compiled</span><span class="p">.</span><span class="n">minor</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;.&quot;</span> <span class="o">&lt;&lt;</span>
 <a name="line-96"></a>		<span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">version_compiled</span><span class="p">.</span><span class="n">patch</span><span class="p">);</span>
@@ -429,7 +429,7 @@
 <a name="line-104"></a><span class="cm">*/</span>
 <a name="line-105"></a><span class="kt">void</span> <span class="n">LogSdlVersion</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">library</span><span class="p">,</span> <span class="k">const</span> <span class="n">SDL_version</span><span class="o">&amp;</span> <span class="n">version_compiled</span><span class="p">,</span>
 <a name="line-106"></a>		<span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">revision</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-107"></a>	<span class="n">Log</span><span class="p">(</span><span class="n">DEBUG</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">library</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; Version (Compiled): &quot;</span> <span class="o">&lt;&lt;</span>
+<a name="line-107"></a>	<span class="n">logger</span><span class="o">::</span><span class="n">debug</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">library</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; Version (Compiled): &quot;</span> <span class="o">&lt;&lt;</span>
 <a name="line-108"></a>		<span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">version_compiled</span><span class="p">.</span><span class="n">major</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;.&quot;</span> <span class="o">&lt;&lt;</span>
 <a name="line-109"></a>		<span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">version_compiled</span><span class="p">.</span><span class="n">minor</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;.&quot;</span> <span class="o">&lt;&lt;</span>
 <a name="line-110"></a>		<span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">version_compiled</span><span class="p">.</span><span class="n">patch</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">revision</span><span class="p">;</span>
@@ -447,7 +447,7 @@
 <a name="line-122"></a>
 <a name="line-123"></a>	<span class="n">SDL_version</span> <span class="n">compiled</span><span class="p">;</span>
 <a name="line-124"></a>
-<a name="line-125"></a>	<span class="n">Log</span><span class="p">(</span><span class="n">DEBUG</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Initializing systems...&quot;</span><span class="p">;</span>
+<a name="line-125"></a>	<span class="n">logger</span><span class="o">::</span><span class="n">debug</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Initializing systems...&quot;</span><span class="p">;</span>
 <a name="line-126"></a>
 <a name="line-127"></a>	<span class="c1">// Initializing SDL_TTF.</span>
 <a name="line-128"></a>	<span class="k">const</span> <span class="kt">int</span> <span class="n">k_ttf_init</span> <span class="o">=</span> <span class="n">TTF_Init</span><span class="p">();</span>
@@ -458,7 +458,7 @@
 <a name="line-133"></a>		<span class="n">LogSdlVersion</span><span class="p">(</span><span class="s">&quot;SDL_TTF&quot;</span><span class="p">,</span> <span class="n">compiled</span><span class="p">);</span>
 <a name="line-134"></a>	<span class="p">}</span>
 <a name="line-135"></a>	<span class="k">else</span> <span class="p">{</span>
-<a name="line-136"></a>		<span class="n">Log</span><span class="p">(</span><span class="n">ERROR</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Could not initialize TTF.&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">TTF_GetError</span><span class="p">();</span>
+<a name="line-136"></a>		<span class="n">logger</span><span class="o">::</span><span class="n">error</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Could not initialize TTF.&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">TTF_GetError</span><span class="p">();</span>
 <a name="line-137"></a>	<span class="p">}</span>
 <a name="line-138"></a>
 <a name="line-139"></a>	<span class="c1">// Initializing SDL with k_init_flags.</span>
@@ -475,7 +475,7 @@
 <a name="line-150"></a>		<span class="n">LogSdlVersion</span><span class="p">(</span><span class="s">&quot;SDL&quot;</span><span class="p">,</span> <span class="n">compiled</span><span class="p">,</span> <span class="n">SDL_GetRevision</span><span class="p">());</span>
 <a name="line-151"></a>	<span class="p">}</span>
 <a name="line-152"></a>	<span class="k">else</span> <span class="p">{</span>
-<a name="line-153"></a>		<span class="n">Log</span><span class="p">(</span><span class="n">ERROR</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Could not initialize SDL.&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">SDL_GetError</span><span class="p">();</span>
+<a name="line-153"></a>		<span class="n">logger</span><span class="o">::</span><span class="n">error</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Could not initialize SDL.&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">SDL_GetError</span><span class="p">();</span>
 <a name="line-154"></a>	<span class="p">}</span>
 <a name="line-155"></a>
 <a name="line-156"></a>	<span class="c1">// Initializing SDL_image with k_img_flags.</span>
@@ -486,7 +486,7 @@
 <a name="line-161"></a>		<span class="n">LogSdlVersion</span><span class="p">(</span><span class="s">&quot;SDL_image&quot;</span><span class="p">,</span> <span class="n">compiled</span><span class="p">);</span>
 <a name="line-162"></a>	<span class="p">}</span>
 <a name="line-163"></a>	<span class="k">else</span> <span class="p">{</span>
-<a name="line-164"></a>		<span class="n">Log</span><span class="p">(</span><span class="n">ERROR</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Could not initialize SDL_Image.&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">IMG_GetError</span><span class="p">();</span>
+<a name="line-164"></a>		<span class="n">logger</span><span class="o">::</span><span class="n">error</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Could not initialize SDL_Image.&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">IMG_GetError</span><span class="p">();</span>
 <a name="line-165"></a>	<span class="p">}</span>
 <a name="line-166"></a>
 <a name="line-167"></a>	<span class="c1">// Initializing SDL_mixer.</span>
@@ -504,11 +504,11 @@
 <a name="line-179"></a>		<span class="k">const</span> <span class="kt">int</span> <span class="n">k_channels_to_allocated</span> <span class="o">=</span> <span class="mi">25</span><span class="p">;</span>
 <a name="line-180"></a>		<span class="k">const</span> <span class="kt">int</span> <span class="n">k_channels_allocated</span> <span class="o">=</span> <span class="n">Mix_AllocateChannels</span><span class="p">(</span><span class="n">k_channels_to_allocated</span><span class="p">);</span>
 <a name="line-181"></a>
-<a name="line-182"></a>		<span class="n">Log</span><span class="p">(</span><span class="n">DEBUG</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Allocated (&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">k_channels_allocated</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;/&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">k_channels_to_allocated</span>
+<a name="line-182"></a>		<span class="n">logger</span><span class="o">::</span><span class="n">debug</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Allocated (&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">k_channels_allocated</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;/&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">k_channels_to_allocated</span>
 <a name="line-183"></a>			<span class="o">&lt;&lt;</span> <span class="s">&quot;) channels for the mixer.&quot;</span><span class="p">;</span>
 <a name="line-184"></a>	<span class="p">}</span>
 <a name="line-185"></a>	<span class="k">else</span> <span class="p">{</span>
-<a name="line-186"></a>		<span class="n">Log</span><span class="p">(</span><span class="n">ERROR</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Could not initialize SDL_Mixer&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">Mix_GetError</span><span class="p">();</span>
+<a name="line-186"></a>		<span class="n">logger</span><span class="o">::</span><span class="n">error</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Could not initialize SDL_Mixer&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">Mix_GetError</span><span class="p">();</span>
 <a name="line-187"></a>	<span class="p">}</span>
 <a name="line-188"></a>
 <a name="line-189"></a>	<span class="c1">// If even one system fails to initialize, returns false.</span>
@@ -516,7 +516,7 @@
 <a name="line-191"></a><span class="p">}</span>
 <a name="line-192"></a>
 <a name="line-193"></a><span class="kt">void</span> <span class="n">Close</span><span class="p">()</span> <span class="p">{</span>
-<a name="line-194"></a>	<span class="n">Log</span><span class="p">(</span><span class="n">DEBUG</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Closing SDL.&quot;</span><span class="p">;</span>
+<a name="line-194"></a>	<span class="n">logger</span><span class="o">::</span><span class="n">debug</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Closing SDL.&quot;</span><span class="p">;</span>
 <a name="line-195"></a>
 <a name="line-196"></a>	<span class="c1">// Quits SDL_mixer.</span>
 <a name="line-197"></a>	<span class="n">CloseMixer</span><span class="p">();</span>

@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>sdl2-engine: Logger Class Reference</title>
+<title>sdl2-engine: logger::detail::LogBuffer Class Reference</title>
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -33,7 +33,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v16</span>
+   &#160;<span id="projectnumber">v17</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -93,35 +93,40 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-  initNavTree('classLogger.html','');
+  initNavTree('classlogger_1_1detail_1_1LogBuffer.html','');
 </script>
 <div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pub-attribs">Data Fields</a> &#124;
 <a href="#pri-attribs">Private Attributes</a>  </div>
   <div class="headertitle">
-<div class="title">Logger Class Reference</div>  </div>
+<div class="title">logger::detail::LogBuffer Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<!-- doxytag: class="Logger" --><table class="memberdecls">
+<!-- doxytag: class="logger::detail::LogBuffer" --><table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8582d8febe452622ddb8b878f8fc8100"></a><!-- doxytag: member="Logger::log" ref="a8582d8febe452622ddb8b878f8fc8100" args="(const LogLevel level_)" -->
-std::ostringstream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>log</b> (const LogLevel level_)</td></tr>
-<tr><td colspan="2"><h2><a name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adbe89cab928ca98edfe34ef538b2f96f"></a><!-- doxytag: member="Logger::logLevelToString" ref="adbe89cab928ca98edfe34ef538b2f96f" args="(const LogLevel level_)" -->
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>logLevelToString</b> (const LogLevel level_)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a79e0a1e0ccd08d28edae2d07f8cb3ea4"></a><!-- doxytag: member="logger::detail::LogBuffer::LogBuffer" ref="a79e0a1e0ccd08d28edae2d07f8cb3ea4" args="(const int level)" -->
+&#160;</td><td class="memItemRight" valign="bottom"><b>LogBuffer</b> (const int level)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a440515be60236258ed5bac4ef7ba0067"></a><!-- doxytag: member="logger::detail::LogBuffer::LogBuffer" ref="a440515be60236258ed5bac4ef7ba0067" args="(const LogBuffer &amp;log_buffer)" -->
+&#160;</td><td class="memItemRight" valign="bottom"><b>LogBuffer</b> (const <a class="el" href="classlogger_1_1detail_1_1LogBuffer.html">LogBuffer</a> &amp;log_buffer)</td></tr>
+<tr><td class="memTemplParams" colspan="2"><a class="anchor" id="ac543860574e693ce05240bb3c257fbb9"></a><!-- doxytag: member="logger::detail::LogBuffer::operator&lt;&lt;" ref="ac543860574e693ce05240bb3c257fbb9" args="(const T &amp;t)" -->
+template&lt;typename T &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlogger_1_1detail_1_1LogBuffer.html">LogBuffer</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator&lt;&lt;</b> (const T &amp;t)</td></tr>
+<tr><td colspan="2"><h2><a name="pub-attribs"></a>
+Data Fields</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a559ad65987810936bf626925e685c60a"></a><!-- doxytag: member="logger::detail::LogBuffer::m_log_level" ref="a559ad65987810936bf626925e685c60a" args="" -->
+const int&#160;</td><td class="memItemRight" valign="bottom"><b>m_log_level</b></td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af1b3baedac2e1b8b4d02257725a4df1f"></a><!-- doxytag: member="Logger::os" ref="af1b3baedac2e1b8b4d02257725a4df1f" args="" -->
-std::ostringstream&#160;</td><td class="memItemRight" valign="bottom"><b>os</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a064d43cec8f2087273038eda02b9f126"></a><!-- doxytag: member="logger::detail::LogBuffer::m_log_stream" ref="a064d43cec8f2087273038eda02b9f126" args="" -->
+std::ostringstream&#160;</td><td class="memItemRight" valign="bottom"><b>m_log_stream</b></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="Logger_8h_source.html#l00017">17</a> of file <a class="el" href="Logger_8h_source.html">Logger.h</a>.</p>
+<p>Definition at line <a class="el" href="Logger_8h_source.html#l00008">8</a> of file <a class="el" href="Logger_8h_source.html">Logger.h</a>.</p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="Logger_8h_source.html">Logger.h</a></li>
 <li><a class="el" href="Logger_8cpp_source.html">Logger.cpp</a></li>
@@ -144,9 +149,11 @@ std::ostringstream&#160;</td><td class="memItemRight" valign="bottom"><b>os</b><
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="classLogger.html">Logger</a>      </li>
+      <li class="navelem"><b>logger</b>      </li>
+      <li class="navelem"><b>detail</b>      </li>
+      <li class="navelem"><a class="el" href="classlogger_1_1detail_1_1LogBuffer.html">LogBuffer</a>      </li>
 
-    <li class="footer">Generated on Tue Jan 20 2015 06:46:14 for sdl2-engine by
+    <li class="footer">Generated on Wed Jan 21 2015 00:08:01 for sdl2-engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>
