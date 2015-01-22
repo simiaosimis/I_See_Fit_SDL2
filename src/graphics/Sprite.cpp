@@ -1,7 +1,7 @@
 #include "graphics/Sprite.h"
 #include <cassert>
 #include "engine/Game.h"
-#include "core/Logger.h"
+#include "util/Logger.h"
 
 Sprite::Sprite(const std::string& path_) :
 	sdlTexture(nullptr),

@@ -1,5 +1,5 @@
 #include "input/ControllerHandler.h"
-#include "core/Logger.h"
+#include "util/Logger.h"
 
 ControllerHandler::ControllerHandler() :
 	gameController(nullptr)

@@ -1,7 +1,7 @@
 #include "graphics/Renderer.h"
 #include <cassert>
 #include "util/Configuration.h"
-#include "core/Logger.h"
+#include "util/Logger.h"
 
 Renderer::Renderer(SDL_Window* const sdlWindow_, const Uint32 flags_) :
 	sdlRenderer(nullptr)

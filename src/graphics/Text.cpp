@@ -1,5 +1,5 @@
 #include "graphics/Text.h"
-#include "core/Logger.h"
+#include "util/Logger.h"
 
 Text::Text(const double x_, const double y_, const char* path_, const int size_,
 	const char* text_, const SDL_Color color_) :

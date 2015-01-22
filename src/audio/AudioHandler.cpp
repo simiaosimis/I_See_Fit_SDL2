@@ -2,7 +2,7 @@
 #include <cassert>
 #include <algorithm>
 #include "engine/Game.h"
-#include "core/Logger.h"
+#include "util/Logger.h"
 
 AudioHandler::AudioHandler() :
 	m_current_music{nullptr},
@@ -33,14 +33,14 @@ void AudioHandler::PlaySoundEffect(const std::string& path) {
 	m_effects.push_back(Game::instance().getResource().soundEffect(path));
 
 	const int k_play_once = 0;
-	const int k_played_channel = Mix_PlayChannel(-1, m_effects.back()->getMixChunk(),
+	const int k_played_channel = Mix_PlayChannel(-1, m_effects.back()->MixChunk(),
 		k_play_once);
 	if(k_played_channel == -1) {
 		logger::error() << "Failed to play sound effect on channel " << k_played_channel << ". "
 			<< Mix_GetError();
 	}
 
-	m_effects.back()->channel = k_played_channel;
+	m_effects.back()->m_channel = k_played_channel;
 }
 
 void AudioHandler::PlaySoundEffect(const std::string& path, const int times) {
@@ -48,14 +48,14 @@ void AudioHandler::PlaySoundEffect(const std::string& path, const int times) {
 
 	m_effects.push_back(Game::instance().getResource().soundEffect(path));
 
-	const int k_played_channel = Mix_PlayChannel(-1, m_effects.back()->getMixChunk(),
+	const int k_played_channel = Mix_PlayChannel(-1, m_effects.back()->MixChunk(),
 		(times - 1));
 	if(k_played_channel == -1) {
 		logger::error() << "Failed to play sound effect on channel " << k_played_channel << ". "
 			<< Mix_GetError();
 	}
 
-	m_effects.back()->channel = k_played_channel;
+	m_effects.back()->m_channel = k_played_channel;
 }
 
 void AudioHandler::SetMusicVolume(const int percent) {
@@ -102,10 +102,10 @@ void AudioHandler::ResumeEffects() {
 
 void AudioHandler::PlayMusic() {
 	if(m_current_music != nullptr) {
-		const int k_played_music = Mix_PlayMusic(m_current_music->getMixMusic(), -1);
+		const int k_played_music = Mix_PlayMusic(m_current_music->MixMusic(), -1);
 
 		if(k_played_music == -1) {
-			logger::error() << "Couldn't play music (" << m_current_music->getPath() << "). "
+			logger::error() << "Couldn't play music (" << m_current_music->Path() << "). "
 				<< Mix_GetError();
 		}
 	}
@@ -117,10 +117,10 @@ void AudioHandler::PlayMusic() {
 void AudioHandler::PlayMusic(const int times) {
 	assert((times == k_all_channels || times >= 1) && "Must be k_all_channels or >= 1");
 	if(m_current_music != nullptr) {
-		const int k_played_music = Mix_PlayMusic(m_current_music->getMixMusic(), times);
+		const int k_played_music = Mix_PlayMusic(m_current_music->MixMusic(), times);
 
 		if(k_played_music == -1) {
-			logger::error() << "Couldn't play music (" << m_current_music->getPath() << "). "
+			logger::error() << "Couldn't play music (" << m_current_music->Path() << "). "
 				<< Mix_GetError();
 		}
 	}
@@ -139,7 +139,7 @@ void AudioHandler::SetMusic(const std::string& path) {
 
 void AudioHandler::ClearChannel(const int channel) {
 	std::vector<SoundEffect*>::iterator it = std::remove_if(m_effects.begin(), m_effects.end(),
-		[=](SoundEffect* se){ return se->channel == channel; });
+		[=](SoundEffect* se){ return se->m_channel == channel; });
 	m_effects.erase(it, m_effects.end());
 }
 

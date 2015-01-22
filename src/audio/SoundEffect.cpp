@@ -1,28 +1,26 @@
 #include "audio/SoundEffect.h"
-#include "core/Logger.h"
+#include "util/Logger.h"
 
-SoundEffect::SoundEffect(const std::string& path_) :
-	channel(-1),
-	mixChunk(nullptr),
-	path(path_)
+SoundEffect::SoundEffect(const std::string& path) :
+	m_channel{-1},
+	m_mix_chunk{Mix_LoadWAV(path.c_str())},
+	m_path{path}
 {
-	this->mixChunk = Mix_LoadWAV(this->path.c_str());
-
-	if(this->mixChunk == nullptr) {
-		logger::error() << "Couldn't load sound effect (" << this->path << "). " << Mix_GetError();
+	if(m_mix_chunk == nullptr) {
+		logger::error() << "Couldn't load sound effect (" << m_path << "). " << Mix_GetError();
 	}
 }
 
 SoundEffect::~SoundEffect() {
-	if(this->mixChunk != nullptr) {
-		Mix_FreeChunk(this->mixChunk);
+	if(m_mix_chunk != nullptr) {
+		Mix_FreeChunk(m_mix_chunk);
 	}
 }
 
-Mix_Chunk* SoundEffect::getMixChunk() {
-	return this->mixChunk;
+Mix_Chunk* SoundEffect::MixChunk() {
+	return m_mix_chunk;
 }
 
-std::string SoundEffect::getPath() {
-	return this->path;
+std::string SoundEffect::Path() {
+	return m_path;
 }

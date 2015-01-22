@@ -4,7 +4,7 @@
 #include "util/Configuration.h"
 #include "util/Util.h"
 #include "graphics/Sprite.h"
-#include "core/Logger.h"
+#include "util/Logger.h"
 // Begin Game States includes
 #include "engine/GStatePlaceholder.h"
 // End Game States includes

@@ -1,5 +1,5 @@
 #include "input/InputHandler.h"
-#include "core/Logger.h"
+#include "util/Logger.h"
 
 InputHandler::InputHandler() :
 	controllerHandler(new ControllerHandler()),

@@ -1,6 +1,6 @@
 #include "graphics/Window.h"
 #include <cassert>
-#include "core/Logger.h"
+#include "util/Logger.h"
 #include "util/Configuration.h"
 
 Window::Window(const int width_, const int height_, const std::string& title_) :

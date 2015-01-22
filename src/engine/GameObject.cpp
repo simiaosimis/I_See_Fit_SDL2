@@ -2,7 +2,7 @@
 #include <SDL2/SDL.h>
 #include <cassert>
 #include "engine/Game.h"
-#include "core/Logger.h"
+#include "util/Logger.h"
 
 GameObject::GameObject(const double x_, const double y_, const std::string& path_) :
     x(x_),

@@ -1,6 +1,6 @@
 #include "engine/GStatePlaceholder.h"
 #include "engine/Game.h"
-#include "core/Logger.h"
+#include "util/Logger.h"
 
 GStatePlaceholder::GStatePlaceholder() :
 	image(nullptr),

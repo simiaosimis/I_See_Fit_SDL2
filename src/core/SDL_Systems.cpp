@@ -4,7 +4,7 @@
 #include <SDL2/SDL_ttf.h>
 #include <SDL2/SDL_mixer.h>
 #include <string>
-#include "core/Logger.h"
+#include "util/Logger.h"
 
 namespace {
 

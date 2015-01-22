@@ -1,27 +1,25 @@
 #include "audio/Music.h"
-#include "core/Logger.h"
+#include "util/Logger.h"
 
-Music::Music(const std::string& path_) :
-	mixMusic(nullptr),
-	path(path_)
+Music::Music(const std::string& path) :
+	m_mix_music{Mix_LoadMUS(path.c_str())},
+	m_path{path}
 {
-	this->mixMusic = Mix_LoadMUS(this->path.c_str());
-
-	if(this->mixMusic == nullptr) {
-		logger::error() << "Couldn't load music (" << this->path << "). " << Mix_GetError();
+	if(m_mix_music == nullptr) {
+		logger::error() << "Couldn't load music (" << m_path << "). " << Mix_GetError();
 	}
 }
 
 Music::~Music() {
-	if(this->mixMusic != nullptr) {
-		Mix_FreeMusic(this->mixMusic);
+	if(m_mix_music != nullptr) {
+		Mix_FreeMusic(m_mix_music);
 	}
 }
 
-Mix_Music* Music::getMixMusic() {
-	return this->mixMusic;
+Mix_Music* Music::MixMusic() {
+	return m_mix_music;
 }
 
-std::string Music::getPath() {
-	return this->path;
+std::string Music::Path() {
+	return m_path;
 }

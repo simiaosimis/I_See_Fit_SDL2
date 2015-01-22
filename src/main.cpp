@@ -1,7 +1,7 @@
 #include "core/SDL_Systems.h"
-#include "core/Logger.h"
 #include "engine/Game.h"
 #include "util/Configuration.h"
+#include "util/Logger.h"
 
 int main(int argc, char** argv) {
 
@@ -13,9 +13,9 @@ int main(int argc, char** argv) {
 
 	Configuration::Initialize();
 
-	const bool systemsInitialized = sdl::Initialize();
+	const bool k_systems_initialized = sdl::Initialize();
 
-	if(systemsInitialized) {
+	if(k_systems_initialized) {
 		Game::instance().runGame();
 		delete &Game::instance();
 	}
