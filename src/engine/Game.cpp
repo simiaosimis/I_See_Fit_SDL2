@@ -98,9 +98,9 @@ void Game::runGame() {
 		}
 
 		// Render.
-		this->window->getRenderer()->clear();
+		this->window->getRenderer()->Clear();
 		this->currentState->render();
-		this->window->getRenderer()->render();
+		this->window->getRenderer()->Render();
 
 		lastTime = now;
 

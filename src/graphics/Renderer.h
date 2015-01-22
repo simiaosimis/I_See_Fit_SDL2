@@ -5,27 +5,66 @@
 class Renderer {
 
 	public:
-		Renderer(SDL_Window* const sdlWindow_, const Uint32 flags_);
-		~Renderer();
-
-		void clear();
-		void render();
+		/**
+		* @brief The constructor.
+		*
+		* @param sdl_window : The SDL_Window object.
+		* @param flags : The renderer flags used for initialization (SDL_RendererFlags).
+		*/
+		Renderer(SDL_Window* const sdl_window, const Uint32 flags);
 
 		/**
-		* Rescales the renderization.
+		* @brief The destructor.
+		*/
+		~Renderer();
+
+		/**
+		* @brief Clears previous rendering.
+		*
+		* Initialize the backbuffer for the new frame's drawing.
+		*
+		* @see SDL_RenderClear
+		*/
+		void Clear();
+
+		/**
+		* @brief Renders everything drawn in a frame.
+		*
+		* Presents the composed backbuffer to the screen.
+		*
+		* @see SDL_RenderPresent
+		*/
+		void Render();
+
+		/**
+		* @brief Rescales the renderization.
+		*
 		* Set a device independent resolution for rendering.
-		* @param size_ : Multiplies Configuration::ResolutionWidth() and
+		*
+		* @param size : Multiplies Configuration::ResolutionWidth() and
 		* 	Configuration::ResolutionHeight() for the new resolution (0+).
+		*
 		* @note Practically, it looks like the camera has a larger field of view, the bigger
-		* 	the size_ parameter is.
+		* 	the size parameter is.
+		*
 		* @see SDL_RenderSetLogicalSize
 		*/
-		void setLogicalSize(int size_);
+		void SetLogicalSize(const int size);
 		
-		void getLogicalSize(int* w, int* h);
-		SDL_Renderer* getSdlRenderer();
+		/**
+		* @brief Returns the current set logical size through the parameters.
+		*
+		* @param width : Current logical width.
+		* @param height : Current logical height.
+		*/
+		void LogicalSize(int* width, int* height);
+
+		/**
+		* @return The SDL_Renderer object.
+		*/
+		SDL_Renderer* SdlRenderer();
 
 	private:
-		SDL_Renderer* sdlRenderer; /**< The SDL renderer to render onto. */
+		SDL_Renderer* m_sdl_renderer; /**< The SDL renderer to render onto. */
 
 };

@@ -51,7 +51,7 @@ void Window::create(const int width_, const int height_) {
 
 			if(linearFilter == SDL_TRUE) {
 				logger::info() << "Linear texture filtering enabled!";
-				this->renderer->setLogicalSize(Configuration::LogicalRenderSize());
+				this->renderer->SetLogicalSize(Configuration::LogicalRenderSize());
 			}
 			else {
 				logger::warn() << "Linear texture filtering disabled!";
