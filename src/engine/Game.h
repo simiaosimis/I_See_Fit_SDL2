@@ -47,7 +47,7 @@ class Game {
 		void Run();
 
 		/**
-		* @briefSets the current game state.
+		* @brief Sets the current game state.
 		*
 		* @see StateGame::load()
 		* @see StateGame::unload()

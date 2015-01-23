@@ -19,7 +19,7 @@ class Window {
 		Window();
 
 		/**
-		* @briefThe destructor.
+		* @brief The destructor.
 		*/
 		~Window();
 

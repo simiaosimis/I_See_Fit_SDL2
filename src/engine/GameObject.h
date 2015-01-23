@@ -60,7 +60,7 @@ class GameObject {
 		* Initializes all the attributes.
 		* @param x_ : position in x axis.
 		* @param y_ : position in y axis.
-		* @param sprite_ : which sprite to use.
+		* @param path : path for which sprite to use.
 		*/
 		GameObject(const double x_, const double y_, const std::string& path_);
 
