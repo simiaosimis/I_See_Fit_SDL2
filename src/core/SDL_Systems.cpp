@@ -8,6 +8,11 @@
 
 namespace {
 
+/**
+* @brief Properly closes SDL_Mixer.
+*
+* Also logs a small about of debug info about the audio.
+*/
 void CloseMixer() {
 	// Query the specifications of the opened audio, to figure out how many times we need to
 	// close the audio.
@@ -110,6 +115,25 @@ void LogSdlVersion(const std::string& library, const SDL_version& version_compil
 		static_cast<int>(version_compiled.patch) << " " << revision;
 }
 
+using FuncDriverName = const char* (*) (int);
+using FuncNumDrivers = int (*) ();
+/**
+* @brief Logs information about available drivers.
+*/
+void LogSdlDrivers(FuncDriverName func_driver_name, FuncNumDrivers func_num_drivers, logger::LogBuffer& drive_log) {
+	///@todo Something for SDL_DisplayMode
+	const int k_num_drivers = func_num_drivers();
+	if(k_num_drivers >= 1) {
+		drive_log << "\n > " << k_num_drivers << " drivers compiled into SDL:\n\t  ";
+		for(int i = 0; i < k_num_drivers; i++) {
+			drive_log << "(" << (i+1) << ") " << func_driver_name(i) << ", ";
+		}
+	}
+	else {
+		logger::error() << "Could not get number of drivers. " << SDL_GetError();
+	}
+}
+
 } // namespace
 
 namespace sdl {
@@ -164,6 +188,15 @@ bool Initialize() {
 		logger::error() << "Could not initialize SDL_Image." << IMG_GetError();
 	}
 
+	// Getting some video driver information. Enclosing this in a block so the logger gets
+	// destroyed and therefore flushed.
+	{
+		logger::LogBuffer driver_log{logger::debug()};
+		driver_log << "Getting driver information.";
+		LogSdlDrivers(SDL_GetVideoDriver, SDL_GetNumVideoDrivers, driver_log);
+		LogSdlDrivers(SDL_GetAudioDriver, SDL_GetNumAudioDrivers, driver_log);
+	}
+
 	// Initializing SDL_mixer.
 	const int k_frequency = 44100;
 	const int k_channels = 2;
@@ -176,11 +209,11 @@ bool Initialize() {
 		SDL_MIXER_VERSION(&compiled);
 		LogSdlVersion("SDL_mixer", compiled);
 
-		const int k_channels_to_allocated = 25;
-		const int k_channels_allocated = Mix_AllocateChannels(k_channels_to_allocated);
+		const int k_channels_to_allocate = 25;
+		const int k_channels_allocated = Mix_AllocateChannels(k_channels_to_allocate);
 
-		logger::debug() << "Allocated (" << k_channels_allocated << "/" << k_channels_to_allocated
-			<< ") channels for the mixer.";
+		logger::debug() << "Allocated " << k_channels_allocated << " out of "
+			<< k_channels_to_allocate << " requested channels for the mixer.";
 	}
 	else {
 		logger::error() << "Could not initialize SDL_Mixer" << Mix_GetError();

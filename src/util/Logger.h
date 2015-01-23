@@ -3,7 +3,6 @@
 #include <sstream>
 
 namespace logger {
-namespace detail {
 
 class LogBuffer {
 	public:
@@ -23,12 +22,10 @@ class LogBuffer {
 		std::ostringstream m_log_stream;
 };
 
-} // namespace detail
-
 template <int level>
-detail::LogBuffer log();
+LogBuffer log();
 
-using logger_function_ptr = detail::LogBuffer (*) ();
+using logger_function_ptr = LogBuffer (*) ();
 
 constexpr logger_function_ptr error = log<0>;
 constexpr logger_function_ptr warn = log<1>;

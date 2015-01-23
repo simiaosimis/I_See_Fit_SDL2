@@ -1,10 +1,7 @@
 #pragma once
 
 /**
-* @brief Wraps the SDL libraries.
-*
-* And contains the initializing and closing functions for the system(s). No instances
-*	necessary.
+* @brief Encloses initialization/closing of SDL systems.
 */
 namespace sdl {
 
