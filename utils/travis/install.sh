@@ -13,5 +13,7 @@ sudo update-alternatives --install /usr/bin/gcov gcov /usr/bin/gcov-4.8 80
 
 ##############################################################################
 # Add your projects necessary "install" commands here
-sudo apt-get install libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev graphviz libglew-dev
+sudo apt-get install -qq graphviz
+sudo apt-get install -qq libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev
+sudo apt-get install -qq libx11-dev libx11-xcb-dev
 ##############################################################################
