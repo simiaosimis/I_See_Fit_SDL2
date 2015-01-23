@@ -6,7 +6,7 @@ Music::Music(const std::string& path) :
 	m_path{path}
 {
 	if(m_mix_music == nullptr) {
-		logger::error() << "Couldn't load music (" << m_path << "). " << Mix_GetError();
+		log_error() << "Couldn't load music (" << m_path << "). " << Mix_GetError();
 	}
 }
 

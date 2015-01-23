@@ -36,7 +36,7 @@ void AudioHandler::PlaySoundEffect(const std::string& path) {
 	const int k_played_channel = Mix_PlayChannel(-1, m_effects.back()->MixChunk(),
 		k_play_once);
 	if(k_played_channel == -1) {
-		logger::error() << "Failed to play sound effect on channel " << k_played_channel << ". "
+		log_error() << "Failed to play sound effect on channel " << k_played_channel << ". "
 			<< Mix_GetError();
 	}
 
@@ -51,7 +51,7 @@ void AudioHandler::PlaySoundEffect(const std::string& path, const int times) {
 	const int k_played_channel = Mix_PlayChannel(-1, m_effects.back()->MixChunk(),
 		(times - 1));
 	if(k_played_channel == -1) {
-		logger::error() << "Failed to play sound effect on channel " << k_played_channel << ". "
+		log_error() << "Failed to play sound effect on channel " << k_played_channel << ". "
 			<< Mix_GetError();
 	}
 
@@ -84,7 +84,7 @@ void AudioHandler::PauseMusic() {
 		Mix_PauseMusic();
 	}
 	else {
-		logger::warn() << "Trying to pause music that is not playing.";
+		log_warn() << "Trying to pause music that is not playing.";
 	}
 }
 
@@ -105,12 +105,12 @@ void AudioHandler::PlayMusic() {
 		const int k_played_music = Mix_PlayMusic(m_current_music->MixMusic(), -1);
 
 		if(k_played_music == -1) {
-			logger::error() << "Couldn't play music (" << m_current_music->Path() << "). "
+			log_error() << "Couldn't play music (" << m_current_music->Path() << "). "
 				<< Mix_GetError();
 		}
 	}
 	else {
-		logger::error() << "Can't play a null music.";
+		log_error() << "Can't play a null music.";
 	}
 }
 
@@ -120,12 +120,12 @@ void AudioHandler::PlayMusic(const int times) {
 		const int k_played_music = Mix_PlayMusic(m_current_music->MixMusic(), times);
 
 		if(k_played_music == -1) {
-			logger::error() << "Couldn't play music (" << m_current_music->Path() << "). "
+			log_error() << "Couldn't play music (" << m_current_music->Path() << "). "
 				<< Mix_GetError();
 		}
 	}
 	else {
-		logger::error() << "Can't play a null music.";
+		log_error() << "Can't play a null music.";
 	}
 }
 

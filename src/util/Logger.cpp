@@ -1,21 +1,34 @@
 #include "Logger.h"
 #include <iostream>
+#include <utility>
 
-namespace logger {
+namespace {
+
+struct LogInfo {
+	const char* tag;
+	const char* color;
+};
 
 // constexpr implies const, but const is here to stop the compiler from yelling about
 // -Wwrite-strings
-constexpr const char* k_level_color_map[] {
-	"[ ERROR ]",
-	"[WARNING]",
-	"[ INFO  ]",
-	"[ DEBUG ]"
+constexpr const char* colorReset = "\033[0m";
+
+constexpr LogInfo logInfos[] {
+//	  Level   ,  Color
+	{" ERROR ", "\033[1;4;91;49m"},
+	{"WARNING", "\033[1;4;93;49m"},
+	{" INFO  ", "\033[1;4;96;49m"},
+	{" DEBUG ", "\033[1;4;32;49m"}
 };
 
-LogBuffer::LogBuffer(const int level) :
-	m_log_level{level},
+} // namespace
+
+LogBuffer::LogBuffer(const LogLevel level) :
+	m_log_level{static_cast<int>(level)},
 	m_log_stream{}
 {
+	// Ignoring 'parameter not used' warning.
+	(void)level;
 }
 
 LogBuffer::LogBuffer(const LogBuffer& log_buffer) :
@@ -25,18 +38,17 @@ LogBuffer::LogBuffer(const LogBuffer& log_buffer) :
 }
 
 LogBuffer::~LogBuffer() {
-	std::clog << k_level_color_map[m_log_level] << " - " << m_log_stream.str() << "\n";
+	std::clog << "[" << logInfos[m_log_level].color << logInfos[m_log_level].tag << colorReset
+		<< "] - " << m_log_stream.str() << "\n";
 }
 
-template <int level>
+template <LogLevel level>
 LogBuffer log() {
 	LogBuffer log_buffer{level};
 	return log_buffer;
 }
 
-template LogBuffer log<0>();
-template LogBuffer log<1>();
-template LogBuffer log<2>();
-template LogBuffer log<3>();
-
-} // namespace logger
+template LogBuffer log<LogLevel::Error>();
+template LogBuffer log<LogLevel::Warn>();
+template LogBuffer log<LogLevel::Info>();
+template LogBuffer log<LogLevel::Debug>();

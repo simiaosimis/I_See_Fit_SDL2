@@ -9,7 +9,7 @@ int main(int argc, char** argv) {
 	(static_cast<void>(argc));
 	(static_cast<void>(argv));
 
-	logger::debug() << "Starting sdl2-engine...";
+	log_debug() << "Starting sdl2-engine...";
 
 	Configuration::Initialize();
 
@@ -19,11 +19,11 @@ int main(int argc, char** argv) {
 		Game::Instance().Run();
 	}
 	else {
-		logger::error() << "Systems were not initialized.";
+		log_error() << "Systems were not initialized.";
 	}
 
 	sdl::Close();
 
-	logger::debug() << "Exiting sdl2-engine...";
+	log_debug() << "Exiting sdl2-engine...";
 	return 0;
 }

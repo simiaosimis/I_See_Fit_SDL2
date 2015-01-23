@@ -28,7 +28,7 @@ Sprite::Sprite(SDL_Surface* const surface_) :
 {
 	// Display error log if image wasn't loaded.
 	if(this->sdlTexture == nullptr) {
-		logger::error() << "Sprite load failed: " << this->path;
+		log_error() << "Sprite load failed: " << this->path;
 	}
 
 	assert(width >= 0 && "Must be >= 0");
@@ -49,12 +49,12 @@ void Sprite::loadFrom(const std::string& path_) {
 		this->sdlTexture = surfaceToTexture(loadedSurface);
 	}
 	else {
-		logger::error() << "Could not load surface from path." << IMG_GetError();
+		log_error() << "Could not load surface from path." << IMG_GetError();
 	}
 
 	// Display error log if image wasn't loaded.
 	if(this->sdlTexture == nullptr) {
-		logger::error() << "Sprite load failed: " << path_;
+		log_error() << "Sprite load failed: " << path_;
 	}
 }
 
@@ -85,7 +85,7 @@ void Sprite::render(const double x_, const double y_, SDL_Rect* const clip_,
 			&stretch, angle_, center_, flip_);
 
 	if(successfullRender != 0) {
-		logger::error() << "Failed to render sprite." << SDL_GetError();
+		log_error() << "Failed to render sprite." << SDL_GetError();
 	}
 }
 
@@ -122,14 +122,14 @@ SDL_Texture* Sprite::surfaceToTexture(SDL_Surface* const surface_) {
 			this->height = surface_->h;
 		}
 		else {
-			logger::error() << "Could not create texture from surface." << SDL_GetError();
+			log_error() << "Could not create texture from surface." << SDL_GetError();
 		}
 
 		// Free the loaded surface.
 		SDL_FreeSurface(surface_);
 	}
 	else {
-		logger::warn() << "Trying to convert a null surface to a texture.";
+		log_warn() << "Trying to convert a null surface to a texture.";
 	}
 
 	return newTexture;
@@ -144,7 +144,7 @@ double Sprite::getAlpha() {
 
 	const int rc = SDL_GetTextureAlphaMod(this->sdlTexture, &alpha);
 	if(rc != 0) {
-		logger::error() << "Could not get alpha value from Sprite (" << this->path << "). " << SDL_GetError();
+		log_error() << "Could not get alpha value from Sprite (" << this->path << "). " << SDL_GetError();
 	}
 
 	return static_cast<double>(alpha);
@@ -160,13 +160,13 @@ void Sprite::setAlpha(int alpha_) {
 
 	const int rc = SDL_SetTextureAlphaMod(this->sdlTexture, alpha_);
 	if(rc != 0) {
-		logger::error() << "Could not set alpha value of Sprite (" << this->path << "). " << SDL_GetError();
+		log_error() << "Could not set alpha value of Sprite (" << this->path << "). " << SDL_GetError();
 	}
 }
 
 void Sprite::setBlendMode(SDL_BlendMode blending_) {
 	const int rc = SDL_SetTextureBlendMode(this->sdlTexture, blending_);
 	if(rc != 0) {
-		logger::error() << "Could not set blend mode of Sprite (" << this->path << "). " << SDL_GetError();
+		log_error() << "Could not set blend mode of Sprite (" << this->path << "). " << SDL_GetError();
 	}
 }

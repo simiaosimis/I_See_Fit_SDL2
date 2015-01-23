@@ -7,7 +7,7 @@ Renderer::Renderer(SDL_Window* const sdl_window, const Uint32 flags) :
 	m_sdl_renderer{SDL_CreateRenderer(sdl_window, -1, flags)}
 {
 	if(m_sdl_renderer == nullptr){
-		logger::error() << "Renderer could not be created. " << SDL_GetError();
+		log_error() << "Renderer could not be created. " << SDL_GetError();
 	}
 }
 
@@ -20,12 +20,12 @@ Renderer::~Renderer() {
 void Renderer::Clear() {
 	const int k_set_color = SDL_SetRenderDrawColor(m_sdl_renderer, 0x00, 0x00, 0x00, 0xFF);
 	if(k_set_color != 0){
-		logger::error() << "Failed to set renderer draw color. " << SDL_GetError();
+		log_error() << "Failed to set renderer draw color. " << SDL_GetError();
 	}
 
 	const int k_clear_renderer = SDL_RenderClear(m_sdl_renderer);
 	if(k_clear_renderer != 0){
-		logger::error() << "Failed to clear the renderer. " << SDL_GetError();
+		log_error() << "Failed to clear the renderer. " << SDL_GetError();
 	}
 }
 
@@ -44,7 +44,7 @@ void Renderer::SetLogicalSize(const int size) {
 		Configuration::ResolutionWidth() * size, Configuration::ResolutionHeight() * size);
 
 	if(k_set_size != 0) {
-		logger::error() << "Failed to set the renderer logical size. " << SDL_GetError();
+		log_error() << "Failed to set the renderer logical size. " << SDL_GetError();
 	}
 }
 
@@ -52,7 +52,7 @@ void Renderer::LogicalSize(int* width, int* height) {
 	SDL_RenderGetLogicalSize(m_sdl_renderer, width, height);
 
 	if((*width) == 0 && (*height) == 0) {
-		logger::warn() << "Tried to get logical size of renderer, but it has never been set.";
+		log_warn() << "Tried to get logical size of renderer, but it has never been set.";
 	}
 }
 

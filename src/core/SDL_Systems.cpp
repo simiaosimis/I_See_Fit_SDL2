@@ -63,12 +63,12 @@ void CloseMixer() {
 	    		break;
 	    }
 
-		logger::debug() << "Audio opened " << k_numbers_of_times_opened <<
+		log_debug() << "Audio opened " << k_numbers_of_times_opened <<
 			" time(s). Frequency: " << frequency << "Hz. Format: " << format_text <<
 			". Channels: " << channels << " " << channels_text << ".";
 	}
 	else {
-		logger::error() << "Error querying the specifications of the audio. " << Mix_GetError();
+		log_error() << "Error querying the specifications of the audio. " << Mix_GetError();
 
 		// Set the amount of times to close the audio to one, just for safety.
 		times_to_close = 1;
@@ -95,7 +95,7 @@ void CloseMixer() {
 * @param revision : If any, the revision.
 */
 void LogSdlVersion(const std::string& library, const SDL_version& version_compiled) {
-	logger::debug() << library << " Version (compiled): " <<
+	log_debug() << library << " Version (compiled): " <<
 		static_cast<int>(version_compiled.major) << "." <<
 		static_cast<int>(version_compiled.minor) << "." <<
 		static_cast<int>(version_compiled.patch);
@@ -109,7 +109,7 @@ void LogSdlVersion(const std::string& library, const SDL_version& version_compil
 */
 void LogSdlVersion(const std::string& library, const SDL_version& version_compiled,
 		const std::string& revision) {
-	logger::debug() << library << " Version (compiled): " <<
+	log_debug() << library << " Version (compiled): " <<
 		static_cast<int>(version_compiled.major) << "." <<
 		static_cast<int>(version_compiled.minor) << "." <<
 		static_cast<int>(version_compiled.patch) << " " << revision;
@@ -120,7 +120,8 @@ using FuncNumDrivers = int (*) ();
 /**
 * @brief Logs information about available drivers.
 */
-void LogSdlDrivers(FuncDriverName func_driver_name, FuncNumDrivers func_num_drivers, logger::LogBuffer& drive_log) {
+void LogSdlDrivers(FuncDriverName func_driver_name, FuncNumDrivers func_num_drivers,
+		LogBuffer& drive_log) {
 	///@todo Something for SDL_DisplayMode
 	const int k_num_drivers = func_num_drivers();
 	if(k_num_drivers >= 1) {
@@ -130,7 +131,7 @@ void LogSdlDrivers(FuncDriverName func_driver_name, FuncNumDrivers func_num_driv
 		}
 	}
 	else {
-		logger::error() << "Could not get number of drivers. " << SDL_GetError();
+		log_error() << "Could not get number of drivers. " << SDL_GetError();
 	}
 }
 
@@ -146,7 +147,7 @@ bool Initialize() {
 
 	SDL_version compiled;
 
-	logger::debug() << "Initializing systems...";
+	log_debug() << "Initializing systems...";
 
 	// Initializing SDL_TTF.
 	const int k_ttf_init = TTF_Init();
@@ -157,7 +158,7 @@ bool Initialize() {
 		LogSdlVersion("SDL_TTF", compiled);
 	}
 	else {
-		logger::error() << "Could not initialize TTF." << TTF_GetError();
+		log_error() << "Could not initialize TTF." << TTF_GetError();
 	}
 
 	// Initializing SDL with k_init_flags.
@@ -174,7 +175,7 @@ bool Initialize() {
 		LogSdlVersion("SDL", compiled, SDL_GetRevision());
 	}
 	else {
-		logger::error() << "Could not initialize SDL." << SDL_GetError();
+		log_error() << "Could not initialize SDL." << SDL_GetError();
 	}
 
 	// Initializing SDL_image with k_img_flags.
@@ -185,13 +186,13 @@ bool Initialize() {
 		LogSdlVersion("SDL_image", compiled);
 	}
 	else {
-		logger::error() << "Could not initialize SDL_Image." << IMG_GetError();
+		log_error() << "Could not initialize SDL_Image." << IMG_GetError();
 	}
 
 	// Getting some video driver information. Enclosing this in a block so the logger gets
 	// destroyed and therefore flushed.
 	{
-		logger::LogBuffer driver_log{logger::debug()};
+		LogBuffer driver_log{log_debug()};
 		driver_log << "Getting driver information.";
 		LogSdlDrivers(SDL_GetVideoDriver, SDL_GetNumVideoDrivers, driver_log);
 		LogSdlDrivers(SDL_GetAudioDriver, SDL_GetNumAudioDrivers, driver_log);
@@ -212,11 +213,11 @@ bool Initialize() {
 		const int k_channels_to_allocate = 25;
 		const int k_channels_allocated = Mix_AllocateChannels(k_channels_to_allocate);
 
-		logger::debug() << "Allocated " << k_channels_allocated << " out of "
+		log_debug() << "Allocated " << k_channels_allocated << " out of "
 			<< k_channels_to_allocate << " requested channels for the mixer.";
 	}
 	else {
-		logger::error() << "Could not initialize SDL_Mixer" << Mix_GetError();
+		log_error() << "Could not initialize SDL_Mixer" << Mix_GetError();
 	}
 
 	// If even one system fails to initialize, returns false.
@@ -224,7 +225,7 @@ bool Initialize() {
 }
 
 void Close() {
-	logger::debug() << "Closing SDL.";
+	log_debug() << "Closing SDL.";
 
 	// Quits SDL_mixer.
 	CloseMixer();

@@ -24,7 +24,7 @@ GameObject::GameObject(const double x_, const double y_, const std::string& path
         this->boundingBox.h = this->height;
     }
     else {
-        logger::warn() << "GameObject sprite is null, width and height will be undefined.";
+        log_warn() << "GameObject sprite is null, width and height will be undefined.";
     }
 
     assert(width >= 0 && "Must be >= 0");

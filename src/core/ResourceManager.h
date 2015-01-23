@@ -61,7 +61,7 @@ ResourceManager<Type>::~ResourceManager() {
 
 	for(it = resources.begin(); it != resources.end(); it++) {
 		if(it->second.use_count() != 1) {
-			logger::warn() << "Resource deleted with use count different than 1 (" << it->first
+			log_warn() << "Resource deleted with use count different than 1 (" << it->first
 				<< ").";
 		}
 	}
