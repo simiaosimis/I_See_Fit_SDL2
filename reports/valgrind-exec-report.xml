@@ -12,8 +12,8 @@
   <line>Command: /home/travis/build/CaioIcy/sdl2-engine/build/src/sdl2-engine_exec</line>
 </preamble>
 
-<pid>19733</pid>
-<ppid>19710</ppid>
+<pid>22899</pid>
+<ppid>22868</ppid>
 <tool>memcheck</tool>
 
 <args>
@@ -30,13 +30,13 @@
 
 <status>
   <state>RUNNING</state>
-  <time>00:00:00:00.142 </time>
+  <time>00:00:00:00.356 </time>
 </status>
 
 
 <status>
   <state>FINISHED</state>
-  <time>00:00:00:02.841 </time>
+  <time>00:00:00:07.500 </time>
 </status>
 
 <errorcounts>
@@ -54,7 +54,7 @@
 
 <status>
   <state>FINISHED</state>
-  <time>00:00:00:04.558 </time>
+  <time>00:00:00:12.083 </time>
 </status>
 
 <error>
@@ -579,7 +579,7 @@
       <fn>Mix_OpenAudio</fn>
     </frame>
     <frame>
-      <ip>0x42A767</ip>
+      <ip>0x4253DF</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/build/src/sdl2-engine_exec</obj>
       <fn>sdl::Initialize()</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src/core</dir>
@@ -1095,7 +1095,7 @@
       <fn>Mix_OpenAudio</fn>
     </frame>
     <frame>
-      <ip>0x42A767</ip>
+      <ip>0x4253DF</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/build/src/sdl2-engine_exec</obj>
       <fn>sdl::Initialize()</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src/core</dir>
