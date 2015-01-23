@@ -8,5 +8,6 @@ var searchData=
   ['log_3c_202_20_3e',['log< 2 >',['../namespacelogger.html#a8e89ff6aee81fe6086dfb4c176140864',1,'logger']]],
   ['log_3c_203_20_3e',['log< 3 >',['../namespacelogger.html#a9b07b533ce5bc52f39ed1c5ca33689b9',1,'logger']]],
   ['logbuffer',['LogBuffer',['../classlogger_1_1detail_1_1LogBuffer.html#a79e0a1e0ccd08d28edae2d07f8cb3ea4',1,'logger::detail::LogBuffer::LogBuffer(const int level)'],['../classlogger_1_1detail_1_1LogBuffer.html#a440515be60236258ed5bac4ef7ba0067',1,'logger::detail::LogBuffer::LogBuffer(const LogBuffer &amp;log_buffer)']]],
-  ['logicalrendersize',['LogicalRenderSize',['../classConfiguration.html#a87978aa3909e9063f84a27e058018e70',1,'Configuration']]]
+  ['logicalrendersize',['LogicalRenderSize',['../classConfiguration.html#a87978aa3909e9063f84a27e058018e70',1,'Configuration']]],
+  ['logicalsize',['LogicalSize',['../classRenderer.html#ae60d5ef1af57d46cce0b703580d1bce4',1,'Renderer']]]
 ];

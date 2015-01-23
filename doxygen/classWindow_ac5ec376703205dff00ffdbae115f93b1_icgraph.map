@@ -1,7 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$classGame.html#abc9436a9d18e48c6e1e4fbc4ea879449" title="Game::runGame" alt="" coords="212,5,329,35"/>
-<area shape="rect" id="node7" href="$classGame.html#af4f1ce14a3cf7017942fdf0d183d24c3" title="Game::getRenderer" alt="" coords="203,59,339,88"/>
-<area shape="rect" id="node5" href="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="412,5,463,35"/>
-<area shape="rect" id="node9" href="$classSprite.html#ac82a01b98130b9b1403667059640163b" title="Sprite::render" alt="" coords="388,59,487,88"/>
-<area shape="rect" id="node11" href="$classText.html#a61dff362532c385dbc0650b397138635" title="Text::render" alt="" coords="537,59,628,88"/>
-</map>

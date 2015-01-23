@@ -28,7 +28,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v19</span>
+   &#160;<span id="projectnumber">v20</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -82,13 +82,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <a href="InputHandler_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;<a class="code" href="InputHandler_8h.html">input/InputHandler.h</a>&quot;</span>
-<a name="l00002"></a>00002 <span class="preprocessor">#include &quot;<a class="code" href="Logger_8h.html">core/Logger.h</a>&quot;</span>
+<a name="l00002"></a>00002 <span class="preprocessor">#include &quot;<a class="code" href="Logger_8h.html">util/Logger.h</a>&quot;</span>
 <a name="l00003"></a>00003 
 <a name="l00004"></a><a class="code" href="classInputHandler.html#a698aa4af4f326a9881835fda251ca996">00004</a> <a class="code" href="classInputHandler.html#a698aa4af4f326a9881835fda251ca996">InputHandler::InputHandler</a>() :
 <a name="l00005"></a>00005     controllerHandler(new <a class="code" href="classControllerHandler.html">ControllerHandler</a>()),
 <a name="l00006"></a>00006     quitFlag(false)
 <a name="l00007"></a>00007 {
-<a name="l00008"></a>00008     this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19">keyStates</a>.fill(<span class="keyword">false</span>);
+<a name="l00008"></a>00008     this-&gt;<a class="code" href="classInputHandler.html#a33012c2e6599b594188f33cd74fa4d6f">keyStates</a>.fill(<span class="keyword">false</span>);
 <a name="l00009"></a>00009 }
 <a name="l00010"></a>00010 
 <a name="l00011"></a><a class="code" href="classInputHandler.html#ac1f7efb54b34d433d6ffba62627452b6">00011</a> <a class="code" href="classInputHandler.html#ac1f7efb54b34d433d6ffba62627452b6">InputHandler::~InputHandler</a>() {
@@ -109,8 +109,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00026"></a>00026 
 <a name="l00027"></a>00027             this-&gt;<a class="code" href="classInputHandler.html#a50ac48002b081c2c03af8f638c47dbe7">controllerHandler</a>-&gt;<a class="code" href="classControllerHandler.html#a79e2adab7291ab5589e907860d046046">handleInput</a>(this-&gt;<a class="code" href="classInputHandler.html#ab2fa06988077060c7a3dca6c3d643dd3">sdlEvent</a>);
 <a name="l00028"></a>00028 
-<a name="l00029"></a>00029             <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19">keyStates</a>.size(); i++) {
-<a name="l00030"></a>00030                 this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19">keyStates</a>[i] = this-&gt;<a class="code" href="classInputHandler.html#a50ac48002b081c2c03af8f638c47dbe7">controllerHandler</a>-&gt;<a class="code" href="classControllerHandler.html#a1c4161545fdc54bf1d406f6acd2d67d6">getKeyStates</a>()[i];
+<a name="l00029"></a>00029             <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; this-&gt;<a class="code" href="classInputHandler.html#a33012c2e6599b594188f33cd74fa4d6f">keyStates</a>.size(); i++) {
+<a name="l00030"></a>00030                 this-&gt;<a class="code" href="classInputHandler.html#a33012c2e6599b594188f33cd74fa4d6f">keyStates</a>[i] = this-&gt;<a class="code" href="classInputHandler.html#a50ac48002b081c2c03af8f638c47dbe7">controllerHandler</a>-&gt;<a class="code" href="classControllerHandler.html#a8a0133502559843ef6f8f1984d3856f0">getKeyStates</a>()[i];
 <a name="l00031"></a>00031             }
 <a name="l00032"></a>00032 
 <a name="l00033"></a>00033         }
@@ -119,22 +119,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00036"></a>00036 
 <a name="l00037"></a>00037             <span class="keywordflow">switch</span>(this-&gt;<a class="code" href="classInputHandler.html#ab2fa06988077060c7a3dca6c3d643dd3">sdlEvent</a>.key.keysym.sym) {
 <a name="l00038"></a>00038                 <span class="keywordflow">case</span> SDLK_SPACE: <span class="comment">// SPACEBAR.</span>
-<a name="l00039"></a>00039                     this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19">keyStates</a>[<a class="code" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5eac08dae7edcb5c5bb959fee5971fbad95">GameKeys::SPACE</a>] = <span class="keyword">true</span>;
+<a name="l00039"></a>00039                     this-&gt;<a class="code" href="classInputHandler.html#a33012c2e6599b594188f33cd74fa4d6f">keyStates</a>[<a class="code" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5eac08dae7edcb5c5bb959fee5971fbad95">GameKeys::SPACE</a>] = <span class="keyword">true</span>;
 <a name="l00040"></a>00040                     <span class="keywordflow">break</span>;
 <a name="l00041"></a>00041                 <span class="keywordflow">case</span> SDLK_UP: <span class="comment">// UP ARROW.</span>
-<a name="l00042"></a>00042                     this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19">keyStates</a>[<a class="code" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5eaba595d8bca8bc5e67c37c0a9d89becfa">GameKeys::UP</a>] = <span class="keyword">true</span>;
+<a name="l00042"></a>00042                     this-&gt;<a class="code" href="classInputHandler.html#a33012c2e6599b594188f33cd74fa4d6f">keyStates</a>[<a class="code" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5eaba595d8bca8bc5e67c37c0a9d89becfa">GameKeys::UP</a>] = <span class="keyword">true</span>;
 <a name="l00043"></a>00043                     <span class="keywordflow">break</span>;
 <a name="l00044"></a>00044                 <span class="keywordflow">case</span> SDLK_DOWN: <span class="comment">// DOWN ARROW.</span>
-<a name="l00045"></a>00045                     this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19">keyStates</a>[<a class="code" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5ea9b0b4a95b99523966e0e34ffdadac9da">GameKeys::DOWN</a>] = <span class="keyword">true</span>;
+<a name="l00045"></a>00045                     this-&gt;<a class="code" href="classInputHandler.html#a33012c2e6599b594188f33cd74fa4d6f">keyStates</a>[<a class="code" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5ea9b0b4a95b99523966e0e34ffdadac9da">GameKeys::DOWN</a>] = <span class="keyword">true</span>;
 <a name="l00046"></a>00046                     <span class="keywordflow">break</span>;
 <a name="l00047"></a>00047                 <span class="keywordflow">case</span> SDLK_LEFT: <span class="comment">// LEFT ARROW.</span>
-<a name="l00048"></a>00048                     this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19">keyStates</a>[<a class="code" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5eadb45120aafd37a973140edee24708065">GameKeys::LEFT</a>] = <span class="keyword">true</span>;
+<a name="l00048"></a>00048                     this-&gt;<a class="code" href="classInputHandler.html#a33012c2e6599b594188f33cd74fa4d6f">keyStates</a>[<a class="code" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5eadb45120aafd37a973140edee24708065">GameKeys::LEFT</a>] = <span class="keyword">true</span>;
 <a name="l00049"></a>00049                     <span class="keywordflow">break</span>;
 <a name="l00050"></a>00050                 <span class="keywordflow">case</span> SDLK_RIGHT: <span class="comment">// RIGHT ARROW.</span>
-<a name="l00051"></a>00051                     this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19">keyStates</a>[<a class="code" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5eaec8379af7490bb9eaaf579cf17876f38">GameKeys::RIGHT</a>] = <span class="keyword">true</span>;
+<a name="l00051"></a>00051                     this-&gt;<a class="code" href="classInputHandler.html#a33012c2e6599b594188f33cd74fa4d6f">keyStates</a>[<a class="code" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5eaec8379af7490bb9eaaf579cf17876f38">GameKeys::RIGHT</a>] = <span class="keyword">true</span>;
 <a name="l00052"></a>00052                     <span class="keywordflow">break</span>;
 <a name="l00053"></a>00053                 <span class="keywordflow">case</span> SDLK_ESCAPE: <span class="comment">// ESCAPE.</span>
-<a name="l00054"></a>00054                     this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19">keyStates</a>[<a class="code" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5ea0a311695a4f6c56869245418bebeb33d">GameKeys::ESCAPE</a>] = <span class="keyword">true</span>;
+<a name="l00054"></a>00054                     this-&gt;<a class="code" href="classInputHandler.html#a33012c2e6599b594188f33cd74fa4d6f">keyStates</a>[<a class="code" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5ea0a311695a4f6c56869245418bebeb33d">GameKeys::ESCAPE</a>] = <span class="keyword">true</span>;
 <a name="l00055"></a>00055                     <span class="keywordflow">break</span>;
 <a name="l00056"></a>00056                 <span class="keywordflow">default</span>:
 <a name="l00057"></a>00057                     <span class="keywordflow">break</span>;
@@ -146,22 +146,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00063"></a>00063 
 <a name="l00064"></a>00064             <span class="keywordflow">switch</span>(this-&gt;<a class="code" href="classInputHandler.html#ab2fa06988077060c7a3dca6c3d643dd3">sdlEvent</a>.key.keysym.sym) {
 <a name="l00065"></a>00065                 <span class="keywordflow">case</span> SDLK_SPACE: <span class="comment">// SPACEBAR.</span>
-<a name="l00066"></a>00066                     this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19">keyStates</a>[<a class="code" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5eac08dae7edcb5c5bb959fee5971fbad95">GameKeys::SPACE</a>] = <span class="keyword">false</span>;
+<a name="l00066"></a>00066                     this-&gt;<a class="code" href="classInputHandler.html#a33012c2e6599b594188f33cd74fa4d6f">keyStates</a>[<a class="code" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5eac08dae7edcb5c5bb959fee5971fbad95">GameKeys::SPACE</a>] = <span class="keyword">false</span>;
 <a name="l00067"></a>00067                     <span class="keywordflow">break</span>;
 <a name="l00068"></a>00068                 <span class="keywordflow">case</span> SDLK_UP: <span class="comment">// UP ARROW.</span>
-<a name="l00069"></a>00069                     this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19">keyStates</a>[<a class="code" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5eaba595d8bca8bc5e67c37c0a9d89becfa">GameKeys::UP</a>] = <span class="keyword">false</span>;
+<a name="l00069"></a>00069                     this-&gt;<a class="code" href="classInputHandler.html#a33012c2e6599b594188f33cd74fa4d6f">keyStates</a>[<a class="code" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5eaba595d8bca8bc5e67c37c0a9d89becfa">GameKeys::UP</a>] = <span class="keyword">false</span>;
 <a name="l00070"></a>00070                     <span class="keywordflow">break</span>;
 <a name="l00071"></a>00071                 <span class="keywordflow">case</span> SDLK_DOWN: <span class="comment">// DOWN ARROW.</span>
-<a name="l00072"></a>00072                     this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19">keyStates</a>[<a class="code" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5ea9b0b4a95b99523966e0e34ffdadac9da">GameKeys::DOWN</a>] = <span class="keyword">false</span>;
+<a name="l00072"></a>00072                     this-&gt;<a class="code" href="classInputHandler.html#a33012c2e6599b594188f33cd74fa4d6f">keyStates</a>[<a class="code" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5ea9b0b4a95b99523966e0e34ffdadac9da">GameKeys::DOWN</a>] = <span class="keyword">false</span>;
 <a name="l00073"></a>00073                     <span class="keywordflow">break</span>;
 <a name="l00074"></a>00074                 <span class="keywordflow">case</span> SDLK_LEFT: <span class="comment">// LEFT ARROW.</span>
-<a name="l00075"></a>00075                     this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19">keyStates</a>[<a class="code" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5eadb45120aafd37a973140edee24708065">GameKeys::LEFT</a>] = <span class="keyword">false</span>;
+<a name="l00075"></a>00075                     this-&gt;<a class="code" href="classInputHandler.html#a33012c2e6599b594188f33cd74fa4d6f">keyStates</a>[<a class="code" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5eadb45120aafd37a973140edee24708065">GameKeys::LEFT</a>] = <span class="keyword">false</span>;
 <a name="l00076"></a>00076                     <span class="keywordflow">break</span>;
 <a name="l00077"></a>00077                 <span class="keywordflow">case</span> SDLK_RIGHT: <span class="comment">// RIGHT ARROW.</span>
-<a name="l00078"></a>00078                     this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19">keyStates</a>[<a class="code" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5eaec8379af7490bb9eaaf579cf17876f38">GameKeys::RIGHT</a>] = <span class="keyword">false</span>;
+<a name="l00078"></a>00078                     this-&gt;<a class="code" href="classInputHandler.html#a33012c2e6599b594188f33cd74fa4d6f">keyStates</a>[<a class="code" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5eaec8379af7490bb9eaaf579cf17876f38">GameKeys::RIGHT</a>] = <span class="keyword">false</span>;
 <a name="l00079"></a>00079                     <span class="keywordflow">break</span>;
 <a name="l00080"></a>00080                 <span class="keywordflow">case</span> SDLK_ESCAPE: <span class="comment">// ESCAPE.</span>
-<a name="l00081"></a>00081                     this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19">keyStates</a>[<a class="code" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5ea0a311695a4f6c56869245418bebeb33d">GameKeys::ESCAPE</a>] = <span class="keyword">false</span>;
+<a name="l00081"></a>00081                     this-&gt;<a class="code" href="classInputHandler.html#a33012c2e6599b594188f33cd74fa4d6f">keyStates</a>[<a class="code" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5ea0a311695a4f6c56869245418bebeb33d">GameKeys::ESCAPE</a>] = <span class="keyword">false</span>;
 <a name="l00082"></a>00082                     <span class="keywordflow">break</span>;
 <a name="l00083"></a>00083                 <span class="keywordflow">default</span>:
 <a name="l00084"></a>00084                     <span class="keywordflow">break</span>;
@@ -176,8 +176,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00093"></a>00093     } <span class="keywordflow">while</span>(pendingEvent != 0);
 <a name="l00094"></a>00094 }
 <a name="l00095"></a>00095 
-<a name="l00096"></a><a class="code" href="classInputHandler.html#af7087290a2fd7d973a47768049cfe5eb">00096</a> std::array&lt;bool, GameKeys::MAX&gt; <a class="code" href="classInputHandler.html#af7087290a2fd7d973a47768049cfe5eb">InputHandler::getKeyStates</a>() {
-<a name="l00097"></a>00097     <span class="keywordflow">return</span> this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19">keyStates</a>;
+<a name="l00096"></a><a class="code" href="classInputHandler.html#a35db020395da61dd5034a7d2e56d3013">00096</a> InputArray <a class="code" href="classInputHandler.html#a35db020395da61dd5034a7d2e56d3013">InputHandler::getKeyStates</a>() {
+<a name="l00097"></a>00097     <span class="keywordflow">return</span> this-&gt;<a class="code" href="classInputHandler.html#a33012c2e6599b594188f33cd74fa4d6f">keyStates</a>;
 <a name="l00098"></a>00098 }
 <a name="l00099"></a>00099 
 <a name="l00100"></a><a class="code" href="classInputHandler.html#a7d103ecce85288f454876b5bef8b3aee">00100</a> <span class="keywordtype">bool</span> <a class="code" href="classInputHandler.html#a7d103ecce85288f454876b5bef8b3aee">InputHandler::isQuitFlag</a>() {
@@ -189,7 +189,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00106"></a>00106 }
 <a name="l00107"></a>00107 
 <a name="l00108"></a><a class="code" href="classInputHandler.html#ac318051809c7764f010ca9d7f4b3eecd">00108</a> <span class="keywordtype">void</span> <a class="code" href="classInputHandler.html#ac318051809c7764f010ca9d7f4b3eecd">InputHandler::clearKey</a>(<span class="keyword">const</span> <a class="code" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5e">GameKeys</a> key_) {
-<a name="l00109"></a>00109     this-&gt;<a class="code" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19">keyStates</a>.at(key_) = <span class="keyword">false</span>;
+<a name="l00109"></a>00109     this-&gt;<a class="code" href="classInputHandler.html#a33012c2e6599b594188f33cd74fa4d6f">keyStates</a>.at(key_) = <span class="keyword">false</span>;
 <a name="l00110"></a>00110 }
 </pre></div></div><!-- contents -->
 <!-- window showing the filter options -->
@@ -209,7 +209,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jan 21 2015 21:38:33 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 23 2015 19:20:36 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

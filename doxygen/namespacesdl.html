@@ -28,7 +28,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v19</span>
+   &#160;<span id="projectnumber">v20</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -83,14 +83,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">sdl Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Wraps the SDL libraries.  
+<a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesdl.html#a3a90e2da909fa25cc7c570fbe3e25d5f">Initialize</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The system initializer.  <a href="#a3a90e2da909fa25cc7c570fbe3e25d5f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesdl.html#ad191ca5bcfbd36197f6959249e6cbcda">Close</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes all open systems.  <a href="#ad191ca5bcfbd36197f6959249e6cbcda"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Wraps the SDL libraries. And contains the initializing and closing functions for the system(s). No instances necessary. </p>
+<div class="textblock"><p>Wraps the SDL libraries. </p>
+<p>And contains the initializing and closing functions for the system(s). No instances necessary. </p>
 </div><hr/><h2>Function Documentation</h2>
 <a class="anchor" id="ad191ca5bcfbd36197f6959249e6cbcda"></a><!-- doxytag: member="sdl::Close" ref="ad191ca5bcfbd36197f6959249e6cbcda" args="()" -->
 <div class="memitem">
@@ -105,8 +111,10 @@ Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Closes all open systems. Closes all systems and/or subsystems opened by the initializer method. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="namespacesdl.html#a3a90e2da909fa25cc7c570fbe3e25d5f">Initialize()</a> </dd></dl>
+
+<p>Closes all open systems. </p>
+<p>Closes all systems and/or subsystems opened by the initializer method.</p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="namespacesdl.html#a3a90e2da909fa25cc7c570fbe3e25d5f" title="The system initializer.">Initialize()</a> </dd></dl>
 
 <p>Definition at line <a class="el" href="SDL__Systems_8cpp_source.html#l00193">193</a> of file <a class="el" href="SDL__Systems_8cpp_source.html">SDL_Systems.cpp</a>.</p>
 
@@ -134,8 +142,10 @@ Here is the caller graph for this function:</div>
       </table>
 </div>
 <div class="memdoc">
-<p>The system initializer. Initializes all the SDL systems and/or subsystems. </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>True if every system was initialized successfully, else it returns false. </dd></dl>
+
+<p>The system initializer. </p>
+<p>Initializes all the SDL systems and/or subsystems.</p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>True if every system was initialized successfully. </dd></dl>
 
 <p>Definition at line <a class="el" href="SDL__Systems_8cpp_source.html#l00117">117</a> of file <a class="el" href="SDL__Systems_8cpp_source.html">SDL_Systems.cpp</a>.</p>
 
@@ -168,7 +178,7 @@ Here is the caller graph for this function:</div>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jan 21 2015 21:38:34 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 23 2015 19:20:36 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

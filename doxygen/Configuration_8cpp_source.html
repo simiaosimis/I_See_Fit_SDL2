@@ -28,7 +28,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v19</span>
+   &#160;<span id="projectnumber">v20</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -88,8 +88,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00005"></a>00005 <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="classConfiguration.html#a5c41945ab9d46d45104e1d47575e2723">Configuration::m_resolution_width</a> = 192;
 <a name="l00006"></a>00006 <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="classConfiguration.html#a00d3516781f07b19da8c8019b8919ec8">Configuration::m_resolution_height</a> = 108;
 <a name="l00007"></a>00007 
-<a name="l00008"></a>00008 uint32_t <a class="code" href="classConfiguration.html#aaed1a842192a49f2d08a81347122dab9">Configuration::m_max_framerate</a> = 0;
-<a name="l00009"></a>00009 std::string <a class="code" href="classConfiguration.html#a3655c42a88134d31265bee4470dc8db5">Configuration::m_window_title</a> = <span class="stringliteral">&quot;&quot;</span>;
+<a name="l00008"></a>00008 Uint32 <a class="code" href="classConfiguration.html#aa135b276e9360d2b9a741135d9bc6c61">Configuration::m_max_framerate</a> = 0;
+<a name="l00009"></a>00009 <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classConfiguration.html#a4e386814a51705ed6081593c96ce320f">Configuration::m_window_title</a> = <span class="stringliteral">&quot;&quot;</span>;
 <a name="l00010"></a>00010 <span class="keywordtype">int</span> <a class="code" href="classConfiguration.html#a9f97605a94e90b7b8049e1ceb5e88d65">Configuration::m_logical_render_size</a> = 0;
 <a name="l00011"></a>00011 <span class="keywordtype">int</span> <a class="code" href="classConfiguration.html#a8b50ddb8d2b322d57a64d72f13ea15de">Configuration::m_screen_width</a> = 0;
 <a name="l00012"></a>00012 <span class="keywordtype">int</span> <a class="code" href="classConfiguration.html#ab4fe3fe851b7c34eb916409eb3719b3b">Configuration::m_screen_height</a> = 0;
@@ -98,8 +98,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00015"></a>00015 
 <a name="l00016"></a>00016 
 <a name="l00017"></a><a class="code" href="classConfiguration.html#a4637584596d09c48bc816b71d974297d">00017</a> <span class="keywordtype">void</span> <a class="code" href="classConfiguration.html#a4637584596d09c48bc816b71d974297d">Configuration::Initialize</a>() {
-<a name="l00019"></a>00019     <a class="code" href="classConfiguration.html#aaed1a842192a49f2d08a81347122dab9">Configuration::m_max_framerate</a> = 60;
-<a name="l00020"></a>00020     <a class="code" href="classConfiguration.html#a3655c42a88134d31265bee4470dc8db5">Configuration::m_window_title</a> = <span class="stringliteral">&quot;sdl2-engine&quot;</span>;
+<a name="l00019"></a>00019     <a class="code" href="classConfiguration.html#aa135b276e9360d2b9a741135d9bc6c61">Configuration::m_max_framerate</a> = 60;
+<a name="l00020"></a>00020     <a class="code" href="classConfiguration.html#a4e386814a51705ed6081593c96ce320f">Configuration::m_window_title</a> = <span class="stringliteral">&quot;sdl2-engine&quot;</span>;
 <a name="l00021"></a>00021     <a class="code" href="classConfiguration.html#a9f97605a94e90b7b8049e1ceb5e88d65">Configuration::m_logical_render_size</a> = 8;
 <a name="l00022"></a>00022     <a class="code" href="classConfiguration.html#a9757c0b4b6f37903f3ea7a7b54d1f68e">Configuration::m_camera_distance_width</a> =
 <a name="l00023"></a>00023         <a class="code" href="classConfiguration.html#a5c41945ab9d46d45104e1d47575e2723">Configuration::m_resolution_width</a> * <a class="code" href="classConfiguration.html#a9f97605a94e90b7b8049e1ceb5e88d65">Configuration::m_logical_render_size</a>;
@@ -125,12 +125,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00043"></a>00043     <span class="keywordflow">return</span> <a class="code" href="classConfiguration.html#a00d3516781f07b19da8c8019b8919ec8">Configuration::m_resolution_height</a>;
 <a name="l00044"></a>00044 }
 <a name="l00045"></a>00045 
-<a name="l00046"></a><a class="code" href="classConfiguration.html#a17f453dff54e67367127fcf63e72a356">00046</a> uint32_t <a class="code" href="classConfiguration.html#a17f453dff54e67367127fcf63e72a356">Configuration::MaxFramerate</a>() {
-<a name="l00047"></a>00047     <span class="keywordflow">return</span> <a class="code" href="classConfiguration.html#aaed1a842192a49f2d08a81347122dab9">Configuration::m_max_framerate</a>;
+<a name="l00046"></a><a class="code" href="classConfiguration.html#a3266940b4436a2b986a93fb4340fde5a">00046</a> Uint32 <a class="code" href="classConfiguration.html#a3266940b4436a2b986a93fb4340fde5a">Configuration::MaxFramerate</a>() {
+<a name="l00047"></a>00047     <span class="keywordflow">return</span> <a class="code" href="classConfiguration.html#aa135b276e9360d2b9a741135d9bc6c61">Configuration::m_max_framerate</a>;
 <a name="l00048"></a>00048 }
 <a name="l00049"></a>00049 
-<a name="l00050"></a><a class="code" href="classConfiguration.html#aa499bb12addd43ff8eacab01ab9e51ea">00050</a> std::string <a class="code" href="classConfiguration.html#aa499bb12addd43ff8eacab01ab9e51ea">Configuration::WindowTitle</a>() {
-<a name="l00051"></a>00051     <span class="keywordflow">return</span> <a class="code" href="classConfiguration.html#a3655c42a88134d31265bee4470dc8db5">Configuration::m_window_title</a>;
+<a name="l00050"></a><a class="code" href="classConfiguration.html#a2ded611ff08783df927c2b4e97ded543">00050</a> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classConfiguration.html#a2ded611ff08783df927c2b4e97ded543">Configuration::WindowTitle</a>() {
+<a name="l00051"></a>00051     <span class="keywordflow">return</span> <a class="code" href="classConfiguration.html#a4e386814a51705ed6081593c96ce320f">Configuration::m_window_title</a>;
 <a name="l00052"></a>00052 }
 <a name="l00053"></a>00053 
 <a name="l00054"></a><a class="code" href="classConfiguration.html#a87978aa3909e9063f84a27e058018e70">00054</a> <span class="keywordtype">int</span> <a class="code" href="classConfiguration.html#a87978aa3909e9063f84a27e058018e70">Configuration::LogicalRenderSize</a>() {
@@ -170,7 +170,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jan 21 2015 21:38:33 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 23 2015 19:20:36 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

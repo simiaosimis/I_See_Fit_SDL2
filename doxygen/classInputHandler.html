@@ -28,7 +28,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v19</span>
+   &#160;<span id="projectnumber">v20</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -95,7 +95,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputHandler.html#a698aa4af4f326a9881835fda251ca996">InputHandler</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputHandler.html#ac1f7efb54b34d433d6ffba62627452b6">~InputHandler</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputHandler.html#a820f483265aa3f6da39b9d93c1311966">handleInput</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">std::array&lt; bool, <a class="el" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5ead7e097bda6d981de2520f49fe74c25b7">GameKeys::MAX</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputHandler.html#af7087290a2fd7d973a47768049cfe5eb">getKeyStates</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">InputArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputHandler.html#a35db020395da61dd5034a7d2e56d3013">getKeyStates</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputHandler.html#a7d103ecce85288f454876b5bef8b3aee">isQuitFlag</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputHandler.html#ac318051809c7764f010ca9d7f4b3eecd">clearKey</a> (const <a class="el" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5e">GameKeys</a> key_)</td></tr>
 <tr><td colspan="2"><h2><a name="pri-methods"></a>
@@ -104,7 +104,7 @@ Private Member Functions</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classControllerHandler.html">ControllerHandler</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputHandler.html#a50ac48002b081c2c03af8f638c47dbe7">controllerHandler</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">std::array&lt; bool, <a class="el" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5ead7e097bda6d981de2520f49fe74c25b7">GameKeys::MAX</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19">keyStates</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">InputArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputHandler.html#a33012c2e6599b594188f33cd74fa4d6f">keyStates</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">SDL_Event&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputHandler.html#ab2fa06988077060c7a3dca6c3d643dd3">sdlEvent</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInputHandler.html#a6bd166e013cbd6313609eab276f00abd">quitFlag</a></td></tr>
 </table>
@@ -169,23 +169,14 @@ Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="InputHandler_8cpp_source.html#l00108">108</a> of file <a class="el" href="InputHandler_8cpp_source.html">InputHandler.cpp</a>.</p>
 
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classInputHandler_ac318051809c7764f010ca9d7f4b3eecd_icgraph.png" border="0" usemap="#classInputHandler_ac318051809c7764f010ca9d7f4b3eecd_icgraph" alt=""/></div>
-<map name="classInputHandler_ac318051809c7764f010ca9d7f4b3eecd_icgraph" id="classInputHandler_ac318051809c7764f010ca9d7f4b3eecd_icgraph">
-<area shape="rect" id="node3" href="classGame.html#a598440545d40cf36982a1b551c9ec13a" title="Game::clearKeyFromInput" alt="" coords="209,5,383,35"/></map>
-</div>
-</p>
-
 </div>
 </div>
-<a class="anchor" id="af7087290a2fd7d973a47768049cfe5eb"></a><!-- doxytag: member="InputHandler::getKeyStates" ref="af7087290a2fd7d973a47768049cfe5eb" args="()" -->
+<a class="anchor" id="a35db020395da61dd5034a7d2e56d3013"></a><!-- doxytag: member="InputHandler::getKeyStates" ref="a35db020395da61dd5034a7d2e56d3013" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::array&lt; bool, <a class="el" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5ead7e097bda6d981de2520f49fe74c25b7">GameKeys::MAX</a> &gt; <a class="el" href="classInputHandler.html#af7087290a2fd7d973a47768049cfe5eb">InputHandler::getKeyStates</a> </td>
+          <td class="memname">InputArray <a class="el" href="classInputHandler.html#a35db020395da61dd5034a7d2e56d3013">InputHandler::getKeyStates</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -193,18 +184,9 @@ Here is the caller graph for this function:</div>
       </table>
 </div>
 <div class="memdoc">
-<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19">InputHandler::keyStates</a> </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="classInputHandler.html#a33012c2e6599b594188f33cd74fa4d6f">InputHandler::keyStates</a> </dd></dl>
 
 <p>Definition at line <a class="el" href="InputHandler_8cpp_source.html#l00096">96</a> of file <a class="el" href="InputHandler_8cpp_source.html">InputHandler.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classInputHandler_af7087290a2fd7d973a47768049cfe5eb_icgraph.png" border="0" usemap="#classInputHandler_af7087290a2fd7d973a47768049cfe5eb_icgraph" alt=""/></div>
-<map name="classInputHandler_af7087290a2fd7d973a47768049cfe5eb_icgraph" id="classInputHandler_af7087290a2fd7d973a47768049cfe5eb_icgraph">
-<area shape="rect" id="node3" href="classGame.html#a76067c5eab048e88307d0a1c75328eda" title="Game::getInput" alt="" coords="237,5,349,35"/></map>
-</div>
-</p>
 
 </div>
 </div>
@@ -230,16 +212,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classInputHandler_a820f483265aa3f6da39b9d93c1311966_cgraph.png" border="0" usemap="#classInputHandler_a820f483265aa3f6da39b9d93c1311966_cgraph" alt=""/></div>
 <map name="classInputHandler_a820f483265aa3f6da39b9d93c1311966_cgraph" id="classInputHandler_a820f483265aa3f6da39b9d93c1311966_cgraph">
-<area shape="rect" id="node3" href="classControllerHandler.html#a79e2adab7291ab5589e907860d046046" title="ControllerHandler::handleInput" alt="" coords="231,5,428,35"/><area shape="rect" id="node5" href="classControllerHandler.html#a1c4161545fdc54bf1d406f6acd2d67d6" title="ControllerHandler::getKeyStates" alt="" coords="224,59,435,88"/><area shape="rect" id="node7" href="classInputHandler.html#ae3546fa674d3db49d755b4047503f4e8" title="InputHandler::signalExit" alt="" coords="249,112,409,141"/></map>
-</div>
-</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classInputHandler_a820f483265aa3f6da39b9d93c1311966_icgraph.png" border="0" usemap="#classInputHandler_a820f483265aa3f6da39b9d93c1311966_icgraph" alt=""/></div>
-<map name="classInputHandler_a820f483265aa3f6da39b9d93c1311966_icgraph" id="classInputHandler_a820f483265aa3f6da39b9d93c1311966_icgraph">
-<area shape="rect" id="node3" href="classGame.html#abc9436a9d18e48c6e1e4fbc4ea879449" title="Game::runGame" alt="" coords="225,5,343,35"/><area shape="rect" id="node5" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="392,5,443,35"/></map>
+<area shape="rect" id="node3" href="classControllerHandler.html#a79e2adab7291ab5589e907860d046046" title="ControllerHandler::handleInput" alt="" coords="231,5,428,35"/><area shape="rect" id="node5" href="classControllerHandler.html#a8a0133502559843ef6f8f1984d3856f0" title="ControllerHandler::getKeyStates" alt="" coords="224,59,435,88"/><area shape="rect" id="node7" href="classInputHandler.html#ae3546fa674d3db49d755b4047503f4e8" title="InputHandler::signalExit" alt="" coords="249,112,409,141"/></map>
 </div>
 </p>
 
@@ -261,15 +234,6 @@ Here is the caller graph for this function:</div>
 <dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="classInputHandler.html#a6bd166e013cbd6313609eab276f00abd">InputHandler::quitFlag</a> </dd></dl>
 
 <p>Definition at line <a class="el" href="InputHandler_8cpp_source.html#l00100">100</a> of file <a class="el" href="InputHandler_8cpp_source.html">InputHandler.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classInputHandler_a7d103ecce85288f454876b5bef8b3aee_icgraph.png" border="0" usemap="#classInputHandler_a7d103ecce85288f454876b5bef8b3aee_icgraph" alt=""/></div>
-<map name="classInputHandler_a7d103ecce85288f454876b5bef8b3aee_icgraph" id="classInputHandler_a7d103ecce85288f454876b5bef8b3aee_icgraph">
-<area shape="rect" id="node3" href="classGame.html#abc9436a9d18e48c6e1e4fbc4ea879449" title="Game::runGame" alt="" coords="217,5,335,35"/><area shape="rect" id="node5" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="384,5,435,35"/></map>
-</div>
-</p>
 
 </div>
 </div>
@@ -295,7 +259,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classInputHandler_ae3546fa674d3db49d755b4047503f4e8_icgraph.png" border="0" usemap="#classInputHandler_ae3546fa674d3db49d755b4047503f4e8_icgraph" alt=""/></div>
 <map name="classInputHandler_ae3546fa674d3db49d755b4047503f4e8_icgraph" id="classInputHandler_ae3546fa674d3db49d755b4047503f4e8_icgraph">
-<area shape="rect" id="node3" href="classInputHandler.html#a820f483265aa3f6da39b9d93c1311966" title="InputHandler::handleInput" alt="" coords="216,5,387,35"/><area shape="rect" id="node5" href="classGame.html#abc9436a9d18e48c6e1e4fbc4ea879449" title="Game::runGame" alt="" coords="436,5,553,35"/><area shape="rect" id="node7" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="603,5,653,35"/></map>
+<area shape="rect" id="node3" href="classInputHandler.html#a820f483265aa3f6da39b9d93c1311966" title="InputHandler::handleInput" alt="" coords="216,5,387,35"/></map>
 </div>
 </p>
 
@@ -318,12 +282,12 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a class="anchor" id="af8e03451ccf5a1028b2bc38ed85fad19"></a><!-- doxytag: member="InputHandler::keyStates" ref="af8e03451ccf5a1028b2bc38ed85fad19" args="" -->
+<a class="anchor" id="a33012c2e6599b594188f33cd74fa4d6f"></a><!-- doxytag: member="InputHandler::keyStates" ref="a33012c2e6599b594188f33cd74fa4d6f" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::array&lt;bool, <a class="el" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5ead7e097bda6d981de2520f49fe74c25b7">GameKeys::MAX</a>&gt; <a class="el" href="classInputHandler.html#af8e03451ccf5a1028b2bc38ed85fad19">InputHandler::keyStates</a><code> [private]</code></td>
+          <td class="memname">InputArray <a class="el" href="classInputHandler.html#a33012c2e6599b594188f33cd74fa4d6f">InputHandler::keyStates</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
@@ -388,7 +352,7 @@ Here is the caller graph for this function:</div>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jan 21 2015 21:38:34 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 23 2015 19:20:36 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

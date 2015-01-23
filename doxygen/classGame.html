@@ -28,7 +28,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v19</span>
+   &#160;<span id="projectnumber">v20</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -99,32 +99,38 @@ Public Types</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#ae3d112ca6e0e55150d2fdbc704474530">~Game</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#abc9436a9d18e48c6e1e4fbc4ea879449">runGame</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#a34a67034d7aea701ce9a161786d3006d">changeState</a> (const <a class="el" href="classGame.html#acb5aff30c92015e8ed51e1d35d0d97ea">GStates</a> state_)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAudioHandler.html">AudioHandler</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#aefdf22987b627adf4ee9cdcc178fc11c">getAudioHandler</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">std::array&lt; bool, <a class="el" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5ead7e097bda6d981de2520f49fe74c25b7">GameKeys::MAX</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#a76067c5eab048e88307d0a1c75328eda">getInput</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRenderer.html">Renderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#af4f1ce14a3cf7017942fdf0d183d24c3">getRenderer</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classResourceHandler.html">ResourceHandler</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#a0a5dc2bb1e4b2b80415919aa20cce38f">getResource</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#a17fbb36fd4a2085f9ff4f1fa93d7d08b">stop</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#a598440545d40cf36982a1b551c9ec13a">clearKeyFromInput</a> (const <a class="el" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5e">GameKeys</a> key_)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#a47dd061c2db24fbb31535f8cba53c632">resizeWindow</a> (const int width_, const int height_)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The destructor.  <a href="#ae3d112ca6e0e55150d2fdbc704474530"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#a96341ca5b54d90adc3ecb3bf0bcd2312">Run</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The main game loop.  <a href="#a96341ca5b54d90adc3ecb3bf0bcd2312"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#a344e02d5cb1cc6868ef50e31723289dd">ChangeState</a> (const <a class="el" href="classGame.html#acb5aff30c92015e8ed51e1d35d0d97ea">GStates</a> game_state)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAudioHandler.html">AudioHandler</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#a6341eea0603ccef98d9a70b1127f379a">GetAudioHandler</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">InputArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#a9c824ce6bfe6db38b9d0b5be7850e127">Input</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRenderer.html">Renderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#a8ea925542bbdb1d3f11762f5b938f6a1">GetRenderer</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classResourceHandler.html">ResourceHandler</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#a21f7c3fd7779658e8f69c15e460be1a0">Resource</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#af5bc8f48f5005fac17d6b5896ac86771">Stop</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops execution and closes the game.  <a href="#af5bc8f48f5005fac17d6b5896ac86771"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#ad8cfd1a051c4765289ee0a4892d75660">ClearInputKey</a> (const <a class="el" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5e">GameKeys</a> input_key)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears a certain key from input, setting it to false.  <a href="#ad8cfd1a051c4765289ee0a4892d75660"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#ab1181fcc72f9d8a6d7a85fe5316a29e1">ResizeWindow</a> (const int <a class="el" href="GameObject_8cpp.html#a5c81042c75ccdf93eab164afe5a3a52b">width</a>, const int <a class="el" href="GameObject_8cpp.html#a6fdfb731a1e9728d19b6a5920a14705f">height</a>)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Resizes the window.  <a href="#ab1181fcc72f9d8a6d7a85fe5316a29e1"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classGame.html">Game</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#ac213e6d3a4e566d901413f62f6408858">instance</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classGame.html">Game</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#a0b3ad989fe67e72b4b6b2f36a059479a">Instance</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Singleton implementation for <a class="el" href="classGame.html">Game</a>.  <a href="#a0b3ad989fe67e72b4b6b2f36a059479a"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#ad59df6562a58a614fda24622d3715b65">Game</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#afc16bd0d077c53218c27f16e0bf56cbb">initializeStates</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#a684834abb420aba6d30094d1fe273818">destroyStates</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#a3f11482f4bde3b86bded9fa8d4c0e1a3">InitializeStates</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#adbc1ee0720a51a559c14786dff26f849">DestroyStates</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWindow.html">Window</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#a553924bcccf9f9b1c04e385041852f17">window</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#adb424734b2454f9ed1e6d6bd44e6dfaf">isRunning</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAudioHandler.html">AudioHandler</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#a0669fc05427f97820f44f2ac5cc7cef0">audioHandler</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classInputHandler.html">InputHandler</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#aa0ca10b15de880181ddcfede0de9226c">inputHandler</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classResourceHandler.html">ResourceHandler</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#a3b57f1111dc0f153b72f73b207b89901">resourceHandler</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classStateGame.html">StateGame</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#a39cc30f3e086ce1279ad01967d7694fe">currentState</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">std::map&lt; <a class="el" href="classGame.html#acb5aff30c92015e8ed51e1d35d0d97ea">GStates</a>, <a class="el" href="classStateGame.html">StateGame</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#a9d6b3d33b550f2ac3425d324d5e235e8">statesMap</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#a2ed9d40f838fcddac799e0da168a7497">m_is_running</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAudioHandler.html">AudioHandler</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#a54ad32dce065113c17cafc0f6684a125">m_audio_handler</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classInputHandler.html">InputHandler</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#a2c38c93d89da4bc7e3acba5080c8c823">m_input_handler</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classResourceHandler.html">ResourceHandler</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#ab79302ea31f2cbef67d7aa53f15c5824">m_resource_handler</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classStateGame.html">StateGame</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#affc9cd35ebe2cae51f93ad98a02b47cf">m_current_state</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWindow.html">Window</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#a071fae20b0decc9ba6022c0322865437">m_window</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">StatesMap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#a3a131a46cca35be1aa6a3d61b7cf5f16">m_game_states</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Main structure class for the game. Contains all the necessary functionalities to loop and update the game. Is the state machine (controls current state), contains all the different possible states. </p>
@@ -167,18 +173,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>The destructor. Destroys the game's <a class="el" href="classWindow.html">Window</a> and states, and unloads current state. </p>
 
-<p>Definition at line <a class="el" href="Game_8cpp_source.html#l00042">42</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classGame_ae3d112ca6e0e55150d2fdbc704474530_cgraph.png" border="0" usemap="#classGame_ae3d112ca6e0e55150d2fdbc704474530_cgraph" alt=""/></div>
-<map name="classGame_ae3d112ca6e0e55150d2fdbc704474530_cgraph" id="classGame_ae3d112ca6e0e55150d2fdbc704474530_cgraph">
-<area shape="rect" id="node3" href="classStateGame.html#aa215f7b6d37658dead89448afacc713d" title="StateGame::unload" alt="" coords="169,5,303,35"/><area shape="rect" id="node7" href="classGame.html#a684834abb420aba6d30094d1fe273818" title="Game::destroyStates" alt="" coords="163,59,309,88"/><area shape="rect" id="node5" href="classStateGame.html#a7dd22dcc7c7474fed01942b3507f54b6" title="StateGame::cleanGameObjects" alt="" coords="359,5,564,35"/></map>
-</div>
-</p>
+<p>The destructor. </p>
+<p>Destroys the game's <a class="el" href="classWindow.html">Window</a> and states, and unloads current state. </p>
 
 </div>
 </div>
@@ -198,102 +195,63 @@ Here is the call graph for this function:</div>
 <p>The constructor. Sets the game window and tells the game that it is OK to begin looping. Also, it begins the FPS manager. </p>
 <dl class="note"><dt><b>Note:</b></dt><dd>If the <a class="el" href="classWindow.html">Window</a> cannot be created, the game will not begin. </dd></dl>
 
-<p>Definition at line <a class="el" href="Game_8cpp_source.html#l00023">23</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classGame_ad59df6562a58a614fda24622d3715b65_cgraph.png" border="0" usemap="#classGame_ad59df6562a58a614fda24622d3715b65_cgraph" alt=""/></div>
-<map name="classGame_ad59df6562a58a614fda24622d3715b65_cgraph" id="classGame_ad59df6562a58a614fda24622d3715b65_cgraph">
-<area shape="rect" id="node3" href="classConfiguration.html#a2abd3e10153cffe624981da2eedcd61a" title="Configuration::ScreenWidth" alt="" coords="157,5,339,35"/><area shape="rect" id="node5" href="classConfiguration.html#ac1b98514305ca2e97e54f9858d891488" title="Configuration::ScreenHeight" alt="" coords="155,59,341,88"/><area shape="rect" id="node7" href="classConfiguration.html#aa499bb12addd43ff8eacab01ab9e51ea" title="Configuration::WindowTitle" alt="" coords="159,112,337,141"/><area shape="rect" id="node9" href="classGame.html#afc16bd0d077c53218c27f16e0bf56cbb" title="Game::initializeStates" alt="" coords="173,165,323,195"/></map>
-</div>
-</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classGame_ad59df6562a58a614fda24622d3715b65_icgraph.png" border="0" usemap="#classGame_ad59df6562a58a614fda24622d3715b65_icgraph" alt=""/></div>
-<map name="classGame_ad59df6562a58a614fda24622d3715b65_icgraph" id="classGame_ad59df6562a58a614fda24622d3715b65_icgraph">
-<area shape="rect" id="node3" href="classGame.html#ac213e6d3a4e566d901413f62f6408858" title="Game::instance" alt="" coords="155,59,269,88"/><area shape="rect" id="node5" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="376,5,427,35"/><area shape="rect" id="node7" href="classSprite.html#ac82a01b98130b9b1403667059640163b" title="Sprite::render" alt="" coords="352,59,451,88"/><area shape="rect" id="node11" href="classSprite.html#a98bb8afceb93d82270c9e5e7e8f9b49d" title="Sprite::surfaceToTexture" alt="" coords="319,112,484,141"/><area shape="rect" id="node9" href="classText.html#a61dff362532c385dbc0650b397138635" title="Text::render" alt="" coords="548,59,639,88"/><area shape="rect" id="node13" href="classSprite.html#a9ba64ddfcd3f79c45b74ec1c1a16c396" title="Sprite::loadFrom" alt="" coords="535,112,652,141"/><area shape="rect" id="node15" href="classSprite.html#a0c5597fedd9b09878ec8acddca54c2f7" title="Sprite::Sprite" alt="" coords="701,112,800,141"/></map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="Game_8cpp_source.html#l00024">24</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a34a67034d7aea701ce9a161786d3006d"></a><!-- doxytag: member="Game::changeState" ref="a34a67034d7aea701ce9a161786d3006d" args="(const GStates state_)" -->
+<a class="anchor" id="a344e02d5cb1cc6868ef50e31723289dd"></a><!-- doxytag: member="Game::ChangeState" ref="a344e02d5cb1cc6868ef50e31723289dd" args="(const GStates game_state)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classGame.html#a34a67034d7aea701ce9a161786d3006d">Game::changeState</a> </td>
+          <td class="memname">void <a class="el" href="classGame.html#a344e02d5cb1cc6868ef50e31723289dd">Game::ChangeState</a> </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classGame.html#acb5aff30c92015e8ed51e1d35d0d97ea">GStates</a>&#160;</td>
-          <td class="paramname"><em>state_</em></td><td>)</td>
+          <td class="paramname"><em>game_state</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Sets the current game state. </p>
+<p>the current game state.</p>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="classStateGame.html#a924e531e28b8afcbb82858eecef0a084">StateGame::load()</a> </dd>
 <dd>
-<a class="el" href="classStateGame.html#aa215f7b6d37658dead89448afacc713d">StateGame::unload()</a> </dd></dl>
+<a class="el" href="classStateGame.html#aa215f7b6d37658dead89448afacc713d">StateGame::unload()</a></dd></dl>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">state_</td><td>: The state you want to be changed into. </td></tr>
+    <tr><td class="paramname">game_state</td><td>: The state you want to be changed into. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>Implement the transition between states. </dd></dl>
-
-<p>Definition at line <a class="el" href="Game_8cpp_source.html#l00111">111</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classGame_a34a67034d7aea701ce9a161786d3006d_cgraph.png" border="0" usemap="#classGame_a34a67034d7aea701ce9a161786d3006d_cgraph" alt=""/></div>
-<map name="classGame_a34a67034d7aea701ce9a161786d3006d_cgraph" id="classGame_a34a67034d7aea701ce9a161786d3006d_cgraph">
-<area shape="rect" id="node3" href="classStateGame.html#aa215f7b6d37658dead89448afacc713d" title="StateGame::unload" alt="" coords="193,5,327,35"/><area shape="rect" id="node7" href="classStateGame.html#a924e531e28b8afcbb82858eecef0a084" title="StateGame::load" alt="" coords="200,59,320,88"/><area shape="rect" id="node5" href="classStateGame.html#a7dd22dcc7c7474fed01942b3507f54b6" title="StateGame::cleanGameObjects" alt="" coords="377,5,583,35"/></map>
-</div>
-</p>
 
 </div>
 </div>
-<a class="anchor" id="a598440545d40cf36982a1b551c9ec13a"></a><!-- doxytag: member="Game::clearKeyFromInput" ref="a598440545d40cf36982a1b551c9ec13a" args="(const GameKeys key_)" -->
+<a class="anchor" id="ad8cfd1a051c4765289ee0a4892d75660"></a><!-- doxytag: member="Game::ClearInputKey" ref="ad8cfd1a051c4765289ee0a4892d75660" args="(const GameKeys input_key)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classGame.html#a598440545d40cf36982a1b551c9ec13a">Game::clearKeyFromInput</a> </td>
+          <td class="memname">void <a class="el" href="classGame.html#ad8cfd1a051c4765289ee0a4892d75660">Game::ClearInputKey</a> </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5e">GameKeys</a>&#160;</td>
-          <td class="paramname"><em>key_</em></td><td>)</td>
+          <td class="paramname"><em>input_key</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="Game_8cpp_source.html#l00145">145</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classGame_a598440545d40cf36982a1b551c9ec13a_cgraph.png" border="0" usemap="#classGame_a598440545d40cf36982a1b551c9ec13a_cgraph" alt=""/></div>
-<map name="classGame_a598440545d40cf36982a1b551c9ec13a_cgraph" id="classGame_a598440545d40cf36982a1b551c9ec13a_cgraph">
-<area shape="rect" id="node3" href="classInputHandler.html#ac318051809c7764f010ca9d7f4b3eecd" title="InputHandler::clearKey" alt="" coords="229,5,384,35"/></map>
-</div>
-</p>
+<p>Clears a certain key from input, setting it to false. </p>
 
 </div>
 </div>
-<a class="anchor" id="a684834abb420aba6d30094d1fe273818"></a><!-- doxytag: member="Game::destroyStates" ref="a684834abb420aba6d30094d1fe273818" args="()" -->
+<a class="anchor" id="adbc1ee0720a51a559c14786dff26f849"></a><!-- doxytag: member="Game::DestroyStates" ref="adbc1ee0720a51a559c14786dff26f849" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classGame.html#a684834abb420aba6d30094d1fe273818">Game::destroyStates</a> </td>
+          <td class="memname">void <a class="el" href="classGame.html#adbc1ee0720a51a559c14786dff26f849">Game::DestroyStates</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td><code> [private]</code></td>
@@ -303,25 +261,14 @@ Here is the call graph for this function:</div>
 <div class="memdoc">
 <p>Deletes all the loaded states. Every new state implemented should be deleted here. </p>
 
-<p>Definition at line <a class="el" href="Game_8cpp_source.html#l00126">126</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classGame_a684834abb420aba6d30094d1fe273818_icgraph.png" border="0" usemap="#classGame_a684834abb420aba6d30094d1fe273818_icgraph" alt=""/></div>
-<map name="classGame_a684834abb420aba6d30094d1fe273818_icgraph" id="classGame_a684834abb420aba6d30094d1fe273818_icgraph">
-<area shape="rect" id="node3" href="classGame.html#ae3d112ca6e0e55150d2fdbc704474530" title="Game::~Game" alt="" coords="201,5,308,35"/></map>
-</div>
-</p>
-
 </div>
 </div>
-<a class="anchor" id="aefdf22987b627adf4ee9cdcc178fc11c"></a><!-- doxytag: member="Game::getAudioHandler" ref="aefdf22987b627adf4ee9cdcc178fc11c" args="()" -->
+<a class="anchor" id="a6341eea0603ccef98d9a70b1127f379a"></a><!-- doxytag: member="Game::GetAudioHandler" ref="a6341eea0603ccef98d9a70b1127f379a" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classAudioHandler.html">AudioHandler</a> &amp; <a class="el" href="classGame.html#aefdf22987b627adf4ee9cdcc178fc11c">Game::getAudioHandler</a> </td>
+          <td class="memname"><a class="el" href="classAudioHandler.html">AudioHandler</a>&amp; <a class="el" href="classGame.html#a6341eea0603ccef98d9a70b1127f379a">Game::GetAudioHandler</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -329,18 +276,61 @@ Here is the caller graph for this function:</div>
       </table>
 </div>
 <div class="memdoc">
-<dl class="return"><dt><b>Returns:</b></dt><dd>The <a class="el" href="classGame.html">Game</a> audioHandler. </dd></dl>
-
-<p>Definition at line <a class="el" href="Game_8cpp_source.html#l00133">133</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>The <a class="el" href="classGame.html">Game</a> audio handler.</dd></dl>
+<dl class="note"><dt><b>Note:</b></dt><dd>The 'Get' was added to the name to avoid conflict with class <a class="el" href="classAudioHandler.html">AudioHandler</a>. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a76067c5eab048e88307d0a1c75328eda"></a><!-- doxytag: member="Game::getInput" ref="a76067c5eab048e88307d0a1c75328eda" args="()" -->
+<a class="anchor" id="a8ea925542bbdb1d3f11762f5b938f6a1"></a><!-- doxytag: member="Game::GetRenderer" ref="a8ea925542bbdb1d3f11762f5b938f6a1" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::array&lt; bool, <a class="el" href="InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5ead7e097bda6d981de2520f49fe74c25b7">GameKeys::MAX</a> &gt; <a class="el" href="classGame.html#a76067c5eab048e88307d0a1c75328eda">Game::getInput</a> </td>
+          <td class="memname"><a class="el" href="classRenderer.html">Renderer</a>* <a class="el" href="classGame.html#a8ea925542bbdb1d3f11762f5b938f6a1">Game::GetRenderer</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<dl class="return"><dt><b>Returns:</b></dt><dd>The SDL_Renderer.</dd></dl>
+<dl class="note"><dt><b>Note:</b></dt><dd>The 'Get' was added to the name to avoid conflict with class <a class="el" href="classRenderer.html">Renderer</a>. </dd></dl>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGame_a8ea925542bbdb1d3f11762f5b938f6a1_icgraph.png" border="0" usemap="#classGame_a8ea925542bbdb1d3f11762f5b938f6a1_icgraph" alt=""/></div>
+<map name="classGame_a8ea925542bbdb1d3f11762f5b938f6a1_icgraph" id="classGame_a8ea925542bbdb1d3f11762f5b938f6a1_icgraph">
+<area shape="rect" id="node3" href="classSprite.html#ac82a01b98130b9b1403667059640163b" title="Sprite::render" alt="" coords="193,5,292,35"/><area shape="rect" id="node5" href="classText.html#a61dff362532c385dbc0650b397138635" title="Text::render" alt="" coords="343,5,433,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3f11482f4bde3b86bded9fa8d4c0e1a3"></a><!-- doxytag: member="Game::InitializeStates" ref="a3f11482f4bde3b86bded9fa8d4c0e1a3" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classGame.html#a3f11482f4bde3b86bded9fa8d4c0e1a3">Game::InitializeStates</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Loads all the states. Every new state implemented should be initialized here. </p>
+
+</div>
+</div>
+<a class="anchor" id="a9c824ce6bfe6db38b9d0b5be7850e127"></a><!-- doxytag: member="Game::Input" ref="a9c824ce6bfe6db38b9d0b5be7850e127" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">InputArray <a class="el" href="classGame.html#a9c824ce6bfe6db38b9d0b5be7850e127">Game::Input</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -350,109 +340,14 @@ Here is the caller graph for this function:</div>
 <div class="memdoc">
 <dl class="return"><dt><b>Returns:</b></dt><dd>The boolean array recieved from the <a class="el" href="classInputHandler.html">InputHandler</a>. </dd></dl>
 
-<p>Definition at line <a class="el" href="Game_8cpp_source.html#l00137">137</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classGame_a76067c5eab048e88307d0a1c75328eda_cgraph.png" border="0" usemap="#classGame_a76067c5eab048e88307d0a1c75328eda_cgraph" alt=""/></div>
-<map name="classGame_a76067c5eab048e88307d0a1c75328eda_cgraph" id="classGame_a76067c5eab048e88307d0a1c75328eda_cgraph">
-<area shape="rect" id="node3" href="classInputHandler.html#af7087290a2fd7d973a47768049cfe5eb" title="InputHandler::getKeyStates" alt="" coords="167,5,348,35"/></map>
-</div>
-</p>
-
 </div>
 </div>
-<a class="anchor" id="af4f1ce14a3cf7017942fdf0d183d24c3"></a><!-- doxytag: member="Game::getRenderer" ref="af4f1ce14a3cf7017942fdf0d183d24c3" args="()" -->
+<a class="anchor" id="a0b3ad989fe67e72b4b6b2f36a059479a"></a><!-- doxytag: member="Game::Instance" ref="a0b3ad989fe67e72b4b6b2f36a059479a" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classRenderer.html">Renderer</a> * <a class="el" href="classGame.html#af4f1ce14a3cf7017942fdf0d183d24c3">Game::getRenderer</a> </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<dl class="return"><dt><b>Returns:</b></dt><dd>The SDL_Renderer. </dd></dl>
-
-<p>Definition at line <a class="el" href="Game_8cpp_source.html#l00155">155</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classGame_af4f1ce14a3cf7017942fdf0d183d24c3_cgraph.png" border="0" usemap="#classGame_af4f1ce14a3cf7017942fdf0d183d24c3_cgraph" alt=""/></div>
-<map name="classGame_af4f1ce14a3cf7017942fdf0d183d24c3_cgraph" id="classGame_af4f1ce14a3cf7017942fdf0d183d24c3_cgraph">
-<area shape="rect" id="node3" href="classWindow.html#ac5ec376703205dff00ffdbae115f93b1" title="Window::getRenderer" alt="" coords="191,5,337,35"/></map>
-</div>
-</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classGame_af4f1ce14a3cf7017942fdf0d183d24c3_icgraph.png" border="0" usemap="#classGame_af4f1ce14a3cf7017942fdf0d183d24c3_icgraph" alt=""/></div>
-<map name="classGame_af4f1ce14a3cf7017942fdf0d183d24c3_icgraph" id="classGame_af4f1ce14a3cf7017942fdf0d183d24c3_icgraph">
-<area shape="rect" id="node3" href="classSprite.html#ac82a01b98130b9b1403667059640163b" title="Sprite::render" alt="" coords="191,5,289,35"/><area shape="rect" id="node5" href="classText.html#a61dff362532c385dbc0650b397138635" title="Text::render" alt="" coords="340,5,431,35"/></map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="a0a5dc2bb1e4b2b80415919aa20cce38f"></a><!-- doxytag: member="Game::getResource" ref="a0a5dc2bb1e4b2b80415919aa20cce38f" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classResourceHandler.html">ResourceHandler</a> &amp; <a class="el" href="classGame.html#a0a5dc2bb1e4b2b80415919aa20cce38f">Game::getResource</a> </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Definition at line <a class="el" href="Game_8cpp_source.html#l00159">159</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="afc16bd0d077c53218c27f16e0bf56cbb"></a><!-- doxytag: member="Game::initializeStates" ref="afc16bd0d077c53218c27f16e0bf56cbb" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classGame.html#afc16bd0d077c53218c27f16e0bf56cbb">Game::initializeStates</a> </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td><code> [private]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Loads all the states. Every new state implemented should be initialized here. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>Emplace instead of insert. </dd></dl>
-
-<p>Definition at line <a class="el" href="Game_8cpp_source.html#l00118">118</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classGame_afc16bd0d077c53218c27f16e0bf56cbb_icgraph.png" border="0" usemap="#classGame_afc16bd0d077c53218c27f16e0bf56cbb_icgraph" alt=""/></div>
-<map name="classGame_afc16bd0d077c53218c27f16e0bf56cbb_icgraph" id="classGame_afc16bd0d077c53218c27f16e0bf56cbb_icgraph">
-<area shape="rect" id="node3" href="classGame.html#ad59df6562a58a614fda24622d3715b65" title="Game::Game" alt="" coords="207,59,305,88"/><area shape="rect" id="node5" href="classGame.html#ac213e6d3a4e566d901413f62f6408858" title="Game::instance" alt="" coords="355,59,469,88"/><area shape="rect" id="node7" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="576,5,627,35"/><area shape="rect" id="node9" href="classSprite.html#ac82a01b98130b9b1403667059640163b" title="Sprite::render" alt="" coords="552,59,651,88"/><area shape="rect" id="node13" href="classSprite.html#a98bb8afceb93d82270c9e5e7e8f9b49d" title="Sprite::surfaceToTexture" alt="" coords="519,112,684,141"/><area shape="rect" id="node11" href="classText.html#a61dff362532c385dbc0650b397138635" title="Text::render" alt="" coords="748,59,839,88"/><area shape="rect" id="node15" href="classSprite.html#a9ba64ddfcd3f79c45b74ec1c1a16c396" title="Sprite::loadFrom" alt="" coords="735,112,852,141"/><area shape="rect" id="node17" href="classSprite.html#a0c5597fedd9b09878ec8acddca54c2f7" title="Sprite::Sprite" alt="" coords="901,112,1000,141"/></map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="ac213e6d3a4e566d901413f62f6408858"></a><!-- doxytag: member="Game::instance" ref="ac213e6d3a4e566d901413f62f6408858" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classGame.html">Game</a> &amp; <a class="el" href="classGame.html#ac213e6d3a4e566d901413f62f6408858">Game::instance</a> </td>
+          <td class="memname"><a class="el" href="classGame.html">Game</a> &amp; <a class="el" href="classGame.html#a0b3ad989fe67e72b4b6b2f36a059479a">Game::Instance</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td><code> [static]</code></td>
@@ -460,46 +355,38 @@ Here is the caller graph for this function:</div>
       </table>
 </div>
 <div class="memdoc">
-<p>Singleton imeplementation for <a class="el" href="classGame.html">Game</a>. </p>
+
+<p>Singleton implementation for <a class="el" href="classGame.html">Game</a>. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>The instance for a <a class="el" href="classGame.html">Game</a>. </dd></dl>
 
-<p>Definition at line <a class="el" href="Game_8cpp_source.html#l00015">15</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classGame_ac213e6d3a4e566d901413f62f6408858_cgraph.png" border="0" usemap="#classGame_ac213e6d3a4e566d901413f62f6408858_cgraph" alt=""/></div>
-<map name="classGame_ac213e6d3a4e566d901413f62f6408858_cgraph" id="classGame_ac213e6d3a4e566d901413f62f6408858_cgraph">
-<area shape="rect" id="node3" href="classGame.html#ad59df6562a58a614fda24622d3715b65" title="Game::Game" alt="" coords="169,85,268,115"/><area shape="rect" id="node5" href="classConfiguration.html#a2abd3e10153cffe624981da2eedcd61a" title="Configuration::ScreenWidth" alt="" coords="320,5,501,35"/><area shape="rect" id="node7" href="classConfiguration.html#ac1b98514305ca2e97e54f9858d891488" title="Configuration::ScreenHeight" alt="" coords="317,59,504,88"/><area shape="rect" id="node9" href="classConfiguration.html#aa499bb12addd43ff8eacab01ab9e51ea" title="Configuration::WindowTitle" alt="" coords="321,112,500,141"/><area shape="rect" id="node11" href="classGame.html#afc16bd0d077c53218c27f16e0bf56cbb" title="Game::initializeStates" alt="" coords="336,165,485,195"/></map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="Game_8cpp_source.html#l00016">16</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classGame_ac213e6d3a4e566d901413f62f6408858_icgraph.png" border="0" usemap="#classGame_ac213e6d3a4e566d901413f62f6408858_icgraph" alt=""/></div>
-<map name="classGame_ac213e6d3a4e566d901413f62f6408858_icgraph" id="classGame_ac213e6d3a4e566d901413f62f6408858_icgraph">
+<div class="center"><img src="classGame_a0b3ad989fe67e72b4b6b2f36a059479a_icgraph.png" border="0" usemap="#classGame_a0b3ad989fe67e72b4b6b2f36a059479a_icgraph" alt=""/></div>
+<map name="classGame_a0b3ad989fe67e72b4b6b2f36a059479a_icgraph" id="classGame_a0b3ad989fe67e72b4b6b2f36a059479a_icgraph">
 <area shape="rect" id="node3" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="227,5,277,35"/><area shape="rect" id="node5" href="classSprite.html#ac82a01b98130b9b1403667059640163b" title="Sprite::render" alt="" coords="203,59,301,88"/><area shape="rect" id="node9" href="classSprite.html#a98bb8afceb93d82270c9e5e7e8f9b49d" title="Sprite::surfaceToTexture" alt="" coords="169,112,335,141"/><area shape="rect" id="node7" href="classText.html#a61dff362532c385dbc0650b397138635" title="Text::render" alt="" coords="399,59,489,88"/><area shape="rect" id="node11" href="classSprite.html#a9ba64ddfcd3f79c45b74ec1c1a16c396" title="Sprite::loadFrom" alt="" coords="385,112,503,141"/><area shape="rect" id="node13" href="classSprite.html#a0c5597fedd9b09878ec8acddca54c2f7" title="Sprite::Sprite" alt="" coords="552,112,651,141"/></map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="a47dd061c2db24fbb31535f8cba53c632"></a><!-- doxytag: member="Game::resizeWindow" ref="a47dd061c2db24fbb31535f8cba53c632" args="(const int width_, const int height_)" -->
+<a class="anchor" id="ab1181fcc72f9d8a6d7a85fe5316a29e1"></a><!-- doxytag: member="Game::ResizeWindow" ref="ab1181fcc72f9d8a6d7a85fe5316a29e1" args="(const int width, const int height)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classGame.html#a47dd061c2db24fbb31535f8cba53c632">Game::resizeWindow</a> </td>
+          <td class="memname">void <a class="el" href="classGame.html#ab1181fcc72f9d8a6d7a85fe5316a29e1">Game::ResizeWindow</a> </td>
           <td>(</td>
           <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>width_</em>, </td>
+          <td class="paramname"><em>width</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>height_</em>&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -510,25 +397,16 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="Game_8cpp_source.html#l00149">149</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classGame_a47dd061c2db24fbb31535f8cba53c632_cgraph.png" border="0" usemap="#classGame_a47dd061c2db24fbb31535f8cba53c632_cgraph" alt=""/></div>
-<map name="classGame_a47dd061c2db24fbb31535f8cba53c632_cgraph" id="classGame_a47dd061c2db24fbb31535f8cba53c632_cgraph">
-<area shape="rect" id="node3" href="classWindow.html#a89f8973f8f24e570d0f79782f6da8957" title="Window::resize" alt="" coords="200,5,312,35"/></map>
-</div>
-</p>
+<p>Resizes the window. </p>
 
 </div>
 </div>
-<a class="anchor" id="abc9436a9d18e48c6e1e4fbc4ea879449"></a><!-- doxytag: member="Game::runGame" ref="abc9436a9d18e48c6e1e4fbc4ea879449" args="()" -->
+<a class="anchor" id="a21f7c3fd7779658e8f69c15e460be1a0"></a><!-- doxytag: member="Game::Resource" ref="a21f7c3fd7779658e8f69c15e460be1a0" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classGame.html#abc9436a9d18e48c6e1e4fbc4ea879449">Game::runGame</a> </td>
+          <td class="memname"><a class="el" href="classResourceHandler.html">ResourceHandler</a>&amp; <a class="el" href="classGame.html#a21f7c3fd7779658e8f69c15e460be1a0">Game::Resource</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -536,36 +414,44 @@ Here is the call graph for this function:</div>
       </table>
 </div>
 <div class="memdoc">
-<p>The main game loop. Orders the game structure, such as inputs, updates, and rendering. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>The <a class="el" href="classGame.html">Game</a> resource handler. </dd></dl>
 
-<p>Definition at line <a class="el" href="Game_8cpp_source.html#l00055">55</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classGame_abc9436a9d18e48c6e1e4fbc4ea879449_cgraph.png" border="0" usemap="#classGame_abc9436a9d18e48c6e1e4fbc4ea879449_cgraph" alt=""/></div>
-<map name="classGame_abc9436a9d18e48c6e1e4fbc4ea879449_cgraph" id="classGame_abc9436a9d18e48c6e1e4fbc4ea879449_cgraph">
-<area shape="rect" id="node3" href="classStateGame.html#a924e531e28b8afcbb82858eecef0a084" title="StateGame::load" alt="" coords="199,5,319,35"/><area shape="rect" id="node5" href="classInputHandler.html#a820f483265aa3f6da39b9d93c1311966" title="InputHandler::handleInput" alt="" coords="173,59,344,88"/><area shape="rect" id="node13" href="classInputHandler.html#a7d103ecce85288f454876b5bef8b3aee" title="InputHandler::isQuitFlag" alt="" coords="177,112,340,141"/><area shape="rect" id="node15" href="classGame.html#a17fbb36fd4a2085f9ff4f1fa93d7d08b" title="Game::stop" alt="" coords="213,165,304,195"/><area shape="rect" id="node17" href="classStateGame.html#a300539fe737d6bbab4b4d6fe4b6a2e98" title="StateGame::update" alt="" coords="192,219,325,248"/><area shape="rect" id="node19" href="classWindow.html#ac5ec376703205dff00ffdbae115f93b1" title="Window::getRenderer" alt="" coords="185,272,332,301"/><area shape="rect" id="node21" href="classRenderer.html#ac46720b3fc0dbb2fc37674766490a8c4" title="Renderer::clear" alt="" coords="204,325,313,355"/><area shape="rect" id="node23" href="classStateGame.html#a9e181e234d99aa11beead047152a8e92" title="StateGame::render" alt="" coords="193,379,324,408"/><area shape="rect" id="node25" href="classRenderer.html#af7e5f8f68742f198e315fb4683a605a4" title="Renderer::render" alt="" coords="200,432,317,461"/><area shape="rect" id="node7" href="classControllerHandler.html#a79e2adab7291ab5589e907860d046046" title="ControllerHandler::handleInput" alt="" coords="399,5,596,35"/><area shape="rect" id="node9" href="classControllerHandler.html#a1c4161545fdc54bf1d406f6acd2d67d6" title="ControllerHandler::getKeyStates" alt="" coords="392,59,603,88"/><area shape="rect" id="node11" href="classInputHandler.html#ae3546fa674d3db49d755b4047503f4e8" title="InputHandler::signalExit" alt="" coords="417,112,577,141"/></map>
 </div>
-</p>
+</div>
+<a class="anchor" id="a96341ca5b54d90adc3ecb3bf0bcd2312"></a><!-- doxytag: member="Game::Run" ref="a96341ca5b54d90adc3ecb3bf0bcd2312" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classGame.html#a96341ca5b54d90adc3ecb3bf0bcd2312">Game::Run</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>The main game loop. </p>
+<p>Orders the game structure, such as inputs, updates, and rendering. </p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classGame_abc9436a9d18e48c6e1e4fbc4ea879449_icgraph.png" border="0" usemap="#classGame_abc9436a9d18e48c6e1e4fbc4ea879449_icgraph" alt=""/></div>
-<map name="classGame_abc9436a9d18e48c6e1e4fbc4ea879449_icgraph" id="classGame_abc9436a9d18e48c6e1e4fbc4ea879449_icgraph">
-<area shape="rect" id="node3" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="173,5,224,35"/></map>
+<div class="center"><img src="classGame_a96341ca5b54d90adc3ecb3bf0bcd2312_icgraph.png" border="0" usemap="#classGame_a96341ca5b54d90adc3ecb3bf0bcd2312_icgraph" alt=""/></div>
+<map name="classGame_a96341ca5b54d90adc3ecb3bf0bcd2312_icgraph" id="classGame_a96341ca5b54d90adc3ecb3bf0bcd2312_icgraph">
+<area shape="rect" id="node3" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="144,5,195,35"/></map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="a17fbb36fd4a2085f9ff4f1fa93d7d08b"></a><!-- doxytag: member="Game::stop" ref="a17fbb36fd4a2085f9ff4f1fa93d7d08b" args="()" -->
+<a class="anchor" id="af5bc8f48f5005fac17d6b5896ac86771"></a><!-- doxytag: member="Game::Stop" ref="af5bc8f48f5005fac17d6b5896ac86771" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classGame.html#a17fbb36fd4a2085f9ff4f1fa93d7d08b">Game::stop</a> </td>
+          <td class="memname">void <a class="el" href="classGame.html#af5bc8f48f5005fac17d6b5896ac86771">Game::Stop</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -573,130 +459,121 @@ Here is the caller graph for this function:</div>
       </table>
 </div>
 <div class="memdoc">
+
 <p>Stops execution and closes the game. </p>
-
-<p>Definition at line <a class="el" href="Game_8cpp_source.html#l00141">141</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classGame_a17fbb36fd4a2085f9ff4f1fa93d7d08b_icgraph.png" border="0" usemap="#classGame_a17fbb36fd4a2085f9ff4f1fa93d7d08b_icgraph" alt=""/></div>
-<map name="classGame_a17fbb36fd4a2085f9ff4f1fa93d7d08b_icgraph" id="classGame_a17fbb36fd4a2085f9ff4f1fa93d7d08b_icgraph">
-<area shape="rect" id="node3" href="classGame.html#abc9436a9d18e48c6e1e4fbc4ea879449" title="Game::runGame" alt="" coords="145,5,263,35"/><area shape="rect" id="node5" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="312,5,363,35"/></map>
-</div>
-</p>
 
 </div>
 </div>
 <hr/><h2>Field Documentation</h2>
-<a class="anchor" id="a0669fc05427f97820f44f2ac5cc7cef0"></a><!-- doxytag: member="Game::audioHandler" ref="a0669fc05427f97820f44f2ac5cc7cef0" args="" -->
+<a class="anchor" id="a54ad32dce065113c17cafc0f6684a125"></a><!-- doxytag: member="Game::m_audio_handler" ref="a54ad32dce065113c17cafc0f6684a125" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classAudioHandler.html">AudioHandler</a>* <a class="el" href="classGame.html#a0669fc05427f97820f44f2ac5cc7cef0">Game::audioHandler</a><code> [private]</code></td>
+          <td class="memname"><a class="el" href="classAudioHandler.html">AudioHandler</a>* <a class="el" href="classGame.html#a54ad32dce065113c17cafc0f6684a125">Game::m_audio_handler</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 <p>The <a class="el" href="classGame.html">Game</a> <a class="el" href="classAudioHandler.html">AudioHandler</a>. </p>
 
-<p>Definition at line <a class="el" href="Game_8h_source.html#l00103">103</a> of file <a class="el" href="Game_8h_source.html">Game.h</a>.</p>
+<p>Definition at line <a class="el" href="Game_8h_source.html#l00120">120</a> of file <a class="el" href="Game_8h_source.html">Game.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a39cc30f3e086ce1279ad01967d7694fe"></a><!-- doxytag: member="Game::currentState" ref="a39cc30f3e086ce1279ad01967d7694fe" args="" -->
+<a class="anchor" id="affc9cd35ebe2cae51f93ad98a02b47cf"></a><!-- doxytag: member="Game::m_current_state" ref="affc9cd35ebe2cae51f93ad98a02b47cf" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classStateGame.html">StateGame</a>* <a class="el" href="classGame.html#a39cc30f3e086ce1279ad01967d7694fe">Game::currentState</a><code> [private]</code></td>
+          <td class="memname"><a class="el" href="classStateGame.html">StateGame</a>* <a class="el" href="classGame.html#affc9cd35ebe2cae51f93ad98a02b47cf">Game::m_current_state</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 <p>The current state, which the game is in. </p>
 
-<p>Definition at line <a class="el" href="Game_8h_source.html#l00107">107</a> of file <a class="el" href="Game_8h_source.html">Game.h</a>.</p>
+<p>Definition at line <a class="el" href="Game_8h_source.html#l00123">123</a> of file <a class="el" href="Game_8h_source.html">Game.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aa0ca10b15de880181ddcfede0de9226c"></a><!-- doxytag: member="Game::inputHandler" ref="aa0ca10b15de880181ddcfede0de9226c" args="" -->
+<a class="anchor" id="a3a131a46cca35be1aa6a3d61b7cf5f16"></a><!-- doxytag: member="Game::m_game_states" ref="a3a131a46cca35be1aa6a3d61b7cf5f16" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classInputHandler.html">InputHandler</a>* <a class="el" href="classGame.html#aa0ca10b15de880181ddcfede0de9226c">Game::inputHandler</a><code> [private]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>The <a class="el" href="classGame.html">Game</a> <a class="el" href="classInputHandler.html">InputHandler</a>. </p>
-
-<p>Definition at line <a class="el" href="Game_8h_source.html#l00104">104</a> of file <a class="el" href="Game_8h_source.html">Game.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="adb424734b2454f9ed1e6d6bd44e6dfaf"></a><!-- doxytag: member="Game::isRunning" ref="adb424734b2454f9ed1e6d6bd44e6dfaf" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="classGame.html#adb424734b2454f9ed1e6d6bd44e6dfaf">Game::isRunning</a><code> [private]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Whether the game is currently running/looping or not. </p>
-
-<p>Definition at line <a class="el" href="Game_8h_source.html#l00101">101</a> of file <a class="el" href="Game_8h_source.html">Game.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a3b57f1111dc0f153b72f73b207b89901"></a><!-- doxytag: member="Game::resourceHandler" ref="a3b57f1111dc0f153b72f73b207b89901" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classResourceHandler.html">ResourceHandler</a>* <a class="el" href="classGame.html#a3b57f1111dc0f153b72f73b207b89901">Game::resourceHandler</a><code> [private]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Definition at line <a class="el" href="Game_8h_source.html#l00105">105</a> of file <a class="el" href="Game_8h_source.html">Game.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a9d6b3d33b550f2ac3425d324d5e235e8"></a><!-- doxytag: member="Game::statesMap" ref="a9d6b3d33b550f2ac3425d324d5e235e8" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::map&lt;<a class="el" href="classGame.html#acb5aff30c92015e8ed51e1d35d0d97ea">GStates</a>, <a class="el" href="classStateGame.html">StateGame</a>*&gt; <a class="el" href="classGame.html#a9d6b3d33b550f2ac3425d324d5e235e8">Game::statesMap</a><code> [private]</code></td>
+          <td class="memname">StatesMap <a class="el" href="classGame.html#a3a131a46cca35be1aa6a3d61b7cf5f16">Game::m_game_states</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 <p>Map containing all possible states. </p>
 
-<p>Definition at line <a class="el" href="Game_8h_source.html#l00109">109</a> of file <a class="el" href="Game_8h_source.html">Game.h</a>.</p>
+<p>Definition at line <a class="el" href="Game_8h_source.html#l00127">127</a> of file <a class="el" href="Game_8h_source.html">Game.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a553924bcccf9f9b1c04e385041852f17"></a><!-- doxytag: member="Game::window" ref="a553924bcccf9f9b1c04e385041852f17" args="" -->
+<a class="anchor" id="a2c38c93d89da4bc7e3acba5080c8c823"></a><!-- doxytag: member="Game::m_input_handler" ref="a2c38c93d89da4bc7e3acba5080c8c823" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classWindow.html">Window</a>* <a class="el" href="classGame.html#a553924bcccf9f9b1c04e385041852f17">Game::window</a><code> [private]</code></td>
+          <td class="memname"><a class="el" href="classInputHandler.html">InputHandler</a>* <a class="el" href="classGame.html#a2c38c93d89da4bc7e3acba5080c8c823">Game::m_input_handler</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>The <a class="el" href="classGame.html">Game</a> <a class="el" href="classInputHandler.html">InputHandler</a>. </p>
+
+<p>Definition at line <a class="el" href="Game_8h_source.html#l00121">121</a> of file <a class="el" href="Game_8h_source.html">Game.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2ed9d40f838fcddac799e0da168a7497"></a><!-- doxytag: member="Game::m_is_running" ref="a2ed9d40f838fcddac799e0da168a7497" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classGame.html#a2ed9d40f838fcddac799e0da168a7497">Game::m_is_running</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Whether the game is currently running/looping or not. </p>
+
+<p>Definition at line <a class="el" href="Game_8h_source.html#l00119">119</a> of file <a class="el" href="Game_8h_source.html">Game.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab79302ea31f2cbef67d7aa53f15c5824"></a><!-- doxytag: member="Game::m_resource_handler" ref="ab79302ea31f2cbef67d7aa53f15c5824" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classResourceHandler.html">ResourceHandler</a>* <a class="el" href="classGame.html#ab79302ea31f2cbef67d7aa53f15c5824">Game::m_resource_handler</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>The <a class="el" href="classGame.html">Game</a> <a class="el" href="classResourceHandler.html">ResourceHandler</a>. </p>
+
+<p>Definition at line <a class="el" href="Game_8h_source.html#l00122">122</a> of file <a class="el" href="Game_8h_source.html">Game.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a071fae20b0decc9ba6022c0322865437"></a><!-- doxytag: member="Game::m_window" ref="a071fae20b0decc9ba6022c0322865437" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classWindow.html">Window</a> <a class="el" href="classGame.html#a071fae20b0decc9ba6022c0322865437">Game::m_window</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 <p>The game <a class="el" href="classWindow.html">Window</a>. </p>
 
-<p>Definition at line <a class="el" href="Game_8h_source.html#l00100">100</a> of file <a class="el" href="Game_8h_source.html">Game.h</a>.</p>
+<p>Definition at line <a class="el" href="Game_8h_source.html#l00124">124</a> of file <a class="el" href="Game_8h_source.html">Game.h</a>.</p>
 
 </div>
 </div>
@@ -722,7 +599,7 @@ Here is the caller graph for this function:</div>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jan 21 2015 21:38:34 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 23 2015 19:20:36 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

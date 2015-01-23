@@ -261,7 +261,7 @@
           </tr>
           <tr>
             <td class="headerName">Date:</td>
-            <td class="headerValue">2015-01-21</td>
+            <td class="headerValue">2015-01-23</td>
             <td></td>
             <td class="headerName">Branches:</td>
             <td class="headerTableEntry">0</td>
@@ -305,7 +305,7 @@
     <tr>
     <td align="right" class="lineno"><pre>4</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>#include "core/Logger.h"</pre></td>
+    <td align="left" class="src "><pre>#include "util/Logger.h"</pre></td>
     </tr>
 
     <tr>
@@ -749,7 +749,7 @@
     <tr>
     <td align="right" class="lineno"><pre>78</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	Game::instance().getRenderer()-&gt;getLogicalSize(&amp;logicalW, &amp;logicalH);</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	Game::Instance().GetRenderer()-&gt;LogicalSize(&amp;logicalW, &amp;logicalH);</pre></td>
     </tr>
 
     <tr>
@@ -773,7 +773,7 @@
     <tr>
     <td align="right" class="lineno"><pre>82</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>		SDL_RenderCopyEx(Game::instance().getRenderer()-&gt;getSdlRenderer(), this-&gt;sdlTexture, clip_,</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>		SDL_RenderCopyEx(Game::Instance().GetRenderer()-&gt;SdlRenderer(), this-&gt;sdlTexture, clip_,</pre></td>
     </tr>
 
     <tr>
@@ -785,7 +785,7 @@
     <tr>
     <td align="right" class="lineno"><pre>84</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>		SDL_RenderCopyEx(Game::instance().getRenderer()-&gt;getSdlRenderer(), this-&gt;sdlTexture, clip_,</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>		SDL_RenderCopyEx(Game::Instance().GetRenderer()-&gt;SdlRenderer(), this-&gt;sdlTexture, clip_,</pre></td>
     </tr>
 
     <tr>
@@ -947,7 +947,7 @@
     <tr>
     <td align="right" class="lineno"><pre>111</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	assert(Game::instance().getRenderer()-&gt;getSdlRenderer() != nullptr &amp;&amp; "Window renderer should not be null!");</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	assert(Game::Instance().GetRenderer()-&gt;SdlRenderer() != nullptr &amp;&amp; "Window renderer should not be null!");</pre></td>
     </tr>
 
     <tr>
@@ -989,7 +989,7 @@
     <tr>
     <td align="right" class="lineno"><pre>118</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	    newTexture = SDL_CreateTextureFromSurface(Game::instance().getRenderer()-&gt;getSdlRenderer(), surface_);</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	    newTexture = SDL_CreateTextureFromSurface(Game::Instance().GetRenderer()-&gt;SdlRenderer(), surface_);</pre></td>
     </tr>
 
     <tr>

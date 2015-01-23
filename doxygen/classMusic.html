@@ -28,7 +28,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v19</span>
+   &#160;<span id="projectnumber">v20</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -91,35 +91,54 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMusic.html#aacd7ffd6e4ac39cbc10d8a840b5becd6">Music</a> (const std::string &amp;path_)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMusic.html#a74b0f103642e6736e0dfde793205d10b">Music</a> (const std::string &amp;path)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor.  <a href="#a74b0f103642e6736e0dfde793205d10b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMusic.html#a0b4f3b9a018207e0c08003505f1f87fe">~Music</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">Mix_Music *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMusic.html#a09a2f7858a7487f1838e64f2e9dac330">getMixMusic</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMusic.html#ab69332e32ab15a77d2c16cee0d457092">getPath</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The destructor.  <a href="#a0b4f3b9a018207e0c08003505f1f87fe"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Mix_Music *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMusic.html#a9cc930dba29118aa6436d9bb5f9d8c20">MixMusic</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMusic.html#af415b9ba212ac3474bc3e19331465c16">Path</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">Mix_Music *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMusic.html#ae3f09da38d1502e55a2eeba06a985ab0">mixMusic</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMusic.html#a0b2de919956f6ccb79f9f9f962a8db11">path</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Mix_Music *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMusic.html#a0c8ece4a3c4a7a9c9ee6f2624e208719">m_mix_music</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMusic.html#a6b00f4fca14357f0b976dfeea4f41f2d">m_path</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
 <p>Definition at line <a class="el" href="Music_8h_source.html#l00006">6</a> of file <a class="el" href="Music_8h_source.html">Music.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="aacd7ffd6e4ac39cbc10d8a840b5becd6"></a><!-- doxytag: member="Music::Music" ref="aacd7ffd6e4ac39cbc10d8a840b5becd6" args="(const std::string &amp;path_)" -->
+<a class="anchor" id="a74b0f103642e6736e0dfde793205d10b"></a><!-- doxytag: member="Music::Music" ref="a74b0f103642e6736e0dfde793205d10b" args="(const std::string &amp;path)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classMusic.html#aacd7ffd6e4ac39cbc10d8a840b5becd6">Music::Music</a> </td>
+          <td class="memname"><a class="el" href="classMusic.html#a74b0f103642e6736e0dfde793205d10b">Music::Music</a> </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>path_</em></td><td>)</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
           <td><code> [explicit]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
+<p>The constructor. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>: The path to the music file. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Definition at line <a class="el" href="Music_8cpp_source.html#l00004">4</a> of file <a class="el" href="Music_8cpp_source.html">Music.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMusic_a74b0f103642e6736e0dfde793205d10b_cgraph.png" border="0" usemap="#classMusic_a74b0f103642e6736e0dfde793205d10b_cgraph" alt=""/></div>
+<map name="classMusic_a74b0f103642e6736e0dfde793205d10b_cgraph" id="classMusic_a74b0f103642e6736e0dfde793205d10b_cgraph">
+<area shape="rect" id="node3" href="classMusic.html#a0b4f3b9a018207e0c08003505f1f87fe" title="The destructor." alt="" coords="163,5,269,35"/><area shape="rect" id="node5" href="classMusic.html#a9cc930dba29118aa6436d9bb5f9d8c20" title="Music::MixMusic" alt="" coords="156,59,276,88"/><area shape="rect" id="node7" href="classMusic.html#af415b9ba212ac3474bc3e19331465c16" title="Music::Path" alt="" coords="171,112,261,141"/></map>
+</div>
+</p>
 
 </div>
 </div>
@@ -137,17 +156,26 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="Music_8cpp_source.html#l00015">15</a> of file <a class="el" href="Music_8cpp_source.html">Music.cpp</a>.</p>
+<p>The destructor. </p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMusic_a0b4f3b9a018207e0c08003505f1f87fe_icgraph.png" border="0" usemap="#classMusic_a0b4f3b9a018207e0c08003505f1f87fe_icgraph" alt=""/></div>
+<map name="classMusic_a0b4f3b9a018207e0c08003505f1f87fe_icgraph" id="classMusic_a0b4f3b9a018207e0c08003505f1f87fe_icgraph">
+<area shape="rect" id="node3" href="classMusic.html#a74b0f103642e6736e0dfde793205d10b" title="The constructor." alt="" coords="164,5,263,35"/></map>
+</div>
+</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a09a2f7858a7487f1838e64f2e9dac330"></a><!-- doxytag: member="Music::getMixMusic" ref="a09a2f7858a7487f1838e64f2e9dac330" args="()" -->
+<a class="anchor" id="a9cc930dba29118aa6436d9bb5f9d8c20"></a><!-- doxytag: member="Music::MixMusic" ref="a9cc930dba29118aa6436d9bb5f9d8c20" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Mix_Music * <a class="el" href="classMusic.html#a09a2f7858a7487f1838e64f2e9dac330">Music::getMixMusic</a> </td>
+          <td class="memname">Mix_Music* <a class="el" href="classMusic.html#a9cc930dba29118aa6436d9bb5f9d8c20">Music::MixMusic</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -155,17 +183,25 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<dl class="return"><dt><b>Returns:</b></dt><dd>A pointer to the raw Mix_Music object. </dd></dl>
 
-<p>Definition at line <a class="el" href="Music_8cpp_source.html#l00021">21</a> of file <a class="el" href="Music_8cpp_source.html">Music.cpp</a>.</p>
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMusic_a9cc930dba29118aa6436d9bb5f9d8c20_icgraph.png" border="0" usemap="#classMusic_a9cc930dba29118aa6436d9bb5f9d8c20_icgraph" alt=""/></div>
+<map name="classMusic_a9cc930dba29118aa6436d9bb5f9d8c20_icgraph" id="classMusic_a9cc930dba29118aa6436d9bb5f9d8c20_icgraph">
+<area shape="rect" id="node3" href="classMusic.html#a74b0f103642e6736e0dfde793205d10b" title="The constructor." alt="" coords="177,5,276,35"/></map>
+</div>
+</p>
 
 </div>
 </div>
-<a class="anchor" id="ab69332e32ab15a77d2c16cee0d457092"></a><!-- doxytag: member="Music::getPath" ref="ab69332e32ab15a77d2c16cee0d457092" args="()" -->
+<a class="anchor" id="af415b9ba212ac3474bc3e19331465c16"></a><!-- doxytag: member="Music::Path" ref="af415b9ba212ac3474bc3e19331465c16" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::string <a class="el" href="classMusic.html#ab69332e32ab15a77d2c16cee0d457092">Music::getPath</a> </td>
+          <td class="memname">std::string <a class="el" href="classMusic.html#af415b9ba212ac3474bc3e19331465c16">Music::Path</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -173,39 +209,49 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<dl class="return"><dt><b>Returns:</b></dt><dd>The path given to the constructor. </dd></dl>
 
-<p>Definition at line <a class="el" href="Music_8cpp_source.html#l00025">25</a> of file <a class="el" href="Music_8cpp_source.html">Music.cpp</a>.</p>
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMusic_af415b9ba212ac3474bc3e19331465c16_icgraph.png" border="0" usemap="#classMusic_af415b9ba212ac3474bc3e19331465c16_icgraph" alt=""/></div>
+<map name="classMusic_af415b9ba212ac3474bc3e19331465c16_icgraph" id="classMusic_af415b9ba212ac3474bc3e19331465c16_icgraph">
+<area shape="rect" id="node3" href="classMusic.html#a74b0f103642e6736e0dfde793205d10b" title="The constructor." alt="" coords="148,5,247,35"/></map>
+</div>
+</p>
 
 </div>
 </div>
 <hr/><h2>Field Documentation</h2>
-<a class="anchor" id="ae3f09da38d1502e55a2eeba06a985ab0"></a><!-- doxytag: member="Music::mixMusic" ref="ae3f09da38d1502e55a2eeba06a985ab0" args="" -->
+<a class="anchor" id="a0c8ece4a3c4a7a9c9ee6f2624e208719"></a><!-- doxytag: member="Music::m_mix_music" ref="a0c8ece4a3c4a7a9c9ee6f2624e208719" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Mix_Music* <a class="el" href="classMusic.html#ae3f09da38d1502e55a2eeba06a985ab0">Music::mixMusic</a><code> [private]</code></td>
+          <td class="memname">Mix_Music* const <a class="el" href="classMusic.html#a0c8ece4a3c4a7a9c9ee6f2624e208719">Music::m_mix_music</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
+<p><a class="el" href="classMusic.html">Music</a> data. </p>
 
-<p>Definition at line <a class="el" href="Music_8h_source.html#l00016">16</a> of file <a class="el" href="Music_8h_source.html">Music.h</a>.</p>
+<p>Definition at line <a class="el" href="Music_8h_source.html#l00032">32</a> of file <a class="el" href="Music_8h_source.html">Music.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a0b2de919956f6ccb79f9f9f962a8db11"></a><!-- doxytag: member="Music::path" ref="a0b2de919956f6ccb79f9f9f962a8db11" args="" -->
+<a class="anchor" id="a6b00f4fca14357f0b976dfeea4f41f2d"></a><!-- doxytag: member="Music::m_path" ref="a6b00f4fca14357f0b976dfeea4f41f2d" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::string <a class="el" href="classMusic.html#a0b2de919956f6ccb79f9f9f962a8db11">Music::path</a><code> [private]</code></td>
+          <td class="memname">const std::string <a class="el" href="classMusic.html#a6b00f4fca14357f0b976dfeea4f41f2d">Music::m_path</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Path to the music file. </p>
 
-<p>Definition at line <a class="el" href="Music_8h_source.html#l00017">17</a> of file <a class="el" href="Music_8h_source.html">Music.h</a>.</p>
+<p>Definition at line <a class="el" href="Music_8h_source.html#l00033">33</a> of file <a class="el" href="Music_8h_source.html">Music.h</a>.</p>
 
 </div>
 </div>
@@ -231,7 +277,7 @@ Private Attributes</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jan 21 2015 21:38:34 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 23 2015 19:20:36 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

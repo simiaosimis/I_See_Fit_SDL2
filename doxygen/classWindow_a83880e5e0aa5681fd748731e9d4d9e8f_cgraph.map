@@ -1,0 +1,7 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classConfiguration.html#a2ded611ff08783df927c2b4e97ded543" title="Configuration::WindowTitle" alt="" coords="189,5,368,35"/>
+<area shape="rect" id="node5" href="$classConfiguration.html#a2abd3e10153cffe624981da2eedcd61a" title="Configuration::ScreenWidth" alt="" coords="188,59,369,88"/>
+<area shape="rect" id="node7" href="$classConfiguration.html#ac1b98514305ca2e97e54f9858d891488" title="Configuration::ScreenHeight" alt="" coords="185,112,372,141"/>
+<area shape="rect" id="node9" href="$classRenderer.html#a16a84d028e9b34f516a171d5403be477" title="Rescales the renderization." alt="" coords="193,165,364,195"/>
+<area shape="rect" id="node11" href="$classConfiguration.html#a87978aa3909e9063f84a27e058018e70" title="Configuration::LogicalRenderSize" alt="" coords="171,219,387,248"/>
+</map>

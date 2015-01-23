@@ -6,7 +6,7 @@ var searchData=
   ['animation_2ecpp',['Animation.cpp',['../Animation_8cpp.html',1,'']]],
   ['animation_2eh',['Animation.h',['../Animation_8h.html',1,'']]],
   ['animationclip',['animationClip',['../classGameObject.html#aedbe7c552382ea0686d020661826c106',1,'GameObject::animationClip()'],['../classGStatePlaceholder.html#a225ddc8653cf385d180689ce427961e9',1,'GStatePlaceholder::animationClip()']]],
-  ['audiohandler',['AudioHandler',['../classAudioHandler.html',1,'AudioHandler'],['../classGame.html#a0669fc05427f97820f44f2ac5cc7cef0',1,'Game::audioHandler()'],['../classAudioHandler.html#a605b5c91270eb7cad7a0ac60b354b56b',1,'AudioHandler::AudioHandler()']]],
+  ['audiohandler',['AudioHandler',['../classAudioHandler.html',1,'AudioHandler'],['../classAudioHandler.html#a605b5c91270eb7cad7a0ac60b354b56b',1,'AudioHandler::AudioHandler()']]],
   ['audiohandler_2ecpp',['AudioHandler.cpp',['../AudioHandler_8cpp.html',1,'']]],
   ['audiohandler_2eh',['AudioHandler.h',['../AudioHandler_8h.html',1,'']]],
   ['axes',['axes',['../namespacecontrollerMap.html#aade78d90d7679ba903121afd7fcceabe',1,'controllerMap']]]

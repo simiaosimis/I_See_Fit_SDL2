@@ -256,17 +256,17 @@
             <td></td>
             <td class="headerName">Lines:</td>
             <td class="headerTableEntry">9</td>
-            <td class="headerTableEntry">11</td>
-            <td class="headerTableEntry" style="background-color:#FFFF55">81.8 %</td>
+            <td class="headerTableEntry">10</td>
+            <td class="headerTableEntry" style="background-color:LightGreen">90.0 %</td>
           </tr>
           <tr>
             <td class="headerName">Date:</td>
-            <td class="headerValue">2015-01-21</td>
+            <td class="headerValue">2015-01-23</td>
             <td></td>
             <td class="headerName">Branches:</td>
             <td class="headerTableEntry">4</td>
-            <td class="headerTableEntry">10</td>
-            <td class="headerTableEntry" style="background-color:LightPink">40.0 %</td>
+            <td class="headerTableEntry">8</td>
+            <td class="headerTableEntry" style="background-color:LightPink">50.0 %</td>
           </tr>
         </table>
       </td>
@@ -293,19 +293,19 @@
     <tr>
     <td align="right" class="lineno"><pre>2</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>#include "core/Logger.h"</pre></td>
+    <td align="left" class="src "><pre>#include "engine/Game.h"</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>3</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>#include "engine/Game.h"</pre></td>
+    <td align="left" class="src "><pre>#include "util/Configuration.h"</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>4</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>#include "util/Configuration.h"</pre></td>
+    <td align="left" class="src "><pre>#include "util/Logger.h"</pre></td>
     </tr>
 
     <tr>
@@ -377,7 +377,7 @@
     <tr>
     <td align="right" class="lineno"><pre>16</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>	const bool systemsInitialized = sdl::Initialize();</pre></td>
+    <td align="left" class="src coveredLine"><pre>	const bool k_systems_initialized = sdl::Initialize();</pre></td>
     </tr>
 
     <tr>
@@ -389,77 +389,71 @@
     <tr>
     <td align="right" class="lineno"><pre>18</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>	if(systemsInitialized) {</pre></td>
+    <td align="left" class="src coveredLine"><pre>	if(k_systems_initialized) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>19</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>		Game::instance().runGame();</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>		Game::Instance().Run();</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>20</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>		delete &amp;Game::instance();</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>	}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>21</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>	}</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>22</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	else {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>23</pre></td>
+    <td align="right" class="lineno"><pre>22</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>		logger::error() &lt;&lt; "Systems were not initialized.";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>24</pre></td>
+    <td align="right" class="lineno"><pre>23</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>25</pre></td>
+    <td align="right" class="lineno"><pre>24</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>26</pre></td>
+    <td align="right" class="lineno"><pre>25</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>	sdl::Close();</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>27</pre></td>
+    <td align="right" class="lineno"><pre>26</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>28</pre></td>
+    <td align="right" class="lineno"><pre>27</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>	logger::debug() &lt;&lt; "Exiting sdl2-engine...";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>29</pre></td>
+    <td align="right" class="lineno"><pre>28</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>	return 0;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>30</pre></td>
+    <td align="right" class="lineno"><pre>29</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>}</pre></td>
     </tr>

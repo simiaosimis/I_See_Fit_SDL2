@@ -261,7 +261,7 @@
           </tr>
           <tr>
             <td class="headerName">Date:</td>
-            <td class="headerValue">2015-01-21</td>
+            <td class="headerValue">2015-01-23</td>
             <td></td>
             <td class="headerName">Branches:</td>
             <td class="headerTableEntry">0</td>
@@ -299,7 +299,7 @@
     <tr>
     <td align="right" class="lineno"><pre>3</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>#include "core/Logger.h"</pre></td>
+    <td align="left" class="src "><pre>#include "util/Logger.h"</pre></td>
     </tr>
 
     <tr>
@@ -425,7 +425,7 @@
     <tr>
     <td align="right" class="lineno"><pre>24</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	this-&gt;image = Game::instance().getResource().sprite("assets/images/spritesheet.png");</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	this-&gt;image = Game::Instance().Resource().sprite("assets/images/spritesheet.png");</pre></td>
     </tr>
 
     <tr>
@@ -437,7 +437,7 @@
     <tr>
     <td align="right" class="lineno"><pre>26</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	Game::instance().getAudioHandler().ChangeMusic("assets/audio/music/test_music.flac");</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	Game::Instance().GetAudioHandler().ChangeMusic("assets/audio/music/test_music.flac");</pre></td>
     </tr>
 
     <tr>
@@ -497,7 +497,7 @@
     <tr>
     <td align="right" class="lineno"><pre>36</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	const std::array&lt;bool, GameKeys::MAX&gt; keyStates = Game::instance().getInput();</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	const InputArray keyStates = Game::Instance().Input();</pre></td>
     </tr>
 
     <tr>
@@ -515,7 +515,7 @@
     <tr>
     <td align="right" class="lineno"><pre>39</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>		Game::instance().getAudioHandler().PlaySoundEffect("assets/audio/sfx/test_sfx.wav");</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>		Game::Instance().GetAudioHandler().PlaySoundEffect("assets/audio/sfx/test_sfx.wav");</pre></td>
     </tr>
 
     <tr>

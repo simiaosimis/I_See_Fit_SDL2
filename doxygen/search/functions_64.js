@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['destroystates',['destroyStates',['../classGame.html#a684834abb420aba6d30094d1fe273818',1,'Game']]]
+  ['destroystates',['DestroyStates',['../classGame.html#adbc1ee0720a51a559c14786dff26f849',1,'Game']]]
 ];

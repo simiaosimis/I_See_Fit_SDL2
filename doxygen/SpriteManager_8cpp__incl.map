@@ -1,7 +1,7 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$SpriteManager_8h.html" title="graphics/SpriteManager.h" alt="" coords="332,83,503,112"/>
-<area shape="rect" id="node7" href="$ResourceManager_8h.html" title="core/ResourceManager.h" alt="" coords="197,160,365,189"/>
-<area shape="rect" id="node20" href="$Sprite_8h.html" title="graphics/Sprite.h" alt="" coords="455,160,575,189"/>
-<area shape="rect" id="node14" href="$Logger_8h.html" title="core/Logger.h" alt="" coords="168,237,269,267"/>
-<area shape="rect" id="node18" href="$Uncopyable_8h.html" title="util/Uncopyable.h" alt="" coords="293,237,416,267"/>
+<area shape="rect" id="node3" href="$SpriteManager_8h.html" title="graphics/SpriteManager.h" alt="" coords="324,83,495,112"/>
+<area shape="rect" id="node7" href="$ResourceManager_8h.html" title="core/ResourceManager.h" alt="" coords="192,160,360,189"/>
+<area shape="rect" id="node20" href="$Sprite_8h.html" title="graphics/Sprite.h" alt="" coords="447,160,567,189"/>
+<area shape="rect" id="node14" href="$Logger_8h.html" title="util/Logger.h" alt="" coords="168,237,261,267"/>
+<area shape="rect" id="node18" href="$Uncopyable_8h.html" title="util/Uncopyable.h" alt="" coords="285,237,408,267"/>
 </map>

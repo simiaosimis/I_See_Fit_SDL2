@@ -1,24 +1,7 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$classConfiguration.html#a4637584596d09c48bc816b71d974297d" title="Configuration::Initialize" alt="" coords="104,219,259,248"/>
-<area shape="rect" id="node5" href="$namespacesdl.html#a3a90e2da909fa25cc7c570fbe3e25d5f" title="sdl::Initialize" alt="" coords="135,272,228,301"/>
-<area shape="rect" id="node7" href="$classGame.html#ac213e6d3a4e566d901413f62f6408858" title="Game::instance" alt="" coords="124,325,239,355"/>
-<area shape="rect" id="node19" href="$classGame.html#abc9436a9d18e48c6e1e4fbc4ea879449" title="Game::runGame" alt="" coords="123,379,240,408"/>
-<area shape="rect" id="node45" href="$namespacesdl.html#ad191ca5bcfbd36197f6959249e6cbcda" title="sdl::Close" alt="" coords="141,432,221,461"/>
-<area shape="rect" id="node9" href="$classGame.html#ad59df6562a58a614fda24622d3715b65" title="Game::Game" alt="" coords="343,112,441,141"/>
-<area shape="rect" id="node11" href="$classConfiguration.html#a2abd3e10153cffe624981da2eedcd61a" title="Configuration::ScreenWidth" alt="" coords="540,5,721,35"/>
-<area shape="rect" id="node13" href="$classConfiguration.html#ac1b98514305ca2e97e54f9858d891488" title="Configuration::ScreenHeight" alt="" coords="537,59,724,88"/>
-<area shape="rect" id="node15" href="$classConfiguration.html#aa499bb12addd43ff8eacab01ab9e51ea" title="Configuration::WindowTitle" alt="" coords="541,112,720,141"/>
-<area shape="rect" id="node17" href="$classGame.html#afc16bd0d077c53218c27f16e0bf56cbb" title="Game::initializeStates" alt="" coords="556,165,705,195"/>
-<area shape="rect" id="node21" href="$classStateGame.html#a924e531e28b8afcbb82858eecef0a084" title="StateGame::load" alt="" coords="332,192,452,221"/>
-<area shape="rect" id="node23" href="$classInputHandler.html#a820f483265aa3f6da39b9d93c1311966" title="InputHandler::handleInput" alt="" coords="307,245,477,275"/>
-<area shape="rect" id="node31" href="$classInputHandler.html#a7d103ecce85288f454876b5bef8b3aee" title="InputHandler::isQuitFlag" alt="" coords="311,299,473,328"/>
-<area shape="rect" id="node33" href="$classGame.html#a17fbb36fd4a2085f9ff4f1fa93d7d08b" title="Game::stop" alt="" coords="347,352,437,381"/>
-<area shape="rect" id="node35" href="$classStateGame.html#a300539fe737d6bbab4b4d6fe4b6a2e98" title="StateGame::update" alt="" coords="325,405,459,435"/>
-<area shape="rect" id="node37" href="$classWindow.html#ac5ec376703205dff00ffdbae115f93b1" title="Window::getRenderer" alt="" coords="319,459,465,488"/>
-<area shape="rect" id="node39" href="$classRenderer.html#ac46720b3fc0dbb2fc37674766490a8c4" title="Renderer::clear" alt="" coords="337,512,447,541"/>
-<area shape="rect" id="node41" href="$classStateGame.html#a9e181e234d99aa11beead047152a8e92" title="StateGame::render" alt="" coords="327,565,457,595"/>
-<area shape="rect" id="node43" href="$classRenderer.html#af7e5f8f68742f198e315fb4683a605a4" title="Renderer::render" alt="" coords="333,619,451,648"/>
-<area shape="rect" id="node25" href="$classControllerHandler.html#a79e2adab7291ab5589e907860d046046" title="ControllerHandler::handleInput" alt="" coords="532,219,729,248"/>
-<area shape="rect" id="node27" href="$classControllerHandler.html#a1c4161545fdc54bf1d406f6acd2d67d6" title="ControllerHandler::getKeyStates" alt="" coords="525,272,736,301"/>
-<area shape="rect" id="node29" href="$classInputHandler.html#ae3546fa674d3db49d755b4047503f4e8" title="InputHandler::signalExit" alt="" coords="551,325,711,355"/>
+<area shape="rect" id="node3" href="$classConfiguration.html#a4637584596d09c48bc816b71d974297d" title="Configuration::Initialize" alt="" coords="104,5,259,35"/>
+<area shape="rect" id="node5" href="$namespacesdl.html#a3a90e2da909fa25cc7c570fbe3e25d5f" title="The system initializer." alt="" coords="135,59,228,88"/>
+<area shape="rect" id="node7" href="$classGame.html#a0b3ad989fe67e72b4b6b2f36a059479a" title="Singleton implementation for Game." alt="" coords="124,112,239,141"/>
+<area shape="rect" id="node9" href="$classGame.html#a96341ca5b54d90adc3ecb3bf0bcd2312" title="The main game loop." alt="" coords="137,165,225,195"/>
+<area shape="rect" id="node11" href="$namespacesdl.html#ad191ca5bcfbd36197f6959249e6cbcda" title="Closes all open systems." alt="" coords="141,219,221,248"/>
 </map>

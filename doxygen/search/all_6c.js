@@ -19,5 +19,6 @@ var searchData=
   ['logger_2ecpp',['Logger.cpp',['../Logger_8cpp.html',1,'']]],
   ['logger_2eh',['Logger.h',['../Logger_8h.html',1,'']]],
   ['logicalrendersize',['LogicalRenderSize',['../classConfiguration.html#a87978aa3909e9063f84a27e058018e70',1,'Configuration']]],
+  ['logicalsize',['LogicalSize',['../classRenderer.html#ae60d5ef1af57d46cce0b703580d1bce4',1,'Renderer']]],
   ['lvertical',['LVERTICAL',['../namespacecontrollerMap.html#aade78d90d7679ba903121afd7fcceabea85db7abe2e7376d4cc2e6078bff341f2',1,'controllerMap']]]
 ];

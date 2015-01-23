@@ -12,8 +12,8 @@
   <line>Command: /home/travis/build/CaioIcy/sdl2-engine/build/src/sdl2-engine_exec</line>
 </preamble>
 
-<pid>19750</pid>
-<ppid>19727</ppid>
+<pid>19718</pid>
+<ppid>19695</ppid>
 <tool>memcheck</tool>
 
 <args>
@@ -30,63 +30,14 @@
 
 <status>
   <state>RUNNING</state>
-  <time>00:00:00:00.052 </time>
+  <time>00:00:00:00.089 </time>
 </status>
 
 
 <status>
   <state>FINISHED</state>
-  <time>00:00:00:01.719 </time>
+  <time>00:00:00:03.251 </time>
 </status>
-
-<error>
-  <unique>0x16</unique>
-  <tid>1</tid>
-  <kind>Leak_PossiblyLost</kind>
-  <xwhat>
-    <text>36 bytes in 1 blocks are possibly lost in loss record 21 of 55</text>
-    <leakedbytes>36</leakedbytes>
-    <leakedblocks>1</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4C2B1C7</ip>
-      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>operator new(unsigned long)</fn>
-    </frame>
-    <frame>
-      <ip>0x5A85138</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.20</obj>
-      <fn>std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator&lt;char&gt; const&amp;)</fn>
-    </frame>
-    <frame>
-      <ip>0x5A851B3</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.20</obj>
-      <fn>std::string::_M_mutate(unsigned long, unsigned long, unsigned long)</fn>
-    </frame>
-    <frame>
-      <ip>0x5A857CD</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.20</obj>
-      <fn>std::string::_M_replace_safe(unsigned long, unsigned long, char const*, unsigned long)</fn>
-    </frame>
-    <frame>
-      <ip>0x425860</ip>
-      <obj>/home/travis/build/CaioIcy/sdl2-engine/build/src/sdl2-engine_exec</obj>
-      <fn>Configuration::Initialize()</fn>
-      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/util</dir>
-      <file>Configuration.cpp</file>
-      <line>20</line>
-    </frame>
-    <frame>
-      <ip>0x421CA9</ip>
-      <obj>/home/travis/build/CaioIcy/sdl2-engine/build/src/sdl2-engine_exec</obj>
-      <fn>main</fn>
-      <dir>/home/travis/build/CaioIcy/sdl2-engine/src</dir>
-      <file>main.cpp</file>
-      <line>14</line>
-    </frame>
-  </stack>
-</error>
 
 <errorcounts>
 </errorcounts>
@@ -103,7 +54,7 @@
 
 <status>
   <state>FINISHED</state>
-  <time>00:00:00:02.920 </time>
+  <time>00:00:00:05.079 </time>
 </status>
 
 <error>
@@ -111,8 +62,8 @@
   <tid>1</tid>
   <kind>Leak_PossiblyLost</kind>
   <xwhat>
-    <text>11 bytes in 2 blocks are possibly lost in loss record 3 of 97</text>
-    <leakedbytes>11</leakedbytes>
+    <text>4 bytes in 2 blocks are possibly lost in loss record 3 of 73</text>
+    <leakedbytes>4</leakedbytes>
     <leakedblocks>2</leakedblocks>
   </xwhat>
   <stack>
@@ -122,15 +73,89 @@
       <fn>malloc</fn>
     </frame>
     <frame>
-      <ip>0x62D0769</ip>
+      <ip>0x5F70AB1</ip>
+      <obj>/lib/x86_64-linux-gnu/libc-2.15.so</obj>
+      <fn>strdup</fn>
+      <dir>/build/buildd/eglibc-2.15/string</dir>
+      <file>strdup.c</file>
+      <line>43</line>
+    </frame>
+    <frame>
+      <ip>0x62D359E</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
     <frame>
-      <ip>0x62D118D</ip>
+      <ip>0x62D3240</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
     <frame>
-      <ip>0x62D30B1</ip>
+      <ip>0x62D37E5</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D6984</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+      <fn>snd_config_update_r</fn>
+    </frame>
+    <frame>
+      <ip>0x62D6E91</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+      <fn>snd_config_update</fn>
+    </frame>
+    <frame>
+      <ip>0x62F3762</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+      <fn>snd_pcm_open</fn>
+    </frame>
+    <frame>
+      <ip>0x4EE4351</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
+    </frame>
+    <frame>
+      <ip>0x4E4F7B6</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
+    </frame>
+    <frame>
+      <ip>0x4E4FF23</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
+    </frame>
+    <frame>
+      <ip>0x55794AB</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2_mixer-2.0.so.0.0.0</obj>
+      <fn>Mix_OpenAudio</fn>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x5</unique>
+  <tid>1</tid>
+  <kind>Leak_PossiblyLost</kind>
+  <xwhat>
+    <text>4 bytes in 2 blocks are possibly lost in loss record 4 of 73</text>
+    <leakedbytes>4</leakedbytes>
+    <leakedblocks>2</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2B6CD</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>malloc</fn>
+    </frame>
+    <frame>
+      <ip>0x5F70AB1</ip>
+      <obj>/lib/x86_64-linux-gnu/libc-2.15.so</obj>
+      <fn>strdup</fn>
+      <dir>/build/buildd/eglibc-2.15/string</dir>
+      <file>strdup.c</file>
+      <line>43</line>
+    </frame>
+    <frame>
+      <ip>0x62D359E</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D3240</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
     <frame>
@@ -142,39 +167,41 @@
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
     <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
       <ip>0x62D37E5</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
     <frame>
-      <ip>0x62D3A0C</ip>
+      <ip>0x62D6984</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+      <fn>snd_config_update_r</fn>
     </frame>
     <frame>
-      <ip>0x62D527D</ip>
+      <ip>0x62D6E91</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_hook_load</fn>
+      <fn>snd_config_update</fn>
+    </frame>
+    <frame>
+      <ip>0x62F3762</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+      <fn>snd_pcm_open</fn>
+    </frame>
+    <frame>
+      <ip>0x4EE4351</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
+    </frame>
+    <frame>
+      <ip>0x4E4F7B6</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
     </frame>
   </stack>
 </error>
 
 <error>
-  <unique>0x5</unique>
+  <unique>0x6</unique>
   <tid>1</tid>
   <kind>Leak_PossiblyLost</kind>
   <xwhat>
-    <text>12 bytes in 6 blocks are possibly lost in loss record 4 of 97</text>
+    <text>12 bytes in 6 blocks are possibly lost in loss record 5 of 73</text>
     <leakedbytes>12</leakedbytes>
     <leakedblocks>6</leakedblocks>
   </xwhat>
@@ -201,15 +228,19 @@
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
     <frame>
-      <ip>0x62D34D4</ip>
+      <ip>0x62D373C</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
     <frame>
-      <ip>0x62D34D4</ip>
+      <ip>0x62D3240</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
     <frame>
-      <ip>0x62D34D4</ip>
+      <ip>0x62D373C</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D3240</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
     <frame>
@@ -217,32 +248,93 @@
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
     <frame>
-      <ip>0x62D3A0C</ip>
+      <ip>0x62D6984</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+      <fn>snd_config_update_r</fn>
     </frame>
     <frame>
-      <ip>0x62D527D</ip>
+      <ip>0x62D6E91</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_hook_load</fn>
+      <fn>snd_config_update</fn>
     </frame>
     <frame>
-      <ip>0x62D5EBC</ip>
+      <ip>0x62F3762</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D64C3</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_searcha_hooks</fn>
+      <fn>snd_pcm_open</fn>
     </frame>
   </stack>
 </error>
 
 <error>
-  <unique>0x6</unique>
+  <unique>0x7</unique>
   <tid>1</tid>
   <kind>Leak_PossiblyLost</kind>
   <xwhat>
-    <text>14 bytes in 2 blocks are possibly lost in loss record 5 of 97</text>
+    <text>14 bytes in 2 blocks are possibly lost in loss record 6 of 73</text>
+    <leakedbytes>14</leakedbytes>
+    <leakedblocks>2</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2B6CD</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>malloc</fn>
+    </frame>
+    <frame>
+      <ip>0x62D0769</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D118D</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D12FB</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D32E5</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D373C</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D3240</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D373C</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D3240</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D37E5</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D6984</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+      <fn>snd_config_update_r</fn>
+    </frame>
+    <frame>
+      <ip>0x62D6E91</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+      <fn>snd_config_update</fn>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x8</unique>
+  <tid>1</tid>
+  <kind>Leak_PossiblyLost</kind>
+  <xwhat>
+    <text>14 bytes in 2 blocks are possibly lost in loss record 7 of 73</text>
     <leakedbytes>14</leakedbytes>
     <leakedblocks>2</leakedblocks>
   </xwhat>
@@ -303,11 +395,11 @@
 </error>
 
 <error>
-  <unique>0x8</unique>
+  <unique>0xa</unique>
   <tid>1</tid>
   <kind>Leak_PossiblyLost</kind>
   <xwhat>
-    <text>16 bytes in 8 blocks are possibly lost in loss record 7 of 97</text>
+    <text>16 bytes in 8 blocks are possibly lost in loss record 9 of 73</text>
     <leakedbytes>16</leakedbytes>
     <leakedblocks>8</leakedblocks>
   </xwhat>
@@ -372,73 +464,11 @@
 </error>
 
 <error>
-  <unique>0xa</unique>
+  <unique>0xc</unique>
   <tid>1</tid>
   <kind>Leak_PossiblyLost</kind>
   <xwhat>
-    <text>18 bytes in 2 blocks are possibly lost in loss record 9 of 97</text>
-    <leakedbytes>18</leakedbytes>
-    <leakedblocks>2</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4C2B6CD</ip>
-      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>malloc</fn>
-    </frame>
-    <frame>
-      <ip>0x62D0769</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D118D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D12FB</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D32E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D373C</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3240</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D37E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3A0C</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-  </stack>
-</error>
-
-<error>
-  <unique>0xb</unique>
-  <tid>1</tid>
-  <kind>Leak_PossiblyLost</kind>
-  <xwhat>
-    <text>18 bytes in 3 blocks are possibly lost in loss record 10 of 97</text>
+    <text>18 bytes in 3 blocks are possibly lost in loss record 11 of 73</text>
     <leakedbytes>18</leakedbytes>
     <leakedblocks>3</leakedblocks>
   </xwhat>
@@ -457,15 +487,31 @@
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
     <frame>
-      <ip>0x62D12FB</ip>
+      <ip>0x62D30B1</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
     <frame>
-      <ip>0x62D32E5</ip>
+      <ip>0x62D373C</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
     <frame>
-      <ip>0x62D34D4</ip>
+      <ip>0x62D3240</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D373C</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D3240</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D373C</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D3240</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
     <frame>
@@ -473,38 +519,21 @@
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
     <frame>
-      <ip>0x62D3A0C</ip>
+      <ip>0x62D6984</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D527D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_hook_load</fn>
-    </frame>
-    <frame>
-      <ip>0x62D5EBC</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D64C3</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_searcha_hooks</fn>
-    </frame>
-    <frame>
-      <ip>0x62D6714</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+      <fn>snd_config_update_r</fn>
     </frame>
   </stack>
 </error>
 
 <error>
-  <unique>0xc</unique>
+  <unique>0xd</unique>
   <tid>1</tid>
   <kind>Leak_PossiblyLost</kind>
   <xwhat>
-    <text>22 bytes in 11 blocks are possibly lost in loss record 11 of 97</text>
-    <leakedbytes>22</leakedbytes>
-    <leakedblocks>11</leakedblocks>
+    <text>19 bytes in 1 blocks are possibly lost in loss record 12 of 73</text>
+    <leakedbytes>19</leakedbytes>
+    <leakedblocks>1</leakedblocks>
   </xwhat>
   <stack>
     <frame>
@@ -521,59 +550,61 @@
       <line>43</line>
     </frame>
     <frame>
-      <ip>0x62D359E</ip>
+      <ip>0x62DA866</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
     <frame>
-      <ip>0x62D3240</ip>
+      <ip>0x62F15C1</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
     <frame>
-      <ip>0x62D34D4</ip>
+      <ip>0x62F1BBF</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
     <frame>
-      <ip>0x62D37E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+      <ip>0x4EE4351</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
     </frame>
     <frame>
-      <ip>0x62D3A0C</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+      <ip>0x4E4F7B6</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
     </frame>
     <frame>
-      <ip>0x62D527D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_hook_load</fn>
+      <ip>0x4E4FF23</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
     </frame>
     <frame>
-      <ip>0x62D5EBC</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+      <ip>0x55794AB</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2_mixer-2.0.so.0.0.0</obj>
+      <fn>Mix_OpenAudio</fn>
     </frame>
     <frame>
-      <ip>0x62D64C3</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_searcha_hooks</fn>
+      <ip>0x424CF7</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/build/src/sdl2-engine_exec</obj>
+      <fn>sdl::Initialize()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/core</dir>
+      <file>SDL_Systems.cpp</file>
+      <line>172</line>
     </frame>
     <frame>
-      <ip>0x62D6714</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D57A1</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_search_definition</fn>
+      <ip>0x4230C0</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/build/src/sdl2-engine_exec</obj>
+      <fn>main</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src</dir>
+      <file>main.cpp</file>
+      <line>16</line>
     </frame>
   </stack>
 </error>
 
 <error>
-  <unique>0xf</unique>
+  <unique>0x10</unique>
   <tid>1</tid>
   <kind>Leak_PossiblyLost</kind>
   <xwhat>
-    <text>26 bytes in 2 blocks are possibly lost in loss record 14 of 97</text>
-    <leakedbytes>26</leakedbytes>
-    <leakedblocks>2</leakedblocks>
+    <text>28 bytes in 4 blocks are possibly lost in loss record 15 of 73</text>
+    <leakedbytes>28</leakedbytes>
+    <leakedblocks>4</leakedblocks>
   </xwhat>
   <stack>
     <frame>
@@ -586,19 +617,15 @@
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
     <frame>
-      <ip>0x62D0E9E</ip>
+      <ip>0x62D118D</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
     <frame>
-      <ip>0x62D124C</ip>
+      <ip>0x62D30B1</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
     <frame>
-      <ip>0x62D12FB</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D35FE</ip>
+      <ip>0x62D373C</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
     <frame>
@@ -606,15 +633,11 @@
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
     <frame>
-      <ip>0x62D34D4</ip>
+      <ip>0x62D373C</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
     <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
+      <ip>0x62D3240</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
     <frame>
@@ -622,18 +645,29 @@
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
     <frame>
-      <ip>0x62D3A0C</ip>
+      <ip>0x62D6984</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+      <fn>snd_config_update_r</fn>
+    </frame>
+    <frame>
+      <ip>0x62D6E91</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+      <fn>snd_config_update</fn>
+    </frame>
+    <frame>
+      <ip>0x62F3762</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+      <fn>snd_pcm_open</fn>
     </frame>
   </stack>
 </error>
 
 <error>
-  <unique>0x10</unique>
+  <unique>0x11</unique>
   <tid>1</tid>
   <kind>Leak_PossiblyLost</kind>
   <xwhat>
-    <text>28 bytes in 14 blocks are possibly lost in loss record 15 of 97</text>
+    <text>28 bytes in 14 blocks are possibly lost in loss record 16 of 73</text>
     <leakedbytes>28</leakedbytes>
     <leakedblocks>14</leakedblocks>
   </xwhat>
@@ -698,11 +732,76 @@
 </error>
 
 <error>
-  <unique>0x12</unique>
+  <unique>0x13</unique>
   <tid>1</tid>
   <kind>Leak_PossiblyLost</kind>
   <xwhat>
-    <text>30 bytes in 3 blocks are possibly lost in loss record 17 of 97</text>
+    <text>29 bytes in 5 blocks are possibly lost in loss record 18 of 73</text>
+    <leakedbytes>29</leakedbytes>
+    <leakedblocks>5</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2B6CD</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>malloc</fn>
+    </frame>
+    <frame>
+      <ip>0x62D0769</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D118D</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D30B1</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D373C</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D3240</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D37E5</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D6984</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+      <fn>snd_config_update_r</fn>
+    </frame>
+    <frame>
+      <ip>0x62D6E91</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+      <fn>snd_config_update</fn>
+    </frame>
+    <frame>
+      <ip>0x62F3762</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+      <fn>snd_pcm_open</fn>
+    </frame>
+    <frame>
+      <ip>0x4EE4351</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
+    </frame>
+    <frame>
+      <ip>0x4E4F7B6</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x14</unique>
+  <tid>1</tid>
+  <kind>Leak_PossiblyLost</kind>
+  <xwhat>
+    <text>30 bytes in 3 blocks are possibly lost in loss record 19 of 73</text>
     <leakedbytes>30</leakedbytes>
     <leakedblocks>3</leakedblocks>
   </xwhat>
@@ -725,7 +824,11 @@
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
     <frame>
-      <ip>0x62D35FE</ip>
+      <ip>0x62D32E5</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D373C</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
     <frame>
@@ -733,29 +836,27 @@
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
     <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
       <ip>0x62D37E5</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
     <frame>
-      <ip>0x62D3A0C</ip>
+      <ip>0x62D6984</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+      <fn>snd_config_update_r</fn>
     </frame>
     <frame>
-      <ip>0x62D527D</ip>
+      <ip>0x62D6E91</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_hook_load</fn>
+      <fn>snd_config_update</fn>
+    </frame>
+    <frame>
+      <ip>0x62F3762</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+      <fn>snd_pcm_open</fn>
+    </frame>
+    <frame>
+      <ip>0x4EE4351</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
     </frame>
   </stack>
 </error>
@@ -765,9 +866,9 @@
   <tid>1</tid>
   <kind>Leak_PossiblyLost</kind>
   <xwhat>
-    <text>36 bytes in 18 blocks are possibly lost in loss record 20 of 97</text>
-    <leakedbytes>36</leakedbytes>
-    <leakedblocks>18</leakedblocks>
+    <text>31 bytes in 3 blocks are possibly lost in loss record 20 of 73</text>
+    <leakedbytes>31</leakedbytes>
+    <leakedblocks>3</leakedblocks>
   </xwhat>
   <stack>
     <frame>
@@ -776,15 +877,23 @@
       <fn>malloc</fn>
     </frame>
     <frame>
-      <ip>0x5F70AB1</ip>
-      <obj>/lib/x86_64-linux-gnu/libc-2.15.so</obj>
-      <fn>strdup</fn>
-      <dir>/build/buildd/eglibc-2.15/string</dir>
-      <file>strdup.c</file>
-      <line>43</line>
+      <ip>0x62D0769</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
     <frame>
-      <ip>0x62D359E</ip>
+      <ip>0x62D118D</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D12FB</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D32E5</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D373C</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
     <frame>
@@ -792,47 +901,96 @@
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
     <frame>
-      <ip>0x62D34D4</ip>
+      <ip>0x62D373C</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
     <frame>
-      <ip>0x62D34D4</ip>
+      <ip>0x62D3240</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
     <frame>
-      <ip>0x62D34D4</ip>
+      <ip>0x62D373C</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
     <frame>
-      <ip>0x62D34D4</ip>
+      <ip>0x62D3240</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
     <frame>
       <ip>0x62D37E5</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x18</unique>
+  <tid>1</tid>
+  <kind>Leak_PossiblyLost</kind>
+  <xwhat>
+    <text>34 bytes in 3 blocks are possibly lost in loss record 23 of 73</text>
+    <leakedbytes>34</leakedbytes>
+    <leakedblocks>3</leakedblocks>
+  </xwhat>
+  <stack>
     <frame>
-      <ip>0x62D3A0C</ip>
+      <ip>0x4C2B6CD</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>malloc</fn>
+    </frame>
+    <frame>
+      <ip>0x62D0769</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
     <frame>
-      <ip>0x62D527D</ip>
+      <ip>0x62D0E9E</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_hook_load</fn>
     </frame>
     <frame>
-      <ip>0x62D5EBC</ip>
+      <ip>0x62D124C</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D12FB</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D35FE</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D3240</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D373C</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D3240</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D373C</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D3240</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D37E5</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
   </stack>
 </error>
 
 <error>
-  <unique>0x16</unique>
+  <unique>0x19</unique>
   <tid>1</tid>
   <kind>Leak_PossiblyLost</kind>
   <xwhat>
-    <text>37 bytes in 1 blocks are possibly lost in loss record 21 of 97</text>
+    <text>37 bytes in 1 blocks are possibly lost in loss record 24 of 73</text>
     <leakedbytes>37</leakedbytes>
     <leakedblocks>1</leakedblocks>
   </xwhat>
@@ -893,11 +1051,74 @@
 </error>
 
 <error>
-  <unique>0x1a</unique>
+  <unique>0x1d</unique>
   <tid>1</tid>
   <kind>Leak_PossiblyLost</kind>
   <xwhat>
-    <text>56 bytes in 28 blocks are possibly lost in loss record 25 of 97</text>
+    <text>56 bytes in 1 blocks are possibly lost in loss record 28 of 73</text>
+    <leakedbytes>56</leakedbytes>
+    <leakedblocks>1</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2B6CD</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>malloc</fn>
+    </frame>
+    <frame>
+      <ip>0x62DA787</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62F15C1</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62F1BBF</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x4EE4351</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
+    </frame>
+    <frame>
+      <ip>0x4E4F7B6</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
+    </frame>
+    <frame>
+      <ip>0x4E4FF23</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
+    </frame>
+    <frame>
+      <ip>0x55794AB</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2_mixer-2.0.so.0.0.0</obj>
+      <fn>Mix_OpenAudio</fn>
+    </frame>
+    <frame>
+      <ip>0x424CF7</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/build/src/sdl2-engine_exec</obj>
+      <fn>sdl::Initialize()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/core</dir>
+      <file>SDL_Systems.cpp</file>
+      <line>172</line>
+    </frame>
+    <frame>
+      <ip>0x4230C0</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/build/src/sdl2-engine_exec</obj>
+      <fn>main</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src</dir>
+      <file>main.cpp</file>
+      <line>16</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x1e</unique>
+  <tid>1</tid>
+  <kind>Leak_PossiblyLost</kind>
+  <xwhat>
+    <text>56 bytes in 28 blocks are possibly lost in loss record 29 of 73</text>
     <leakedbytes>56</leakedbytes>
     <leakedblocks>28</leakedblocks>
   </xwhat>
@@ -962,456 +1183,11 @@
 </error>
 
 <error>
-  <unique>0x1b</unique>
-  <tid>1</tid>
-  <kind>Leak_PossiblyLost</kind>
-  <xwhat>
-    <text>61 bytes in 11 blocks are possibly lost in loss record 26 of 97</text>
-    <leakedbytes>61</leakedbytes>
-    <leakedblocks>11</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4C2B6CD</ip>
-      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>malloc</fn>
-    </frame>
-    <frame>
-      <ip>0x62D0769</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D118D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D12FB</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D35FE</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3240</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D37E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3A0C</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D527D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_hook_load</fn>
-    </frame>
-    <frame>
-      <ip>0x62D5EBC</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D64C3</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_searcha_hooks</fn>
-    </frame>
-  </stack>
-</error>
-
-<error>
-  <unique>0x1c</unique>
-  <tid>1</tid>
-  <kind>Leak_PossiblyLost</kind>
-  <xwhat>
-    <text>66 bytes in 12 blocks are possibly lost in loss record 27 of 97</text>
-    <leakedbytes>66</leakedbytes>
-    <leakedblocks>12</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4C2B6CD</ip>
-      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>malloc</fn>
-    </frame>
-    <frame>
-      <ip>0x62D0769</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D118D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D30B1</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D373C</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3240</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D37E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3A0C</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-  </stack>
-</error>
-
-<error>
-  <unique>0x1e</unique>
-  <tid>1</tid>
-  <kind>Leak_PossiblyLost</kind>
-  <xwhat>
-    <text>72 bytes in 1 blocks are possibly lost in loss record 29 of 97</text>
-    <leakedbytes>72</leakedbytes>
-    <leakedblocks>1</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4C29DB4</ip>
-      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>calloc</fn>
-    </frame>
-    <frame>
-      <ip>0x62D07E3</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D08AE</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3198</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D37E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3A0C</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D527D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_hook_load</fn>
-    </frame>
-    <frame>
-      <ip>0x62D5EBC</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D64C3</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_searcha_hooks</fn>
-    </frame>
-    <frame>
-      <ip>0x62D6714</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D57A1</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_search_definition</fn>
-    </frame>
-    <frame>
-      <ip>0x62F1B29</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-  </stack>
-</error>
-
-<error>
-  <unique>0x1f</unique>
-  <tid>1</tid>
-  <kind>Leak_PossiblyLost</kind>
-  <xwhat>
-    <text>72 bytes in 1 blocks are possibly lost in loss record 30 of 97</text>
-    <leakedbytes>72</leakedbytes>
-    <leakedblocks>1</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4C29DB4</ip>
-      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>calloc</fn>
-    </frame>
-    <frame>
-      <ip>0x62D07E3</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D08AE</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3198</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D37E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3A0C</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D527D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_hook_load</fn>
-    </frame>
-    <frame>
-      <ip>0x62D5EBC</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D64C3</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_searcha_hooks</fn>
-    </frame>
-    <frame>
-      <ip>0x62D6714</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D57A1</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_search_definition</fn>
-    </frame>
-  </stack>
-</error>
-
-<error>
-  <unique>0x20</unique>
-  <tid>1</tid>
-  <kind>Leak_PossiblyLost</kind>
-  <xwhat>
-    <text>72 bytes in 1 blocks are possibly lost in loss record 31 of 97</text>
-    <leakedbytes>72</leakedbytes>
-    <leakedblocks>1</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4C29DB4</ip>
-      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>calloc</fn>
-    </frame>
-    <frame>
-      <ip>0x62D07E3</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D08AE</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D36D6</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3240</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D37E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3A0C</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D527D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_hook_load</fn>
-    </frame>
-    <frame>
-      <ip>0x62D5EBC</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-  </stack>
-</error>
-
-<error>
   <unique>0x21</unique>
   <tid>1</tid>
   <kind>Leak_PossiblyLost</kind>
   <xwhat>
-    <text>75 bytes in 10 blocks are possibly lost in loss record 32 of 97</text>
-    <leakedbytes>75</leakedbytes>
-    <leakedblocks>10</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4C2B6CD</ip>
-      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>malloc</fn>
-    </frame>
-    <frame>
-      <ip>0x62D0769</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D118D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D12FB</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D32E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D37E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3A0C</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D527D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_hook_load</fn>
-    </frame>
-  </stack>
-</error>
-
-<error>
-  <unique>0x22</unique>
-  <tid>1</tid>
-  <kind>Leak_PossiblyLost</kind>
-  <xwhat>
-    <text>79 bytes in 3 blocks are possibly lost in loss record 33 of 97</text>
-    <leakedbytes>79</leakedbytes>
-    <leakedblocks>3</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4C2B6CD</ip>
-      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>malloc</fn>
-    </frame>
-    <frame>
-      <ip>0x62D0769</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D0E9E</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D124C</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D12FB</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D32E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D37E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3A0C</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D527D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_hook_load</fn>
-    </frame>
-    <frame>
-      <ip>0x62D5EBC</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-  </stack>
-</error>
-
-<error>
-  <unique>0x24</unique>
-  <tid>1</tid>
-  <kind>Leak_PossiblyLost</kind>
-  <xwhat>
-    <text>99 bytes in 18 blocks are possibly lost in loss record 35 of 97</text>
+    <text>99 bytes in 18 blocks are possibly lost in loss record 32 of 73</text>
     <leakedbytes>99</leakedbytes>
     <leakedblocks>18</leakedblocks>
   </xwhat>
@@ -1472,136 +1248,11 @@
 </error>
 
 <error>
-  <unique>0x25</unique>
+  <unique>0x22</unique>
   <tid>1</tid>
   <kind>Leak_PossiblyLost</kind>
   <xwhat>
-    <text>105 bytes in 16 blocks are possibly lost in loss record 36 of 97</text>
-    <leakedbytes>105</leakedbytes>
-    <leakedblocks>16</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4C2B6CD</ip>
-      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>malloc</fn>
-    </frame>
-    <frame>
-      <ip>0x62D0769</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D118D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D30B1</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D37E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3A0C</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D527D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_hook_load</fn>
-    </frame>
-    <frame>
-      <ip>0x62D5EBC</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-  </stack>
-</error>
-
-<error>
-  <unique>0x26</unique>
-  <tid>1</tid>
-  <kind>Leak_PossiblyLost</kind>
-  <xwhat>
-    <text>108 bytes in 12 blocks are possibly lost in loss record 37 of 97</text>
-    <leakedbytes>108</leakedbytes>
-    <leakedblocks>12</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4C2B6CD</ip>
-      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>malloc</fn>
-    </frame>
-    <frame>
-      <ip>0x62D0769</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D118D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D12FB</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D32E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D373C</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3240</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D37E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-  </stack>
-</error>
-
-<error>
-  <unique>0x27</unique>
-  <tid>1</tid>
-  <kind>Leak_PossiblyLost</kind>
-  <xwhat>
-    <text>116 bytes in 8 blocks are possibly lost in loss record 38 of 97</text>
+    <text>116 bytes in 8 blocks are possibly lost in loss record 33 of 73</text>
     <leakedbytes>116</leakedbytes>
     <leakedblocks>8</leakedblocks>
   </xwhat>
@@ -1662,11 +1313,335 @@
 </error>
 
 <error>
+  <unique>0x23</unique>
+  <tid>1</tid>
+  <kind>Leak_PossiblyLost</kind>
+  <xwhat>
+    <text>144 bytes in 2 blocks are possibly lost in loss record 34 of 73</text>
+    <leakedbytes>144</leakedbytes>
+    <leakedblocks>2</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4C29DB4</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>calloc</fn>
+    </frame>
+    <frame>
+      <ip>0x62D07E3</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D08AE</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D36D6</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D3240</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D37E5</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D6984</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+      <fn>snd_config_update_r</fn>
+    </frame>
+    <frame>
+      <ip>0x62D6E91</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+      <fn>snd_config_update</fn>
+    </frame>
+    <frame>
+      <ip>0x62F3762</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+      <fn>snd_pcm_open</fn>
+    </frame>
+    <frame>
+      <ip>0x4EE4351</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
+    </frame>
+    <frame>
+      <ip>0x4E4F7B6</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
+    </frame>
+    <frame>
+      <ip>0x4E4FF23</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x24</unique>
+  <tid>1</tid>
+  <kind>Leak_PossiblyLost</kind>
+  <xwhat>
+    <text>144 bytes in 2 blocks are possibly lost in loss record 35 of 73</text>
+    <leakedbytes>144</leakedbytes>
+    <leakedblocks>2</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4C29DB4</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>calloc</fn>
+    </frame>
+    <frame>
+      <ip>0x62D07E3</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D08AE</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D321D</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D373C</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D3240</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D37E5</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D6984</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+      <fn>snd_config_update_r</fn>
+    </frame>
+    <frame>
+      <ip>0x62D6E91</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+      <fn>snd_config_update</fn>
+    </frame>
+    <frame>
+      <ip>0x62F3762</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+      <fn>snd_pcm_open</fn>
+    </frame>
+    <frame>
+      <ip>0x4EE4351</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
+    </frame>
+    <frame>
+      <ip>0x4E4F7B6</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x25</unique>
+  <tid>1</tid>
+  <kind>Leak_PossiblyLost</kind>
+  <xwhat>
+    <text>144 bytes in 2 blocks are possibly lost in loss record 36 of 73</text>
+    <leakedbytes>144</leakedbytes>
+    <leakedblocks>2</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4C29DB4</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>calloc</fn>
+    </frame>
+    <frame>
+      <ip>0x62D07E3</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D08AE</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D36D6</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D3240</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D373C</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D3240</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D37E5</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D6984</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+      <fn>snd_config_update_r</fn>
+    </frame>
+    <frame>
+      <ip>0x62D6E91</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+      <fn>snd_config_update</fn>
+    </frame>
+    <frame>
+      <ip>0x62F3762</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+      <fn>snd_pcm_open</fn>
+    </frame>
+    <frame>
+      <ip>0x4EE4351</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x26</unique>
+  <tid>1</tid>
+  <kind>Leak_PossiblyLost</kind>
+  <xwhat>
+    <text>144 bytes in 2 blocks are possibly lost in loss record 37 of 73</text>
+    <leakedbytes>144</leakedbytes>
+    <leakedblocks>2</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4C29DB4</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>calloc</fn>
+    </frame>
+    <frame>
+      <ip>0x62D07E3</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D08AE</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D13FA</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D32E5</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D373C</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D3240</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D373C</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D3240</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D37E5</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D6984</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+      <fn>snd_config_update_r</fn>
+    </frame>
+    <frame>
+      <ip>0x62D6E91</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+      <fn>snd_config_update</fn>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x27</unique>
+  <tid>1</tid>
+  <kind>Leak_PossiblyLost</kind>
+  <xwhat>
+    <text>144 bytes in 2 blocks are possibly lost in loss record 38 of 73</text>
+    <leakedbytes>144</leakedbytes>
+    <leakedblocks>2</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4C29DB4</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>calloc</fn>
+    </frame>
+    <frame>
+      <ip>0x62D07E3</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D08AE</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D321D</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D373C</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D3240</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D373C</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D3240</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D37E5</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D6984</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+      <fn>snd_config_update_r</fn>
+    </frame>
+    <frame>
+      <ip>0x62D6E91</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+      <fn>snd_config_update</fn>
+    </frame>
+    <frame>
+      <ip>0x62F3762</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+      <fn>snd_pcm_open</fn>
+    </frame>
+  </stack>
+</error>
+
+<error>
   <unique>0x28</unique>
   <tid>1</tid>
   <kind>Leak_PossiblyLost</kind>
   <xwhat>
-    <text>144 bytes in 2 blocks are possibly lost in loss record 39 of 97</text>
+    <text>144 bytes in 2 blocks are possibly lost in loss record 39 of 73</text>
     <leakedbytes>144</leakedbytes>
     <leakedblocks>2</leakedblocks>
   </xwhat>
@@ -1731,197 +1706,7 @@
   <tid>1</tid>
   <kind>Leak_PossiblyLost</kind>
   <xwhat>
-    <text>144 bytes in 2 blocks are possibly lost in loss record 40 of 97</text>
-    <leakedbytes>144</leakedbytes>
-    <leakedblocks>2</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4C29DB4</ip>
-      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>calloc</fn>
-    </frame>
-    <frame>
-      <ip>0x62D07E3</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D08AE</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D13FA</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D32E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D373C</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3240</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D37E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3A0C</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-  </stack>
-</error>
-
-<error>
-  <unique>0x2a</unique>
-  <tid>1</tid>
-  <kind>Leak_PossiblyLost</kind>
-  <xwhat>
-    <text>144 bytes in 2 blocks are possibly lost in loss record 41 of 97</text>
-    <leakedbytes>144</leakedbytes>
-    <leakedblocks>2</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4C29DB4</ip>
-      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>calloc</fn>
-    </frame>
-    <frame>
-      <ip>0x62D07E3</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D08AE</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3198</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D37E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3A0C</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D527D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_hook_load</fn>
-    </frame>
-    <frame>
-      <ip>0x62D5EBC</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D64C3</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_searcha_hooks</fn>
-    </frame>
-  </stack>
-</error>
-
-<error>
-  <unique>0x2b</unique>
-  <tid>1</tid>
-  <kind>Leak_PossiblyLost</kind>
-  <xwhat>
-    <text>144 bytes in 2 blocks are possibly lost in loss record 42 of 97</text>
-    <leakedbytes>144</leakedbytes>
-    <leakedblocks>2</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4C29DB4</ip>
-      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>calloc</fn>
-    </frame>
-    <frame>
-      <ip>0x62D07E3</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D08AE</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D14C2</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D32E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D37E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3A0C</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D527D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_hook_load</fn>
-    </frame>
-    <frame>
-      <ip>0x62D5EBC</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D64C3</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_searcha_hooks</fn>
-    </frame>
-  </stack>
-</error>
-
-<error>
-  <unique>0x2c</unique>
-  <tid>1</tid>
-  <kind>Leak_PossiblyLost</kind>
-  <xwhat>
-    <text>155 bytes in 28 blocks are possibly lost in loss record 43 of 97</text>
+    <text>155 bytes in 28 blocks are possibly lost in loss record 40 of 73</text>
     <leakedbytes>155</leakedbytes>
     <leakedblocks>28</leakedblocks>
   </xwhat>
@@ -1982,138 +1767,11 @@
 </error>
 
 <error>
-  <unique>0x2d</unique>
+  <unique>0x2a</unique>
   <tid>1</tid>
   <kind>Leak_PossiblyLost</kind>
   <xwhat>
-    <text>169 bytes in 12 blocks are possibly lost in loss record 44 of 97</text>
-    <leakedbytes>169</leakedbytes>
-    <leakedblocks>12</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4C2B6CD</ip>
-      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>malloc</fn>
-    </frame>
-    <frame>
-      <ip>0x62D0769</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D0E9E</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D124C</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D12FB</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D35FE</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3240</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D37E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-  </stack>
-</error>
-
-<error>
-  <unique>0x2e</unique>
-  <tid>1</tid>
-  <kind>Leak_PossiblyLost</kind>
-  <xwhat>
-    <text>181 bytes in 30 blocks are possibly lost in loss record 45 of 97</text>
-    <leakedbytes>181</leakedbytes>
-    <leakedblocks>30</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4C2B6CD</ip>
-      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>malloc</fn>
-    </frame>
-    <frame>
-      <ip>0x62D0769</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D118D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D30B1</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D37E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3A0C</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D527D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_hook_load</fn>
-    </frame>
-    <frame>
-      <ip>0x62D5EBC</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D64C3</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_searcha_hooks</fn>
-    </frame>
-    <frame>
-      <ip>0x62D6714</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D57A1</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_search_definition</fn>
-    </frame>
-  </stack>
-</error>
-
-<error>
-  <unique>0x2f</unique>
-  <tid>1</tid>
-  <kind>Leak_PossiblyLost</kind>
-  <xwhat>
-    <text>188 bytes in 4 blocks are possibly lost in loss record 46 of 97</text>
+    <text>188 bytes in 4 blocks are possibly lost in loss record 41 of 73</text>
     <leakedbytes>188</leakedbytes>
     <leakedblocks>4</leakedblocks>
   </xwhat>
@@ -2174,11 +1832,11 @@
 </error>
 
 <error>
-  <unique>0x30</unique>
+  <unique>0x2b</unique>
   <tid>1</tid>
   <kind>Leak_PossiblyLost</kind>
   <xwhat>
-    <text>196 bytes in 14 blocks are possibly lost in loss record 47 of 97</text>
+    <text>196 bytes in 14 blocks are possibly lost in loss record 42 of 73</text>
     <leakedbytes>196</leakedbytes>
     <leakedblocks>14</leakedblocks>
   </xwhat>
@@ -2238,76 +1896,11 @@
 </error>
 
 <error>
-  <unique>0x31</unique>
+  <unique>0x2c</unique>
   <tid>1</tid>
   <kind>Leak_PossiblyLost</kind>
   <xwhat>
-    <text>216 bytes in 3 blocks are possibly lost in loss record 48 of 97</text>
-    <leakedbytes>216</leakedbytes>
-    <leakedblocks>3</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4C29DB4</ip>
-      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>calloc</fn>
-    </frame>
-    <frame>
-      <ip>0x62D07E3</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D08AE</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D321D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D37E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3A0C</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D527D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_hook_load</fn>
-    </frame>
-    <frame>
-      <ip>0x62D5EBC</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D64C3</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_searcha_hooks</fn>
-    </frame>
-    <frame>
-      <ip>0x62D6714</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D57A1</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_search_definition</fn>
-    </frame>
-    <frame>
-      <ip>0x62F1B29</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-  </stack>
-</error>
-
-<error>
-  <unique>0x32</unique>
-  <tid>1</tid>
-  <kind>Leak_PossiblyLost</kind>
-  <xwhat>
-    <text>216 bytes in 3 blocks are possibly lost in loss record 49 of 97</text>
+    <text>216 bytes in 3 blocks are possibly lost in loss record 43 of 73</text>
     <leakedbytes>216</leakedbytes>
     <leakedblocks>3</leakedblocks>
   </xwhat>
@@ -2334,7 +1927,11 @@
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
     <frame>
-      <ip>0x62D34D4</ip>
+      <ip>0x62D373C</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D3240</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
     <frame>
@@ -2342,36 +1939,222 @@
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
     <frame>
-      <ip>0x62D3A0C</ip>
+      <ip>0x62D6984</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+      <fn>snd_config_update_r</fn>
+    </frame>
+    <frame>
+      <ip>0x62D6E91</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+      <fn>snd_config_update</fn>
+    </frame>
+    <frame>
+      <ip>0x62F3762</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+      <fn>snd_pcm_open</fn>
+    </frame>
+    <frame>
+      <ip>0x4EE4351</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x2d</unique>
+  <tid>1</tid>
+  <kind>Leak_PossiblyLost</kind>
+  <xwhat>
+    <text>216 bytes in 3 blocks are possibly lost in loss record 44 of 73</text>
+    <leakedbytes>216</leakedbytes>
+    <leakedblocks>3</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4C29DB4</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>calloc</fn>
+    </frame>
+    <frame>
+      <ip>0x62D07E3</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
     <frame>
-      <ip>0x62D527D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_hook_load</fn>
-    </frame>
-    <frame>
-      <ip>0x62D5EBC</ip>
+      <ip>0x62D08AE</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
     <frame>
-      <ip>0x62D64C3</ip>
+      <ip>0x62D36D6</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_searcha_hooks</fn>
     </frame>
     <frame>
-      <ip>0x62D6714</ip>
+      <ip>0x62D3240</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D373C</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D3240</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D373C</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D3240</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D37E5</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D6984</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+      <fn>snd_config_update_r</fn>
+    </frame>
+    <frame>
+      <ip>0x62D6E91</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+      <fn>snd_config_update</fn>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x2e</unique>
+  <tid>1</tid>
+  <kind>Leak_PossiblyLost</kind>
+  <xwhat>
+    <text>216 bytes in 3 blocks are possibly lost in loss record 45 of 73</text>
+    <leakedbytes>216</leakedbytes>
+    <leakedblocks>3</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4C29DB4</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>calloc</fn>
+    </frame>
+    <frame>
+      <ip>0x62D07E3</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D08AE</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D13FA</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D32E5</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D373C</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D3240</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D373C</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D3240</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D373C</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D3240</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D37E5</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
   </stack>
 </error>
 
 <error>
-  <unique>0x33</unique>
+  <unique>0x2f</unique>
   <tid>1</tid>
   <kind>Leak_PossiblyLost</kind>
   <xwhat>
-    <text>236 bytes in 18 blocks are possibly lost in loss record 50 of 97</text>
+    <text>216 bytes in 3 blocks are possibly lost in loss record 46 of 73</text>
+    <leakedbytes>216</leakedbytes>
+    <leakedblocks>3</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4C29DB4</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>calloc</fn>
+    </frame>
+    <frame>
+      <ip>0x62D07E3</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D08AE</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D13FA</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D35FE</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D3240</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D373C</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D3240</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D373C</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D3240</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D37E5</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+    </frame>
+    <frame>
+      <ip>0x62D6984</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+      <fn>snd_config_update_r</fn>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x30</unique>
+  <tid>1</tid>
+  <kind>Leak_PossiblyLost</kind>
+  <xwhat>
+    <text>236 bytes in 18 blocks are possibly lost in loss record 47 of 73</text>
     <leakedbytes>236</leakedbytes>
     <leakedblocks>18</leakedblocks>
   </xwhat>
@@ -2431,11 +2214,11 @@
 </error>
 
 <error>
-  <unique>0x34</unique>
+  <unique>0x31</unique>
   <tid>1</tid>
   <kind>Leak_PossiblyLost</kind>
   <xwhat>
-    <text>249 bytes in 47 blocks are possibly lost in loss record 51 of 97</text>
+    <text>249 bytes in 47 blocks are possibly lost in loss record 48 of 73</text>
     <leakedbytes>249</leakedbytes>
     <leakedblocks>47</leakedblocks>
   </xwhat>
@@ -2496,205 +2279,11 @@
 </error>
 
 <error>
-  <unique>0x35</unique>
+  <unique>0x32</unique>
   <tid>1</tid>
   <kind>Leak_PossiblyLost</kind>
   <xwhat>
-    <text>269 bytes in 24 blocks are possibly lost in loss record 52 of 97</text>
-    <leakedbytes>269</leakedbytes>
-    <leakedblocks>24</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4C2B6CD</ip>
-      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>malloc</fn>
-    </frame>
-    <frame>
-      <ip>0x62D0769</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D0E9E</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D124C</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D30B1</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D37E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3A0C</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D527D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_hook_load</fn>
-    </frame>
-    <frame>
-      <ip>0x62D5EBC</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D64C3</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_searcha_hooks</fn>
-    </frame>
-    <frame>
-      <ip>0x62D6714</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D57A1</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_search_definition</fn>
-    </frame>
-  </stack>
-</error>
-
-<error>
-  <unique>0x36</unique>
-  <tid>1</tid>
-  <kind>Leak_PossiblyLost</kind>
-  <xwhat>
-    <text>283 bytes in 33 blocks are possibly lost in loss record 53 of 97</text>
-    <leakedbytes>283</leakedbytes>
-    <leakedblocks>33</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4C2B6CD</ip>
-      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>malloc</fn>
-    </frame>
-    <frame>
-      <ip>0x62D0769</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D118D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D30B1</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D37E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3A0C</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D527D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_hook_load</fn>
-    </frame>
-    <frame>
-      <ip>0x62D5EBC</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D64C3</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_searcha_hooks</fn>
-    </frame>
-    <frame>
-      <ip>0x62D6714</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D57A1</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_search_definition</fn>
-    </frame>
-    <frame>
-      <ip>0x62F1B29</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-  </stack>
-</error>
-
-<error>
-  <unique>0x37</unique>
-  <tid>1</tid>
-  <kind>Leak_PossiblyLost</kind>
-  <xwhat>
-    <text>291 bytes in 30 blocks are possibly lost in loss record 54 of 97</text>
-    <leakedbytes>291</leakedbytes>
-    <leakedblocks>30</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4C2B6CD</ip>
-      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>malloc</fn>
-    </frame>
-    <frame>
-      <ip>0x62D0769</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D118D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D12FB</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D32E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D37E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3A0C</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D527D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_hook_load</fn>
-    </frame>
-    <frame>
-      <ip>0x62D5EBC</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D64C3</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_searcha_hooks</fn>
-    </frame>
-  </stack>
-</error>
-
-<error>
-  <unique>0x38</unique>
-  <tid>1</tid>
-  <kind>Leak_PossiblyLost</kind>
-  <xwhat>
-    <text>358 bytes in 61 blocks are possibly lost in loss record 55 of 97</text>
+    <text>358 bytes in 61 blocks are possibly lost in loss record 49 of 73</text>
     <leakedbytes>358</leakedbytes>
     <leakedblocks>61</leakedblocks>
   </xwhat>
@@ -2755,11 +2344,11 @@
 </error>
 
 <error>
-  <unique>0x39</unique>
+  <unique>0x33</unique>
   <tid>1</tid>
   <kind>Leak_PossiblyLost</kind>
   <xwhat>
-    <text>360 bytes in 5 blocks are possibly lost in loss record 56 of 97</text>
+    <text>360 bytes in 5 blocks are possibly lost in loss record 50 of 73</text>
     <leakedbytes>360</leakedbytes>
     <leakedblocks>5</leakedblocks>
   </xwhat>
@@ -2820,391 +2409,11 @@
 </error>
 
 <error>
-  <unique>0x3a</unique>
+  <unique>0x34</unique>
   <tid>1</tid>
   <kind>Leak_PossiblyLost</kind>
   <xwhat>
-    <text>360 bytes in 5 blocks are possibly lost in loss record 57 of 97</text>
-    <leakedbytes>360</leakedbytes>
-    <leakedblocks>5</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4C29DB4</ip>
-      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>calloc</fn>
-    </frame>
-    <frame>
-      <ip>0x62D07E3</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D08AE</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D13FA</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D35FE</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3240</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D37E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3A0C</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D527D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_hook_load</fn>
-    </frame>
-  </stack>
-</error>
-
-<error>
-  <unique>0x3b</unique>
-  <tid>1</tid>
-  <kind>Leak_PossiblyLost</kind>
-  <xwhat>
-    <text>360 bytes in 60 blocks are possibly lost in loss record 58 of 97</text>
-    <leakedbytes>360</leakedbytes>
-    <leakedblocks>60</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4C2B6CD</ip>
-      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>malloc</fn>
-    </frame>
-    <frame>
-      <ip>0x62D0769</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D118D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D30B1</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D37E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3A0C</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D527D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_hook_load</fn>
-    </frame>
-    <frame>
-      <ip>0x62D5EBC</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D64C3</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_searcha_hooks</fn>
-    </frame>
-  </stack>
-</error>
-
-<error>
-  <unique>0x3c</unique>
-  <tid>1</tid>
-  <kind>Leak_PossiblyLost</kind>
-  <xwhat>
-    <text>411 bytes in 58 blocks are possibly lost in loss record 59 of 97</text>
-    <leakedbytes>411</leakedbytes>
-    <leakedblocks>58</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4C2B6CD</ip>
-      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>malloc</fn>
-    </frame>
-    <frame>
-      <ip>0x62D0769</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D118D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D30B1</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D37E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3A0C</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D527D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_hook_load</fn>
-    </frame>
-    <frame>
-      <ip>0x62D5EBC</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D64C3</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_searcha_hooks</fn>
-    </frame>
-    <frame>
-      <ip>0x62D6714</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-  </stack>
-</error>
-
-<error>
-  <unique>0x3d</unique>
-  <tid>1</tid>
-  <kind>Leak_PossiblyLost</kind>
-  <xwhat>
-    <text>432 bytes in 6 blocks are possibly lost in loss record 60 of 97</text>
-    <leakedbytes>432</leakedbytes>
-    <leakedblocks>6</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4C29DB4</ip>
-      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>calloc</fn>
-    </frame>
-    <frame>
-      <ip>0x62D07E3</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D08AE</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D321D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D37E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3A0C</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D527D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_hook_load</fn>
-    </frame>
-    <frame>
-      <ip>0x62D5EBC</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-  </stack>
-</error>
-
-<error>
-  <unique>0x3e</unique>
-  <tid>1</tid>
-  <kind>Leak_PossiblyLost</kind>
-  <xwhat>
-    <text>432 bytes in 6 blocks are possibly lost in loss record 61 of 97</text>
-    <leakedbytes>432</leakedbytes>
-    <leakedblocks>6</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4C29DB4</ip>
-      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>calloc</fn>
-    </frame>
-    <frame>
-      <ip>0x62D07E3</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D08AE</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D36D6</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3240</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D37E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3A0C</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D527D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_hook_load</fn>
-    </frame>
-  </stack>
-</error>
-
-<error>
-  <unique>0x3f</unique>
-  <tid>1</tid>
-  <kind>Leak_PossiblyLost</kind>
-  <xwhat>
-    <text>473 bytes in 41 blocks are possibly lost in loss record 62 of 97</text>
-    <leakedbytes>473</leakedbytes>
-    <leakedblocks>41</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4C2B6CD</ip>
-      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>malloc</fn>
-    </frame>
-    <frame>
-      <ip>0x62D0769</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D118D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D12FB</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D32E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D37E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3A0C</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D527D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_hook_load</fn>
-    </frame>
-    <frame>
-      <ip>0x62D5EBC</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-  </stack>
-</error>
-
-<error>
-  <unique>0x40</unique>
-  <tid>1</tid>
-  <kind>Leak_PossiblyLost</kind>
-  <xwhat>
-    <text>477 bytes in 52 blocks are possibly lost in loss record 63 of 97</text>
+    <text>477 bytes in 52 blocks are possibly lost in loss record 51 of 73</text>
     <leakedbytes>477</leakedbytes>
     <leakedblocks>52</leakedblocks>
   </xwhat>
@@ -3265,74 +2474,11 @@
 </error>
 
 <error>
-  <unique>0x41</unique>
+  <unique>0x35</unique>
   <tid>1</tid>
   <kind>Leak_PossiblyLost</kind>
   <xwhat>
-    <text>504 bytes in 7 blocks are possibly lost in loss record 64 of 97</text>
-    <leakedbytes>504</leakedbytes>
-    <leakedblocks>7</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4C29DB4</ip>
-      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>calloc</fn>
-    </frame>
-    <frame>
-      <ip>0x62D07E3</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D08AE</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D14C2</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D32E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D37E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3A0C</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D527D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_hook_load</fn>
-    </frame>
-    <frame>
-      <ip>0x62D5EBC</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-  </stack>
-</error>
-
-<error>
-  <unique>0x42</unique>
-  <tid>1</tid>
-  <kind>Leak_PossiblyLost</kind>
-  <xwhat>
-    <text>559 bytes in 43 blocks are possibly lost in loss record 65 of 97</text>
+    <text>559 bytes in 43 blocks are possibly lost in loss record 52 of 73</text>
     <leakedbytes>559</leakedbytes>
     <leakedblocks>43</leakedblocks>
   </xwhat>
@@ -3393,11 +2539,11 @@
 </error>
 
 <error>
-  <unique>0x43</unique>
+  <unique>0x36</unique>
   <tid>1</tid>
   <kind>Leak_PossiblyLost</kind>
   <xwhat>
-    <text>569 bytes in 89 blocks are possibly lost in loss record 66 of 97</text>
+    <text>569 bytes in 89 blocks are possibly lost in loss record 53 of 73</text>
     <leakedbytes>569</leakedbytes>
     <leakedblocks>89</leakedblocks>
   </xwhat>
@@ -3458,11 +2604,11 @@
 </error>
 
 <error>
-  <unique>0x44</unique>
+  <unique>0x37</unique>
   <tid>1</tid>
   <kind>Leak_PossiblyLost</kind>
   <xwhat>
-    <text>576 bytes in 8 blocks are possibly lost in loss record 67 of 97</text>
+    <text>576 bytes in 8 blocks are possibly lost in loss record 54 of 73</text>
     <leakedbytes>576</leakedbytes>
     <leakedblocks>8</leakedblocks>
   </xwhat>
@@ -3523,11 +2669,11 @@
 </error>
 
 <error>
-  <unique>0x45</unique>
+  <unique>0x38</unique>
   <tid>1</tid>
   <kind>Leak_PossiblyLost</kind>
   <xwhat>
-    <text>639 bytes in 110 blocks are possibly lost in loss record 68 of 97</text>
+    <text>639 bytes in 110 blocks are possibly lost in loss record 55 of 73</text>
     <leakedbytes>639</leakedbytes>
     <leakedblocks>110</leakedblocks>
   </xwhat>
@@ -3588,267 +2734,11 @@
 </error>
 
 <error>
-  <unique>0x46</unique>
+  <unique>0x3a</unique>
   <tid>1</tid>
   <kind>Leak_PossiblyLost</kind>
   <xwhat>
-    <text>708 bytes in 53 blocks are possibly lost in loss record 69 of 97</text>
-    <leakedbytes>708</leakedbytes>
-    <leakedblocks>53</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4C2B6CD</ip>
-      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>malloc</fn>
-    </frame>
-    <frame>
-      <ip>0x62D0769</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D118D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D12FB</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D32E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D37E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3A0C</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D527D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_hook_load</fn>
-    </frame>
-    <frame>
-      <ip>0x62D5EBC</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D64C3</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_searcha_hooks</fn>
-    </frame>
-    <frame>
-      <ip>0x62D6714</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D57A1</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_search_definition</fn>
-    </frame>
-  </stack>
-</error>
-
-<error>
-  <unique>0x47</unique>
-  <tid>1</tid>
-  <kind>Leak_PossiblyLost</kind>
-  <xwhat>
-    <text>720 bytes in 10 blocks are possibly lost in loss record 70 of 97</text>
-    <leakedbytes>720</leakedbytes>
-    <leakedblocks>10</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4C29DB4</ip>
-      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>calloc</fn>
-    </frame>
-    <frame>
-      <ip>0x62D07E3</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D08AE</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D321D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D37E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3A0C</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D527D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_hook_load</fn>
-    </frame>
-    <frame>
-      <ip>0x62D5EBC</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D64C3</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_searcha_hooks</fn>
-    </frame>
-  </stack>
-</error>
-
-<error>
-  <unique>0x48</unique>
-  <tid>1</tid>
-  <kind>Leak_PossiblyLost</kind>
-  <xwhat>
-    <text>720 bytes in 10 blocks are possibly lost in loss record 71 of 97</text>
-    <leakedbytes>720</leakedbytes>
-    <leakedblocks>10</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4C29DB4</ip>
-      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>calloc</fn>
-    </frame>
-    <frame>
-      <ip>0x62D07E3</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D08AE</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D13FA</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D32E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D37E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3A0C</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D527D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_hook_load</fn>
-    </frame>
-  </stack>
-</error>
-
-<error>
-  <unique>0x4a</unique>
-  <tid>1</tid>
-  <kind>Leak_PossiblyLost</kind>
-  <xwhat>
-    <text>792 bytes in 11 blocks are possibly lost in loss record 73 of 97</text>
-    <leakedbytes>792</leakedbytes>
-    <leakedblocks>11</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4C29DB4</ip>
-      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>calloc</fn>
-    </frame>
-    <frame>
-      <ip>0x62D07E3</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D08AE</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D13FA</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D35FE</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3240</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D37E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3A0C</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D527D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_hook_load</fn>
-    </frame>
-    <frame>
-      <ip>0x62D5EBC</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D64C3</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_searcha_hooks</fn>
-    </frame>
-  </stack>
-</error>
-
-<error>
-  <unique>0x4b</unique>
-  <tid>1</tid>
-  <kind>Leak_PossiblyLost</kind>
-  <xwhat>
-    <text>854 bytes in 51 blocks are possibly lost in loss record 74 of 97</text>
+    <text>854 bytes in 51 blocks are possibly lost in loss record 57 of 73</text>
     <leakedbytes>854</leakedbytes>
     <leakedblocks>51</leakedblocks>
   </xwhat>
@@ -3909,13 +2799,13 @@
 </error>
 
 <error>
-  <unique>0x4c</unique>
+  <unique>0x3b</unique>
   <tid>1</tid>
   <kind>Leak_PossiblyLost</kind>
   <xwhat>
-    <text>858 bytes in 123 blocks are possibly lost in loss record 75 of 97</text>
-    <leakedbytes>858</leakedbytes>
-    <leakedblocks>123</leakedblocks>
+    <text>865 bytes in 124 blocks are possibly lost in loss record 58 of 73</text>
+    <leakedbytes>865</leakedbytes>
+    <leakedblocks>124</leakedblocks>
   </xwhat>
   <stack>
     <frame>
@@ -3975,135 +2865,11 @@
 </error>
 
 <error>
-  <unique>0x4d</unique>
+  <unique>0x3c</unique>
   <tid>1</tid>
   <kind>Leak_PossiblyLost</kind>
   <xwhat>
-    <text>864 bytes in 12 blocks are possibly lost in loss record 76 of 97</text>
-    <leakedbytes>864</leakedbytes>
-    <leakedblocks>12</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4C29DB4</ip>
-      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>calloc</fn>
-    </frame>
-    <frame>
-      <ip>0x62D07E3</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D08AE</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D13FA</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D35FE</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3240</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D37E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3A0C</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-  </stack>
-</error>
-
-<error>
-  <unique>0x4e</unique>
-  <tid>1</tid>
-  <kind>Leak_PossiblyLost</kind>
-  <xwhat>
-    <text>864 bytes in 12 blocks are possibly lost in loss record 77 of 97</text>
-    <leakedbytes>864</leakedbytes>
-    <leakedblocks>12</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4C29DB4</ip>
-      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>calloc</fn>
-    </frame>
-    <frame>
-      <ip>0x62D07E3</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D08AE</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D13FA</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D32E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D373C</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3240</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D37E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-  </stack>
-</error>
-
-<error>
-  <unique>0x4f</unique>
-  <tid>1</tid>
-  <kind>Leak_PossiblyLost</kind>
-  <xwhat>
-    <text>1,008 bytes in 14 blocks are possibly lost in loss record 78 of 97</text>
+    <text>1,008 bytes in 14 blocks are possibly lost in loss record 59 of 73</text>
     <leakedbytes>1008</leakedbytes>
     <leakedblocks>14</leakedblocks>
   </xwhat>
@@ -4163,11 +2929,11 @@
 </error>
 
 <error>
-  <unique>0x50</unique>
+  <unique>0x3d</unique>
   <tid>1</tid>
   <kind>Leak_PossiblyLost</kind>
   <xwhat>
-    <text>1,296 bytes in 18 blocks are possibly lost in loss record 79 of 97</text>
+    <text>1,296 bytes in 18 blocks are possibly lost in loss record 60 of 73</text>
     <leakedbytes>1296</leakedbytes>
     <leakedblocks>18</leakedblocks>
   </xwhat>
@@ -4228,11 +2994,11 @@
 </error>
 
 <error>
-  <unique>0x51</unique>
+  <unique>0x3e</unique>
   <tid>1</tid>
   <kind>Leak_PossiblyLost</kind>
   <xwhat>
-    <text>1,296 bytes in 18 blocks are possibly lost in loss record 80 of 97</text>
+    <text>1,296 bytes in 18 blocks are possibly lost in loss record 61 of 73</text>
     <leakedbytes>1296</leakedbytes>
     <leakedblocks>18</leakedblocks>
   </xwhat>
@@ -4292,77 +3058,11 @@
 </error>
 
 <error>
-  <unique>0x52</unique>
+  <unique>0x3f</unique>
   <tid>1</tid>
   <kind>Leak_PossiblyLost</kind>
   <xwhat>
-    <text>1,512 bytes in 21 blocks are possibly lost in loss record 81 of 97</text>
-    <leakedbytes>1512</leakedbytes>
-    <leakedblocks>21</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4C29DB4</ip>
-      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>calloc</fn>
-    </frame>
-    <frame>
-      <ip>0x62D07E3</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D08AE</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D321D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D37E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D6984</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_update_r</fn>
-    </frame>
-    <frame>
-      <ip>0x62D6E91</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_update</fn>
-    </frame>
-    <frame>
-      <ip>0x62F3762</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_pcm_open</fn>
-    </frame>
-    <frame>
-      <ip>0x4EE4351</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
-    </frame>
-    <frame>
-      <ip>0x4E4F7B6</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
-    </frame>
-    <frame>
-      <ip>0x4E4FF23</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
-    </frame>
-    <frame>
-      <ip>0x55794AB</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libSDL2_mixer-2.0.so.0.0.0</obj>
-      <fn>Mix_OpenAudio</fn>
-    </frame>
-  </stack>
-</error>
-
-<error>
-  <unique>0x53</unique>
-  <tid>1</tid>
-  <kind>Leak_PossiblyLost</kind>
-  <xwhat>
-    <text>1,512 bytes in 21 blocks are possibly lost in loss record 82 of 97</text>
+    <text>1,512 bytes in 21 blocks are possibly lost in loss record 62 of 73</text>
     <leakedbytes>1512</leakedbytes>
     <leakedblocks>21</leakedblocks>
   </xwhat>
@@ -4423,13 +3123,13 @@
 </error>
 
 <error>
-  <unique>0x54</unique>
+  <unique>0x40</unique>
   <tid>1</tid>
   <kind>Leak_PossiblyLost</kind>
   <xwhat>
-    <text>1,656 bytes in 23 blocks are possibly lost in loss record 83 of 97</text>
-    <leakedbytes>1656</leakedbytes>
-    <leakedblocks>23</leakedblocks>
+    <text>1,584 bytes in 22 blocks are possibly lost in loss record 63 of 73</text>
+    <leakedbytes>1584</leakedbytes>
+    <leakedblocks>22</leakedblocks>
   </xwhat>
   <stack>
     <frame>
@@ -4450,113 +3150,50 @@
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
     <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
       <ip>0x62D37E5</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
     </frame>
     <frame>
-      <ip>0x62D3A0C</ip>
+      <ip>0x62D6984</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+      <fn>snd_config_update_r</fn>
     </frame>
     <frame>
-      <ip>0x62D527D</ip>
+      <ip>0x62D6E91</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_hook_load</fn>
+      <fn>snd_config_update</fn>
     </frame>
     <frame>
-      <ip>0x62D5EBC</ip>
+      <ip>0x62F3762</ip>
       <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+      <fn>snd_pcm_open</fn>
     </frame>
     <frame>
-      <ip>0x62D64C3</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_searcha_hooks</fn>
+      <ip>0x4EE4351</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
     </frame>
     <frame>
-      <ip>0x62D6714</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
+      <ip>0x4E4F7B6</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
+    </frame>
+    <frame>
+      <ip>0x4E4FF23</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
+    </frame>
+    <frame>
+      <ip>0x55794AB</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2_mixer-2.0.so.0.0.0</obj>
+      <fn>Mix_OpenAudio</fn>
     </frame>
   </stack>
 </error>
 
 <error>
-  <unique>0x55</unique>
+  <unique>0x41</unique>
   <tid>1</tid>
   <kind>Leak_PossiblyLost</kind>
   <xwhat>
-    <text>1,872 bytes in 26 blocks are possibly lost in loss record 84 of 97</text>
-    <leakedbytes>1872</leakedbytes>
-    <leakedblocks>26</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4C29DB4</ip>
-      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>calloc</fn>
-    </frame>
-    <frame>
-      <ip>0x62D07E3</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D08AE</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D321D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D37E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3A0C</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D527D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_hook_load</fn>
-    </frame>
-    <frame>
-      <ip>0x62D5EBC</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D64C3</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_searcha_hooks</fn>
-    </frame>
-    <frame>
-      <ip>0x62D6714</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D57A1</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_search_definition</fn>
-    </frame>
-  </stack>
-</error>
-
-<error>
-  <unique>0x56</unique>
-  <tid>1</tid>
-  <kind>Leak_PossiblyLost</kind>
-  <xwhat>
-    <text>2,016 bytes in 28 blocks are possibly lost in loss record 85 of 97</text>
+    <text>2,016 bytes in 28 blocks are possibly lost in loss record 64 of 73</text>
     <leakedbytes>2016</leakedbytes>
     <leakedblocks>28</leakedblocks>
   </xwhat>
@@ -4618,11 +3255,11 @@
 </error>
 
 <error>
-  <unique>0x57</unique>
+  <unique>0x42</unique>
   <tid>1</tid>
   <kind>Leak_PossiblyLost</kind>
   <xwhat>
-    <text>2,016 bytes in 28 blocks are possibly lost in loss record 86 of 97</text>
+    <text>2,016 bytes in 28 blocks are possibly lost in loss record 65 of 73</text>
     <leakedbytes>2016</leakedbytes>
     <leakedblocks>28</leakedblocks>
   </xwhat>
@@ -4683,11 +3320,11 @@
 </error>
 
 <error>
-  <unique>0x59</unique>
+  <unique>0x44</unique>
   <tid>1</tid>
   <kind>Leak_PossiblyLost</kind>
   <xwhat>
-    <text>2,232 bytes in 31 blocks are possibly lost in loss record 88 of 97</text>
+    <text>2,232 bytes in 31 blocks are possibly lost in loss record 67 of 73</text>
     <leakedbytes>2232</leakedbytes>
     <leakedblocks>31</leakedblocks>
   </xwhat>
@@ -4748,138 +3385,11 @@
 </error>
 
 <error>
-  <unique>0x5a</unique>
+  <unique>0x45</unique>
   <tid>1</tid>
   <kind>Leak_PossiblyLost</kind>
   <xwhat>
-    <text>2,376 bytes in 33 blocks are possibly lost in loss record 89 of 97</text>
-    <leakedbytes>2376</leakedbytes>
-    <leakedblocks>33</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4C29DB4</ip>
-      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>calloc</fn>
-    </frame>
-    <frame>
-      <ip>0x62D07E3</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D08AE</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D13FA</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D32E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D37E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3A0C</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D527D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_hook_load</fn>
-    </frame>
-    <frame>
-      <ip>0x62D5EBC</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D64C3</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_searcha_hooks</fn>
-    </frame>
-  </stack>
-</error>
-
-<error>
-  <unique>0x5b</unique>
-  <tid>1</tid>
-  <kind>Leak_PossiblyLost</kind>
-  <xwhat>
-    <text>2,952 bytes in 41 blocks are possibly lost in loss record 90 of 97</text>
-    <leakedbytes>2952</leakedbytes>
-    <leakedblocks>41</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4C29DB4</ip>
-      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>calloc</fn>
-    </frame>
-    <frame>
-      <ip>0x62D07E3</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D08AE</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D13FA</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D32E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D34D4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D37E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3A0C</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D527D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_hook_load</fn>
-    </frame>
-    <frame>
-      <ip>0x62D5EBC</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-  </stack>
-</error>
-
-<error>
-  <unique>0x5c</unique>
-  <tid>1</tid>
-  <kind>Leak_PossiblyLost</kind>
-  <xwhat>
-    <text>3,096 bytes in 43 blocks are possibly lost in loss record 91 of 97</text>
+    <text>3,096 bytes in 43 blocks are possibly lost in loss record 68 of 73</text>
     <leakedbytes>3096</leakedbytes>
     <leakedblocks>43</leakedblocks>
   </xwhat>
@@ -4940,11 +3450,11 @@
 </error>
 
 <error>
-  <unique>0x5d</unique>
+  <unique>0x46</unique>
   <tid>1</tid>
   <kind>Leak_PossiblyLost</kind>
   <xwhat>
-    <text>3,456 bytes in 48 blocks are possibly lost in loss record 92 of 97</text>
+    <text>3,456 bytes in 48 blocks are possibly lost in loss record 69 of 73</text>
     <leakedbytes>3456</leakedbytes>
     <leakedblocks>48</leakedblocks>
   </xwhat>
@@ -5005,11 +3515,11 @@
 </error>
 
 <error>
-  <unique>0x5e</unique>
+  <unique>0x47</unique>
   <tid>1</tid>
   <kind>Leak_PossiblyLost</kind>
   <xwhat>
-    <text>3,816 bytes in 53 blocks are possibly lost in loss record 93 of 97</text>
+    <text>3,816 bytes in 53 blocks are possibly lost in loss record 70 of 73</text>
     <leakedbytes>3816</leakedbytes>
     <leakedblocks>53</leakedblocks>
   </xwhat>
@@ -5070,76 +3580,11 @@
 </error>
 
 <error>
-  <unique>0x5f</unique>
+  <unique>0x48</unique>
   <tid>1</tid>
   <kind>Leak_PossiblyLost</kind>
   <xwhat>
-    <text>3,816 bytes in 53 blocks are possibly lost in loss record 94 of 97</text>
-    <leakedbytes>3816</leakedbytes>
-    <leakedblocks>53</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4C29DB4</ip>
-      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>calloc</fn>
-    </frame>
-    <frame>
-      <ip>0x62D07E3</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D08AE</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D13FA</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D32E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D37E5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D3A0C</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D527D</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_hook_load</fn>
-    </frame>
-    <frame>
-      <ip>0x62D5EBC</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D64C3</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_searcha_hooks</fn>
-    </frame>
-    <frame>
-      <ip>0x62D6714</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-    </frame>
-    <frame>
-      <ip>0x62D57A1</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0</obj>
-      <fn>snd_config_search_definition</fn>
-    </frame>
-  </stack>
-</error>
-
-<error>
-  <unique>0x60</unique>
-  <tid>1</tid>
-  <kind>Leak_PossiblyLost</kind>
-  <xwhat>
-    <text>4,032 bytes in 56 blocks are possibly lost in loss record 95 of 97</text>
+    <text>4,032 bytes in 56 blocks are possibly lost in loss record 71 of 73</text>
     <leakedbytes>4032</leakedbytes>
     <leakedblocks>56</leakedblocks>
   </xwhat>
@@ -5200,11 +3645,11 @@
 </error>
 
 <error>
-  <unique>0x62</unique>
+  <unique>0x4a</unique>
   <tid>1</tid>
   <kind>Leak_PossiblyLost</kind>
   <xwhat>
-    <text>4,104 bytes in 57 blocks are possibly lost in loss record 97 of 97</text>
+    <text>4,104 bytes in 57 blocks are possibly lost in loss record 73 of 73</text>
     <leakedbytes>4104</leakedbytes>
     <leakedblocks>57</leakedblocks>
   </xwhat>

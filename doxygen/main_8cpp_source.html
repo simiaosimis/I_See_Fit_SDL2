@@ -28,7 +28,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v19</span>
+   &#160;<span id="projectnumber">v20</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -82,9 +82,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <a href="main_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;<a class="code" href="SDL__Systems_8h.html">core/SDL_Systems.h</a>&quot;</span>
-<a name="l00002"></a>00002 <span class="preprocessor">#include &quot;<a class="code" href="Logger_8h.html">core/Logger.h</a>&quot;</span>
-<a name="l00003"></a>00003 <span class="preprocessor">#include &quot;<a class="code" href="Game_8h.html">engine/Game.h</a>&quot;</span>
-<a name="l00004"></a>00004 <span class="preprocessor">#include &quot;<a class="code" href="Configuration_8h.html">util/Configuration.h</a>&quot;</span>
+<a name="l00002"></a>00002 <span class="preprocessor">#include &quot;<a class="code" href="Game_8h.html">engine/Game.h</a>&quot;</span>
+<a name="l00003"></a>00003 <span class="preprocessor">#include &quot;<a class="code" href="Configuration_8h.html">util/Configuration.h</a>&quot;</span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &quot;<a class="code" href="Logger_8h.html">util/Logger.h</a>&quot;</span>
 <a name="l00005"></a>00005 
 <a name="l00006"></a><a class="code" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">00006</a> <span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv) {
 <a name="l00007"></a>00007 
@@ -96,21 +96,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00013"></a>00013 
 <a name="l00014"></a>00014     <a class="code" href="classConfiguration.html#a4637584596d09c48bc816b71d974297d">Configuration::Initialize</a>();
 <a name="l00015"></a>00015 
-<a name="l00016"></a>00016     <span class="keyword">const</span> <span class="keywordtype">bool</span> systemsInitialized = <a class="code" href="namespacesdl.html#a3a90e2da909fa25cc7c570fbe3e25d5f">sdl::Initialize</a>();
+<a name="l00016"></a>00016     <span class="keyword">const</span> <span class="keywordtype">bool</span> k_systems_initialized = <a class="code" href="namespacesdl.html#a3a90e2da909fa25cc7c570fbe3e25d5f" title="The system initializer.">sdl::Initialize</a>();
 <a name="l00017"></a>00017 
-<a name="l00018"></a>00018     <span class="keywordflow">if</span>(systemsInitialized) {
-<a name="l00019"></a>00019         <a class="code" href="classGame.html#ac213e6d3a4e566d901413f62f6408858">Game::instance</a>().<a class="code" href="classGame.html#abc9436a9d18e48c6e1e4fbc4ea879449">runGame</a>();
-<a name="l00020"></a>00020         <span class="keyword">delete</span> &amp;<a class="code" href="classGame.html#ac213e6d3a4e566d901413f62f6408858">Game::instance</a>();
-<a name="l00021"></a>00021     }
-<a name="l00022"></a>00022     <span class="keywordflow">else</span> {
-<a name="l00023"></a>00023         <a class="code" href="namespacelogger.html#ad32b22693bc3b8cadbeee703cf7ff3cd">logger::error</a>() &lt;&lt; <span class="stringliteral">&quot;Systems were not initialized.&quot;</span>;
-<a name="l00024"></a>00024     }
-<a name="l00025"></a>00025 
-<a name="l00026"></a>00026     <a class="code" href="namespacesdl.html#ad191ca5bcfbd36197f6959249e6cbcda">sdl::Close</a>();
-<a name="l00027"></a>00027 
-<a name="l00028"></a>00028     <a class="code" href="namespacelogger.html#a510ae29bbe97c8afd0edb63600b1d59d">logger::debug</a>() &lt;&lt; <span class="stringliteral">&quot;Exiting sdl2-engine...&quot;</span>;
-<a name="l00029"></a>00029     <span class="keywordflow">return</span> 0;
-<a name="l00030"></a>00030 }
+<a name="l00018"></a>00018     <span class="keywordflow">if</span>(k_systems_initialized) {
+<a name="l00019"></a>00019         <a class="code" href="classGame.html#a0b3ad989fe67e72b4b6b2f36a059479a" title="Singleton implementation for Game.">Game::Instance</a>().<a class="code" href="classGame.html#a96341ca5b54d90adc3ecb3bf0bcd2312" title="The main game loop.">Run</a>();
+<a name="l00020"></a>00020     }
+<a name="l00021"></a>00021     <span class="keywordflow">else</span> {
+<a name="l00022"></a>00022         <a class="code" href="namespacelogger.html#ad32b22693bc3b8cadbeee703cf7ff3cd">logger::error</a>() &lt;&lt; <span class="stringliteral">&quot;Systems were not initialized.&quot;</span>;
+<a name="l00023"></a>00023     }
+<a name="l00024"></a>00024 
+<a name="l00025"></a>00025     <a class="code" href="namespacesdl.html#ad191ca5bcfbd36197f6959249e6cbcda" title="Closes all open systems.">sdl::Close</a>();
+<a name="l00026"></a>00026 
+<a name="l00027"></a>00027     <a class="code" href="namespacelogger.html#a510ae29bbe97c8afd0edb63600b1d59d">logger::debug</a>() &lt;&lt; <span class="stringliteral">&quot;Exiting sdl2-engine...&quot;</span>;
+<a name="l00028"></a>00028     <span class="keywordflow">return</span> 0;
+<a name="l00029"></a>00029 }
 </pre></div></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -129,7 +128,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jan 21 2015 21:38:33 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 23 2015 19:20:36 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

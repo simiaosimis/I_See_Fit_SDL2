@@ -28,7 +28,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v19</span>
+   &#160;<span id="projectnumber">v20</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -94,8 +94,8 @@ Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfiguration.html#a4637584596d09c48bc816b71d974297d">Initialize</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfiguration.html#aa55f2fb145dfe12ecc91eb2f76b6e0a8">ResolutionWidth</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfiguration.html#a002ef2d0a384e4d7ff04dd2d16ae3172">ResolutionHeight</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfiguration.html#a17f453dff54e67367127fcf63e72a356">MaxFramerate</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfiguration.html#aa499bb12addd43ff8eacab01ab9e51ea">WindowTitle</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static Uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfiguration.html#a3266940b4436a2b986a93fb4340fde5a">MaxFramerate</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfiguration.html#a2ded611ff08783df927c2b4e97ded543">WindowTitle</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfiguration.html#a87978aa3909e9063f84a27e058018e70">LogicalRenderSize</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfiguration.html#a9531d46997012a878263f8cf8c224da9">CameraDistanceWidth</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfiguration.html#a58fd31a71275e93b38938f194429db27">CameraDistanceHeight</a> ()</td></tr>
@@ -105,8 +105,8 @@ Static Public Member Functions</h2></td></tr>
 Static Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfiguration.html#a5c41945ab9d46d45104e1d47575e2723">m_resolution_width</a> = 192</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfiguration.html#a00d3516781f07b19da8c8019b8919ec8">m_resolution_height</a> = 108</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfiguration.html#aaed1a842192a49f2d08a81347122dab9">m_max_framerate</a> = 0</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfiguration.html#a3655c42a88134d31265bee4470dc8db5">m_window_title</a> = &quot;&quot;</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static Uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfiguration.html#aa135b276e9360d2b9a741135d9bc6c61">m_max_framerate</a> = 0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfiguration.html#a4e386814a51705ed6081593c96ce320f">m_window_title</a> = &quot;&quot;</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfiguration.html#a9f97605a94e90b7b8049e1ceb5e88d65">m_logical_render_size</a> = 0</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfiguration.html#a8b50ddb8d2b322d57a64d72f13ea15de">m_screen_width</a> = 0</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfiguration.html#ab4fe3fe851b7c34eb916409eb3719b3b">m_screen_height</a> = 0</td></tr>
@@ -169,7 +169,7 @@ Static Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 <p>Initializes all the attributes. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000012">Todo:</a></b></dt><dd>Read this information from a configuration file. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Todo:</a></b></dt><dd>Read this information from a configuration file. </dd></dl>
 
 <p>Definition at line <a class="el" href="Configuration_8cpp_source.html#l00017">17</a> of file <a class="el" href="Configuration_8cpp_source.html">Configuration.cpp</a>.</p>
 
@@ -207,18 +207,18 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classConfiguration_a87978aa3909e9063f84a27e058018e70_icgraph.png" border="0" usemap="#classConfiguration_a87978aa3909e9063f84a27e058018e70_icgraph" alt=""/></div>
 <map name="classConfiguration_a87978aa3909e9063f84a27e058018e70_icgraph" id="classConfiguration_a87978aa3909e9063f84a27e058018e70_icgraph">
-<area shape="rect" id="node3" href="classWindow.html#a7a1d09805521f508601c01cb7f851820" title="Window::create" alt="" coords="271,5,383,35"/><area shape="rect" id="node5" href="classWindow.html#aefac177bf15e963dea94b5555140c23d" title="Window::Window" alt="" coords="433,5,556,35"/></map>
+<area shape="rect" id="node3" href="classWindow.html#a83880e5e0aa5681fd748731e9d4d9e8f" title="Creates the Window." alt="" coords="271,5,385,35"/><area shape="rect" id="node5" href="classWindow.html#a74e6087da23d3c24e9fac0245e5ec92c" title="The constructor." alt="" coords="436,5,559,35"/></map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="a17f453dff54e67367127fcf63e72a356"></a><!-- doxytag: member="Configuration::MaxFramerate" ref="a17f453dff54e67367127fcf63e72a356" args="()" -->
+<a class="anchor" id="a3266940b4436a2b986a93fb4340fde5a"></a><!-- doxytag: member="Configuration::MaxFramerate" ref="a3266940b4436a2b986a93fb4340fde5a" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t <a class="el" href="classConfiguration.html#a17f453dff54e67367127fcf63e72a356">Configuration::MaxFramerate</a> </td>
+          <td class="memname">Uint32 <a class="el" href="classConfiguration.html#a3266940b4436a2b986a93fb4340fde5a">Configuration::MaxFramerate</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td><code> [static]</code></td>
@@ -249,15 +249,6 @@ Here is the caller graph for this function:</div>
 
 <p>Definition at line <a class="el" href="Configuration_8cpp_source.html#l00042">42</a> of file <a class="el" href="Configuration_8cpp_source.html">Configuration.cpp</a>.</p>
 
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classConfiguration_a002ef2d0a384e4d7ff04dd2d16ae3172_icgraph.png" border="0" usemap="#classConfiguration_a002ef2d0a384e4d7ff04dd2d16ae3172_icgraph" alt=""/></div>
-<map name="classConfiguration_a002ef2d0a384e4d7ff04dd2d16ae3172_icgraph" id="classConfiguration_a002ef2d0a384e4d7ff04dd2d16ae3172_icgraph">
-<area shape="rect" id="node3" href="classRenderer.html#a96027c5201ec4056ec97f0f396e083fb" title="Renderer::setLogicalSize" alt="" coords="261,5,429,35"/><area shape="rect" id="node5" href="classWindow.html#a7a1d09805521f508601c01cb7f851820" title="Window::create" alt="" coords="479,5,591,35"/><area shape="rect" id="node7" href="classWindow.html#aefac177bf15e963dea94b5555140c23d" title="Window::Window" alt="" coords="641,5,764,35"/></map>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="aa55f2fb145dfe12ecc91eb2f76b6e0a8"></a><!-- doxytag: member="Configuration::ResolutionWidth" ref="aa55f2fb145dfe12ecc91eb2f76b6e0a8" args="()" -->
@@ -276,15 +267,6 @@ Here is the caller graph for this function:</div>
 <dl class="return"><dt><b>Returns:</b></dt><dd>m_resolution_width </dd></dl>
 
 <p>Definition at line <a class="el" href="Configuration_8cpp_source.html#l00038">38</a> of file <a class="el" href="Configuration_8cpp_source.html">Configuration.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classConfiguration_aa55f2fb145dfe12ecc91eb2f76b6e0a8_icgraph.png" border="0" usemap="#classConfiguration_aa55f2fb145dfe12ecc91eb2f76b6e0a8_icgraph" alt=""/></div>
-<map name="classConfiguration_aa55f2fb145dfe12ecc91eb2f76b6e0a8_icgraph" id="classConfiguration_aa55f2fb145dfe12ecc91eb2f76b6e0a8_icgraph">
-<area shape="rect" id="node3" href="classRenderer.html#a96027c5201ec4056ec97f0f396e083fb" title="Renderer::setLogicalSize" alt="" coords="256,5,424,35"/><area shape="rect" id="node5" href="classWindow.html#a7a1d09805521f508601c01cb7f851820" title="Window::create" alt="" coords="473,5,585,35"/><area shape="rect" id="node7" href="classWindow.html#aefac177bf15e963dea94b5555140c23d" title="Window::Window" alt="" coords="636,5,759,35"/></map>
-</div>
-</p>
 
 </div>
 </div>
@@ -310,7 +292,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classConfiguration_ac1b98514305ca2e97e54f9858d891488_icgraph.png" border="0" usemap="#classConfiguration_ac1b98514305ca2e97e54f9858d891488_icgraph" alt=""/></div>
 <map name="classConfiguration_ac1b98514305ca2e97e54f9858d891488_icgraph" id="classConfiguration_ac1b98514305ca2e97e54f9858d891488_icgraph">
-<area shape="rect" id="node3" href="classGame.html#ad59df6562a58a614fda24622d3715b65" title="Game::Game" alt="" coords="241,59,340,88"/><area shape="rect" id="node5" href="classGame.html#ac213e6d3a4e566d901413f62f6408858" title="Game::instance" alt="" coords="389,59,504,88"/><area shape="rect" id="node7" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="611,5,661,35"/><area shape="rect" id="node9" href="classSprite.html#ac82a01b98130b9b1403667059640163b" title="Sprite::render" alt="" coords="587,59,685,88"/><area shape="rect" id="node13" href="classSprite.html#a98bb8afceb93d82270c9e5e7e8f9b49d" title="Sprite::surfaceToTexture" alt="" coords="553,112,719,141"/><area shape="rect" id="node11" href="classText.html#a61dff362532c385dbc0650b397138635" title="Text::render" alt="" coords="783,59,873,88"/><area shape="rect" id="node15" href="classSprite.html#a9ba64ddfcd3f79c45b74ec1c1a16c396" title="Sprite::loadFrom" alt="" coords="769,112,887,141"/><area shape="rect" id="node17" href="classSprite.html#a0c5597fedd9b09878ec8acddca54c2f7" title="Sprite::Sprite" alt="" coords="936,112,1035,141"/></map>
+<area shape="rect" id="node3" href="classWindow.html#a83880e5e0aa5681fd748731e9d4d9e8f" title="Creates the Window." alt="" coords="241,5,356,35"/><area shape="rect" id="node5" href="classWindow.html#a74e6087da23d3c24e9fac0245e5ec92c" title="The constructor." alt="" coords="407,5,529,35"/></map>
 </div>
 </p>
 
@@ -338,18 +320,18 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classConfiguration_a2abd3e10153cffe624981da2eedcd61a_icgraph.png" border="0" usemap="#classConfiguration_a2abd3e10153cffe624981da2eedcd61a_icgraph" alt=""/></div>
 <map name="classConfiguration_a2abd3e10153cffe624981da2eedcd61a_icgraph" id="classConfiguration_a2abd3e10153cffe624981da2eedcd61a_icgraph">
-<area shape="rect" id="node3" href="classGame.html#ad59df6562a58a614fda24622d3715b65" title="Game::Game" alt="" coords="239,59,337,88"/><area shape="rect" id="node5" href="classGame.html#ac213e6d3a4e566d901413f62f6408858" title="Game::instance" alt="" coords="387,59,501,88"/><area shape="rect" id="node7" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="608,5,659,35"/><area shape="rect" id="node9" href="classSprite.html#ac82a01b98130b9b1403667059640163b" title="Sprite::render" alt="" coords="584,59,683,88"/><area shape="rect" id="node13" href="classSprite.html#a98bb8afceb93d82270c9e5e7e8f9b49d" title="Sprite::surfaceToTexture" alt="" coords="551,112,716,141"/><area shape="rect" id="node11" href="classText.html#a61dff362532c385dbc0650b397138635" title="Text::render" alt="" coords="780,59,871,88"/><area shape="rect" id="node15" href="classSprite.html#a9ba64ddfcd3f79c45b74ec1c1a16c396" title="Sprite::loadFrom" alt="" coords="767,112,884,141"/><area shape="rect" id="node17" href="classSprite.html#a0c5597fedd9b09878ec8acddca54c2f7" title="Sprite::Sprite" alt="" coords="933,112,1032,141"/></map>
+<area shape="rect" id="node3" href="classWindow.html#a83880e5e0aa5681fd748731e9d4d9e8f" title="Creates the Window." alt="" coords="239,5,353,35"/><area shape="rect" id="node5" href="classWindow.html#a74e6087da23d3c24e9fac0245e5ec92c" title="The constructor." alt="" coords="404,5,527,35"/></map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="aa499bb12addd43ff8eacab01ab9e51ea"></a><!-- doxytag: member="Configuration::WindowTitle" ref="aa499bb12addd43ff8eacab01ab9e51ea" args="()" -->
+<a class="anchor" id="a2ded611ff08783df927c2b4e97ded543"></a><!-- doxytag: member="Configuration::WindowTitle" ref="a2ded611ff08783df927c2b4e97ded543" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::string <a class="el" href="classConfiguration.html#aa499bb12addd43ff8eacab01ab9e51ea">Configuration::WindowTitle</a> </td>
+          <td class="memname">const char * <a class="el" href="classConfiguration.html#a2ded611ff08783df927c2b4e97ded543">Configuration::WindowTitle</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td><code> [static]</code></td>
@@ -364,9 +346,9 @@ Here is the caller graph for this function:</div>
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classConfiguration_aa499bb12addd43ff8eacab01ab9e51ea_icgraph.png" border="0" usemap="#classConfiguration_aa499bb12addd43ff8eacab01ab9e51ea_icgraph" alt=""/></div>
-<map name="classConfiguration_aa499bb12addd43ff8eacab01ab9e51ea_icgraph" id="classConfiguration_aa499bb12addd43ff8eacab01ab9e51ea_icgraph">
-<area shape="rect" id="node3" href="classGame.html#ad59df6562a58a614fda24622d3715b65" title="Game::Game" alt="" coords="233,59,332,88"/><area shape="rect" id="node5" href="classGame.html#ac213e6d3a4e566d901413f62f6408858" title="Game::instance" alt="" coords="381,59,496,88"/><area shape="rect" id="node7" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="603,5,653,35"/><area shape="rect" id="node9" href="classSprite.html#ac82a01b98130b9b1403667059640163b" title="Sprite::render" alt="" coords="579,59,677,88"/><area shape="rect" id="node13" href="classSprite.html#a98bb8afceb93d82270c9e5e7e8f9b49d" title="Sprite::surfaceToTexture" alt="" coords="545,112,711,141"/><area shape="rect" id="node11" href="classText.html#a61dff362532c385dbc0650b397138635" title="Text::render" alt="" coords="775,59,865,88"/><area shape="rect" id="node15" href="classSprite.html#a9ba64ddfcd3f79c45b74ec1c1a16c396" title="Sprite::loadFrom" alt="" coords="761,112,879,141"/><area shape="rect" id="node17" href="classSprite.html#a0c5597fedd9b09878ec8acddca54c2f7" title="Sprite::Sprite" alt="" coords="928,112,1027,141"/></map>
+<div class="center"><img src="classConfiguration_a2ded611ff08783df927c2b4e97ded543_icgraph.png" border="0" usemap="#classConfiguration_a2ded611ff08783df927c2b4e97ded543_icgraph" alt=""/></div>
+<map name="classConfiguration_a2ded611ff08783df927c2b4e97ded543_icgraph" id="classConfiguration_a2ded611ff08783df927c2b4e97ded543_icgraph">
+<area shape="rect" id="node3" href="classWindow.html#a83880e5e0aa5681fd748731e9d4d9e8f" title="Creates the Window." alt="" coords="233,5,348,35"/><area shape="rect" id="node5" href="classWindow.html#a74e6087da23d3c24e9fac0245e5ec92c" title="The constructor." alt="" coords="399,5,521,35"/></map>
 </div>
 </p>
 
@@ -421,12 +403,12 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a class="anchor" id="aaed1a842192a49f2d08a81347122dab9"></a><!-- doxytag: member="Configuration::m_max_framerate" ref="aaed1a842192a49f2d08a81347122dab9" args="" -->
+<a class="anchor" id="aa135b276e9360d2b9a741135d9bc6c61"></a><!-- doxytag: member="Configuration::m_max_framerate" ref="aa135b276e9360d2b9a741135d9bc6c61" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t <a class="el" href="classConfiguration.html#aaed1a842192a49f2d08a81347122dab9">Configuration::m_max_framerate</a> = 0<code> [static, private]</code></td>
+          <td class="memname">Uint32 <a class="el" href="classConfiguration.html#aa135b276e9360d2b9a741135d9bc6c61">Configuration::m_max_framerate</a> = 0<code> [static, private]</code></td>
         </tr>
       </table>
 </div>
@@ -501,12 +483,12 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a class="anchor" id="a3655c42a88134d31265bee4470dc8db5"></a><!-- doxytag: member="Configuration::m_window_title" ref="a3655c42a88134d31265bee4470dc8db5" args="" -->
+<a class="anchor" id="a4e386814a51705ed6081593c96ce320f"></a><!-- doxytag: member="Configuration::m_window_title" ref="a4e386814a51705ed6081593c96ce320f" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::string <a class="el" href="classConfiguration.html#a3655c42a88134d31265bee4470dc8db5">Configuration::m_window_title</a> = &quot;&quot;<code> [static, private]</code></td>
+          <td class="memname">const char * <a class="el" href="classConfiguration.html#a4e386814a51705ed6081593c96ce320f">Configuration::m_window_title</a> = &quot;&quot;<code> [static, private]</code></td>
         </tr>
       </table>
 </div>
@@ -539,7 +521,7 @@ Here is the caller graph for this function:</div>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jan 21 2015 21:38:34 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 23 2015 19:20:36 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

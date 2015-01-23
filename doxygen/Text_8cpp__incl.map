@@ -1,6 +1,6 @@
 <map id="G" name="G">
 <area shape="rect" id="node3" href="$Text_8h.html" title="graphics/Text.h" alt="" coords="161,83,273,112"/>
-<area shape="rect" id="node18" href="$Logger_8h.html" title="core/Logger.h" alt="" coords="297,83,399,112"/>
+<area shape="rect" id="node18" href="$Logger_8h.html" title="util/Logger.h" alt="" coords="300,83,393,112"/>
 <area shape="rect" id="node7" href="$GameObject_8h.html" title="engine/GameObject.h" alt="" coords="144,160,291,189"/>
 <area shape="rect" id="node13" href="$Sprite_8h.html" title="graphics/Sprite.h" alt="" coords="255,237,375,267"/>
 </map>

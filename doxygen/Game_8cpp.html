@@ -28,7 +28,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v19</span>
+   &#160;<span id="projectnumber">v20</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -86,24 +86,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="textblock"><code>#include &quot;<a class="el" href="Game_8h_source.html">engine/Game.h</a>&quot;</code><br/>
 <code>#include &lt;cassert&gt;</code><br/>
 <code>#include &lt;chrono&gt;</code><br/>
+<code>#include &lt;memory&gt;</code><br/>
 <code>#include &quot;<a class="el" href="Configuration_8h_source.html">util/Configuration.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="Util_8h_source.html">util/Util.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="Sprite_8h_source.html">graphics/Sprite.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="Logger_8h_source.html">core/Logger.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="Logger_8h_source.html">util/Logger.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="GStatePlaceholder_8h_source.html">engine/GStatePlaceholder.h</a>&quot;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Game.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="Game_8cpp__incl.png" border="0" usemap="#Game_8cpp" alt=""/></div>
 <map name="Game_8cpp" id="Game_8cpp">
-<area shape="rect" id="node3" href="Game_8h.html" title="engine/Game.h" alt="" coords="697,83,807,112"/><area shape="rect" id="node29" href="Sprite_8h.html" title="graphics/Sprite.h" alt="" coords="841,315,961,344"/><area shape="rect" id="node69" href="Logger_8h.html" title="core/Logger.h" alt="" coords="1391,392,1492,421"/><area shape="rect" id="node90" href="Configuration_8h.html" title="util/Configuration.h" alt="" coords="1579,160,1709,189"/><area shape="rect" id="node93" href="Util_8h.html" title="util/Util.h" alt="" coords="1744,83,1819,112"/><area shape="rect" id="node98" href="GStatePlaceholder_8h.html" title="engine/GStatePlaceholder.h" alt="" coords="419,83,603,112"/><area shape="rect" id="node13" href="Window_8h.html" title="graphics/Window.h" alt="" coords="456,237,589,267"/><area shape="rect" id="node21" href="StateGame_8h.html" title="engine/StateGame.h" alt="" coords="716,160,857,189"/><area shape="rect" id="node33" href="AudioHandler_8h.html" title="audio/AudioHandler.h" alt="" coords="1677,237,1824,267"/><area shape="rect" id="node47" href="InputHandler_8h.html" title="input/InputHandler.h" alt="" coords="141,160,280,189"/><area shape="rect" id="node59" href="ResourceHandler_8h.html" title="engine/ResourceHandler.h" alt="" coords="1079,160,1255,189"/><area shape="rect" id="node18" href="Renderer_8h.html" title="graphics/Renderer.h" alt="" coords="400,315,539,344"/><area shape="rect" id="node25" href="GameObject_8h.html" title="engine/GameObject.h" alt="" coords="715,237,861,267"/><area shape="rect" id="node39" href="Music_8h.html" title="audio/Music.h" alt="" coords="1433,315,1535,344"/><area shape="rect" id="node43" href="SoundEffect_8h.html" title="audio/SoundEffect.h" alt="" coords="1559,315,1697,344"/><area shape="rect" id="node52" href="InputKeys_8h.html" title="input/InputKeys.h" alt="" coords="109,315,232,344"/><area shape="rect" id="node54" href="ControllerHandler_8h.html" title="input/ControllerHandler.h" alt="" coords="64,237,229,267"/><area shape="rect" id="node61" href="SpriteManager_8h.html" title="graphics/SpriteManager.h" alt="" coords="987,237,1157,267"/><area shape="rect" id="node76" href="MusicManager_8h.html" title="audio/MusicManager.h" alt="" coords="1181,237,1333,267"/><area shape="rect" id="node81" href="SFXManager_8h.html" title="audio/SFXManager.h" alt="" coords="1357,237,1501,267"/><area shape="rect" id="node64" href="ResourceManager_8h.html" title="core/ResourceManager.h" alt="" coords="1039,315,1207,344"/><area shape="rect" id="node73" href="Uncopyable_8h.html" title="util/Uncopyable.h" alt="" coords="1061,392,1184,421"/><area shape="rect" id="node102" href="Animation_8h.html" title="engine/Animation.h" alt="" coords="304,160,437,189"/></map>
+<area shape="rect" id="node3" href="Game_8h.html" title="engine/Game.h" alt="" coords="868,83,977,112"/><area shape="rect" id="node29" href="Sprite_8h.html" title="graphics/Sprite.h" alt="" coords="1212,315,1332,344"/><area shape="rect" id="node69" href="Logger_8h.html" title="util/Logger.h" alt="" coords="5,392,99,421"/><area shape="rect" id="node91" href="Configuration_8h.html" title="util/Configuration.h" alt="" coords="1677,83,1808,112"/><area shape="rect" id="node95" href="Util_8h.html" title="util/Util.h" alt="" coords="143,160,217,189"/><area shape="rect" id="node100" href="GStatePlaceholder_8h.html" title="engine/GStatePlaceholder.h" alt="" coords="1175,83,1359,112"/><area shape="rect" id="node13" href="Window_8h.html" title="graphics/Window.h" alt="" coords="1433,237,1567,267"/><area shape="rect" id="node21" href="StateGame_8h.html" title="engine/StateGame.h" alt="" coords="1163,160,1304,189"/><area shape="rect" id="node33" href="AudioHandler_8h.html" title="audio/AudioHandler.h" alt="" coords="695,237,841,267"/><area shape="rect" id="node47" href="InputHandler_8h.html" title="input/InputHandler.h" alt="" coords="1756,160,1895,189"/><area shape="rect" id="node59" href="ResourceHandler_8h.html" title="engine/ResourceHandler.h" alt="" coords="571,160,747,189"/><area shape="rect" id="node18" href="Renderer_8h.html" title="graphics/Renderer.h" alt="" coords="1457,315,1596,344"/><area shape="rect" id="node25" href="GameObject_8h.html" title="engine/GameObject.h" alt="" coords="1161,237,1308,267"/><area shape="rect" id="node39" href="Music_8h.html" title="audio/Music.h" alt="" coords="487,315,588,344"/><area shape="rect" id="node43" href="SoundEffect_8h.html" title="audio/SoundEffect.h" alt="" coords="764,315,903,344"/><area shape="rect" id="node52" href="InputKeys_8h.html" title="input/InputKeys.h" alt="" coords="1836,315,1959,344"/><area shape="rect" id="node55" href="ControllerHandler_8h.html" title="input/ControllerHandler.h" alt="" coords="1743,237,1908,267"/><area shape="rect" id="node61" href="SpriteManager_8h.html" title="graphics/SpriteManager.h" alt="" coords="916,237,1087,267"/><area shape="rect" id="node76" href="MusicManager_8h.html" title="audio/MusicManager.h" alt="" coords="351,237,503,267"/><area shape="rect" id="node81" href="SFXManager_8h.html" title="audio/SFXManager.h" alt="" coords="527,237,671,267"/><area shape="rect" id="node64" href="ResourceManager_8h.html" title="core/ResourceManager.h" alt="" coords="244,315,412,344"/><area shape="rect" id="node73" href="Uncopyable_8h.html" title="util/Uncopyable.h" alt="" coords="285,392,408,421"/><area shape="rect" id="node104" href="Animation_8h.html" title="engine/Animation.h" alt="" coords="1599,160,1732,189"/></map>
 </div>
 </div>
 <p><a href="Game_8cpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="define-members"></a>
 Defines</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Game_8cpp.html#a47ca4f81b749093d7a70c2f9c5da0841">ADD_STATE</a>(stateEnum, stateClass)&#160;&#160;&#160;this-&gt;statesMap.insert(std::make_pair(stateEnum, new stateClass()))</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Game_8cpp.html#a47ca4f81b749093d7a70c2f9c5da0841">ADD_STATE</a>(stateEnum, stateClass)&#160;&#160;&#160;m_game_states.insert(std::make_pair(stateEnum, new stateClass()))</td></tr>
 </table>
 <hr/><h2>Define Documentation</h2>
 <a class="anchor" id="a47ca4f81b749093d7a70c2f9c5da0841"></a><!-- doxytag: member="Game.cpp::ADD_STATE" ref="a47ca4f81b749093d7a70c2f9c5da0841" args="(stateEnum, stateClass)" -->
@@ -125,13 +126,13 @@ Defines</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;this-&gt;statesMap.insert(std::make_pair(stateEnum, new stateClass()))</td>
+          <td></td><td>&#160;&#160;&#160;m_game_states.insert(std::make_pair(stateEnum, new stateClass()))</td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="Game_8cpp_source.html#l00012">12</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Game_8cpp_source.html#l00013">13</a> of file <a class="el" href="Game_8cpp_source.html">Game.cpp</a>.</p>
 
 </div>
 </div>
@@ -153,7 +154,7 @@ Defines</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jan 21 2015 21:38:33 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 23 2015 19:20:36 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

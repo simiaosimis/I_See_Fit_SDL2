@@ -28,7 +28,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v19</span>
+   &#160;<span id="projectnumber">v20</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -92,31 +92,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundEffect.html#a0f775fa70348fcfe00c7abc113a4aae6">SoundEffect</a> (const std::string &amp;path_)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundEffect.html#af9cbe049bf092fc8b8ee2d143a751864">SoundEffect</a> (const std::string &amp;path)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundEffect.html#a5e03a7a8eb4c5b9d0548fb178b76a44c">~SoundEffect</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">Mix_Chunk *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundEffect.html#a2e0945e1a16acc410daffa9f0f001a5a">getMixChunk</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundEffect.html#a3c6762a7ee716530da078986039e3231">getPath</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Mix_Chunk *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundEffect.html#a5cf3d85826853a643b33cb57f32af8b8">MixChunk</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundEffect.html#afff31b68beda0d44fb3c4e05fa256438">Path</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundEffect.html#a810c1274b5dc123ae7a6fc5d8c2491cb">channel</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundEffect.html#a92f220c9560e9f017967f6df54005a52">m_channel</a></td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">Mix_Chunk *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundEffect.html#a94fc9f085d1f6d1be521ca27a7b20ffa">mixChunk</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundEffect.html#a529a0b354ee8d8faae3b8180f72974fd">path</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Mix_Chunk *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundEffect.html#a8dfb849d3e9563eb589758f494727377">m_mix_chunk</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundEffect.html#a7ba6371fd11f87e39d88ec00ceebd769">m_path</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
 <p>Definition at line <a class="el" href="SoundEffect_8h_source.html#l00006">6</a> of file <a class="el" href="SoundEffect_8h_source.html">SoundEffect.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a0f775fa70348fcfe00c7abc113a4aae6"></a><!-- doxytag: member="SoundEffect::SoundEffect" ref="a0f775fa70348fcfe00c7abc113a4aae6" args="(const std::string &amp;path_)" -->
+<a class="anchor" id="af9cbe049bf092fc8b8ee2d143a751864"></a><!-- doxytag: member="SoundEffect::SoundEffect" ref="af9cbe049bf092fc8b8ee2d143a751864" args="(const std::string &amp;path)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classSoundEffect.html#a0f775fa70348fcfe00c7abc113a4aae6">SoundEffect::SoundEffect</a> </td>
+          <td class="memname"><a class="el" href="classSoundEffect.html#af9cbe049bf092fc8b8ee2d143a751864">SoundEffect::SoundEffect</a> </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>path_</em></td><td>)</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
           <td><code> [explicit]</code></td>
         </tr>
       </table>
@@ -141,17 +141,15 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="SoundEffect_8cpp_source.html#l00016">16</a> of file <a class="el" href="SoundEffect_8cpp_source.html">SoundEffect.cpp</a>.</p>
-
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a2e0945e1a16acc410daffa9f0f001a5a"></a><!-- doxytag: member="SoundEffect::getMixChunk" ref="a2e0945e1a16acc410daffa9f0f001a5a" args="()" -->
+<a class="anchor" id="a5cf3d85826853a643b33cb57f32af8b8"></a><!-- doxytag: member="SoundEffect::MixChunk" ref="a5cf3d85826853a643b33cb57f32af8b8" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Mix_Chunk * <a class="el" href="classSoundEffect.html#a2e0945e1a16acc410daffa9f0f001a5a">SoundEffect::getMixChunk</a> </td>
+          <td class="memname">Mix_Chunk* <a class="el" href="classSoundEffect.html#a5cf3d85826853a643b33cb57f32af8b8">SoundEffect::MixChunk</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -160,16 +158,14 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="SoundEffect_8cpp_source.html#l00022">22</a> of file <a class="el" href="SoundEffect_8cpp_source.html">SoundEffect.cpp</a>.</p>
-
 </div>
 </div>
-<a class="anchor" id="a3c6762a7ee716530da078986039e3231"></a><!-- doxytag: member="SoundEffect::getPath" ref="a3c6762a7ee716530da078986039e3231" args="()" -->
+<a class="anchor" id="afff31b68beda0d44fb3c4e05fa256438"></a><!-- doxytag: member="SoundEffect::Path" ref="afff31b68beda0d44fb3c4e05fa256438" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::string <a class="el" href="classSoundEffect.html#a3c6762a7ee716530da078986039e3231">SoundEffect::getPath</a> </td>
+          <td class="memname">std::string <a class="el" href="classSoundEffect.html#afff31b68beda0d44fb3c4e05fa256438">SoundEffect::Path</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -177,18 +173,16 @@ Private Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Definition at line <a class="el" href="SoundEffect_8cpp_source.html#l00026">26</a> of file <a class="el" href="SoundEffect_8cpp_source.html">SoundEffect.cpp</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Field Documentation</h2>
-<a class="anchor" id="a810c1274b5dc123ae7a6fc5d8c2491cb"></a><!-- doxytag: member="SoundEffect::channel" ref="a810c1274b5dc123ae7a6fc5d8c2491cb" args="" -->
+<a class="anchor" id="a92f220c9560e9f017967f6df54005a52"></a><!-- doxytag: member="SoundEffect::m_channel" ref="a92f220c9560e9f017967f6df54005a52" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="classSoundEffect.html#a810c1274b5dc123ae7a6fc5d8c2491cb">SoundEffect::channel</a></td>
+          <td class="memname">int <a class="el" href="classSoundEffect.html#a92f220c9560e9f017967f6df54005a52">SoundEffect::m_channel</a></td>
         </tr>
       </table>
 </div>
@@ -198,12 +192,12 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a94fc9f085d1f6d1be521ca27a7b20ffa"></a><!-- doxytag: member="SoundEffect::mixChunk" ref="a94fc9f085d1f6d1be521ca27a7b20ffa" args="" -->
+<a class="anchor" id="a8dfb849d3e9563eb589758f494727377"></a><!-- doxytag: member="SoundEffect::m_mix_chunk" ref="a8dfb849d3e9563eb589758f494727377" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Mix_Chunk* <a class="el" href="classSoundEffect.html#a94fc9f085d1f6d1be521ca27a7b20ffa">SoundEffect::mixChunk</a><code> [private]</code></td>
+          <td class="memname">Mix_Chunk* const <a class="el" href="classSoundEffect.html#a8dfb849d3e9563eb589758f494727377">SoundEffect::m_mix_chunk</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
@@ -213,12 +207,12 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a529a0b354ee8d8faae3b8180f72974fd"></a><!-- doxytag: member="SoundEffect::path" ref="a529a0b354ee8d8faae3b8180f72974fd" args="" -->
+<a class="anchor" id="a7ba6371fd11f87e39d88ec00ceebd769"></a><!-- doxytag: member="SoundEffect::m_path" ref="a7ba6371fd11f87e39d88ec00ceebd769" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::string <a class="el" href="classSoundEffect.html#a529a0b354ee8d8faae3b8180f72974fd">SoundEffect::path</a><code> [private]</code></td>
+          <td class="memname">const std::string <a class="el" href="classSoundEffect.html#a7ba6371fd11f87e39d88ec00ceebd769">SoundEffect::m_path</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
@@ -250,7 +244,7 @@ Private Attributes</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jan 21 2015 21:38:34 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 23 2015 19:20:36 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>
