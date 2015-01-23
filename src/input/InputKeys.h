@@ -1,5 +1,7 @@
 #pragma once
 
+#include <array>
+
 enum GameKeys {
 	UP = 0,
 	LEFT,
@@ -9,3 +11,5 @@ enum GameKeys {
 	ESCAPE,
 	MAX
 };
+
+using InputArray = std::array<bool, GameKeys::MAX>;

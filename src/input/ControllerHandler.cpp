@@ -186,6 +186,6 @@ void ControllerHandler::handleInput(SDL_Event& sdlEvent_) {
 
 }
 
-std::array<bool, GameKeys::MAX> ControllerHandler::getKeyStates() {
+InputArray ControllerHandler::getKeyStates() {
 	return this->keyStates;
 }

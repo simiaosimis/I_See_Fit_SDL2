@@ -16,8 +16,7 @@ int main(int argc, char** argv) {
 	const bool k_systems_initialized = sdl::Initialize();
 
 	if(k_systems_initialized) {
-		Game::instance().runGame();
-		delete &Game::instance();
+		Game::Instance().Run();
 	}
 	else {
 		logger::error() << "Systems were not initialized.";

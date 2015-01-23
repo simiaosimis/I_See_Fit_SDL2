@@ -30,7 +30,7 @@ void AudioHandler::ChangeMusic(const std::string& path, const int times) {
 }
 
 void AudioHandler::PlaySoundEffect(const std::string& path) {
-	m_effects.push_back(Game::instance().getResource().soundEffect(path));
+	m_effects.push_back(Game::Instance().Resource().soundEffect(path));
 
 	const int k_play_once = 0;
 	const int k_played_channel = Mix_PlayChannel(-1, m_effects.back()->MixChunk(),
@@ -46,7 +46,7 @@ void AudioHandler::PlaySoundEffect(const std::string& path) {
 void AudioHandler::PlaySoundEffect(const std::string& path, const int times) {
 	assert((times == k_infinite_loop || times >= 2) && "Must be k_infinite_loop or >= 2");
 
-	m_effects.push_back(Game::instance().getResource().soundEffect(path));
+	m_effects.push_back(Game::Instance().Resource().soundEffect(path));
 
 	const int k_played_channel = Mix_PlayChannel(-1, m_effects.back()->MixChunk(),
 		(times - 1));
@@ -134,7 +134,7 @@ void AudioHandler::StopMusic() {
 }
 
 void AudioHandler::SetMusic(const std::string& path) {
-	m_current_music = Game::instance().getResource().music(path);
+	m_current_music = Game::Instance().Resource().music(path);
 }
 
 void AudioHandler::ClearChannel(const int channel) {
@@ -144,5 +144,5 @@ void AudioHandler::ClearChannel(const int channel) {
 }
 
 void AudioHandler::ChannelDone(const int channel) {
-	Game::instance().getAudioHandler().ClearChannel(channel);
+	Game::Instance().GetAudioHandler().ClearChannel(channel);
 }

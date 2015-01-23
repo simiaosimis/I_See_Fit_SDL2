@@ -5,8 +5,8 @@
 const int Configuration::m_resolution_width = 192;
 const int Configuration::m_resolution_height = 108;
 
-uint32_t Configuration::m_max_framerate = 0;
-std::string Configuration::m_window_title = "";
+Uint32 Configuration::m_max_framerate = 0;
+const char* Configuration::m_window_title = "";
 int Configuration::m_logical_render_size = 0;
 int Configuration::m_screen_width = 0;
 int Configuration::m_screen_height = 0;
@@ -43,11 +43,11 @@ int Configuration::ResolutionHeight() {
 	return Configuration::m_resolution_height;
 }
 
-uint32_t Configuration::MaxFramerate() {
+Uint32 Configuration::MaxFramerate() {
 	return Configuration::m_max_framerate;
 }
 
-std::string Configuration::WindowTitle() {
+const char* Configuration::WindowTitle() {
 	return Configuration::m_window_title;
 }
 

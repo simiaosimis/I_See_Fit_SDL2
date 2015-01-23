@@ -1,6 +1,7 @@
 #include "engine/Game.h"
 #include <cassert>
 #include <chrono>
+#include <memory>
 #include "util/Configuration.h"
 #include "util/Util.h"
 #include "graphics/Sprite.h"
@@ -10,52 +11,45 @@
 // End Game States includes
 
 #define ADD_STATE(stateEnum, stateClass) \
-	this->statesMap.insert(std::make_pair(stateEnum, new stateClass()))
+	m_game_states.insert(std::make_pair(stateEnum, new stateClass()))
 
-Game& Game::instance() {
+Game& Game::Instance() {
 	// "C++11 mandates that the initializer for a local static variable is only run once, even
 	// in the presence of concurrency. So, assuming you’ve got a modern C++ compiler, this code
 	// is thread-safe[...]"
-	static Game* instance = new Game();
-	return (*instance);
+	static std::unique_ptr<Game> instance{new Game};
+	return *instance.get();
 }
 
 Game::Game() :
-	window(nullptr),
-	isRunning(false),
-	audioHandler(new AudioHandler()),
-	inputHandler(new InputHandler()),
-	resourceHandler(new ResourceHandler()),
-	currentState(nullptr),
-	statesMap()
+	m_is_running{false},
+	m_audio_handler{new AudioHandler()},
+	m_input_handler{new InputHandler()},
+	m_resource_handler{new ResourceHandler()},
+	m_current_state{nullptr},
+	m_window{},
+	m_game_states{}
 {
-	this->window = new Window(Configuration::ScreenWidth(),	Configuration::ScreenHeight(),
-		Configuration::WindowTitle());
-
-	assert(this->window != nullptr && "The window should not be null!");
-
-	initializeStates();
-
-	this->isRunning = true;
+	InitializeStates();
+	m_is_running = true;
 }
 
 Game::~Game() {
-	if(this->currentState != nullptr) {
-		this->currentState->unload();
+	if(m_current_state != nullptr) {
+		m_current_state->unload();
 	}
 
-	destroyStates();
+	DestroyStates();
 
-	delete this->audioHandler;
-	delete this->inputHandler;
-	delete this->resourceHandler;
-	delete this->window;
+	delete m_audio_handler;
+	delete m_input_handler;
+	delete m_resource_handler;
 }
 
-void Game::runGame() {
+void Game::Run() {
 	// Load the first state of the game.
-	this->currentState = this->statesMap.at(GStates::PLACEHOLDER);
-	this->currentState->load();
+	m_current_state = m_game_states.at(GStates::PLACEHOLDER);
+	m_current_state->load();
 
 	// Get the first game time.
 	const double deltaTime = 1.0 / 60.0;
@@ -66,12 +60,12 @@ void Game::runGame() {
 	s_clock::time_point lastTime = s_clock::now();
 
 	// This is the main game loop.
-	while(this->isRunning) {
+	while(m_is_running) {
 
 #ifdef ICYTIMEDRUN
 		// Auto-close the game in 2 seconds so TravisCI doesn't loop forever
 		if(totalGameTime >= 2.0) {
-			this->isRunning = false;
+			m_is_running = false;
 		}
 #endif
 
@@ -83,24 +77,24 @@ void Game::runGame() {
 
 		// Update.
 		while(accumulatedTime >= deltaTime) {
-			this->inputHandler->handleInput();
+			m_input_handler->handleInput();
 
 			// Check for an exit signal from input.
-			if(this->inputHandler->isQuitFlag() == true) {
-				stop();
+			if(m_input_handler->isQuitFlag() == true) {
+				Stop();
 				return;
 			}
 
-			this->currentState->update(deltaTime);
+			m_current_state->update(deltaTime);
 
 			accumulatedTime -= deltaTime;
 			totalGameTime += deltaTime;
 		}
 
 		// Render.
-		this->window->getRenderer()->Clear();
-		this->currentState->render();
-		this->window->getRenderer()->Render();
+		m_window.GetRenderer()->Clear();
+		m_current_state->render();
+		m_window.GetRenderer()->Render();
 
 		lastTime = now;
 
@@ -108,14 +102,14 @@ void Game::runGame() {
 
 }
 
-void Game::changeState(const GStates state_) {
+void Game::ChangeState(const GStates game_state) {
 	/// @todo Implement the transition between states.
-	this->currentState->unload();
-	this->currentState = this->statesMap.at(state_);
-	this->currentState->load();
+	m_current_state->unload();
+	m_current_state = m_game_states.at(game_state);
+	m_current_state->load();
 }
 
-void Game::initializeStates() {
+void Game::InitializeStates() {
 	// Initialize all the states in Game here.
 
 	// Insert the states pointers onto the map.
@@ -123,41 +117,41 @@ void Game::initializeStates() {
 	ADD_STATE(PLACEHOLDER, GStatePlaceholder);
 }
 
-void Game::destroyStates() {
-	std::map<GStates, StateGame*>::const_iterator it;
-    for(it = this->statesMap.begin(); it != this->statesMap.end(); it++) {
+void Game::DestroyStates() {
+	StatesMap::const_iterator it;
+    for(it = m_game_states.begin(); it != m_game_states.end(); it++) {
         delete it->second;
     }
 }
 
-AudioHandler& Game::getAudioHandler() {
-	return (*(this->audioHandler));
+AudioHandler& Game::GetAudioHandler() {
+	return (*(m_audio_handler));
 }
 
-std::array<bool, GameKeys::MAX> Game::getInput() {
-	return this->inputHandler->getKeyStates();
+InputArray Game::Input() {
+	return m_input_handler->getKeyStates();
 }
 
-void Game::stop() {
-	this->isRunning = false;
+void Game::Stop() {
+	m_is_running = false;
 }
 
-void Game::clearKeyFromInput(const GameKeys key_) {
-	this->inputHandler->clearKey(key_);
+void Game::ClearInputKey(const GameKeys input_key) {
+	m_input_handler->clearKey(input_key);
 }
 
-void Game::resizeWindow(const int width_, const int height_) {
-	assert(width_ >= 0 && "Must be >= 0");
-	assert(height_ >= 0 && "Must be >= 0");
-	this->window->resize(width_, height_);
+void Game::ResizeWindow(const int width, const int height) {
+	assert(width >= 0 && "Must be >= 0");
+	assert(height >= 0 && "Must be >= 0");
+	m_window.Resize(width, height);
 }
 
-Renderer* Game::getRenderer() {
-	return this->window->getRenderer();
+Renderer* Game::GetRenderer() {
+	return m_window.GetRenderer();
 }
 
-ResourceHandler& Game::getResource() {
-	return (*(this->resourceHandler));
+ResourceHandler& Game::Resource() {
+	return (*(m_resource_handler));
 }
 
 #undef ADD_STATE

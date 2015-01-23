@@ -93,7 +93,7 @@ void InputHandler::handleInput() {
 	} while(pendingEvent != 0);
 }
 
-std::array<bool, GameKeys::MAX> InputHandler::getKeyStates() {
+InputArray InputHandler::getKeyStates() {
 	return this->keyStates;
 }
 

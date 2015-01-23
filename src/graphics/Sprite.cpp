@@ -75,13 +75,13 @@ void Sprite::render(const double x_, const double y_, SDL_Rect* const clip_,
 
 	int logicalW = 0;
 	int logicalH = 0;
-	Game::instance().getRenderer()->LogicalSize(&logicalW, &logicalH);
+	Game::Instance().GetRenderer()->LogicalSize(&logicalW, &logicalH);
 	SDL_Rect stretch = {static_cast<int>(x_), static_cast<int>(y_), logicalW, logicalH};
 
 	const int successfullRender = (!stretch_) ?
-		SDL_RenderCopyEx(Game::instance().getRenderer()->SdlRenderer(), this->sdlTexture, clip_,
+		SDL_RenderCopyEx(Game::Instance().GetRenderer()->SdlRenderer(), this->sdlTexture, clip_,
 			&renderQuad, angle_, center_, flip_) :
-		SDL_RenderCopyEx(Game::instance().getRenderer()->SdlRenderer(), this->sdlTexture, clip_,
+		SDL_RenderCopyEx(Game::Instance().GetRenderer()->SdlRenderer(), this->sdlTexture, clip_,
 			&stretch, angle_, center_, flip_);
 
 	if(successfullRender != 0) {
@@ -108,14 +108,14 @@ void Sprite::setHeight(int height_) {
 }
 
 SDL_Texture* Sprite::surfaceToTexture(SDL_Surface* const surface_) {
-	assert(Game::instance().getRenderer()->SdlRenderer() != nullptr && "Window renderer should not be null!");
+	assert(Game::Instance().GetRenderer()->SdlRenderer() != nullptr && "Window renderer should not be null!");
 
 	// The final texture.
 	SDL_Texture* newTexture = nullptr;
 
 	if(surface_ != nullptr) {
 		// Create texture from the surface pixels.
-	    newTexture = SDL_CreateTextureFromSurface(Game::instance().getRenderer()->SdlRenderer(), surface_);
+	    newTexture = SDL_CreateTextureFromSurface(Game::Instance().GetRenderer()->SdlRenderer(), surface_);
 		if(newTexture != nullptr) {
 			// Set the Sprites width and height, from the loaded surface.
 			this->width = surface_->w;

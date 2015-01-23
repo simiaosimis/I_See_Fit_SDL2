@@ -5,7 +5,6 @@
 
 #include <SDL2/SDL.h>
 #include "InputKeys.h"
-#include <array>
 
 namespace controllerMap {
 
@@ -75,10 +74,10 @@ class ControllerHandler {
 		*/
 		void handleInput(SDL_Event& sdlEvent_);
 
-		std::array<bool, GameKeys::MAX> getKeyStates();
+		InputArray getKeyStates();
 
 	private:
-		std::array<bool, GameKeys::MAX> keyStates; /**< Boolean array that controls which keys
+		InputArray keyStates; /**< Boolean array that controls which keys
 		are pressed or not. */
 
 		SDL_GameController* gameController; /**< Pointer to the controller. */

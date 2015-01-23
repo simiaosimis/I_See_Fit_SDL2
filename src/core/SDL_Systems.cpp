@@ -104,10 +104,10 @@ void LogSdlVersion(const std::string& library, const SDL_version& version_compil
 */
 void LogSdlVersion(const std::string& library, const SDL_version& version_compiled,
 		const std::string& revision) {
-	logger::debug() << library << " Version (Compiled): " <<
+	logger::debug() << library << " Version (compiled): " <<
 		static_cast<int>(version_compiled.major) << "." <<
 		static_cast<int>(version_compiled.minor) << "." <<
-		static_cast<int>(version_compiled.patch) << revision;
+		static_cast<int>(version_compiled.patch) << " " << revision;
 }
 
 } // namespace

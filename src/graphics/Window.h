@@ -12,61 +12,59 @@ class Window {
 
 	public:
 		/**
-		* The constructor.
-		* Sets all attributes, and calls the initialize method.
-		* @param width_ : The desired window width (0+).
-		* @param height_ : The desired window height (0+).
-		* @param title_ : The desired window title.
-		* @note If omitted, window title will be "SDL Window".
-		* @see Window::initialize
+		* @brief The constructor.
+		*
+		* @see Window::create
 		*/
-		Window(const int width_, const int height_,
-			const std::string& title_ = "SDL Window");
+		Window();
 
 		/**
-		* The destructor.
-		* Uses the destroy method to delete window.
-		* @see Window::destroy
+		* @briefThe destructor.
 		*/
 		~Window();
 
 		/**
 		* Resizes the window.
+		*
 		* @param width_ : The desired window width (0+).
 		* @param height_ : The desired window height (0+).
+		*
 		* @todo Instead of directly choosing width and height, choose from a pre-defined list
 		* 	of resolutions.
 		*/
-		void resize(const int width_, const int height_);
+		void Resize(const int width_, const int height_);
 
 		/**
-		* Minimizes window.
-		* Uses SDLs internal method to minimize the window.
+		* @brief Minimizes window.
+		*
+		* @see SDL_MinimizeWindow
 		*/
-		void minimize();
+		void Minimize();
 
 		/**
-		* Maximizes window.
-		* Uses SDLs internal method to maximize the window.
+		* @brief Maximizes window.
+		* 
+		* @see SDL_MaximizeWindow
 		*/
-		void maximize();
+		void Maximize();
 
 		/**
-		* @return The Renderer.
+		* @return The Renderer pointer.
+		*
+		* @note The 'Get' was added to the name to avoid conflict with class Renderer.
 		*/
-		Renderer* getRenderer();
+		Renderer* GetRenderer();
 
 	private:
 		/**
-		* Creates the Window, with specified width and height.
-		* Can be used either as the creator, or as the resizer.
-		* @param width_ : The desired window width (0+).
-		* @param height_ : The desired window height (0+).
+		* @brief Creates the Window.
+		*
+		* Can be used either as the creator, or as the resizer. Gets the size from
+		*	Configuration.
 		*/
-		void create(const int width_, const int height_);
+		void Create();
 
-		const std::string windowTitle; /**< The game Window title. */
-		SDL_Window* sdlWindow; /**< The SDL window, that will be the actual game window. */
-		Renderer* renderer; /**< The SDL renderer to render onto. */
+		SDL_Window* m_sdl_window; /**< The SDL window, that will be the actual game window. */
+		Renderer* m_renderer; /**< The SDL renderer to render onto. */
 
 };

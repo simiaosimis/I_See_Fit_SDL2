@@ -26,55 +26,74 @@ class Game {
 		};
 
 		/**
-		* Singleton imeplementation for Game.
+		* @brief Singleton implementation for Game.
+		*
 		* @return The instance for a Game.
 		*/
-		static Game& instance();
+		static Game& Instance();
 
 		/**
-		* The destructor.
+		* @brief The destructor.
+		*
 		* Destroys the game's Window and states, and unloads current state.
 		*/
 		~Game();
 
 		/**
-		* The main game loop.
+		* @brief The main game loop.
+		*
 		* Orders the game structure, such as inputs, updates, and rendering.
 		*/
-		void runGame();
+		void Run();
 
 		/**
-		* Sets the current game state.
+		* @briefSets the current game state.
+		*
 		* @see StateGame::load()
 		* @see StateGame::unload()
-		* @param state_ : The state you want to be changed into.
+		*
+		* @param game_state : The state you want to be changed into.
 		*/
-		void changeState(const GStates state_);
+		void ChangeState(const GStates game_state);
 
 		/**
-		* @return The Game audioHandler.
+		* @return The Game audio handler.
+		*
+		* @note The 'Get' was added to the name to avoid conflict with class AudioHandler.
 		*/
-		AudioHandler& getAudioHandler();
+		AudioHandler& GetAudioHandler();
 
 		/**
 		* @return The boolean array recieved from the InputHandler.
 		*/
-		std::array<bool, GameKeys::MAX> getInput();
+		InputArray Input();
 
 		/**
 		* @return The SDL_Renderer.
+		*
+		* @note The 'Get' was added to the name to avoid conflict with class Renderer.
 		*/
-		Renderer* getRenderer();
-
-		ResourceHandler& getResource();
+		Renderer* GetRenderer();
 
 		/**
-		* Stops execution and closes the game.
+		* @return The Game resource handler.
 		*/
-		void stop();
+		ResourceHandler& Resource();
 
-		void clearKeyFromInput(const GameKeys key_);
-		void resizeWindow(const int width_, const int height_);
+		/**
+		* @brief Stops execution and closes the game.
+		*/
+		void Stop();
+
+		/**
+		* @brief Clears a certain key from input, setting it to false.
+		*/
+		void ClearInputKey(const GameKeys input_key);
+
+		/**
+		* @brief Resizes the window.
+		*/
+		void ResizeWindow(const int width, const int height);
 
 	private:
 		/**
@@ -89,23 +108,22 @@ class Game {
 		* Loads all the states.
 		* Every new state implemented should be initialized here.
 		*/
-		void initializeStates();
+		void InitializeStates();
 
 		/**
 		* Deletes all the loaded states.
 		* Every new state implemented should be deleted here.
 		*/
-		void destroyStates();
+		void DestroyStates();
 
-		Window* window; /**< The game Window. */
-		bool isRunning; /**< Whether the game is currently running/looping or not. */
+		bool m_is_running; /**< Whether the game is currently running/looping or not. */
+		AudioHandler* m_audio_handler; /**< The Game AudioHandler. */
+		InputHandler* m_input_handler; /**< The Game InputHandler. */
+		ResourceHandler* m_resource_handler; /**< The Game ResourceHandler. */
+		StateGame* m_current_state; /**< The current state, which the game is in. */
+		Window m_window; /**< The game Window. */
 
-		AudioHandler* audioHandler; /**< The Game AudioHandler. */
-		InputHandler* inputHandler; /**< The Game InputHandler. */
-		ResourceHandler* resourceHandler;
-
-		StateGame* currentState; /**< The current state, which the game is in. */
-
-		std::map<GStates, StateGame*> statesMap; /**< Map containing all possible states. */
+		using StatesMap = std::map<GStates, StateGame*>;
+		StatesMap m_game_states; /**< Map containing all possible states. */
 
 };

@@ -1,6 +1,6 @@
 #pragma once
 
-#include <string>
+#include <SDL2/SDL_stdinc.h>
 
 /**
 */
@@ -25,12 +25,12 @@ class Configuration {
 		/**
 		* @return m_max_framerate
 		*/
-		static uint32_t MaxFramerate();
+		static Uint32 MaxFramerate();
 
 		/**
 		* @return m_window_title
 		*/
-		static std::string WindowTitle();
+		static const char* WindowTitle();
 
 		/**
 		* @return initialMultiplier
@@ -62,8 +62,8 @@ class Configuration {
 		static const int m_resolution_width; /**< The game's width resolution. (16) */
 		static const int m_resolution_height; /**< The game's height resolution. (10) */
 
-		static uint32_t m_max_framerate; /**< The game's max framerate. */
-		static std::string m_window_title; /**< The game window's title. */
+		static Uint32 m_max_framerate; /**< The game's max framerate. */
+		static const char* m_window_title; /**< The game window's title. */
 
 		static int m_logical_render_size; /**< The size of the logical rendering. */
 
