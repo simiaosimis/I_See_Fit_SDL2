@@ -293,43 +293,43 @@
     <tr>
     <td align="right" class="lineno"><pre>2</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>#include &lt;cassert&gt;</pre></td>
+    <td align="left" class="src "><pre>#include &lt;chrono&gt;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>3</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>#include &lt;chrono&gt;</pre></td>
+    <td align="left" class="src "><pre>#include &lt;memory&gt;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>4</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>#include &lt;memory&gt;</pre></td>
+    <td align="left" class="src "><pre>#include "util/Configuration.h"</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>5</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>#include "util/Configuration.h"</pre></td>
+    <td align="left" class="src "><pre>#include "util/Util.h"</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>6</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>#include "util/Util.h"</pre></td>
+    <td align="left" class="src "><pre>#include "graphics/Sprite.h"</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>7</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>#include "graphics/Sprite.h"</pre></td>
+    <td align="left" class="src "><pre>#include "util/Logger.h"</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>8</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>#include "util/Logger.h"</pre></td>
+    <td align="left" class="src "><pre>#include "util/Assert.h"</pre></td>
     </tr>
 
     <tr>
@@ -1145,13 +1145,13 @@
     <tr>
     <td align="right" class="lineno"><pre>144</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	assert(width &gt;= 0 &amp;&amp; "Must be &gt;= 0");</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	ASSERT(width &gt;= 0 , "Must be &gt;= 0");</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>145</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	assert(height &gt;= 0 &amp;&amp; "Must be &gt;= 0");</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	ASSERT(height &gt;= 0, "Must be &gt;= 0");</pre></td>
     </tr>
 
     <tr>

@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v27</span>
+   &#160;<span id="projectnumber">v28</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -93,9 +93,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <a href="GameObject_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="GameObject_8h.html">engine/GameObject.h</a>&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;SDL2/SDL.h&gt;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;cassert&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Game_8h.html">engine/Game.h</a>&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Logger_8h.html">util/Logger.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Game_8h.html">engine/Game.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Logger_8h.html">util/Logger.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Assert_8h.html">util/Assert.h</a>&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
 <div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classGameObject.html#aaeb95e7f576dd73ebcceed18b7a8cce1">    7</a></span>&#160;<a class="code" href="classGameObject.html#aaeb95e7f576dd73ebcceed18b7a8cce1">GameObject::GameObject</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> x_, <span class="keyword">const</span> <span class="keywordtype">double</span> y_, <span class="keyword">const</span> std::string&amp; path_) :</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    x(x_),</div>
@@ -120,8 +120,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="Logger_8h.html#a087a4a82f92e6848d2f39cd7660b6173">log_warn</a>() &lt;&lt; <span class="stringliteral">&quot;GameObject sprite is null, width and height will be undefined.&quot;</span>;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    assert(width &gt;= 0 &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    assert(height &gt;= 0 &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(width &gt;= 0 , <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(height &gt;= 0, <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
 <div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classGameObject.html#a128ddbbeaecfc3d43758d9b4a94bb853">   34</a></span>&#160;<a class="code" href="classGameObject.html#aaeb95e7f576dd73ebcceed18b7a8cce1">GameObject::GameObject</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> x_, <span class="keyword">const</span> <span class="keywordtype">double</span> y_) :</div>
@@ -165,8 +165,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classGameObject_html_aaeb95e7f576dd73ebcceed18b7a8cce1"><div class="ttname"><a href="classGameObject.html#aaeb95e7f576dd73ebcceed18b7a8cce1">GameObject::GameObject</a></div><div class="ttdeci">GameObject(const double x_, const double y_, const std::string &amp;path_)</div><div class="ttdef"><b>Definition:</b> <a href="GameObject_8cpp_source.html#l00007">GameObject.cpp:7</a></div></div>
 <div class="ttc" id="classGameObject_html_a7394724b15f0adae7938d27c749bda67"><div class="ttname"><a href="classGameObject.html#a7394724b15f0adae7938d27c749bda67">GameObject::getWidth</a></div><div class="ttdeci">int getWidth()</div><div class="ttdef"><b>Definition:</b> <a href="GameObject_8cpp_source.html#l00051">GameObject.cpp:51</a></div></div>
 <div class="ttc" id="classGameObject_html_aedbe7c552382ea0686d020661826c106"><div class="ttname"><a href="classGameObject.html#aedbe7c552382ea0686d020661826c106">GameObject::animationClip</a></div><div class="ttdeci">SDL_Rect animationClip</div><div class="ttdef"><b>Definition:</b> <a href="GameObject_8h_source.html#l00078">GameObject.h:78</a></div></div>
+<div class="ttc" id="Assert_8h_html_ab1899199386b1542d1111168ca847e9c"><div class="ttname"><a href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a></div><div class="ttdeci">#define ASSERT(expression, message)</div><div class="ttdef"><b>Definition:</b> <a href="Assert_8h_source.html#l00006">Assert.h:6</a></div></div>
 <div class="ttc" id="GameObject_8h_html"><div class="ttname"><a href="GameObject_8h.html">GameObject.h</a></div></div>
 <div class="ttc" id="classGameObject_html_ab82dfdb656f9051c0587e6593b2dda97"><div class="ttname"><a href="classGameObject.html#ab82dfdb656f9051c0587e6593b2dda97">GameObject::~GameObject</a></div><div class="ttdeci">virtual ~GameObject()</div><div class="ttdef"><b>Definition:</b> <a href="GameObject_8cpp_source.html#l00047">GameObject.cpp:47</a></div></div>
+<div class="ttc" id="Assert_8h_html"><div class="ttname"><a href="Assert_8h.html">Assert.h</a></div></div>
 <div class="ttc" id="Logger_8h_html"><div class="ttname"><a href="Logger_8h.html">Logger.h</a></div></div>
 <div class="ttc" id="classGameObject_html_a461647c775e04bffb85977084a196542"><div class="ttname"><a href="classGameObject.html#a461647c775e04bffb85977084a196542">GameObject::width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition:</b> <a href="GameObject_8h_source.html#l00076">GameObject.h:76</a></div></div>
 <div class="ttc" id="classGameObject_html_ae94d98451fb4345860810660a17b487b"><div class="ttname"><a href="classGameObject.html#ae94d98451fb4345860810660a17b487b">GameObject::height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition:</b> <a href="GameObject_8h_source.html#l00077">GameObject.h:77</a></div></div>
@@ -174,7 +176,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 24 2015 03:41:35 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jan 24 2015 04:04:51 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -293,7 +293,7 @@
     <tr>
     <td align="right" class="lineno"><pre>2</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>#include &lt;cassert&gt;</pre></td>
+    <td align="left" class="src "><pre>#include "util/Assert.h"</pre></td>
     </tr>
 
     <tr>
@@ -455,43 +455,43 @@
     <tr>
     <td align="right" class="lineno"><pre>29</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>	assert(Configuration::m_resolution_width &gt;= 0 &amp;&amp; "Must be &gt;= 0");</pre></td>
+    <td align="left" class="src "><pre>	ASSERT(Configuration::m_resolution_width &gt;= 0	   , "Must be &gt;= 0");</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>30</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>	assert(Configuration::m_resolution_height &gt;= 0 &amp;&amp; "Must be &gt;= 0");</pre></td>
+    <td align="left" class="src "><pre>	ASSERT(Configuration::m_resolution_height &gt;= 0	   , "Must be &gt;= 0");</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>31</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>	assert(Configuration::m_logical_render_size &gt;= 0 &amp;&amp; "Must be &gt;= 0");</pre></td>
+    <td align="left" class="src coveredLine"><pre>	ASSERT(Configuration::m_logical_render_size &gt;= 0   , "Must be &gt;= 0");</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>32</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>	assert(Configuration::m_screen_width &gt;= 0 &amp;&amp; "Must be &gt;= 0");</pre></td>
+    <td align="left" class="src coveredLine"><pre>	ASSERT(Configuration::m_screen_width &gt;= 0		   , "Must be &gt;= 0");</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>33</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>	assert(Configuration::m_screen_height &gt;= 0 &amp;&amp; "Must be &gt;= 0");</pre></td>
+    <td align="left" class="src coveredLine"><pre>	ASSERT(Configuration::m_screen_height &gt;= 0		   , "Must be &gt;= 0");</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>34</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>	assert(Configuration::m_camera_distance_width &gt;= 0 &amp;&amp; "Must be &gt;= 0");</pre></td>
+    <td align="left" class="src coveredLine"><pre>	ASSERT(Configuration::m_camera_distance_width &gt;= 0 , "Must be &gt;= 0");</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>35</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>	assert(Configuration::m_camera_distance_height &gt;= 0 &amp;&amp; "Must be &gt;= 0");</pre></td>
+    <td align="left" class="src coveredLine"><pre>	ASSERT(Configuration::m_camera_distance_height &gt;= 0, "Must be &gt;= 0");</pre></td>
     </tr>
 
     <tr>

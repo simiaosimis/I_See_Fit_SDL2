@@ -293,19 +293,19 @@
     <tr>
     <td align="right" class="lineno"><pre>2</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>#include &lt;cassert&gt;</pre></td>
+    <td align="left" class="src "><pre>#include "util/Configuration.h"</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>3</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>#include "util/Configuration.h"</pre></td>
+    <td align="left" class="src "><pre>#include "util/Logger.h"</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>4</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>#include "util/Logger.h"</pre></td>
+    <td align="left" class="src "><pre>#include "util/Assert.h"</pre></td>
     </tr>
 
     <tr>
@@ -503,7 +503,7 @@
     <tr>
     <td align="right" class="lineno"><pre>37</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	assert(size &gt;= 0 &amp;&amp; "Must be &gt;= 0");</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	ASSERT(size &gt;= 0, "Must be &gt;= 0");</pre></td>
     </tr>
 
     <tr>
@@ -527,7 +527,7 @@
     <tr>
     <td align="right" class="lineno"><pre>41</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	assert(size &lt; k_safe_size &amp;&amp; "Trying to set logical size for a value too big (&gt;= 10).");</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	ASSERT(size &lt; k_safe_size, "Trying to set logical size for a value too big.");</pre></td>
     </tr>
 
     <tr>

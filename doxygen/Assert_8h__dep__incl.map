@@ -1,3 +1,12 @@
 <map id="Assert.h" name="Assert.h">
-<area shape="rect" id="node3" href="$Assert_8cpp.html" title="Assert.cpp" alt="" coords="5,83,91,112"/>
+<area shape="rect" id="node3" href="$AudioHandler_8cpp.html" title="AudioHandler.cpp" alt="" coords="5,83,131,112"/>
+<area shape="rect" id="node5" href="$Animation_8cpp.html" title="Animation.cpp" alt="" coords="155,83,259,112"/>
+<area shape="rect" id="node7" href="$Camera_8cpp.html" title="Camera.cpp" alt="" coords="283,83,376,112"/>
+<area shape="rect" id="node9" href="$Game_8cpp.html" title="Game.cpp" alt="" coords="400,83,483,112"/>
+<area shape="rect" id="node11" href="$GameObject_8cpp.html" title="GameObject.cpp" alt="" coords="507,83,627,112"/>
+<area shape="rect" id="node13" href="$Renderer_8cpp.html" title="Renderer.cpp" alt="" coords="651,83,749,112"/>
+<area shape="rect" id="node15" href="$Sprite_8cpp.html" title="Sprite.cpp" alt="" coords="773,83,853,112"/>
+<area shape="rect" id="node17" href="$Window_8cpp.html" title="Window.cpp" alt="" coords="877,83,971,112"/>
+<area shape="rect" id="node19" href="$Assert_8cpp.html" title="Assert.cpp" alt="" coords="995,83,1080,112"/>
+<area shape="rect" id="node21" href="$Configuration_8cpp.html" title="Configuration.cpp" alt="" coords="1104,83,1227,112"/>
 </map>

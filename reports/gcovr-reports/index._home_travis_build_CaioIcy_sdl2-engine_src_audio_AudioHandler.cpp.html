@@ -293,25 +293,25 @@
     <tr>
     <td align="right" class="lineno"><pre>2</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>#include &lt;cassert&gt;</pre></td>
+    <td align="left" class="src "><pre>#include &lt;algorithm&gt;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>3</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>#include &lt;algorithm&gt;</pre></td>
+    <td align="left" class="src "><pre>#include "engine/Game.h"</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>4</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>#include "engine/Game.h"</pre></td>
+    <td align="left" class="src "><pre>#include "util/Logger.h"</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>5</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>#include "util/Logger.h"</pre></td>
+    <td align="left" class="src "><pre>#include "util/Assert.h"</pre></td>
     </tr>
 
     <tr>
@@ -413,7 +413,7 @@
     <tr>
     <td align="right" class="lineno"><pre>22</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	PlayMusic(k_infinite_loop);</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	PlayMusic();</pre></td>
     </tr>
 
     <tr>
@@ -437,7 +437,7 @@
     <tr>
     <td align="right" class="lineno"><pre>26</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	assert(times &gt;= 1 &amp;&amp; "Must be &gt;= 1");</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	ASSERT(times &gt;= 1, "Must be &gt;= 1");</pre></td>
     </tr>
 
     <tr>
@@ -497,7 +497,7 @@
     <tr>
     <td align="right" class="lineno"><pre>36</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	const int k_played_channel = Mix_PlayChannel(-1, m_effects.back()-&gt;MixChunk(),</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	const int k_played_channel = Mix_PlayChannel(k_any_channel, m_effects.back()-&gt;MixChunk(),</pre></td>
     </tr>
 
     <tr>
@@ -563,7 +563,7 @@
     <tr>
     <td align="right" class="lineno"><pre>47</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	assert((times == k_infinite_loop || times &gt;= 2) &amp;&amp; "Must be k_infinite_loop or &gt;= 2");</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	ASSERT((times == k_infinite_loop || times &gt;= 2), "Must be k_infinite_loop or &gt;= 2. If only needed to play once, use AudioHandler::PlaySoundEffect(const std::string&amp;)");</pre></td>
     </tr>
 
     <tr>
@@ -587,7 +587,7 @@
     <tr>
     <td align="right" class="lineno"><pre>51</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	const int k_played_channel = Mix_PlayChannel(-1, m_effects.back()-&gt;MixChunk(),</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	const int k_played_channel = Mix_PlayChannel(k_any_channel, m_effects.back()-&gt;MixChunk(),</pre></td>
     </tr>
 
     <tr>
@@ -671,13 +671,13 @@
     <tr>
     <td align="right" class="lineno"><pre>65</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	assert(percent &gt;= 0   &amp;&amp; "Must be &gt;= 0");</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	ASSERT(percent &gt;= 0  , "Must be &gt;= 0");</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>66</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	assert(percent &lt;= 100 &amp;&amp; "Must be &lt;= 100");</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	ASSERT(percent &lt;= 100, "Must be &lt;= 100");</pre></td>
     </tr>
 
     <tr>
@@ -731,13 +731,13 @@
     <tr>
     <td align="right" class="lineno"><pre>75</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	assert(percent &gt;= 0   &amp;&amp; "Must be &gt;= 0");</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	ASSERT(percent &gt;= 0  , "Must be &gt;= 0");</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>76</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	assert(percent &lt;= 100 &amp;&amp; "Must be &lt;= 100");</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	ASSERT(percent &lt;= 100, "Must be &lt;= 100");</pre></td>
     </tr>
 
     <tr>
@@ -911,7 +911,7 @@
     <tr>
     <td align="right" class="lineno"><pre>105</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>		const int k_played_music = Mix_PlayMusic(m_current_music-&gt;MixMusic(), -1);</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>		const int k_played_music = Mix_PlayMusic(m_current_music-&gt;MixMusic(), k_infinite_loop);</pre></td>
     </tr>
 
     <tr>
@@ -989,7 +989,7 @@
     <tr>
     <td align="right" class="lineno"><pre>118</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	assert((times == k_all_channels || times &gt;= 1) &amp;&amp; "Must be k_all_channels or &gt;= 1");</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	ASSERT(times &gt;= 1, "Must be &gt;= 1");</pre></td>
     </tr>
 
     <tr>

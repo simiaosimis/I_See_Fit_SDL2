@@ -112,7 +112,7 @@
       <div id="menu" dir="rtl">
        <a href="index.html">Defect list</a>
        <br>
-<a href='1.html#line-13'> constStatement 13</a><a href='1.html#line-15'> constStatement 15</a><a href='1.html#line-48'> incorrectStringBooleanError 48</a>
+<a href='1.html#line-13'> constStatement 13</a><a href='1.html#line-15'> constStatement 15</a>
       </div>
       <div id="content">
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
@@ -228,7 +228,7 @@
 111
 112
 113</pre></div></td><td class="code"><div class="highlight"><pre><a name="line-1"></a><span class="cp">#include &quot;Animation.h&quot;</span>
-<a name="line-2"></a><span class="cp">#include &lt;cassert&gt;</span>
+<a name="line-2"></a><span class="cp">#include &quot;util/Assert.h&quot;</span>
 <a name="line-3"></a>
 <a name="line-4"></a><span class="n">Animation</span><span class="o">::</span><span class="n">Animation</span><span class="p">(</span><span class="k">const</span> <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="k">const</span> <span class="kt">int</span> <span class="n">y</span><span class="p">,</span> <span class="k">const</span> <span class="kt">int</span> <span class="n">sprite_width</span><span class="p">,</span> <span class="k">const</span> <span class="kt">int</span> <span class="n">sprite_height</span><span class="p">,</span>
 <a name="line-5"></a>		<span class="k">const</span> <span class="kt">int</span> <span class="n">number_of_images</span><span class="p">,</span> <span class="k">const</span> <span class="kt">double</span> <span class="n">total_time</span><span class="p">)</span> <span class="o">:</span>
@@ -243,16 +243,16 @@
 </span><a name="line-14"></a>	<span class="n">m_total_time</span><span class="p">{</span><span class="n">total_time</span><span class="p">},</span>
 <a name="line-15"></a><span class="hll">	<span class="n">m_animation_count</span><span class="p">{</span><span class="mi">0</span><span class="p">}</span><span class='error2'>&lt;--- Redundant code: Found a statement that begins with numeric constant</span>
 </span><a name="line-16"></a><span class="p">{</span>
-<a name="line-17"></a>	<span class="n">assert</span><span class="p">(</span><span class="n">m_x</span> <span class="o">&gt;=</span> <span class="mi">0</span>					 <span class="o">&amp;&amp;</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
-<a name="line-18"></a>	<span class="n">assert</span><span class="p">(</span><span class="n">m_y</span> <span class="o">&gt;=</span> <span class="mi">0</span>					 <span class="o">&amp;&amp;</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
-<a name="line-19"></a>	<span class="n">assert</span><span class="p">(</span><span class="n">m_initial_x</span> <span class="o">&gt;=</span> <span class="mi">0</span>			 <span class="o">&amp;&amp;</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
-<a name="line-20"></a>	<span class="n">assert</span><span class="p">(</span><span class="n">m_initial_y</span> <span class="o">&gt;=</span> <span class="mi">0</span>			 <span class="o">&amp;&amp;</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
-<a name="line-21"></a>	<span class="n">assert</span><span class="p">(</span><span class="n">m_sprite_width</span> <span class="o">&gt;=</span> <span class="mi">0</span>		 <span class="o">&amp;&amp;</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
-<a name="line-22"></a>	<span class="n">assert</span><span class="p">(</span><span class="n">m_sprite_height</span> <span class="o">&gt;=</span> <span class="mi">0</span>		 <span class="o">&amp;&amp;</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
-<a name="line-23"></a>	<span class="n">assert</span><span class="p">(</span><span class="n">m_number_of_images</span> <span class="o">&gt;=</span> <span class="mi">1</span>	 <span class="o">&amp;&amp;</span> <span class="s">&quot;Must be &gt;= 1&quot;</span><span class="p">);</span>
-<a name="line-24"></a>	<span class="n">assert</span><span class="p">(</span><span class="n">m_total_elapsed_time</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
-<a name="line-25"></a>	<span class="n">assert</span><span class="p">(</span><span class="n">m_total_time</span> <span class="o">&gt;=</span> <span class="mi">0</span>		 <span class="o">&amp;&amp;</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
-<a name="line-26"></a>	<span class="n">assert</span><span class="p">(</span><span class="n">m_animation_count</span> <span class="o">&gt;=</span> <span class="mi">0</span>	 <span class="o">&amp;&amp;</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
+<a name="line-17"></a>	<span class="n">ASSERT</span><span class="p">(</span><span class="n">m_x</span> <span class="o">&gt;=</span> <span class="mi">0</span>					<span class="p">,</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
+<a name="line-18"></a>	<span class="n">ASSERT</span><span class="p">(</span><span class="n">m_y</span> <span class="o">&gt;=</span> <span class="mi">0</span>					<span class="p">,</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
+<a name="line-19"></a>	<span class="n">ASSERT</span><span class="p">(</span><span class="n">m_initial_x</span> <span class="o">&gt;=</span> <span class="mi">0</span>			<span class="p">,</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
+<a name="line-20"></a>	<span class="n">ASSERT</span><span class="p">(</span><span class="n">m_initial_y</span> <span class="o">&gt;=</span> <span class="mi">0</span>			<span class="p">,</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
+<a name="line-21"></a>	<span class="n">ASSERT</span><span class="p">(</span><span class="n">m_sprite_width</span> <span class="o">&gt;=</span> <span class="mi">0</span>		<span class="p">,</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
+<a name="line-22"></a>	<span class="n">ASSERT</span><span class="p">(</span><span class="n">m_sprite_height</span> <span class="o">&gt;=</span> <span class="mi">0</span>		<span class="p">,</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
+<a name="line-23"></a>	<span class="n">ASSERT</span><span class="p">(</span><span class="n">m_number_of_images</span> <span class="o">&gt;=</span> <span class="mi">1</span>	<span class="p">,</span> <span class="s">&quot;Must be &gt;= 1&quot;</span><span class="p">);</span>
+<a name="line-24"></a>	<span class="n">ASSERT</span><span class="p">(</span><span class="n">m_total_elapsed_time</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
+<a name="line-25"></a>	<span class="n">ASSERT</span><span class="p">(</span><span class="n">m_total_time</span> <span class="o">&gt;=</span> <span class="mi">0</span>		<span class="p">,</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
+<a name="line-26"></a>	<span class="n">ASSERT</span><span class="p">(</span><span class="n">m_animation_count</span> <span class="o">&gt;=</span> <span class="mi">0</span>	<span class="p">,</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
 <a name="line-27"></a><span class="p">}</span>
 <a name="line-28"></a>
 <a name="line-29"></a><span class="n">Animation</span><span class="o">::~</span><span class="n">Animation</span><span class="p">()</span> <span class="p">{</span>
@@ -274,8 +274,8 @@
 <a name="line-45"></a>		<span class="c1">// Apparently defines the max horizontal sprites in the spritesheet.</span>
 <a name="line-46"></a>		<span class="c1">/// @todo Be sure what k_animation_limit does. </span>
 <a name="line-47"></a>		<span class="k">const</span> <span class="kt">int</span> <span class="n">k_animation_limit</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
-<a name="line-48"></a><span class="hll">		<span class="n">assert</span><span class="p">(</span><span class="n">k_animation_limit</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span><span class='error2'>&lt;--- A boolean comparison with the string literal "Must be >= 0" is always true.</span>
-</span><a name="line-49"></a>
+<a name="line-48"></a>		<span class="n">ASSERT</span><span class="p">(</span><span class="n">k_animation_limit</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
+<a name="line-49"></a>
 <a name="line-50"></a>		<span class="k">if</span><span class="p">(</span><span class="n">m_animation_count</span> <span class="o">&lt;=</span> <span class="n">m_number_of_images</span><span class="p">)</span> <span class="p">{</span>
 <a name="line-51"></a>			<span class="k">if</span><span class="p">(</span><span class="n">m_x</span> <span class="o">&lt;</span> <span class="n">k_animation_limit</span><span class="p">)</span> <span class="p">{</span>
 <a name="line-52"></a>				<span class="n">m_x</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
@@ -308,18 +308,18 @@
 <a name="line-79"></a>	<span class="n">m_total_time</span> <span class="o">=</span> <span class="n">total_time</span><span class="p">;</span>
 <a name="line-80"></a>	<span class="n">m_animation_count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 <a name="line-81"></a>
-<a name="line-82"></a>	<span class="n">assert</span><span class="p">(</span><span class="n">m_x</span> <span class="o">&gt;=</span> <span class="mi">0</span>					 <span class="o">&amp;&amp;</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
-<a name="line-83"></a>	<span class="n">assert</span><span class="p">(</span><span class="n">m_y</span> <span class="o">&gt;=</span> <span class="mi">0</span>					 <span class="o">&amp;&amp;</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
-<a name="line-84"></a>	<span class="n">assert</span><span class="p">(</span><span class="n">m_initial_x</span> <span class="o">&gt;=</span> <span class="mi">0</span>			 <span class="o">&amp;&amp;</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
-<a name="line-85"></a>	<span class="n">assert</span><span class="p">(</span><span class="n">m_initial_y</span> <span class="o">&gt;=</span> <span class="mi">0</span>			 <span class="o">&amp;&amp;</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
-<a name="line-86"></a>	<span class="n">assert</span><span class="p">(</span><span class="n">m_number_of_images</span> <span class="o">&gt;=</span> <span class="mi">1</span>	 <span class="o">&amp;&amp;</span> <span class="s">&quot;Must be &gt;= 1&quot;</span><span class="p">);</span>
-<a name="line-87"></a>	<span class="n">assert</span><span class="p">(</span><span class="n">m_total_time</span> <span class="o">&gt;=</span> <span class="mi">0</span>		 <span class="o">&amp;&amp;</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
-<a name="line-88"></a>	<span class="n">assert</span><span class="p">(</span><span class="n">m_animation_count</span> <span class="o">&gt;=</span> <span class="mi">0</span>	 <span class="o">&amp;&amp;</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
+<a name="line-82"></a>	<span class="n">ASSERT</span><span class="p">(</span><span class="n">m_x</span> <span class="o">&gt;=</span> <span class="mi">0</span>				  <span class="p">,</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
+<a name="line-83"></a>	<span class="n">ASSERT</span><span class="p">(</span><span class="n">m_y</span> <span class="o">&gt;=</span> <span class="mi">0</span>				  <span class="p">,</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
+<a name="line-84"></a>	<span class="n">ASSERT</span><span class="p">(</span><span class="n">m_initial_x</span> <span class="o">&gt;=</span> <span class="mi">0</span>		  <span class="p">,</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
+<a name="line-85"></a>	<span class="n">ASSERT</span><span class="p">(</span><span class="n">m_initial_y</span> <span class="o">&gt;=</span> <span class="mi">0</span>		  <span class="p">,</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
+<a name="line-86"></a>	<span class="n">ASSERT</span><span class="p">(</span><span class="n">m_number_of_images</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">,</span> <span class="s">&quot;Must be &gt;= 1&quot;</span><span class="p">);</span>
+<a name="line-87"></a>	<span class="n">ASSERT</span><span class="p">(</span><span class="n">m_total_time</span> <span class="o">&gt;=</span> <span class="mi">0</span>	  <span class="p">,</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
+<a name="line-88"></a>	<span class="n">ASSERT</span><span class="p">(</span><span class="n">m_animation_count</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="p">,</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
 <a name="line-89"></a><span class="p">}</span>
 <a name="line-90"></a>
 <a name="line-91"></a><span class="kt">void</span> <span class="n">Animation</span><span class="o">::</span><span class="n">UpdateClip</span><span class="p">(</span><span class="n">SDL_Rect</span><span class="o">&amp;</span> <span class="n">clip</span><span class="p">,</span> <span class="k">const</span> <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="k">const</span> <span class="kt">int</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-92"></a>	<span class="n">assert</span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
-<a name="line-93"></a>	<span class="n">assert</span><span class="p">(</span><span class="n">y</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
+<a name="line-92"></a>	<span class="n">ASSERT</span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
+<a name="line-93"></a>	<span class="n">ASSERT</span><span class="p">(</span><span class="n">y</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
 <a name="line-94"></a>
 <a name="line-95"></a>	<span class="n">clip</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
 <a name="line-96"></a>	<span class="n">clip</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="p">;</span>
@@ -329,7 +329,7 @@
 <a name="line-100"></a>
 <a name="line-101"></a><span class="kt">int</span> <span class="n">Animation</span><span class="o">::</span><span class="n">CurrentFrame</span><span class="p">()</span> <span class="p">{</span>
 <a name="line-102"></a>	<span class="k">const</span> <span class="kt">int</span> <span class="n">k_current_frame</span> <span class="o">=</span> <span class="n">m_animation_count</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
-<a name="line-103"></a>	<span class="n">assert</span><span class="p">(</span><span class="n">k_current_frame</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
+<a name="line-103"></a>	<span class="n">ASSERT</span><span class="p">(</span><span class="n">k_current_frame</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
 <a name="line-104"></a>	<span class="k">return</span> <span class="n">k_current_frame</span><span class="p">;</span>
 <a name="line-105"></a><span class="p">}</span>
 <a name="line-106"></a>
@@ -337,8 +337,8 @@
 <a name="line-108"></a>	<span class="n">m_sprite_width</span> <span class="o">=</span> <span class="n">width</span><span class="p">;</span>
 <a name="line-109"></a>	<span class="n">m_sprite_height</span> <span class="o">=</span> <span class="n">height</span><span class="p">;</span>
 <a name="line-110"></a>
-<a name="line-111"></a>	<span class="n">assert</span><span class="p">(</span><span class="n">m_sprite_width</span> <span class="o">&gt;=</span> <span class="mi">0</span>	<span class="o">&amp;&amp;</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
-<a name="line-112"></a>	<span class="n">assert</span><span class="p">(</span><span class="n">m_sprite_height</span> <span class="o">&gt;=</span> <span class="mi">0</span>	<span class="o">&amp;&amp;</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
+<a name="line-111"></a>	<span class="n">ASSERT</span><span class="p">(</span><span class="n">m_sprite_width</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="p">,</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
+<a name="line-112"></a>	<span class="n">ASSERT</span><span class="p">(</span><span class="n">m_sprite_height</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
 <a name="line-113"></a><span class="p">}</span>
 </pre></div>
 </td></tr></table>

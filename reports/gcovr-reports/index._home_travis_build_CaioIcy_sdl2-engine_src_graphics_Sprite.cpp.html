@@ -265,7 +265,7 @@
             <td></td>
             <td class="headerName">Branches:</td>
             <td class="headerTableEntry">0</td>
-            <td class="headerTableEntry">138</td>
+            <td class="headerTableEntry">146</td>
             <td class="headerTableEntry" style="background-color:LightPink">0.0 %</td>
           </tr>
         </table>
@@ -293,19 +293,19 @@
     <tr>
     <td align="right" class="lineno"><pre>2</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>#include &lt;cassert&gt;</pre></td>
+    <td align="left" class="src "><pre>#include "engine/Game.h"</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>3</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>#include "engine/Game.h"</pre></td>
+    <td align="left" class="src "><pre>#include "util/Logger.h"</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>4</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>#include "util/Logger.h"</pre></td>
+    <td align="left" class="src "><pre>#include "util/Assert.h"</pre></td>
     </tr>
 
     <tr>
@@ -389,13 +389,13 @@
     <tr>
     <td align="right" class="lineno"><pre>18</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	assert(width &gt;= 0 &amp;&amp; "Must be &gt;= 0");</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	ASSERT(width &gt;= 0 , "Must be &gt;= 0");</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>19</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	assert(height &gt;= 0 &amp;&amp; "Must be &gt;= 0");</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	ASSERT(height &gt;= 0, "Must be &gt;= 0");</pre></td>
     </tr>
 
     <tr>
@@ -485,13 +485,13 @@
     <tr>
     <td align="right" class="lineno"><pre>34</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	assert(width &gt;= 0 &amp;&amp; "Must be &gt;= 0");</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	ASSERT(width &gt;= 0 , "Must be &gt;= 0");</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>35</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	assert(height &gt;= 0 &amp;&amp; "Must be &gt;= 0");</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	ASSERT(height &gt;= 0, "Must be &gt;= 0");</pre></td>
     </tr>
 
     <tr>
@@ -887,7 +887,7 @@
     <tr>
     <td align="right" class="lineno"><pre>101</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	assert(width_ &gt;= 0 &amp;&amp; "Must be &gt;= 0");</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	ASSERT(width_ &gt;= 0, "Must be &gt;= 0");</pre></td>
     </tr>
 
     <tr>
@@ -917,7 +917,7 @@
     <tr>
     <td align="right" class="lineno"><pre>106</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	assert(height_ &gt;= 0 &amp;&amp; "Must be &gt;= 0");</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	ASSERT(height_ &gt;= 0, "Must be &gt;= 0");</pre></td>
     </tr>
 
     <tr>
@@ -947,7 +947,7 @@
     <tr>
     <td align="right" class="lineno"><pre>111</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	assert(Game::Instance().GetRenderer()-&gt;SdlRenderer() != nullptr &amp;&amp; "Window renderer should not be null!");</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	ASSERT(Game::Instance().GetRenderer()-&gt;SdlRenderer() != nullptr, "Window renderer should not be null!");</pre></td>
     </tr>
 
     <tr>

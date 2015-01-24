@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v27</span>
+   &#160;<span id="projectnumber">v28</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -92,9 +92,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <a href="Sprite_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Sprite_8h.html">graphics/Sprite.h</a>&quot;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;cassert&gt;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Game_8h.html">engine/Game.h</a>&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Logger_8h.html">util/Logger.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Game_8h.html">engine/Game.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Logger_8h.html">util/Logger.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Assert_8h.html">util/Assert.h</a>&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
 <div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classSprite.html#a0c5597fedd9b09878ec8acddca54c2f7">    6</a></span>&#160;<a class="code" href="classSprite.html#a0c5597fedd9b09878ec8acddca54c2f7">Sprite::Sprite</a>(<span class="keyword">const</span> std::string&amp; path_) :</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    sdlTexture(nullptr),</div>
@@ -108,8 +108,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="classSprite.html#a5fe515e7c3a54a8d82d27612ee6dc4c4">setBlendMode</a>(SDL_BLENDMODE_BLEND);</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="classSprite.html#a59cf52a8669c1b91a47b00ee32a6bfaf">setAlpha</a>(255);</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    assert(<a class="code" href="classSprite.html#a0a3364944c5e361fc9e7ae406224d682">width</a> &gt;= 0 &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    assert(<a class="code" href="classSprite.html#a1f07c8f2080c193759aec0e13503d7ab">height</a> &gt;= 0 &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(<a class="code" href="classSprite.html#a0a3364944c5e361fc9e7ae406224d682">width</a> &gt;= 0 , <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(<a class="code" href="classSprite.html#a1f07c8f2080c193759aec0e13503d7ab">height</a> &gt;= 0, <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
 <div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classSprite.html#a29730aadf31a6433746f5fa5bee9550f">   22</a></span>&#160;<a class="code" href="classSprite.html#a0c5597fedd9b09878ec8acddca54c2f7">Sprite::Sprite</a>(SDL_Surface* <span class="keyword">const</span> surface_) :</div>
@@ -124,8 +124,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="Logger_8h.html#adb146b8b8f51bb5055c2db742b57bcd2">log_error</a>() &lt;&lt; <span class="stringliteral">&quot;Sprite load failed: &quot;</span> &lt;&lt; this-&gt;<a class="code" href="classSprite.html#a2bd9395c3ebb407e632723c3aae2a267">path</a>;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    assert(<a class="code" href="classSprite.html#a0a3364944c5e361fc9e7ae406224d682">width</a> &gt;= 0 &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    assert(<a class="code" href="classSprite.html#a1f07c8f2080c193759aec0e13503d7ab">height</a> &gt;= 0 &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(<a class="code" href="classSprite.html#a0a3364944c5e361fc9e7ae406224d682">width</a> &gt;= 0 , <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(<a class="code" href="classSprite.html#a1f07c8f2080c193759aec0e13503d7ab">height</a> &gt;= 0, <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
 <div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classSprite.html#a8accab430f9d90ae5117b57d67e32b84">   38</a></span>&#160;<a class="code" href="classSprite.html#a8accab430f9d90ae5117b57d67e32b84">Sprite::~Sprite</a>() {</div>
@@ -191,17 +191,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
 <div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="classSprite.html#aaffa2ba841e7aee9f5513777599b7450">  100</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSprite.html#aaffa2ba841e7aee9f5513777599b7450">Sprite::setWidth</a>(<span class="keywordtype">int</span> width_) {</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    assert(width_ &gt;= 0 &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(width_ &gt;= 0, <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    this-&gt;<a class="code" href="classSprite.html#a0a3364944c5e361fc9e7ae406224d682">width</a> = width_;</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
 <div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="classSprite.html#ac488c471dd289b14c4c3b64937b3e42d">  105</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSprite.html#ac488c471dd289b14c4c3b64937b3e42d">Sprite::setHeight</a>(<span class="keywordtype">int</span> height_) {</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    assert(height_ &gt;= 0 &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(height_ &gt;= 0, <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    this-&gt;<a class="code" href="classSprite.html#a1f07c8f2080c193759aec0e13503d7ab">height</a> = height_;</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
 <div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="classSprite.html#a98bb8afceb93d82270c9e5e7e8f9b49d">  110</a></span>&#160;SDL_Texture* <a class="code" href="classSprite.html#a98bb8afceb93d82270c9e5e7e8f9b49d">Sprite::surfaceToTexture</a>(SDL_Surface* <span class="keyword">const</span> surface_) {</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    assert(<a class="code" href="classGame.html#a0b3ad989fe67e72b4b6b2f36a059479a">Game::Instance</a>().GetRenderer()-&gt;SdlRenderer() != <span class="keyword">nullptr</span> &amp;&amp; <span class="stringliteral">&quot;Window renderer should not be null!&quot;</span>);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(<a class="code" href="classGame.html#a0b3ad989fe67e72b4b6b2f36a059479a">Game::Instance</a>().GetRenderer()-&gt;SdlRenderer() != <span class="keyword">nullptr</span>, <span class="stringliteral">&quot;Window renderer should not be null!&quot;</span>);</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="comment">// The final texture.</span></div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    SDL_Texture* newTexture = <span class="keyword">nullptr</span>;</div>
@@ -280,8 +280,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classSprite_html_a0a3364944c5e361fc9e7ae406224d682"><div class="ttname"><a href="classSprite.html#a0a3364944c5e361fc9e7ae406224d682">Sprite::width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition:</b> <a href="Sprite_8h_source.html#l00087">Sprite.h:87</a></div></div>
 <div class="ttc" id="classSprite_html_a546d109413d8f3541ffde26701075bd1"><div class="ttname"><a href="classSprite.html#a546d109413d8f3541ffde26701075bd1">Sprite::sdlTexture</a></div><div class="ttdeci">SDL_Texture * sdlTexture</div><div class="ttdef"><b>Definition:</b> <a href="Sprite_8h_source.html#l00083">Sprite.h:83</a></div></div>
 <div class="ttc" id="Sprite_8h_html"><div class="ttname"><a href="Sprite_8h.html">Sprite.h</a></div></div>
+<div class="ttc" id="Assert_8h_html_ab1899199386b1542d1111168ca847e9c"><div class="ttname"><a href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a></div><div class="ttdeci">#define ASSERT(expression, message)</div><div class="ttdef"><b>Definition:</b> <a href="Assert_8h_source.html#l00006">Assert.h:6</a></div></div>
 <div class="ttc" id="classRenderer_html_a872fef15d8f3bcd45290df3198c5991e"><div class="ttname"><a href="classRenderer.html#a872fef15d8f3bcd45290df3198c5991e">Renderer::SdlRenderer</a></div><div class="ttdeci">SDL_Renderer * SdlRenderer()</div><div class="ttdef"><b>Definition:</b> <a href="Renderer_8cpp_source.html#l00059">Renderer.cpp:59</a></div></div>
 <div class="ttc" id="classGame_html_a941f014b7e939ffe63a07343ad72c051"><div class="ttname"><a href="classGame.html#a941f014b7e939ffe63a07343ad72c051">Game::GetRenderer</a></div><div class="ttdeci">Renderer * GetRenderer()</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cpp_source.html#l00149">Game.cpp:149</a></div></div>
+<div class="ttc" id="Assert_8h_html"><div class="ttname"><a href="Assert_8h.html">Assert.h</a></div></div>
 <div class="ttc" id="classSprite_html_a0aa4e1217226e29f1181e8d44c48dea3"><div class="ttname"><a href="classSprite.html#a0aa4e1217226e29f1181e8d44c48dea3">Sprite::getAlpha</a></div><div class="ttdeci">double getAlpha()</div><div class="ttdef"><b>Definition:</b> <a href="Sprite_8cpp_source.html#l00142">Sprite.cpp:142</a></div></div>
 <div class="ttc" id="Logger_8h_html"><div class="ttname"><a href="Logger_8h.html">Logger.h</a></div></div>
 <div class="ttc" id="classGame_html_a0b3ad989fe67e72b4b6b2f36a059479a"><div class="ttname"><a href="classGame.html#a0b3ad989fe67e72b4b6b2f36a059479a">Game::Instance</a></div><div class="ttdeci">static Game &amp; Instance()</div><div class="ttdoc">Singleton implementation for Game. </div><div class="ttdef"><b>Definition:</b> <a href="Game_8cpp_source.html#l00016">Game.cpp:16</a></div></div>
@@ -292,7 +294,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 24 2015 03:41:35 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jan 24 2015 04:04:51 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

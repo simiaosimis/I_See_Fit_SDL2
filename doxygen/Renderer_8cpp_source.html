@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v27</span>
+   &#160;<span id="projectnumber">v28</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -92,9 +92,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <a href="Renderer_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Renderer_8h.html">graphics/Renderer.h</a>&quot;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;cassert&gt;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Configuration_8h.html">util/Configuration.h</a>&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Logger_8h.html">util/Logger.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Configuration_8h.html">util/Configuration.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Logger_8h.html">util/Logger.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Assert_8h.html">util/Assert.h</a>&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
 <div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classRenderer.html#a432676947d6b8128562b0adc6d631268">    6</a></span>&#160;<a class="code" href="classRenderer.html#a432676947d6b8128562b0adc6d631268">Renderer::Renderer</a>(SDL_Window* <span class="keyword">const</span> sdl_window, <span class="keyword">const</span> Uint32 flags) :</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    m_sdl_renderer{SDL_CreateRenderer(sdl_window, -1, flags)}</div>
@@ -127,11 +127,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
 <div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classRenderer.html#a16a84d028e9b34f516a171d5403be477">   36</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classRenderer.html#a16a84d028e9b34f516a171d5403be477">Renderer::SetLogicalSize</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> size) {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    assert(size &gt;= 0 &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(size &gt;= 0, <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">// Just a precaution, so there is no abuse on the size.</span></div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> k_safe_size = 10;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    assert(size &lt; k_safe_size &amp;&amp; <span class="stringliteral">&quot;Trying to set logical size for a value too big (&gt;= 10).&quot;</span>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(size &lt; k_safe_size, <span class="stringliteral">&quot;Trying to set logical size for a value too big.&quot;</span>);</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> k_set_size = SDL_RenderSetLogicalSize(<a class="code" href="classRenderer.html#a4f4f85c7fc5493543521463ecb4e2a36">m_sdl_renderer</a>,</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="classConfiguration.html#aa55f2fb145dfe12ecc91eb2f76b6e0a8">Configuration::ResolutionWidth</a>() * size, <a class="code" href="classConfiguration.html#a002ef2d0a384e4d7ff04dd2d16ae3172">Configuration::ResolutionHeight</a>() * size);</div>
@@ -161,8 +161,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="Logger_8h_html_adb146b8b8f51bb5055c2db742b57bcd2"><div class="ttname"><a href="Logger_8h.html#adb146b8b8f51bb5055c2db742b57bcd2">log_error</a></div><div class="ttdeci">constexpr log_function_ptr log_error</div><div class="ttdef"><b>Definition:</b> <a href="Logger_8h_source.html#l00083">Logger.h:83</a></div></div>
 <div class="ttc" id="classRenderer_html_a4f4f85c7fc5493543521463ecb4e2a36"><div class="ttname"><a href="classRenderer.html#a4f4f85c7fc5493543521463ecb4e2a36">Renderer::m_sdl_renderer</a></div><div class="ttdeci">SDL_Renderer * m_sdl_renderer</div><div class="ttdef"><b>Definition:</b> <a href="Renderer_8h_source.html#l00068">Renderer.h:68</a></div></div>
 <div class="ttc" id="classRenderer_html_a16a84d028e9b34f516a171d5403be477"><div class="ttname"><a href="classRenderer.html#a16a84d028e9b34f516a171d5403be477">Renderer::SetLogicalSize</a></div><div class="ttdeci">void SetLogicalSize(const int size)</div><div class="ttdoc">Rescales the renderization. </div><div class="ttdef"><b>Definition:</b> <a href="Renderer_8cpp_source.html#l00036">Renderer.cpp:36</a></div></div>
+<div class="ttc" id="Assert_8h_html_ab1899199386b1542d1111168ca847e9c"><div class="ttname"><a href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a></div><div class="ttdeci">#define ASSERT(expression, message)</div><div class="ttdef"><b>Definition:</b> <a href="Assert_8h_source.html#l00006">Assert.h:6</a></div></div>
 <div class="ttc" id="classRenderer_html_aeedbc2ffdccf51fa1384100446488746"><div class="ttname"><a href="classRenderer.html#aeedbc2ffdccf51fa1384100446488746">Renderer::Clear</a></div><div class="ttdeci">void Clear()</div><div class="ttdoc">Clears previous rendering. </div><div class="ttdef"><b>Definition:</b> <a href="Renderer_8cpp_source.html#l00020">Renderer.cpp:20</a></div></div>
 <div class="ttc" id="classRenderer_html_a872fef15d8f3bcd45290df3198c5991e"><div class="ttname"><a href="classRenderer.html#a872fef15d8f3bcd45290df3198c5991e">Renderer::SdlRenderer</a></div><div class="ttdeci">SDL_Renderer * SdlRenderer()</div><div class="ttdef"><b>Definition:</b> <a href="Renderer_8cpp_source.html#l00059">Renderer.cpp:59</a></div></div>
+<div class="ttc" id="Assert_8h_html"><div class="ttname"><a href="Assert_8h.html">Assert.h</a></div></div>
 <div class="ttc" id="Logger_8h_html"><div class="ttname"><a href="Logger_8h.html">Logger.h</a></div></div>
 <div class="ttc" id="Renderer_8h_html"><div class="ttname"><a href="Renderer_8h.html">Renderer.h</a></div></div>
 <div class="ttc" id="Configuration_8h_html"><div class="ttname"><a href="Configuration_8h.html">Configuration.h</a></div></div>
@@ -170,7 +172,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 24 2015 03:41:35 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jan 24 2015 04:04:51 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -173,9 +173,9 @@
 56
 57
 58</pre></div></td><td class="code"><div class="highlight"><pre><a name="line-1"></a><span class="cp">#include &quot;engine/Camera.h&quot;</span>
-<a name="line-2"></a><span class="cp">#include &lt;cassert&gt;</span>
-<a name="line-3"></a><span class="cp">#include &quot;engine/GameObject.h&quot;</span>
-<a name="line-4"></a><span class="cp">#include &quot;util/Configuration.h&quot;</span>
+<a name="line-2"></a><span class="cp">#include &quot;engine/GameObject.h&quot;</span>
+<a name="line-3"></a><span class="cp">#include &quot;util/Configuration.h&quot;</span>
+<a name="line-4"></a><span class="cp">#include &quot;util/Assert.h&quot;</span>
 <a name="line-5"></a>
 <a name="line-6"></a><span class="n">Camera</span><span class="o">::</span><span class="n">Camera</span><span class="p">(</span><span class="n">GameObject</span><span class="o">*</span> <span class="k">const</span> <span class="n">game_object</span><span class="p">)</span><span class="o">:</span>
 <a name="line-7"></a>	<span class="n">m_game_object</span><span class="p">{</span><span class="n">game_object</span><span class="p">},</span>
@@ -225,8 +225,8 @@
 <a name="line-51"></a><span class="p">}</span>
 <a name="line-52"></a>
 <a name="line-53"></a><span class="kt">void</span> <span class="n">Camera</span><span class="o">::</span><span class="n">SetLevelDimensions</span><span class="p">(</span><span class="k">const</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="k">const</span> <span class="kt">int</span> <span class="n">height</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-54"></a>	<span class="n">assert</span><span class="p">(</span><span class="n">width</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
-<a name="line-55"></a>	<span class="n">assert</span><span class="p">(</span><span class="n">height</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
+<a name="line-54"></a>	<span class="n">ASSERT</span><span class="p">(</span><span class="n">width</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="p">,</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
+<a name="line-55"></a>	<span class="n">ASSERT</span><span class="p">(</span><span class="n">height</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
 <a name="line-56"></a>	<span class="n">m_level_width</span> <span class="o">=</span> <span class="n">width</span><span class="p">;</span>
 <a name="line-57"></a>	<span class="n">m_level_height</span> <span class="o">=</span> <span class="n">height</span><span class="p">;</span>
 <a name="line-58"></a><span class="p">}</span>

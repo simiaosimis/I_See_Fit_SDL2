@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v27</span>
+   &#160;<span id="projectnumber">v28</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -92,7 +92,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <a href="Animation_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Animation_8h.html">Animation.h</a>&quot;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;cassert&gt;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Assert_8h.html">util/Assert.h</a>&quot;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
 <div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="classAnimation.html#af43c723abf0f83a1bd71dd83cff7841e">    4</a></span>&#160;<a class="code" href="classAnimation.html#af43c723abf0f83a1bd71dd83cff7841e">Animation::Animation</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> x, <span class="keyword">const</span> <span class="keywordtype">int</span> y, <span class="keyword">const</span> <span class="keywordtype">int</span> sprite_width, <span class="keyword">const</span> <span class="keywordtype">int</span> sprite_height,</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> number_of_images, <span class="keyword">const</span> <span class="keywordtype">double</span> total_time) :</div>
@@ -107,16 +107,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    m_total_time{total_time},</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    m_animation_count{0}</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    assert(m_x &gt;= 0                  &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    assert(m_y &gt;= 0                  &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    assert(m_initial_x &gt;= 0          &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    assert(m_initial_y &gt;= 0          &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    assert(m_sprite_width &gt;= 0       &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    assert(m_sprite_height &gt;= 0      &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    assert(m_number_of_images &gt;= 1   &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 1&quot;</span>);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    assert(m_total_elapsed_time &gt;= 0 &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    assert(m_total_time &gt;= 0         &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    assert(m_animation_count &gt;= 0    &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(m_x &gt;= 0                 , <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(m_y &gt;= 0                 , <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(m_initial_x &gt;= 0         , <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(m_initial_y &gt;= 0         , <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(m_sprite_width &gt;= 0      , <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(m_sprite_height &gt;= 0     , <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(m_number_of_images &gt;= 1  , <span class="stringliteral">&quot;Must be &gt;= 1&quot;</span>);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(m_total_elapsed_time &gt;= 0, <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(m_total_time &gt;= 0        , <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(m_animation_count &gt;= 0   , <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
 <div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classAnimation.html#a401b68793d4fbf48d481c030ee4b2a16">   29</a></span>&#160;<a class="code" href="classAnimation.html#a401b68793d4fbf48d481c030ee4b2a16">Animation::~Animation</a>() {</div>
@@ -137,7 +137,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="comment">// Apparently defines the max horizontal sprites in the spritesheet.</span></div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment"></span>        <span class="keyword">const</span> <span class="keywordtype">int</span> k_animation_limit = 10;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        assert(k_animation_limit &gt;= 0 &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(k_animation_limit &gt;= 0, <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="classAnimation.html#a1fc4107edaf976258ad769b23bcfd172">m_animation_count</a> &lt;= <a class="code" href="classAnimation.html#af4689e9b23f8d0db85f7b4c259457d04">m_number_of_images</a>) {</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keywordflow">if</span>(<a class="code" href="classAnimation.html#a2865bfd75a6998dbfdef9ec236941c3f">m_x</a> &lt; k_animation_limit) {</div>
@@ -171,18 +171,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="classAnimation.html#a685e8622d6e1e5f8728a7962c97650be">m_total_time</a> = total_time;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="classAnimation.html#a1fc4107edaf976258ad769b23bcfd172">m_animation_count</a> = 0;</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    assert(<a class="code" href="classAnimation.html#a2865bfd75a6998dbfdef9ec236941c3f">m_x</a> &gt;= 0                  &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    assert(<a class="code" href="classAnimation.html#a4530e5f9e7b90e17774273c22e5212bd">m_y</a> &gt;= 0                  &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    assert(<a class="code" href="classAnimation.html#a4b6af681755538265d8a021e95c47937">m_initial_x</a> &gt;= 0          &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    assert(<a class="code" href="classAnimation.html#a2aff0a2348feee0d1cee57ebf3374004">m_initial_y</a> &gt;= 0          &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    assert(<a class="code" href="classAnimation.html#af4689e9b23f8d0db85f7b4c259457d04">m_number_of_images</a> &gt;= 1   &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 1&quot;</span>);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    assert(<a class="code" href="classAnimation.html#a685e8622d6e1e5f8728a7962c97650be">m_total_time</a> &gt;= 0         &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    assert(<a class="code" href="classAnimation.html#a1fc4107edaf976258ad769b23bcfd172">m_animation_count</a> &gt;= 0    &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(<a class="code" href="classAnimation.html#a2865bfd75a6998dbfdef9ec236941c3f">m_x</a> &gt;= 0               , <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(<a class="code" href="classAnimation.html#a4530e5f9e7b90e17774273c22e5212bd">m_y</a> &gt;= 0               , <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(<a class="code" href="classAnimation.html#a4b6af681755538265d8a021e95c47937">m_initial_x</a> &gt;= 0       , <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(<a class="code" href="classAnimation.html#a2aff0a2348feee0d1cee57ebf3374004">m_initial_y</a> &gt;= 0       , <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(<a class="code" href="classAnimation.html#af4689e9b23f8d0db85f7b4c259457d04">m_number_of_images</a> &gt;= 1, <span class="stringliteral">&quot;Must be &gt;= 1&quot;</span>);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(<a class="code" href="classAnimation.html#a685e8622d6e1e5f8728a7962c97650be">m_total_time</a> &gt;= 0      , <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(<a class="code" href="classAnimation.html#a1fc4107edaf976258ad769b23bcfd172">m_animation_count</a> &gt;= 0 , <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
 <div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classAnimation.html#ac50d5816cd4a1acdf83a98945a1b57ca">   91</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classAnimation.html#ac50d5816cd4a1acdf83a98945a1b57ca">Animation::UpdateClip</a>(SDL_Rect&amp; clip, <span class="keyword">const</span> <span class="keywordtype">int</span> x, <span class="keyword">const</span> <span class="keywordtype">int</span> y) {</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    assert(x &gt;= 0 &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    assert(y &gt;= 0 &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(x &gt;= 0, <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(y &gt;= 0, <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    clip.x = x;</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    clip.y = y;</div>
@@ -192,7 +192,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
 <div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="classAnimation.html#af77b1bda4e1129c743da1d32197f400d">  101</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classAnimation.html#af77b1bda4e1129c743da1d32197f400d">Animation::CurrentFrame</a>() {</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> k_current_frame = <a class="code" href="classAnimation.html#a1fc4107edaf976258ad769b23bcfd172">m_animation_count</a> + 1;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    assert(k_current_frame &gt;= 0 &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(k_current_frame &gt;= 0, <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordflow">return</span> k_current_frame;</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
@@ -200,8 +200,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <a class="code" href="classAnimation.html#adc29af12fe9271f6e3ae1c5e352b9e7d">m_sprite_width</a> = width;</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <a class="code" href="classAnimation.html#acbf3b1bdaec5696640c01049b937c864">m_sprite_height</a> = height;</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    assert(<a class="code" href="classAnimation.html#adc29af12fe9271f6e3ae1c5e352b9e7d">m_sprite_width</a> &gt;= 0  &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    assert(<a class="code" href="classAnimation.html#acbf3b1bdaec5696640c01049b937c864">m_sprite_height</a> &gt;= 0 &amp;&amp; <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(<a class="code" href="classAnimation.html#adc29af12fe9271f6e3ae1c5e352b9e7d">m_sprite_width</a> &gt;= 0 , <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(<a class="code" href="classAnimation.html#acbf3b1bdaec5696640c01049b937c864">m_sprite_height</a> &gt;= 0, <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div>
 <div class="ttc" id="classAnimation_html_a401b68793d4fbf48d481c030ee4b2a16"><div class="ttname"><a href="classAnimation.html#a401b68793d4fbf48d481c030ee4b2a16">Animation::~Animation</a></div><div class="ttdeci">~Animation()</div><div class="ttdoc">The destructor. </div><div class="ttdef"><b>Definition:</b> <a href="Animation_8cpp_source.html#l00029">Animation.cpp:29</a></div></div>
 <div class="ttc" id="classAnimation_html_a4b6af681755538265d8a021e95c47937"><div class="ttname"><a href="classAnimation.html#a4b6af681755538265d8a021e95c47937">Animation::m_initial_x</a></div><div class="ttdeci">int m_initial_x</div><div class="ttdef"><b>Definition:</b> <a href="Animation_8h_source.html#l00076">Animation.h:76</a></div></div>
@@ -212,8 +212,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classAnimation_html_a2865bfd75a6998dbfdef9ec236941c3f"><div class="ttname"><a href="classAnimation.html#a2865bfd75a6998dbfdef9ec236941c3f">Animation::m_x</a></div><div class="ttdeci">int m_x</div><div class="ttdef"><b>Definition:</b> <a href="Animation_8h_source.html#l00074">Animation.h:74</a></div></div>
 <div class="ttc" id="classAnimation_html_a408200db42a46e18f478841a8ee108d4"><div class="ttname"><a href="classAnimation.html#a408200db42a46e18f478841a8ee108d4">Animation::SetWidthHeight</a></div><div class="ttdeci">void SetWidthHeight(const int width, const int height)</div><div class="ttdoc">Changes the dimensions of the clip on the spritesheet. </div><div class="ttdef"><b>Definition:</b> <a href="Animation_8cpp_source.html#l00107">Animation.cpp:107</a></div></div>
 <div class="ttc" id="classAnimation_html_af4689e9b23f8d0db85f7b4c259457d04"><div class="ttname"><a href="classAnimation.html#af4689e9b23f8d0db85f7b4c259457d04">Animation::m_number_of_images</a></div><div class="ttdeci">int m_number_of_images</div><div class="ttdef"><b>Definition:</b> <a href="Animation_8h_source.html#l00080">Animation.h:80</a></div></div>
+<div class="ttc" id="Assert_8h_html_ab1899199386b1542d1111168ca847e9c"><div class="ttname"><a href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a></div><div class="ttdeci">#define ASSERT(expression, message)</div><div class="ttdef"><b>Definition:</b> <a href="Assert_8h_source.html#l00006">Assert.h:6</a></div></div>
 <div class="ttc" id="classAnimation_html_a1fc4107edaf976258ad769b23bcfd172"><div class="ttname"><a href="classAnimation.html#a1fc4107edaf976258ad769b23bcfd172">Animation::m_animation_count</a></div><div class="ttdeci">int m_animation_count</div><div class="ttdef"><b>Definition:</b> <a href="Animation_8h_source.html#l00084">Animation.h:84</a></div></div>
 <div class="ttc" id="classAnimation_html_a2aff0a2348feee0d1cee57ebf3374004"><div class="ttname"><a href="classAnimation.html#a2aff0a2348feee0d1cee57ebf3374004">Animation::m_initial_y</a></div><div class="ttdeci">int m_initial_y</div><div class="ttdef"><b>Definition:</b> <a href="Animation_8h_source.html#l00077">Animation.h:77</a></div></div>
+<div class="ttc" id="Assert_8h_html"><div class="ttname"><a href="Assert_8h.html">Assert.h</a></div></div>
 <div class="ttc" id="Animation_8h_html"><div class="ttname"><a href="Animation_8h.html">Animation.h</a></div></div>
 <div class="ttc" id="classAnimation_html_ac50d5816cd4a1acdf83a98945a1b57ca"><div class="ttname"><a href="classAnimation.html#ac50d5816cd4a1acdf83a98945a1b57ca">Animation::UpdateClip</a></div><div class="ttdeci">void UpdateClip(SDL_Rect &amp;clip, const int x, const int y)</div><div class="ttdoc">Updates the clip to a new position. </div><div class="ttdef"><b>Definition:</b> <a href="Animation_8cpp_source.html#l00091">Animation.cpp:91</a></div></div>
 <div class="ttc" id="classAnimation_html_af1e90acbc50f30e1a2d30fbf6438d91a"><div class="ttname"><a href="classAnimation.html#af1e90acbc50f30e1a2d30fbf6438d91a">Animation::m_total_elapsed_time</a></div><div class="ttdeci">double m_total_elapsed_time</div><div class="ttdef"><b>Definition:</b> <a href="Animation_8h_source.html#l00081">Animation.h:81</a></div></div>
@@ -224,7 +226,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 24 2015 03:41:35 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jan 24 2015 04:04:51 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
