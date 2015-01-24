@@ -1,8 +1,8 @@
 #include "AudioHandler.h"
-#include <cassert>
 #include <algorithm>
 #include "engine/Game.h"
 #include "util/Logger.h"
+#include "util/Assert.h"
 
 AudioHandler::AudioHandler() :
 	m_current_music{nullptr},
@@ -19,11 +19,11 @@ AudioHandler::~AudioHandler() {
 void AudioHandler::ChangeMusic(const std::string& path) {
 	StopMusic();
 	SetMusic(path);
-	PlayMusic(k_infinite_loop);
+	PlayMusic();
 }
 
 void AudioHandler::ChangeMusic(const std::string& path, const int times) {
-	assert(times >= 1 && "Must be >= 1");
+	ASSERT(times >= 1, "Must be >= 1");
 	StopMusic();
 	SetMusic(path);
 	PlayMusic(times);
@@ -33,7 +33,7 @@ void AudioHandler::PlaySoundEffect(const std::string& path) {
 	m_effects.push_back(Game::Instance().Resource().soundEffect(path));
 
 	const int k_play_once = 0;
-	const int k_played_channel = Mix_PlayChannel(-1, m_effects.back()->MixChunk(),
+	const int k_played_channel = Mix_PlayChannel(k_any_channel, m_effects.back()->MixChunk(),
 		k_play_once);
 	if(k_played_channel == -1) {
 		log_error() << "Failed to play sound effect on channel " << k_played_channel << ". "
@@ -44,11 +44,11 @@ void AudioHandler::PlaySoundEffect(const std::string& path) {
 }
 
 void AudioHandler::PlaySoundEffect(const std::string& path, const int times) {
-	assert((times == k_infinite_loop || times >= 2) && "Must be k_infinite_loop or >= 2");
+	ASSERT((times == k_infinite_loop || times >= 2), "Must be k_infinite_loop or >= 2. If only needed to play once, use AudioHandler::PlaySoundEffect(const std::string&)");
 
 	m_effects.push_back(Game::Instance().Resource().soundEffect(path));
 
-	const int k_played_channel = Mix_PlayChannel(-1, m_effects.back()->MixChunk(),
+	const int k_played_channel = Mix_PlayChannel(k_any_channel, m_effects.back()->MixChunk(),
 		(times - 1));
 	if(k_played_channel == -1) {
 		log_error() << "Failed to play sound effect on channel " << k_played_channel << ". "
@@ -62,8 +62,8 @@ void AudioHandler::SetMusicVolume(const int percent) {
 	/// @todo Decide whether the <= 100 assertion is necessary.
 	// No need to check for percent being above 100, SDL_Mixer already caps the volume to
 	// MIX_MAX_VOLUME.
-	assert(percent >= 0   && "Must be >= 0");
-	assert(percent <= 100 && "Must be <= 100");
+	ASSERT(percent >= 0  , "Must be >= 0");
+	ASSERT(percent <= 100, "Must be <= 100");
 	const int k_volume_value = percent * MIX_MAX_VOLUME/100;
 	Mix_VolumeMusic(k_volume_value);
 }
@@ -72,8 +72,8 @@ void AudioHandler::SetEffectsVolume(const int percent) {
 	/// @todo Decide whether the <= 100 assertion is necessary.
 	// No need to check for percent being above 100, SDL_Mixer already caps the volume to
 	// MIX_MAX_VOLUME.
-	assert(percent >= 0   && "Must be >= 0");
-	assert(percent <= 100 && "Must be <= 100");
+	ASSERT(percent >= 0  , "Must be >= 0");
+	ASSERT(percent <= 100, "Must be <= 100");
 	const int k_volume_value = percent * MIX_MAX_VOLUME/100;
 	Mix_Volume(k_all_channels, k_volume_value);
 }
@@ -102,7 +102,7 @@ void AudioHandler::ResumeEffects() {
 
 void AudioHandler::PlayMusic() {
 	if(m_current_music != nullptr) {
-		const int k_played_music = Mix_PlayMusic(m_current_music->MixMusic(), -1);
+		const int k_played_music = Mix_PlayMusic(m_current_music->MixMusic(), k_infinite_loop);
 
 		if(k_played_music == -1) {
 			log_error() << "Couldn't play music (" << m_current_music->Path() << "). "
@@ -115,7 +115,7 @@ void AudioHandler::PlayMusic() {
 }
 
 void AudioHandler::PlayMusic(const int times) {
-	assert((times == k_all_channels || times >= 1) && "Must be k_all_channels or >= 1");
+	ASSERT(times >= 1, "Must be >= 1");
 	if(m_current_music != nullptr) {
 		const int k_played_music = Mix_PlayMusic(m_current_music->MixMusic(), times);
 

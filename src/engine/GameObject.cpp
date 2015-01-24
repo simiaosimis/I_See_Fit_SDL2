@@ -1,8 +1,8 @@
 #include "engine/GameObject.h"
 #include <SDL2/SDL.h>
-#include <cassert>
 #include "engine/Game.h"
 #include "util/Logger.h"
+#include "util/Assert.h"
 
 GameObject::GameObject(const double x_, const double y_, const std::string& path_) :
     x(x_),
@@ -27,8 +27,8 @@ GameObject::GameObject(const double x_, const double y_, const std::string& path
         log_warn() << "GameObject sprite is null, width and height will be undefined.";
     }
 
-    assert(width >= 0 && "Must be >= 0");
-    assert(height >= 0 && "Must be >= 0");
+    ASSERT(width >= 0 , "Must be >= 0");
+    ASSERT(height >= 0, "Must be >= 0");
 }
 
 GameObject::GameObject(const double x_, const double y_) :

@@ -1,7 +1,7 @@
 #include "graphics/Sprite.h"
-#include <cassert>
 #include "engine/Game.h"
 #include "util/Logger.h"
+#include "util/Assert.h"
 
 Sprite::Sprite(const std::string& path_) :
 	sdlTexture(nullptr),
@@ -15,8 +15,8 @@ Sprite::Sprite(const std::string& path_) :
 	setBlendMode(SDL_BLENDMODE_BLEND);
 	setAlpha(255);
 
-	assert(width >= 0 && "Must be >= 0");
-	assert(height >= 0 && "Must be >= 0");
+	ASSERT(width >= 0 , "Must be >= 0");
+	ASSERT(height >= 0, "Must be >= 0");
 }
 
 Sprite::Sprite(SDL_Surface* const surface_) :
@@ -31,8 +31,8 @@ Sprite::Sprite(SDL_Surface* const surface_) :
 		log_error() << "Sprite load failed: " << this->path;
 	}
 
-	assert(width >= 0 && "Must be >= 0");
-	assert(height >= 0 && "Must be >= 0");
+	ASSERT(width >= 0 , "Must be >= 0");
+	ASSERT(height >= 0, "Must be >= 0");
 }
 
 Sprite::~Sprite() {
@@ -98,17 +98,17 @@ int Sprite::getHeight() {
 }
 
 void Sprite::setWidth(int width_) {
-	assert(width_ >= 0 && "Must be >= 0");
+	ASSERT(width_ >= 0, "Must be >= 0");
 	this->width = width_;
 }
 
 void Sprite::setHeight(int height_) {
-	assert(height_ >= 0 && "Must be >= 0");
+	ASSERT(height_ >= 0, "Must be >= 0");
 	this->height = height_;
 }
 
 SDL_Texture* Sprite::surfaceToTexture(SDL_Surface* const surface_) {
-	assert(Game::Instance().GetRenderer()->SdlRenderer() != nullptr && "Window renderer should not be null!");
+	ASSERT(Game::Instance().GetRenderer()->SdlRenderer() != nullptr, "Window renderer should not be null!");
 
 	// The final texture.
 	SDL_Texture* newTexture = nullptr;

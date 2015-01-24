@@ -1,7 +1,7 @@
 #include "graphics/Window.h"
-#include <cassert>
 #include "util/Logger.h"
 #include "util/Configuration.h"
+#include "util/Assert.h"
 
 Window::Window() :
 	m_sdl_window(nullptr),
@@ -68,8 +68,8 @@ void Window::Create() {
 }
 
 void Window::Resize(const int width_, const int height_) {
-	assert(width_ >= 0 && "Must be >= 0");
-	assert(height_ >= 0 && "Must be >= 0");
+	ASSERT(width_ >= 0 , "Must be >= 0");
+	ASSERT(height_ >= 0, "Must be >= 0");
 	SDL_SetWindowSize(m_sdl_window, width_, height_);
 }
 

@@ -1,7 +1,7 @@
 #include "engine/Camera.h"
-#include <cassert>
 #include "engine/GameObject.h"
 #include "util/Configuration.h"
+#include "util/Assert.h"
 
 Camera::Camera(GameObject* const game_object):
 	m_game_object{game_object},
@@ -51,8 +51,8 @@ void Camera::CentralizeOn(GameObject* const game_object) {
 }
 
 void Camera::SetLevelDimensions(const int width, const int height) {
-	assert(width >= 0 && "Must be >= 0");
-	assert(height >= 0 && "Must be >= 0");
+	ASSERT(width >= 0 , "Must be >= 0");
+	ASSERT(height >= 0, "Must be >= 0");
 	m_level_width = width;
 	m_level_height = height;
 }

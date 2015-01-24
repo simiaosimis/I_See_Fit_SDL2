@@ -1,5 +1,5 @@
 #include "util/Configuration.h"
-#include <cassert>
+#include "util/Assert.h"
 
 // Resolution = 16:10
 const int Configuration::m_resolution_width = 192;
@@ -26,13 +26,13 @@ void Configuration::Initialize() {
 	Configuration::m_screen_width = 1920 / 2;
 	Configuration::m_screen_height = 1080 / 2;
 
-	assert(Configuration::m_resolution_width >= 0 && "Must be >= 0");
-	assert(Configuration::m_resolution_height >= 0 && "Must be >= 0");
-	assert(Configuration::m_logical_render_size >= 0 && "Must be >= 0");
-	assert(Configuration::m_screen_width >= 0 && "Must be >= 0");
-	assert(Configuration::m_screen_height >= 0 && "Must be >= 0");
-	assert(Configuration::m_camera_distance_width >= 0 && "Must be >= 0");
-	assert(Configuration::m_camera_distance_height >= 0 && "Must be >= 0");
+	ASSERT(Configuration::m_resolution_width >= 0	   , "Must be >= 0");
+	ASSERT(Configuration::m_resolution_height >= 0	   , "Must be >= 0");
+	ASSERT(Configuration::m_logical_render_size >= 0   , "Must be >= 0");
+	ASSERT(Configuration::m_screen_width >= 0		   , "Must be >= 0");
+	ASSERT(Configuration::m_screen_height >= 0		   , "Must be >= 0");
+	ASSERT(Configuration::m_camera_distance_width >= 0 , "Must be >= 0");
+	ASSERT(Configuration::m_camera_distance_height >= 0, "Must be >= 0");
 }
 
 int Configuration::ResolutionWidth() {

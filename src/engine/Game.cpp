@@ -1,11 +1,11 @@
 #include "engine/Game.h"
-#include <cassert>
 #include <chrono>
 #include <memory>
 #include "util/Configuration.h"
 #include "util/Util.h"
 #include "graphics/Sprite.h"
 #include "util/Logger.h"
+#include "util/Assert.h"
 // Begin Game States includes
 #include "engine/GStatePlaceholder.h"
 // End Game States includes
@@ -141,8 +141,8 @@ void Game::ClearInputKey(const GameKeys input_key) {
 }
 
 void Game::ResizeWindow(const int width, const int height) {
-	assert(width >= 0 && "Must be >= 0");
-	assert(height >= 0 && "Must be >= 0");
+	ASSERT(width >= 0 , "Must be >= 0");
+	ASSERT(height >= 0, "Must be >= 0");
 	m_window.Resize(width, height);
 }
 

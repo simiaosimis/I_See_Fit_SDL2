@@ -1,7 +1,7 @@
 #include "graphics/Renderer.h"
-#include <cassert>
 #include "util/Configuration.h"
 #include "util/Logger.h"
+#include "util/Assert.h"
 
 Renderer::Renderer(SDL_Window* const sdl_window, const Uint32 flags) :
 	m_sdl_renderer{SDL_CreateRenderer(sdl_window, -1, flags)}
@@ -34,11 +34,11 @@ void Renderer::Render() {
 }
 
 void Renderer::SetLogicalSize(const int size) {
-	assert(size >= 0 && "Must be >= 0");
+	ASSERT(size >= 0, "Must be >= 0");
 
 	// Just a precaution, so there is no abuse on the size.
 	const int k_safe_size = 10;
-	assert(size < k_safe_size && "Trying to set logical size for a value too big (>= 10).");
+	ASSERT(size < k_safe_size, "Trying to set logical size for a value too big.");
 
 	const int k_set_size = SDL_RenderSetLogicalSize(m_sdl_renderer,
 		Configuration::ResolutionWidth() * size, Configuration::ResolutionHeight() * size);

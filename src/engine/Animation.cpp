@@ -1,5 +1,5 @@
 #include "Animation.h"
-#include <cassert>
+#include "util/Assert.h"
 
 Animation::Animation(const int x, const int y, const int sprite_width, const int sprite_height,
 		const int number_of_images, const double total_time) :
@@ -14,16 +14,16 @@ Animation::Animation(const int x, const int y, const int sprite_width, const int
 	m_total_time{total_time},
 	m_animation_count{0}
 {
-	assert(m_x >= 0					 && "Must be >= 0");
-	assert(m_y >= 0					 && "Must be >= 0");
-	assert(m_initial_x >= 0			 && "Must be >= 0");
-	assert(m_initial_y >= 0			 && "Must be >= 0");
-	assert(m_sprite_width >= 0		 && "Must be >= 0");
-	assert(m_sprite_height >= 0		 && "Must be >= 0");
-	assert(m_number_of_images >= 1	 && "Must be >= 1");
-	assert(m_total_elapsed_time >= 0 && "Must be >= 0");
-	assert(m_total_time >= 0		 && "Must be >= 0");
-	assert(m_animation_count >= 0	 && "Must be >= 0");
+	ASSERT(m_x >= 0					, "Must be >= 0");
+	ASSERT(m_y >= 0					, "Must be >= 0");
+	ASSERT(m_initial_x >= 0			, "Must be >= 0");
+	ASSERT(m_initial_y >= 0			, "Must be >= 0");
+	ASSERT(m_sprite_width >= 0		, "Must be >= 0");
+	ASSERT(m_sprite_height >= 0		, "Must be >= 0");
+	ASSERT(m_number_of_images >= 1	, "Must be >= 1");
+	ASSERT(m_total_elapsed_time >= 0, "Must be >= 0");
+	ASSERT(m_total_time >= 0		, "Must be >= 0");
+	ASSERT(m_animation_count >= 0	, "Must be >= 0");
 }
 
 Animation::~Animation() {
@@ -45,7 +45,7 @@ void Animation::Update(SDL_Rect& clip, const double delta_time) {
 		// Apparently defines the max horizontal sprites in the spritesheet.
 		/// @todo Be sure what k_animation_limit does. 
 		const int k_animation_limit = 10;
-		assert(k_animation_limit >= 0 && "Must be >= 0");
+		ASSERT(k_animation_limit >= 0, "Must be >= 0");
 
 		if(m_animation_count <= m_number_of_images) {
 			if(m_x < k_animation_limit) {
@@ -79,18 +79,18 @@ void Animation::ChangeAnimation(const int x, const int y, const int number_of_im
 	m_total_time = total_time;
 	m_animation_count = 0;
 
-	assert(m_x >= 0					 && "Must be >= 0");
-	assert(m_y >= 0					 && "Must be >= 0");
-	assert(m_initial_x >= 0			 && "Must be >= 0");
-	assert(m_initial_y >= 0			 && "Must be >= 0");
-	assert(m_number_of_images >= 1	 && "Must be >= 1");
-	assert(m_total_time >= 0		 && "Must be >= 0");
-	assert(m_animation_count >= 0	 && "Must be >= 0");
+	ASSERT(m_x >= 0				  , "Must be >= 0");
+	ASSERT(m_y >= 0				  , "Must be >= 0");
+	ASSERT(m_initial_x >= 0		  , "Must be >= 0");
+	ASSERT(m_initial_y >= 0		  , "Must be >= 0");
+	ASSERT(m_number_of_images >= 1, "Must be >= 1");
+	ASSERT(m_total_time >= 0	  , "Must be >= 0");
+	ASSERT(m_animation_count >= 0 , "Must be >= 0");
 }
 
 void Animation::UpdateClip(SDL_Rect& clip, const int x, const int y) {
-	assert(x >= 0 && "Must be >= 0");
-	assert(y >= 0 && "Must be >= 0");
+	ASSERT(x >= 0, "Must be >= 0");
+	ASSERT(y >= 0, "Must be >= 0");
 
 	clip.x = x;
 	clip.y = y;
@@ -100,7 +100,7 @@ void Animation::UpdateClip(SDL_Rect& clip, const int x, const int y) {
 
 int Animation::CurrentFrame() {
 	const int k_current_frame = m_animation_count + 1;
-	assert(k_current_frame >= 0 && "Must be >= 0");
+	ASSERT(k_current_frame >= 0, "Must be >= 0");
 	return k_current_frame;
 }
 
@@ -108,6 +108,6 @@ void Animation::SetWidthHeight(const int width, const int height) {
 	m_sprite_width = width;
 	m_sprite_height = height;
 
-	assert(m_sprite_width >= 0	&& "Must be >= 0");
-	assert(m_sprite_height >= 0	&& "Must be >= 0");
+	ASSERT(m_sprite_width >= 0 , "Must be >= 0");
+	ASSERT(m_sprite_height >= 0, "Must be >= 0");
 }
