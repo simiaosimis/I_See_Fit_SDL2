@@ -4,89 +4,124 @@
 #include <string>
 
 /**
-* Visual representation of game objects.
+* @brief Visual representation of game objects.
+*
 * Holds the SDL_Texture from the SDL2 library.
 */
 class Sprite {
 
 	public:
 		/**
-		* The constructor.
+		* @brief The regular constructor.
+		*
 		* Initializes all the data, and sets the desired renderer. Loads image with the desired
 		* 	path.
-		* @param path_ : the image path.
-		* @see Sprite::loadFrom
+		*
+		* @param path : the image path.
+		* @see Sprite::LoadFrom
 		*/
-		explicit Sprite(const std::string& path_);
-
-		explicit Sprite(SDL_Surface* const surface_);
+		explicit Sprite(const std::string& path);
 
 		/**
-		* The destructor.
-		* Destroys the SDL_Texture.
+		* @brief The constructor from a surface.
+		*
+		* Created to help the Text class.
+		*
+		* @param surface : The SDL_Surface from which to construct the sprite.
+		*/
+		explicit Sprite(SDL_Surface* const surface);
+
+		/**
+		* @brief The destructor.
 		*/
 		~Sprite();
 
 		/**
-		* Renders the sprite.
+		* @brief Renders the sprite.
+		*
 		* Copy the SDL_Texture onto the renderer, at the desired x,y position.
-		* @param x_ : The position on the x axis of the screen.
-		* @param y_ : The position on the y axis of the screen.
-		* @param clip_ : Clips the texture, on the SDL_Rect bounds. If omitted, renders entire
+		*
+		* @param x : The position on the x axis of the screen.
+		* @param y : The position on the y axis of the screen.
+		* @param clip : Clips the texture, on the SDL_Rect bounds. If omitted, renders entire
 		* 	texture.
-		* @param stretch_ : Whether to stretch the image to the entire screen or not.
-		* @param angle_ : An angle in degrees that indicates the rotation that will be applied
+		* @param stretch : Whether to stretch the image to the entire screen or not.
+		* @param angle : An angle in degrees that indicates the rotation that will be applied
 		* 	to the renderQuad. If omitted, no rotation will be applied.
-		* @param center_ : A point indicating the point around which renderQuad will be
+		* @param center : A point indicating the point around which renderQuad will be
 		* 	rotated. If omitted, rotation will be done in width/height center.
-		* @param flip_ : Value static which flipping actions should be performed on the
+		* @param flip : Value static which flipping actions should be performed on the
 		* 	texture.
-		* @note The only obligatory parameters are x_ and y_.
+		*
+		* @note The only obligatory parameters are x and y.
 		* @note If the Window renderer is null, will halt the game.
 		* @note If it fails to render, logs an error message.
 		*/
-		void render(const double x_, const double y_, SDL_Rect* const clip_ = nullptr,
-			const bool stretch_ = false, const double angle_ = 0.0,
-			SDL_Point* const center_ = nullptr, SDL_RendererFlip flip_ = SDL_FLIP_NONE);
+		void Render(const double x, const double y, SDL_Rect* const clip = nullptr,
+			const bool stretch = false, const double angle = 0.0,
+			SDL_Point* const center = nullptr, SDL_RendererFlip flip = SDL_FLIP_NONE);
 
 		/**
 		* @return The Sprite width.
 		*/
-		int getWidth();
+		int Width();
 
-		void setWidth(int width_);
+		/**
+		* @brief Set the width.
+		*/
+		void SetWidth(int width);
 
-		void setHeight(int height_);
+		/**
+		* @brief Set the height.
+		*/
+		void SetHeight(int height);
 
 		/**
 		* @return The Sprite height.
 		*/
-		int getHeight();
+		int Height();
 
-		std::string getPath();
+		/**
+		* @return The path to the image composing the texture.
+		*/
+		std::string Path();
 
-		double getAlpha();
-		void setAlpha(int alpha_);
+		/**
+		* @return The alpha value of the Sprite.
+		*/
+		double Alpha();
+
+		/**
+		* @brief Set the alpha value.
+		*/
+		void SetAlpha(int alpha);
 
 	private:
 		/**
-		* Loads image from a path.
+		* @brief Loads image from a path.
+		*
 		* Given an existing path for an image, loads the SDL_Texture from it.
-		* @param path_ : the image path.
-		* @note Error message is logged if the sprite's SDL_Texture (sdlTexture) is null after
-			method.
+		*
+		* @param path : the image path.
+		*
+		* @note Error message is logged if the sprite's SDL_Texture (m_sdl_texture) is null
+		*	after this method.
 		*/
-		void loadFrom(const std::string& path_);
+		void LoadFrom(const std::string& path);
 
-		SDL_Texture* surfaceToTexture(SDL_Surface* const surface_);
+		/**
+		* @brief Converts a SDL_Surface to a SDL_Texture.
+		*/
+		SDL_Texture* SurfaceToTexture(SDL_Surface* const surface);
 
-		SDL_Texture* sdlTexture; /**< The SDL texture to use as the image. */
+		/**
+		* @brief Sets the blend mode of the Sprite.
+		*/
+		void SetBlendMode(SDL_BlendMode blend_mode);
 
-		void setBlendMode(SDL_BlendMode blending_);
-
-		int width; /**< The loaded image's width. */
-		int height; /**< The loaded image's width. */
-		const std::string path; /**< Holds the path from where the Sprite was loaded. */
-		bool flipHorizontal; /**< When true flip the image */
+		SDL_Texture* m_sdl_texture; /**< The SDL texture to use as the image. */
+		int m_width; /**< The loaded image's width. */
+		int m_height; /**< The loaded image's width. */
+		const std::string m_path; /**< Holds the path from where the Sprite was loaded. */
 
 };

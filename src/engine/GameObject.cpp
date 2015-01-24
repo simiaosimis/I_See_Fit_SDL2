@@ -17,8 +17,8 @@ GameObject::GameObject(const double x_, const double y_, const std::string& path
     // Only serves as the initializer for the derived classes.
 
     if(this->sprite != nullptr) {
-        this->width = this->sprite->getWidth();
-        this->height = this->sprite->getHeight();
+        this->width = this->sprite->Width();
+        this->height = this->sprite->Height();
 
         this->boundingBox.w = this->width;
         this->boundingBox.h = this->height;

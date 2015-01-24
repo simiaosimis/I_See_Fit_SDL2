@@ -20,8 +20,8 @@ Text::Text(const double x_, const double y_, const char* path_, const int size_,
 		this->sprite = new Sprite(surface);
 
 		/// @todo Absolute hack, figure out how to not need this.
-		this->sprite->setWidth(surfaceW);
-		this->sprite->setHeight(surfaceH);
+		this->sprite->SetWidth(surfaceW);
+		this->sprite->SetHeight(surfaceH);
 	}
 	else {
 		log_error() << "Could not load font surface.";
@@ -48,8 +48,8 @@ Text::Text(const double x_, const double y_, const char* path_, const int size_,
 		this->sprite = new Sprite(surface);
 
 		/// @todo Absolute hack, figure out how to not need this.
-		this->sprite->setWidth(surfaceW);
-		this->sprite->setHeight(surfaceH);
+		this->sprite->SetWidth(surfaceW);
+		this->sprite->SetHeight(surfaceH);
 	}
 	else {
 		log_error() << "Could not load font surface.";
@@ -81,8 +81,8 @@ void Text::changeText(const char* text_, const SDL_Color color_) {
 		this->sprite = new Sprite(surface);
 
 		/// @todo Absolute hack, figure out how to not need this.
-		this->sprite->setWidth(surfaceW);
-		this->sprite->setHeight(surfaceH);
+		this->sprite->SetWidth(surfaceW);
+		this->sprite->SetHeight(surfaceH);
 	}
 	else {
 		log_error() << "Could not load font surface.";
@@ -105,8 +105,8 @@ void Text::changeText(const char* text_) {
 		this->sprite = new Sprite(surface);
 
 		/// @todo Absolute hack, figure out how to not need this.
-		this->sprite->setWidth(surfaceW);
-		this->sprite->setHeight(surfaceH);
+		this->sprite->SetWidth(surfaceW);
+		this->sprite->SetHeight(surfaceH);
 	}
 	else {
 		log_error() << "Could not load font surface.";
@@ -123,7 +123,7 @@ void Text::render(const double cameraX_, const double cameraY_) {
 	const int dy = this->y - cameraY_;
 
 	if(this->sprite != nullptr) {
-		this->sprite->render(dx, dy);
+		this->sprite->Render(dx, dy);
 	}
 	else {
 		log_warn() << "Null sprite for text";

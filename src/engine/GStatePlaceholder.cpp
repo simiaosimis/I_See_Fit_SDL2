@@ -43,5 +43,5 @@ void GStatePlaceholder::update(const double dt_) {
 }
 
 void GStatePlaceholder::render() {
-	this->image->render(0, 0, &this->animationClip, true);
+	this->image->Render(0, 0, &this->animationClip, true);
 }
