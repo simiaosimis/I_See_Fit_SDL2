@@ -15,7 +15,7 @@ var searchData=
   ['setwidthheight',['SetWidthHeight',['../classAnimation.html#a408200db42a46e18f478841a8ee108d4',1,'Animation']]],
   ['signalexit',['signalExit',['../classInputHandler.html#ae3546fa674d3db49d755b4047503f4e8',1,'InputHandler']]],
   ['soundeffect',['SoundEffect',['../classSoundEffect.html#af9cbe049bf092fc8b8ee2d143a751864',1,'SoundEffect::SoundEffect()'],['../classResourceHandler.html#a9fd518ee03e07304d82d0b8422e12f42',1,'ResourceHandler::soundEffect()']]],
-  ['sprite',['Sprite',['../classSprite.html#a0c5597fedd9b09878ec8acddca54c2f7',1,'Sprite::Sprite(const std::string &amp;path_)'],['../classSprite.html#a29730aadf31a6433746f5fa5bee9550f',1,'Sprite::Sprite(SDL_Surface *const surface_)'],['../classResourceHandler.html#a100b91478b0fd631bf14fcdf3a268090',1,'ResourceHandler::sprite()'],['../GameObject_8cpp.html#a148df0aea7c58dd96f5781ffa474f0b8',1,'sprite():&#160;GameObject.cpp']]],
+  ['sprite',['sprite',['../classResourceHandler.html#a100b91478b0fd631bf14fcdf3a268090',1,'ResourceHandler::sprite()'],['../classSprite.html#a0c5597fedd9b09878ec8acddca54c2f7',1,'Sprite::Sprite(const std::string &amp;path_)'],['../classSprite.html#a29730aadf31a6433746f5fa5bee9550f',1,'Sprite::Sprite(SDL_Surface *const surface_)'],['../GameObject_8cpp.html#a148df0aea7c58dd96f5781ffa474f0b8',1,'sprite():&#160;GameObject.cpp']]],
   ['stop',['Stop',['../classGame.html#af5bc8f48f5005fac17d6b5896ac86771',1,'Game']]],
   ['stopmusic',['StopMusic',['../classAudioHandler.html#a7c6ecf8a46d19c3d4440f61f048df8e2',1,'AudioHandler']]],
   ['surfacetotexture',['surfaceToTexture',['../classSprite.html#a98bb8afceb93d82270c9e5e7e8f9b49d',1,'Sprite']]]

@@ -28,7 +28,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v23</span>
+   &#160;<span id="projectnumber">v24</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -90,7 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00007"></a>00007     m_sdl_renderer{SDL_CreateRenderer(sdl_window, -1, flags)}
 <a name="l00008"></a>00008 {
 <a name="l00009"></a>00009     <span class="keywordflow">if</span>(m_sdl_renderer == <span class="keyword">nullptr</span>){
-<a name="l00010"></a>00010         <a class="code" href="namespacelogger.html#ad32b22693bc3b8cadbeee703cf7ff3cd">logger::error</a>() &lt;&lt; <span class="stringliteral">&quot;Renderer could not be created. &quot;</span> &lt;&lt; SDL_GetError();
+<a name="l00010"></a>00010         <a class="code" href="Logger_8h.html#adb146b8b8f51bb5055c2db742b57bcd2">log_error</a>() &lt;&lt; <span class="stringliteral">&quot;Renderer could not be created. &quot;</span> &lt;&lt; SDL_GetError();
 <a name="l00011"></a>00011     }
 <a name="l00012"></a>00012 }
 <a name="l00013"></a>00013 
@@ -103,12 +103,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00020"></a>00020 <span class="keywordtype">void</span> <a class="code" href="classRenderer.html#aeedbc2ffdccf51fa1384100446488746" title="Clears previous rendering.">Renderer::Clear</a>() {
 <a name="l00021"></a>00021     <span class="keyword">const</span> <span class="keywordtype">int</span> k_set_color = SDL_SetRenderDrawColor(<a class="code" href="classRenderer.html#a4f4f85c7fc5493543521463ecb4e2a36">m_sdl_renderer</a>, 0x00, 0x00, 0x00, 0xFF);
 <a name="l00022"></a>00022     <span class="keywordflow">if</span>(k_set_color != 0){
-<a name="l00023"></a>00023         <a class="code" href="namespacelogger.html#ad32b22693bc3b8cadbeee703cf7ff3cd">logger::error</a>() &lt;&lt; <span class="stringliteral">&quot;Failed to set renderer draw color. &quot;</span> &lt;&lt; SDL_GetError();
+<a name="l00023"></a>00023         <a class="code" href="Logger_8h.html#adb146b8b8f51bb5055c2db742b57bcd2">log_error</a>() &lt;&lt; <span class="stringliteral">&quot;Failed to set renderer draw color. &quot;</span> &lt;&lt; SDL_GetError();
 <a name="l00024"></a>00024     }
 <a name="l00025"></a>00025 
 <a name="l00026"></a>00026     <span class="keyword">const</span> <span class="keywordtype">int</span> k_clear_renderer = SDL_RenderClear(<a class="code" href="classRenderer.html#a4f4f85c7fc5493543521463ecb4e2a36">m_sdl_renderer</a>);
 <a name="l00027"></a>00027     <span class="keywordflow">if</span>(k_clear_renderer != 0){
-<a name="l00028"></a>00028         <a class="code" href="namespacelogger.html#ad32b22693bc3b8cadbeee703cf7ff3cd">logger::error</a>() &lt;&lt; <span class="stringliteral">&quot;Failed to clear the renderer. &quot;</span> &lt;&lt; SDL_GetError();
+<a name="l00028"></a>00028         <a class="code" href="Logger_8h.html#adb146b8b8f51bb5055c2db742b57bcd2">log_error</a>() &lt;&lt; <span class="stringliteral">&quot;Failed to clear the renderer. &quot;</span> &lt;&lt; SDL_GetError();
 <a name="l00029"></a>00029     }
 <a name="l00030"></a>00030 }
 <a name="l00031"></a>00031 
@@ -127,7 +127,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00044"></a>00044         <a class="code" href="classConfiguration.html#aa55f2fb145dfe12ecc91eb2f76b6e0a8">Configuration::ResolutionWidth</a>() * size, <a class="code" href="classConfiguration.html#a002ef2d0a384e4d7ff04dd2d16ae3172">Configuration::ResolutionHeight</a>() * size);
 <a name="l00045"></a>00045 
 <a name="l00046"></a>00046     <span class="keywordflow">if</span>(k_set_size != 0) {
-<a name="l00047"></a>00047         <a class="code" href="namespacelogger.html#ad32b22693bc3b8cadbeee703cf7ff3cd">logger::error</a>() &lt;&lt; <span class="stringliteral">&quot;Failed to set the renderer logical size. &quot;</span> &lt;&lt; SDL_GetError();
+<a name="l00047"></a>00047         <a class="code" href="Logger_8h.html#adb146b8b8f51bb5055c2db742b57bcd2">log_error</a>() &lt;&lt; <span class="stringliteral">&quot;Failed to set the renderer logical size. &quot;</span> &lt;&lt; SDL_GetError();
 <a name="l00048"></a>00048     }
 <a name="l00049"></a>00049 }
 <a name="l00050"></a>00050 
@@ -135,7 +135,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00052"></a>00052     SDL_RenderGetLogicalSize(<a class="code" href="classRenderer.html#a4f4f85c7fc5493543521463ecb4e2a36">m_sdl_renderer</a>, width, height);
 <a name="l00053"></a>00053 
 <a name="l00054"></a>00054     <span class="keywordflow">if</span>((*width) == 0 &amp;&amp; (*height) == 0) {
-<a name="l00055"></a>00055         <a class="code" href="namespacelogger.html#a98ee6d06b0a1b9dddeced06df111a084">logger::warn</a>() &lt;&lt; <span class="stringliteral">&quot;Tried to get logical size of renderer, but it has never been set.&quot;</span>;
+<a name="l00055"></a>00055         <a class="code" href="Logger_8h.html#a087a4a82f92e6848d2f39cd7660b6173">log_warn</a>() &lt;&lt; <span class="stringliteral">&quot;Tried to get logical size of renderer, but it has never been set.&quot;</span>;
 <a name="l00056"></a>00056     }
 <a name="l00057"></a>00057 }
 <a name="l00058"></a>00058 
@@ -160,7 +160,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jan 23 2015 22:54:35 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jan 24 2015 00:03:30 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

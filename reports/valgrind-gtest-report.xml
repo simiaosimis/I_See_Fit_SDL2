@@ -12,8 +12,8 @@
   <line>Command: /home/travis/build/CaioIcy/sdl2-engine/build/test/sdl2-engine_GTest --gtest_output=xml:/home/travis/build/CaioIcy/sdl2-engine/build/reports/gtest-report.xml</line>
 </preamble>
 
-<pid>22871</pid>
-<ppid>22842</ppid>
+<pid>22882</pid>
+<ppid>22853</ppid>
 <tool>memcheck</tool>
 
 <args>
@@ -31,13 +31,13 @@
 
 <status>
   <state>RUNNING</state>
-  <time>00:00:00:00.065 </time>
+  <time>00:00:00:00.090 </time>
 </status>
 
 
 <status>
   <state>FINISHED</state>
-  <time>00:00:00:01.674 </time>
+  <time>00:00:00:01.970 </time>
 </status>
 
 <errorcounts>

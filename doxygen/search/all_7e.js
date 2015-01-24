@@ -8,7 +8,7 @@ var searchData=
   ['_7egameobject',['~GameObject',['../classGameObject.html#a224d4f6d9dd75c8a6f9d022eaf586fd9',1,'GameObject']]],
   ['_7egstateplaceholder',['~GStatePlaceholder',['../classGStatePlaceholder.html#abfe13fd6fe0b6d258734c188f62c167c',1,'GStatePlaceholder']]],
   ['_7einputhandler',['~InputHandler',['../classInputHandler.html#ac1f7efb54b34d433d6ffba62627452b6',1,'InputHandler']]],
-  ['_7elogbuffer',['~LogBuffer',['../classlogger_1_1LogBuffer.html#a097b1a779d89d2d86a9fda234169e925',1,'logger::LogBuffer']]],
+  ['_7elogbuffer',['~LogBuffer',['../classLogBuffer.html#a61b77cc60f4fd8760bb63fb262c7a89f',1,'LogBuffer']]],
   ['_7emusic',['~Music',['../classMusic.html#a0b4f3b9a018207e0c08003505f1f87fe',1,'Music']]],
   ['_7erenderer',['~Renderer',['../classRenderer.html#afeee408862d5bd6255a6882d47e6d5cd',1,'Renderer']]],
   ['_7eresourcehandler',['~ResourceHandler',['../classResourceHandler.html#a7d4d3c48a55160ea08b281636580595b',1,'ResourceHandler']]],

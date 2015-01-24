@@ -28,7 +28,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v23</span>
+   &#160;<span id="projectnumber">v24</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -83,46 +83,58 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <a href="Logger_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;<a class="code" href="Logger_8h.html">Logger.h</a>&quot;</span>
 <a name="l00002"></a>00002 <span class="preprocessor">#include &lt;iostream&gt;</span>
-<a name="l00003"></a>00003 
-<a name="l00004"></a><a class="code" href="namespacelogger.html">00004</a> <span class="keyword">namespace </span>logger {
-<a name="l00005"></a>00005 
-<a name="l00006"></a>00006 <span class="comment">// constexpr implies const, but const is here to stop the compiler from yelling about</span>
-<a name="l00007"></a>00007 <span class="comment">// -Wwrite-strings</span>
-<a name="l00008"></a>00008 constexpr <span class="keyword">const</span> <span class="keywordtype">char</span>* k_level_color_map[] {
-<a name="l00009"></a>00009     <span class="stringliteral">&quot;[ ERROR ]&quot;</span>,
-<a name="l00010"></a>00010     <span class="stringliteral">&quot;[WARNING]&quot;</span>,
-<a name="l00011"></a>00011     <span class="stringliteral">&quot;[ INFO  ]&quot;</span>,
-<a name="l00012"></a>00012     <span class="stringliteral">&quot;[ DEBUG ]&quot;</span>
-<a name="l00013"></a>00013 };
-<a name="l00014"></a>00014 
-<a name="l00015"></a><a class="code" href="classlogger_1_1LogBuffer.html#a416a1ab43c8eaeb48ef4b2243c515733">00015</a> <a class="code" href="classlogger_1_1LogBuffer.html#a416a1ab43c8eaeb48ef4b2243c515733">LogBuffer::LogBuffer</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> level) :
-<a name="l00016"></a>00016     m_log_level{level},
-<a name="l00017"></a>00017     m_log_stream{}
-<a name="l00018"></a>00018 {
-<a name="l00019"></a>00019 }
-<a name="l00020"></a>00020 
-<a name="l00021"></a>00021 <a class="code" href="classlogger_1_1LogBuffer.html#a416a1ab43c8eaeb48ef4b2243c515733">LogBuffer::LogBuffer</a>(<span class="keyword">const</span> LogBuffer&amp; log_buffer) :
-<a name="l00022"></a>00022     m_log_level{log_buffer.m_log_level},
-<a name="l00023"></a>00023     m_log_stream{}
-<a name="l00024"></a>00024 {
-<a name="l00025"></a>00025 }
-<a name="l00026"></a>00026 
-<a name="l00027"></a>00027 <a class="code" href="classlogger_1_1LogBuffer.html#a097b1a779d89d2d86a9fda234169e925">LogBuffer::~LogBuffer</a>() {
-<a name="l00028"></a>00028     std::clog &lt;&lt; k_level_color_map[<a class="code" href="classlogger_1_1LogBuffer.html#a245cf3a5c421a2d0c3be1d5c4f59cdb8">m_log_level</a>] &lt;&lt; <span class="stringliteral">&quot; - &quot;</span> &lt;&lt; <a class="code" href="classlogger_1_1LogBuffer.html#af39e4475d315dd3916854ef21d7912b5">m_log_stream</a>.str() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;
-<a name="l00029"></a>00029 }
-<a name="l00030"></a>00030 
-<a name="l00031"></a>00031 <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> level&gt;
-<a name="l00032"></a>00032 LogBuffer <a class="code" href="namespacelogger.html#ac4250697ee56fabb10420ea1de4862df">log</a>() {
-<a name="l00033"></a>00033     LogBuffer log_buffer{level};
-<a name="l00034"></a>00034     <span class="keywordflow">return</span> log_buffer;
-<a name="l00035"></a>00035 }
-<a name="l00036"></a>00036 
-<a name="l00037"></a>00037 <span class="keyword">template</span> LogBuffer log&lt;0&gt;();
-<a name="l00038"></a>00038 <span class="keyword">template</span> LogBuffer <a class="code" href="namespacelogger.html#aef9c75d3d7d443f03d73508062dfdbb0">log&lt;1&gt;</a>();
-<a name="l00039"></a>00039 <span class="keyword">template</span> LogBuffer <a class="code" href="namespacelogger.html#a0ac9f104b666ebc00875a5ec9bf36a0f">log&lt;2&gt;</a>();
-<a name="l00040"></a>00040 <span class="keyword">template</span> LogBuffer <a class="code" href="namespacelogger.html#a45f1466f4c6fb8d3aef6b0b900863d19">log&lt;3&gt;</a>();
-<a name="l00041"></a>00041 
-<a name="l00042"></a>00042 } <span class="comment">// namespace logger</span>
+<a name="l00003"></a>00003 <span class="preprocessor">#include &lt;utility&gt;</span>
+<a name="l00004"></a>00004 
+<a name="l00005"></a>00005 <span class="keyword">namespace </span>{
+<a name="l00006"></a>00006 
+<a name="l00007"></a>00007 <span class="keyword">struct </span>LogInfo {
+<a name="l00008"></a>00008     <span class="keyword">const</span> <span class="keywordtype">char</span>* tag;
+<a name="l00009"></a>00009     <span class="keyword">const</span> <span class="keywordtype">char</span>* color;
+<a name="l00010"></a>00010 };
+<a name="l00011"></a>00011 
+<a name="l00012"></a>00012 <span class="comment">// constexpr implies const, but const is here to stop the compiler from yelling about</span>
+<a name="l00013"></a>00013 <span class="comment">// -Wwrite-strings</span>
+<a name="l00014"></a>00014 constexpr <span class="keyword">const</span> <span class="keywordtype">char</span>* colorReset = <span class="stringliteral">&quot;\033[0m&quot;</span>;
+<a name="l00015"></a>00015 
+<a name="l00016"></a>00016 constexpr LogInfo logInfos[] {
+<a name="l00017"></a>00017 <span class="comment">//    Level   ,  Color</span>
+<a name="l00018"></a>00018     {<span class="stringliteral">&quot; ERROR &quot;</span>, <span class="stringliteral">&quot;\033[1;4;91;49m&quot;</span>},
+<a name="l00019"></a>00019     {<span class="stringliteral">&quot;WARNING&quot;</span>, <span class="stringliteral">&quot;\033[1;4;93;49m&quot;</span>},
+<a name="l00020"></a>00020     {<span class="stringliteral">&quot; INFO  &quot;</span>, <span class="stringliteral">&quot;\033[1;4;96;49m&quot;</span>},
+<a name="l00021"></a>00021     {<span class="stringliteral">&quot; DEBUG &quot;</span>, <span class="stringliteral">&quot;\033[1;4;32;49m&quot;</span>}
+<a name="l00022"></a>00022 };
+<a name="l00023"></a>00023 
+<a name="l00024"></a>00024 } <span class="comment">// namespace</span>
+<a name="l00025"></a>00025 
+<a name="l00026"></a><a class="code" href="classLogBuffer.html#ac834fd3640785ac765e271641e5904e6">00026</a> <a class="code" href="classLogBuffer.html#ac834fd3640785ac765e271641e5904e6" title="The constructor;.">LogBuffer::LogBuffer</a>(<span class="keyword">const</span> <a class="code" href="Logger_8h.html#aca1fd1d8935433e6ba2e3918214e07f9" title="All the possible log levels.">LogLevel</a> level) :
+<a name="l00027"></a>00027     m_log_level{<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(level)},
+<a name="l00028"></a>00028     <a class="code" href="classLogBuffer.html#a63ef05f08a475ef5313678e94f5eadc2">m_log_stream</a>{}
+<a name="l00029"></a>00029 {
+<a name="l00030"></a>00030     <span class="comment">// Ignoring &#39;parameter not used&#39; warning.</span>
+<a name="l00031"></a>00031     (void)level;
+<a name="l00032"></a>00032 }
+<a name="l00033"></a>00033 
+<a name="l00034"></a>00034 <a class="code" href="classLogBuffer.html#ac834fd3640785ac765e271641e5904e6" title="The constructor;.">LogBuffer::LogBuffer</a>(<span class="keyword">const</span> <a class="code" href="classLogBuffer.html" title="Temporary buffer that grabs log messages from stream.">LogBuffer</a>&amp; log_buffer) :
+<a name="l00035"></a>00035     <a class="code" href="classLogBuffer.html#adb8d7f6e6ce44011c334227fcb45de19">m_log_level</a>{log_buffer.<a class="code" href="classLogBuffer.html#adb8d7f6e6ce44011c334227fcb45de19">m_log_level</a>},
+<a name="l00036"></a>00036     <a class="code" href="classLogBuffer.html#a63ef05f08a475ef5313678e94f5eadc2">m_log_stream</a>{}
+<a name="l00037"></a>00037 {
+<a name="l00038"></a>00038 }
+<a name="l00039"></a>00039 
+<a name="l00040"></a>00040 <a class="code" href="classLogBuffer.html#a61b77cc60f4fd8760bb63fb262c7a89f" title="The destructor.">LogBuffer::~LogBuffer</a>() {
+<a name="l00041"></a>00041     std::clog &lt;&lt; <span class="stringliteral">&quot;[&quot;</span> &lt;&lt; logInfos[<a class="code" href="classLogBuffer.html#adb8d7f6e6ce44011c334227fcb45de19">m_log_level</a>].color &lt;&lt; logInfos[<a class="code" href="classLogBuffer.html#adb8d7f6e6ce44011c334227fcb45de19">m_log_level</a>].tag &lt;&lt; colorReset
+<a name="l00042"></a>00042         &lt;&lt; <span class="stringliteral">&quot;] - &quot;</span> &lt;&lt; <a class="code" href="classLogBuffer.html#a63ef05f08a475ef5313678e94f5eadc2">m_log_stream</a>.str() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;
+<a name="l00043"></a>00043 }
+<a name="l00044"></a>00044 
+<a name="l00045"></a>00045 <span class="keyword">template</span> &lt;LogLevel level&gt;
+<a name="l00046"></a>00046 <a class="code" href="classLogBuffer.html" title="Temporary buffer that grabs log messages from stream.">LogBuffer</a> <a class="code" href="Logger_8h.html#ad2f39cd32a15c7182d81d59949237900" title="Main log function.">log</a>() {
+<a name="l00047"></a>00047     <a class="code" href="classLogBuffer.html" title="Temporary buffer that grabs log messages from stream.">LogBuffer</a> log_buffer{level};
+<a name="l00048"></a>00048     <span class="keywordflow">return</span> log_buffer;
+<a name="l00049"></a>00049 }
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051 <span class="keyword">template</span> <a class="code" href="classLogBuffer.html" title="Temporary buffer that grabs log messages from stream.">LogBuffer</a> log&lt;LogLevel::Error&gt;();
+<a name="l00052"></a>00052 <span class="keyword">template</span> <a class="code" href="classLogBuffer.html" title="Temporary buffer that grabs log messages from stream.">LogBuffer</a> log&lt;LogLevel::Warn&gt;();
+<a name="l00053"></a>00053 <span class="keyword">template</span> <a class="code" href="classLogBuffer.html" title="Temporary buffer that grabs log messages from stream.">LogBuffer</a> log&lt;LogLevel::Info&gt;();
+<a name="l00054"></a>00054 <span class="keyword">template</span> <a class="code" href="classLogBuffer.html" title="Temporary buffer that grabs log messages from stream.">LogBuffer</a> log&lt;LogLevel::Debug&gt;();
 </pre></div></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -141,7 +153,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jan 23 2015 22:54:35 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jan 24 2015 00:03:30 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

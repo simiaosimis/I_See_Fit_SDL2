@@ -1,7 +1,7 @@
 var searchData=
 [
   ['image',['image',['../classGStatePlaceholder.html#a7453f629f02e6ddba49490f346ffe1ee',1,'GStatePlaceholder']]],
-  ['info',['info',['../namespacelogger.html#aebf2ae7e85cc04f800b7d49bff2b5049',1,'logger']]],
+  ['info',['Info',['../Logger_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a1cd805eaf0bb58a90fe7e7e4cf6a3cdc',1,'Logger.h']]],
   ['initialize',['Initialize',['../classConfiguration.html#a4637584596d09c48bc816b71d974297d',1,'Configuration::Initialize()'],['../namespacesdl.html#a3a90e2da909fa25cc7c570fbe3e25d5f',1,'sdl::Initialize()']]],
   ['initializestates',['InitializeStates',['../classGame.html#a3f11482f4bde3b86bded9fa8d4c0e1a3',1,'Game']]],
   ['input',['Input',['../classGame.html#a9c824ce6bfe6db38b9d0b5be7850e127',1,'Game']]],

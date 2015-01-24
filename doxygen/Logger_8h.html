@@ -28,7 +28,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v23</span>
+   &#160;<span id="projectnumber">v24</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -79,7 +79,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
-<a href="#namespaces">Namespaces</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
@@ -104,21 +104,150 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogger_1_1LogBuffer.html">logger::LogBuffer</a></td></tr>
-<tr><td colspan="2"><h2><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelogger.html">logger</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogBuffer.html">LogBuffer</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Temporary buffer that grabs log messages from stream.  <a href="classLogBuffer.html#details">More...</a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Logger_8h.html#aca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a> { <a class="el" href="Logger_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a4dfd42ec49d09d8c6555c218301cc30f">Error</a>, 
+<a class="el" href="Logger_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a86a4f5be1b42a6ee68eaeb357bbe065c">Warn</a>, 
+<a class="el" href="Logger_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a1cd805eaf0bb58a90fe7e7e4cf6a3cdc">Info</a>, 
+<a class="el" href="Logger_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ac909e86054cb6ad83c22bfc2b3e6e5b8">Debug</a>
+ }</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">All the possible log levels.  <a href="Logger_8h.html#aca1fd1d8935433e6ba2e3918214e07f9">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;int level&gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">LogBuffer&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelogger.html#ac4250697ee56fabb10420ea1de4862df">logger::log</a> ()</td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;LogLevel level&gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classLogBuffer.html">LogBuffer</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="Logger_8h.html#ad2f39cd32a15c7182d81d59949237900">log</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Main log function.  <a href="#ad2f39cd32a15c7182d81d59949237900"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">constexpr logger_function_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelogger.html#ad32b22693bc3b8cadbeee703cf7ff3cd">logger::error</a> = log&lt;0&gt;</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">constexpr logger_function_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelogger.html#a98ee6d06b0a1b9dddeced06df111a084">logger::warn</a> = log&lt;1&gt;</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">constexpr logger_function_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelogger.html#aebf2ae7e85cc04f800b7d49bff2b5049">logger::info</a> = log&lt;2&gt;</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">constexpr logger_function_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelogger.html#a510ae29bbe97c8afd0edb63600b1d59d">logger::debug</a> = log&lt;3&gt;</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">constexpr log_function_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Logger_8h.html#adb146b8b8f51bb5055c2db742b57bcd2">log_error</a> = <a class="el" href="Logger_8h.html#ad2f39cd32a15c7182d81d59949237900">log</a>&lt;<a class="el" href="Logger_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a4dfd42ec49d09d8c6555c218301cc30f">LogLevel::Error</a>&gt;</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">constexpr log_function_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Logger_8h.html#a087a4a82f92e6848d2f39cd7660b6173">log_warn</a> = <a class="el" href="Logger_8h.html#ad2f39cd32a15c7182d81d59949237900">log</a>&lt;<a class="el" href="Logger_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a86a4f5be1b42a6ee68eaeb357bbe065c">LogLevel::Warn</a>&gt;</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">constexpr log_function_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Logger_8h.html#acd168830564594deea84ff5f775441c8">log_info</a> = <a class="el" href="Logger_8h.html#ad2f39cd32a15c7182d81d59949237900">log</a>&lt;<a class="el" href="Logger_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a1cd805eaf0bb58a90fe7e7e4cf6a3cdc">LogLevel::Info</a>&gt;</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">constexpr log_function_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Logger_8h.html#a4a8f1b43d1e2b374d21f9e37a12b7260">log_debug</a> = <a class="el" href="Logger_8h.html#ad2f39cd32a15c7182d81d59949237900">log</a>&lt;<a class="el" href="Logger_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ac909e86054cb6ad83c22bfc2b3e6e5b8">LogLevel::Debug</a>&gt;</td></tr>
 </table>
+<hr/><h2>Enumeration Type Documentation</h2>
+<a class="anchor" id="aca1fd1d8935433e6ba2e3918214e07f9"></a><!-- doxytag: member="Logger.h::LogLevel" ref="aca1fd1d8935433e6ba2e3918214e07f9" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="Logger_8h.html#aca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>All the possible log levels. </p>
+<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="aca1fd1d8935433e6ba2e3918214e07f9a4dfd42ec49d09d8c6555c218301cc30f"></a><!-- doxytag: member="Error" ref="aca1fd1d8935433e6ba2e3918214e07f9a4dfd42ec49d09d8c6555c218301cc30f" args="" -->Error</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="aca1fd1d8935433e6ba2e3918214e07f9a86a4f5be1b42a6ee68eaeb357bbe065c"></a><!-- doxytag: member="Warn" ref="aca1fd1d8935433e6ba2e3918214e07f9a86a4f5be1b42a6ee68eaeb357bbe065c" args="" -->Warn</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="aca1fd1d8935433e6ba2e3918214e07f9a1cd805eaf0bb58a90fe7e7e4cf6a3cdc"></a><!-- doxytag: member="Info" ref="aca1fd1d8935433e6ba2e3918214e07f9a1cd805eaf0bb58a90fe7e7e4cf6a3cdc" args="" -->Info</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="aca1fd1d8935433e6ba2e3918214e07f9ac909e86054cb6ad83c22bfc2b3e6e5b8"></a><!-- doxytag: member="Debug" ref="aca1fd1d8935433e6ba2e3918214e07f9ac909e86054cb6ad83c22bfc2b3e6e5b8" args="" -->Debug</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+<p>Definition at line <a class="el" href="Logger_8h_source.html#l00008">8</a> of file <a class="el" href="Logger_8h_source.html">Logger.h</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Function Documentation</h2>
+<a class="anchor" id="ad2f39cd32a15c7182d81d59949237900"></a><!-- doxytag: member="Logger.h::log" ref="ad2f39cd32a15c7182d81d59949237900" args="()" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;LogLevel level&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classLogBuffer.html">LogBuffer</a> <a class="el" href="Logger_8h.html#ad2f39cd32a15c7182d81d59949237900">log</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Main log function. </p>
+<dl class="note"><dt><b>Note:</b></dt><dd>Should never be called directly. Instead, use the 'log_*()' aliases. </dd></dl>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="Logger_8h_ad2f39cd32a15c7182d81d59949237900_icgraph.png" border="0" usemap="#Logger_8h_ad2f39cd32a15c7182d81d59949237900_icgraph" alt=""/></div>
+<map name="Logger_8h_ad2f39cd32a15c7182d81d59949237900_icgraph" id="Logger_8h_ad2f39cd32a15c7182d81d59949237900_icgraph">
+<area shape="rect" id="node3" href="classLogBuffer.html#ac834fd3640785ac765e271641e5904e6" title="The constructor;." alt="" coords="95,5,236,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<hr/><h2>Variable Documentation</h2>
+<a class="anchor" id="a4a8f1b43d1e2b374d21f9e37a12b7260"></a><!-- doxytag: member="Logger.h::log_debug" ref="a4a8f1b43d1e2b374d21f9e37a12b7260" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr log_function_ptr <a class="el" href="Logger_8h.html#a4a8f1b43d1e2b374d21f9e37a12b7260">log_debug</a> = <a class="el" href="Logger_8h.html#ad2f39cd32a15c7182d81d59949237900">log</a>&lt;<a class="el" href="Logger_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ac909e86054cb6ad83c22bfc2b3e6e5b8">LogLevel::Debug</a>&gt;</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="Logger_8h_source.html#l00086">86</a> of file <a class="el" href="Logger_8h_source.html">Logger.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adb146b8b8f51bb5055c2db742b57bcd2"></a><!-- doxytag: member="Logger.h::log_error" ref="adb146b8b8f51bb5055c2db742b57bcd2" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr log_function_ptr <a class="el" href="Logger_8h.html#adb146b8b8f51bb5055c2db742b57bcd2">log_error</a> = <a class="el" href="Logger_8h.html#ad2f39cd32a15c7182d81d59949237900">log</a>&lt;<a class="el" href="Logger_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a4dfd42ec49d09d8c6555c218301cc30f">LogLevel::Error</a>&gt;</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="Logger_8h_source.html#l00083">83</a> of file <a class="el" href="Logger_8h_source.html">Logger.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acd168830564594deea84ff5f775441c8"></a><!-- doxytag: member="Logger.h::log_info" ref="acd168830564594deea84ff5f775441c8" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr log_function_ptr <a class="el" href="Logger_8h.html#acd168830564594deea84ff5f775441c8">log_info</a> = <a class="el" href="Logger_8h.html#ad2f39cd32a15c7182d81d59949237900">log</a>&lt;<a class="el" href="Logger_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a1cd805eaf0bb58a90fe7e7e4cf6a3cdc">LogLevel::Info</a>&gt;</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="Logger_8h_source.html#l00085">85</a> of file <a class="el" href="Logger_8h_source.html">Logger.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a087a4a82f92e6848d2f39cd7660b6173"></a><!-- doxytag: member="Logger.h::log_warn" ref="a087a4a82f92e6848d2f39cd7660b6173" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr log_function_ptr <a class="el" href="Logger_8h.html#a087a4a82f92e6848d2f39cd7660b6173">log_warn</a> = <a class="el" href="Logger_8h.html#ad2f39cd32a15c7182d81d59949237900">log</a>&lt;<a class="el" href="Logger_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a86a4f5be1b42a6ee68eaeb357bbe065c">LogLevel::Warn</a>&gt;</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="Logger_8h_source.html#l00084">84</a> of file <a class="el" href="Logger_8h_source.html">Logger.h</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -137,7 +266,7 @@ Variables</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jan 23 2015 22:54:35 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jan 24 2015 00:03:30 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>
