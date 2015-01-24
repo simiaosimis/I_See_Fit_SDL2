@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>sdl2-engine: input -&gt; util Relation</title>
+<title>sdl2-engine: Assert.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v25</span>
+   &#160;<span id="projectnumber">v26</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -42,7 +42,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
-      <li><a href="files.html"><span>Files</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -61,6 +61,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       </li>
     </ul>
   </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>Globals</span></a></li>
+    </ul>
+  </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -77,14 +83,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_d365e15d984c8d0205117ee0c40d6716.html">input</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li>  </ul>
 </div>
 </div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Assert.h</div>  </div>
+</div><!--header-->
 <div class="contents">
-<h3>input &rarr; util Relation</h3><table class="dirtab"><tr class="dirtab"><th class="dirtab">File in src/input</th><th class="dirtab">Includes file in src/util</th></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="ControllerHandler_8cpp.html">ControllerHandler.cpp</a></td><td class="dirtab"><a class="el" href="Logger_8h.html">Logger.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="InputHandler_8cpp.html">InputHandler.cpp</a></td><td class="dirtab"><a class="el" href="Logger_8h.html">Logger.h</a></td></tr></table></div><!-- contents -->
+<a href="Assert_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#ifdef NDEBUG</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#   define ASSERT(expression, message)</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">    6</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#   define ASSERT(expression, message) (void)((expression) || (FailedAssertion(#expression, message, __FILE__, __LINE__, __func__), 0))</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keywordtype">void</span> <a class="code" href="Assert_8h.html#ac2928e2bc641ad90d5138beb2a29a5b2">FailedAssertion</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* expression, <span class="keyword">const</span> <span class="keywordtype">char</span>* message, <span class="keyword">const</span> <span class="keywordtype">char</span>* file,</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> line, <span class="keyword">const</span> <span class="keywordtype">char</span>* <span class="keyword">function</span>);</div>
+<div class="ttc" id="Assert_8h_html_ac2928e2bc641ad90d5138beb2a29a5b2"><div class="ttname"><a href="Assert_8h.html#ac2928e2bc641ad90d5138beb2a29a5b2">FailedAssertion</a></div><div class="ttdeci">void FailedAssertion(const char *expression, const char *message, const char *file, const int line, const char *function)</div><div class="ttdef"><b>Definition:</b> <a href="Assert_8cpp_source.html#l00005">Assert.cpp:5</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 24 2015 02:19:09 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jan 24 2015 03:33:19 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

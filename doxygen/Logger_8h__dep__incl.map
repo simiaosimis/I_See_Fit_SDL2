@@ -14,7 +14,8 @@
 <area shape="rect" id="node52" href="$Window_8cpp.html" title="Window.cpp" alt="" coords="1535,83,1628,112"/>
 <area shape="rect" id="node54" href="$ControllerHandler_8cpp.html" title="ControllerHandler.cpp" alt="" coords="1652,83,1799,112"/>
 <area shape="rect" id="node56" href="$InputHandler_8cpp.html" title="InputHandler.cpp" alt="" coords="1823,83,1943,112"/>
-<area shape="rect" id="node59" href="$Logger_8cpp.html" title="Logger.cpp" alt="" coords="1967,83,2052,112"/>
+<area shape="rect" id="node59" href="$Assert_8cpp.html" title="Assert.cpp" alt="" coords="1967,83,2052,112"/>
+<area shape="rect" id="node61" href="$Logger_8cpp.html" title="Logger.cpp" alt="" coords="2076,83,2161,112"/>
 <area shape="rect" id="node11" href="$MusicManager_8h.html" title="MusicManager.h" alt="" coords="269,160,387,189"/>
 <area shape="rect" id="node32" href="$SFXManager_8h.html" title="SFXManager.h" alt="" coords="411,160,520,189"/>
 <area shape="rect" id="node37" href="$SpriteManager_8h.html" title="SpriteManager.h" alt="" coords="544,160,661,189"/>

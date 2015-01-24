@@ -17,7 +17,6 @@ var searchData=
   ['clearinputkey',['ClearInputKey',['../classGame.html#ad8cfd1a051c4765289ee0a4892d75660',1,'Game']]],
   ['clearkey',['clearKey',['../classInputHandler.html#ac318051809c7764f010ca9d7f4b3eecd',1,'InputHandler']]],
   ['clip',['Clip',['../classCamera.html#a4ab3024602fa17b75529a1ff359ba67e',1,'Camera']]],
-  ['close',['Close',['../namespacesdl.html#ad191ca5bcfbd36197f6959249e6cbcda',1,'sdl']]],
   ['collision',['Collision',['../classCollision.html',1,'']]],
   ['collision_2ecpp',['Collision.cpp',['../Collision_8cpp.html',1,'']]],
   ['collision_2eh',['Collision.h',['../Collision_8h.html',1,'']]],

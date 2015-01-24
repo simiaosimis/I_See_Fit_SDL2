@@ -15,7 +15,6 @@ var searchData=
   ['clearinputkey',['ClearInputKey',['../classGame.html#ad8cfd1a051c4765289ee0a4892d75660',1,'Game']]],
   ['clearkey',['clearKey',['../classInputHandler.html#ac318051809c7764f010ca9d7f4b3eecd',1,'InputHandler']]],
   ['clip',['Clip',['../classCamera.html#a4ab3024602fa17b75529a1ff359ba67e',1,'Camera']]],
-  ['close',['Close',['../namespacesdl.html#ad191ca5bcfbd36197f6959249e6cbcda',1,'sdl']]],
   ['controllerhandler',['ControllerHandler',['../classControllerHandler.html#a2a6b8a51a3165d65606addb743f45964',1,'ControllerHandler']]],
   ['create',['Create',['../classWindow.html#a83880e5e0aa5681fd748731e9d4d9e8f',1,'Window']]],
   ['currentframe',['CurrentFrame',['../classAnimation.html#af77b1bda4e1129c743da1d32197f400d',1,'Animation']]]
