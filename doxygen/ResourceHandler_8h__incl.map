@@ -1,4 +1,4 @@
-<map id="G" name="G">
+<map id="ResourceHandler.h" name="ResourceHandler.h">
 <area shape="rect" id="node3" href="$SpriteManager_8h.html" title="graphics/SpriteManager.h" alt="" coords="311,83,481,112"/>
 <area shape="rect" id="node25" href="$MusicManager_8h.html" title="audio/MusicManager.h" alt="" coords="505,83,657,112"/>
 <area shape="rect" id="node34" href="$SFXManager_8h.html" title="audio/SFXManager.h" alt="" coords="681,83,825,112"/>

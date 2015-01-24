@@ -1,3 +1,5 @@
-<map id="G" name="G">
+<map id="InputHandler::signalExit" name="InputHandler::signalExit">
 <area shape="rect" id="node3" href="$classInputHandler.html#a820f483265aa3f6da39b9d93c1311966" title="InputHandler::handleInput" alt="" coords="216,5,387,35"/>
+<area shape="rect" id="node5" href="$classGame.html#a96341ca5b54d90adc3ecb3bf0bcd2312" title="The main game loop. " alt="" coords="436,5,524,35"/>
+<area shape="rect" id="node7" href="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="573,5,624,35"/>
 </map>

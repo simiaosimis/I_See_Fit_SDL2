@@ -1,5 +1,8 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$classResourceHandler.html#a100b91478b0fd631bf14fcdf3a268090" title="ResourceHandler::sprite" alt="" coords="228,5,391,35"/>
-<area shape="rect" id="node5" href="$classResourceHandler.html#a4d57a631c9906f50669d17a65fb1822d" title="ResourceHandler::music" alt="" coords="227,59,392,88"/>
-<area shape="rect" id="node7" href="$classResourceHandler.html#a9fd518ee03e07304d82d0b8422e12f42" title="ResourceHandler::soundEffect" alt="" coords="209,112,409,141"/>
+<map id="ResourceManager::get" name="ResourceManager::get">
+<area shape="rect" id="node3" href="$classResourceHandler.html#a100b91478b0fd631bf14fcdf3a268090" title="ResourceHandler::sprite" alt="" coords="459,5,621,35"/>
+<area shape="rect" id="node7" href="$classResourceHandler.html#a4d57a631c9906f50669d17a65fb1822d" title="ResourceHandler::music" alt="" coords="227,57,392,87"/>
+<area shape="rect" id="node14" href="$classResourceHandler.html#a9fd518ee03e07304d82d0b8422e12f42" title="ResourceHandler::soundEffect" alt="" coords="209,111,409,140"/>
+<area shape="rect" id="node5" href="$classGStatePlaceholder.html#a177ff2bfd8c9f911c6e4e7c6b6b50bdf" title="GStatePlaceholder::load" alt="" coords="907,33,1069,63"/>
+<area shape="rect" id="node9" href="$classAudioHandler.html#aa74f9dd41a30d53de727c38303f0a3e2" title="Sets the current music. " alt="" coords="459,59,621,88"/>
+<area shape="rect" id="node11" href="$classAudioHandler.html#ae006de73495a08fa3332917fe9c57e17" title="Sets new music for given path, infinitely looping. " alt="" coords="671,59,857,88"/>
 </map>

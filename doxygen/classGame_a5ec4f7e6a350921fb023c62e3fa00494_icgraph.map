@@ -1,0 +1,5 @@
+<map id="Game::GetAudioHandler" name="Game::GetAudioHandler">
+<area shape="rect" id="node3" href="$classAudioHandler.html#ae677a4f5106cb5c360c395c175ca85d2" title="Callback that gets called everytime a channel is done playing. " alt="" coords="219,5,405,35"/>
+<area shape="rect" id="node5" href="$classGStatePlaceholder.html#a177ff2bfd8c9f911c6e4e7c6b6b50bdf" title="GStatePlaceholder::load" alt="" coords="231,59,393,88"/>
+<area shape="rect" id="node7" href="$classGStatePlaceholder.html#a0a9fa0b0d389cf691001d90076ae602b" title="GStatePlaceholder::\lupdate" alt="" coords="243,111,381,158"/>
+</map>

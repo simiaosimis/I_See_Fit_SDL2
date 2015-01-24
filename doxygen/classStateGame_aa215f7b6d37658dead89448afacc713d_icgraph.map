@@ -1,0 +1,5 @@
+<map id="StateGame::unload" name="StateGame::unload">
+<area shape="rect" id="node3" href="$classGame.html#ae3d112ca6e0e55150d2fdbc704474530" title="The destructor. " alt="" coords="207,5,313,35"/>
+<area shape="rect" id="node5" href="$classGame.html#a344e02d5cb1cc6868ef50e31723289dd" title="Sets the current game state. " alt="" coords="189,59,331,88"/>
+<area shape="rect" id="node7" href="$classGStatePlaceholder.html#ae67aed58f73d4cc73a322cfee0a61b8e" title="GStatePlaceholder::\lunload" alt="" coords="191,111,329,158"/>
+</map>

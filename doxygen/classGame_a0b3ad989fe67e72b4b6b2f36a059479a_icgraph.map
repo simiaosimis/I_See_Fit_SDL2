@@ -1,8 +1,15 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="227,5,277,35"/>
-<area shape="rect" id="node5" href="$classSprite.html#ac82a01b98130b9b1403667059640163b" title="Sprite::render" alt="" coords="203,59,301,88"/>
-<area shape="rect" id="node9" href="$classSprite.html#a98bb8afceb93d82270c9e5e7e8f9b49d" title="Sprite::surfaceToTexture" alt="" coords="169,112,335,141"/>
-<area shape="rect" id="node7" href="$classText.html#a61dff362532c385dbc0650b397138635" title="Text::render" alt="" coords="399,59,489,88"/>
-<area shape="rect" id="node11" href="$classSprite.html#a9ba64ddfcd3f79c45b74ec1c1a16c396" title="Sprite::loadFrom" alt="" coords="385,112,503,141"/>
-<area shape="rect" id="node13" href="$classSprite.html#a0c5597fedd9b09878ec8acddca54c2f7" title="Sprite::Sprite" alt="" coords="552,112,651,141"/>
+<map id="Game::Instance" name="Game::Instance">
+<area shape="rect" id="node3" href="$classAudioHandler.html#a837e3e99b3d4e80dad159eb6295414d9" title="Plays a sound effect once. " alt="" coords="169,5,375,35"/>
+<area shape="rect" id="node5" href="$classGStatePlaceholder.html#a0a9fa0b0d389cf691001d90076ae602b" title="GStatePlaceholder::\lupdate" alt="" coords="449,18,588,65"/>
+<area shape="rect" id="node7" href="$classAudioHandler.html#aa74f9dd41a30d53de727c38303f0a3e2" title="Sets the current music. " alt="" coords="191,109,353,139"/>
+<area shape="rect" id="node11" href="$classGStatePlaceholder.html#a177ff2bfd8c9f911c6e4e7c6b6b50bdf" title="GStatePlaceholder::load" alt="" coords="661,136,824,165"/>
+<area shape="rect" id="node13" href="$classAudioHandler.html#ae677a4f5106cb5c360c395c175ca85d2" title="Callback that gets called everytime a channel is done playing. " alt="" coords="179,213,365,243"/>
+<area shape="rect" id="node17" href="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="247,267,297,296"/>
+<area shape="rect" id="node19" href="$classSprite.html#ac82a01b98130b9b1403667059640163b" title="Sprite::render" alt="" coords="223,320,321,349"/>
+<area shape="rect" id="node25" href="$classSprite.html#a98bb8afceb93d82270c9e5e7e8f9b49d" title="Sprite::surfaceToTexture" alt="" coords="189,373,355,403"/>
+<area shape="rect" id="node9" href="$classAudioHandler.html#ae006de73495a08fa3332917fe9c57e17" title="Sets new music for given path, infinitely looping. " alt="" coords="425,109,612,139"/>
+<area shape="rect" id="node21" href="$classGStatePlaceholder.html#ad48aea57e922a0f83dc140f6e9a1078b" title="GStatePlaceholder::\lrender" alt="" coords="449,250,588,297"/>
+<area shape="rect" id="node23" href="$classText.html#a61dff362532c385dbc0650b397138635" title="Text::render" alt="" coords="473,320,564,349"/>
+<area shape="rect" id="node27" href="$classSprite.html#a9ba64ddfcd3f79c45b74ec1c1a16c396" title="Sprite::loadFrom" alt="" coords="460,373,577,403"/>
+<area shape="rect" id="node29" href="$classSprite.html#a0c5597fedd9b09878ec8acddca54c2f7" title="Sprite::Sprite" alt="" coords="693,373,792,403"/>
 </map>

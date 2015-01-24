@@ -1,4 +1,4 @@
-<map id="G" name="G">
+<map id="Sprite.h" name="Sprite.h">
 <area shape="rect" id="node3" href="$Game_8cpp.html" title="Game.cpp" alt="" coords="11,315,94,344"/>
 <area shape="rect" id="node5" href="$GameObject_8h.html" title="GameObject.h" alt="" coords="361,83,467,112"/>
 <area shape="rect" id="node21" href="$Sprite_8cpp.html" title="Sprite.cpp" alt="" coords="823,315,903,344"/>

@@ -1,3 +1,4 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$classText.html#a61dff362532c385dbc0650b397138635" title="Text::render" alt="" coords="156,5,247,35"/>
+<map id="Sprite::render" name="Sprite::render">
+<area shape="rect" id="node3" href="$classGStatePlaceholder.html#ad48aea57e922a0f83dc140f6e9a1078b" title="GStatePlaceholder::\lrender" alt="" coords="155,5,293,51"/>
+<area shape="rect" id="node5" href="$classText.html#a61dff362532c385dbc0650b397138635" title="Text::render" alt="" coords="179,75,269,104"/>
 </map>

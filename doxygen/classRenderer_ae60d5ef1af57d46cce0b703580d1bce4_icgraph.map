@@ -1,4 +1,5 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$classSprite.html#ac82a01b98130b9b1403667059640163b" title="Sprite::render" alt="" coords="207,5,305,35"/>
-<area shape="rect" id="node5" href="$classText.html#a61dff362532c385dbc0650b397138635" title="Text::render" alt="" coords="356,5,447,35"/>
+<map id="Renderer::LogicalSize" name="Renderer::LogicalSize">
+<area shape="rect" id="node3" href="$classSprite.html#ac82a01b98130b9b1403667059640163b" title="Sprite::render" alt="" coords="207,44,305,73"/>
+<area shape="rect" id="node5" href="$classGStatePlaceholder.html#ad48aea57e922a0f83dc140f6e9a1078b" title="GStatePlaceholder::\lrender" alt="" coords="355,5,493,51"/>
+<area shape="rect" id="node7" href="$classText.html#a61dff362532c385dbc0650b397138635" title="Text::render" alt="" coords="379,75,469,104"/>
 </map>

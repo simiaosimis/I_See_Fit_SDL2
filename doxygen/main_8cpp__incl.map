@@ -1,4 +1,4 @@
-<map id="G" name="G">
+<map id="main.cpp" name="main.cpp">
 <area shape="rect" id="node3" href="$SDL__Systems_8h.html" title="core/SDL_Systems.h" alt="" coords="868,83,1014,112"/>
 <area shape="rect" id="node5" href="$Game_8h.html" title="engine/Game.h" alt="" coords="1038,83,1148,112"/>
 <area shape="rect" id="node71" href="$Logger_8h.html" title="util/Logger.h" alt="" coords="1678,392,1772,421"/>

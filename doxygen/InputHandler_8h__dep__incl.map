@@ -1,4 +1,4 @@
-<map id="G" name="G">
+<map id="InputHandler.h" name="InputHandler.h">
 <area shape="rect" id="node3" href="$Game_8h.html" title="Game.h" alt="" coords="368,83,435,112"/>
 <area shape="rect" id="node17" href="$InputHandler_8cpp.html" title="InputHandler.cpp" alt="" coords="459,83,579,112"/>
 <area shape="rect" id="node5" href="$AudioHandler_8cpp.html" title="AudioHandler.cpp" alt="" coords="5,160,131,189"/>

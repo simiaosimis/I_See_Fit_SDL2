@@ -1,4 +1,3 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$GameObject_8cpp.html#a148df0aea7c58dd96f5781ffa474f0b8" title="sprite" alt="" coords="312,5,365,35"/>
-<area shape="rect" id="node5" href="$classResourceManager.html#a5e08aa5e0c56ab672011d997ff432230" title="ResourceManager\&lt; Sprite \&gt;::registerResource" alt="" coords="192,59,485,88"/>
+<map id="SpriteManager::load" name="SpriteManager::load">
+<area shape="rect" id="node3" href="$classResourceManager.html#a5e08aa5e0c56ab672011d997ff432230" title="ResourceManager\&lt; Sprite\l \&gt;::registerResource" alt="" coords="193,5,367,51"/>
 </map>

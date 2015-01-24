@@ -1,0 +1,6 @@
+<map id="AudioHandler::SetMusic" name="AudioHandler::SetMusic">
+<area shape="rect" id="node3" href="$classGame.html#a0b3ad989fe67e72b4b6b2f36a059479a" title="Singleton implementation for Game. " alt="" coords="243,5,357,35"/>
+<area shape="rect" id="node5" href="$classGame.html#a56d6466915c8e1e231a6d3e4daf70b35" title="Game::Resource" alt="" coords="240,59,360,88"/>
+<area shape="rect" id="node7" href="$classResourceHandler.html#a4d57a631c9906f50669d17a65fb1822d" title="ResourceHandler::music" alt="" coords="217,112,383,141"/>
+<area shape="rect" id="node9" href="$classResourceManager.html#a77ca1b172f5c8bd12e0caa7fb2f8a0ee" title="ResourceManager::get" alt="" coords="432,112,587,141"/>
+</map>

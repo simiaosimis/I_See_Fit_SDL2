@@ -1,0 +1,4 @@
+<map id="AudioHandler::StopMusic" name="AudioHandler::StopMusic">
+<area shape="rect" id="node3" href="$classAudioHandler.html#ae006de73495a08fa3332917fe9c57e17" title="Sets new music for given path, infinitely looping. " alt="" coords="225,5,412,35"/>
+<area shape="rect" id="node5" href="$classGStatePlaceholder.html#a177ff2bfd8c9f911c6e4e7c6b6b50bdf" title="GStatePlaceholder::load" alt="" coords="461,5,624,35"/>
+</map>

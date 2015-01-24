@@ -1,4 +1,4 @@
-<map id="G" name="G">
+<map id="Sprite::surfaceToTexture" name="Sprite::surfaceToTexture">
 <area shape="rect" id="node3" href="$classSprite.html#a9ba64ddfcd3f79c45b74ec1c1a16c396" title="Sprite::loadFrom" alt="" coords="223,5,340,35"/>
 <area shape="rect" id="node5" href="$classSprite.html#a0c5597fedd9b09878ec8acddca54c2f7" title="Sprite::Sprite" alt="" coords="389,5,488,35"/>
 </map>

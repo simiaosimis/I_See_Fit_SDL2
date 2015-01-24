@@ -1,4 +1,4 @@
-<map id="G" name="G">
+<map id="Renderer.h" name="Renderer.h">
 <area shape="rect" id="node3" href="$Renderer_8cpp.html" title="Renderer.cpp" alt="" coords="291,83,389,112"/>
 <area shape="rect" id="node5" href="$Window_8h.html" title="Window.h" alt="" coords="413,83,493,112"/>
 <area shape="rect" id="node7" href="$Game_8h.html" title="Game.h" alt="" coords="368,160,435,189"/>

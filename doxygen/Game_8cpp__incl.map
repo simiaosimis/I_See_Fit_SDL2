@@ -1,4 +1,4 @@
-<map id="G" name="G">
+<map id="Game.cpp" name="Game.cpp">
 <area shape="rect" id="node3" href="$Game_8h.html" title="engine/Game.h" alt="" coords="868,83,977,112"/>
 <area shape="rect" id="node29" href="$Sprite_8h.html" title="graphics/Sprite.h" alt="" coords="1212,315,1332,344"/>
 <area shape="rect" id="node69" href="$Logger_8h.html" title="util/Logger.h" alt="" coords="5,392,99,421"/>

@@ -1,4 +1,4 @@
-<map id="G" name="G">
+<map id="SoundEffect.h" name="SoundEffect.h">
 <area shape="rect" id="node3" href="$AudioHandler_8h.html" title="AudioHandler.h" alt="" coords="60,160,169,189"/>
 <area shape="rect" id="node20" href="$SFXManager_8h.html" title="SFXManager.h" alt="" coords="200,83,309,112"/>
 <area shape="rect" id="node29" href="$SoundEffect_8cpp.html" title="SoundEffect.cpp" alt="" coords="333,83,451,112"/>

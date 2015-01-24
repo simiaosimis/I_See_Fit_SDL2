@@ -1,0 +1,5 @@
+<map id="AudioHandler::ChannelDone" name="AudioHandler::ChannelDone">
+<area shape="rect" id="node3" href="$classGame.html#a0b3ad989fe67e72b4b6b2f36a059479a" title="Singleton implementation for Game. " alt="" coords="276,5,391,35"/>
+<area shape="rect" id="node5" href="$classGame.html#a5ec4f7e6a350921fb023c62e3fa00494" title="Game::GetAudioHandler" alt="" coords="252,59,415,88"/>
+<area shape="rect" id="node7" href="$classAudioHandler.html#a0e3f228981eec17ede1e20368cd027bb" title="Removes any sound effects from a given channel. " alt="" coords="240,112,427,141"/>
+</map>

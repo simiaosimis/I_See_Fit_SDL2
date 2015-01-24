@@ -1,4 +1,4 @@
-<map id="G" name="G">
+<map id="SpriteManager.h" name="SpriteManager.h">
 <area shape="rect" id="node3" href="$ResourceHandler_8h.html" title="ResourceHandler.h" alt="" coords="400,83,533,112"/>
 <area shape="rect" id="node21" href="$SpriteManager_8cpp.html" title="SpriteManager.cpp" alt="" coords="557,83,688,112"/>
 <area shape="rect" id="node5" href="$Game_8h.html" title="Game.h" alt="" coords="368,160,435,189"/>
