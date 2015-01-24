@@ -134,16 +134,15 @@ function do_cpplint {
 function do_valgrind {
 	attention_echo "Valgrind"
 
-	# Don't do valgrind report for actual project, it will be stuck forever
-	valgrind --xml=yes\
-		--xml-file=${DIR_REPORTS}/valgrind-exec-report.xml\
-		${DIR_BUILD_SRC}/${TARGET_PROJECT}
+	# Valgrind report
+	SDL_AUDIODRIVER=dummy SDL_VIDEODRIVER=x11 valgrind\
+		--xml=yes --xml-file=${DIR_REPORTS}/valgrind-exec-report.xml\
+		--leak-check=full\
+		--track-origins=yes\
+		${DIR_PROJECT_ROOT}/${TARGET_PROJECT}
 
-	# Test suite valgrind report + Test report
-	valgrind --xml=yes\
-		--xml-file=${DIR_REPORTS}/valgrind-gtest-report.xml\
-		${DIR_BUILD_TEST}/${TARGET_GTEST}\
-		--gtest_output=xml:${DIR_REPORTS}/gtest-report.xml
+	# Test report
+	${DIR_BUILD_TEST}/${TARGET_GTEST} --gtest_output=xml:${DIR_REPORTS}/gtest-report.xml
 }
 
 function do_gcovr {

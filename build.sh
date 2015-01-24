@@ -67,8 +67,7 @@ function build {
 	attention_echo "Running the makefile"
 	make || exit $?
 
-	# Copy the executable to test locally, instead of copying the entire assets folder to the
-	# build folder
+	# Copy the executable to root, instead of copying the entire assets folder to build/src/
 	cp ./src/*_exec ../
 
 	popd
