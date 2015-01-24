@@ -14,15 +14,12 @@ int main(int argc, char** argv) {
 	Configuration::Initialize();
 
 	const bool k_systems_initialized = sdl::Initialize();
-
 	if(k_systems_initialized) {
 		Game::Instance().Run();
 	}
 	else {
 		log_error() << "Systems were not initialized.";
 	}
-
-	sdl::Close();
 
 	log_debug() << "Exiting sdl2-engine...";
 	return 0;

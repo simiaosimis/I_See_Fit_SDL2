@@ -3,6 +3,7 @@
 #include <SDL2/SDL_image.h>
 #include <SDL2/SDL_ttf.h>
 #include <SDL2/SDL_mixer.h>
+#include <cstdlib>
 #include <string>
 #include "util/Logger.h"
 
@@ -140,6 +141,7 @@ void LogSdlDrivers(FuncDriverName func_driver_name, FuncNumDrivers func_num_driv
 namespace sdl {
 
 bool Initialize() {
+	///@todo Separate all these initializations into separate functions.
 	bool success_sdl = false;
 	bool success_img = false;
 	bool success_mixer = false;
@@ -160,11 +162,12 @@ bool Initialize() {
 	else {
 		log_error() << "Could not initialize TTF." << TTF_GetError();
 	}
+	std::atexit(TTF_Quit);
+	std::at_quick_exit(TTF_Quit);
 
 	// Initializing SDL with k_init_flags.
 	const Uint32 k_init_flags = SDL_INIT_EVERYTHING;
 	const int sdl_init = SDL_Init(k_init_flags);
-
 	if(sdl_init == 0) {
 		success_sdl = true;
 
@@ -177,6 +180,8 @@ bool Initialize() {
 	else {
 		log_error() << "Could not initialize SDL." << SDL_GetError();
 	}
+	std::atexit(SDL_Quit);
+	std::at_quick_exit(SDL_Quit);
 
 	// Initializing SDL_image with k_img_flags.
 	const Uint32 k_img_flags = IMG_INIT_PNG;
@@ -188,15 +193,8 @@ bool Initialize() {
 	else {
 		log_error() << "Could not initialize SDL_Image." << IMG_GetError();
 	}
-
-	// Getting some video driver information. Enclosing this in a block so the logger gets
-	// destroyed and therefore flushed.
-	{
-		LogBuffer driver_log{log_debug()};
-		driver_log << "Getting driver information.";
-		LogSdlDrivers(SDL_GetVideoDriver, SDL_GetNumVideoDrivers, driver_log);
-		LogSdlDrivers(SDL_GetAudioDriver, SDL_GetNumAudioDrivers, driver_log);
-	}
+	std::atexit(IMG_Quit);
+	std::at_quick_exit(IMG_Quit);
 
 	// Initializing SDL_mixer.
 	const int k_frequency = 44100;
@@ -219,25 +217,20 @@ bool Initialize() {
 	else {
 		log_error() << "Could not initialize SDL_Mixer" << Mix_GetError();
 	}
+	std::atexit(CloseMixer);
+	std::at_quick_exit(CloseMixer);
+
+	// Getting some video driver information. Enclosing this in a block so the logger gets
+	// destroyed and therefore flushed.
+	{
+		LogBuffer driver_log{log_debug()};
+		driver_log << "Getting driver information.";
+		LogSdlDrivers(SDL_GetVideoDriver, SDL_GetNumVideoDrivers, driver_log);
+		LogSdlDrivers(SDL_GetAudioDriver, SDL_GetNumAudioDrivers, driver_log);
+	}
 
 	// If even one system fails to initialize, returns false.
 	return (success_sdl && success_img && success_mixer && success_ttf);
-}
-
-void Close() {
-	log_debug() << "Closing SDL.";
-
-	// Quits SDL_mixer.
-	CloseMixer();
-
-	// Quits SDL_image.
-	IMG_Quit();
-
-	// Quits SDL.
-	SDL_Quit();
-
-	// Quits SDL_TTF.
-	TTF_Quit();
 }
 
 } // namespace sdl

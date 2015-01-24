@@ -14,13 +14,4 @@ namespace sdl {
 */
 bool Initialize();
 
-/**
-* @brief Closes all open systems.
-*
-* Closes all systems and/or subsystems opened by the initializer method.
-*
-* @see Initialize()
-*/
-void Close();
-
 } // namespace sdl
