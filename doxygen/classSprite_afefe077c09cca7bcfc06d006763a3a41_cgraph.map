@@ -1,0 +1,7 @@
+<map id="Sprite::Render" name="Sprite::Render">
+<area shape="rect" id="node3" href="$classGame.html#a0b3ad989fe67e72b4b6b2f36a059479a" title="Singleton implementation for Game. " alt="" coords="180,5,295,35"/>
+<area shape="rect" id="node5" href="$classGame.html#a941f014b7e939ffe63a07343ad72c051" title="Game::GetRenderer" alt="" coords="168,59,307,88"/>
+<area shape="rect" id="node9" href="$classRenderer.html#ae60d5ef1af57d46cce0b703580d1bce4" title="Returns the current set logical size through the parameters. " alt="" coords="163,112,312,141"/>
+<area shape="rect" id="node11" href="$classRenderer.html#a872fef15d8f3bcd45290df3198c5991e" title="Renderer::SdlRenderer" alt="" coords="160,165,315,195"/>
+<area shape="rect" id="node7" href="$classWindow.html#aa1261977d575bd4c6bef796196607be3" title="Window::GetRenderer" alt="" coords="364,59,513,88"/>
+</map>

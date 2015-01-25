@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v28</span>
+   &#160;<span id="projectnumber">v29</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -94,61 +94,73 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
+<p>Visual representation of game objects.  
+ <a href="classSprite.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="Sprite_8h_source.html">Sprite.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0c5597fedd9b09878ec8acddca54c2f7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a0c5597fedd9b09878ec8acddca54c2f7">Sprite</a> (const std::string &amp;path_)</td></tr>
-<tr class="separator:a0c5597fedd9b09878ec8acddca54c2f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29730aadf31a6433746f5fa5bee9550f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a29730aadf31a6433746f5fa5bee9550f">Sprite</a> (SDL_Surface *const surface_)</td></tr>
-<tr class="separator:a29730aadf31a6433746f5fa5bee9550f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24c7952c3e948cf8bdb236b04076019e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a24c7952c3e948cf8bdb236b04076019e">Sprite</a> (const std::string &amp;path)</td></tr>
+<tr class="memdesc:a24c7952c3e948cf8bdb236b04076019e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The regular constructor.  <a href="#a24c7952c3e948cf8bdb236b04076019e">More...</a><br/></td></tr>
+<tr class="separator:a24c7952c3e948cf8bdb236b04076019e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c6ec5e4fe5a32b0df6dc5cb0d15da08"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a2c6ec5e4fe5a32b0df6dc5cb0d15da08">Sprite</a> (SDL_Surface *const surface)</td></tr>
+<tr class="memdesc:a2c6ec5e4fe5a32b0df6dc5cb0d15da08"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor from a surface.  <a href="#a2c6ec5e4fe5a32b0df6dc5cb0d15da08">More...</a><br/></td></tr>
+<tr class="separator:a2c6ec5e4fe5a32b0df6dc5cb0d15da08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8accab430f9d90ae5117b57d67e32b84"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a8accab430f9d90ae5117b57d67e32b84">~Sprite</a> ()</td></tr>
+<tr class="memdesc:a8accab430f9d90ae5117b57d67e32b84"><td class="mdescLeft">&#160;</td><td class="mdescRight">The destructor.  <a href="#a8accab430f9d90ae5117b57d67e32b84">More...</a><br/></td></tr>
 <tr class="separator:a8accab430f9d90ae5117b57d67e32b84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac82a01b98130b9b1403667059640163b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#ac82a01b98130b9b1403667059640163b">render</a> (const double x_, const double y_, SDL_Rect *const clip_=nullptr, const bool stretch_=false, const double angle_=0.0, SDL_Point *const center_=nullptr, SDL_RendererFlip flip_=SDL_FLIP_NONE)</td></tr>
-<tr class="separator:ac82a01b98130b9b1403667059640163b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba3d4752461ec679fbf5de7ec4c34f61"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#aba3d4752461ec679fbf5de7ec4c34f61">getWidth</a> ()</td></tr>
-<tr class="separator:aba3d4752461ec679fbf5de7ec4c34f61"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaffa2ba841e7aee9f5513777599b7450"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#aaffa2ba841e7aee9f5513777599b7450">setWidth</a> (int width_)</td></tr>
-<tr class="separator:aaffa2ba841e7aee9f5513777599b7450"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac488c471dd289b14c4c3b64937b3e42d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#ac488c471dd289b14c4c3b64937b3e42d">setHeight</a> (int height_)</td></tr>
-<tr class="separator:ac488c471dd289b14c4c3b64937b3e42d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67b67082cfda90103d2d9eefea04cc4b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a67b67082cfda90103d2d9eefea04cc4b">getHeight</a> ()</td></tr>
-<tr class="separator:a67b67082cfda90103d2d9eefea04cc4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38399275797600991cd2d95cc803fa0a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a38399275797600991cd2d95cc803fa0a">getPath</a> ()</td></tr>
-<tr class="separator:a38399275797600991cd2d95cc803fa0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0aa4e1217226e29f1181e8d44c48dea3"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a0aa4e1217226e29f1181e8d44c48dea3">getAlpha</a> ()</td></tr>
-<tr class="separator:a0aa4e1217226e29f1181e8d44c48dea3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59cf52a8669c1b91a47b00ee32a6bfaf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a59cf52a8669c1b91a47b00ee32a6bfaf">setAlpha</a> (int alpha_)</td></tr>
-<tr class="separator:a59cf52a8669c1b91a47b00ee32a6bfaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afefe077c09cca7bcfc06d006763a3a41"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#afefe077c09cca7bcfc06d006763a3a41">Render</a> (const double x, const double y, SDL_Rect *const clip=nullptr, const bool stretch=false, const double angle=0.0, SDL_Point *const center=nullptr, SDL_RendererFlip flip=SDL_FLIP_NONE)</td></tr>
+<tr class="memdesc:afefe077c09cca7bcfc06d006763a3a41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders the sprite.  <a href="#afefe077c09cca7bcfc06d006763a3a41">More...</a><br/></td></tr>
+<tr class="separator:afefe077c09cca7bcfc06d006763a3a41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d0b90e1525c8069c7570a8a178ef413"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a1d0b90e1525c8069c7570a8a178ef413">Width</a> ()</td></tr>
+<tr class="separator:a1d0b90e1525c8069c7570a8a178ef413"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19b3d2cc0e632feb5a47021c5763db58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a19b3d2cc0e632feb5a47021c5763db58">SetWidth</a> (int width)</td></tr>
+<tr class="memdesc:a19b3d2cc0e632feb5a47021c5763db58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the width.  <a href="#a19b3d2cc0e632feb5a47021c5763db58">More...</a><br/></td></tr>
+<tr class="separator:a19b3d2cc0e632feb5a47021c5763db58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4322c77ccb84014cd678fdc2b2f3c5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#ad4322c77ccb84014cd678fdc2b2f3c5f">SetHeight</a> (int height)</td></tr>
+<tr class="memdesc:ad4322c77ccb84014cd678fdc2b2f3c5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the height.  <a href="#ad4322c77ccb84014cd678fdc2b2f3c5f">More...</a><br/></td></tr>
+<tr class="separator:ad4322c77ccb84014cd678fdc2b2f3c5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac86efdb3f7d34e65daef159ea95fdea9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#ac86efdb3f7d34e65daef159ea95fdea9">Height</a> ()</td></tr>
+<tr class="separator:ac86efdb3f7d34e65daef159ea95fdea9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32fefb01f00b559ad14a38c975441118"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a32fefb01f00b559ad14a38c975441118">Path</a> ()</td></tr>
+<tr class="separator:a32fefb01f00b559ad14a38c975441118"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9631817d8e3c9aaf1a7fe70795fb5e6f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a9631817d8e3c9aaf1a7fe70795fb5e6f">Alpha</a> ()</td></tr>
+<tr class="separator:a9631817d8e3c9aaf1a7fe70795fb5e6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa050fbc70e8ea1a3fb5cb80e3983b9b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#aa050fbc70e8ea1a3fb5cb80e3983b9b6">SetAlpha</a> (int alpha)</td></tr>
+<tr class="memdesc:aa050fbc70e8ea1a3fb5cb80e3983b9b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the alpha value.  <a href="#aa050fbc70e8ea1a3fb5cb80e3983b9b6">More...</a><br/></td></tr>
+<tr class="separator:aa050fbc70e8ea1a3fb5cb80e3983b9b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a9ba64ddfcd3f79c45b74ec1c1a16c396"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a9ba64ddfcd3f79c45b74ec1c1a16c396">loadFrom</a> (const std::string &amp;path_)</td></tr>
-<tr class="separator:a9ba64ddfcd3f79c45b74ec1c1a16c396"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98bb8afceb93d82270c9e5e7e8f9b49d"><td class="memItemLeft" align="right" valign="top">SDL_Texture *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a98bb8afceb93d82270c9e5e7e8f9b49d">surfaceToTexture</a> (SDL_Surface *const surface_)</td></tr>
-<tr class="separator:a98bb8afceb93d82270c9e5e7e8f9b49d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fe515e7c3a54a8d82d27612ee6dc4c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a5fe515e7c3a54a8d82d27612ee6dc4c4">setBlendMode</a> (SDL_BlendMode blending_)</td></tr>
-<tr class="separator:a5fe515e7c3a54a8d82d27612ee6dc4c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab816060b8a5316f1555c40d37d6044d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#aab816060b8a5316f1555c40d37d6044d">LoadFrom</a> (const std::string &amp;path)</td></tr>
+<tr class="memdesc:aab816060b8a5316f1555c40d37d6044d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads image from a path.  <a href="#aab816060b8a5316f1555c40d37d6044d">More...</a><br/></td></tr>
+<tr class="separator:aab816060b8a5316f1555c40d37d6044d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5cb3e654119597c69a63f28e2738144"><td class="memItemLeft" align="right" valign="top">SDL_Texture *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#ab5cb3e654119597c69a63f28e2738144">SurfaceToTexture</a> (SDL_Surface *const surface)</td></tr>
+<tr class="memdesc:ab5cb3e654119597c69a63f28e2738144"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a SDL_Surface to a SDL_Texture.  <a href="#ab5cb3e654119597c69a63f28e2738144">More...</a><br/></td></tr>
+<tr class="separator:ab5cb3e654119597c69a63f28e2738144"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9da417f71136f89d4e6c93736da2e3eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a9da417f71136f89d4e6c93736da2e3eb">SetBlendMode</a> (SDL_BlendMode blend_mode)</td></tr>
+<tr class="memdesc:a9da417f71136f89d4e6c93736da2e3eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the blend mode of the <a class="el" href="classSprite.html" title="Visual representation of game objects. ">Sprite</a>.  <a href="#a9da417f71136f89d4e6c93736da2e3eb">More...</a><br/></td></tr>
+<tr class="separator:a9da417f71136f89d4e6c93736da2e3eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a546d109413d8f3541ffde26701075bd1"><td class="memItemLeft" align="right" valign="top">SDL_Texture *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a546d109413d8f3541ffde26701075bd1">sdlTexture</a></td></tr>
-<tr class="separator:a546d109413d8f3541ffde26701075bd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a3364944c5e361fc9e7ae406224d682"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a0a3364944c5e361fc9e7ae406224d682">width</a></td></tr>
-<tr class="separator:a0a3364944c5e361fc9e7ae406224d682"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f07c8f2080c193759aec0e13503d7ab"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a1f07c8f2080c193759aec0e13503d7ab">height</a></td></tr>
-<tr class="separator:a1f07c8f2080c193759aec0e13503d7ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2bd9395c3ebb407e632723c3aae2a267"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a2bd9395c3ebb407e632723c3aae2a267">path</a></td></tr>
-<tr class="separator:a2bd9395c3ebb407e632723c3aae2a267"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa70e85ab29425537f1b0e41abbbfe852"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#aa70e85ab29425537f1b0e41abbbfe852">flipHorizontal</a></td></tr>
-<tr class="separator:aa70e85ab29425537f1b0e41abbbfe852"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70da0585a6d2573297323bc50efc4511"><td class="memItemLeft" align="right" valign="top">SDL_Texture *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a70da0585a6d2573297323bc50efc4511">m_sdl_texture</a></td></tr>
+<tr class="separator:a70da0585a6d2573297323bc50efc4511"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a858bf55a412e11b69035d0cc31c47ae9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#a858bf55a412e11b69035d0cc31c47ae9">m_width</a></td></tr>
+<tr class="separator:a858bf55a412e11b69035d0cc31c47ae9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab66ccee54bc5759ccba57ec2f87d997e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#ab66ccee54bc5759ccba57ec2f87d997e">m_height</a></td></tr>
+<tr class="separator:ab66ccee54bc5759ccba57ec2f87d997e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0d80a497e350a5845d7993610f97de4"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSprite.html#ac0d80a497e350a5845d7993610f97de4">m_path</a></td></tr>
+<tr class="separator:ac0d80a497e350a5845d7993610f97de4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Visual representation of game objects. Holds the SDL_Texture from the SDL2 library. </p>
+<div class="textblock"><p>Visual representation of game objects. </p>
+<p>Holds the SDL_Texture from the SDL2 library. </p>
 
-<p>Definition at line <a class="el" href="Sprite_8h_source.html#l00010">10</a> of file <a class="el" href="Sprite_8h_source.html">Sprite.h</a>.</p>
+<p>Definition at line <a class="el" href="Sprite_8h_source.html#l00011">11</a> of file <a class="el" href="Sprite_8h_source.html">Sprite.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a0c5597fedd9b09878ec8acddca54c2f7"></a>
+<a class="anchor" id="a24c7952c3e948cf8bdb236b04076019e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -159,7 +171,7 @@ Private Attributes</h2></td></tr>
           <td class="memname">Sprite::Sprite </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>path_</em></td><td>)</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -169,29 +181,22 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The constructor. Initializes all the data, and sets the desired renderer. Loads image with the desired path. </p>
+
+<p>The regular constructor. </p>
+<p>Initializes all the data, and sets the desired renderer. Loads image with the desired path.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">path_</td><td>: the image path. </td></tr>
+    <tr><td class="paramname">path</td><td>: the image path. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="classSprite.html#a9ba64ddfcd3f79c45b74ec1c1a16c396">Sprite::loadFrom</a> </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="classSprite.html#aab816060b8a5316f1555c40d37d6044d" title="Loads image from a path. ">Sprite::LoadFrom</a> </dd></dl>
 
 <p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00006">6</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
 
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classSprite_a0c5597fedd9b09878ec8acddca54c2f7_cgraph.png" border="0" usemap="#classSprite_a0c5597fedd9b09878ec8acddca54c2f7_cgraph" alt=""/></div>
-<map name="classSprite_a0c5597fedd9b09878ec8acddca54c2f7_cgraph" id="classSprite_a0c5597fedd9b09878ec8acddca54c2f7_cgraph">
-<area shape="rect" id="node3" href="classSprite.html#a9ba64ddfcd3f79c45b74ec1c1a16c396" title="Sprite::loadFrom" alt="" coords="167,5,284,35"/><area shape="rect" id="node9" href="classSprite.html#a5fe515e7c3a54a8d82d27612ee6dc4c4" title="Sprite::setBlendMode" alt="" coords="152,59,299,88"/><area shape="rect" id="node11" href="classSprite.html#a59cf52a8669c1b91a47b00ee32a6bfaf" title="Sprite::setAlpha" alt="" coords="168,112,283,141"/><area shape="rect" id="node5" href="classSprite.html#a98bb8afceb93d82270c9e5e7e8f9b49d" title="Sprite::surfaceToTexture" alt="" coords="348,5,513,35"/><area shape="rect" id="node7" href="classGame.html#a0b3ad989fe67e72b4b6b2f36a059479a" title="Singleton implementation for Game. " alt="" coords="563,5,677,35"/></map>
-</div>
-</p>
-
 </div>
 </div>
-<a class="anchor" id="a29730aadf31a6433746f5fa5bee9550f"></a>
+<a class="anchor" id="a2c6ec5e4fe5a32b0df6dc5cb0d15da08"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -202,7 +207,7 @@ Here is the call graph for this function:</div>
           <td class="memname">Sprite::Sprite </td>
           <td>(</td>
           <td class="paramtype">SDL_Surface *const&#160;</td>
-          <td class="paramname"><em>surface_</em></td><td>)</td>
+          <td class="paramname"><em>surface</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -213,7 +218,25 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00022">22</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
+<p>The constructor from a surface. </p>
+<p>Created to help the <a class="el" href="classText.html">Text</a> class.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">surface</td><td>: The SDL_Surface from which to construct the sprite. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00021">21</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSprite_a2c6ec5e4fe5a32b0df6dc5cb0d15da08_cgraph.png" border="0" usemap="#classSprite_a2c6ec5e4fe5a32b0df6dc5cb0d15da08_cgraph" alt=""/></div>
+<map name="classSprite_a2c6ec5e4fe5a32b0df6dc5cb0d15da08_cgraph" id="classSprite_a2c6ec5e4fe5a32b0df6dc5cb0d15da08_cgraph">
+<area shape="rect" id="node3" href="classSprite.html#ab5cb3e654119597c69a63f28e2738144" title="Converts a SDL_Surface to a SDL_Texture. " alt="" coords="152,5,320,35"/><area shape="rect" id="node5" href="classGame.html#a0b3ad989fe67e72b4b6b2f36a059479a" title="Singleton implementation for Game. " alt="" coords="368,5,483,35"/></map>
+</div>
+</p>
 
 </div>
 </div>
@@ -229,84 +252,51 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>The destructor. Destroys the SDL_Texture. </p>
 
-<p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00038">38</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
+<p>The destructor. </p>
+
+<p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00036">36</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a0aa4e1217226e29f1181e8d44c48dea3"></a>
+<a class="anchor" id="a9631817d8e3c9aaf1a7fe70795fb5e6f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double Sprite::getAlpha </td>
+          <td class="memname">double Sprite::Alpha </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>The alpha value of the <a class="el" href="classSprite.html" title="Visual representation of game objects. ">Sprite</a>. </dd></dl>
 
 <p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00142">142</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a67b67082cfda90103d2d9eefea04cc4b"></a>
+<a class="anchor" id="ac86efdb3f7d34e65daef159ea95fdea9"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int Sprite::getHeight </td>
+          <td class="memname">int Sprite::Height </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="classSprite.html">Sprite</a> height. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="classSprite.html" title="Visual representation of game objects. ">Sprite</a> height. </dd></dl>
 
-<p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00096">96</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a38399275797600991cd2d95cc803fa0a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string Sprite::getPath </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00138">138</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00095">95</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aba3d4752461ec679fbf5de7ec4c34f61"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Sprite::getWidth </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="classSprite.html">Sprite</a> width. </dd></dl>
-
-<p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00092">92</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a9ba64ddfcd3f79c45b74ec1c1a16c396"></a>
+<a class="anchor" id="aab816060b8a5316f1555c40d37d6044d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -314,10 +304,10 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Sprite::loadFrom </td>
+          <td class="memname">void Sprite::LoadFrom </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>path_</em></td><td>)</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -327,82 +317,93 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Loads image from a path. Given an existing path for an image, loads the SDL_Texture from it. </p>
+
+<p>Loads image from a path. </p>
+<p>Given an existing path for an image, loads the SDL_Texture from it.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">path_</td><td>: the image path. </td></tr>
+    <tr><td class="paramname">path</td><td>: the image path.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>Error message is logged if the sprite's SDL_Texture (sdlTexture) is null after method. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Error message is logged if the sprite's SDL_Texture (m_sdl_texture) is null after this method. </dd></dl>
 
-<p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00045">45</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00043">43</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classSprite_a9ba64ddfcd3f79c45b74ec1c1a16c396_cgraph.png" border="0" usemap="#classSprite_a9ba64ddfcd3f79c45b74ec1c1a16c396_cgraph" alt=""/></div>
-<map name="classSprite_a9ba64ddfcd3f79c45b74ec1c1a16c396_cgraph" id="classSprite_a9ba64ddfcd3f79c45b74ec1c1a16c396_cgraph">
-<area shape="rect" id="node3" href="classSprite.html#a98bb8afceb93d82270c9e5e7e8f9b49d" title="Sprite::surfaceToTexture" alt="" coords="175,5,340,35"/><area shape="rect" id="node5" href="classGame.html#a0b3ad989fe67e72b4b6b2f36a059479a" title="Singleton implementation for Game. " alt="" coords="389,5,504,35"/></map>
-</div>
-</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classSprite_a9ba64ddfcd3f79c45b74ec1c1a16c396_icgraph.png" border="0" usemap="#classSprite_a9ba64ddfcd3f79c45b74ec1c1a16c396_icgraph" alt=""/></div>
-<map name="classSprite_a9ba64ddfcd3f79c45b74ec1c1a16c396_icgraph" id="classSprite_a9ba64ddfcd3f79c45b74ec1c1a16c396_icgraph">
-<area shape="rect" id="node3" href="classSprite.html#a0c5597fedd9b09878ec8acddca54c2f7" title="Sprite::Sprite" alt="" coords="173,5,272,35"/></map>
+<div class="center"><img src="classSprite_aab816060b8a5316f1555c40d37d6044d_cgraph.png" border="0" usemap="#classSprite_aab816060b8a5316f1555c40d37d6044d_cgraph" alt=""/></div>
+<map name="classSprite_aab816060b8a5316f1555c40d37d6044d_cgraph" id="classSprite_aab816060b8a5316f1555c40d37d6044d_cgraph">
+<area shape="rect" id="node3" href="classSprite.html#ab5cb3e654119597c69a63f28e2738144" title="Converts a SDL_Surface to a SDL_Texture. " alt="" coords="176,5,344,35"/><area shape="rect" id="node5" href="classGame.html#a0b3ad989fe67e72b4b6b2f36a059479a" title="Singleton implementation for Game. " alt="" coords="392,5,507,35"/></map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="ac82a01b98130b9b1403667059640163b"></a>
+<a class="anchor" id="a32fefb01f00b559ad14a38c975441118"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Sprite::render </td>
+          <td class="memname">std::string Sprite::Path </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>The path to the image composing the texture. </dd></dl>
+
+<p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00138">138</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afefe077c09cca7bcfc06d006763a3a41"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Sprite::Render </td>
           <td>(</td>
           <td class="paramtype">const double&#160;</td>
-          <td class="paramname"><em>x_</em>, </td>
+          <td class="paramname"><em>x</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const double&#160;</td>
-          <td class="paramname"><em>y_</em>, </td>
+          <td class="paramname"><em>y</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">SDL_Rect *const&#160;</td>
-          <td class="paramname"><em>clip_</em> = <code>nullptr</code>, </td>
+          <td class="paramname"><em>clip</em> = <code>nullptr</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const bool&#160;</td>
-          <td class="paramname"><em>stretch_</em> = <code>false</code>, </td>
+          <td class="paramname"><em>stretch</em> = <code>false</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const double&#160;</td>
-          <td class="paramname"><em>angle_</em> = <code>0.0</code>, </td>
+          <td class="paramname"><em>angle</em> = <code>0.0</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">SDL_Point *const&#160;</td>
-          <td class="paramname"><em>center_</em> = <code>nullptr</code>, </td>
+          <td class="paramname"><em>center</em> = <code>nullptr</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">SDL_RendererFlip&#160;</td>
-          <td class="paramname"><em>flip_</em> = <code>SDL_FLIP_NONE</code>&#160;</td>
+          <td class="paramname"><em>flip</em> = <code>SDL_FLIP_NONE</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -411,75 +412,70 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Renders the sprite. Copy the SDL_Texture onto the renderer, at the desired x,y position. </p>
+
+<p>Renders the sprite. </p>
+<p>Copy the SDL_Texture onto the renderer, at the desired x,y position.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x_</td><td>: The position on the x axis of the screen. </td></tr>
-    <tr><td class="paramname">y_</td><td>: The position on the y axis of the screen. </td></tr>
-    <tr><td class="paramname">clip_</td><td>: Clips the texture, on the SDL_Rect bounds. If omitted, renders entire texture. </td></tr>
-    <tr><td class="paramname">stretch_</td><td>: Whether to stretch the image to the entire screen or not. </td></tr>
-    <tr><td class="paramname">angle_</td><td>: An angle in degrees that indicates the rotation that will be applied to the renderQuad. If omitted, no rotation will be applied. </td></tr>
-    <tr><td class="paramname">center_</td><td>: A point indicating the point around which renderQuad will be rotated. If omitted, rotation will be done in width/height center. </td></tr>
-    <tr><td class="paramname">flip_</td><td>: Value static which flipping actions should be performed on the texture. </td></tr>
+    <tr><td class="paramname">x</td><td>: The position on the x axis of the screen. </td></tr>
+    <tr><td class="paramname">y</td><td>: The position on the y axis of the screen. </td></tr>
+    <tr><td class="paramname">clip</td><td>: Clips the texture, on the SDL_Rect bounds. If omitted, renders entire texture. </td></tr>
+    <tr><td class="paramname">stretch</td><td>: Whether to stretch the image to the entire screen or not. </td></tr>
+    <tr><td class="paramname">angle</td><td>: An angle in degrees that indicates the rotation that will be applied to the renderQuad. If omitted, no rotation will be applied. </td></tr>
+    <tr><td class="paramname">center</td><td>: A point indicating the point around which renderQuad will be rotated. If omitted, rotation will be done in width/height center. </td></tr>
+    <tr><td class="paramname">flip</td><td>: Value static which flipping actions should be performed on the texture.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>The only obligatory parameters are x_ and y_. </dd>
+<dl class="section note"><dt>Note</dt><dd>The only obligatory parameters are x and y. </dd>
 <dd>
 If the <a class="el" href="classWindow.html">Window</a> renderer is null, will halt the game. </dd>
 <dd>
 If it fails to render, logs an error message. </dd></dl>
 
-<p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00061">61</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00059">59</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classSprite_ac82a01b98130b9b1403667059640163b_cgraph.png" border="0" usemap="#classSprite_ac82a01b98130b9b1403667059640163b_cgraph" alt=""/></div>
-<map name="classSprite_ac82a01b98130b9b1403667059640163b_cgraph" id="classSprite_ac82a01b98130b9b1403667059640163b_cgraph">
-<area shape="rect" id="node3" href="classGame.html#a0b3ad989fe67e72b4b6b2f36a059479a" title="Singleton implementation for Game. " alt="" coords="175,5,289,35"/><area shape="rect" id="node5" href="classGame.html#a941f014b7e939ffe63a07343ad72c051" title="Game::GetRenderer" alt="" coords="163,59,301,88"/><area shape="rect" id="node9" href="classRenderer.html#ae60d5ef1af57d46cce0b703580d1bce4" title="Returns the current set logical size through the parameters. " alt="" coords="157,112,307,141"/><area shape="rect" id="node11" href="classRenderer.html#a872fef15d8f3bcd45290df3198c5991e" title="Renderer::SdlRenderer" alt="" coords="155,165,309,195"/><area shape="rect" id="node7" href="classWindow.html#aa1261977d575bd4c6bef796196607be3" title="Window::GetRenderer" alt="" coords="359,59,508,88"/></map>
+<div class="center"><img src="classSprite_afefe077c09cca7bcfc06d006763a3a41_cgraph.png" border="0" usemap="#classSprite_afefe077c09cca7bcfc06d006763a3a41_cgraph" alt=""/></div>
+<map name="classSprite_afefe077c09cca7bcfc06d006763a3a41_cgraph" id="classSprite_afefe077c09cca7bcfc06d006763a3a41_cgraph">
+<area shape="rect" id="node3" href="classGame.html#a0b3ad989fe67e72b4b6b2f36a059479a" title="Singleton implementation for Game. " alt="" coords="180,5,295,35"/><area shape="rect" id="node5" href="classGame.html#a941f014b7e939ffe63a07343ad72c051" title="Game::GetRenderer" alt="" coords="168,59,307,88"/><area shape="rect" id="node9" href="classRenderer.html#ae60d5ef1af57d46cce0b703580d1bce4" title="Returns the current set logical size through the parameters. " alt="" coords="163,112,312,141"/><area shape="rect" id="node11" href="classRenderer.html#a872fef15d8f3bcd45290df3198c5991e" title="Renderer::SdlRenderer" alt="" coords="160,165,315,195"/><area shape="rect" id="node7" href="classWindow.html#aa1261977d575bd4c6bef796196607be3" title="Window::GetRenderer" alt="" coords="364,59,513,88"/></map>
 </div>
 </p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classSprite_ac82a01b98130b9b1403667059640163b_icgraph.png" border="0" usemap="#classSprite_ac82a01b98130b9b1403667059640163b_icgraph" alt=""/></div>
-<map name="classSprite_ac82a01b98130b9b1403667059640163b_icgraph" id="classSprite_ac82a01b98130b9b1403667059640163b_icgraph">
-<area shape="rect" id="node3" href="classGStatePlaceholder.html#ad48aea57e922a0f83dc140f6e9a1078b" title="GStatePlaceholder::\lrender" alt="" coords="155,5,293,51"/><area shape="rect" id="node5" href="classText.html#a61dff362532c385dbc0650b397138635" title="Text::render" alt="" coords="179,75,269,104"/></map>
+<div class="center"><img src="classSprite_afefe077c09cca7bcfc06d006763a3a41_icgraph.png" border="0" usemap="#classSprite_afefe077c09cca7bcfc06d006763a3a41_icgraph" alt=""/></div>
+<map name="classSprite_afefe077c09cca7bcfc06d006763a3a41_icgraph" id="classSprite_afefe077c09cca7bcfc06d006763a3a41_icgraph">
+<area shape="rect" id="node3" href="classGStatePlaceholder.html#ad48aea57e922a0f83dc140f6e9a1078b" title="GStatePlaceholder::\lrender" alt="" coords="160,5,299,51"/><area shape="rect" id="node5" href="classText.html#a61dff362532c385dbc0650b397138635" title="Text::render" alt="" coords="184,75,275,104"/></map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="a59cf52a8669c1b91a47b00ee32a6bfaf"></a>
+<a class="anchor" id="aa050fbc70e8ea1a3fb5cb80e3983b9b6"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Sprite::setAlpha </td>
+          <td class="memname">void Sprite::SetAlpha </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>alpha_</em></td><td>)</td>
+          <td class="paramname"><em>alpha</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00153">153</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
+<p>Set the alpha value. </p>
 
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classSprite_a59cf52a8669c1b91a47b00ee32a6bfaf_icgraph.png" border="0" usemap="#classSprite_a59cf52a8669c1b91a47b00ee32a6bfaf_icgraph" alt=""/></div>
-<map name="classSprite_a59cf52a8669c1b91a47b00ee32a6bfaf_icgraph" id="classSprite_a59cf52a8669c1b91a47b00ee32a6bfaf_icgraph">
-<area shape="rect" id="node3" href="classSprite.html#a0c5597fedd9b09878ec8acddca54c2f7" title="Sprite::Sprite" alt="" coords="168,5,267,35"/></map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00154">154</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a5fe515e7c3a54a8d82d27612ee6dc4c4"></a>
+<a class="anchor" id="a9da417f71136f89d4e6c93736da2e3eb"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -487,10 +483,10 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Sprite::setBlendMode </td>
+          <td class="memname">void Sprite::SetBlendMode </td>
           <td>(</td>
           <td class="paramtype">SDL_BlendMode&#160;</td>
-          <td class="paramname"><em>blending_</em></td><td>)</td>
+          <td class="paramname"><em>blend_mode</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -501,74 +497,71 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00167">167</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
+<p>Sets the blend mode of the <a class="el" href="classSprite.html" title="Visual representation of game objects. ">Sprite</a>. </p>
 
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classSprite_a5fe515e7c3a54a8d82d27612ee6dc4c4_icgraph.png" border="0" usemap="#classSprite_a5fe515e7c3a54a8d82d27612ee6dc4c4_icgraph" alt=""/></div>
-<map name="classSprite_a5fe515e7c3a54a8d82d27612ee6dc4c4_icgraph" id="classSprite_a5fe515e7c3a54a8d82d27612ee6dc4c4_icgraph">
-<area shape="rect" id="node3" href="classSprite.html#a0c5597fedd9b09878ec8acddca54c2f7" title="Sprite::Sprite" alt="" coords="200,5,299,35"/></map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00169">169</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ac488c471dd289b14c4c3b64937b3e42d"></a>
+<a class="anchor" id="ad4322c77ccb84014cd678fdc2b2f3c5f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Sprite::setHeight </td>
+          <td class="memname">void Sprite::SetHeight </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>height_</em></td><td>)</td>
+          <td class="paramname"><em>height</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00105">105</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
+<p>Set the height. </p>
+
+<p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00104">104</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classSprite_ac488c471dd289b14c4c3b64937b3e42d_icgraph.png" border="0" usemap="#classSprite_ac488c471dd289b14c4c3b64937b3e42d_icgraph" alt=""/></div>
-<map name="classSprite_ac488c471dd289b14c4c3b64937b3e42d_icgraph" id="classSprite_ac488c471dd289b14c4c3b64937b3e42d_icgraph">
+<div class="center"><img src="classSprite_ad4322c77ccb84014cd678fdc2b2f3c5f_icgraph.png" border="0" usemap="#classSprite_ad4322c77ccb84014cd678fdc2b2f3c5f_icgraph" alt=""/></div>
+<map name="classSprite_ad4322c77ccb84014cd678fdc2b2f3c5f_icgraph" id="classSprite_ad4322c77ccb84014cd678fdc2b2f3c5f_icgraph">
+<area shape="rect" id="node3" href="classText.html#a3115f4a81c0c42f80768fd53c32377cd" title="Text::Text" alt="" coords="197,5,280,35"/><area shape="rect" id="node5" href="classText.html#a91b8cdda1b4527cf8ac2c25f53397e69" title="Text::changeText" alt="" coords="177,59,300,88"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a19b3d2cc0e632feb5a47021c5763db58"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Sprite::SetWidth </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the width. </p>
+
+<p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00099">99</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSprite_a19b3d2cc0e632feb5a47021c5763db58_icgraph.png" border="0" usemap="#classSprite_a19b3d2cc0e632feb5a47021c5763db58_icgraph" alt=""/></div>
+<map name="classSprite_a19b3d2cc0e632feb5a47021c5763db58_icgraph" id="classSprite_a19b3d2cc0e632feb5a47021c5763db58_icgraph">
 <area shape="rect" id="node3" href="classText.html#a3115f4a81c0c42f80768fd53c32377cd" title="Text::Text" alt="" coords="195,5,277,35"/><area shape="rect" id="node5" href="classText.html#a91b8cdda1b4527cf8ac2c25f53397e69" title="Text::changeText" alt="" coords="175,59,297,88"/></map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="aaffa2ba841e7aee9f5513777599b7450"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Sprite::setWidth </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>width_</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00100">100</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classSprite_aaffa2ba841e7aee9f5513777599b7450_icgraph.png" border="0" usemap="#classSprite_aaffa2ba841e7aee9f5513777599b7450_icgraph" alt=""/></div>
-<map name="classSprite_aaffa2ba841e7aee9f5513777599b7450_icgraph" id="classSprite_aaffa2ba841e7aee9f5513777599b7450_icgraph">
-<area shape="rect" id="node3" href="classText.html#a3115f4a81c0c42f80768fd53c32377cd" title="Text::Text" alt="" coords="192,5,275,35"/><area shape="rect" id="node5" href="classText.html#a91b8cdda1b4527cf8ac2c25f53397e69" title="Text::changeText" alt="" coords="172,59,295,88"/></map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="a98bb8afceb93d82270c9e5e7e8f9b49d"></a>
+<a class="anchor" id="ab5cb3e654119597c69a63f28e2738144"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -576,10 +569,10 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">SDL_Texture * Sprite::surfaceToTexture </td>
+          <td class="memname">SDL_Texture * Sprite::SurfaceToTexture </td>
           <td>(</td>
           <td class="paramtype">SDL_Surface *const&#160;</td>
-          <td class="paramname"><em>surface_</em></td><td>)</td>
+          <td class="paramname"><em>surface</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -590,13 +583,15 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00110">110</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
+<p>Converts a SDL_Surface to a SDL_Texture. </p>
+
+<p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00109">109</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classSprite_a98bb8afceb93d82270c9e5e7e8f9b49d_cgraph.png" border="0" usemap="#classSprite_a98bb8afceb93d82270c9e5e7e8f9b49d_cgraph" alt=""/></div>
-<map name="classSprite_a98bb8afceb93d82270c9e5e7e8f9b49d_cgraph" id="classSprite_a98bb8afceb93d82270c9e5e7e8f9b49d_cgraph">
+<div class="center"><img src="classSprite_ab5cb3e654119597c69a63f28e2738144_cgraph.png" border="0" usemap="#classSprite_ab5cb3e654119597c69a63f28e2738144_cgraph" alt=""/></div>
+<map name="classSprite_ab5cb3e654119597c69a63f28e2738144_cgraph" id="classSprite_ab5cb3e654119597c69a63f28e2738144_cgraph">
 <area shape="rect" id="node3" href="classGame.html#a0b3ad989fe67e72b4b6b2f36a059479a" title="Singleton implementation for Game. " alt="" coords="221,5,336,35"/></map>
 </div>
 </p>
@@ -604,39 +599,34 @@ Here is the call graph for this function:</div>
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classSprite_a98bb8afceb93d82270c9e5e7e8f9b49d_icgraph.png" border="0" usemap="#classSprite_a98bb8afceb93d82270c9e5e7e8f9b49d_icgraph" alt=""/></div>
-<map name="classSprite_a98bb8afceb93d82270c9e5e7e8f9b49d_icgraph" id="classSprite_a98bb8afceb93d82270c9e5e7e8f9b49d_icgraph">
-<area shape="rect" id="node3" href="classSprite.html#a9ba64ddfcd3f79c45b74ec1c1a16c396" title="Sprite::loadFrom" alt="" coords="223,5,340,35"/><area shape="rect" id="node5" href="classSprite.html#a0c5597fedd9b09878ec8acddca54c2f7" title="Sprite::Sprite" alt="" coords="389,5,488,35"/></map>
+<div class="center"><img src="classSprite_ab5cb3e654119597c69a63f28e2738144_icgraph.png" border="0" usemap="#classSprite_ab5cb3e654119597c69a63f28e2738144_icgraph" alt=""/></div>
+<map name="classSprite_ab5cb3e654119597c69a63f28e2738144_icgraph" id="classSprite_ab5cb3e654119597c69a63f28e2738144_icgraph">
+<area shape="rect" id="node3" href="classSprite.html#a2c6ec5e4fe5a32b0df6dc5cb0d15da08" title="The constructor from a surface. " alt="" coords="233,5,332,35"/><area shape="rect" id="node5" href="classSprite.html#aab816060b8a5316f1555c40d37d6044d" title="Loads image from a path. " alt="" coords="221,59,344,88"/></map>
 </div>
 </p>
 
 </div>
 </div>
-<h2 class="groupheader">Field Documentation</h2>
-<a class="anchor" id="aa70e85ab29425537f1b0e41abbbfe852"></a>
+<a class="anchor" id="a1d0b90e1525c8069c7570a8a178ef413"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool Sprite::flipHorizontal</td>
+          <td class="memname">int Sprite::Width </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-<p>When true flip the image </p>
+<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="classSprite.html" title="Visual representation of game objects. ">Sprite</a> width. </dd></dl>
 
-<p>Definition at line <a class="el" href="Sprite_8h_source.html#l00090">90</a> of file <a class="el" href="Sprite_8h_source.html">Sprite.h</a>.</p>
+<p>Definition at line <a class="el" href="Sprite_8cpp_source.html#l00091">91</a> of file <a class="el" href="Sprite_8cpp_source.html">Sprite.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a1f07c8f2080c193759aec0e13503d7ab"></a>
+<h2 class="groupheader">Field Documentation</h2>
+<a class="anchor" id="ab66ccee54bc5759ccba57ec2f87d997e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -644,7 +634,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int Sprite::height</td>
+          <td class="memname">int Sprite::m_height</td>
         </tr>
       </table>
   </td>
@@ -655,11 +645,11 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>The loaded image's width. </p>
 
-<p>Definition at line <a class="el" href="Sprite_8h_source.html#l00088">88</a> of file <a class="el" href="Sprite_8h_source.html">Sprite.h</a>.</p>
+<p>Definition at line <a class="el" href="Sprite_8h_source.html#l00124">124</a> of file <a class="el" href="Sprite_8h_source.html">Sprite.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a2bd9395c3ebb407e632723c3aae2a267"></a>
+<a class="anchor" id="ac0d80a497e350a5845d7993610f97de4"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -667,7 +657,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::string Sprite::path</td>
+          <td class="memname">const std::string Sprite::m_path</td>
         </tr>
       </table>
   </td>
@@ -676,13 +666,13 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Holds the path from where the <a class="el" href="classSprite.html">Sprite</a> was loaded. </p>
+<p>Holds the path from where the <a class="el" href="classSprite.html" title="Visual representation of game objects. ">Sprite</a> was loaded. </p>
 
-<p>Definition at line <a class="el" href="Sprite_8h_source.html#l00089">89</a> of file <a class="el" href="Sprite_8h_source.html">Sprite.h</a>.</p>
+<p>Definition at line <a class="el" href="Sprite_8h_source.html#l00125">125</a> of file <a class="el" href="Sprite_8h_source.html">Sprite.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a546d109413d8f3541ffde26701075bd1"></a>
+<a class="anchor" id="a70da0585a6d2573297323bc50efc4511"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -690,7 +680,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">SDL_Texture* Sprite::sdlTexture</td>
+          <td class="memname">SDL_Texture* Sprite::m_sdl_texture</td>
         </tr>
       </table>
   </td>
@@ -701,11 +691,11 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>The SDL texture to use as the image. </p>
 
-<p>Definition at line <a class="el" href="Sprite_8h_source.html#l00083">83</a> of file <a class="el" href="Sprite_8h_source.html">Sprite.h</a>.</p>
+<p>Definition at line <a class="el" href="Sprite_8h_source.html#l00122">122</a> of file <a class="el" href="Sprite_8h_source.html">Sprite.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a0a3364944c5e361fc9e7ae406224d682"></a>
+<a class="anchor" id="a858bf55a412e11b69035d0cc31c47ae9"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -713,7 +703,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int Sprite::width</td>
+          <td class="memname">int Sprite::m_width</td>
         </tr>
       </table>
   </td>
@@ -724,7 +714,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>The loaded image's width. </p>
 
-<p>Definition at line <a class="el" href="Sprite_8h_source.html#l00087">87</a> of file <a class="el" href="Sprite_8h_source.html">Sprite.h</a>.</p>
+<p>Definition at line <a class="el" href="Sprite_8h_source.html#l00123">123</a> of file <a class="el" href="Sprite_8h_source.html">Sprite.h</a>.</p>
 
 </div>
 </div>
@@ -735,7 +725,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 24 2015 04:04:51 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 25 2015 00:40:41 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

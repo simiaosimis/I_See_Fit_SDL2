@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v28</span>
+   &#160;<span id="projectnumber">v29</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -136,9 +136,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
 <div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classGStatePlaceholder.html#ad48aea57e922a0f83dc140f6e9a1078b">   45</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classGStatePlaceholder.html#ad48aea57e922a0f83dc140f6e9a1078b">GStatePlaceholder::render</a>() {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    this-&gt;<a class="code" href="classGStatePlaceholder.html#a7453f629f02e6ddba49490f346ffe1ee">image</a>-&gt;<a class="code" href="classSprite.html#ac82a01b98130b9b1403667059640163b">render</a>(0, 0, &amp;this-&gt;<a class="code" href="classGStatePlaceholder.html#a225ddc8653cf385d180689ce427961e9">animationClip</a>, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    this-&gt;<a class="code" href="classGStatePlaceholder.html#a7453f629f02e6ddba49490f346ffe1ee">image</a>-&gt;<a class="code" href="classSprite.html#afefe077c09cca7bcfc06d006763a3a41">Render</a>(0, 0, &amp;this-&gt;<a class="code" href="classGStatePlaceholder.html#a225ddc8653cf385d180689ce427961e9">animationClip</a>, <span class="keyword">true</span>);</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
 <div class="ttc" id="classGStatePlaceholder_html_ae67aed58f73d4cc73a322cfee0a61b8e"><div class="ttname"><a href="classGStatePlaceholder.html#ae67aed58f73d4cc73a322cfee0a61b8e">GStatePlaceholder::unload</a></div><div class="ttdeci">virtual void unload()</div><div class="ttdef"><b>Definition:</b> <a href="GStatePlaceholder_8cpp_source.html#l00029">GStatePlaceholder.cpp:29</a></div></div>
+<div class="ttc" id="classSprite_html_afefe077c09cca7bcfc06d006763a3a41"><div class="ttname"><a href="classSprite.html#afefe077c09cca7bcfc06d006763a3a41">Sprite::Render</a></div><div class="ttdeci">void Render(const double x, const double y, SDL_Rect *const clip=nullptr, const bool stretch=false, const double angle=0.0, SDL_Point *const center=nullptr, SDL_RendererFlip flip=SDL_FLIP_NONE)</div><div class="ttdoc">Renders the sprite. </div><div class="ttdef"><b>Definition:</b> <a href="Sprite_8cpp_source.html#l00059">Sprite.cpp:59</a></div></div>
 <div class="ttc" id="GStatePlaceholder_8h_html"><div class="ttname"><a href="GStatePlaceholder_8h.html">GStatePlaceholder.h</a></div></div>
 <div class="ttc" id="InputKeys_8h_html_a342dc58a9a2abc329afa50a89c6264b6"><div class="ttname"><a href="InputKeys_8h.html#a342dc58a9a2abc329afa50a89c6264b6">InputArray</a></div><div class="ttdeci">std::array&lt; bool, GameKeys::MAX &gt; InputArray</div><div class="ttdef"><b>Definition:</b> <a href="InputKeys_8h_source.html#l00015">InputKeys.h:15</a></div></div>
 <div class="ttc" id="classAudioHandler_html_a837e3e99b3d4e80dad159eb6295414d9"><div class="ttname"><a href="classAudioHandler.html#a837e3e99b3d4e80dad159eb6295414d9">AudioHandler::PlaySoundEffect</a></div><div class="ttdeci">void PlaySoundEffect(const std::string &amp;path)</div><div class="ttdoc">Plays a sound effect once. </div><div class="ttdef"><b>Definition:</b> <a href="AudioHandler_8cpp_source.html#l00032">AudioHandler.cpp:32</a></div></div>
@@ -147,7 +148,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classGStatePlaceholder_html_adfbf36156052798e8f7907c212aa84c9"><div class="ttname"><a href="classGStatePlaceholder.html#adfbf36156052798e8f7907c212aa84c9">GStatePlaceholder::GStatePlaceholder</a></div><div class="ttdeci">GStatePlaceholder()</div><div class="ttdef"><b>Definition:</b> <a href="GStatePlaceholder_8cpp_source.html#l00005">GStatePlaceholder.cpp:5</a></div></div>
 <div class="ttc" id="Game_8h_html"><div class="ttname"><a href="Game_8h.html">Game.h</a></div></div>
 <div class="ttc" id="classGStatePlaceholder_html_a177ff2bfd8c9f911c6e4e7c6b6b50bdf"><div class="ttname"><a href="classGStatePlaceholder.html#a177ff2bfd8c9f911c6e4e7c6b6b50bdf">GStatePlaceholder::load</a></div><div class="ttdeci">virtual void load()</div><div class="ttdef"><b>Definition:</b> <a href="GStatePlaceholder_8cpp_source.html#l00017">GStatePlaceholder.cpp:17</a></div></div>
-<div class="ttc" id="classSprite_html_ac82a01b98130b9b1403667059640163b"><div class="ttname"><a href="classSprite.html#ac82a01b98130b9b1403667059640163b">Sprite::render</a></div><div class="ttdeci">void render(const double x_, const double y_, SDL_Rect *const clip_=nullptr, const bool stretch_=false, const double angle_=0.0, SDL_Point *const center_=nullptr, SDL_RendererFlip flip_=SDL_FLIP_NONE)</div><div class="ttdef"><b>Definition:</b> <a href="Sprite_8cpp_source.html#l00061">Sprite.cpp:61</a></div></div>
 <div class="ttc" id="classStateGame_html_aa215f7b6d37658dead89448afacc713d"><div class="ttname"><a href="classStateGame.html#aa215f7b6d37658dead89448afacc713d">StateGame::unload</a></div><div class="ttdeci">virtual void unload()=0</div><div class="ttdef"><b>Definition:</b> <a href="StateGame_8cpp_source.html#l00007">StateGame.cpp:7</a></div></div>
 <div class="ttc" id="Logger_8h_html_a4a8f1b43d1e2b374d21f9e37a12b7260"><div class="ttname"><a href="Logger_8h.html#a4a8f1b43d1e2b374d21f9e37a12b7260">log_debug</a></div><div class="ttdeci">constexpr log_function_ptr log_debug</div><div class="ttdef"><b>Definition:</b> <a href="Logger_8h_source.html#l00086">Logger.h:86</a></div></div>
 <div class="ttc" id="classGStatePlaceholder_html_ab4808cf40cc146893275f46b8556fe95"><div class="ttname"><a href="classGStatePlaceholder.html#ab4808cf40cc146893275f46b8556fe95">GStatePlaceholder::~GStatePlaceholder</a></div><div class="ttdeci">virtual ~GStatePlaceholder()</div><div class="ttdef"><b>Definition:</b> <a href="GStatePlaceholder_8cpp_source.html#l00013">GStatePlaceholder.cpp:13</a></div></div>
@@ -168,7 +168,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 24 2015 04:04:51 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 25 2015 00:40:41 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

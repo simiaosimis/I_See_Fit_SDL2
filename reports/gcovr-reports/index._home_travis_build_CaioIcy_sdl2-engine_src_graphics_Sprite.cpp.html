@@ -256,12 +256,12 @@
             <td></td>
             <td class="headerName">Lines:</td>
             <td class="headerTableEntry">0</td>
-            <td class="headerTableEntry">92</td>
+            <td class="headerTableEntry">95</td>
             <td class="headerTableEntry" style="background-color:LightPink">0.0 %</td>
           </tr>
           <tr>
             <td class="headerName">Date:</td>
-            <td class="headerValue">2015-01-24</td>
+            <td class="headerValue">2015-01-25</td>
             <td></td>
             <td class="headerName">Branches:</td>
             <td class="headerTableEntry">0</td>
@@ -317,679 +317,679 @@
     <tr>
     <td align="right" class="lineno"><pre>6</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>Sprite::Sprite(const std::string&amp; path_) :</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>Sprite::Sprite(const std::string&amp; path) :</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>7</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>	sdlTexture(nullptr),</pre></td>
+    <td align="left" class="src "><pre>	m_sdl_texture{nullptr},</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>8</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>	width(0),</pre></td>
+    <td align="left" class="src "><pre>	m_width{0},</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>9</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>	height(0),</pre></td>
+    <td align="left" class="src "><pre>	m_height{0},</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>10</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>	path(path_),</pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	m_path{path}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>11</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	flipHorizontal(false)</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>12</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>{</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>13</pre></td>
+    <td align="right" class="lineno"><pre>12</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	loadFrom(this-&gt;path);</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	LoadFrom(m_path);</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>13</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>14</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	SetBlendMode(SDL_BLENDMODE_BLEND);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>15</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	setBlendMode(SDL_BLENDMODE_BLEND);</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	SetAlpha(255);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>16</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	setAlpha(255);</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>17</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	ASSERT(m_width &gt;= 0 , "Must be &gt;= 0");</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>18</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	ASSERT(width &gt;= 0 , "Must be &gt;= 0");</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	ASSERT(m_height &gt;= 0, "Must be &gt;= 0");</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>19</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	ASSERT(height &gt;= 0, "Must be &gt;= 0");</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>20</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>21</pre></td>
+    <td align="right" class="lineno"><pre>20</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>21</pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>Sprite::Sprite(SDL_Surface* const surface) :</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>22</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>Sprite::Sprite(SDL_Surface* const surface_) :</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	m_sdl_texture{SurfaceToTexture(surface)},</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>23</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	sdlTexture(surfaceToTexture(surface_)),</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>	m_width{0},</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>24</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>	width(0),</pre></td>
+    <td align="left" class="src "><pre>	m_height{0},</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>25</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>	height(0),</pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	m_path{"font"}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>26</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>	path("font"),</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>27</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	flipHorizontal(false)</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>28</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>{</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>29</pre></td>
+    <td align="right" class="lineno"><pre>27</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	// Display error log if image wasn't loaded.</pre></td>
     </tr>
 
     <tr>
+    <td align="right" class="lineno"><pre>28</pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	if(m_sdl_texture == nullptr) {</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>29</pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>		log_error() &lt;&lt; "Sprite load failed: " &lt;&lt; m_path;</pre></td>
+    </tr>
+
+    <tr>
     <td align="right" class="lineno"><pre>30</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	if(this-&gt;sdlTexture == nullptr) {</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>31</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>		log_error() &lt;&lt; "Sprite load failed: " &lt;&lt; this-&gt;path;</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>32</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>33</pre></td>
+    <td align="right" class="lineno"><pre>31</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>32</pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	ASSERT(m_width &gt;= 0 , "Must be &gt;= 0");</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>33</pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	ASSERT(m_height &gt;= 0, "Must be &gt;= 0");</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>34</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	ASSERT(width &gt;= 0 , "Must be &gt;= 0");</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>35</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	ASSERT(height &gt;= 0, "Must be &gt;= 0");</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>36</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>}</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>Sprite::~Sprite() {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>37</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	if(m_sdl_texture != nullptr) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>38</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>Sprite::~Sprite() {</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>		SDL_DestroyTexture(m_sdl_texture);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>39</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	if(this-&gt;sdlTexture != nullptr) {</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>		m_sdl_texture = nullptr;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>40</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>		SDL_DestroyTexture(this-&gt;sdlTexture);</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>	}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>41</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>		this-&gt;sdlTexture = nullptr;</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>42</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>	}</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>43</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>}</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>void Sprite::LoadFrom(const std::string&amp; path) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>44</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	SDL_Surface* loadedSurface = IMG_Load(path.c_str());</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>45</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>void Sprite::loadFrom(const std::string&amp; path_) {</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>46</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	SDL_Surface* loadedSurface = IMG_Load(path_.c_str());</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>47</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>48</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	if(loadedSurface != nullptr) {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>49</pre></td>
+    <td align="right" class="lineno"><pre>47</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>		this-&gt;sdlTexture = surfaceToTexture(loadedSurface);</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>		m_sdl_texture = SurfaceToTexture(loadedSurface);</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>50</pre></td>
+    <td align="right" class="lineno"><pre>48</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>51</pre></td>
+    <td align="right" class="lineno"><pre>49</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	else {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>52</pre></td>
+    <td align="right" class="lineno"><pre>50</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>		log_error() &lt;&lt; "Could not load surface from path." &lt;&lt; IMG_GetError();</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>53</pre></td>
+    <td align="right" class="lineno"><pre>51</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>54</pre></td>
+    <td align="right" class="lineno"><pre>52</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>55</pre></td>
+    <td align="right" class="lineno"><pre>53</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	// Display error log if image wasn't loaded.</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>56</pre></td>
+    <td align="right" class="lineno"><pre>54</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	if(this-&gt;sdlTexture == nullptr) {</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	if(m_sdl_texture == nullptr) {</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>55</pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>		log_error() &lt;&lt; "Sprite load failed: " &lt;&lt; path;</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>56</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>	}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>57</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>		log_error() &lt;&lt; "Sprite load failed: " &lt;&lt; path_;</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>58</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>	}</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>59</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>}</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>void Sprite::Render(const double x, const double y, SDL_Rect* const clip,</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>60</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="left" class="src "><pre>	const bool stretch, const double angle, SDL_Point* const center,</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>61</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>void Sprite::render(const double x_, const double y_, SDL_Rect* const clip_,</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>	SDL_RendererFlip flip) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>62</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>	const bool stretch_, const double angle_, SDL_Point* const center_,</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>63</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>	SDL_RendererFlip flip_) {</pre></td>
+    <td align="left" class="src "><pre>	// This is the destination SDL_Rect structure.</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>64</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	SDL_Rect renderQuad = {static_cast&lt;int&gt;(x), static_cast&lt;int&gt;(y), m_width, m_height};</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>65</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>	// This is the destination SDL_Rect structure.</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>66</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	SDL_Rect renderQuad = {static_cast&lt;int&gt;(x_), static_cast&lt;int&gt;(y_), this-&gt;width, this-&gt;height};</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	if(clip != nullptr) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>67</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>		renderQuad.w = clip-&gt;w;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>68</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	if(clip_ != nullptr) {</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>		renderQuad.h = clip-&gt;h;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>69</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>		renderQuad.w = clip_-&gt;w;</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>70</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>		renderQuad.h = clip_-&gt;h;</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>71</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>72</pre></td>
+    <td align="right" class="lineno"><pre>70</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	else {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>73</pre></td>
+    <td align="right" class="lineno"><pre>71</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		// Don't clip the sprite.</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>74</pre></td>
+    <td align="right" class="lineno"><pre>72</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>75</pre></td>
+    <td align="right" class="lineno"><pre>73</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>76</pre></td>
+    <td align="right" class="lineno"><pre>74</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	int logicalW = 0;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>77</pre></td>
+    <td align="right" class="lineno"><pre>75</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	int logicalH = 0;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>78</pre></td>
+    <td align="right" class="lineno"><pre>76</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	Game::Instance().GetRenderer()-&gt;LogicalSize(&amp;logicalW, &amp;logicalH);</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>79</pre></td>
+    <td align="right" class="lineno"><pre>77</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>	SDL_Rect stretch_rectangle = {static_cast&lt;int&gt;(x), static_cast&lt;int&gt;(y), logicalW,</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>78</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	SDL_Rect stretch = {static_cast&lt;int&gt;(x_), static_cast&lt;int&gt;(y_), logicalW, logicalH};</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>		logicalH};</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>79</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>80</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	const int successfullRender = (!stretch) ?</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>81</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	const int successfullRender = (!stretch_) ?</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>		SDL_RenderCopyEx(Game::Instance().GetRenderer()-&gt;SdlRenderer(), m_sdl_texture, clip,</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>82</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>		SDL_RenderCopyEx(Game::Instance().GetRenderer()-&gt;SdlRenderer(), this-&gt;sdlTexture, clip_,</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>			&amp;renderQuad, angle, center, flip) :</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>83</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>			&amp;renderQuad, angle_, center_, flip_) :</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>		SDL_RenderCopyEx(Game::Instance().GetRenderer()-&gt;SdlRenderer(), m_sdl_texture, clip,</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>84</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>		SDL_RenderCopyEx(Game::Instance().GetRenderer()-&gt;SdlRenderer(), this-&gt;sdlTexture, clip_,</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>			&amp;stretch_rectangle, angle, center, flip);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>85</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>			&amp;stretch, angle_, center_, flip_);</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>86</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>87</pre></td>
+    <td align="right" class="lineno"><pre>86</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	if(successfullRender != 0) {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>88</pre></td>
+    <td align="right" class="lineno"><pre>87</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>		log_error() &lt;&lt; "Failed to render sprite." &lt;&lt; SDL_GetError();</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>89</pre></td>
+    <td align="right" class="lineno"><pre>88</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>90</pre></td>
+    <td align="right" class="lineno"><pre>89</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>91</pre></td>
+    <td align="right" class="lineno"><pre>90</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>91</pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>int Sprite::Width() {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>92</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>int Sprite::getWidth() {</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	return m_width;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>93</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	return this-&gt;width;</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>94</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>}</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>95</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>int Sprite::Height() {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>96</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>int Sprite::getHeight() {</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	return m_height;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>97</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	return this-&gt;height;</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>98</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>99</pre></td>
+    <td align="right" class="lineno"><pre>98</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>99</pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>void Sprite::SetWidth(int width) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>100</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>void Sprite::setWidth(int width_) {</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	ASSERT(width &gt;= 0, "Must be &gt;= 0");</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>101</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	ASSERT(width_ &gt;= 0, "Must be &gt;= 0");</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	m_width = width;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>102</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	this-&gt;width = width_;</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>103</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>104</pre></td>
+    <td align="right" class="lineno"><pre>103</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>104</pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>void Sprite::SetHeight(int height) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>105</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>void Sprite::setHeight(int height_) {</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	ASSERT(height &gt;= 0, "Must be &gt;= 0");</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>106</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	ASSERT(height_ &gt;= 0, "Must be &gt;= 0");</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	m_height = height;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>107</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	this-&gt;height = height_;</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>108</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>109</pre></td>
+    <td align="right" class="lineno"><pre>108</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>109</pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>SDL_Texture* Sprite::SurfaceToTexture(SDL_Surface* const surface) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>110</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>SDL_Texture* Sprite::surfaceToTexture(SDL_Surface* const surface_) {</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	ASSERT(Game::Instance().GetRenderer()-&gt;SdlRenderer() != nullptr, "Window renderer should not be null!");</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>111</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	ASSERT(Game::Instance().GetRenderer()-&gt;SdlRenderer() != nullptr, "Window renderer should not be null!");</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>112</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>113</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	// The final texture.</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>114</pre></td>
+    <td align="right" class="lineno"><pre>113</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	SDL_Texture* newTexture = nullptr;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>115</pre></td>
+    <td align="right" class="lineno"><pre>114</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>116</pre></td>
+    <td align="right" class="lineno"><pre>115</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	if(surface_ != nullptr) {</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	if(surface != nullptr) {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>117</pre></td>
+    <td align="right" class="lineno"><pre>116</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		// Create texture from the surface pixels.</pre></td>
     </tr>
 
     <tr>
+    <td align="right" class="lineno"><pre>117</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>	    newTexture = SDL_CreateTextureFromSurface(</pre></td>
+    </tr>
+
+    <tr>
     <td align="right" class="lineno"><pre>118</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	    newTexture = SDL_CreateTextureFromSurface(Game::Instance().GetRenderer()-&gt;SdlRenderer(), surface_);</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	    	Game::Instance().GetRenderer()-&gt;SdlRenderer(), surface);</pre></td>
     </tr>
 
     <tr>
@@ -1007,13 +1007,13 @@
     <tr>
     <td align="right" class="lineno"><pre>121</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>			this-&gt;width = surface_-&gt;w;</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>			m_width = surface-&gt;w;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>122</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>			this-&gt;height = surface_-&gt;h;</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>			m_height = surface-&gt;h;</pre></td>
     </tr>
 
     <tr>
@@ -1055,7 +1055,7 @@
     <tr>
     <td align="right" class="lineno"><pre>129</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>		SDL_FreeSurface(surface_);</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>		SDL_FreeSurface(surface);</pre></td>
     </tr>
 
     <tr>
@@ -1109,13 +1109,13 @@
     <tr>
     <td align="right" class="lineno"><pre>138</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>std::string Sprite::getPath() {</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>std::string Sprite::Path() {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>139</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	return this-&gt;path;</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	return m_path;</pre></td>
     </tr>
 
     <tr>
@@ -1133,7 +1133,7 @@
     <tr>
     <td align="right" class="lineno"><pre>142</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>double Sprite::getAlpha() {</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>double Sprite::Alpha() {</pre></td>
     </tr>
 
     <tr>
@@ -1151,7 +1151,7 @@
     <tr>
     <td align="right" class="lineno"><pre>145</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	const int rc = SDL_GetTextureAlphaMod(this-&gt;sdlTexture, &amp;alpha);</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	const int rc = SDL_GetTextureAlphaMod(m_sdl_texture, &amp;alpha);</pre></td>
     </tr>
 
     <tr>
@@ -1163,155 +1163,173 @@
     <tr>
     <td align="right" class="lineno"><pre>147</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>		log_error() &lt;&lt; "Could not get alpha value from Sprite (" &lt;&lt; this-&gt;path &lt;&lt; "). " &lt;&lt; SDL_GetError();</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>		log_error() &lt;&lt; "Could not get alpha value from Sprite (" &lt;&lt; m_path &lt;&lt; "). " &lt;&lt;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>148</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>	}</pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>			SDL_GetError();</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>149</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="left" class="src "><pre>	}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>150</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>151</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	return static_cast&lt;double&gt;(alpha);</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>151</pre></td>
+    <td align="right" class="lineno"><pre>152</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>152</pre></td>
+    <td align="right" class="lineno"><pre>153</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>153</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>void Sprite::setAlpha(int alpha_) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>154</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	if(alpha_ &lt; 0) {</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>void Sprite::SetAlpha(int alpha) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>155</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>		alpha_ = 0;</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	if(alpha &lt; 0) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>156</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>	}</pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>		alpha = 0;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>157</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	else if(alpha_ &gt; 255) {</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>	}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>158</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>		alpha_ = 255;</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	else if(alpha &gt; 255) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>159</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>	}</pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>		alpha = 255;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>160</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="left" class="src "><pre>	}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>161</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	const int rc = SDL_SetTextureAlphaMod(this-&gt;sdlTexture, alpha_);</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>162</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	if(rc != 0) {</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	const int rc = SDL_SetTextureAlphaMod(m_sdl_texture, alpha);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>163</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>		log_error() &lt;&lt; "Could not set alpha value of Sprite (" &lt;&lt; this-&gt;path &lt;&lt; "). " &lt;&lt; SDL_GetError();</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	if(rc != 0) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>164</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>	}</pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>		log_error() &lt;&lt; "Could not set alpha value of Sprite (" &lt;&lt; m_path &lt;&lt; "). " &lt;&lt;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>165</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>}</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>			SDL_GetError();</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>166</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="left" class="src "><pre>	}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>167</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>void Sprite::setBlendMode(SDL_BlendMode blending_) {</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>168</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	const int rc = SDL_SetTextureBlendMode(this-&gt;sdlTexture, blending_);</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>169</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	if(rc != 0) {</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>void Sprite::SetBlendMode(SDL_BlendMode blend_mode) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>170</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>		log_error() &lt;&lt; "Could not set blend mode of Sprite (" &lt;&lt; this-&gt;path &lt;&lt; "). " &lt;&lt; SDL_GetError();</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	const int rc = SDL_SetTextureBlendMode(m_sdl_texture, blend_mode);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>171</pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	if(rc != 0) {</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>172</pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>		log_error() &lt;&lt; "Could not set blend mode of Sprite (" &lt;&lt; m_path &lt;&lt; "). " &lt;&lt;</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>173</pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>			SDL_GetError();</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>174</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>172</pre></td>
+    <td align="right" class="lineno"><pre>175</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>}</pre></td>
     </tr>

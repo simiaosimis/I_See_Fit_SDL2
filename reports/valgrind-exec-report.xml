@@ -12,8 +12,8 @@
   <line>Command: /home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</line>
 </preamble>
 
-<pid>15096</pid>
-<ppid>15073</ppid>
+<pid>15110</pid>
+<ppid>15087</ppid>
 <tool>memcheck</tool>
 
 <args>
@@ -32,13 +32,13 @@
 
 <status>
   <state>RUNNING</state>
-  <time>00:00:00:00.115 </time>
+  <time>00:00:00:00.114 </time>
 </status>
 
 
 <status>
   <state>FINISHED</state>
-  <time>00:00:00:03.154 </time>
+  <time>00:00:00:03.159 </time>
 </status>
 
 <errorcounts>

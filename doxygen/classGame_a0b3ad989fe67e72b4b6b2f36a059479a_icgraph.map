@@ -5,11 +5,11 @@
 <area shape="rect" id="node11" href="$classGStatePlaceholder.html#a177ff2bfd8c9f911c6e4e7c6b6b50bdf" title="GStatePlaceholder::load" alt="" coords="661,136,824,165"/>
 <area shape="rect" id="node13" href="$classAudioHandler.html#ae677a4f5106cb5c360c395c175ca85d2" title="Callback that gets called everytime a channel is done playing. " alt="" coords="179,213,365,243"/>
 <area shape="rect" id="node17" href="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="247,267,297,296"/>
-<area shape="rect" id="node19" href="$classSprite.html#ac82a01b98130b9b1403667059640163b" title="Sprite::render" alt="" coords="223,320,321,349"/>
-<area shape="rect" id="node25" href="$classSprite.html#a98bb8afceb93d82270c9e5e7e8f9b49d" title="Sprite::surfaceToTexture" alt="" coords="189,373,355,403"/>
+<area shape="rect" id="node19" href="$classSprite.html#afefe077c09cca7bcfc06d006763a3a41" title="Renders the sprite. " alt="" coords="219,320,325,349"/>
+<area shape="rect" id="node25" href="$classSprite.html#ab5cb3e654119597c69a63f28e2738144" title="Converts a SDL_Surface to a SDL_Texture. " alt="" coords="188,373,356,403"/>
 <area shape="rect" id="node9" href="$classAudioHandler.html#ae006de73495a08fa3332917fe9c57e17" title="Sets new music for given path, infinitely looping. " alt="" coords="425,109,612,139"/>
 <area shape="rect" id="node21" href="$classGStatePlaceholder.html#ad48aea57e922a0f83dc140f6e9a1078b" title="GStatePlaceholder::\lrender" alt="" coords="449,250,588,297"/>
 <area shape="rect" id="node23" href="$classText.html#a61dff362532c385dbc0650b397138635" title="Text::render" alt="" coords="473,320,564,349"/>
-<area shape="rect" id="node27" href="$classSprite.html#a9ba64ddfcd3f79c45b74ec1c1a16c396" title="Sprite::loadFrom" alt="" coords="460,373,577,403"/>
-<area shape="rect" id="node29" href="$classSprite.html#a0c5597fedd9b09878ec8acddca54c2f7" title="Sprite::Sprite" alt="" coords="693,373,792,403"/>
+<area shape="rect" id="node27" href="$classSprite.html#a2c6ec5e4fe5a32b0df6dc5cb0d15da08" title="The constructor from a surface. " alt="" coords="469,373,568,403"/>
+<area shape="rect" id="node29" href="$classSprite.html#aab816060b8a5316f1555c40d37d6044d" title="Loads image from a path. " alt="" coords="457,427,580,456"/>
 </map>

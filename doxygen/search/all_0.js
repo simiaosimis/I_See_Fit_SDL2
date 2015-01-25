@@ -2,6 +2,7 @@ var searchData=
 [
   ['add_5fstate',['ADD_STATE',['../Game_8cpp.html#a47ca4f81b749093d7a70c2f9c5da0841',1,'Game.cpp']]],
   ['addgameobject',['addGameObject',['../classStateGame.html#aff9992eece76c15e061cd86fe2e88619',1,'StateGame']]],
+  ['alpha',['Alpha',['../classSprite.html#a9631817d8e3c9aaf1a7fe70795fb5e6f',1,'Sprite']]],
   ['animation',['Animation',['../classAnimation.html',1,'Animation'],['../classGStatePlaceholder.html#aa714dd279e37f0e3bff27a453fe2b640',1,'GStatePlaceholder::animation()'],['../classAnimation.html#af43c723abf0f83a1bd71dd83cff7841e',1,'Animation::Animation()']]],
   ['animation_2ecpp',['Animation.cpp',['../Animation_8cpp.html',1,'']]],
   ['animation_2eh',['Animation.h',['../Animation_8h.html',1,'']]],
@@ -9,6 +10,7 @@ var searchData=
   ['assert',['ASSERT',['../Assert_8h.html#ab1899199386b1542d1111168ca847e9c',1,'Assert.h']]],
   ['assert_2ecpp',['Assert.cpp',['../Assert_8cpp.html',1,'']]],
   ['assert_2eh',['Assert.h',['../Assert_8h.html',1,'']]],
+  ['audioformattostring',['AudioFormatToString',['../namespacesdl_1_1detail.html#ad8c319bef64d9d9d97ab87bf536ec173',1,'sdl::detail']]],
   ['audiohandler',['AudioHandler',['../classAudioHandler.html',1,'AudioHandler'],['../classAudioHandler.html#a605b5c91270eb7cad7a0ac60b354b56b',1,'AudioHandler::AudioHandler()']]],
   ['audiohandler_2ecpp',['AudioHandler.cpp',['../AudioHandler_8cpp.html',1,'']]],
   ['audiohandler_2eh',['AudioHandler.h',['../AudioHandler_8h.html',1,'']]],

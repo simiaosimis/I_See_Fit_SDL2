@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v28</span>
+   &#160;<span id="projectnumber">v29</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -82,9 +82,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><dl class="reflist">
-<dt><a class="anchor" id="_todo000008"></a>Class <a class="el" href="classAnimation.html">Animation</a>  </dt>
+<dt><a class="anchor" id="_todo000007"></a>Class <a class="el" href="classAnimation.html">Animation</a>  </dt>
 <dd>Control if animation should loop or not.  </dd>
-<dt><a class="anchor" id="_todo000007"></a>Global <a class="el" href="classAnimation.html#ae252ccc56d5bc314891406d1c35d0960">Animation::Update</a>  (SDL_Rect &amp;clip, const double delta_time)</dt>
+<dt><a class="anchor" id="_todo000006"></a>Global <a class="el" href="classAnimation.html#ae252ccc56d5bc314891406d1c35d0960">Animation::Update</a>  (SDL_Rect &amp;clip, const double delta_time)</dt>
 <dd>Be sure what k_animation_limit does.  </dd>
 <dt><a class="anchor" id="_todo000004"></a>Class <a class="el" href="classAudioHandler.html">AudioHandler</a>  </dt>
 <dd><p class="startdd">Figure out the best way to design music logic apart from SFX logic. </p>
@@ -99,31 +99,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <dd>Is clearing the this vector necessary?  </dd>
 <dt><a class="anchor" id="_todo000018"></a>Global <a class="el" href="classConfiguration.html#a4637584596d09c48bc816b71d974297d">Configuration::Initialize</a>  ()</dt>
 <dd>Read this information from a configuration file.  </dd>
-<dt><a class="anchor" id="_todo000009"></a>Global <a class="el" href="classGame.html#a344e02d5cb1cc6868ef50e31723289dd">Game::ChangeState</a>  (const GStates game_state)</dt>
+<dt><a class="anchor" id="_todo000008"></a>Global <a class="el" href="classGame.html#a344e02d5cb1cc6868ef50e31723289dd">Game::ChangeState</a>  (const GStates game_state)</dt>
 <dd>Implement the transition between states.  </dd>
-<dt><a class="anchor" id="_todo000010"></a>Global <a class="el" href="classGame.html#a3f11482f4bde3b86bded9fa8d4c0e1a3">Game::InitializeStates</a>  ()</dt>
+<dt><a class="anchor" id="_todo000009"></a>Global <a class="el" href="classGame.html#a3f11482f4bde3b86bded9fa8d4c0e1a3">Game::InitializeStates</a>  ()</dt>
 <dd>Emplace instead of insert.  </dd>
-<dt><a class="anchor" id="_todo000006"></a>Global <a class="el" href="namespacesdl.html#a3a90e2da909fa25cc7c570fbe3e25d5f">sdl::Initialize</a>  ()</dt>
-<dd>Separate all these initializations into separate functions.  </dd>
-<dt><a class="anchor" id="_todo000015"></a>Class <a class="el" href="classText.html">Text</a>  </dt>
+<dt><a class="anchor" id="_todo000005"></a>Global <a class="el" href="namespacesdl_1_1detail.html#a89c61a1eeb4a977d194d391211c2c47e">sdl::detail::LogSdlDrivers</a>  (FuncDriverName const func_driver_name, FuncNumDrivers const func_num_drivers, <a class="el" href="classLogBuffer.html" title="Temporary buffer that grabs log messages from stream. ">LogBuffer</a> &amp;drive_log)</dt>
+<dd>Something for SDL_DisplayMode  </dd>
+<dt><a class="anchor" id="_todo000014"></a>Class <a class="el" href="classText.html">Text</a>  </dt>
 <dd>Actually make this work.  </dd>
-<dt><a class="anchor" id="_todo000014"></a>Global <a class="el" href="classText.html#a32fe0d1394544ef962b44582f76567e1">Text::changeText</a>  (const char *text_)</dt>
+<dt><a class="anchor" id="_todo000013"></a>Global <a class="el" href="classText.html#a32fe0d1394544ef962b44582f76567e1">Text::changeText</a>  (const char *text_)</dt>
 <dd>Absolute hack, figure out how to not need this.  </dd>
-<dt><a class="anchor" id="_todo000013"></a>Global <a class="el" href="classText.html#a91b8cdda1b4527cf8ac2c25f53397e69">Text::changeText</a>  (const char *text_, const SDL_Color color_)</dt>
+<dt><a class="anchor" id="_todo000012"></a>Global <a class="el" href="classText.html#a91b8cdda1b4527cf8ac2c25f53397e69">Text::changeText</a>  (const char *text_, const SDL_Color color_)</dt>
 <dd>Absolute hack, figure out how to not need this.  </dd>
-<dt><a class="anchor" id="_todo000011"></a>Global <a class="el" href="classText.html#a3115f4a81c0c42f80768fd53c32377cd">Text::Text</a>  (const double x_, const double y_, const char *path_, const int size_, const char *text_, const SDL_Color color_)</dt>
+<dt><a class="anchor" id="_todo000010"></a>Global <a class="el" href="classText.html#a3115f4a81c0c42f80768fd53c32377cd">Text::Text</a>  (const double x_, const double y_, const char *path_, const int size_, const char *text_, const SDL_Color color_)</dt>
 <dd>Absolute hack, figure out how to not need this.  </dd>
-<dt><a class="anchor" id="_todo000012"></a>Global <a class="el" href="classText.html#a3703effef6aed0d716908e6f07300d18">Text::Text</a>  (const double x_, const double y_, const char *path_, const int size_, const char *text_)</dt>
+<dt><a class="anchor" id="_todo000011"></a>Global <a class="el" href="classText.html#a3703effef6aed0d716908e6f07300d18">Text::Text</a>  (const double x_, const double y_, const char *path_, const int size_, const char *text_)</dt>
 <dd>Absolute hack, figure out how to not need this.  </dd>
-<dt><a class="anchor" id="_todo000016"></a>Global <a class="el" href="classWindow.html#a83880e5e0aa5681fd748731e9d4d9e8f">Window::Create</a>  ()</dt>
-<dd>Toggle VSync.  </dd>
+<dt><a class="anchor" id="_todo000015"></a>Global <a class="el" href="classWindow.html#a83880e5e0aa5681fd748731e9d4d9e8f">Window::Create</a>  ()</dt>
+<dd><p class="startdd">Toggle VSync. </p>
+<p class="enddd">Decide how to choose renderer flags.  </p>
+</dd>
 <dt><a class="anchor" id="_todo000017"></a>Global <a class="el" href="classWindow.html#ab7f245c009fb957fd01cbe79ca0304d0">Window::Resize</a>  (const int width_, const int height_)</dt>
 <dd>Instead of directly choosing width and height, choose from a pre-defined list of resolutions. </dd>
 </dl>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 24 2015 04:04:51 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 25 2015 00:40:41 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['path',['path',['../classSprite.html#a2bd9395c3ebb407e632723c3aae2a267',1,'Sprite']]]
+  ['quitflag',['quitFlag',['../classInputHandler.html#a6bd166e013cbd6313609eab276f00abd',1,'InputHandler']]]
 ];

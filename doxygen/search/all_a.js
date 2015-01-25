@@ -6,7 +6,7 @@ var searchData=
   ['left',['LEFT',['../classCollision.html#aff63033fba1bd69e0ff7c267aadd58caa40ce8f929fa88db7a8180880de3647ac',1,'Collision::LEFT()'],['../InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5eadb45120aafd37a973140edee24708065',1,'LEFT():&#160;InputKeys.h']]],
   ['lhorizontal',['LHORIZONTAL',['../namespacecontrollerMap.html#aade78d90d7679ba903121afd7fcceabea22d1b4517d5b6854e33f0308ac42e46b',1,'controllerMap']]],
   ['load',['load',['../classMusicManager.html#a929c1db1d4d5e48744c32c47ce6b63d1',1,'MusicManager::load()'],['../classSFXManager.html#a61c913d68e0448dbaa3f11ff35026907',1,'SFXManager::load()'],['../classResourceManager.html#ad089e00823733954471f0719e8498a2f',1,'ResourceManager::load()'],['../classGStatePlaceholder.html#a177ff2bfd8c9f911c6e4e7c6b6b50bdf',1,'GStatePlaceholder::load()'],['../classStateGame.html#a924e531e28b8afcbb82858eecef0a084',1,'StateGame::load()'],['../classSpriteManager.html#ac2ca573f7d0c3c84fe487a5c16a305fa',1,'SpriteManager::load()']]],
-  ['loadfrom',['loadFrom',['../classSprite.html#a9ba64ddfcd3f79c45b74ec1c1a16c396',1,'Sprite']]],
+  ['loadfrom',['LoadFrom',['../classSprite.html#aab816060b8a5316f1555c40d37d6044d',1,'Sprite']]],
   ['log',['log',['../Logger_8cpp.html#ad2f39cd32a15c7182d81d59949237900',1,'log():&#160;Logger.cpp'],['../Logger_8h.html#ad2f39cd32a15c7182d81d59949237900',1,'log():&#160;Logger.cpp']]],
   ['log_3c_20loglevel_3a_3adebug_20_3e',['log&lt; LogLevel::Debug &gt;',['../Logger_8cpp.html#acc3d209a76eda53d476c7b5af595a529',1,'Logger.cpp']]],
   ['log_3c_20loglevel_3a_3aerror_20_3e',['log&lt; LogLevel::Error &gt;',['../Logger_8cpp.html#a8e21d7611c187eb4bd41f8cf37884198',1,'Logger.cpp']]],
@@ -23,5 +23,7 @@ var searchData=
   ['logicalrendersize',['LogicalRenderSize',['../classConfiguration.html#a87978aa3909e9063f84a27e058018e70',1,'Configuration']]],
   ['logicalsize',['LogicalSize',['../classRenderer.html#ae60d5ef1af57d46cce0b703580d1bce4',1,'Renderer']]],
   ['loglevel',['LogLevel',['../Logger_8h.html#aca1fd1d8935433e6ba2e3918214e07f9',1,'Logger.h']]],
+  ['logsdldrivers',['LogSdlDrivers',['../namespacesdl_1_1detail.html#a89c61a1eeb4a977d194d391211c2c47e',1,'sdl::detail::LogSdlDrivers(FuncDriverName const func_driver_name, FuncNumDrivers const func_num_drivers, LogBuffer &amp;drive_log)'],['../namespacesdl_1_1detail.html#ae97f0bd2da59472016e0793ce6052373',1,'sdl::detail::LogSdlDrivers(FuncDriverInfo const func_driver_info, FuncNumDrivers const func_num_drivers, LogBuffer &amp;drive_log)']]],
+  ['logsdlversion',['LogSdlVersion',['../namespacesdl_1_1detail.html#ae998a4fafdb00ca09bf01ae2444b9a24',1,'sdl::detail::LogSdlVersion(const std::string &amp;library, const SDL_version &amp;version_compiled)'],['../namespacesdl_1_1detail.html#a653c9fcbf2d7d295c4badbde794a0049',1,'sdl::detail::LogSdlVersion(const std::string &amp;library, const SDL_version &amp;version_compiled, const std::string &amp;revision)']]],
   ['lvertical',['LVERTICAL',['../namespacecontrollerMap.html#aade78d90d7679ba903121afd7fcceabea85db7abe2e7376d4cc2e6078bff341f2',1,'controllerMap']]]
 ];

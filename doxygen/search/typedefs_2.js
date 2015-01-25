@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['statesmap',['StatesMap',['../classGame.html#acf84871fb8043c2ac017d01b3fb046c6',1,'Game']]]
+  ['log_5ffunction_5fptr',['log_function_ptr',['../Logger_8h.html#adf4f7842b9746e4cc24988d037523547',1,'Logger.h']]]
 ];

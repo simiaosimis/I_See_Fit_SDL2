@@ -1,8 +1,8 @@
 <map id="Text::render" name="Text::render">
-<area shape="rect" id="node3" href="$classSprite.html#ac82a01b98130b9b1403667059640163b" title="Sprite::render" alt="" coords="148,85,247,115"/>
-<area shape="rect" id="node5" href="$classGame.html#a0b3ad989fe67e72b4b6b2f36a059479a" title="Singleton implementation for Game. " alt="" coords="316,5,431,35"/>
-<area shape="rect" id="node7" href="$classGame.html#a941f014b7e939ffe63a07343ad72c051" title="Game::GetRenderer" alt="" coords="304,59,443,88"/>
-<area shape="rect" id="node11" href="$classRenderer.html#ae60d5ef1af57d46cce0b703580d1bce4" title="Returns the current set logical size through the parameters. " alt="" coords="299,112,448,141"/>
-<area shape="rect" id="node13" href="$classRenderer.html#a872fef15d8f3bcd45290df3198c5991e" title="Renderer::SdlRenderer" alt="" coords="296,165,451,195"/>
-<area shape="rect" id="node9" href="$classWindow.html#aa1261977d575bd4c6bef796196607be3" title="Window::GetRenderer" alt="" coords="500,59,649,88"/>
+<area shape="rect" id="node3" href="$classSprite.html#afefe077c09cca7bcfc06d006763a3a41" title="Renders the sprite. " alt="" coords="147,85,253,115"/>
+<area shape="rect" id="node5" href="$classGame.html#a0b3ad989fe67e72b4b6b2f36a059479a" title="Singleton implementation for Game. " alt="" coords="321,5,436,35"/>
+<area shape="rect" id="node7" href="$classGame.html#a941f014b7e939ffe63a07343ad72c051" title="Game::GetRenderer" alt="" coords="309,59,448,88"/>
+<area shape="rect" id="node11" href="$classRenderer.html#ae60d5ef1af57d46cce0b703580d1bce4" title="Returns the current set logical size through the parameters. " alt="" coords="304,112,453,141"/>
+<area shape="rect" id="node13" href="$classRenderer.html#a872fef15d8f3bcd45290df3198c5991e" title="Renderer::SdlRenderer" alt="" coords="301,165,456,195"/>
+<area shape="rect" id="node9" href="$classWindow.html#aa1261977d575bd4c6bef796196607be3" title="Window::GetRenderer" alt="" coords="505,59,655,88"/>
 </map>

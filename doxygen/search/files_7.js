@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['sdl_5fsystems_2ecpp',['SDL_Systems.cpp',['../SDL__Systems_8cpp.html',1,'']]],
-  ['sdl_5fsystems_2eh',['SDL_Systems.h',['../SDL__Systems_8h.html',1,'']]],
+  ['sdlinfo_2ecpp',['SdlInfo.cpp',['../SdlInfo_8cpp.html',1,'']]],
+  ['sdlinfo_2eh',['SdlInfo.h',['../SdlInfo_8h.html',1,'']]],
+  ['sdlsystems_2ecpp',['SdlSystems.cpp',['../SdlSystems_8cpp.html',1,'']]],
+  ['sdlsystems_2eh',['SdlSystems.h',['../SdlSystems_8h.html',1,'']]],
   ['sfxmanager_2ecpp',['SFXManager.cpp',['../SFXManager_8cpp.html',1,'']]],
   ['sfxmanager_2eh',['SFXManager.h',['../SFXManager_8h.html',1,'']]],
   ['soundeffect_2ecpp',['SoundEffect.cpp',['../SoundEffect_8cpp.html',1,'']]],
