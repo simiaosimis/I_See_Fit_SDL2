@@ -38,7 +38,8 @@ void Window::Create() {
 	if(m_sdl_window != nullptr) {
 
 		// Creates the SDL renderer.
-		const Uint32 rendererFlags = SDL_RENDERER_ACCELERATED;
+		///@todo Decide how to choose renderer flags.
+		const Uint32 rendererFlags = 0;
 		m_renderer = new Renderer(m_sdl_window, rendererFlags);
 
 		if(m_renderer != nullptr) {

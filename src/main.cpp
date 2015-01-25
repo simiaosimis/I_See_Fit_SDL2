@@ -1,4 +1,4 @@
-#include "core/SDL_Systems.h"
+#include "core/SdlSystems.h"
 #include "engine/Game.h"
 #include "util/Configuration.h"
 #include "util/Logger.h"
