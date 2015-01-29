@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['failedassertion',['FailedAssertion',['../Assert_8cpp.html#ac2928e2bc641ad90d5138beb2a29a5b2',1,'FailedAssertion(const char *expression, const char *message, const char *file, const int line, const char *function):&#160;Assert.cpp'],['../Assert_8h.html#ac2928e2bc641ad90d5138beb2a29a5b2',1,'FailedAssertion(const char *expression, const char *message, const char *file, const int line, const char *function):&#160;Assert.cpp']]]
+  ['equaldisplaymodes',['EqualDisplayModes',['../namespacesdl_1_1detail.html#a870a2fd215b532cffa025cc1ce1e2b29',1,'sdl::detail']]]
 ];

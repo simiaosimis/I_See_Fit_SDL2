@@ -23,7 +23,5 @@ var searchData=
   ['logicalrendersize',['LogicalRenderSize',['../classConfiguration.html#a87978aa3909e9063f84a27e058018e70',1,'Configuration']]],
   ['logicalsize',['LogicalSize',['../classRenderer.html#ae60d5ef1af57d46cce0b703580d1bce4',1,'Renderer']]],
   ['loglevel',['LogLevel',['../Logger_8h.html#aca1fd1d8935433e6ba2e3918214e07f9',1,'Logger.h']]],
-  ['logsdldrivers',['LogSdlDrivers',['../namespacesdl_1_1detail.html#a89c61a1eeb4a977d194d391211c2c47e',1,'sdl::detail::LogSdlDrivers(FuncDriverName const func_driver_name, FuncNumDrivers const func_num_drivers, LogBuffer &amp;drive_log)'],['../namespacesdl_1_1detail.html#ae97f0bd2da59472016e0793ce6052373',1,'sdl::detail::LogSdlDrivers(FuncDriverInfo const func_driver_info, FuncNumDrivers const func_num_drivers, LogBuffer &amp;drive_log)']]],
-  ['logsdlversion',['LogSdlVersion',['../namespacesdl_1_1detail.html#ae998a4fafdb00ca09bf01ae2444b9a24',1,'sdl::detail::LogSdlVersion(const std::string &amp;library, const SDL_version &amp;version_compiled)'],['../namespacesdl_1_1detail.html#a653c9fcbf2d7d295c4badbde794a0049',1,'sdl::detail::LogSdlVersion(const std::string &amp;library, const SDL_version &amp;version_compiled, const std::string &amp;revision)']]],
   ['lvertical',['LVERTICAL',['../namespacecontrollerMap.html#aade78d90d7679ba903121afd7fcceabea85db7abe2e7376d4cc2e6078bff341f2',1,'controllerMap']]]
 ];

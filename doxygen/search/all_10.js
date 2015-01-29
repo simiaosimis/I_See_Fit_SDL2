@@ -12,6 +12,7 @@ var searchData=
   ['renderer',['Renderer',['../classRenderer.html',1,'Renderer'],['../classRenderer.html#a432676947d6b8128562b0adc6d631268',1,'Renderer::Renderer()']]],
   ['renderer_2ecpp',['Renderer.cpp',['../Renderer_8cpp.html',1,'']]],
   ['renderer_2eh',['Renderer.h',['../Renderer_8h.html',1,'']]],
+  ['rendererflagstostring',['RendererFlagsToString',['../namespacesdl_1_1detail.html#ad3a6fe5f8424b0fabab176e9d009dbaa',1,'sdl::detail']]],
   ['rendererinfotostring',['RendererInfoToString',['../namespacesdl_1_1detail.html#a1043fde12d4ad0694098d20b6b447d40',1,'sdl::detail']]],
   ['resize',['Resize',['../classWindow.html#ab7f245c009fb957fd01cbe79ca0304d0',1,'Window']]],
   ['resizewindow',['ResizeWindow',['../classGame.html#ab1181fcc72f9d8a6d7a85fe5316a29e1',1,'Game']]],

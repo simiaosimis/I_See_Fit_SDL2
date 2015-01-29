@@ -1,19 +1,27 @@
 <map id="main" name="main">
-<area shape="rect" id="node3" href="$classConfiguration.html#a4637584596d09c48bc816b71d974297d" title="Configuration::Initialize" alt="" coords="104,5,259,35"/>
-<area shape="rect" id="node5" href="$namespacesdl.html#a3a90e2da909fa25cc7c570fbe3e25d5f" title="The system initializer. " alt="" coords="135,59,228,88"/>
-<area shape="rect" id="node9" href="$classGame.html#a0b3ad989fe67e72b4b6b2f36a059479a" title="Singleton implementation for Game. " alt="" coords="124,112,239,141"/>
-<area shape="rect" id="node11" href="$classGame.html#a96341ca5b54d90adc3ecb3bf0bcd2312" title="The main game loop. " alt="" coords="137,245,225,275"/>
-<area shape="rect" id="node7" href="$namespacesdl_1_1detail.html#a89c61a1eeb4a977d194d391211c2c47e" title="Logs information about available drivers. " alt="" coords="308,5,476,35"/>
-<area shape="rect" id="node13" href="$classStateGame.html#a924e531e28b8afcbb82858eecef0a084" title="StateGame::load" alt="" coords="332,59,452,88"/>
-<area shape="rect" id="node15" href="$classInputHandler.html#a820f483265aa3f6da39b9d93c1311966" title="InputHandler::handleInput" alt="" coords="307,112,477,141"/>
-<area shape="rect" id="node23" href="$classInputHandler.html#a7d103ecce85288f454876b5bef8b3aee" title="InputHandler::isQuitFlag" alt="" coords="311,165,473,195"/>
-<area shape="rect" id="node25" href="$classGame.html#af5bc8f48f5005fac17d6b5896ac86771" title="Stops execution and closes the game. " alt="" coords="347,219,437,248"/>
-<area shape="rect" id="node27" href="$classStateGame.html#a300539fe737d6bbab4b4d6fe4b6a2e98" title="StateGame::update" alt="" coords="325,272,459,301"/>
-<area shape="rect" id="node29" href="$classWindow.html#aa1261977d575bd4c6bef796196607be3" title="Window::GetRenderer" alt="" coords="317,325,467,355"/>
-<area shape="rect" id="node31" href="$classRenderer.html#aeedbc2ffdccf51fa1384100446488746" title="Clears previous rendering. " alt="" coords="335,379,449,408"/>
-<area shape="rect" id="node33" href="$classStateGame.html#a9e181e234d99aa11beead047152a8e92" title="StateGame::render" alt="" coords="327,432,457,461"/>
-<area shape="rect" id="node35" href="$classRenderer.html#adde94d3402b015b1fcd23c9a283cae2e" title="Renders everything drawn in a frame. " alt="" coords="329,485,455,515"/>
-<area shape="rect" id="node17" href="$classControllerHandler.html#a79e2adab7291ab5589e907860d046046" title="ControllerHandler::\lhandleInput" alt="" coords="541,34,672,81"/>
-<area shape="rect" id="node19" href="$classControllerHandler.html#a8a0133502559843ef6f8f1984d3856f0" title="ControllerHandler::\lgetKeyStates" alt="" coords="541,103,672,150"/>
-<area shape="rect" id="node21" href="$classInputHandler.html#ae3546fa674d3db49d755b4047503f4e8" title="InputHandler::signalExit" alt="" coords="527,173,687,203"/>
+<area shape="rect" id="node3" href="$classConfiguration.html#a4637584596d09c48bc816b71d974297d" title="Configuration::Initialize" alt="" coords="104,85,259,115"/>
+<area shape="rect" id="node5" href="$namespacesdl.html#a3a90e2da909fa25cc7c570fbe3e25d5f" title="The system initializer. " alt="" coords="135,139,228,168"/>
+<area shape="rect" id="node26" href="$classGame.html#a0b3ad989fe67e72b4b6b2f36a059479a" title="Singleton implementation for Game. " alt="" coords="124,192,239,221"/>
+<area shape="rect" id="node28" href="$classGame.html#a96341ca5b54d90adc3ecb3bf0bcd2312" title="The main game loop. " alt="" coords="137,468,225,497"/>
+<area shape="rect" id="node7" href="$namespacesdl_1_1detail.html#a9c2961651fc0f9ae422f8d5cc0713690" title="sdl::detail::SdlVideoDrivers" alt="" coords="312,5,491,35"/>
+<area shape="rect" id="node9" href="$namespacesdl_1_1detail.html#a5d111e7e7e8209f7ebc251353aa17914" title="sdl::detail::SdlAudioDrivers" alt="" coords="312,59,491,88"/>
+<area shape="rect" id="node11" href="$namespacesdl_1_1detail.html#adae4565b34f666a9d5a8db9ca85d5887" title="sdl::detail::SdlRenderDrivers" alt="" coords="307,112,496,141"/>
+<area shape="rect" id="node19" href="$namespacesdl_1_1detail.html#adbbf30d21d830043561b8bdca69b8aac" title="sdl::detail::SdlDisplayModes" alt="" coords="308,165,495,195"/>
+<area shape="rect" id="node24" href="$namespacesdl_1_1detail.html#aa8f352e375e173cfd7dffbe6b0cb07c2" title="sdl::detail::SdlAudioDevices" alt="" coords="308,219,495,248"/>
+<area shape="rect" id="node13" href="$namespacesdl_1_1detail.html#a1043fde12d4ad0694098d20b6b447d40" title="sdl::detail::RendererInfo\lToString" alt="" coords="545,78,705,125"/>
+<area shape="rect" id="node15" href="$namespacesdl_1_1detail.html#ad3a6fe5f8424b0fabab176e9d009dbaa" title="sdl::detail::RendererFlags\lToString" alt="" coords="755,69,925,115"/>
+<area shape="rect" id="node17" href="$namespacesdl_1_1detail.html#a8783793a48f309ffe3d2d4eb7dcc5ae7" title="sdl::detail::PixelFormat\lToString" alt="" coords="763,138,917,185"/>
+<area shape="rect" id="node22" href="$namespacesdl_1_1detail.html#a870a2fd215b532cffa025cc1ce1e2b29" title="sdl::detail::EqualDisplay\lModes" alt="" coords="544,198,707,245"/>
+<area shape="rect" id="node30" href="$classStateGame.html#a924e531e28b8afcbb82858eecef0a084" title="StateGame::load" alt="" coords="341,281,461,311"/>
+<area shape="rect" id="node32" href="$classInputHandler.html#a820f483265aa3f6da39b9d93c1311966" title="InputHandler::handleInput" alt="" coords="316,335,487,364"/>
+<area shape="rect" id="node40" href="$classInputHandler.html#a7d103ecce85288f454876b5bef8b3aee" title="InputHandler::isQuitFlag" alt="" coords="320,388,483,417"/>
+<area shape="rect" id="node42" href="$classGame.html#af5bc8f48f5005fac17d6b5896ac86771" title="Stops execution and closes the game. " alt="" coords="356,441,447,471"/>
+<area shape="rect" id="node44" href="$classStateGame.html#a300539fe737d6bbab4b4d6fe4b6a2e98" title="StateGame::update" alt="" coords="335,495,468,524"/>
+<area shape="rect" id="node46" href="$classWindow.html#aa1261977d575bd4c6bef796196607be3" title="Window::GetRenderer" alt="" coords="327,548,476,577"/>
+<area shape="rect" id="node48" href="$classRenderer.html#aeedbc2ffdccf51fa1384100446488746" title="Clears previous rendering. " alt="" coords="344,601,459,631"/>
+<area shape="rect" id="node50" href="$classStateGame.html#a9e181e234d99aa11beead047152a8e92" title="StateGame::render" alt="" coords="336,655,467,684"/>
+<area shape="rect" id="node52" href="$classRenderer.html#adde94d3402b015b1fcd23c9a283cae2e" title="Renders everything drawn in a frame. " alt="" coords="339,708,464,737"/>
+<area shape="rect" id="node34" href="$classControllerHandler.html#a79e2adab7291ab5589e907860d046046" title="ControllerHandler::\lhandleInput" alt="" coords="560,267,691,314"/>
+<area shape="rect" id="node36" href="$classControllerHandler.html#a8a0133502559843ef6f8f1984d3856f0" title="ControllerHandler::\lgetKeyStates" alt="" coords="560,337,691,383"/>
+<area shape="rect" id="node38" href="$classInputHandler.html#ae3546fa674d3db49d755b4047503f4e8" title="InputHandler::signalExit" alt="" coords="545,407,705,436"/>
 </map>

@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v29</span>
+   &#160;<span id="projectnumber">v30</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -111,7 +111,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        SDL_version compiled;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        SDL_TTF_VERSION(&amp;compiled);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="namespacesdl_1_1detail.html#ae998a4fafdb00ca09bf01ae2444b9a24">sdl::detail::LogSdlVersion</a>(<span class="stringliteral">&quot;SDL_TTF&quot;</span>, compiled);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="Logger_8h.html#a4a8f1b43d1e2b374d21f9e37a12b7260">log_debug</a>() &lt;&lt; <a class="code" href="namespacesdl_1_1detail.html#ac223f6412c8c2cc23fed12fe69a855c3">sdl::detail::SdlVersion</a>(<span class="stringliteral">&quot;SDL_TTF&quot;</span>, compiled);</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="Logger_8h.html#adb146b8b8f51bb5055c2db742b57bcd2">log_error</a>() &lt;&lt; <span class="stringliteral">&quot;Could not initialize TTF. &quot;</span> &lt;&lt; TTF_GetError();</div>
@@ -141,7 +141,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        SDL_version compiled;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        SDL_GetVersion(&amp;compiled);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="code" href="namespacesdl_1_1detail.html#ae998a4fafdb00ca09bf01ae2444b9a24">sdl::detail::LogSdlVersion</a>(<span class="stringliteral">&quot;SDL&quot;</span>, compiled, SDL_GetRevision());</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="code" href="Logger_8h.html#a4a8f1b43d1e2b374d21f9e37a12b7260">log_debug</a>() &lt;&lt; <a class="code" href="namespacesdl_1_1detail.html#ac223f6412c8c2cc23fed12fe69a855c3">sdl::detail::SdlVersion</a>(<span class="stringliteral">&quot;SDL&quot;</span>, compiled, SDL_GetRevision());</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="Logger_8h.html#adb146b8b8f51bb5055c2db742b57bcd2">log_error</a>() &lt;&lt; <span class="stringliteral">&quot;Could not initialize SDL. &quot;</span> &lt;&lt; SDL_GetError();</div>
@@ -166,7 +166,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">if</span>(success) {</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        SDL_version compiled;</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        SDL_IMAGE_VERSION(&amp;compiled);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <a class="code" href="namespacesdl_1_1detail.html#ae998a4fafdb00ca09bf01ae2444b9a24">sdl::detail::LogSdlVersion</a>(<span class="stringliteral">&quot;SDL_image&quot;</span>, compiled);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <a class="code" href="Logger_8h.html#a4a8f1b43d1e2b374d21f9e37a12b7260">log_debug</a>() &lt;&lt; <a class="code" href="namespacesdl_1_1detail.html#ac223f6412c8c2cc23fed12fe69a855c3">sdl::detail::SdlVersion</a>(<span class="stringliteral">&quot;SDL_image&quot;</span>, compiled);</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <a class="code" href="Logger_8h.html#adb146b8b8f51bb5055c2db742b57bcd2">log_error</a>() &lt;&lt; <span class="stringliteral">&quot;Could not initialize SDL_Image. &quot;</span> &lt;&lt; IMG_GetError();</div>
@@ -235,7 +235,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        SDL_version compiled;</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        SDL_MIXER_VERSION(&amp;compiled);</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <a class="code" href="namespacesdl_1_1detail.html#ae998a4fafdb00ca09bf01ae2444b9a24">sdl::detail::LogSdlVersion</a>(<span class="stringliteral">&quot;SDL_mixer&quot;</span>, compiled);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <a class="code" href="Logger_8h.html#a4a8f1b43d1e2b374d21f9e37a12b7260">log_debug</a>() &lt;&lt; <a class="code" href="namespacesdl_1_1detail.html#ac223f6412c8c2cc23fed12fe69a855c3">sdl::detail::SdlVersion</a>(<span class="stringliteral">&quot;SDL_mixer&quot;</span>, compiled);</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> k_channels_to_allocate = 25;</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> k_channels_allocated = Mix_AllocateChannels(k_channels_to_allocate);</div>
@@ -272,34 +272,39 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">bool</span> success_img = OpenSdlImage();</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">bool</span> success_mixer = OpenSdlMixer();</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="comment">// Getting some driver information.</span></div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    {</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        <a class="code" href="classLogBuffer.html">LogBuffer</a> driver_log{<a class="code" href="Logger_8h.html#a4a8f1b43d1e2b374d21f9e37a12b7260">log_debug</a>()};</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        driver_log &lt;&lt; <span class="stringliteral">&quot;Getting driver information.&quot;</span>;</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        <a class="code" href="namespacesdl_1_1detail.html#a89c61a1eeb4a977d194d391211c2c47e">detail::LogSdlDrivers</a>(SDL_GetVideoDriver, SDL_GetNumVideoDrivers, driver_log);</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <a class="code" href="namespacesdl_1_1detail.html#a89c61a1eeb4a977d194d391211c2c47e">detail::LogSdlDrivers</a>(SDL_GetAudioDriver, SDL_GetNumAudioDrivers, driver_log);</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <a class="code" href="namespacesdl_1_1detail.html#a89c61a1eeb4a977d194d391211c2c47e">detail::LogSdlDrivers</a>(SDL_GetRenderDriverInfo, SDL_GetNumRenderDrivers, driver_log);</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    }</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="comment">// If even one system fails to initialize, returns false.</span></div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keywordflow">return</span> (success_sdl &amp;&amp; success_img &amp;&amp; success_mixer &amp;&amp; success_ttf);</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;}</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;} <span class="comment">// namespace sdl</span></div>
-<div class="ttc" id="namespacesdl_1_1detail_html_ae998a4fafdb00ca09bf01ae2444b9a24"><div class="ttname"><a href="namespacesdl_1_1detail.html#ae998a4fafdb00ca09bf01ae2444b9a24">sdl::detail::LogSdlVersion</a></div><div class="ttdeci">void LogSdlVersion(const std::string &amp;library, const SDL_version &amp;version_compiled)</div><div class="ttdef"><b>Definition:</b> <a href="SdlInfo_8cpp_source.html#l00013">SdlInfo.cpp:13</a></div></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="comment">// Video/audio/render drivers information.  </span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <a class="code" href="Logger_8h.html#a4a8f1b43d1e2b374d21f9e37a12b7260">log_debug</a>() &lt;&lt; <span class="stringliteral">&quot;Getting video drivers information.\n&quot;</span> &lt;&lt; <a class="code" href="namespacesdl_1_1detail.html#a9c2961651fc0f9ae422f8d5cc0713690">detail::SdlVideoDrivers</a>();</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <a class="code" href="Logger_8h.html#a4a8f1b43d1e2b374d21f9e37a12b7260">log_debug</a>() &lt;&lt; <span class="stringliteral">&quot;Getting audio drivers information.\n&quot;</span> &lt;&lt; <a class="code" href="namespacesdl_1_1detail.html#a5d111e7e7e8209f7ebc251353aa17914">detail::SdlAudioDrivers</a>();</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <a class="code" href="Logger_8h.html#a4a8f1b43d1e2b374d21f9e37a12b7260">log_debug</a>() &lt;&lt; <span class="stringliteral">&quot;Getting render drivers information.\n&quot;</span> &lt;&lt; <a class="code" href="namespacesdl_1_1detail.html#adae4565b34f666a9d5a8db9ca85d5887">detail::SdlRenderDrivers</a>();</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="comment">// Displays and modes information.</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <a class="code" href="Logger_8h.html#a4a8f1b43d1e2b374d21f9e37a12b7260">log_debug</a>() &lt;&lt; <span class="stringliteral">&quot;Getting displays information.\n&quot;</span> &lt;&lt; <a class="code" href="namespacesdl_1_1detail.html#adbbf30d21d830043561b8bdca69b8aac">detail::SdlDisplayModes</a>();</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="comment">// Audio devices information.</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <a class="code" href="Logger_8h.html#a4a8f1b43d1e2b374d21f9e37a12b7260">log_debug</a>() &lt;&lt; <span class="stringliteral">&quot;Getting audio devices information.\n&quot;</span> &lt;&lt; <a class="code" href="namespacesdl_1_1detail.html#aa8f352e375e173cfd7dffbe6b0cb07c2">detail::SdlAudioDevices</a>();</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="comment">// If even one system fails to initialize, returns false.</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="keywordflow">return</span> (success_sdl &amp;&amp; success_img &amp;&amp; success_mixer &amp;&amp; success_ttf);</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;}</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;} <span class="comment">// namespace sdl</span></div>
+<div class="ttc" id="namespacesdl_1_1detail_html_ac223f6412c8c2cc23fed12fe69a855c3"><div class="ttname"><a href="namespacesdl_1_1detail.html#ac223f6412c8c2cc23fed12fe69a855c3">sdl::detail::SdlVersion</a></div><div class="ttdeci">std::string SdlVersion(const std::string &amp;library, const SDL_version &amp;version_compiled)</div><div class="ttdef"><b>Definition:</b> <a href="SdlInfo_8cpp_source.html#l00013">SdlInfo.cpp:13</a></div></div>
+<div class="ttc" id="namespacesdl_1_1detail_html_a5d111e7e7e8209f7ebc251353aa17914"><div class="ttname"><a href="namespacesdl_1_1detail.html#a5d111e7e7e8209f7ebc251353aa17914">sdl::detail::SdlAudioDrivers</a></div><div class="ttdeci">std::string SdlAudioDrivers()</div><div class="ttdef"><b>Definition:</b> <a href="SdlInfo_8cpp_source.html#l00055">SdlInfo.cpp:55</a></div></div>
+<div class="ttc" id="namespacesdl_1_1detail_html_adae4565b34f666a9d5a8db9ca85d5887"><div class="ttname"><a href="namespacesdl_1_1detail.html#adae4565b34f666a9d5a8db9ca85d5887">sdl::detail::SdlRenderDrivers</a></div><div class="ttdeci">std::string SdlRenderDrivers()</div><div class="ttdef"><b>Definition:</b> <a href="SdlInfo_8cpp_source.html#l00080">SdlInfo.cpp:80</a></div></div>
+<div class="ttc" id="namespacesdl_1_1detail_html_aa8f352e375e173cfd7dffbe6b0cb07c2"><div class="ttname"><a href="namespacesdl_1_1detail.html#aa8f352e375e173cfd7dffbe6b0cb07c2">sdl::detail::SdlAudioDevices</a></div><div class="ttdeci">std::string SdlAudioDevices()</div><div class="ttdef"><b>Definition:</b> <a href="SdlInfo_8cpp_source.html#l00108">SdlInfo.cpp:108</a></div></div>
 <div class="ttc" id="Logger_8h_html_adb146b8b8f51bb5055c2db742b57bcd2"><div class="ttname"><a href="Logger_8h.html#adb146b8b8f51bb5055c2db742b57bcd2">log_error</a></div><div class="ttdeci">constexpr log_function_ptr log_error</div><div class="ttdef"><b>Definition:</b> <a href="Logger_8h_source.html#l00083">Logger.h:83</a></div></div>
 <div class="ttc" id="Logger_8h_html_a4a8f1b43d1e2b374d21f9e37a12b7260"><div class="ttname"><a href="Logger_8h.html#a4a8f1b43d1e2b374d21f9e37a12b7260">log_debug</a></div><div class="ttdeci">constexpr log_function_ptr log_debug</div><div class="ttdef"><b>Definition:</b> <a href="Logger_8h_source.html#l00086">Logger.h:86</a></div></div>
-<div class="ttc" id="namespacesdl_1_1detail_html_a89c61a1eeb4a977d194d391211c2c47e"><div class="ttname"><a href="namespacesdl_1_1detail.html#a89c61a1eeb4a977d194d391211c2c47e">sdl::detail::LogSdlDrivers</a></div><div class="ttdeci">void LogSdlDrivers(FuncDriverName const func_driver_name, FuncNumDrivers const func_num_drivers, LogBuffer &amp;drive_log)</div><div class="ttdoc">Logs information about available drivers. </div><div class="ttdef"><b>Definition:</b> <a href="SdlInfo_8cpp_source.html#l00028">SdlInfo.cpp:28</a></div></div>
 <div class="ttc" id="Logger_8h_html"><div class="ttname"><a href="Logger_8h.html">Logger.h</a></div></div>
 <div class="ttc" id="namespacesdl_html_a3a90e2da909fa25cc7c570fbe3e25d5f"><div class="ttname"><a href="namespacesdl.html#a3a90e2da909fa25cc7c570fbe3e25d5f">sdl::Initialize</a></div><div class="ttdeci">bool Initialize()</div><div class="ttdoc">The system initializer. </div><div class="ttdef"><b>Definition:</b> <a href="SdlSystems_8cpp_source.html#l00191">SdlSystems.cpp:191</a></div></div>
-<div class="ttc" id="classLogBuffer_html"><div class="ttname"><a href="classLogBuffer.html">LogBuffer</a></div><div class="ttdoc">Temporary buffer that grabs log messages from stream. </div><div class="ttdef"><b>Definition:</b> <a href="Logger_8h_source.html#l00033">Logger.h:33</a></div></div>
+<div class="ttc" id="namespacesdl_1_1detail_html_a9c2961651fc0f9ae422f8d5cc0713690"><div class="ttname"><a href="namespacesdl_1_1detail.html#a9c2961651fc0f9ae422f8d5cc0713690">sdl::detail::SdlVideoDrivers</a></div><div class="ttdeci">std::string SdlVideoDrivers()</div><div class="ttdef"><b>Definition:</b> <a href="SdlInfo_8cpp_source.html#l00030">SdlInfo.cpp:30</a></div></div>
+<div class="ttc" id="namespacesdl_1_1detail_html_adbbf30d21d830043561b8bdca69b8aac"><div class="ttname"><a href="namespacesdl_1_1detail.html#adbbf30d21d830043561b8bdca69b8aac">sdl::detail::SdlDisplayModes</a></div><div class="ttdeci">std::string SdlDisplayModes()</div><div class="ttdef"><b>Definition:</b> <a href="SdlInfo_8cpp_source.html#l00132">SdlInfo.cpp:132</a></div></div>
 <div class="ttc" id="SdlInfo_8h_html"><div class="ttname"><a href="SdlInfo_8h.html">SdlInfo.h</a></div></div>
-<div class="ttc" id="namespacesdl_1_1detail_html_ad8c319bef64d9d9d97ab87bf536ec173"><div class="ttname"><a href="namespacesdl_1_1detail.html#ad8c319bef64d9d9d97ab87bf536ec173">sdl::detail::AudioFormatToString</a></div><div class="ttdeci">std::string AudioFormatToString(const Uint16 format)</div><div class="ttdef"><b>Definition:</b> <a href="SdlInfo_8cpp_source.html#l00085">SdlInfo.cpp:85</a></div></div>
+<div class="ttc" id="namespacesdl_1_1detail_html_ad8c319bef64d9d9d97ab87bf536ec173"><div class="ttname"><a href="namespacesdl_1_1detail.html#ad8c319bef64d9d9d97ab87bf536ec173">sdl::detail::AudioFormatToString</a></div><div class="ttdeci">std::string AudioFormatToString(const Uint16 format)</div><div class="ttdef"><b>Definition:</b> <a href="SdlInfo_8cpp_source.html#l00207">SdlInfo.cpp:207</a></div></div>
 <div class="ttc" id="SdlSystems_8h_html"><div class="ttname"><a href="SdlSystems_8h.html">SdlSystems.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 25 2015 00:40:41 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 29 2015 00:45:26 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
