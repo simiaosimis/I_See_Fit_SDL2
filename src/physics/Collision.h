@@ -3,6 +3,8 @@
 #include <SDL2/SDL.h>
 #include "engine/GameObject.h"
 
+namespace sdl2engine {
+
 /**
 * Simple collision detection.
 */
@@ -31,5 +33,6 @@ class Collision {
 		* @param a_ , b_ : The rectangles to check.
 		*/
 		static RectangleSide rectsCollidedSide(const SDL_Rect& a_, const SDL_Rect& b_);
-
 };
+
+} // namespace sdl2engine

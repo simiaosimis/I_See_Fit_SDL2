@@ -4,25 +4,31 @@
 #include <string>
 #include <memory>
 #include "util/Logger.h"
-#include "util/Uncopyable.h"
+
+namespace sdl2engine {
 
 /**
 * Template resource management class.
 *
 */
 template <class Type>
-class ResourceManager : private Uncopyable {
+class ResourceManager {
 
 	private:
-		typedef std::shared_ptr<Type> typePtr;
-		typedef std::map<std::string, typePtr> typeMap;
+		using typePtr = std::shared_ptr<Type>;
+		using typeMap = std::map<std::string, typePtr>;
 
 	public:
+		ResourceManager() = default;
+
 		/**
 		* The destructor.
 		* @note Warns about resources being deleted with references still pointing to them.
 		*/
 		virtual ~ResourceManager();
+		
+		ResourceManager(const ResourceManager&) = delete;
+		ResourceManager& operator=(const ResourceManager&) = delete;
 
 		/**
 		* Retrieves the resource from the resources.
@@ -52,7 +58,6 @@ class ResourceManager : private Uncopyable {
 		void unregisterResource(const std::string& path_);
 
 		typeMap resources; /**< The map that contains all the Type resources. */
-
 };
 
 template <class Type>
@@ -99,3 +104,4 @@ void ResourceManager<Type>::unregisterResource(const std::string& path_) {
 	}
 }
 
+} // namespace sdl2engine

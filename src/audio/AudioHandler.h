@@ -6,6 +6,8 @@
 #include "audio/Music.h"
 #include "audio/SoundEffect.h"
 
+namespace sdl2engine {
+
 /**
 * Class that handles all the audio in the game.
 *
@@ -151,3 +153,5 @@ class AudioHandler {
 		Music* m_current_music; /**< The current music that is playing. */
 		std::vector<SoundEffect*> m_effects; /**< The current effects that are playing. */
 };
+
+} // namespace sdl2engine

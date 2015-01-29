@@ -2,6 +2,8 @@
 
 #include <SDL2/SDL_image.h>
 
+namespace sdl2engine {
+
 class Renderer {
 
 	public:
@@ -66,5 +68,6 @@ class Renderer {
 
 	private:
 		SDL_Renderer* m_sdl_renderer; /**< The SDL renderer to render onto. */
-
 };
+
+} // namespace sdl2engine

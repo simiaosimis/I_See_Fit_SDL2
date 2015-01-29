@@ -4,6 +4,8 @@
 #include "util/Logger.h"
 #include "util/Assert.h"
 
+namespace sdl2engine {
+
 AudioHandler::AudioHandler() :
 	m_current_music{nullptr},
 	m_effects{}
@@ -146,3 +148,5 @@ void AudioHandler::ClearChannel(const int channel) {
 void AudioHandler::ChannelDone(const int channel) {
 	Game::Instance().GetAudioHandler().ClearChannel(channel);
 }
+
+} // namespace sdl2engine

@@ -3,6 +3,8 @@
 #include "util/Configuration.h"
 #include "util/Assert.h"
 
+namespace sdl2engine {
+
 Window::Window() :
 	m_sdl_window(nullptr),
 	m_renderer(nullptr)
@@ -77,3 +79,5 @@ void Window::Resize(const int width_, const int height_) {
 Renderer* Window::GetRenderer() {
 	return m_renderer;
 }
+
+} // namespace sdl2engine

@@ -3,6 +3,8 @@
 #include <vector>
 #include "engine/GameObject.h"
 
+namespace sdl2engine {
+
 /**
 * Parent class for other game states.
 */
@@ -51,5 +53,6 @@ class StateGame {
 
 	protected:
 		std::vector<GameObject*> gameObjects; /**< List of all the GameObjects in the state. */
-
 };
+
+} // namespace sdl2engine

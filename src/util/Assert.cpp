@@ -5,7 +5,7 @@
 void FailedAssertion(const char* expression, const char* message, const char* file,
 		const int line, const char* function) {
 	{
-		LogBuffer assertion_logger = log_error();
+		sdl2engine::LogBuffer assertion_logger = sdl2engine::log_error();
 
 		assertion_logger << "\n---------------------------\n";
 		assertion_logger << "Assertion failed!\n";

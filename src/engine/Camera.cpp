@@ -3,6 +3,8 @@
 #include "util/Configuration.h"
 #include "util/Assert.h"
 
+namespace sdl2engine {
+
 Camera::Camera(GameObject* const game_object):
 	m_game_object{game_object},
 	m_level_width{0},
@@ -56,3 +58,5 @@ void Camera::SetLevelDimensions(const int width, const int height) {
 	m_level_width = width;
 	m_level_height = height;
 }
+
+} // namespace sdl2engine

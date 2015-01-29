@@ -4,6 +4,8 @@
 #include "audio/MusicManager.h"
 #include "audio/SFXManager.h"
 
+namespace sdl2engine {
+
 class ResourceHandler {
 
 	public:
@@ -30,3 +32,5 @@ class ResourceHandler {
 		MusicManager* musicManager;
 		SFXManager* sfxManager;
 };
+
+} // namespace sdl2engine

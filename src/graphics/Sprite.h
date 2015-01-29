@@ -3,6 +3,8 @@
 #include <SDL2/SDL_image.h>
 #include <string>
 
+namespace sdl2engine {
+
 /**
 * @brief Visual representation of game objects.
 *
@@ -123,5 +125,6 @@ class Sprite {
 		int m_width; /**< The loaded image's width. */
 		int m_height; /**< The loaded image's width. */
 		const std::string m_path; /**< Holds the path from where the Sprite was loaded. */
-
 };
+
+} // namespace sdl2engine

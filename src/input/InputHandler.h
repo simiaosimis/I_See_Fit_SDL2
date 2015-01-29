@@ -5,6 +5,8 @@
 #include "input/InputKeys.h"
 #include "input/ControllerHandler.h"
 
+namespace sdl2engine {
+
 /**
 * Handles player input.
 * Using SDL event handling, recieves the player input accordingly.
@@ -53,5 +55,6 @@ class InputHandler {
 			pressed or not. */
 		SDL_Event sdlEvent; /**< SDL internal event structure. */
 		bool quitFlag; /**< If the quit signal was recieved or not. */
-
 };
+
+} // namespace sdl2engine

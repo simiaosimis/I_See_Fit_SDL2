@@ -4,6 +4,8 @@
 #include <string>
 #include "graphics/Sprite.h"
 
+namespace sdl2engine {
+
 /**
 * Base class for all game objects (gameObjects).
 * The entity contains the (x,y) position, width and height, and a sprite.
@@ -77,5 +79,6 @@ class GameObject {
 		int height; /**< The entitys height, from its sprite. */
 		SDL_Rect animationClip; /**< The current clip on the spritesheet, to determine animation. */
 		SDL_Rect boundingBox;
-
 };
+
+} // namespace sdl2engine

@@ -2,6 +2,8 @@
 
 #include <SDL2/SDL.h>
 
+namespace sdl2engine {
+
 class GameObject;
 
 /**
@@ -59,5 +61,6 @@ class Camera {
 		int m_level_height; /**< The height of the level. */
 		SDL_Rect m_clip; /**< Clip which will be used to clip the rendering only to the extent of
 			the camera. */
-
 };
+
+} // namespace sdl2engine

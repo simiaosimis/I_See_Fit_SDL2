@@ -2,6 +2,8 @@
 
 #include <SDL2/SDL_stdinc.h>
 
+namespace sdl2engine {
+
 /**
 */
 class Configuration {
@@ -72,5 +74,6 @@ class Configuration {
 
 		static int m_camera_distance_width; /**< The width distance of the camera. */
 		static int m_camera_distance_height; /**< The height distance of the camera. */
-
 };
+
+} // namespace sdl2engine

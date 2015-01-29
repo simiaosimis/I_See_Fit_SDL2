@@ -1,6 +1,8 @@
 #include "physics/Collision.h"
 #include <cmath>
 
+namespace sdl2engine {
+
 bool Collision::rectsCollided(const SDL_Rect& a_, const SDL_Rect& b_) {
     // Calculate the sides of rect A.
     const int leftA = a_.x;
@@ -66,3 +68,5 @@ Collision::RectangleSide Collision::rectsCollidedSide(const SDL_Rect& a_, const 
         return RectangleSide::NONE;
     }
 }
+
+} // namespace sdl2engine

@@ -1,6 +1,8 @@
 #include "input/InputHandler.h"
 #include "util/Logger.h"
 
+namespace sdl2engine {
+
 InputHandler::InputHandler() :
 	controllerHandler(new ControllerHandler()),
 	quitFlag(false)
@@ -108,3 +110,5 @@ void InputHandler::signalExit() {
 void InputHandler::clearKey(const GameKeys key_) {
 	this->keyStates.at(key_) = false;
 }
+
+} // namespace sdl2engine

@@ -1,5 +1,6 @@
 #pragma once
 
+namespace sdl2engine {
 /**
 * @brief Encloses initialization/closing of SDL systems.
 */
@@ -15,3 +16,4 @@ namespace sdl {
 bool Initialize();
 
 } // namespace sdl
+} // namespace sdl2engine

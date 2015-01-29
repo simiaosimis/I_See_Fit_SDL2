@@ -4,6 +4,8 @@
 #include "graphics/Sprite.h"
 #include "engine/Animation.h"
 
+namespace sdl2engine {
+
 /**
 * The state used for testing the engine.
 * For now is just a placeholder, might have different states to test different things later.
@@ -50,5 +52,6 @@ class GStatePlaceholder : public StateGame {
 		Sprite* image;
 		Animation* animation;
 		SDL_Rect animationClip;
-
 };
+
+} // namespace sdl2engine

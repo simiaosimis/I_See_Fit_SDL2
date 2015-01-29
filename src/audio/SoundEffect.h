@@ -3,6 +3,8 @@
 #include <SDL2/SDL_mixer.h>
 #include <string>
 
+namespace sdl2engine {
+
 class SoundEffect {
 
 	public:
@@ -17,5 +19,6 @@ class SoundEffect {
 	private:
 		Mix_Chunk* const m_mix_chunk;
 		const std::string m_path;
-
 };
+
+} // namespace sdl2engine

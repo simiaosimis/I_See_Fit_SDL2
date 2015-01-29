@@ -1,6 +1,8 @@
 #include "Animation.h"
 #include "util/Assert.h"
 
+namespace sdl2engine {
+
 Animation::Animation(const int x, const int y, const int sprite_width, const int sprite_height,
 		const int number_of_images, const double total_time) :
 	m_x{x},
@@ -111,3 +113,5 @@ void Animation::SetWidthHeight(const int width, const int height) {
 	ASSERT(m_sprite_width >= 0 , "Must be >= 0");
 	ASSERT(m_sprite_height >= 0, "Must be >= 0");
 }
+
+} // namespace sdl2engine

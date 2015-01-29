@@ -1,10 +1,11 @@
 #include "util/Configuration.h"
 #include "util/Assert.h"
 
+namespace sdl2engine {
+
 // Resolution = 16:10
 const int Configuration::m_resolution_width = 192;
 const int Configuration::m_resolution_height = 108;
-
 Uint32 Configuration::m_max_framerate = 0;
 const char* Configuration::m_window_title = "";
 int Configuration::m_logical_render_size = 0;
@@ -12,7 +13,6 @@ int Configuration::m_screen_width = 0;
 int Configuration::m_screen_height = 0;
 int Configuration::m_camera_distance_width = 0;
 int Configuration::m_camera_distance_height = 0;
-
 
 void Configuration::Initialize() {
 	/// @todo Read this information from a configuration file.
@@ -70,3 +70,5 @@ int Configuration::CameraDistanceWidth() {
 int Configuration::CameraDistanceHeight() {
 	return Configuration::m_camera_distance_height;
 }
+
+} // namespace sdl2engine

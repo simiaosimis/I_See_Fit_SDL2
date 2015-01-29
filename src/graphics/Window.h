@@ -4,6 +4,8 @@
 #include <string>
 #include "graphics/Renderer.h"
 
+namespace sdl2engine {
+
 /**
 * Represents the actual window that the game runs on.
 * Contains the SDL_Window and the SDL_Renderer, and methods related to these.
@@ -66,5 +68,6 @@ class Window {
 
 		SDL_Window* m_sdl_window; /**< The SDL window, that will be the actual game window. */
 		Renderer* m_renderer; /**< The SDL renderer to render onto. */
-
 };
+
+} // namespace sdl2engine

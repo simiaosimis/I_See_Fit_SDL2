@@ -10,6 +10,8 @@
 #include "input/InputHandler.h"
 #include "engine/ResourceHandler.h"
 
+namespace sdl2engine {
+
 /**
 * Main structure class for the game.
 * Contains all the necessary functionalities to loop and update the game.
@@ -125,5 +127,6 @@ class Game {
 
 		using StatesMap = std::map<GStates, StateGame*>;
 		StatesMap m_game_states; /**< Map containing all possible states. */
-
 };
+
+} // namespace sdl2engine

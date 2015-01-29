@@ -1,17 +1,17 @@
 #pragma once
 
-#define CONTROLLERSTICK_DEAD_ZONE 8000
-#define TRIGGER_DEAD_ZONE 8000
-
 #include <SDL2/SDL.h>
 #include "InputKeys.h"
 
+#define CONTROLLERSTICK_DEAD_ZONE 8000
+#define TRIGGER_DEAD_ZONE 8000
+
+namespace sdl2engine {
 namespace controllerMap {
 
 	/**
 	* Button Enumeration for the Joystick
 	*/
-
 	enum buttons {
  		FACE_DOWN, // X on PS4 controller - 0
  		FACE_RIGHT, // O on PS4 controller - 1
@@ -81,5 +81,6 @@ class ControllerHandler {
 		are pressed or not. */
 
 		SDL_GameController* gameController; /**< Pointer to the controller. */
-
 };
+
+} // namespace sdl2engine

@@ -2,7 +2,6 @@
 #include <chrono>
 #include <memory>
 #include "util/Configuration.h"
-#include "util/Util.h"
 #include "graphics/Sprite.h"
 #include "util/Logger.h"
 #include "util/Assert.h"
@@ -12,6 +11,8 @@
 
 #define ADD_STATE(stateEnum, stateClass) \
 	m_game_states.insert(std::make_pair(stateEnum, new stateClass()))
+
+namespace sdl2engine {
 
 Game& Game::Instance() {
 	// "C++11 mandates that the initializer for a local static variable is only run once, even
@@ -153,5 +154,7 @@ Renderer* Game::GetRenderer() {
 ResourceHandler& Game::Resource() {
 	return (*(m_resource_handler));
 }
+
+} // namespace sdl2engine
 
 #undef ADD_STATE

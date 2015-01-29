@@ -1,5 +1,7 @@
 #include "engine/StateGame.h"
 
+namespace sdl2engine {
+
 StateGame::~StateGame() {
 
 }
@@ -20,3 +22,5 @@ void StateGame::cleanGameObjects() {
 
 	this->gameObjects.clear();
 }
+
+} // namespace sdl2engine

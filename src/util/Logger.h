@@ -2,6 +2,8 @@
 
 #include <sstream>
 
+namespace sdl2engine {
+
 /**
 * @brief All the possible log levels.
 */
@@ -84,3 +86,5 @@ constexpr log_function_ptr log_error = log<LogLevel::Error>;
 constexpr log_function_ptr log_warn  = log<LogLevel::Warn>;
 constexpr log_function_ptr log_info  = log<LogLevel::Info>;
 constexpr log_function_ptr log_debug = log<LogLevel::Debug>;
+
+} // namespace sdl2engine

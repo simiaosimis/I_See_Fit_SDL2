@@ -2,6 +2,8 @@
 
 #include <SDL2/SDL.h>
 
+namespace sdl2engine {
+
 /**
 * Class in control of animating a sprite.
 *
@@ -84,3 +86,5 @@ class Animation {
 		int m_animation_count; /**< Index of the current image relative to the number of
 			images. */
 };
+
+} // namespace sdl2engine

@@ -1,6 +1,8 @@
 #include "input/ControllerHandler.h"
 #include "util/Logger.h"
 
+namespace sdl2engine {
+
 ControllerHandler::ControllerHandler() :
 	gameController(nullptr)
 {
@@ -189,3 +191,5 @@ void ControllerHandler::handleInput(SDL_Event& sdlEvent_) {
 InputArray ControllerHandler::getKeyStates() {
 	return this->keyStates;
 }
+
+} // namespace sdl2engine

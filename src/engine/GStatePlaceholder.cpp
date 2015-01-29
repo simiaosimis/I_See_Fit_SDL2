@@ -2,6 +2,8 @@
 #include "engine/Game.h"
 #include "util/Logger.h"
 
+namespace sdl2engine {
+
 GStatePlaceholder::GStatePlaceholder() :
 	image(nullptr),
 	animation(nullptr),
@@ -45,3 +47,5 @@ void GStatePlaceholder::update(const double dt_) {
 void GStatePlaceholder::render() {
 	this->image->Render(0, 0, &this->animationClip, true);
 }
+
+} // namespace sdl2engine

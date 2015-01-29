@@ -3,6 +3,8 @@
 #include <SDL2/SDL_mixer.h>
 #include <string>
 
+namespace sdl2engine {
+
 class Music {
 
 	public:
@@ -31,5 +33,6 @@ class Music {
 	private:
 		Mix_Music* const m_mix_music; /**< Music data. */
 		const std::string m_path; /**< Path to the music file. */
-
 };
+
+} // namespace sdl2engine

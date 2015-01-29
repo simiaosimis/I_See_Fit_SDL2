@@ -3,6 +3,8 @@
 #include <SDL2/SDL_ttf.h>
 #include "engine/GameObject.h"
 
+namespace sdl2engine {
+
 /**
 * @todo Actually make this work.
 */
@@ -35,5 +37,6 @@ class Text : public GameObject {
 
 	private:
 		TTF_Font* font;
-
 };
+
+} // namespace sdl2engine

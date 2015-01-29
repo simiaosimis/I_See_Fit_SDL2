@@ -10,6 +10,8 @@
 
 namespace {
 
+using namespace sdl2engine;
+
 /**
 * @brief Initializes SDL_TTF systems.
 */
@@ -186,6 +188,7 @@ bool OpenSdlMixer() {
 
 } // namespace
 
+namespace sdl2engine {
 namespace sdl {
 
 bool Initialize() {
@@ -212,3 +215,4 @@ bool Initialize() {
 }
 
 } // namespace sdl
+} // namespace sdl2engine

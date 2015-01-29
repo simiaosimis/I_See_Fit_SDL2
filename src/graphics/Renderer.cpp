@@ -3,6 +3,8 @@
 #include "util/Logger.h"
 #include "util/Assert.h"
 
+namespace sdl2engine {
+
 Renderer::Renderer(SDL_Window* const sdl_window, const Uint32 flags) :
 	m_sdl_renderer{SDL_CreateRenderer(sdl_window, -1, flags)}
 {
@@ -59,3 +61,5 @@ void Renderer::LogicalSize(int* width, int* height) {
 SDL_Renderer* Renderer::SdlRenderer() {
 	return m_sdl_renderer;
 }
+
+} // namespace sdl2engine

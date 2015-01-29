@@ -23,6 +23,8 @@ constexpr LogInfo logInfos[] {
 
 } // namespace
 
+namespace sdl2engine {
+
 LogBuffer::LogBuffer(const LogLevel level) :
 	m_log_level{static_cast<int>(level)},
 	m_log_stream{}
@@ -52,3 +54,5 @@ template LogBuffer log<LogLevel::Error>();
 template LogBuffer log<LogLevel::Warn>();
 template LogBuffer log<LogLevel::Info>();
 template LogBuffer log<LogLevel::Debug>();
+
+} // namespace sdl2engine

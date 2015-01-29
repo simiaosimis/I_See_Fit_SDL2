@@ -3,6 +3,8 @@
 #include "util/Configuration.h"
 #include "util/Logger.h"
 
+using namespace sdl2engine;
+
 int main(int argc, char** argv) {
 
 	// Unused for now, so avoiding compiler warnings.

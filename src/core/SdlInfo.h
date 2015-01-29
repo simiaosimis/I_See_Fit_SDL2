@@ -4,6 +4,7 @@
 #include <string>
 #include "util/Logger.h"
 
+namespace sdl2engine {
 namespace sdl {
 namespace detail {
 
@@ -77,3 +78,4 @@ bool EqualDisplayModes(const SDL_DisplayMode& first, const SDL_DisplayMode& seco
 
 } // namespace detail
 } // namespace sdl
+} // namespace sdl2engine

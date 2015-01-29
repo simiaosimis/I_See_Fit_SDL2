@@ -1,5 +1,7 @@
 #include "engine/ResourceHandler.h"
 
+namespace sdl2engine {
+
 ResourceHandler::ResourceHandler() :
 	spriteManager(new SpriteManager()),
 	musicManager(new MusicManager()),
@@ -25,3 +27,5 @@ Music* ResourceHandler::music(const std::string& path_) {
 SoundEffect* ResourceHandler::soundEffect(const std::string& path_) {
 	return this->sfxManager->get(path_);
 }
+
+} // namespace sdl2engine

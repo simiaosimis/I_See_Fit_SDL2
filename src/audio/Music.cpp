@@ -1,6 +1,8 @@
 #include "audio/Music.h"
 #include "util/Logger.h"
 
+namespace sdl2engine {
+
 Music::Music(const std::string& path) :
 	m_mix_music{Mix_LoadMUS(path.c_str())},
 	m_path{path}
@@ -23,3 +25,5 @@ Mix_Music* Music::MixMusic() {
 std::string Music::Path() {
 	return m_path;
 }
+
+} // namespace sdl2engine

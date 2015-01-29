@@ -3,6 +3,8 @@
 #include "util/Logger.h"
 #include "util/Assert.h"
 
+namespace sdl2engine {
+
 Sprite::Sprite(const std::string& path) :
 	m_sdl_texture{nullptr},
 	m_width{0},
@@ -173,3 +175,5 @@ void Sprite::SetBlendMode(SDL_BlendMode blend_mode) {
 			SDL_GetError();
 	}
 }
+
+} // namespace sdl2engine

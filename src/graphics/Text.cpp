@@ -1,6 +1,8 @@
 #include "graphics/Text.h"
 #include "util/Logger.h"
 
+namespace sdl2engine {
+
 Text::Text(const double x_, const double y_, const char* path_, const int size_,
 	const char* text_, const SDL_Color color_) :
 	GameObject(x_, y_),
@@ -129,3 +131,5 @@ void Text::render(const double cameraX_, const double cameraY_) {
 		log_warn() << "Null sprite for text";
 	}
 }
+
+} // namespace sdl2engine

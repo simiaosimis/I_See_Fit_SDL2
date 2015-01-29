@@ -4,6 +4,8 @@
 #include "util/Logger.h"
 #include "util/Assert.h"
 
+namespace sdl2engine {
+
 GameObject::GameObject(const double x_, const double y_, const std::string& path_) :
     x(x_),
     y(y_),
@@ -63,3 +65,5 @@ SDL_Rect& GameObject::getAnimationClip() {
 SDL_Rect& GameObject::getBoundingBox() {
     return this->boundingBox;
 }
+
+} // namespace sdl2engine
