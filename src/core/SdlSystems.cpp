@@ -21,7 +21,7 @@ bool OpenSdlTtf() {
 
 		SDL_version compiled;
 		SDL_TTF_VERSION(&compiled);
-		sdl::detail::LogSdlVersion("SDL_TTF", compiled);
+		log_debug() << sdl::detail::SdlVersion("SDL_TTF", compiled);
 	}
 	else {
 		log_error() << "Could not initialize TTF. " << TTF_GetError();
@@ -54,7 +54,7 @@ bool OpenSdl() {
 		SDL_version compiled;
 		SDL_GetVersion(&compiled);
 
-		sdl::detail::LogSdlVersion("SDL", compiled, SDL_GetRevision());
+		log_debug() << sdl::detail::SdlVersion("SDL", compiled, SDL_GetRevision());
 	}
 	else {
 		log_error() << "Could not initialize SDL. " << SDL_GetError();
@@ -82,7 +82,7 @@ bool OpenSdlImage() {
 	if(success) {
 		SDL_version compiled;
 		SDL_IMAGE_VERSION(&compiled);
-		sdl::detail::LogSdlVersion("SDL_image", compiled);
+		log_debug() << sdl::detail::SdlVersion("SDL_image", compiled);
 	}
 	else {
 		log_error() << "Could not initialize SDL_Image. " << IMG_GetError();
@@ -159,7 +159,7 @@ bool OpenSdlMixer() {
 
 		SDL_version compiled;
 		SDL_MIXER_VERSION(&compiled);
-		sdl::detail::LogSdlVersion("SDL_mixer", compiled);
+		log_debug() << sdl::detail::SdlVersion("SDL_mixer", compiled);
 
 		const int k_channels_to_allocate = 25;
 		const int k_channels_allocated = Mix_AllocateChannels(k_channels_to_allocate);
@@ -196,14 +196,16 @@ bool Initialize() {
 	const bool success_img = OpenSdlImage();
 	const bool success_mixer = OpenSdlMixer();
 
-	// Getting some driver information.
-	{
-		LogBuffer driver_log{log_debug()};
-		driver_log << "Getting driver information.";
-		detail::LogSdlDrivers(SDL_GetVideoDriver, SDL_GetNumVideoDrivers, driver_log);
-		detail::LogSdlDrivers(SDL_GetAudioDriver, SDL_GetNumAudioDrivers, driver_log);
-		detail::LogSdlDrivers(SDL_GetRenderDriverInfo, SDL_GetNumRenderDrivers, driver_log);
-	}
+	// Video/audio/render drivers information.	
+	log_debug() << "Getting video drivers information.\n" << detail::SdlVideoDrivers();
+	log_debug() << "Getting audio drivers information.\n" << detail::SdlAudioDrivers();
+	log_debug() << "Getting render drivers information.\n" << detail::SdlRenderDrivers();
+
+	// Displays and modes information.
+	log_debug() << "Getting displays information.\n" << detail::SdlDisplayModes();
+
+	// Audio devices information.
+	log_debug() << "Getting audio devices information.\n" << detail::SdlAudioDevices();
 
 	// If even one system fails to initialize, returns false.
 	return (success_sdl && success_img && success_mixer && success_ttf);

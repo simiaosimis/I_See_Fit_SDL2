@@ -7,42 +7,48 @@
 namespace sdl {
 namespace detail {
 
-using FuncDriverName = const char* (*) (int);
-using FuncNumDrivers = int (*) ();
-using FuncDriverInfo = int (*) (int, SDL_RendererInfo*);
-
 /**
-* Logs the SDL API version.
+* @return Version information about the SDL API.
+*
 * @param library : What API/Library is being logged about.
 * @param version_compiled : The compiled version.
-* @param revision : If any, the revision.
 */
-void LogSdlVersion(const std::string& library, const SDL_version& version_compiled);
+std::string SdlVersion(const std::string& library, const SDL_version& version_compiled);
 
 /**
-* Logs the SDL API version.
+* @return Version information about the SDL API.
+*
 * @param library : What API/Library is being logged about.
 * @param version_compiled : The compiled version.
-* @param revision : If any, the revision.
+* @param revision : The revision version.
 */
-void LogSdlVersion(const std::string& library, const SDL_version& version_compiled,
+std::string SdlVersion(const std::string& library, const SDL_version& version_compiled,
 	const std::string& revision);
 
 /**
-* @brief Logs information about available drivers.
-*
-* Ment for Audio and Video drivers.
+* @return Information about available video drivers.
 */
-void LogSdlDrivers(FuncDriverName const func_driver_name,
-	FuncNumDrivers const func_num_drivers, LogBuffer& drive_log);
+std::string SdlVideoDrivers();
 
 /**
-* @brief Logs information about available drivers.
-*
-* Ment for Render drivers.
+* @return Information about available audio drivers.
 */
-void LogSdlDrivers(FuncDriverInfo const func_driver_info,
-	FuncNumDrivers const func_num_drivers, LogBuffer& drive_log);
+std::string SdlAudioDrivers();
+
+/**
+* @return Information about available render drivers.
+*/
+std::string SdlRenderDrivers();
+
+/**
+* @return Information about available audio devices.
+*/
+std::string SdlAudioDevices();
+
+/**
+* @return Information about all the displays and modes available.
+*/
+std::string SdlDisplayModes();
 
 /**
 * @return A string with the contents of a SDL_RendererInfo.
@@ -58,6 +64,16 @@ std::string AudioFormatToString(const Uint16 audio_format);
 * @return A string with the compatible pixel format.
 */
 std::string PixelFormatToString(const Uint32 texture_format);
+
+/**
+* @return A string indicating the supported renderer flags.
+*/
+std::string RendererFlagsToString(const Uint32 flags);
+
+/**
+* @return True is display modes are equal.
+*/
+bool EqualDisplayModes(const SDL_DisplayMode& first, const SDL_DisplayMode& second);
 
 } // namespace detail
 } // namespace sdl
