@@ -135,7 +135,7 @@ function do_valgrind {
 	attention_echo "Valgrind"
 
 	# Valgrind report
-	SDL_AUDIODRIVER=dummy SDL_VIDEODRIVER=x11 valgrind\
+	SDL_AUDIODRIVER=dummy SDL_VIDEODRIVER=dummy valgrind\
 		--xml=yes --xml-file=${DIR_REPORTS}/valgrind-exec-report.xml\
 		--leak-check=full\
 		--track-origins=yes\
