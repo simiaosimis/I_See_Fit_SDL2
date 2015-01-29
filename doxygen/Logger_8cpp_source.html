@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v30</span>
+   &#160;<span id="projectnumber">v31</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -116,47 +116,51 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;} <span class="comment">// namespace</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classLogBuffer.html#ac834fd3640785ac765e271641e5904e6">   26</a></span>&#160;<a class="code" href="classLogBuffer.html#ac834fd3640785ac765e271641e5904e6">LogBuffer::LogBuffer</a>(<span class="keyword">const</span> <a class="code" href="Logger_8h.html#aca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a> level) :</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    m_log_level{<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(level)},</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="classLogBuffer.html#a63ef05f08a475ef5313678e94f5eadc2">m_log_stream</a>{}</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="comment">// Ignoring &#39;parameter not used&#39; warning.</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    (void)level;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classLogBuffer.html#a92cafeb5c071c2fb4a1bec2eefe236f7">   34</a></span>&#160;<a class="code" href="classLogBuffer.html#ac834fd3640785ac765e271641e5904e6">LogBuffer::LogBuffer</a>(<span class="keyword">const</span> <a class="code" href="classLogBuffer.html">LogBuffer</a>&amp; log_buffer) :</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="classLogBuffer.html#adb8d7f6e6ce44011c334227fcb45de19">m_log_level</a>{log_buffer.<a class="code" href="classLogBuffer.html#adb8d7f6e6ce44011c334227fcb45de19">m_log_level</a>},</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    m_log_stream{}</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classLogBuffer.html#a61b77cc60f4fd8760bb63fb262c7a89f">   40</a></span>&#160;<a class="code" href="classLogBuffer.html#a61b77cc60f4fd8760bb63fb262c7a89f">LogBuffer::~LogBuffer</a>() {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    std::clog &lt;&lt; <span class="stringliteral">&quot;[&quot;</span> &lt;&lt; logInfos[<a class="code" href="classLogBuffer.html#adb8d7f6e6ce44011c334227fcb45de19">m_log_level</a>].color &lt;&lt; logInfos[<a class="code" href="classLogBuffer.html#adb8d7f6e6ce44011c334227fcb45de19">m_log_level</a>].tag &lt;&lt; colorReset</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        &lt;&lt; <span class="stringliteral">&quot;] - &quot;</span> &lt;&lt; <a class="code" href="classLogBuffer.html#a63ef05f08a475ef5313678e94f5eadc2">m_log_stream</a>.str() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">template</span> &lt;LogLevel level&gt;</div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="Logger_8h.html#ad2f39cd32a15c7182d81d59949237900">   46</a></span>&#160;<a class="code" href="classLogBuffer.html">LogBuffer</a> <a class="code" href="Logger_8cpp.html#ad2f39cd32a15c7182d81d59949237900">log</a>() {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="classLogBuffer.html">LogBuffer</a> log_buffer{level};</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">return</span> log_buffer;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">template</span> <a class="code" href="classLogBuffer.html">LogBuffer</a> log&lt;LogLevel::Error&gt;();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">template</span> <a class="code" href="classLogBuffer.html">LogBuffer</a> log&lt;LogLevel::Warn&gt;();</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">template</span> <a class="code" href="classLogBuffer.html">LogBuffer</a> log&lt;LogLevel::Info&gt;();</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">template</span> <a class="code" href="classLogBuffer.html">LogBuffer</a> log&lt;LogLevel::Debug&gt;();</div>
-<div class="ttc" id="Logger_8h_html_aca1fd1d8935433e6ba2e3918214e07f9"><div class="ttname"><a href="Logger_8h.html#aca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a></div><div class="ttdeci">LogLevel</div><div class="ttdoc">All the possible log levels. </div><div class="ttdef"><b>Definition:</b> <a href="Logger_8h_source.html#l00008">Logger.h:8</a></div></div>
-<div class="ttc" id="classLogBuffer_html_ac834fd3640785ac765e271641e5904e6"><div class="ttname"><a href="classLogBuffer.html#ac834fd3640785ac765e271641e5904e6">LogBuffer::LogBuffer</a></div><div class="ttdeci">LogBuffer(const LogLevel level)</div><div class="ttdoc">The constructor;. </div><div class="ttdef"><b>Definition:</b> <a href="Logger_8cpp_source.html#l00026">Logger.cpp:26</a></div></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span>sdl2engine {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1LogBuffer.html#a7a46cbdb2dd692629691812a554cfef0">   28</a></span>&#160;<a class="code" href="classsdl2engine_1_1LogBuffer.html#a7a46cbdb2dd692629691812a554cfef0">LogBuffer::LogBuffer</a>(<span class="keyword">const</span> <a class="code" href="namespacesdl2engine.html#a72818c74e8372a1d6c169905f7eb232e">LogLevel</a> level) :</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    m_log_level{<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(level)},</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="classsdl2engine_1_1LogBuffer.html#a81251a3c8fd6859d9e0e1f79bfe89266">m_log_stream</a>{}</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="comment">// Ignoring &#39;parameter not used&#39; warning.</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    (void)level;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1LogBuffer.html#a2dbc95cb3c39137b2cfc9aa3f0b11fe2">   36</a></span>&#160;<a class="code" href="classsdl2engine_1_1LogBuffer.html#a7a46cbdb2dd692629691812a554cfef0">LogBuffer::LogBuffer</a>(<span class="keyword">const</span> <a class="code" href="classsdl2engine_1_1LogBuffer.html">LogBuffer</a>&amp; log_buffer) :</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classsdl2engine_1_1LogBuffer.html#af2ef0654efa8f0b0f4af4030e4f4977a">m_log_level</a>{log_buffer.<a class="code" href="classsdl2engine_1_1LogBuffer.html#af2ef0654efa8f0b0f4af4030e4f4977a">m_log_level</a>},</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    m_log_stream{}</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1LogBuffer.html#a8fbebc2c0f16e1244aba805f23d78a89">   42</a></span>&#160;<a class="code" href="classsdl2engine_1_1LogBuffer.html#a8fbebc2c0f16e1244aba805f23d78a89">LogBuffer::~LogBuffer</a>() {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    std::clog &lt;&lt; <span class="stringliteral">&quot;[&quot;</span> &lt;&lt; logInfos[<a class="code" href="classsdl2engine_1_1LogBuffer.html#af2ef0654efa8f0b0f4af4030e4f4977a">m_log_level</a>].color &lt;&lt; logInfos[<a class="code" href="classsdl2engine_1_1LogBuffer.html#af2ef0654efa8f0b0f4af4030e4f4977a">m_log_level</a>].tag &lt;&lt; colorReset</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        &lt;&lt; <span class="stringliteral">&quot;] - &quot;</span> &lt;&lt; <a class="code" href="classsdl2engine_1_1LogBuffer.html#a81251a3c8fd6859d9e0e1f79bfe89266">m_log_stream</a>.str() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">template</span> &lt;LogLevel level&gt;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="namespacesdl2engine.html#adce96af93a7d3fa229b71236f2f8a59b">   48</a></span>&#160;<a class="code" href="classsdl2engine_1_1LogBuffer.html">LogBuffer</a> <a class="code" href="namespacesdl2engine.html#adce96af93a7d3fa229b71236f2f8a59b">log</a>() {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="classsdl2engine_1_1LogBuffer.html">LogBuffer</a> log_buffer{level};</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">return</span> log_buffer;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">template</span> LogBuffer log&lt;LogLevel::Error&gt;();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">template</span> LogBuffer log&lt;LogLevel::Warn&gt;();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">template</span> LogBuffer log&lt;LogLevel::Info&gt;();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">template</span> LogBuffer log&lt;LogLevel::Debug&gt;();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;} <span class="comment">// namespace sdl2engine</span></div>
+<div class="ttc" id="namespacesdl2engine_html_a72818c74e8372a1d6c169905f7eb232e"><div class="ttname"><a href="namespacesdl2engine.html#a72818c74e8372a1d6c169905f7eb232e">sdl2engine::LogLevel</a></div><div class="ttdeci">LogLevel</div><div class="ttdoc">All the possible log levels. </div><div class="ttdef"><b>Definition:</b> <a href="Logger_8h_source.html#l00010">Logger.h:10</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1LogBuffer_html"><div class="ttname"><a href="classsdl2engine_1_1LogBuffer.html">sdl2engine::LogBuffer</a></div><div class="ttdoc">Temporary buffer that grabs log messages from stream. </div><div class="ttdef"><b>Definition:</b> <a href="Logger_8h_source.html#l00035">Logger.h:35</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1LogBuffer_html_a8fbebc2c0f16e1244aba805f23d78a89"><div class="ttname"><a href="classsdl2engine_1_1LogBuffer.html#a8fbebc2c0f16e1244aba805f23d78a89">sdl2engine::LogBuffer::~LogBuffer</a></div><div class="ttdeci">~LogBuffer()</div><div class="ttdoc">The destructor. </div><div class="ttdef"><b>Definition:</b> <a href="Logger_8cpp_source.html#l00042">Logger.cpp:42</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1LogBuffer_html_a81251a3c8fd6859d9e0e1f79bfe89266"><div class="ttname"><a href="classsdl2engine_1_1LogBuffer.html#a81251a3c8fd6859d9e0e1f79bfe89266">sdl2engine::LogBuffer::m_log_stream</a></div><div class="ttdeci">std::ostringstream m_log_stream</div><div class="ttdef"><b>Definition:</b> <a href="Logger_8h_source.html#l00071">Logger.h:71</a></div></div>
+<div class="ttc" id="namespacesdl2engine_html_adce96af93a7d3fa229b71236f2f8a59b"><div class="ttname"><a href="namespacesdl2engine.html#adce96af93a7d3fa229b71236f2f8a59b">sdl2engine::log</a></div><div class="ttdeci">LogBuffer log()</div><div class="ttdoc">Main log function. </div><div class="ttdef"><b>Definition:</b> <a href="Logger_8cpp_source.html#l00048">Logger.cpp:48</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1LogBuffer_html_a7a46cbdb2dd692629691812a554cfef0"><div class="ttname"><a href="classsdl2engine_1_1LogBuffer.html#a7a46cbdb2dd692629691812a554cfef0">sdl2engine::LogBuffer::LogBuffer</a></div><div class="ttdeci">LogBuffer(const LogLevel level)</div><div class="ttdoc">The constructor;. </div><div class="ttdef"><b>Definition:</b> <a href="Logger_8cpp_source.html#l00028">Logger.cpp:28</a></div></div>
 <div class="ttc" id="Logger_8h_html"><div class="ttname"><a href="Logger_8h.html">Logger.h</a></div></div>
-<div class="ttc" id="classLogBuffer_html_adb8d7f6e6ce44011c334227fcb45de19"><div class="ttname"><a href="classLogBuffer.html#adb8d7f6e6ce44011c334227fcb45de19">LogBuffer::m_log_level</a></div><div class="ttdeci">const int m_log_level</div><div class="ttdef"><b>Definition:</b> <a href="Logger_8h_source.html#l00066">Logger.h:66</a></div></div>
-<div class="ttc" id="classLogBuffer_html"><div class="ttname"><a href="classLogBuffer.html">LogBuffer</a></div><div class="ttdoc">Temporary buffer that grabs log messages from stream. </div><div class="ttdef"><b>Definition:</b> <a href="Logger_8h_source.html#l00033">Logger.h:33</a></div></div>
-<div class="ttc" id="classLogBuffer_html_a61b77cc60f4fd8760bb63fb262c7a89f"><div class="ttname"><a href="classLogBuffer.html#a61b77cc60f4fd8760bb63fb262c7a89f">LogBuffer::~LogBuffer</a></div><div class="ttdeci">~LogBuffer()</div><div class="ttdoc">The destructor. </div><div class="ttdef"><b>Definition:</b> <a href="Logger_8cpp_source.html#l00040">Logger.cpp:40</a></div></div>
-<div class="ttc" id="Logger_8cpp_html_ad2f39cd32a15c7182d81d59949237900"><div class="ttname"><a href="Logger_8cpp.html#ad2f39cd32a15c7182d81d59949237900">log</a></div><div class="ttdeci">LogBuffer log()</div><div class="ttdoc">Main log function. </div><div class="ttdef"><b>Definition:</b> <a href="Logger_8cpp_source.html#l00046">Logger.cpp:46</a></div></div>
-<div class="ttc" id="classLogBuffer_html_a63ef05f08a475ef5313678e94f5eadc2"><div class="ttname"><a href="classLogBuffer.html#a63ef05f08a475ef5313678e94f5eadc2">LogBuffer::m_log_stream</a></div><div class="ttdeci">std::ostringstream m_log_stream</div><div class="ttdef"><b>Definition:</b> <a href="Logger_8h_source.html#l00069">Logger.h:69</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1LogBuffer_html_af2ef0654efa8f0b0f4af4030e4f4977a"><div class="ttname"><a href="classsdl2engine_1_1LogBuffer.html#af2ef0654efa8f0b0f4af4030e4f4977a">sdl2engine::LogBuffer::m_log_level</a></div><div class="ttdeci">const int m_log_level</div><div class="ttdef"><b>Definition:</b> <a href="Logger_8h_source.html#l00068">Logger.h:68</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 29 2015 00:45:25 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 29 2015 23:28:55 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

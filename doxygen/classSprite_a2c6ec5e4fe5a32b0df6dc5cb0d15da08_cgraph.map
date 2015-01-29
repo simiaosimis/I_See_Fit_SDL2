@@ -1,4 +1,0 @@
-<map id="Sprite::Sprite" name="Sprite::Sprite">
-<area shape="rect" id="node3" href="$classSprite.html#ab5cb3e654119597c69a63f28e2738144" title="Converts a SDL_Surface to a SDL_Texture. " alt="" coords="152,5,320,35"/>
-<area shape="rect" id="node5" href="$classGame.html#a0b3ad989fe67e72b4b6b2f36a059479a" title="Singleton implementation for Game. " alt="" coords="368,5,483,35"/>
-</map>

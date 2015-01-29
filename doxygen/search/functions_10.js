@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['width',['Width',['../classSprite.html#a1d0b90e1525c8069c7570a8a178ef413',1,'Sprite']]],
-  ['window',['Window',['../classWindow.html#a74e6087da23d3c24e9fac0245e5ec92c',1,'Window']]],
-  ['windowtitle',['WindowTitle',['../classConfiguration.html#a2ded611ff08783df927c2b4e97ded543',1,'Configuration']]]
+  ['width',['Width',['../classsdl2engine_1_1Sprite.html#a77127b66ed4450ac8a3edd0457a2d677',1,'sdl2engine::Sprite']]],
+  ['window',['Window',['../classsdl2engine_1_1Window.html#aa0403e65f0dfe560bee7c8f0b779bc55',1,'sdl2engine::Window']]],
+  ['windowtitle',['WindowTitle',['../classsdl2engine_1_1Configuration.html#a5246fe0e44ebf973bba29cb0ffaad6be',1,'sdl2engine::Configuration']]]
 ];

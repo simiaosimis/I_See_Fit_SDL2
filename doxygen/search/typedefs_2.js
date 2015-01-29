@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['statesmap',['StatesMap',['../classGame.html#acf84871fb8043c2ac017d01b3fb046c6',1,'Game']]]
+  ['statesmap',['StatesMap',['../classsdl2engine_1_1Game.html#a6a7c9cd865493921c0f55601e9641798',1,'sdl2engine::Game']]]
 ];

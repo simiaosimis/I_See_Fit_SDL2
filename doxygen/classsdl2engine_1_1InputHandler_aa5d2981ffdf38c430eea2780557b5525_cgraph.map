@@ -1,0 +1,5 @@
+<map id="sdl2engine::InputHandler::handleInput" name="sdl2engine::InputHandler::handleInput">
+<area shape="rect" id="node3" href="$classsdl2engine_1_1ControllerHandler.html#a648f51a30e58aed36f0f1c877ce57b2d" title="sdl2engine::ControllerHandler\l::handleInput" alt="" coords="223,5,415,51"/>
+<area shape="rect" id="node5" href="$classsdl2engine_1_1ControllerHandler.html#a4a7bcc412b8e6399299f67e35c93c89e" title="sdl2engine::ControllerHandler\l::getKeyStates" alt="" coords="223,74,415,121"/>
+<area shape="rect" id="node7" href="$classsdl2engine_1_1InputHandler.html#a0bae4f7fe561cfbf1649e7387791c957" title="sdl2engine::InputHandler\l::signalExit" alt="" coords="236,143,401,190"/>
+</map>

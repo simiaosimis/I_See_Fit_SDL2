@@ -1,13 +1,13 @@
 var searchData=
 [
-  ['load',['load',['../classMusicManager.html#a929c1db1d4d5e48744c32c47ce6b63d1',1,'MusicManager::load()'],['../classSFXManager.html#a61c913d68e0448dbaa3f11ff35026907',1,'SFXManager::load()'],['../classResourceManager.html#ad089e00823733954471f0719e8498a2f',1,'ResourceManager::load()'],['../classGStatePlaceholder.html#a177ff2bfd8c9f911c6e4e7c6b6b50bdf',1,'GStatePlaceholder::load()'],['../classStateGame.html#a924e531e28b8afcbb82858eecef0a084',1,'StateGame::load()'],['../classSpriteManager.html#ac2ca573f7d0c3c84fe487a5c16a305fa',1,'SpriteManager::load()']]],
-  ['loadfrom',['LoadFrom',['../classSprite.html#aab816060b8a5316f1555c40d37d6044d',1,'Sprite']]],
-  ['log',['log',['../Logger_8cpp.html#ad2f39cd32a15c7182d81d59949237900',1,'log():&#160;Logger.cpp'],['../Logger_8h.html#ad2f39cd32a15c7182d81d59949237900',1,'log():&#160;Logger.cpp']]],
-  ['log_3c_20loglevel_3a_3adebug_20_3e',['log&lt; LogLevel::Debug &gt;',['../Logger_8cpp.html#acc3d209a76eda53d476c7b5af595a529',1,'Logger.cpp']]],
-  ['log_3c_20loglevel_3a_3aerror_20_3e',['log&lt; LogLevel::Error &gt;',['../Logger_8cpp.html#a8e21d7611c187eb4bd41f8cf37884198',1,'Logger.cpp']]],
-  ['log_3c_20loglevel_3a_3ainfo_20_3e',['log&lt; LogLevel::Info &gt;',['../Logger_8cpp.html#aa48696f659c7c4caa1d053018c583e90',1,'Logger.cpp']]],
-  ['log_3c_20loglevel_3a_3awarn_20_3e',['log&lt; LogLevel::Warn &gt;',['../Logger_8cpp.html#a45b69f670688e87d3b95e7cc3053097b',1,'Logger.cpp']]],
-  ['logbuffer',['LogBuffer',['../classLogBuffer.html#ac834fd3640785ac765e271641e5904e6',1,'LogBuffer::LogBuffer(const LogLevel level)'],['../classLogBuffer.html#a92cafeb5c071c2fb4a1bec2eefe236f7',1,'LogBuffer::LogBuffer(const LogBuffer &amp;log_buffer)']]],
-  ['logicalrendersize',['LogicalRenderSize',['../classConfiguration.html#a87978aa3909e9063f84a27e058018e70',1,'Configuration']]],
-  ['logicalsize',['LogicalSize',['../classRenderer.html#ae60d5ef1af57d46cce0b703580d1bce4',1,'Renderer']]]
+  ['load',['load',['../classsdl2engine_1_1MusicManager.html#ab549d69e5c445ad036a109d5383a60d0',1,'sdl2engine::MusicManager::load()'],['../classsdl2engine_1_1SFXManager.html#a21715e86b1edf150cc37b32793fb74db',1,'sdl2engine::SFXManager::load()'],['../classsdl2engine_1_1ResourceManager.html#af21b202b7a1762d6d648f5759b27e2f3',1,'sdl2engine::ResourceManager::load()'],['../classsdl2engine_1_1GStatePlaceholder.html#a0a33c04bfe8475e4356ee9e8b75d7669',1,'sdl2engine::GStatePlaceholder::load()'],['../classsdl2engine_1_1StateGame.html#ade94602c8f136c12f67dc40ccc6a9669',1,'sdl2engine::StateGame::load()'],['../classsdl2engine_1_1SpriteManager.html#ac2252ac49087540ee583bd84a9ab5876',1,'sdl2engine::SpriteManager::load()']]],
+  ['loadfrom',['LoadFrom',['../classsdl2engine_1_1Sprite.html#a2d8ae44951073c4ca0d29082428ad900',1,'sdl2engine::Sprite']]],
+  ['log',['log',['../namespacesdl2engine.html#adce96af93a7d3fa229b71236f2f8a59b',1,'sdl2engine']]],
+  ['log_3c_20loglevel_3a_3adebug_20_3e',['log&lt; LogLevel::Debug &gt;',['../namespacesdl2engine.html#a89601785165bc49428b2ecf2ed10e0ab',1,'sdl2engine']]],
+  ['log_3c_20loglevel_3a_3aerror_20_3e',['log&lt; LogLevel::Error &gt;',['../namespacesdl2engine.html#a3055c553d7f190ef1e6ac47504a5508e',1,'sdl2engine']]],
+  ['log_3c_20loglevel_3a_3ainfo_20_3e',['log&lt; LogLevel::Info &gt;',['../namespacesdl2engine.html#a90485e9c93a01c145d98ab6602c5885b',1,'sdl2engine']]],
+  ['log_3c_20loglevel_3a_3awarn_20_3e',['log&lt; LogLevel::Warn &gt;',['../namespacesdl2engine.html#af1467e194dd5a5414262ac8acff0013d',1,'sdl2engine']]],
+  ['logbuffer',['LogBuffer',['../classsdl2engine_1_1LogBuffer.html#a7a46cbdb2dd692629691812a554cfef0',1,'sdl2engine::LogBuffer::LogBuffer(const LogLevel level)'],['../classsdl2engine_1_1LogBuffer.html#a2dbc95cb3c39137b2cfc9aa3f0b11fe2',1,'sdl2engine::LogBuffer::LogBuffer(const LogBuffer &amp;log_buffer)']]],
+  ['logicalrendersize',['LogicalRenderSize',['../classsdl2engine_1_1Configuration.html#a26f03c3e6b663cfb75b2fc671f923af9',1,'sdl2engine::Configuration']]],
+  ['logicalsize',['LogicalSize',['../classsdl2engine_1_1Renderer.html#a2842517bee6bb28d81a96b89c47b2b46',1,'sdl2engine::Renderer']]]
 ];

@@ -1,0 +1,11 @@
+<map id="sdl2engine::sdl::Initialize" name="sdl2engine::sdl::Initialize">
+<area shape="rect" id="node3" href="$namespacesdl2engine_1_1sdl_1_1detail.html#a6064ba7826dcf1ec4da9aca46f58cce5" title="sdl2engine::sdl::detail\l::SdlVideoDrivers" alt="" coords="220,5,367,51"/>
+<area shape="rect" id="node5" href="$namespacesdl2engine_1_1sdl_1_1detail.html#a1c78fcb7bd8734616488de02cce84a05" title="sdl2engine::sdl::detail\l::SdlAudioDrivers" alt="" coords="220,74,367,121"/>
+<area shape="rect" id="node7" href="$namespacesdl2engine_1_1sdl_1_1detail.html#a65add4457525d6e24b3a2c239919cf1c" title="sdl2engine::sdl::detail\l::SdlRenderDrivers" alt="" coords="220,143,367,190"/>
+<area shape="rect" id="node15" href="$namespacesdl2engine_1_1sdl_1_1detail.html#af6d60502e741bdb14ad61b992fbd1af3" title="sdl2engine::sdl::detail\l::SdlDisplayModes" alt="" coords="220,213,367,259"/>
+<area shape="rect" id="node20" href="$namespacesdl2engine_1_1sdl_1_1detail.html#ad685ff2d863169e0028a8c8e8d971cc9" title="sdl2engine::sdl::detail\l::SdlAudioDevices" alt="" coords="220,282,367,329"/>
+<area shape="rect" id="node9" href="$namespacesdl2engine_1_1sdl_1_1detail.html#ad04c987675e6478cb7e788a66bc0eda3" title="sdl2engine::sdl::detail\l::RendererInfoToString" alt="" coords="416,143,571,190"/>
+<area shape="rect" id="node11" href="$namespacesdl2engine_1_1sdl_1_1detail.html#a8307caed513d913a98061717be8fd89f" title="sdl2engine::sdl::detail\l::RendererFlagsToString" alt="" coords="620,139,783,186"/>
+<area shape="rect" id="node13" href="$namespacesdl2engine_1_1sdl_1_1detail.html#a94a9bfdeeb1f8528d9cccb3572c36a9a" title="sdl2engine::sdl::detail\l::PixelFormatToString" alt="" coords="627,209,776,255"/>
+<area shape="rect" id="node18" href="$namespacesdl2engine_1_1sdl_1_1detail.html#a623f4d5fe0026d3700c982868751621d" title="sdl2engine::sdl::detail\l::EqualDisplayModes" alt="" coords="420,269,567,315"/>
+</map>

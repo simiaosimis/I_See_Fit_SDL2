@@ -1,0 +1,5 @@
+<map id="sdl2engine::Music::MixMusic" name="sdl2engine::Music::MixMusic">
+<area shape="rect" id="node3" href="$classsdl2engine_1_1AudioHandler.html#a188c34fab020951a95a92cbdbfaba98b" title="Plays the current music as an infinite loop. " alt="" coords="189,5,360,51"/>
+<area shape="rect" id="node5" href="$classsdl2engine_1_1AudioHandler.html#a48f4f08bc26f3bf0f03a32864bf0c97c" title="Sets new music for given path, infinitely looping. " alt="" coords="408,5,579,51"/>
+<area shape="rect" id="node7" href="$classsdl2engine_1_1GStatePlaceholder.html#a0a33c04bfe8475e4356ee9e8b75d7669" title="sdl2engine::GStatePlaceholder\l::load" alt="" coords="628,5,828,51"/>
+</map>

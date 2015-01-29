@@ -1,0 +1,5 @@
+<map id="sdl2engine::Game::~Game" name="sdl2engine::Game::~Game">
+<area shape="rect" id="node3" href="$classsdl2engine_1_1StateGame.html#a2c320e3ee147659b2f4a82346f9294b0" title="sdl2engine::StateGame\l::unload" alt="" coords="244,5,401,51"/>
+<area shape="rect" id="node7" href="$classsdl2engine_1_1Game.html#a8d4ea87a27afde724b2c376fe513795b" title="sdl2engine::Game::Destroy\lStates" alt="" coords="232,74,413,121"/>
+<area shape="rect" id="node5" href="$classsdl2engine_1_1StateGame.html#ab65a05e7a0a837465c3cf86328ee598d" title="sdl2engine::StateGame\l::cleanGameObjects" alt="" coords="463,5,620,51"/>
+</map>

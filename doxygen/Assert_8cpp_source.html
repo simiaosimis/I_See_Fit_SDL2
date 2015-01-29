@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v30</span>
+   &#160;<span id="projectnumber">v31</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -98,7 +98,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="Assert_8h.html#ac2928e2bc641ad90d5138beb2a29a5b2">    5</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="Assert_8cpp.html#ac2928e2bc641ad90d5138beb2a29a5b2">FailedAssertion</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* expression, <span class="keyword">const</span> <span class="keywordtype">char</span>* message, <span class="keyword">const</span> <span class="keywordtype">char</span>* file,</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> line, <span class="keyword">const</span> <span class="keywordtype">char</span>* <span class="keyword">function</span>) {</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    {</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        <a class="code" href="classLogBuffer.html">LogBuffer</a> assertion_logger = <a class="code" href="Logger_8h.html#adb146b8b8f51bb5055c2db742b57bcd2">log_error</a>();</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        <a class="code" href="classsdl2engine_1_1LogBuffer.html">sdl2engine::LogBuffer</a> assertion_logger = <a class="code" href="namespacesdl2engine.html#a5b2cd64e9633f9ecfda37e160b02852f">sdl2engine::log_error</a>();</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        assertion_logger &lt;&lt; <span class="stringliteral">&quot;\n---------------------------\n&quot;</span>;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        assertion_logger &lt;&lt; <span class="stringliteral">&quot;Assertion failed!\n&quot;</span>;</div>
@@ -112,15 +112,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    std::quick_exit(EXIT_FAILURE);</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
+<div class="ttc" id="classsdl2engine_1_1LogBuffer_html"><div class="ttname"><a href="classsdl2engine_1_1LogBuffer.html">sdl2engine::LogBuffer</a></div><div class="ttdoc">Temporary buffer that grabs log messages from stream. </div><div class="ttdef"><b>Definition:</b> <a href="Logger_8h_source.html#l00035">Logger.h:35</a></div></div>
+<div class="ttc" id="namespacesdl2engine_html_a5b2cd64e9633f9ecfda37e160b02852f"><div class="ttname"><a href="namespacesdl2engine.html#a5b2cd64e9633f9ecfda37e160b02852f">sdl2engine::log_error</a></div><div class="ttdeci">constexpr log_function_ptr log_error</div><div class="ttdef"><b>Definition:</b> <a href="Logger_8h_source.html#l00085">Logger.h:85</a></div></div>
 <div class="ttc" id="Assert_8cpp_html_ac2928e2bc641ad90d5138beb2a29a5b2"><div class="ttname"><a href="Assert_8cpp.html#ac2928e2bc641ad90d5138beb2a29a5b2">FailedAssertion</a></div><div class="ttdeci">void FailedAssertion(const char *expression, const char *message, const char *file, const int line, const char *function)</div><div class="ttdef"><b>Definition:</b> <a href="Assert_8cpp_source.html#l00005">Assert.cpp:5</a></div></div>
-<div class="ttc" id="Logger_8h_html_adb146b8b8f51bb5055c2db742b57bcd2"><div class="ttname"><a href="Logger_8h.html#adb146b8b8f51bb5055c2db742b57bcd2">log_error</a></div><div class="ttdeci">constexpr log_function_ptr log_error</div><div class="ttdef"><b>Definition:</b> <a href="Logger_8h_source.html#l00083">Logger.h:83</a></div></div>
 <div class="ttc" id="Assert_8h_html"><div class="ttname"><a href="Assert_8h.html">Assert.h</a></div></div>
 <div class="ttc" id="Logger_8h_html"><div class="ttname"><a href="Logger_8h.html">Logger.h</a></div></div>
-<div class="ttc" id="classLogBuffer_html"><div class="ttname"><a href="classLogBuffer.html">LogBuffer</a></div><div class="ttdoc">Temporary buffer that grabs log messages from stream. </div><div class="ttdef"><b>Definition:</b> <a href="Logger_8h_source.html#l00033">Logger.h:33</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 29 2015 00:45:25 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 29 2015 23:28:55 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

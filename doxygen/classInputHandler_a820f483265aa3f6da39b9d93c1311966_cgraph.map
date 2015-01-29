@@ -1,5 +1,0 @@
-<map id="InputHandler::handleInput" name="InputHandler::handleInput">
-<area shape="rect" id="node3" href="$classControllerHandler.html#a79e2adab7291ab5589e907860d046046" title="ControllerHandler::\lhandleInput" alt="" coords="240,5,371,51"/>
-<area shape="rect" id="node5" href="$classControllerHandler.html#a8a0133502559843ef6f8f1984d3856f0" title="ControllerHandler::\lgetKeyStates" alt="" coords="240,74,371,121"/>
-<area shape="rect" id="node7" href="$classInputHandler.html#ae3546fa674d3db49d755b4047503f4e8" title="InputHandler::signalExit" alt="" coords="225,144,385,173"/>
-</map>

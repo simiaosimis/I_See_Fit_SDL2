@@ -1,0 +1,8 @@
+<map id="sdl2engine::ResourceManager&lt; Type &gt;" name="sdl2engine::ResourceManager&lt; Type &gt;">
+<area shape="rect" id="node3" href="$classsdl2engine_1_1ResourceManager.html" title="sdl2engine::ResourceManager\l\&lt; Sprite \&gt;" alt="" coords="356,5,553,51"/>
+<area shape="rect" id="node7" href="$classsdl2engine_1_1ResourceManager.html" title="sdl2engine::ResourceManager\l\&lt; Music \&gt;" alt="" coords="356,74,553,121"/>
+<area shape="rect" id="node11" href="$classsdl2engine_1_1ResourceManager.html" title="sdl2engine::ResourceManager\l\&lt; SoundEffect \&gt;" alt="" coords="356,143,553,190"/>
+<area shape="rect" id="node5" href="$classsdl2engine_1_1SpriteManager.html" title="sdl2engine::SpriteManager" alt="" coords="607,13,783,43"/>
+<area shape="rect" id="node9" href="$classsdl2engine_1_1MusicManager.html" title="sdl2engine::MusicManager" alt="" coords="607,83,783,112"/>
+<area shape="rect" id="node13" href="$classsdl2engine_1_1SFXManager.html" title="sdl2engine::SFXManager" alt="" coords="611,152,779,181"/>
+</map>

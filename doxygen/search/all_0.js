@@ -1,18 +1,20 @@
 var searchData=
 [
   ['add_5fstate',['ADD_STATE',['../Game_8cpp.html#a47ca4f81b749093d7a70c2f9c5da0841',1,'Game.cpp']]],
-  ['addgameobject',['addGameObject',['../classStateGame.html#aff9992eece76c15e061cd86fe2e88619',1,'StateGame']]],
-  ['alpha',['Alpha',['../classSprite.html#a9631817d8e3c9aaf1a7fe70795fb5e6f',1,'Sprite']]],
-  ['animation',['Animation',['../classAnimation.html',1,'Animation'],['../classGStatePlaceholder.html#aa714dd279e37f0e3bff27a453fe2b640',1,'GStatePlaceholder::animation()'],['../classAnimation.html#af43c723abf0f83a1bd71dd83cff7841e',1,'Animation::Animation()']]],
+  ['addgameobject',['addGameObject',['../classsdl2engine_1_1StateGame.html#ab88e41507b6d1bca27120eb947eac572',1,'sdl2engine::StateGame']]],
+  ['alpha',['Alpha',['../classsdl2engine_1_1Sprite.html#a9c1d5dfbfd2286d64a5c99f03a1325f3',1,'sdl2engine::Sprite']]],
+  ['animation',['Animation',['../classsdl2engine_1_1Animation.html',1,'sdl2engine']]],
+  ['animation',['animation',['../classsdl2engine_1_1GStatePlaceholder.html#a48a07559746dc05889f499f232452516',1,'sdl2engine::GStatePlaceholder::animation()'],['../classsdl2engine_1_1Animation.html#ae0239e9c0faa92c7726646b0a6befd67',1,'sdl2engine::Animation::Animation()']]],
   ['animation_2ecpp',['Animation.cpp',['../Animation_8cpp.html',1,'']]],
   ['animation_2eh',['Animation.h',['../Animation_8h.html',1,'']]],
-  ['animationclip',['animationClip',['../classGameObject.html#aedbe7c552382ea0686d020661826c106',1,'GameObject::animationClip()'],['../classGStatePlaceholder.html#a225ddc8653cf385d180689ce427961e9',1,'GStatePlaceholder::animationClip()']]],
+  ['animationclip',['animationClip',['../classsdl2engine_1_1GameObject.html#a41b34b9ff09b80588d20cc626a45c9e0',1,'sdl2engine::GameObject::animationClip()'],['../classsdl2engine_1_1GStatePlaceholder.html#a8e0a4386f98e9b68ebc75999e97e2e47',1,'sdl2engine::GStatePlaceholder::animationClip()']]],
   ['assert',['ASSERT',['../Assert_8h.html#ab1899199386b1542d1111168ca847e9c',1,'Assert.h']]],
   ['assert_2ecpp',['Assert.cpp',['../Assert_8cpp.html',1,'']]],
   ['assert_2eh',['Assert.h',['../Assert_8h.html',1,'']]],
-  ['audioformattostring',['AudioFormatToString',['../namespacesdl_1_1detail.html#ad8c319bef64d9d9d97ab87bf536ec173',1,'sdl::detail']]],
-  ['audiohandler',['AudioHandler',['../classAudioHandler.html',1,'AudioHandler'],['../classAudioHandler.html#a605b5c91270eb7cad7a0ac60b354b56b',1,'AudioHandler::AudioHandler()']]],
+  ['audioformattostring',['AudioFormatToString',['../namespacesdl2engine_1_1sdl_1_1detail.html#ae08a55cf264053a7a7fe05430feff49c',1,'sdl2engine::sdl::detail']]],
+  ['audiohandler',['AudioHandler',['../classsdl2engine_1_1AudioHandler.html',1,'sdl2engine']]],
+  ['audiohandler',['AudioHandler',['../classsdl2engine_1_1AudioHandler.html#a02d38e1dab146db2ac602b436806be68',1,'sdl2engine::AudioHandler']]],
   ['audiohandler_2ecpp',['AudioHandler.cpp',['../AudioHandler_8cpp.html',1,'']]],
   ['audiohandler_2eh',['AudioHandler.h',['../AudioHandler_8h.html',1,'']]],
-  ['axes',['axes',['../namespacecontrollerMap.html#aade78d90d7679ba903121afd7fcceabe',1,'controllerMap']]]
+  ['axes',['axes',['../namespacesdl2engine_1_1controllerMap.html#a175550e7f2708486649ca6f0f49b35d4',1,'sdl2engine::controllerMap']]]
 ];

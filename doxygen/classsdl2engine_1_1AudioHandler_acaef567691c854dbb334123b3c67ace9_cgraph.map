@@ -1,0 +1,6 @@
+<map id="sdl2engine::AudioHandler::SetMusic" name="sdl2engine::AudioHandler::SetMusic">
+<area shape="rect" id="node3" href="$classsdl2engine_1_1Game.html#a850158cf352e293eb49a4910c6f5cc21" title="Singleton implementation for Game. " alt="" coords="229,5,413,35"/>
+<area shape="rect" id="node5" href="$classsdl2engine_1_1Game.html#a2c968c813156606ffb8210a2a5f2e376" title="sdl2engine::Game::Resource" alt="" coords="227,59,416,88"/>
+<area shape="rect" id="node7" href="$classsdl2engine_1_1ResourceHandler.html#a3746df47839483d13a33d480668fe2c7" title="sdl2engine::ResourceHandler\l::music" alt="" coords="225,111,417,158"/>
+<area shape="rect" id="node9" href="$classsdl2engine_1_1ResourceManager.html#a479490d26a47e06e0f58c087db3b362b" title="sdl2engine::ResourceManager::get" alt="" coords="467,120,691,149"/>
+</map>

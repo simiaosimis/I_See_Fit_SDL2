@@ -1,5 +1,0 @@
-<map id="Game::GetRenderer" name="Game::GetRenderer">
-<area shape="rect" id="node3" href="$classSprite.html#afefe077c09cca7bcfc06d006763a3a41" title="Renders the sprite. " alt="" coords="192,44,299,73"/>
-<area shape="rect" id="node5" href="$classGStatePlaceholder.html#ad48aea57e922a0f83dc140f6e9a1078b" title="GStatePlaceholder::\lrender" alt="" coords="347,5,485,51"/>
-<area shape="rect" id="node7" href="$classText.html#a61dff362532c385dbc0650b397138635" title="Text::render" alt="" coords="371,75,461,104"/>
-</map>

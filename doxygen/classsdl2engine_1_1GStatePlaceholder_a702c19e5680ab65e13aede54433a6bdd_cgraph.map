@@ -1,0 +1,10 @@
+<map id="sdl2engine::GStatePlaceholder::update" name="sdl2engine::GStatePlaceholder::update">
+<area shape="rect" id="node3" href="$classsdl2engine_1_1Game.html#a850158cf352e293eb49a4910c6f5cc21" title="Singleton implementation for Game. " alt="" coords="495,121,679,151"/>
+<area shape="rect" id="node5" href="$classsdl2engine_1_1Game.html#ad4c17e9aa5b64755d6ec67c72a2cde3a" title="sdl2engine::Game::Input" alt="" coords="269,13,432,43"/>
+<area shape="rect" id="node9" href="$classsdl2engine_1_1Game.html#a4ef2d50b6612ce02f234e3623e44e369" title="sdl2engine::Game::GetAudio\lHandler" alt="" coords="256,117,445,163"/>
+<area shape="rect" id="node11" href="$classsdl2engine_1_1AudioHandler.html#ac49bfc265a94d2730b2b0ff17bc032bf" title="Plays a sound effect once. " alt="" coords="265,186,436,233"/>
+<area shape="rect" id="node14" href="$classsdl2engine_1_1Animation.html#af084f69f04ef384b602f8871e6795f6c" title="Updates the animation clip. " alt="" coords="276,255,425,302"/>
+<area shape="rect" id="node7" href="$classsdl2engine_1_1InputHandler.html#ac2784925244b824cf784328b154aaefc" title="sdl2engine::InputHandler\l::getKeyStates" alt="" coords="504,5,669,51"/>
+<area shape="rect" id="node16" href="$classsdl2engine_1_1Animation.html#a5c5909786285dea66b0f52983195b380" title="sdl2engine::Animation\l::CurrentFrame" alt="" coords="512,221,661,267"/>
+<area shape="rect" id="node18" href="$classsdl2engine_1_1Animation.html#a91d73f4b382dd493ebdd3faa3a093010" title="Updates the clip to a new position. " alt="" coords="512,290,661,337"/>
+</map>

@@ -12,8 +12,8 @@
   <line>Command: /home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</line>
 </preamble>
 
-<pid>15164</pid>
-<ppid>15141</ppid>
+<pid>15141</pid>
+<ppid>15118</ppid>
 <tool>memcheck</tool>
 
 <args>
@@ -32,303 +32,464 @@
 
 <status>
   <state>RUNNING</state>
-  <time>00:00:00:00.125 </time>
+  <time>00:00:00:00.108 </time>
 </status>
+
+<error>
+  <unique>0x2</unique>
+  <tid>1</tid>
+  <kind>UninitCondition</kind>
+  <what>Conditional jump or move depends on uninitialised value(s)</what>
+  <stack>
+    <frame>
+      <ip>0x4EE14DB</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
+    </frame>
+    <frame>
+      <ip>0x4E90BB1</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
+    </frame>
+    <frame>
+      <ip>0x4E89C3E</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
+    </frame>
+    <frame>
+      <ip>0x43D6F3</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::Renderer::Renderer(SDL_Window*, unsigned int)</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/graphics</dir>
+      <file>Renderer.cpp</file>
+      <line>9</line>
+    </frame>
+    <frame>
+      <ip>0x43B335</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::Window::Create()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/graphics</dir>
+      <file>Window.cpp</file>
+      <line>45</line>
+    </frame>
+    <frame>
+      <ip>0x43B0D8</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::Window::Window()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/graphics</dir>
+      <file>Window.cpp</file>
+      <line>12</line>
+    </frame>
+    <frame>
+      <ip>0x428CE0</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::Game::Game()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/engine</dir>
+      <file>Game.cpp</file>
+      <line>32</line>
+    </frame>
+    <frame>
+      <ip>0x428AA0</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::Game::Instance()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/engine</dir>
+      <file>Game.cpp</file>
+      <line>21</line>
+    </frame>
+    <frame>
+      <ip>0x427756</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>main</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src</dir>
+      <file>main.cpp</file>
+      <line>20</line>
+    </frame>
+  </stack>
+  <auxwhat>Uninitialised value was created by a stack allocation</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x4E8FC00</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x3</unique>
+  <tid>1</tid>
+  <kind>UninitCondition</kind>
+  <what>Conditional jump or move depends on uninitialised value(s)</what>
+  <stack>
+    <frame>
+      <ip>0x4EE1543</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
+    </frame>
+    <frame>
+      <ip>0x4E90BB1</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
+    </frame>
+    <frame>
+      <ip>0x4E89C3E</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
+    </frame>
+    <frame>
+      <ip>0x43D6F3</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::Renderer::Renderer(SDL_Window*, unsigned int)</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/graphics</dir>
+      <file>Renderer.cpp</file>
+      <line>9</line>
+    </frame>
+    <frame>
+      <ip>0x43B335</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::Window::Create()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/graphics</dir>
+      <file>Window.cpp</file>
+      <line>45</line>
+    </frame>
+    <frame>
+      <ip>0x43B0D8</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::Window::Window()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/graphics</dir>
+      <file>Window.cpp</file>
+      <line>12</line>
+    </frame>
+    <frame>
+      <ip>0x428CE0</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::Game::Game()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/engine</dir>
+      <file>Game.cpp</file>
+      <line>32</line>
+    </frame>
+    <frame>
+      <ip>0x428AA0</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::Game::Instance()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/engine</dir>
+      <file>Game.cpp</file>
+      <line>21</line>
+    </frame>
+    <frame>
+      <ip>0x427756</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>main</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src</dir>
+      <file>main.cpp</file>
+      <line>20</line>
+    </frame>
+  </stack>
+  <auxwhat>Uninitialised value was created by a stack allocation</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x4E8FC00</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x4</unique>
+  <tid>1</tid>
+  <kind>UninitCondition</kind>
+  <what>Conditional jump or move depends on uninitialised value(s)</what>
+  <stack>
+    <frame>
+      <ip>0x5F321A1</ip>
+      <obj>/lib/x86_64-linux-gnu/libc-2.15.so</obj>
+      <fn>vfprintf</fn>
+      <dir>/build/buildd/eglibc-2.15/stdio-common</dir>
+      <file>vfprintf.c</file>
+      <line>1629</line>
+    </frame>
+    <frame>
+      <ip>0x5FF132F</ip>
+      <obj>/lib/x86_64-linux-gnu/libc-2.15.so</obj>
+      <fn>__vsnprintf_chk</fn>
+      <dir>/build/buildd/eglibc-2.15/debug</dir>
+      <file>vsnprintf_chk.c</file>
+      <line>65</line>
+    </frame>
+    <frame>
+      <ip>0x4EA9271</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
+    </frame>
+    <frame>
+      <ip>0x4E4D708</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
+    </frame>
+    <frame>
+      <ip>0x4E4D833</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
+    </frame>
+    <frame>
+      <ip>0x4E90BB1</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
+    </frame>
+    <frame>
+      <ip>0x4E89C3E</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
+    </frame>
+    <frame>
+      <ip>0x43D6F3</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::Renderer::Renderer(SDL_Window*, unsigned int)</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/graphics</dir>
+      <file>Renderer.cpp</file>
+      <line>9</line>
+    </frame>
+    <frame>
+      <ip>0x43B335</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::Window::Create()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/graphics</dir>
+      <file>Window.cpp</file>
+      <line>45</line>
+    </frame>
+    <frame>
+      <ip>0x43B0D8</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::Window::Window()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/graphics</dir>
+      <file>Window.cpp</file>
+      <line>12</line>
+    </frame>
+    <frame>
+      <ip>0x428CE0</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::Game::Game()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/engine</dir>
+      <file>Game.cpp</file>
+      <line>32</line>
+    </frame>
+    <frame>
+      <ip>0x428AA0</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::Game::Instance()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/engine</dir>
+      <file>Game.cpp</file>
+      <line>21</line>
+    </frame>
+  </stack>
+  <auxwhat>Uninitialised value was created by a stack allocation</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x4E8FC00</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x5</unique>
+  <tid>1</tid>
+  <kind>UninitValue</kind>
+  <what>Use of uninitialised value of size 8</what>
+  <stack>
+    <frame>
+      <ip>0x5F3049B</ip>
+      <obj>/lib/x86_64-linux-gnu/libc-2.15.so</obj>
+      <fn>_itoa_word</fn>
+      <dir>/build/buildd/eglibc-2.15/stdio-common</dir>
+      <file>_itoa.c</file>
+      <line>195</line>
+    </frame>
+    <frame>
+      <ip>0x5F324E7</ip>
+      <obj>/lib/x86_64-linux-gnu/libc-2.15.so</obj>
+      <fn>vfprintf</fn>
+      <dir>/build/buildd/eglibc-2.15/stdio-common</dir>
+      <file>vfprintf.c</file>
+      <line>1629</line>
+    </frame>
+    <frame>
+      <ip>0x5FF132F</ip>
+      <obj>/lib/x86_64-linux-gnu/libc-2.15.so</obj>
+      <fn>__vsnprintf_chk</fn>
+      <dir>/build/buildd/eglibc-2.15/debug</dir>
+      <file>vsnprintf_chk.c</file>
+      <line>65</line>
+    </frame>
+    <frame>
+      <ip>0x4EA9271</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
+    </frame>
+    <frame>
+      <ip>0x4E4D708</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
+    </frame>
+    <frame>
+      <ip>0x4E4D833</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
+    </frame>
+    <frame>
+      <ip>0x4E90BB1</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
+    </frame>
+    <frame>
+      <ip>0x4E89C3E</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
+    </frame>
+    <frame>
+      <ip>0x43D6F3</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::Renderer::Renderer(SDL_Window*, unsigned int)</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/graphics</dir>
+      <file>Renderer.cpp</file>
+      <line>9</line>
+    </frame>
+    <frame>
+      <ip>0x43B335</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::Window::Create()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/graphics</dir>
+      <file>Window.cpp</file>
+      <line>45</line>
+    </frame>
+    <frame>
+      <ip>0x43B0D8</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::Window::Window()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/graphics</dir>
+      <file>Window.cpp</file>
+      <line>12</line>
+    </frame>
+    <frame>
+      <ip>0x428CE0</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::Game::Game()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/engine</dir>
+      <file>Game.cpp</file>
+      <line>32</line>
+    </frame>
+  </stack>
+  <auxwhat>Uninitialised value was created by a stack allocation</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x4E8FC00</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x6</unique>
+  <tid>1</tid>
+  <kind>UninitCondition</kind>
+  <what>Conditional jump or move depends on uninitialised value(s)</what>
+  <stack>
+    <frame>
+      <ip>0x5F304A5</ip>
+      <obj>/lib/x86_64-linux-gnu/libc-2.15.so</obj>
+      <fn>_itoa_word</fn>
+      <dir>/build/buildd/eglibc-2.15/stdio-common</dir>
+      <file>_itoa.c</file>
+      <line>195</line>
+    </frame>
+    <frame>
+      <ip>0x5F324E7</ip>
+      <obj>/lib/x86_64-linux-gnu/libc-2.15.so</obj>
+      <fn>vfprintf</fn>
+      <dir>/build/buildd/eglibc-2.15/stdio-common</dir>
+      <file>vfprintf.c</file>
+      <line>1629</line>
+    </frame>
+    <frame>
+      <ip>0x5FF132F</ip>
+      <obj>/lib/x86_64-linux-gnu/libc-2.15.so</obj>
+      <fn>__vsnprintf_chk</fn>
+      <dir>/build/buildd/eglibc-2.15/debug</dir>
+      <file>vsnprintf_chk.c</file>
+      <line>65</line>
+    </frame>
+    <frame>
+      <ip>0x4EA9271</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
+    </frame>
+    <frame>
+      <ip>0x4E4D708</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
+    </frame>
+    <frame>
+      <ip>0x4E4D833</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
+    </frame>
+    <frame>
+      <ip>0x4E90BB1</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
+    </frame>
+    <frame>
+      <ip>0x4E89C3E</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
+    </frame>
+    <frame>
+      <ip>0x43D6F3</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::Renderer::Renderer(SDL_Window*, unsigned int)</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/graphics</dir>
+      <file>Renderer.cpp</file>
+      <line>9</line>
+    </frame>
+    <frame>
+      <ip>0x43B335</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::Window::Create()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/graphics</dir>
+      <file>Window.cpp</file>
+      <line>45</line>
+    </frame>
+    <frame>
+      <ip>0x43B0D8</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::Window::Window()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/graphics</dir>
+      <file>Window.cpp</file>
+      <line>12</line>
+    </frame>
+    <frame>
+      <ip>0x428CE0</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::Game::Game()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/engine</dir>
+      <file>Game.cpp</file>
+      <line>32</line>
+    </frame>
+  </stack>
+  <auxwhat>Uninitialised value was created by a stack allocation</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x4E8FC00</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
+    </frame>
+  </stack>
+</error>
 
 
 <status>
   <state>FINISHED</state>
-  <time>00:00:00:03.134 </time>
+  <time>00:00:00:06.104 </time>
 </status>
 
-<error>
-  <unique>0x18</unique>
-  <tid>1</tid>
-  <kind>Leak_PossiblyLost</kind>
-  <xwhat>
-    <text>66 bytes in 1 blocks are possibly lost in loss record 23 of 46</text>
-    <leakedbytes>66</leakedbytes>
-    <leakedblocks>1</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4C2B1C7</ip>
-      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>operator new(unsigned long)</fn>
-    </frame>
-    <frame>
-      <ip>0x5A85138</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.20</obj>
-      <fn>std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator&lt;char&gt; const&amp;)</fn>
-    </frame>
-    <frame>
-      <ip>0x5A86AB4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.20</obj>
-      <fn>char* std::string::_S_construct&lt;char const*&gt;(char const*, char const*, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag)</fn>
-    </frame>
-    <frame>
-      <ip>0x5A86EE5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.20</obj>
-      <fn>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::basic_string(char const*, std::allocator&lt;char&gt; const&amp;)</fn>
-    </frame>
-    <frame>
-      <ip>0x5A7A9B2</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.20</obj>
-      <fn>std::__throw_logic_error(char const*)</fn>
-    </frame>
-    <frame>
-      <ip>0x5A86AA4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.20</obj>
-      <fn>char* std::string::_S_construct&lt;char const*&gt;(char const*, char const*, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag)</fn>
-    </frame>
-    <frame>
-      <ip>0x5A86EE5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.20</obj>
-      <fn>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::basic_string(char const*, std::allocator&lt;char&gt; const&amp;)</fn>
-    </frame>
-    <frame>
-      <ip>0x42DC24</ip>
-      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
-      <fn>sdl::detail::SdlVideoDrivers()</fn>
-      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/core</dir>
-      <file>SdlInfo.cpp</file>
-      <line>33</line>
-    </frame>
-    <frame>
-      <ip>0x42C8F8</ip>
-      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
-      <fn>sdl::Initialize()</fn>
-      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/core</dir>
-      <file>SdlSystems.cpp</file>
-      <line>200</line>
-    </frame>
-    <frame>
-      <ip>0x423B20</ip>
-      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
-      <fn>main</fn>
-      <dir>/home/travis/build/CaioIcy/sdl2-engine/src</dir>
-      <file>main.cpp</file>
-      <line>16</line>
-    </frame>
-  </stack>
-</error>
-
-<error>
-  <unique>0x1d</unique>
-  <tid>1</tid>
-  <kind>Leak_PossiblyLost</kind>
-  <xwhat>
-    <text>144 bytes in 1 blocks are possibly lost in loss record 28 of 46</text>
-    <leakedbytes>144</leakedbytes>
-    <leakedblocks>1</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4C2B6CD</ip>
-      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>malloc</fn>
-    </frame>
-    <frame>
-      <ip>0x5A22E42</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.20</obj>
-      <fn>__cxa_allocate_exception</fn>
-    </frame>
-    <frame>
-      <ip>0x5A7A992</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.20</obj>
-      <fn>std::__throw_logic_error(char const*)</fn>
-    </frame>
-    <frame>
-      <ip>0x5A86AA4</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.20</obj>
-      <fn>char* std::string::_S_construct&lt;char const*&gt;(char const*, char const*, std::allocator&lt;char&gt; const&amp;, std::forward_iterator_tag)</fn>
-    </frame>
-    <frame>
-      <ip>0x5A86EE5</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.20</obj>
-      <fn>std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::basic_string(char const*, std::allocator&lt;char&gt; const&amp;)</fn>
-    </frame>
-    <frame>
-      <ip>0x42DC24</ip>
-      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
-      <fn>sdl::detail::SdlVideoDrivers()</fn>
-      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/core</dir>
-      <file>SdlInfo.cpp</file>
-      <line>33</line>
-    </frame>
-    <frame>
-      <ip>0x42C8F8</ip>
-      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
-      <fn>sdl::Initialize()</fn>
-      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/core</dir>
-      <file>SdlSystems.cpp</file>
-      <line>200</line>
-    </frame>
-    <frame>
-      <ip>0x423B20</ip>
-      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
-      <fn>main</fn>
-      <dir>/home/travis/build/CaioIcy/sdl2-engine/src</dir>
-      <file>main.cpp</file>
-      <line>16</line>
-    </frame>
-  </stack>
-</error>
-
-<error>
-  <unique>0x20</unique>
-  <tid>1</tid>
-  <kind>Leak_PossiblyLost</kind>
-  <xwhat>
-    <text>288 bytes in 1 blocks are possibly lost in loss record 31 of 46</text>
-    <leakedbytes>288</leakedbytes>
-    <leakedblocks>1</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4C29DB4</ip>
-      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>calloc</fn>
-    </frame>
-    <frame>
-      <ip>0x4012074</ip>
-      <obj>/lib/x86_64-linux-gnu/ld-2.15.so</obj>
-      <fn>_dl_allocate_tls</fn>
-      <dir>/build/buildd/eglibc-2.15/elf</dir>
-      <file>dl-tls.c</file>
-      <line>297</line>
-    </frame>
-    <frame>
-      <ip>0x5138ABC</ip>
-      <obj>/lib/x86_64-linux-gnu/libpthread-2.15.so</obj>
-      <fn>pthread_create@@GLIBC_2.2.5</fn>
-      <dir>/build/buildd/eglibc-2.15/nptl</dir>
-      <file>allocatestack.c</file>
-      <line>571</line>
-    </frame>
-    <frame>
-      <ip>0x4EF2911</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
-    </frame>
-    <frame>
-      <ip>0x4EA9860</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
-    </frame>
-    <frame>
-      <ip>0x4EA9E0F</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
-    </frame>
-    <frame>
-      <ip>0x4E4C8FC</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
-    </frame>
-    <frame>
-      <ip>0x42AC8E</ip>
-      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
-      <fn>(anonymous namespace)::OpenSdl()</fn>
-      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/core</dir>
-      <file>SdlSystems.cpp</file>
-      <line>50</line>
-    </frame>
-    <frame>
-      <ip>0x42C897</ip>
-      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
-      <fn>sdl::Initialize()</fn>
-      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/core</dir>
-      <file>SdlSystems.cpp</file>
-      <line>195</line>
-    </frame>
-    <frame>
-      <ip>0x423B20</ip>
-      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
-      <fn>main</fn>
-      <dir>/home/travis/build/CaioIcy/sdl2-engine/src</dir>
-      <file>main.cpp</file>
-      <line>16</line>
-    </frame>
-  </stack>
-</error>
-
-<error>
-  <unique>0x21</unique>
-  <tid>1</tid>
-  <kind>Leak_PossiblyLost</kind>
-  <xwhat>
-    <text>288 bytes in 1 blocks are possibly lost in loss record 32 of 46</text>
-    <leakedbytes>288</leakedbytes>
-    <leakedblocks>1</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4C29DB4</ip>
-      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>calloc</fn>
-    </frame>
-    <frame>
-      <ip>0x4012074</ip>
-      <obj>/lib/x86_64-linux-gnu/ld-2.15.so</obj>
-      <fn>_dl_allocate_tls</fn>
-      <dir>/build/buildd/eglibc-2.15/elf</dir>
-      <file>dl-tls.c</file>
-      <line>297</line>
-    </frame>
-    <frame>
-      <ip>0x5138ABC</ip>
-      <obj>/lib/x86_64-linux-gnu/libpthread-2.15.so</obj>
-      <fn>pthread_create@@GLIBC_2.2.5</fn>
-      <dir>/build/buildd/eglibc-2.15/nptl</dir>
-      <file>allocatestack.c</file>
-      <line>571</line>
-    </frame>
-    <frame>
-      <ip>0x4EF2911</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
-    </frame>
-    <frame>
-      <ip>0x4EA9860</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
-    </frame>
-    <frame>
-      <ip>0x4E4FADC</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
-    </frame>
-    <frame>
-      <ip>0x4E4FF23</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
-    </frame>
-    <frame>
-      <ip>0x55794AB</ip>
-      <obj>/usr/lib/x86_64-linux-gnu/libSDL2_mixer-2.0.so.0.0.0</obj>
-      <fn>Mix_OpenAudio</fn>
-    </frame>
-    <frame>
-      <ip>0x42C05D</ip>
-      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
-      <fn>(anonymous namespace)::OpenSdlMixer()</fn>
-      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/core</dir>
-      <file>SdlSystems.cpp</file>
-      <line>156</line>
-    </frame>
-    <frame>
-      <ip>0x42C8D1</ip>
-      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
-      <fn>sdl::Initialize()</fn>
-      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/core</dir>
-      <file>SdlSystems.cpp</file>
-      <line>197</line>
-    </frame>
-    <frame>
-      <ip>0x423B20</ip>
-      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
-      <fn>main</fn>
-      <dir>/home/travis/build/CaioIcy/sdl2-engine/src</dir>
-      <file>main.cpp</file>
-      <line>16</line>
-    </frame>
-  </stack>
-</error>
-
 <errorcounts>
+  <pair>
+    <count>1</count>
+    <unique>0x6</unique>
+  </pair>
+  <pair>
+    <count>1</count>
+    <unique>0x5</unique>
+  </pair>
+  <pair>
+    <count>1</count>
+    <unique>0x4</unique>
+  </pair>
+  <pair>
+    <count>1</count>
+    <unique>0x3</unique>
+  </pair>
+  <pair>
+    <count>1</count>
+    <unique>0x2</unique>
+  </pair>
 </errorcounts>
 
 <suppcounts>

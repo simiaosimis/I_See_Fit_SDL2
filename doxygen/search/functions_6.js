@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['handleinput',['handleInput',['../classControllerHandler.html#a79e2adab7291ab5589e907860d046046',1,'ControllerHandler::handleInput()'],['../classInputHandler.html#a820f483265aa3f6da39b9d93c1311966',1,'InputHandler::handleInput()']]],
-  ['height',['Height',['../classSprite.html#ac86efdb3f7d34e65daef159ea95fdea9',1,'Sprite']]]
+  ['handleinput',['handleInput',['../classsdl2engine_1_1ControllerHandler.html#a648f51a30e58aed36f0f1c877ce57b2d',1,'sdl2engine::ControllerHandler::handleInput()'],['../classsdl2engine_1_1InputHandler.html#aa5d2981ffdf38c430eea2780557b5525',1,'sdl2engine::InputHandler::handleInput()']]],
+  ['height',['Height',['../classsdl2engine_1_1Sprite.html#a57e7134a2f8e231fe0fbbe716349149e',1,'sdl2engine::Sprite']]]
 ];

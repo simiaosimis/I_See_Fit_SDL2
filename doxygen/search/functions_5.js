@@ -1,14 +1,14 @@
 var searchData=
 [
-  ['game',['Game',['../classGame.html#ad59df6562a58a614fda24622d3715b65',1,'Game']]],
-  ['gameobject',['GameObject',['../classGameObject.html#aaeb95e7f576dd73ebcceed18b7a8cce1',1,'GameObject::GameObject(const double x_, const double y_, const std::string &amp;path_)'],['../classGameObject.html#a128ddbbeaecfc3d43758d9b4a94bb853',1,'GameObject::GameObject(const double x_, const double y_)']]],
-  ['get',['get',['../classResourceManager.html#a77ca1b172f5c8bd12e0caa7fb2f8a0ee',1,'ResourceManager']]],
-  ['getanimationclip',['getAnimationClip',['../classGameObject.html#a4709d144b70bd8aad9222c4377628296',1,'GameObject']]],
-  ['getaudiohandler',['GetAudioHandler',['../classGame.html#a5ec4f7e6a350921fb023c62e3fa00494',1,'Game']]],
-  ['getboundingbox',['getBoundingBox',['../classGameObject.html#a7f52030c79f47d3e7ee57424e2b818b9',1,'GameObject']]],
-  ['getheight',['getHeight',['../classGameObject.html#abdf40e2aaa71b67120eec953a1e1ca02',1,'GameObject']]],
-  ['getkeystates',['getKeyStates',['../classControllerHandler.html#a8a0133502559843ef6f8f1984d3856f0',1,'ControllerHandler::getKeyStates()'],['../classInputHandler.html#a35db020395da61dd5034a7d2e56d3013',1,'InputHandler::getKeyStates()']]],
-  ['getrenderer',['GetRenderer',['../classGame.html#a941f014b7e939ffe63a07343ad72c051',1,'Game::GetRenderer()'],['../classWindow.html#aa1261977d575bd4c6bef796196607be3',1,'Window::GetRenderer()']]],
-  ['getwidth',['getWidth',['../classGameObject.html#a7394724b15f0adae7938d27c749bda67',1,'GameObject']]],
-  ['gstateplaceholder',['GStatePlaceholder',['../classGStatePlaceholder.html#adfbf36156052798e8f7907c212aa84c9',1,'GStatePlaceholder']]]
+  ['game',['Game',['../classsdl2engine_1_1Game.html#a5520fab660d101c624424a19448409d7',1,'sdl2engine::Game']]],
+  ['gameobject',['GameObject',['../classsdl2engine_1_1GameObject.html#a345ea4ffcc8eb4b2133dd4e48571bc1f',1,'sdl2engine::GameObject::GameObject(const double x_, const double y_, const std::string &amp;path_)'],['../classsdl2engine_1_1GameObject.html#a4bc695eadf208d72e7d52e91d1468605',1,'sdl2engine::GameObject::GameObject(const double x_, const double y_)']]],
+  ['get',['get',['../classsdl2engine_1_1ResourceManager.html#a479490d26a47e06e0f58c087db3b362b',1,'sdl2engine::ResourceManager']]],
+  ['getanimationclip',['getAnimationClip',['../classsdl2engine_1_1GameObject.html#a545e6fe921a9507dcddaf192bbd56623',1,'sdl2engine::GameObject']]],
+  ['getaudiohandler',['GetAudioHandler',['../classsdl2engine_1_1Game.html#a4ef2d50b6612ce02f234e3623e44e369',1,'sdl2engine::Game']]],
+  ['getboundingbox',['getBoundingBox',['../classsdl2engine_1_1GameObject.html#aa7197c2216c38cbcbd4f084f06586d3b',1,'sdl2engine::GameObject']]],
+  ['getheight',['getHeight',['../classsdl2engine_1_1GameObject.html#aac8db512d02772342a60fd69821c5804',1,'sdl2engine::GameObject']]],
+  ['getkeystates',['getKeyStates',['../classsdl2engine_1_1ControllerHandler.html#a4a7bcc412b8e6399299f67e35c93c89e',1,'sdl2engine::ControllerHandler::getKeyStates()'],['../classsdl2engine_1_1InputHandler.html#ac2784925244b824cf784328b154aaefc',1,'sdl2engine::InputHandler::getKeyStates()']]],
+  ['getrenderer',['GetRenderer',['../classsdl2engine_1_1Game.html#a536e6f24400e94600452544b34e2d839',1,'sdl2engine::Game::GetRenderer()'],['../classsdl2engine_1_1Window.html#ad37ec5bd73b7688c8b3bbd65bd62b560',1,'sdl2engine::Window::GetRenderer()']]],
+  ['getwidth',['getWidth',['../classsdl2engine_1_1GameObject.html#a82cb6d5d6ba68bbe8534ee398fca792f',1,'sdl2engine::GameObject']]],
+  ['gstateplaceholder',['GStatePlaceholder',['../classsdl2engine_1_1GStatePlaceholder.html#a940f49d4da5f1b282271d1136d2118f9',1,'sdl2engine::GStatePlaceholder']]]
 ];

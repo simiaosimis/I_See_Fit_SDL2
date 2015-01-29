@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['gamekeys',['GameKeys',['../InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5e',1,'InputKeys.h']]],
-  ['gstates',['GStates',['../classGame.html#a738b70d48686f5774e6f5882bd871256',1,'Game']]]
+  ['gamekeys',['GameKeys',['../namespacesdl2engine.html#a92e23178a19914e86fa4f7640dcde170',1,'sdl2engine']]],
+  ['gstates',['GStates',['../classsdl2engine_1_1Game.html#aa128362d1818f4fc68e92150c07c567f',1,'sdl2engine::Game']]]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['typemap',['typeMap',['../classResourceManager.html#ae808ee3f57e0739604d786e317a8a0e7',1,'ResourceManager']]],
-  ['typeptr',['typePtr',['../classResourceManager.html#aedac075bd3f088a45bcd17da3fd6f4f1',1,'ResourceManager']]]
+  ['typemap',['typeMap',['../classsdl2engine_1_1ResourceManager.html#ace49df20d5ac0df28222457ca3ef9049',1,'sdl2engine::ResourceManager']]],
+  ['typeptr',['typePtr',['../classsdl2engine_1_1ResourceManager.html#a239417938f9eff198367ba9b961d519c',1,'sdl2engine::ResourceManager']]]
 ];

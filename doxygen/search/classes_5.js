@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['music',['Music',['../classMusic.html',1,'']]],
-  ['musicmanager',['MusicManager',['../classMusicManager.html',1,'']]]
+  ['music',['Music',['../classsdl2engine_1_1Music.html',1,'sdl2engine']]],
+  ['musicmanager',['MusicManager',['../classsdl2engine_1_1MusicManager.html',1,'sdl2engine']]]
 ];

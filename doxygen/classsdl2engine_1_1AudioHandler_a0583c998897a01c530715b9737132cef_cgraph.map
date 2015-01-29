@@ -1,0 +1,5 @@
+<map id="sdl2engine::AudioHandler::ChannelDone" name="sdl2engine::AudioHandler::ChannelDone">
+<area shape="rect" id="node3" href="$classsdl2engine_1_1Game.html#a850158cf352e293eb49a4910c6f5cc21" title="Singleton implementation for Game. " alt="" coords="227,5,411,35"/>
+<area shape="rect" id="node5" href="$classsdl2engine_1_1Game.html#a4ef2d50b6612ce02f234e3623e44e369" title="sdl2engine::Game::GetAudio\lHandler" alt="" coords="224,58,413,105"/>
+<area shape="rect" id="node7" href="$classsdl2engine_1_1AudioHandler.html#ae2a8d7fa3d5d63aeec68933413556f7b" title="Removes any sound effects from a given channel. " alt="" coords="233,127,404,174"/>
+</map>

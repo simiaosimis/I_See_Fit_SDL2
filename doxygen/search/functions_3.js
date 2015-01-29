@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['equaldisplaymodes',['EqualDisplayModes',['../namespacesdl_1_1detail.html#a870a2fd215b532cffa025cc1ce1e2b29',1,'sdl::detail']]]
+  ['equaldisplaymodes',['EqualDisplayModes',['../namespacesdl2engine_1_1sdl_1_1detail.html#a623f4d5fe0026d3700c982868751621d',1,'sdl2engine::sdl::detail']]]
 ];

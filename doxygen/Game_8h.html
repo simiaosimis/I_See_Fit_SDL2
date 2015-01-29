@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v30</span>
+   &#160;<span id="projectnumber">v31</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -88,7 +88,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Data Structures</a>  </div>
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
 <div class="title">Game.h File Reference</div>  </div>
 </div><!--header-->
@@ -107,7 +108,7 @@ Include dependency graph for Game.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="Game_8h__incl.png" border="0" usemap="#Game_8h" alt=""/></div>
 <map name="Game_8h" id="Game_8h">
-<area shape="rect" id="node11" href="Window_8h.html" title="graphics/Window.h" alt="" coords="52,160,185,189"/><area shape="rect" id="node19" href="StateGame_8h.html" title="engine/StateGame.h" alt="" coords="782,83,924,112"/><area shape="rect" id="node31" href="AudioHandler_8h.html" title="audio/AudioHandler.h" alt="" coords="1556,160,1702,189"/><area shape="rect" id="node45" href="InputHandler_8h.html" title="input/InputHandler.h" alt="" coords="350,83,489,112"/><area shape="rect" id="node57" href="ResourceHandler_8h.html" title="engine/ResourceHandler.h" alt="" coords="1038,83,1214,112"/><area shape="rect" id="node16" href="Renderer_8h.html" title="graphics/Renderer.h" alt="" coords="22,237,161,267"/><area shape="rect" id="node23" href="GameObject_8h.html" title="engine/GameObject.h" alt="" coords="780,160,926,189"/><area shape="rect" id="node27" href="Sprite_8h.html" title="graphics/Sprite.h" alt="" coords="780,237,900,267"/><area shape="rect" id="node37" href="Music_8h.html" title="audio/Music.h" alt="" coords="1481,237,1582,267"/><area shape="rect" id="node41" href="SoundEffect_8h.html" title="audio/SoundEffect.h" alt="" coords="1318,237,1457,267"/><area shape="rect" id="node50" href="InputKeys_8h.html" title="input/InputKeys.h" alt="" coords="286,237,409,267"/><area shape="rect" id="node53" href="ControllerHandler_8h.html" title="input/ControllerHandler.h" alt="" coords="337,160,502,189"/><area shape="rect" id="node59" href="SpriteManager_8h.html" title="graphics/SpriteManager.h" alt="" coords="950,160,1121,189"/><area shape="rect" id="node74" href="MusicManager_8h.html" title="audio/MusicManager.h" alt="" coords="1313,160,1465,189"/><area shape="rect" id="node79" href="SFXManager_8h.html" title="audio/SFXManager.h" alt="" coords="1145,160,1289,189"/><area shape="rect" id="node62" href="ResourceManager_8h.html" title="core/ResourceManager.h" alt="" coords="924,237,1092,267"/><area shape="rect" id="node67" href="Logger_8h.html" title="util/Logger.h" alt="" coords="858,315,952,344"/><area shape="rect" id="node71" href="Uncopyable_8h.html" title="util/Uncopyable.h" alt="" coords="976,315,1098,344"/></map>
+<area shape="rect" id="node11" href="Window_8h.html" title="graphics/Window.h" alt="" coords="1347,160,1480,189"/><area shape="rect" id="node19" href="StateGame_8h.html" title="engine/StateGame.h" alt="" coords="542,83,683,112"/><area shape="rect" id="node31" href="AudioHandler_8h.html" title="audio/AudioHandler.h" alt="" coords="416,160,563,189"/><area shape="rect" id="node45" href="InputHandler_8h.html" title="input/InputHandler.h" alt="" coords="86,83,224,112"/><area shape="rect" id="node57" href="ResourceHandler_8h.html" title="engine/ResourceHandler.h" alt="" coords="887,83,1063,112"/><area shape="rect" id="node16" href="Renderer_8h.html" title="graphics/Renderer.h" alt="" coords="1450,237,1588,267"/><area shape="rect" id="node23" href="GameObject_8h.html" title="engine/GameObject.h" alt="" coords="587,160,734,189"/><area shape="rect" id="node27" href="Sprite_8h.html" title="graphics/Sprite.h" alt="" coords="1012,237,1132,267"/><area shape="rect" id="node37" href="Music_8h.html" title="audio/Music.h" alt="" coords="583,237,684,267"/><area shape="rect" id="node41" href="SoundEffect_8h.html" title="audio/SoundEffect.h" alt="" coords="420,237,559,267"/><area shape="rect" id="node50" href="InputKeys_8h.html" title="input/InputKeys.h" alt="" coords="20,237,143,267"/><area shape="rect" id="node53" href="ControllerHandler_8h.html" title="input/ControllerHandler.h" alt="" coords="72,160,238,189"/><area shape="rect" id="node59" href="SpriteManager_8h.html" title="graphics/SpriteManager.h" alt="" coords="1152,160,1323,189"/><area shape="rect" id="node72" href="MusicManager_8h.html" title="audio/MusicManager.h" alt="" coords="976,160,1128,189"/><area shape="rect" id="node77" href="SFXManager_8h.html" title="audio/SFXManager.h" alt="" coords="808,160,952,189"/><area shape="rect" id="node62" href="ResourceManager_8h.html" title="core/ResourceManager.h" alt="" coords="1156,237,1324,267"/><area shape="rect" id="node67" href="Logger_8h.html" title="util/Logger.h" alt="" coords="1194,315,1287,344"/></map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
@@ -121,13 +122,18 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html">Game</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1Game.html">sdl2engine::Game</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacesdl2engine"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesdl2engine.html">sdl2engine</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 29 2015 00:45:26 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 29 2015 23:28:55 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

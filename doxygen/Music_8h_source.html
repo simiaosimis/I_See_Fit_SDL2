@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v30</span>
+   &#160;<span id="projectnumber">v31</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -96,32 +96,36 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;SDL2/SDL_mixer.h&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classMusic.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMusic.html">Music</a> {</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span>sdl2engine {</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classMusic.html#a74b0f103642e6736e0dfde793205d10b">Music</a>(<span class="keyword">const</span> std::string&amp; path);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="classMusic.html#a0b4f3b9a018207e0c08003505f1f87fe">~Music</a>();</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        Mix_Music* <a class="code" href="classMusic.html#a3f8c080fadd64daffa7f7ff3b3c3c048">MixMusic</a>();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        std::string <a class="code" href="classMusic.html#af415b9ba212ac3474bc3e19331465c16">Path</a>();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classMusic.html#a0c8ece4a3c4a7a9c9ee6f2624e208719">   32</a></span>&#160;        Mix_Music* <span class="keyword">const</span> <a class="code" href="classMusic.html#a0c8ece4a3c4a7a9c9ee6f2624e208719">m_mix_music</a>; </div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classMusic.html#a6b00f4fca14357f0b976dfeea4f41f2d">   33</a></span>&#160;        <span class="keyword">const</span> std::string <a class="code" href="classMusic.html#a6b00f4fca14357f0b976dfeea4f41f2d">m_path</a>; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;};</div>
-<div class="ttc" id="classMusic_html_a3f8c080fadd64daffa7f7ff3b3c3c048"><div class="ttname"><a href="classMusic.html#a3f8c080fadd64daffa7f7ff3b3c3c048">Music::MixMusic</a></div><div class="ttdeci">Mix_Music * MixMusic()</div><div class="ttdef"><b>Definition:</b> <a href="Music_8cpp_source.html#l00019">Music.cpp:19</a></div></div>
-<div class="ttc" id="classMusic_html_a0c8ece4a3c4a7a9c9ee6f2624e208719"><div class="ttname"><a href="classMusic.html#a0c8ece4a3c4a7a9c9ee6f2624e208719">Music::m_mix_music</a></div><div class="ttdeci">Mix_Music *const m_mix_music</div><div class="ttdef"><b>Definition:</b> <a href="Music_8h_source.html#l00032">Music.h:32</a></div></div>
-<div class="ttc" id="classMusic_html_a0b4f3b9a018207e0c08003505f1f87fe"><div class="ttname"><a href="classMusic.html#a0b4f3b9a018207e0c08003505f1f87fe">Music::~Music</a></div><div class="ttdeci">~Music()</div><div class="ttdoc">The destructor. </div><div class="ttdef"><b>Definition:</b> <a href="Music_8cpp_source.html#l00013">Music.cpp:13</a></div></div>
-<div class="ttc" id="classMusic_html_a6b00f4fca14357f0b976dfeea4f41f2d"><div class="ttname"><a href="classMusic.html#a6b00f4fca14357f0b976dfeea4f41f2d">Music::m_path</a></div><div class="ttdeci">const std::string m_path</div><div class="ttdef"><b>Definition:</b> <a href="Music_8h_source.html#l00033">Music.h:33</a></div></div>
-<div class="ttc" id="classMusic_html_af415b9ba212ac3474bc3e19331465c16"><div class="ttname"><a href="classMusic.html#af415b9ba212ac3474bc3e19331465c16">Music::Path</a></div><div class="ttdeci">std::string Path()</div><div class="ttdef"><b>Definition:</b> <a href="Music_8cpp_source.html#l00023">Music.cpp:23</a></div></div>
-<div class="ttc" id="classMusic_html_a74b0f103642e6736e0dfde793205d10b"><div class="ttname"><a href="classMusic.html#a74b0f103642e6736e0dfde793205d10b">Music::Music</a></div><div class="ttdeci">Music(const std::string &amp;path)</div><div class="ttdoc">The constructor. </div><div class="ttdef"><b>Definition:</b> <a href="Music_8cpp_source.html#l00004">Music.cpp:4</a></div></div>
-<div class="ttc" id="classMusic_html"><div class="ttname"><a href="classMusic.html">Music</a></div><div class="ttdef"><b>Definition:</b> <a href="Music_8h_source.html#l00006">Music.h:6</a></div></div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1Music.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsdl2engine_1_1Music.html">Music</a> {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classsdl2engine_1_1Music.html#a1b1b256630190eac45399779a33e26e0">Music</a>(<span class="keyword">const</span> std::string&amp; path);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="classsdl2engine_1_1Music.html#aef5f8315b399f4467e69a48538d3bb96">~Music</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        Mix_Music* <a class="code" href="classsdl2engine_1_1Music.html#a3f891cfd3e4ab21fd3d85d9ae271fcb8">MixMusic</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        std::string <a class="code" href="classsdl2engine_1_1Music.html#a650d96e093e06efcc9f572df26108e40">Path</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1Music.html#a2b60307989e9d7d34442e4dbcc3ba5f0">   34</a></span>&#160;        Mix_Music* <span class="keyword">const</span> <a class="code" href="classsdl2engine_1_1Music.html#a2b60307989e9d7d34442e4dbcc3ba5f0">m_mix_music</a>; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1Music.html#aa4d659441d5a5c66a88d4de10c2b946e">   35</a></span>&#160;        <span class="keyword">const</span> std::string <a class="code" href="classsdl2engine_1_1Music.html#aa4d659441d5a5c66a88d4de10c2b946e">m_path</a>; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;};</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;} <span class="comment">// namespace sdl2engine</span></div>
+<div class="ttc" id="classsdl2engine_1_1Music_html_a1b1b256630190eac45399779a33e26e0"><div class="ttname"><a href="classsdl2engine_1_1Music.html#a1b1b256630190eac45399779a33e26e0">sdl2engine::Music::Music</a></div><div class="ttdeci">Music(const std::string &amp;path)</div><div class="ttdoc">The constructor. </div><div class="ttdef"><b>Definition:</b> <a href="Music_8cpp_source.html#l00006">Music.cpp:6</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1Music_html_a650d96e093e06efcc9f572df26108e40"><div class="ttname"><a href="classsdl2engine_1_1Music.html#a650d96e093e06efcc9f572df26108e40">sdl2engine::Music::Path</a></div><div class="ttdeci">std::string Path()</div><div class="ttdef"><b>Definition:</b> <a href="Music_8cpp_source.html#l00025">Music.cpp:25</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1Music_html_a2b60307989e9d7d34442e4dbcc3ba5f0"><div class="ttname"><a href="classsdl2engine_1_1Music.html#a2b60307989e9d7d34442e4dbcc3ba5f0">sdl2engine::Music::m_mix_music</a></div><div class="ttdeci">Mix_Music *const m_mix_music</div><div class="ttdef"><b>Definition:</b> <a href="Music_8h_source.html#l00034">Music.h:34</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1Music_html_a3f891cfd3e4ab21fd3d85d9ae271fcb8"><div class="ttname"><a href="classsdl2engine_1_1Music.html#a3f891cfd3e4ab21fd3d85d9ae271fcb8">sdl2engine::Music::MixMusic</a></div><div class="ttdeci">Mix_Music * MixMusic()</div><div class="ttdef"><b>Definition:</b> <a href="Music_8cpp_source.html#l00021">Music.cpp:21</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1Music_html_aef5f8315b399f4467e69a48538d3bb96"><div class="ttname"><a href="classsdl2engine_1_1Music.html#aef5f8315b399f4467e69a48538d3bb96">sdl2engine::Music::~Music</a></div><div class="ttdeci">~Music()</div><div class="ttdoc">The destructor. </div><div class="ttdef"><b>Definition:</b> <a href="Music_8cpp_source.html#l00015">Music.cpp:15</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1Music_html"><div class="ttname"><a href="classsdl2engine_1_1Music.html">sdl2engine::Music</a></div><div class="ttdef"><b>Definition:</b> <a href="Music_8h_source.html#l00008">Music.h:8</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1Music_html_aa4d659441d5a5c66a88d4de10c2b946e"><div class="ttname"><a href="classsdl2engine_1_1Music.html#aa4d659441d5a5c66a88d4de10c2b946e">sdl2engine::Music::m_path</a></div><div class="ttdeci">const std::string m_path</div><div class="ttdef"><b>Definition:</b> <a href="Music_8h_source.html#l00035">Music.h:35</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 29 2015 00:45:25 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 29 2015 23:28:55 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

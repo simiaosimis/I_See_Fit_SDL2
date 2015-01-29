@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v30</span>
+   &#160;<span id="projectnumber">v31</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -96,34 +96,37 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;SDL2/SDL_mixer.h&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classSoundEffect.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSoundEffect.html">SoundEffect</a> {</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span>sdl2engine {</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classSoundEffect.html#af9cbe049bf092fc8b8ee2d143a751864">SoundEffect</a>(<span class="keyword">const</span> std::string&amp; path);</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <a class="code" href="classSoundEffect.html#a5e03a7a8eb4c5b9d0548fb178b76a44c">~SoundEffect</a>();</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        Mix_Chunk* <a class="code" href="classSoundEffect.html#af345dc064dedb20fcf876e4c5696a343">MixChunk</a>();</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        std::string <a class="code" href="classSoundEffect.html#afff31b68beda0d44fb3c4e05fa256438">Path</a>();</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classSoundEffect.html#a92f220c9560e9f017967f6df54005a52">   15</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classSoundEffect.html#a92f220c9560e9f017967f6df54005a52">m_channel</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1SoundEffect.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsdl2engine_1_1SoundEffect.html">SoundEffect</a> {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classsdl2engine_1_1SoundEffect.html#ace01021e37269435f111648f2d481f22">SoundEffect</a>(<span class="keyword">const</span> std::string&amp; path);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <a class="code" href="classsdl2engine_1_1SoundEffect.html#a16c62cb422dfacd7f6f87c1aa78064c4">~SoundEffect</a>();</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        Mix_Chunk* <a class="code" href="classsdl2engine_1_1SoundEffect.html#a8c9f4861d66bc6efa72dff4c962f3fec">MixChunk</a>();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        std::string <a class="code" href="classsdl2engine_1_1SoundEffect.html#a1b4e97d86043652cb59bec6da6e1cdfd">Path</a>();</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classSoundEffect.html#a8dfb849d3e9563eb589758f494727377">   18</a></span>&#160;        Mix_Chunk* <span class="keyword">const</span> <a class="code" href="classSoundEffect.html#a8dfb849d3e9563eb589758f494727377">m_mix_chunk</a>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classSoundEffect.html#a7ba6371fd11f87e39d88ec00ceebd769">   19</a></span>&#160;        <span class="keyword">const</span> std::string <a class="code" href="classSoundEffect.html#a7ba6371fd11f87e39d88ec00ceebd769">m_path</a>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;};</div>
-<div class="ttc" id="classSoundEffect_html"><div class="ttname"><a href="classSoundEffect.html">SoundEffect</a></div><div class="ttdef"><b>Definition:</b> <a href="SoundEffect_8h_source.html#l00006">SoundEffect.h:6</a></div></div>
-<div class="ttc" id="classSoundEffect_html_a8dfb849d3e9563eb589758f494727377"><div class="ttname"><a href="classSoundEffect.html#a8dfb849d3e9563eb589758f494727377">SoundEffect::m_mix_chunk</a></div><div class="ttdeci">Mix_Chunk *const m_mix_chunk</div><div class="ttdef"><b>Definition:</b> <a href="SoundEffect_8h_source.html#l00018">SoundEffect.h:18</a></div></div>
-<div class="ttc" id="classSoundEffect_html_a92f220c9560e9f017967f6df54005a52"><div class="ttname"><a href="classSoundEffect.html#a92f220c9560e9f017967f6df54005a52">SoundEffect::m_channel</a></div><div class="ttdeci">int m_channel</div><div class="ttdef"><b>Definition:</b> <a href="SoundEffect_8h_source.html#l00015">SoundEffect.h:15</a></div></div>
-<div class="ttc" id="classSoundEffect_html_af345dc064dedb20fcf876e4c5696a343"><div class="ttname"><a href="classSoundEffect.html#af345dc064dedb20fcf876e4c5696a343">SoundEffect::MixChunk</a></div><div class="ttdeci">Mix_Chunk * MixChunk()</div><div class="ttdef"><b>Definition:</b> <a href="SoundEffect_8cpp_source.html#l00020">SoundEffect.cpp:20</a></div></div>
-<div class="ttc" id="classSoundEffect_html_af9cbe049bf092fc8b8ee2d143a751864"><div class="ttname"><a href="classSoundEffect.html#af9cbe049bf092fc8b8ee2d143a751864">SoundEffect::SoundEffect</a></div><div class="ttdeci">SoundEffect(const std::string &amp;path)</div><div class="ttdef"><b>Definition:</b> <a href="SoundEffect_8cpp_source.html#l00004">SoundEffect.cpp:4</a></div></div>
-<div class="ttc" id="classSoundEffect_html_a5e03a7a8eb4c5b9d0548fb178b76a44c"><div class="ttname"><a href="classSoundEffect.html#a5e03a7a8eb4c5b9d0548fb178b76a44c">SoundEffect::~SoundEffect</a></div><div class="ttdeci">~SoundEffect()</div><div class="ttdef"><b>Definition:</b> <a href="SoundEffect_8cpp_source.html#l00014">SoundEffect.cpp:14</a></div></div>
-<div class="ttc" id="classSoundEffect_html_afff31b68beda0d44fb3c4e05fa256438"><div class="ttname"><a href="classSoundEffect.html#afff31b68beda0d44fb3c4e05fa256438">SoundEffect::Path</a></div><div class="ttdeci">std::string Path()</div><div class="ttdef"><b>Definition:</b> <a href="SoundEffect_8cpp_source.html#l00024">SoundEffect.cpp:24</a></div></div>
-<div class="ttc" id="classSoundEffect_html_a7ba6371fd11f87e39d88ec00ceebd769"><div class="ttname"><a href="classSoundEffect.html#a7ba6371fd11f87e39d88ec00ceebd769">SoundEffect::m_path</a></div><div class="ttdeci">const std::string m_path</div><div class="ttdef"><b>Definition:</b> <a href="SoundEffect_8h_source.html#l00019">SoundEffect.h:19</a></div></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1SoundEffect.html#a8640f49b42ce7c803e3deda5ba13a3aa">   17</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classsdl2engine_1_1SoundEffect.html#a8640f49b42ce7c803e3deda5ba13a3aa">m_channel</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1SoundEffect.html#adaaf9120cabe522333ed6524ea946676">   20</a></span>&#160;        Mix_Chunk* <span class="keyword">const</span> <a class="code" href="classsdl2engine_1_1SoundEffect.html#adaaf9120cabe522333ed6524ea946676">m_mix_chunk</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1SoundEffect.html#a866422fc519cb1efbea85b0271199db1">   21</a></span>&#160;        <span class="keyword">const</span> std::string <a class="code" href="classsdl2engine_1_1SoundEffect.html#a866422fc519cb1efbea85b0271199db1">m_path</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;};</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;} <span class="comment">// namespace sdl2engine</span></div>
+<div class="ttc" id="classsdl2engine_1_1SoundEffect_html_adaaf9120cabe522333ed6524ea946676"><div class="ttname"><a href="classsdl2engine_1_1SoundEffect.html#adaaf9120cabe522333ed6524ea946676">sdl2engine::SoundEffect::m_mix_chunk</a></div><div class="ttdeci">Mix_Chunk *const m_mix_chunk</div><div class="ttdef"><b>Definition:</b> <a href="SoundEffect_8h_source.html#l00020">SoundEffect.h:20</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1SoundEffect_html_a16c62cb422dfacd7f6f87c1aa78064c4"><div class="ttname"><a href="classsdl2engine_1_1SoundEffect.html#a16c62cb422dfacd7f6f87c1aa78064c4">sdl2engine::SoundEffect::~SoundEffect</a></div><div class="ttdeci">~SoundEffect()</div><div class="ttdef"><b>Definition:</b> <a href="SoundEffect_8cpp_source.html#l00016">SoundEffect.cpp:16</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1SoundEffect_html"><div class="ttname"><a href="classsdl2engine_1_1SoundEffect.html">sdl2engine::SoundEffect</a></div><div class="ttdef"><b>Definition:</b> <a href="SoundEffect_8h_source.html#l00008">SoundEffect.h:8</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1SoundEffect_html_ace01021e37269435f111648f2d481f22"><div class="ttname"><a href="classsdl2engine_1_1SoundEffect.html#ace01021e37269435f111648f2d481f22">sdl2engine::SoundEffect::SoundEffect</a></div><div class="ttdeci">SoundEffect(const std::string &amp;path)</div><div class="ttdef"><b>Definition:</b> <a href="SoundEffect_8cpp_source.html#l00006">SoundEffect.cpp:6</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1SoundEffect_html_a8c9f4861d66bc6efa72dff4c962f3fec"><div class="ttname"><a href="classsdl2engine_1_1SoundEffect.html#a8c9f4861d66bc6efa72dff4c962f3fec">sdl2engine::SoundEffect::MixChunk</a></div><div class="ttdeci">Mix_Chunk * MixChunk()</div><div class="ttdef"><b>Definition:</b> <a href="SoundEffect_8cpp_source.html#l00022">SoundEffect.cpp:22</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1SoundEffect_html_a1b4e97d86043652cb59bec6da6e1cdfd"><div class="ttname"><a href="classsdl2engine_1_1SoundEffect.html#a1b4e97d86043652cb59bec6da6e1cdfd">sdl2engine::SoundEffect::Path</a></div><div class="ttdeci">std::string Path()</div><div class="ttdef"><b>Definition:</b> <a href="SoundEffect_8cpp_source.html#l00026">SoundEffect.cpp:26</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1SoundEffect_html_a8640f49b42ce7c803e3deda5ba13a3aa"><div class="ttname"><a href="classsdl2engine_1_1SoundEffect.html#a8640f49b42ce7c803e3deda5ba13a3aa">sdl2engine::SoundEffect::m_channel</a></div><div class="ttdeci">int m_channel</div><div class="ttdef"><b>Definition:</b> <a href="SoundEffect_8h_source.html#l00017">SoundEffect.h:17</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1SoundEffect_html_a866422fc519cb1efbea85b0271199db1"><div class="ttname"><a href="classsdl2engine_1_1SoundEffect.html#a866422fc519cb1efbea85b0271199db1">sdl2engine::SoundEffect::m_path</a></div><div class="ttdeci">const std::string m_path</div><div class="ttdef"><b>Definition:</b> <a href="SoundEffect_8h_source.html#l00021">SoundEffect.h:21</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 29 2015 00:45:26 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 29 2015 23:28:55 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

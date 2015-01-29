@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['gamecontroller',['gameController',['../classControllerHandler.html#a65bbcf23b90f3ab1b4087acd136518b2',1,'ControllerHandler']]],
-  ['gameobjects',['gameObjects',['../classStateGame.html#ae4b0e8ceb5cc37fe469b5e4f978ceea9',1,'StateGame']]]
+  ['gamecontroller',['gameController',['../classsdl2engine_1_1ControllerHandler.html#a5ab9611d0f5aed00e48f9ea9ff93eace',1,'sdl2engine::ControllerHandler']]],
+  ['gameobjects',['gameObjects',['../classsdl2engine_1_1StateGame.html#ae72c92c6ad620e37a4d91ef44dc0bc74',1,'sdl2engine::StateGame']]]
 ];

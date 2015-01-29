@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['camera',['Camera',['../classCamera.html',1,'']]],
-  ['collision',['Collision',['../classCollision.html',1,'']]],
-  ['configuration',['Configuration',['../classConfiguration.html',1,'']]],
-  ['controllerhandler',['ControllerHandler',['../classControllerHandler.html',1,'']]]
+  ['camera',['Camera',['../classsdl2engine_1_1Camera.html',1,'sdl2engine']]],
+  ['collision',['Collision',['../classsdl2engine_1_1Collision.html',1,'sdl2engine']]],
+  ['configuration',['Configuration',['../classsdl2engine_1_1Configuration.html',1,'sdl2engine']]],
+  ['controllerhandler',['ControllerHandler',['../classsdl2engine_1_1ControllerHandler.html',1,'sdl2engine']]]
 ];

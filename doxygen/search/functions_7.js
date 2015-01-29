@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['initialize',['Initialize',['../classConfiguration.html#a4637584596d09c48bc816b71d974297d',1,'Configuration::Initialize()'],['../namespacesdl.html#a3a90e2da909fa25cc7c570fbe3e25d5f',1,'sdl::Initialize()']]],
-  ['initializestates',['InitializeStates',['../classGame.html#a3f11482f4bde3b86bded9fa8d4c0e1a3',1,'Game']]],
-  ['input',['Input',['../classGame.html#a9c824ce6bfe6db38b9d0b5be7850e127',1,'Game']]],
-  ['inputhandler',['InputHandler',['../classInputHandler.html#a698aa4af4f326a9881835fda251ca996',1,'InputHandler']]],
-  ['instance',['Instance',['../classGame.html#a0b3ad989fe67e72b4b6b2f36a059479a',1,'Game']]],
-  ['isquitflag',['isQuitFlag',['../classInputHandler.html#a7d103ecce85288f454876b5bef8b3aee',1,'InputHandler']]]
+  ['initialize',['Initialize',['../classsdl2engine_1_1Configuration.html#a4d423870232879eb825bf2b207958669',1,'sdl2engine::Configuration::Initialize()'],['../namespacesdl2engine_1_1sdl.html#a500dd363b9ca16d441249ee8ab7c5e9f',1,'sdl2engine::sdl::Initialize()']]],
+  ['initializestates',['InitializeStates',['../classsdl2engine_1_1Game.html#a2a27f5199a37819d9f6a25a22d75b489',1,'sdl2engine::Game']]],
+  ['input',['Input',['../classsdl2engine_1_1Game.html#ad4c17e9aa5b64755d6ec67c72a2cde3a',1,'sdl2engine::Game']]],
+  ['inputhandler',['InputHandler',['../classsdl2engine_1_1InputHandler.html#abbbd0ce3f4219fc7cf856f06c5f3ff5a',1,'sdl2engine::InputHandler']]],
+  ['instance',['Instance',['../classsdl2engine_1_1Game.html#a850158cf352e293eb49a4910c6f5cc21',1,'sdl2engine::Game']]],
+  ['isquitflag',['isQuitFlag',['../classsdl2engine_1_1InputHandler.html#a2e83405489f1ae86d92517ffa5096ba6',1,'sdl2engine::InputHandler']]]
 ];

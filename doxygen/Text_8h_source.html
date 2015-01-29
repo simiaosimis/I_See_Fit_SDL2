@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v30</span>
+   &#160;<span id="projectnumber">v31</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -96,41 +96,44 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;SDL2/SDL_ttf.h&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="GameObject_8h.html">engine/GameObject.h</a>&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classText.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="classText.html">Text</a> : <span class="keyword">public</span> <a class="code" href="classGameObject.html">GameObject</a> {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <a class="code" href="classText.html#a3115f4a81c0c42f80768fd53c32377cd">Text</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> x_, <span class="keyword">const</span> <span class="keywordtype">double</span> y_, <span class="keyword">const</span> <span class="keywordtype">char</span>* path_, <span class="keyword">const</span> <span class="keywordtype">int</span> size_,</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">char</span>* text_, <span class="keyword">const</span> SDL_Color color_);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <a class="code" href="classText.html#a3115f4a81c0c42f80768fd53c32377cd">Text</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> x_, <span class="keyword">const</span> <span class="keywordtype">double</span> y_, <span class="keyword">const</span> <span class="keywordtype">char</span>* path_, <span class="keyword">const</span> <span class="keywordtype">int</span> size_,</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">char</span>* text_);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classText.html#a2d49e5c280e205125b149f7777ae30c7">~Text</a>();</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span>sdl2engine {</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1Text.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsdl2engine_1_1Text.html">Text</a> : <span class="keyword">public</span> <a class="code" href="classsdl2engine_1_1GameObject.html">GameObject</a> {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <a class="code" href="classsdl2engine_1_1Text.html#ad864375d55794ce862422e4434ea0e42">Text</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> x_, <span class="keyword">const</span> <span class="keywordtype">double</span> y_, <span class="keyword">const</span> <span class="keywordtype">char</span>* path_, <span class="keyword">const</span> <span class="keywordtype">int</span> size_,</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">char</span>* text_, <span class="keyword">const</span> SDL_Color color_);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <a class="code" href="classsdl2engine_1_1Text.html#ad864375d55794ce862422e4434ea0e42">Text</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> x_, <span class="keyword">const</span> <span class="keywordtype">double</span> y_, <span class="keyword">const</span> <span class="keywordtype">char</span>* path_, <span class="keyword">const</span> <span class="keywordtype">int</span> size_,</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">char</span>* text_);</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classText.html#a84093d4d7ac0cc29c1c9ef8c7fe99f76">update</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> dt_);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classText.html#a61dff362532c385dbc0650b397138635">render</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> cameraX_, <span class="keyword">const</span> <span class="keywordtype">double</span> cameraY_);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classText.html#a91b8cdda1b4527cf8ac2c25f53397e69">changeText</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* text_, <span class="keyword">const</span> SDL_Color color_);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classText.html#a91b8cdda1b4527cf8ac2c25f53397e69">changeText</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* text_);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classText.html#ae23ac53acb57e760b91c81d8c4aec8c7">   37</a></span>&#160;        TTF_Font* <a class="code" href="classText.html#ae23ac53acb57e760b91c81d8c4aec8c7">font</a>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;};</div>
-<div class="ttc" id="classText_html_ae23ac53acb57e760b91c81d8c4aec8c7"><div class="ttname"><a href="classText.html#ae23ac53acb57e760b91c81d8c4aec8c7">Text::font</a></div><div class="ttdeci">TTF_Font * font</div><div class="ttdef"><b>Definition:</b> <a href="Text_8h_source.html#l00037">Text.h:37</a></div></div>
-<div class="ttc" id="classText_html_a91b8cdda1b4527cf8ac2c25f53397e69"><div class="ttname"><a href="classText.html#a91b8cdda1b4527cf8ac2c25f53397e69">Text::changeText</a></div><div class="ttdeci">virtual void changeText(const char *text_, const SDL_Color color_)</div><div class="ttdef"><b>Definition:</b> <a href="Text_8cpp_source.html#l00069">Text.cpp:69</a></div></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classsdl2engine_1_1Text.html#afa47a48a8d5c9ee4c29fc11de775a685">~Text</a>();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1Text.html#a053df06eb3cc2cf5668753e928939d3a">update</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> dt_);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1Text.html#a28d6ca0354a8dc9148aa1f45cc8c0bea">render</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> cameraX_, <span class="keyword">const</span> <span class="keywordtype">double</span> cameraY_);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1Text.html#aa6f5e651760868bab52f885a31bc0f1a">changeText</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* text_, <span class="keyword">const</span> SDL_Color color_);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1Text.html#aa6f5e651760868bab52f885a31bc0f1a">changeText</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* text_);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1Text.html#aec2b3e26a099885c2abf8214d98c124c">   39</a></span>&#160;        TTF_Font* <a class="code" href="classsdl2engine_1_1Text.html#aec2b3e26a099885c2abf8214d98c124c">font</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;};</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;} <span class="comment">// namespace sdl2engine</span></div>
+<div class="ttc" id="classsdl2engine_1_1Text_html_ad864375d55794ce862422e4434ea0e42"><div class="ttname"><a href="classsdl2engine_1_1Text.html#ad864375d55794ce862422e4434ea0e42">sdl2engine::Text::Text</a></div><div class="ttdeci">Text(const double x_, const double y_, const char *path_, const int size_, const char *text_, const SDL_Color color_)</div><div class="ttdef"><b>Definition:</b> <a href="Text_8cpp_source.html#l00006">Text.cpp:6</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1Text_html_a053df06eb3cc2cf5668753e928939d3a"><div class="ttname"><a href="classsdl2engine_1_1Text.html#a053df06eb3cc2cf5668753e928939d3a">sdl2engine::Text::update</a></div><div class="ttdeci">virtual void update(const double dt_)</div><div class="ttdef"><b>Definition:</b> <a href="Text_8cpp_source.html#l00119">Text.cpp:119</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1Text_html_aa6f5e651760868bab52f885a31bc0f1a"><div class="ttname"><a href="classsdl2engine_1_1Text.html#aa6f5e651760868bab52f885a31bc0f1a">sdl2engine::Text::changeText</a></div><div class="ttdeci">virtual void changeText(const char *text_, const SDL_Color color_)</div><div class="ttdef"><b>Definition:</b> <a href="Text_8cpp_source.html#l00071">Text.cpp:71</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1Text_html"><div class="ttname"><a href="classsdl2engine_1_1Text.html">sdl2engine::Text</a></div><div class="ttdef"><b>Definition:</b> <a href="Text_8h_source.html#l00011">Text.h:11</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1GameObject_html"><div class="ttname"><a href="classsdl2engine_1_1GameObject.html">sdl2engine::GameObject</a></div><div class="ttdef"><b>Definition:</b> <a href="GameObject_8h_source.html#l00013">GameObject.h:13</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1Text_html_a28d6ca0354a8dc9148aa1f45cc8c0bea"><div class="ttname"><a href="classsdl2engine_1_1Text.html#a28d6ca0354a8dc9148aa1f45cc8c0bea">sdl2engine::Text::render</a></div><div class="ttdeci">virtual void render(const double cameraX_, const double cameraY_)</div><div class="ttdef"><b>Definition:</b> <a href="Text_8cpp_source.html#l00123">Text.cpp:123</a></div></div>
 <div class="ttc" id="GameObject_8h_html"><div class="ttname"><a href="GameObject_8h.html">GameObject.h</a></div></div>
-<div class="ttc" id="classGameObject_html"><div class="ttname"><a href="classGameObject.html">GameObject</a></div><div class="ttdef"><b>Definition:</b> <a href="GameObject_8h_source.html#l00011">GameObject.h:11</a></div></div>
-<div class="ttc" id="classText_html_a61dff362532c385dbc0650b397138635"><div class="ttname"><a href="classText.html#a61dff362532c385dbc0650b397138635">Text::render</a></div><div class="ttdeci">virtual void render(const double cameraX_, const double cameraY_)</div><div class="ttdef"><b>Definition:</b> <a href="Text_8cpp_source.html#l00121">Text.cpp:121</a></div></div>
-<div class="ttc" id="classText_html_a3115f4a81c0c42f80768fd53c32377cd"><div class="ttname"><a href="classText.html#a3115f4a81c0c42f80768fd53c32377cd">Text::Text</a></div><div class="ttdeci">Text(const double x_, const double y_, const char *path_, const int size_, const char *text_, const SDL_Color color_)</div><div class="ttdef"><b>Definition:</b> <a href="Text_8cpp_source.html#l00004">Text.cpp:4</a></div></div>
-<div class="ttc" id="classText_html_a2d49e5c280e205125b149f7777ae30c7"><div class="ttname"><a href="classText.html#a2d49e5c280e205125b149f7777ae30c7">Text::~Text</a></div><div class="ttdeci">virtual ~Text()</div><div class="ttdef"><b>Definition:</b> <a href="Text_8cpp_source.html#l00060">Text.cpp:60</a></div></div>
-<div class="ttc" id="classText_html_a84093d4d7ac0cc29c1c9ef8c7fe99f76"><div class="ttname"><a href="classText.html#a84093d4d7ac0cc29c1c9ef8c7fe99f76">Text::update</a></div><div class="ttdeci">virtual void update(const double dt_)</div><div class="ttdef"><b>Definition:</b> <a href="Text_8cpp_source.html#l00117">Text.cpp:117</a></div></div>
-<div class="ttc" id="classText_html"><div class="ttname"><a href="classText.html">Text</a></div><div class="ttdef"><b>Definition:</b> <a href="Text_8h_source.html#l00009">Text.h:9</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1Text_html_aec2b3e26a099885c2abf8214d98c124c"><div class="ttname"><a href="classsdl2engine_1_1Text.html#aec2b3e26a099885c2abf8214d98c124c">sdl2engine::Text::font</a></div><div class="ttdeci">TTF_Font * font</div><div class="ttdef"><b>Definition:</b> <a href="Text_8h_source.html#l00039">Text.h:39</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1Text_html_afa47a48a8d5c9ee4c29fc11de775a685"><div class="ttname"><a href="classsdl2engine_1_1Text.html#afa47a48a8d5c9ee4c29fc11de775a685">sdl2engine::Text::~Text</a></div><div class="ttdeci">virtual ~Text()</div><div class="ttdef"><b>Definition:</b> <a href="Text_8cpp_source.html#l00062">Text.cpp:62</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 29 2015 00:45:26 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 29 2015 23:28:55 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

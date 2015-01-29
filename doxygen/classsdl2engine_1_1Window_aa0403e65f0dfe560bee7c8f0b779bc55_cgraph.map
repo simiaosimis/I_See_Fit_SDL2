@@ -1,0 +1,10 @@
+<map id="sdl2engine::Window::Window" name="sdl2engine::Window::Window">
+<area shape="rect" id="node3" href="$classsdl2engine_1_1Window.html#a6047d17ef7f639033b8bd0408d11ffb5" title="Creates the Window. " alt="" coords="192,143,331,190"/>
+<area shape="rect" id="node5" href="$classsdl2engine_1_1Configuration.html#a5246fe0e44ebf973bba29cb0ffaad6be" title="sdl2engine::Configuration\l::WindowTitle" alt="" coords="380,5,548,51"/>
+<area shape="rect" id="node7" href="$classsdl2engine_1_1Configuration.html#a4631a25106d5f5c63b636ec6486d323d" title="sdl2engine::Configuration\l::ScreenWidth" alt="" coords="380,74,548,121"/>
+<area shape="rect" id="node9" href="$classsdl2engine_1_1Configuration.html#a230f8709e257dc499e2dc3fc235593d7" title="sdl2engine::Configuration\l::ScreenHeight" alt="" coords="380,143,548,190"/>
+<area shape="rect" id="node11" href="$classsdl2engine_1_1Renderer.html#a6633fee9256aa171b92396b7e67a1689" title="Rescales the renderization. " alt="" coords="392,213,536,259"/>
+<area shape="rect" id="node17" href="$classsdl2engine_1_1Configuration.html#a26f03c3e6b663cfb75b2fc671f923af9" title="sdl2engine::Configuration\l::LogicalRenderSize" alt="" coords="380,282,548,329"/>
+<area shape="rect" id="node13" href="$classsdl2engine_1_1Configuration.html#a58cb441a464bbec5af7b81d35d94a761" title="sdl2engine::Configuration\l::ResolutionWidth" alt="" coords="599,178,767,225"/>
+<area shape="rect" id="node15" href="$classsdl2engine_1_1Configuration.html#a8773d6193188c23a93365b11a835704c" title="sdl2engine::Configuration\l::ResolutionHeight" alt="" coords="599,247,767,294"/>
+</map>

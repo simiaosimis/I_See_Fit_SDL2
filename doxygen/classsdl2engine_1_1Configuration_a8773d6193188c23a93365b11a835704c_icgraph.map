@@ -1,0 +1,5 @@
+<map id="sdl2engine::Configuration::ResolutionHeight" name="sdl2engine::Configuration::ResolutionHeight">
+<area shape="rect" id="node3" href="$classsdl2engine_1_1Renderer.html#a6633fee9256aa171b92396b7e67a1689" title="Rescales the renderization. " alt="" coords="225,5,369,51"/>
+<area shape="rect" id="node5" href="$classsdl2engine_1_1Window.html#a6047d17ef7f639033b8bd0408d11ffb5" title="Creates the Window. " alt="" coords="419,5,557,51"/>
+<area shape="rect" id="node7" href="$classsdl2engine_1_1Window.html#aa0403e65f0dfe560bee7c8f0b779bc55" title="The constructor. " alt="" coords="605,5,744,51"/>
+</map>

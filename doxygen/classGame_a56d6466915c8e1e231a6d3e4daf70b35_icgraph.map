@@ -1,5 +1,0 @@
-<map id="Game::Resource" name="Game::Resource">
-<area shape="rect" id="node3" href="$classAudioHandler.html#aa74f9dd41a30d53de727c38303f0a3e2" title="Sets the current music. " alt="" coords="176,5,339,35"/>
-<area shape="rect" id="node7" href="$classGStatePlaceholder.html#a177ff2bfd8c9f911c6e4e7c6b6b50bdf" title="GStatePlaceholder::load" alt="" coords="624,32,787,61"/>
-<area shape="rect" id="node5" href="$classAudioHandler.html#ae006de73495a08fa3332917fe9c57e17" title="Sets new music for given path, infinitely looping. " alt="" coords="388,5,575,35"/>
-</map>

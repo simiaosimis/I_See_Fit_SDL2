@@ -107,12 +107,12 @@
   </head>
   <body onload="init_expandables()">
       <div id="header">
-        <h1>Cppcheck report - sdl2-engine: /home/travis/build/CaioIcy/sdl2-engine/src/core/ResourceManager.h </h1>
+        <h1>Cppcheck report - sdl2-engine: /home/travis/build/CaioIcy/sdl2-engine/src/engine/Game.cpp </h1>
       </div>
       <div id="menu" dir="rtl">
        <a href="index.html">Defect list</a>
        <br>
-<a href='0.html#line-62'> postfixOperator 62</a>
+<a href='0.html#line-57'> unreadVariable 57</a><a href='0.html#line-123'> postfixOperator 123</a>
       </div>
       <div id="content">
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
@@ -214,106 +214,226 @@
  97
  98
  99
-100</pre></div></td><td class="code"><div class="highlight"><pre><a name="line-1"></a><span class="cp">#pragma once</span>
-<a name="line-2"></a>
-<a name="line-3"></a><span class="cp">#include &lt;map&gt;</span>
-<a name="line-4"></a><span class="cp">#include &lt;string&gt;</span>
-<a name="line-5"></a><span class="cp">#include &lt;memory&gt;</span>
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160</pre></div></td><td class="code"><div class="highlight"><pre><a name="line-1"></a><span class="cp">#include &quot;engine/Game.h&quot;</span>
+<a name="line-2"></a><span class="cp">#include &lt;chrono&gt;</span>
+<a name="line-3"></a><span class="cp">#include &lt;memory&gt;</span>
+<a name="line-4"></a><span class="cp">#include &quot;util/Configuration.h&quot;</span>
+<a name="line-5"></a><span class="cp">#include &quot;graphics/Sprite.h&quot;</span>
 <a name="line-6"></a><span class="cp">#include &quot;util/Logger.h&quot;</span>
-<a name="line-7"></a><span class="cp">#include &quot;util/Uncopyable.h&quot;</span>
-<a name="line-8"></a>
-<a name="line-9"></a><span class="cm">/**</span>
-<a name="line-10"></a><span class="cm">* Template resource management class.</span>
-<a name="line-11"></a><span class="cm">*</span>
-<a name="line-12"></a><span class="cm">*/</span>
-<a name="line-13"></a><span class="n">template</span> <span class="o">&lt;</span><span class="n">class</span> <span class="n">Type</span><span class="o">&gt;</span>
-<a name="line-14"></a><span class="n">class</span> <span class="nl">ResourceManager</span> <span class="p">:</span> <span class="n">private</span> <span class="n">Uncopyable</span> <span class="p">{</span>
-<a name="line-15"></a>
-<a name="line-16"></a>	<span class="nl">private</span><span class="p">:</span>
-<a name="line-17"></a>		<span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span> <span class="n">typePtr</span><span class="p">;</span>
-<a name="line-18"></a>		<span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">typePtr</span><span class="o">&gt;</span> <span class="n">typeMap</span><span class="p">;</span>
-<a name="line-19"></a>
-<a name="line-20"></a>	<span class="nl">public</span><span class="p">:</span>
-<a name="line-21"></a>		<span class="cm">/**</span>
-<a name="line-22"></a><span class="cm">		* The destructor.</span>
-<a name="line-23"></a><span class="cm">		* @note Warns about resources being deleted with references still pointing to them.</span>
-<a name="line-24"></a><span class="cm">		*/</span>
-<a name="line-25"></a>		<span class="n">virtual</span> <span class="o">~</span><span class="n">ResourceManager</span><span class="p">();</span>
-<a name="line-26"></a>
-<a name="line-27"></a>		<span class="cm">/**</span>
-<a name="line-28"></a><span class="cm">		* Retrieves the resource from the resources.</span>
-<a name="line-29"></a><span class="cm">		* @return The pointer to the wanted resource. Creates it, if not already in resources.</span>
-<a name="line-30"></a><span class="cm">		* @param path_ : Path to the desired resource.</span>
-<a name="line-31"></a><span class="cm">		*/</span>
-<a name="line-32"></a>		<span class="n">Type</span><span class="o">*</span> <span class="nf">get</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">path_</span><span class="p">);</span>
-<a name="line-33"></a>
-<a name="line-34"></a>	<span class="nl">protected</span><span class="p">:</span>
-<a name="line-35"></a>		<span class="cm">/**</span>
-<a name="line-36"></a><span class="cm">		* Constructs the desired resource.</span>
-<a name="line-37"></a><span class="cm">		* @param path_ : Path to the desired resource.</span>
-<a name="line-38"></a><span class="cm">		*/</span>
-<a name="line-39"></a>		<span class="n">virtual</span> <span class="n">typePtr</span> <span class="n">load</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">path_</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<a name="line-40"></a>
-<a name="line-41"></a>		<span class="cm">/**</span>
-<a name="line-42"></a><span class="cm">		* Registers the resource on the resources map.</span>
-<a name="line-43"></a><span class="cm">		* @param path_ : Path to the resource. Will be the key value.</span>
-<a name="line-44"></a><span class="cm">		* @param resource_ : The shared pointer for the resource.</span>
-<a name="line-45"></a><span class="cm">		*/</span>
-<a name="line-46"></a>		<span class="kt">void</span> <span class="nf">registerResource</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">path_</span><span class="p">,</span> <span class="n">typePtr</span> <span class="n">resource_</span><span class="p">);</span>
-<a name="line-47"></a>
-<a name="line-48"></a>		<span class="cm">/**</span>
-<a name="line-49"></a><span class="cm">		* Unregisters the resource on the resources map.</span>
-<a name="line-50"></a><span class="cm">		* @param path_ : The key (path to resource) on the map.</span>
-<a name="line-51"></a><span class="cm">		*/</span>
-<a name="line-52"></a>		<span class="kt">void</span> <span class="nf">unregisterResource</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">path_</span><span class="p">);</span>
-<a name="line-53"></a>
-<a name="line-54"></a>		<span class="n">typeMap</span> <span class="n">resources</span><span class="p">;</span> <span class="cm">/**&lt; The map that contains all the Type resources. */</span>
-<a name="line-55"></a>
-<a name="line-56"></a><span class="p">};</span>
-<a name="line-57"></a>
-<a name="line-58"></a><span class="n">template</span> <span class="o">&lt;</span><span class="n">class</span> <span class="n">Type</span><span class="o">&gt;</span>
-<a name="line-59"></a><span class="n">ResourceManager</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;::~</span><span class="n">ResourceManager</span><span class="p">()</span> <span class="p">{</span>
-<a name="line-60"></a>	<span class="kr">typename</span> <span class="n">typeMap</span><span class="o">::</span><span class="n">const_iterator</span> <span class="n">it</span><span class="p">;</span>
-<a name="line-61"></a>
-<a name="line-62"></a><span class="hll">	<span class="k">for</span><span class="p">(</span><span class="n">it</span> <span class="o">=</span> <span class="n">resources</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span> <span class="n">it</span> <span class="o">!=</span> <span class="n">resources</span><span class="p">.</span><span class="n">end</span><span class="p">();</span> <span class="n">it</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span><div class='verbose expandable'><span class='error2'>&lt;--- Prefer prefix ++/-- operators for non-primitive types. <span class='marker'>[+]</span></span><div class='content'>Prefix ++/-- operators should be preferred for non-primitive types. Pre-increment/decrement can be more efficient than post-increment/decrement. Post-increment/decrement usually involves keeping a copy of the previous value around and adds a little extra code.</div></div>
-</span><a name="line-63"></a>		<span class="k">if</span><span class="p">(</span><span class="n">it</span><span class="o">-&gt;</span><span class="n">second</span><span class="p">.</span><span class="n">use_count</span><span class="p">()</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-64"></a>			<span class="n">log_warn</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Resource deleted with use count different than 1 (&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">it</span><span class="o">-&gt;</span><span class="n">first</span>
-<a name="line-65"></a>				<span class="o">&lt;&lt;</span> <span class="s">&quot;).&quot;</span><span class="p">;</span>
-<a name="line-66"></a>		<span class="p">}</span>
-<a name="line-67"></a>	<span class="p">}</span>
-<a name="line-68"></a><span class="p">}</span>
-<a name="line-69"></a>
-<a name="line-70"></a><span class="n">template</span> <span class="o">&lt;</span><span class="n">class</span> <span class="n">Type</span><span class="o">&gt;</span>
-<a name="line-71"></a><span class="n">Type</span><span class="o">*</span> <span class="n">ResourceManager</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;::</span><span class="n">get</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">path_</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-72"></a>	<span class="kr">typename</span> <span class="n">typeMap</span><span class="o">::</span><span class="n">const_iterator</span> <span class="n">it</span><span class="p">;</span>
-<a name="line-73"></a>	<span class="n">it</span> <span class="o">=</span> <span class="n">resources</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">path_</span><span class="p">);</span>
-<a name="line-74"></a>
-<a name="line-75"></a>	<span class="n">Type</span><span class="o">*</span> <span class="n">tPtr</span> <span class="o">=</span> <span class="n">nullptr</span><span class="p">;</span>
-<a name="line-76"></a>
-<a name="line-77"></a>	<span class="k">if</span> <span class="p">(</span><span class="n">it</span> <span class="o">!=</span> <span class="n">resources</span><span class="p">.</span><span class="n">end</span><span class="p">())</span> <span class="p">{</span>
-<a name="line-78"></a>		<span class="n">tPtr</span> <span class="o">=</span> <span class="n">it</span><span class="o">-&gt;</span><span class="n">second</span><span class="p">.</span><span class="n">get</span><span class="p">();</span>
-<a name="line-79"></a>	<span class="p">}</span>
-<a name="line-80"></a>	<span class="k">else</span> <span class="p">{</span>
-<a name="line-81"></a>		<span class="n">tPtr</span> <span class="o">=</span> <span class="n">load</span><span class="p">(</span><span class="n">path_</span><span class="p">).</span><span class="n">get</span><span class="p">();</span>
-<a name="line-82"></a>	<span class="p">}</span>
-<a name="line-83"></a>
-<a name="line-84"></a>	<span class="k">return</span> <span class="n">tPtr</span><span class="p">;</span>
-<a name="line-85"></a><span class="p">}</span>
-<a name="line-86"></a>
-<a name="line-87"></a><span class="n">template</span> <span class="o">&lt;</span><span class="n">class</span> <span class="n">Type</span><span class="o">&gt;</span>
-<a name="line-88"></a><span class="kt">void</span> <span class="n">ResourceManager</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;::</span><span class="n">registerResource</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">path_</span><span class="p">,</span> <span class="n">typePtr</span> <span class="n">resource_</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-89"></a>	<span class="n">resources</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_pair</span><span class="p">(</span><span class="n">path_</span><span class="p">,</span> <span class="n">resource_</span><span class="p">));</span>
-<a name="line-90"></a><span class="p">}</span>
-<a name="line-91"></a>
-<a name="line-92"></a><span class="n">template</span> <span class="o">&lt;</span><span class="n">class</span> <span class="n">Type</span><span class="o">&gt;</span>
-<a name="line-93"></a><span class="kt">void</span> <span class="n">ResourceManager</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;::</span><span class="n">unregisterResource</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">path_</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-94"></a>	<span class="kr">typename</span> <span class="n">typeMap</span><span class="o">::</span><span class="n">const_iterator</span> <span class="n">it</span><span class="p">;</span>
-<a name="line-95"></a>	<span class="n">it</span> <span class="o">=</span> <span class="n">resources</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">path_</span><span class="p">);</span>
-<a name="line-96"></a>
-<a name="line-97"></a>	<span class="k">if</span> <span class="p">(</span><span class="n">it</span> <span class="o">!=</span> <span class="n">resources</span><span class="p">.</span><span class="n">end</span><span class="p">())</span> <span class="p">{</span>
-<a name="line-98"></a>		<span class="n">resources</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">it</span><span class="p">);</span>
-<a name="line-99"></a>	<span class="p">}</span>
-<a name="line-100"></a><span class="p">}</span>
+<a name="line-7"></a><span class="cp">#include &quot;util/Assert.h&quot;</span>
+<a name="line-8"></a><span class="c1">// Begin Game States includes</span>
+<a name="line-9"></a><span class="cp">#include &quot;engine/GStatePlaceholder.h&quot;</span>
+<a name="line-10"></a><span class="c1">// End Game States includes</span>
+<a name="line-11"></a>
+<a name="line-12"></a><span class="cp">#define ADD_STATE(stateEnum, stateClass) \</span>
+<a name="line-13"></a><span class="cp">	m_game_states.insert(std::make_pair(stateEnum, new stateClass()))</span>
+<a name="line-14"></a>
+<a name="line-15"></a><span class="k">namespace</span> <span class="n">sdl2engine</span> <span class="p">{</span>
+<a name="line-16"></a>
+<a name="line-17"></a><span class="n">Game</span><span class="o">&amp;</span> <span class="n">Game</span><span class="o">::</span><span class="n">Instance</span><span class="p">()</span> <span class="p">{</span>
+<a name="line-18"></a>	<span class="c1">// &quot;C++11 mandates that the initializer for a local static variable is only run once, even</span>
+<a name="line-19"></a>	<span class="c1">// in the presence of concurrency. So, assuming you’ve got a modern C++ compiler, this code</span>
+<a name="line-20"></a>	<span class="c1">// is thread-safe[...]&quot;</span>
+<a name="line-21"></a>	<span class="k">static</span> <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">Game</span><span class="o">&gt;</span> <span class="n">instance</span><span class="p">{</span><span class="k">new</span> <span class="n">Game</span><span class="p">};</span>
+<a name="line-22"></a>	<span class="k">return</span> <span class="o">*</span><span class="n">instance</span><span class="p">.</span><span class="n">get</span><span class="p">();</span>
+<a name="line-23"></a><span class="p">}</span>
+<a name="line-24"></a>
+<a name="line-25"></a><span class="n">Game</span><span class="o">::</span><span class="n">Game</span><span class="p">()</span> <span class="o">:</span>
+<a name="line-26"></a>	<span class="n">m_is_running</span><span class="p">{</span><span class="nb">false</span><span class="p">},</span>
+<a name="line-27"></a>	<span class="n">m_audio_handler</span><span class="p">{</span><span class="k">new</span> <span class="n">AudioHandler</span><span class="p">()},</span>
+<a name="line-28"></a>	<span class="n">m_input_handler</span><span class="p">{</span><span class="k">new</span> <span class="n">InputHandler</span><span class="p">()},</span>
+<a name="line-29"></a>	<span class="n">m_resource_handler</span><span class="p">{</span><span class="k">new</span> <span class="n">ResourceHandler</span><span class="p">()},</span>
+<a name="line-30"></a>	<span class="n">m_current_state</span><span class="p">{</span><span class="k">nullptr</span><span class="p">},</span>
+<a name="line-31"></a>	<span class="n">m_window</span><span class="p">{},</span>
+<a name="line-32"></a>	<span class="n">m_game_states</span><span class="p">{}</span>
+<a name="line-33"></a><span class="p">{</span>
+<a name="line-34"></a>	<span class="n">InitializeStates</span><span class="p">();</span>
+<a name="line-35"></a>	<span class="n">m_is_running</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+<a name="line-36"></a><span class="p">}</span>
+<a name="line-37"></a>
+<a name="line-38"></a><span class="n">Game</span><span class="o">::~</span><span class="n">Game</span><span class="p">()</span> <span class="p">{</span>
+<a name="line-39"></a>	<span class="k">if</span><span class="p">(</span><span class="n">m_current_state</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span> <span class="p">{</span>
+<a name="line-40"></a>		<span class="n">m_current_state</span><span class="o">-&gt;</span><span class="n">unload</span><span class="p">();</span>
+<a name="line-41"></a>	<span class="p">}</span>
+<a name="line-42"></a>
+<a name="line-43"></a>	<span class="n">DestroyStates</span><span class="p">();</span>
+<a name="line-44"></a>
+<a name="line-45"></a>	<span class="k">delete</span> <span class="n">m_audio_handler</span><span class="p">;</span>
+<a name="line-46"></a>	<span class="k">delete</span> <span class="n">m_input_handler</span><span class="p">;</span>
+<a name="line-47"></a>	<span class="k">delete</span> <span class="n">m_resource_handler</span><span class="p">;</span>
+<a name="line-48"></a><span class="p">}</span>
+<a name="line-49"></a>
+<a name="line-50"></a><span class="kt">void</span> <span class="n">Game</span><span class="o">::</span><span class="n">Run</span><span class="p">()</span> <span class="p">{</span>
+<a name="line-51"></a>	<span class="c1">// Load the first state of the game.</span>
+<a name="line-52"></a>	<span class="n">m_current_state</span> <span class="o">=</span> <span class="n">m_game_states</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">GStates</span><span class="o">::</span><span class="n">PLACEHOLDER</span><span class="p">);</span>
+<a name="line-53"></a>	<span class="n">m_current_state</span><span class="o">-&gt;</span><span class="n">load</span><span class="p">();</span>
+<a name="line-54"></a>
+<a name="line-55"></a>	<span class="c1">// Get the first game time.</span>
+<a name="line-56"></a>	<span class="k">const</span> <span class="kt">double</span> <span class="n">deltaTime</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="mf">60.0</span><span class="p">;</span>
+<a name="line-57"></a><span class="hll">	<span class="kt">double</span> <span class="n">totalGameTime</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span><span class='error2'>&lt;--- Variable 'totalGameTime' is assigned a value that is never used</span>
+</span><a name="line-58"></a>	<span class="kt">double</span> <span class="n">accumulatedTime</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
+<a name="line-59"></a>
+<a name="line-60"></a>	<span class="k">using</span> <span class="n">s_clock</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">steady_clock</span><span class="p">;</span>
+<a name="line-61"></a>	<span class="n">s_clock</span><span class="o">::</span><span class="n">time_point</span> <span class="n">lastTime</span> <span class="o">=</span> <span class="n">s_clock</span><span class="o">::</span><span class="n">now</span><span class="p">();</span>
+<a name="line-62"></a>
+<a name="line-63"></a>	<span class="c1">// This is the main game loop.</span>
+<a name="line-64"></a>	<span class="k">while</span><span class="p">(</span><span class="n">m_is_running</span><span class="p">)</span> <span class="p">{</span>
+<a name="line-65"></a>
+<a name="line-66"></a><span class="cp">#ifdef ICYTIMEDRUN</span>
+<a name="line-67"></a>		<span class="c1">// Auto-close the game in 2 seconds so TravisCI doesn&#39;t loop forever</span>
+<a name="line-68"></a>		<span class="k">if</span><span class="p">(</span><span class="n">totalGameTime</span> <span class="o">&gt;=</span> <span class="mf">2.0</span><span class="p">)</span> <span class="p">{</span>
+<a name="line-69"></a>			<span class="n">m_is_running</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+<a name="line-70"></a>		<span class="p">}</span>
+<a name="line-71"></a><span class="cp">#endif</span>
+<a name="line-72"></a>
+<a name="line-73"></a>		<span class="n">s_clock</span><span class="o">::</span><span class="n">time_point</span> <span class="n">now</span> <span class="o">=</span> <span class="n">s_clock</span><span class="o">::</span><span class="n">now</span><span class="p">();</span>
+<a name="line-74"></a>		<span class="n">s_clock</span><span class="o">::</span><span class="n">duration</span> <span class="n">dt</span><span class="p">{</span><span class="n">now</span> <span class="o">-</span> <span class="n">lastTime</span><span class="p">};</span>
+<a name="line-75"></a>
+<a name="line-76"></a>		<span class="k">const</span> <span class="kt">double</span> <span class="n">frameTime</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">duration_cast</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">duration</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">ratio</span><span class="o">&lt;</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="o">&gt;&gt;&gt;</span><span class="p">(</span><span class="n">dt</span><span class="p">).</span><span class="n">count</span><span class="p">();</span>
+<a name="line-77"></a>		<span class="n">accumulatedTime</span> <span class="o">+=</span> <span class="n">frameTime</span><span class="p">;</span>
+<a name="line-78"></a>
+<a name="line-79"></a>		<span class="c1">// Update.</span>
+<a name="line-80"></a>		<span class="k">while</span><span class="p">(</span><span class="n">accumulatedTime</span> <span class="o">&gt;=</span> <span class="n">deltaTime</span><span class="p">)</span> <span class="p">{</span>
+<a name="line-81"></a>			<span class="n">m_input_handler</span><span class="o">-&gt;</span><span class="n">handleInput</span><span class="p">();</span>
+<a name="line-82"></a>
+<a name="line-83"></a>			<span class="c1">// Check for an exit signal from input.</span>
+<a name="line-84"></a>			<span class="k">if</span><span class="p">(</span><span class="n">m_input_handler</span><span class="o">-&gt;</span><span class="n">isQuitFlag</span><span class="p">()</span> <span class="o">==</span> <span class="nb">true</span><span class="p">)</span> <span class="p">{</span>
+<a name="line-85"></a>				<span class="n">Stop</span><span class="p">();</span>
+<a name="line-86"></a>				<span class="k">return</span><span class="p">;</span>
+<a name="line-87"></a>			<span class="p">}</span>
+<a name="line-88"></a>
+<a name="line-89"></a>			<span class="n">m_current_state</span><span class="o">-&gt;</span><span class="n">update</span><span class="p">(</span><span class="n">deltaTime</span><span class="p">);</span>
+<a name="line-90"></a>
+<a name="line-91"></a>			<span class="n">accumulatedTime</span> <span class="o">-=</span> <span class="n">deltaTime</span><span class="p">;</span>
+<a name="line-92"></a>			<span class="n">totalGameTime</span> <span class="o">+=</span> <span class="n">deltaTime</span><span class="p">;</span>
+<a name="line-93"></a>		<span class="p">}</span>
+<a name="line-94"></a>
+<a name="line-95"></a>		<span class="c1">// Render.</span>
+<a name="line-96"></a>		<span class="n">m_window</span><span class="p">.</span><span class="n">GetRenderer</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">Clear</span><span class="p">();</span>
+<a name="line-97"></a>		<span class="n">m_current_state</span><span class="o">-&gt;</span><span class="n">render</span><span class="p">();</span>
+<a name="line-98"></a>		<span class="n">m_window</span><span class="p">.</span><span class="n">GetRenderer</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">Render</span><span class="p">();</span>
+<a name="line-99"></a>
+<a name="line-100"></a>		<span class="n">lastTime</span> <span class="o">=</span> <span class="n">now</span><span class="p">;</span>
+<a name="line-101"></a>
+<a name="line-102"></a>	<span class="p">}</span>
+<a name="line-103"></a>
+<a name="line-104"></a><span class="p">}</span>
+<a name="line-105"></a>
+<a name="line-106"></a><span class="kt">void</span> <span class="n">Game</span><span class="o">::</span><span class="n">ChangeState</span><span class="p">(</span><span class="k">const</span> <span class="n">GStates</span> <span class="n">game_state</span><span class="p">)</span> <span class="p">{</span>
+<a name="line-107"></a>	<span class="c1">/// @todo Implement the transition between states.</span>
+<a name="line-108"></a>	<span class="n">m_current_state</span><span class="o">-&gt;</span><span class="n">unload</span><span class="p">();</span>
+<a name="line-109"></a>	<span class="n">m_current_state</span> <span class="o">=</span> <span class="n">m_game_states</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">game_state</span><span class="p">);</span>
+<a name="line-110"></a>	<span class="n">m_current_state</span><span class="o">-&gt;</span><span class="n">load</span><span class="p">();</span>
+<a name="line-111"></a><span class="p">}</span>
+<a name="line-112"></a>
+<a name="line-113"></a><span class="kt">void</span> <span class="n">Game</span><span class="o">::</span><span class="n">InitializeStates</span><span class="p">()</span> <span class="p">{</span>
+<a name="line-114"></a>	<span class="c1">// Initialize all the states in Game here.</span>
+<a name="line-115"></a>
+<a name="line-116"></a>	<span class="c1">// Insert the states pointers onto the map.</span>
+<a name="line-117"></a>	<span class="c1">/// @todo Emplace instead of insert.</span>
+<a name="line-118"></a>	<span class="n">ADD_STATE</span><span class="p">(</span><span class="n">PLACEHOLDER</span><span class="p">,</span> <span class="n">GStatePlaceholder</span><span class="p">);</span>
+<a name="line-119"></a><span class="p">}</span>
+<a name="line-120"></a>
+<a name="line-121"></a><span class="kt">void</span> <span class="n">Game</span><span class="o">::</span><span class="n">DestroyStates</span><span class="p">()</span> <span class="p">{</span>
+<a name="line-122"></a>	<span class="n">StatesMap</span><span class="o">::</span><span class="n">const_iterator</span> <span class="n">it</span><span class="p">;</span>
+<a name="line-123"></a><span class="hll">    <span class="k">for</span><span class="p">(</span><span class="n">it</span> <span class="o">=</span> <span class="n">m_game_states</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span> <span class="n">it</span> <span class="o">!=</span> <span class="n">m_game_states</span><span class="p">.</span><span class="n">end</span><span class="p">();</span> <span class="n">it</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span><div class='verbose expandable'><span class='error2'>&lt;--- Prefer prefix ++/-- operators for non-primitive types. <span class='marker'>[+]</span></span><div class='content'>Prefix ++/-- operators should be preferred for non-primitive types. Pre-increment/decrement can be more efficient than post-increment/decrement. Post-increment/decrement usually involves keeping a copy of the previous value around and adds a little extra code.</div></div>
+</span><a name="line-124"></a>        <span class="k">delete</span> <span class="n">it</span><span class="o">-&gt;</span><span class="n">second</span><span class="p">;</span>
+<a name="line-125"></a>    <span class="p">}</span>
+<a name="line-126"></a><span class="p">}</span>
+<a name="line-127"></a>
+<a name="line-128"></a><span class="n">AudioHandler</span><span class="o">&amp;</span> <span class="n">Game</span><span class="o">::</span><span class="n">GetAudioHandler</span><span class="p">()</span> <span class="p">{</span>
+<a name="line-129"></a>	<span class="k">return</span> <span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="n">m_audio_handler</span><span class="p">));</span>
+<a name="line-130"></a><span class="p">}</span>
+<a name="line-131"></a>
+<a name="line-132"></a><span class="n">InputArray</span> <span class="n">Game</span><span class="o">::</span><span class="n">Input</span><span class="p">()</span> <span class="p">{</span>
+<a name="line-133"></a>	<span class="k">return</span> <span class="n">m_input_handler</span><span class="o">-&gt;</span><span class="n">getKeyStates</span><span class="p">();</span>
+<a name="line-134"></a><span class="p">}</span>
+<a name="line-135"></a>
+<a name="line-136"></a><span class="kt">void</span> <span class="n">Game</span><span class="o">::</span><span class="n">Stop</span><span class="p">()</span> <span class="p">{</span>
+<a name="line-137"></a>	<span class="n">m_is_running</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+<a name="line-138"></a><span class="p">}</span>
+<a name="line-139"></a>
+<a name="line-140"></a><span class="kt">void</span> <span class="n">Game</span><span class="o">::</span><span class="n">ClearInputKey</span><span class="p">(</span><span class="k">const</span> <span class="n">GameKeys</span> <span class="n">input_key</span><span class="p">)</span> <span class="p">{</span>
+<a name="line-141"></a>	<span class="n">m_input_handler</span><span class="o">-&gt;</span><span class="n">clearKey</span><span class="p">(</span><span class="n">input_key</span><span class="p">);</span>
+<a name="line-142"></a><span class="p">}</span>
+<a name="line-143"></a>
+<a name="line-144"></a><span class="kt">void</span> <span class="n">Game</span><span class="o">::</span><span class="n">ResizeWindow</span><span class="p">(</span><span class="k">const</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="k">const</span> <span class="kt">int</span> <span class="n">height</span><span class="p">)</span> <span class="p">{</span>
+<a name="line-145"></a>	<span class="n">ASSERT</span><span class="p">(</span><span class="n">width</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="p">,</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
+<a name="line-146"></a>	<span class="n">ASSERT</span><span class="p">(</span><span class="n">height</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
+<a name="line-147"></a>	<span class="n">m_window</span><span class="p">.</span><span class="n">Resize</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">);</span>
+<a name="line-148"></a><span class="p">}</span>
+<a name="line-149"></a>
+<a name="line-150"></a><span class="n">Renderer</span><span class="o">*</span> <span class="n">Game</span><span class="o">::</span><span class="n">GetRenderer</span><span class="p">()</span> <span class="p">{</span>
+<a name="line-151"></a>	<span class="k">return</span> <span class="n">m_window</span><span class="p">.</span><span class="n">GetRenderer</span><span class="p">();</span>
+<a name="line-152"></a><span class="p">}</span>
+<a name="line-153"></a>
+<a name="line-154"></a><span class="n">ResourceHandler</span><span class="o">&amp;</span> <span class="n">Game</span><span class="o">::</span><span class="n">Resource</span><span class="p">()</span> <span class="p">{</span>
+<a name="line-155"></a>	<span class="k">return</span> <span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="n">m_resource_handler</span><span class="p">));</span>
+<a name="line-156"></a><span class="p">}</span>
+<a name="line-157"></a>
+<a name="line-158"></a><span class="p">}</span> <span class="c1">// namespace sdl2engine</span>
+<a name="line-159"></a>
+<a name="line-160"></a><span class="cp">#undef ADD_STATE</span>
 </pre></div>
 </td></tr></table>
       </div>

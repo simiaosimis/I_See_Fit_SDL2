@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['uncopyable',['Uncopyable',['../classUncopyable.html',1,'']]],
-  ['util',['Util',['../classUtil.html',1,'']]]
+  ['window',['Window',['../classsdl2engine_1_1Window.html',1,'sdl2engine']]]
 ];

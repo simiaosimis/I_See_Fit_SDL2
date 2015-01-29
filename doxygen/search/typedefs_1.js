@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['log_5ffunction_5fptr',['log_function_ptr',['../Logger_8h.html#adf4f7842b9746e4cc24988d037523547',1,'Logger.h']]]
+  ['log_5ffunction_5fptr',['log_function_ptr',['../namespacesdl2engine.html#a798e7c6b0c28edef46c680a42ff13869',1,'sdl2engine']]]
 ];

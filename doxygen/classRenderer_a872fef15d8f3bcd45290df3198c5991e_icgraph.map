@@ -1,5 +1,0 @@
-<map id="Renderer::SdlRenderer" name="Renderer::SdlRenderer">
-<area shape="rect" id="node3" href="$classSprite.html#afefe077c09cca7bcfc06d006763a3a41" title="Renders the sprite. " alt="" coords="208,44,315,73"/>
-<area shape="rect" id="node5" href="$classGStatePlaceholder.html#ad48aea57e922a0f83dc140f6e9a1078b" title="GStatePlaceholder::\lrender" alt="" coords="363,5,501,51"/>
-<area shape="rect" id="node7" href="$classText.html#a61dff362532c385dbc0650b397138635" title="Text::render" alt="" coords="387,75,477,104"/>
-</map>

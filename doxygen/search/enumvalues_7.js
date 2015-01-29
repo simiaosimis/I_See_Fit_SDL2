@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['max',['MAX',['../InputKeys_8h.html#a17c007927233f6413a2ab048056ddf5ead7e097bda6d981de2520f49fe74c25b7',1,'InputKeys.h']]]
+  ['max',['MAX',['../namespacesdl2engine.html#a92e23178a19914e86fa4f7640dcde170a0d4c59538d2b61f7d152afb5471d78e3',1,'sdl2engine']]]
 ];

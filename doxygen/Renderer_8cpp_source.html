@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v30</span>
+   &#160;<span id="projectnumber">v31</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -96,83 +96,87 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Logger_8h.html">util/Logger.h</a>&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Assert_8h.html">util/Assert.h</a>&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classRenderer.html#a432676947d6b8128562b0adc6d631268">    6</a></span>&#160;<a class="code" href="classRenderer.html#a432676947d6b8128562b0adc6d631268">Renderer::Renderer</a>(SDL_Window* <span class="keyword">const</span> sdl_window, <span class="keyword">const</span> Uint32 flags) :</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    m_sdl_renderer{SDL_CreateRenderer(sdl_window, -1, flags)}</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordflow">if</span>(m_sdl_renderer == <span class="keyword">nullptr</span>){</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <a class="code" href="Logger_8h.html#adb146b8b8f51bb5055c2db742b57bcd2">log_error</a>() &lt;&lt; <span class="stringliteral">&quot;Renderer could not be created. &quot;</span> &lt;&lt; SDL_GetError();</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    }</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;}</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classRenderer.html#afeee408862d5bd6255a6882d47e6d5cd">   14</a></span>&#160;<a class="code" href="classRenderer.html#afeee408862d5bd6255a6882d47e6d5cd">Renderer::~Renderer</a>() {</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="classRenderer.html#a4f4f85c7fc5493543521463ecb4e2a36">m_sdl_renderer</a> != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        SDL_DestroyRenderer(<a class="code" href="classRenderer.html#a4f4f85c7fc5493543521463ecb4e2a36">m_sdl_renderer</a>);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    }</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classRenderer.html#aeedbc2ffdccf51fa1384100446488746">   20</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classRenderer.html#aeedbc2ffdccf51fa1384100446488746">Renderer::Clear</a>() {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> k_set_color = SDL_SetRenderDrawColor(<a class="code" href="classRenderer.html#a4f4f85c7fc5493543521463ecb4e2a36">m_sdl_renderer</a>, 0x00, 0x00, 0x00, 0xFF);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">if</span>(k_set_color != 0){</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <a class="code" href="Logger_8h.html#adb146b8b8f51bb5055c2db742b57bcd2">log_error</a>() &lt;&lt; <span class="stringliteral">&quot;Failed to set renderer draw color. &quot;</span> &lt;&lt; SDL_GetError();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    }</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> k_clear_renderer = SDL_RenderClear(<a class="code" href="classRenderer.html#a4f4f85c7fc5493543521463ecb4e2a36">m_sdl_renderer</a>);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">if</span>(k_clear_renderer != 0){</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="Logger_8h.html#adb146b8b8f51bb5055c2db742b57bcd2">log_error</a>() &lt;&lt; <span class="stringliteral">&quot;Failed to clear the renderer. &quot;</span> &lt;&lt; SDL_GetError();</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classRenderer.html#adde94d3402b015b1fcd23c9a283cae2e">   32</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classRenderer.html#adde94d3402b015b1fcd23c9a283cae2e">Renderer::Render</a>() {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    SDL_RenderPresent(<a class="code" href="classRenderer.html#a4f4f85c7fc5493543521463ecb4e2a36">m_sdl_renderer</a>);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classRenderer.html#a16a84d028e9b34f516a171d5403be477">   36</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classRenderer.html#a16a84d028e9b34f516a171d5403be477">Renderer::SetLogicalSize</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> size) {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(size &gt;= 0, <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">// Just a precaution, so there is no abuse on the size.</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> k_safe_size = 10;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(size &lt; k_safe_size, <span class="stringliteral">&quot;Trying to set logical size for a value too big.&quot;</span>);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> k_set_size = SDL_RenderSetLogicalSize(<a class="code" href="classRenderer.html#a4f4f85c7fc5493543521463ecb4e2a36">m_sdl_renderer</a>,</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="classConfiguration.html#aa55f2fb145dfe12ecc91eb2f76b6e0a8">Configuration::ResolutionWidth</a>() * size, <a class="code" href="classConfiguration.html#a002ef2d0a384e4d7ff04dd2d16ae3172">Configuration::ResolutionHeight</a>() * size);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">if</span>(k_set_size != 0) {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="Logger_8h.html#adb146b8b8f51bb5055c2db742b57bcd2">log_error</a>() &lt;&lt; <span class="stringliteral">&quot;Failed to set the renderer logical size. &quot;</span> &lt;&lt; SDL_GetError();</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classRenderer.html#ae60d5ef1af57d46cce0b703580d1bce4">   51</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classRenderer.html#ae60d5ef1af57d46cce0b703580d1bce4">Renderer::LogicalSize</a>(<span class="keywordtype">int</span>* width, <span class="keywordtype">int</span>* height) {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    SDL_RenderGetLogicalSize(<a class="code" href="classRenderer.html#a4f4f85c7fc5493543521463ecb4e2a36">m_sdl_renderer</a>, width, height);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">if</span>((*width) == 0 &amp;&amp; (*height) == 0) {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="Logger_8h.html#a087a4a82f92e6848d2f39cd7660b6173">log_warn</a>() &lt;&lt; <span class="stringliteral">&quot;Tried to get logical size of renderer, but it has never been set.&quot;</span>;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classRenderer.html#a872fef15d8f3bcd45290df3198c5991e">   59</a></span>&#160;SDL_Renderer* <a class="code" href="classRenderer.html#a872fef15d8f3bcd45290df3198c5991e">Renderer::SdlRenderer</a>() {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classRenderer.html#a4f4f85c7fc5493543521463ecb4e2a36">m_sdl_renderer</a>;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
-<div class="ttc" id="Logger_8h_html_a087a4a82f92e6848d2f39cd7660b6173"><div class="ttname"><a href="Logger_8h.html#a087a4a82f92e6848d2f39cd7660b6173">log_warn</a></div><div class="ttdeci">constexpr log_function_ptr log_warn</div><div class="ttdef"><b>Definition:</b> <a href="Logger_8h_source.html#l00084">Logger.h:84</a></div></div>
-<div class="ttc" id="classRenderer_html_afeee408862d5bd6255a6882d47e6d5cd"><div class="ttname"><a href="classRenderer.html#afeee408862d5bd6255a6882d47e6d5cd">Renderer::~Renderer</a></div><div class="ttdeci">~Renderer()</div><div class="ttdoc">The destructor. </div><div class="ttdef"><b>Definition:</b> <a href="Renderer_8cpp_source.html#l00014">Renderer.cpp:14</a></div></div>
-<div class="ttc" id="classConfiguration_html_a002ef2d0a384e4d7ff04dd2d16ae3172"><div class="ttname"><a href="classConfiguration.html#a002ef2d0a384e4d7ff04dd2d16ae3172">Configuration::ResolutionHeight</a></div><div class="ttdeci">static int ResolutionHeight()</div><div class="ttdef"><b>Definition:</b> <a href="Configuration_8cpp_source.html#l00042">Configuration.cpp:42</a></div></div>
-<div class="ttc" id="classRenderer_html_adde94d3402b015b1fcd23c9a283cae2e"><div class="ttname"><a href="classRenderer.html#adde94d3402b015b1fcd23c9a283cae2e">Renderer::Render</a></div><div class="ttdeci">void Render()</div><div class="ttdoc">Renders everything drawn in a frame. </div><div class="ttdef"><b>Definition:</b> <a href="Renderer_8cpp_source.html#l00032">Renderer.cpp:32</a></div></div>
-<div class="ttc" id="classConfiguration_html_aa55f2fb145dfe12ecc91eb2f76b6e0a8"><div class="ttname"><a href="classConfiguration.html#aa55f2fb145dfe12ecc91eb2f76b6e0a8">Configuration::ResolutionWidth</a></div><div class="ttdeci">static int ResolutionWidth()</div><div class="ttdef"><b>Definition:</b> <a href="Configuration_8cpp_source.html#l00038">Configuration.cpp:38</a></div></div>
-<div class="ttc" id="classRenderer_html_a432676947d6b8128562b0adc6d631268"><div class="ttname"><a href="classRenderer.html#a432676947d6b8128562b0adc6d631268">Renderer::Renderer</a></div><div class="ttdeci">Renderer(SDL_Window *const sdl_window, const Uint32 flags)</div><div class="ttdoc">The constructor. </div><div class="ttdef"><b>Definition:</b> <a href="Renderer_8cpp_source.html#l00006">Renderer.cpp:6</a></div></div>
-<div class="ttc" id="Logger_8h_html_adb146b8b8f51bb5055c2db742b57bcd2"><div class="ttname"><a href="Logger_8h.html#adb146b8b8f51bb5055c2db742b57bcd2">log_error</a></div><div class="ttdeci">constexpr log_function_ptr log_error</div><div class="ttdef"><b>Definition:</b> <a href="Logger_8h_source.html#l00083">Logger.h:83</a></div></div>
-<div class="ttc" id="classRenderer_html_a4f4f85c7fc5493543521463ecb4e2a36"><div class="ttname"><a href="classRenderer.html#a4f4f85c7fc5493543521463ecb4e2a36">Renderer::m_sdl_renderer</a></div><div class="ttdeci">SDL_Renderer * m_sdl_renderer</div><div class="ttdef"><b>Definition:</b> <a href="Renderer_8h_source.html#l00068">Renderer.h:68</a></div></div>
-<div class="ttc" id="classRenderer_html_a16a84d028e9b34f516a171d5403be477"><div class="ttname"><a href="classRenderer.html#a16a84d028e9b34f516a171d5403be477">Renderer::SetLogicalSize</a></div><div class="ttdeci">void SetLogicalSize(const int size)</div><div class="ttdoc">Rescales the renderization. </div><div class="ttdef"><b>Definition:</b> <a href="Renderer_8cpp_source.html#l00036">Renderer.cpp:36</a></div></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span>sdl2engine {</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1Renderer.html#a75db8a5077a6efa4b6defda741fea9d7">    8</a></span>&#160;<a class="code" href="classsdl2engine_1_1Renderer.html#a75db8a5077a6efa4b6defda741fea9d7">Renderer::Renderer</a>(SDL_Window* <span class="keyword">const</span> sdl_window, <span class="keyword">const</span> Uint32 flags) :</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    m_sdl_renderer{SDL_CreateRenderer(sdl_window, -1, flags)}</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordflow">if</span>(m_sdl_renderer == <span class="keyword">nullptr</span>){</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <a class="code" href="namespacesdl2engine.html#a5b2cd64e9633f9ecfda37e160b02852f">log_error</a>() &lt;&lt; <span class="stringliteral">&quot;Renderer could not be created. &quot;</span> &lt;&lt; SDL_GetError();</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    }</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1Renderer.html#ad77f072c0112c51f87284d1e83d24e13">   16</a></span>&#160;<a class="code" href="classsdl2engine_1_1Renderer.html#ad77f072c0112c51f87284d1e83d24e13">Renderer::~Renderer</a>() {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="classsdl2engine_1_1Renderer.html#ad9704015617fca483f7b17bf5517bd36">m_sdl_renderer</a> != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        SDL_DestroyRenderer(<a class="code" href="classsdl2engine_1_1Renderer.html#ad9704015617fca483f7b17bf5517bd36">m_sdl_renderer</a>);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    }</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1Renderer.html#a8fb21b238a2a807c6c650c54239a823c">   22</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1Renderer.html#a8fb21b238a2a807c6c650c54239a823c">Renderer::Clear</a>() {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> k_set_color = SDL_SetRenderDrawColor(<a class="code" href="classsdl2engine_1_1Renderer.html#ad9704015617fca483f7b17bf5517bd36">m_sdl_renderer</a>, 0x00, 0x00, 0x00, 0xFF);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">if</span>(k_set_color != 0){</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="namespacesdl2engine.html#a5b2cd64e9633f9ecfda37e160b02852f">log_error</a>() &lt;&lt; <span class="stringliteral">&quot;Failed to set renderer draw color. &quot;</span> &lt;&lt; SDL_GetError();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> k_clear_renderer = SDL_RenderClear(<a class="code" href="classsdl2engine_1_1Renderer.html#ad9704015617fca483f7b17bf5517bd36">m_sdl_renderer</a>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">if</span>(k_clear_renderer != 0){</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="namespacesdl2engine.html#a5b2cd64e9633f9ecfda37e160b02852f">log_error</a>() &lt;&lt; <span class="stringliteral">&quot;Failed to clear the renderer. &quot;</span> &lt;&lt; SDL_GetError();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1Renderer.html#af016a3209a0768f7db19c38ab9489068">   34</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1Renderer.html#af016a3209a0768f7db19c38ab9489068">Renderer::Render</a>() {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    SDL_RenderPresent(<a class="code" href="classsdl2engine_1_1Renderer.html#ad9704015617fca483f7b17bf5517bd36">m_sdl_renderer</a>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1Renderer.html#a6633fee9256aa171b92396b7e67a1689">   38</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1Renderer.html#a6633fee9256aa171b92396b7e67a1689">Renderer::SetLogicalSize</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> size) {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(size &gt;= 0, <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="comment">// Just a precaution, so there is no abuse on the size.</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> k_safe_size = 10;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(size &lt; k_safe_size, <span class="stringliteral">&quot;Trying to set logical size for a value too big.&quot;</span>);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> k_set_size = SDL_RenderSetLogicalSize(<a class="code" href="classsdl2engine_1_1Renderer.html#ad9704015617fca483f7b17bf5517bd36">m_sdl_renderer</a>,</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="classsdl2engine_1_1Configuration.html#a58cb441a464bbec5af7b81d35d94a761">Configuration::ResolutionWidth</a>() * size, <a class="code" href="classsdl2engine_1_1Configuration.html#a8773d6193188c23a93365b11a835704c">Configuration::ResolutionHeight</a>() * size);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">if</span>(k_set_size != 0) {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="namespacesdl2engine.html#a5b2cd64e9633f9ecfda37e160b02852f">log_error</a>() &lt;&lt; <span class="stringliteral">&quot;Failed to set the renderer logical size. &quot;</span> &lt;&lt; SDL_GetError();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1Renderer.html#a2842517bee6bb28d81a96b89c47b2b46">   53</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1Renderer.html#a2842517bee6bb28d81a96b89c47b2b46">Renderer::LogicalSize</a>(<span class="keywordtype">int</span>* width, <span class="keywordtype">int</span>* height) {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    SDL_RenderGetLogicalSize(<a class="code" href="classsdl2engine_1_1Renderer.html#ad9704015617fca483f7b17bf5517bd36">m_sdl_renderer</a>, width, height);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">if</span>((*width) == 0 &amp;&amp; (*height) == 0) {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="code" href="namespacesdl2engine.html#ac31c5eafc7940521da71fab041ac0138">log_warn</a>() &lt;&lt; <span class="stringliteral">&quot;Tried to get logical size of renderer, but it has never been set.&quot;</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1Renderer.html#a6f0a2649cba5368dba4fb99d169af103">   61</a></span>&#160;SDL_Renderer* <a class="code" href="classsdl2engine_1_1Renderer.html#a6f0a2649cba5368dba4fb99d169af103">Renderer::SdlRenderer</a>() {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classsdl2engine_1_1Renderer.html#ad9704015617fca483f7b17bf5517bd36">m_sdl_renderer</a>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;} <span class="comment">// namespace sdl2engine</span></div>
+<div class="ttc" id="namespacesdl2engine_html_a5b2cd64e9633f9ecfda37e160b02852f"><div class="ttname"><a href="namespacesdl2engine.html#a5b2cd64e9633f9ecfda37e160b02852f">sdl2engine::log_error</a></div><div class="ttdeci">constexpr log_function_ptr log_error</div><div class="ttdef"><b>Definition:</b> <a href="Logger_8h_source.html#l00085">Logger.h:85</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1Renderer_html_a6633fee9256aa171b92396b7e67a1689"><div class="ttname"><a href="classsdl2engine_1_1Renderer.html#a6633fee9256aa171b92396b7e67a1689">sdl2engine::Renderer::SetLogicalSize</a></div><div class="ttdeci">void SetLogicalSize(const int size)</div><div class="ttdoc">Rescales the renderization. </div><div class="ttdef"><b>Definition:</b> <a href="Renderer_8cpp_source.html#l00038">Renderer.cpp:38</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1Renderer_html_ad77f072c0112c51f87284d1e83d24e13"><div class="ttname"><a href="classsdl2engine_1_1Renderer.html#ad77f072c0112c51f87284d1e83d24e13">sdl2engine::Renderer::~Renderer</a></div><div class="ttdeci">~Renderer()</div><div class="ttdoc">The destructor. </div><div class="ttdef"><b>Definition:</b> <a href="Renderer_8cpp_source.html#l00016">Renderer.cpp:16</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1Renderer_html_a8fb21b238a2a807c6c650c54239a823c"><div class="ttname"><a href="classsdl2engine_1_1Renderer.html#a8fb21b238a2a807c6c650c54239a823c">sdl2engine::Renderer::Clear</a></div><div class="ttdeci">void Clear()</div><div class="ttdoc">Clears previous rendering. </div><div class="ttdef"><b>Definition:</b> <a href="Renderer_8cpp_source.html#l00022">Renderer.cpp:22</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1Configuration_html_a58cb441a464bbec5af7b81d35d94a761"><div class="ttname"><a href="classsdl2engine_1_1Configuration.html#a58cb441a464bbec5af7b81d35d94a761">sdl2engine::Configuration::ResolutionWidth</a></div><div class="ttdeci">static int ResolutionWidth()</div><div class="ttdef"><b>Definition:</b> <a href="Configuration_8cpp_source.html#l00038">Configuration.cpp:38</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1Renderer_html_af016a3209a0768f7db19c38ab9489068"><div class="ttname"><a href="classsdl2engine_1_1Renderer.html#af016a3209a0768f7db19c38ab9489068">sdl2engine::Renderer::Render</a></div><div class="ttdeci">void Render()</div><div class="ttdoc">Renders everything drawn in a frame. </div><div class="ttdef"><b>Definition:</b> <a href="Renderer_8cpp_source.html#l00034">Renderer.cpp:34</a></div></div>
+<div class="ttc" id="namespacesdl2engine_html_ac31c5eafc7940521da71fab041ac0138"><div class="ttname"><a href="namespacesdl2engine.html#ac31c5eafc7940521da71fab041ac0138">sdl2engine::log_warn</a></div><div class="ttdeci">constexpr log_function_ptr log_warn</div><div class="ttdef"><b>Definition:</b> <a href="Logger_8h_source.html#l00086">Logger.h:86</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1Renderer_html_a6f0a2649cba5368dba4fb99d169af103"><div class="ttname"><a href="classsdl2engine_1_1Renderer.html#a6f0a2649cba5368dba4fb99d169af103">sdl2engine::Renderer::SdlRenderer</a></div><div class="ttdeci">SDL_Renderer * SdlRenderer()</div><div class="ttdef"><b>Definition:</b> <a href="Renderer_8cpp_source.html#l00061">Renderer.cpp:61</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1Configuration_html_a8773d6193188c23a93365b11a835704c"><div class="ttname"><a href="classsdl2engine_1_1Configuration.html#a8773d6193188c23a93365b11a835704c">sdl2engine::Configuration::ResolutionHeight</a></div><div class="ttdeci">static int ResolutionHeight()</div><div class="ttdef"><b>Definition:</b> <a href="Configuration_8cpp_source.html#l00042">Configuration.cpp:42</a></div></div>
 <div class="ttc" id="Assert_8h_html_ab1899199386b1542d1111168ca847e9c"><div class="ttname"><a href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a></div><div class="ttdeci">#define ASSERT(expression, message)</div><div class="ttdef"><b>Definition:</b> <a href="Assert_8h_source.html#l00006">Assert.h:6</a></div></div>
-<div class="ttc" id="classRenderer_html_aeedbc2ffdccf51fa1384100446488746"><div class="ttname"><a href="classRenderer.html#aeedbc2ffdccf51fa1384100446488746">Renderer::Clear</a></div><div class="ttdeci">void Clear()</div><div class="ttdoc">Clears previous rendering. </div><div class="ttdef"><b>Definition:</b> <a href="Renderer_8cpp_source.html#l00020">Renderer.cpp:20</a></div></div>
-<div class="ttc" id="classRenderer_html_a872fef15d8f3bcd45290df3198c5991e"><div class="ttname"><a href="classRenderer.html#a872fef15d8f3bcd45290df3198c5991e">Renderer::SdlRenderer</a></div><div class="ttdeci">SDL_Renderer * SdlRenderer()</div><div class="ttdef"><b>Definition:</b> <a href="Renderer_8cpp_source.html#l00059">Renderer.cpp:59</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1Renderer_html_a2842517bee6bb28d81a96b89c47b2b46"><div class="ttname"><a href="classsdl2engine_1_1Renderer.html#a2842517bee6bb28d81a96b89c47b2b46">sdl2engine::Renderer::LogicalSize</a></div><div class="ttdeci">void LogicalSize(int *width, int *height)</div><div class="ttdoc">Returns the current set logical size through the parameters. </div><div class="ttdef"><b>Definition:</b> <a href="Renderer_8cpp_source.html#l00053">Renderer.cpp:53</a></div></div>
 <div class="ttc" id="Assert_8h_html"><div class="ttname"><a href="Assert_8h.html">Assert.h</a></div></div>
 <div class="ttc" id="Logger_8h_html"><div class="ttname"><a href="Logger_8h.html">Logger.h</a></div></div>
 <div class="ttc" id="Renderer_8h_html"><div class="ttname"><a href="Renderer_8h.html">Renderer.h</a></div></div>
 <div class="ttc" id="Configuration_8h_html"><div class="ttname"><a href="Configuration_8h.html">Configuration.h</a></div></div>
-<div class="ttc" id="classRenderer_html_ae60d5ef1af57d46cce0b703580d1bce4"><div class="ttname"><a href="classRenderer.html#ae60d5ef1af57d46cce0b703580d1bce4">Renderer::LogicalSize</a></div><div class="ttdeci">void LogicalSize(int *width, int *height)</div><div class="ttdoc">Returns the current set logical size through the parameters. </div><div class="ttdef"><b>Definition:</b> <a href="Renderer_8cpp_source.html#l00051">Renderer.cpp:51</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1Renderer_html_ad9704015617fca483f7b17bf5517bd36"><div class="ttname"><a href="classsdl2engine_1_1Renderer.html#ad9704015617fca483f7b17bf5517bd36">sdl2engine::Renderer::m_sdl_renderer</a></div><div class="ttdeci">SDL_Renderer * m_sdl_renderer</div><div class="ttdef"><b>Definition:</b> <a href="Renderer_8h_source.html#l00070">Renderer.h:70</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1Renderer_html_a75db8a5077a6efa4b6defda741fea9d7"><div class="ttname"><a href="classsdl2engine_1_1Renderer.html#a75db8a5077a6efa4b6defda741fea9d7">sdl2engine::Renderer::Renderer</a></div><div class="ttdeci">Renderer(SDL_Window *const sdl_window, const Uint32 flags)</div><div class="ttdoc">The constructor. </div><div class="ttdef"><b>Definition:</b> <a href="Renderer_8cpp_source.html#l00008">Renderer.cpp:8</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 29 2015 00:45:25 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 29 2015 23:28:55 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

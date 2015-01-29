@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v30</span>
+   &#160;<span id="projectnumber">v31</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -93,18 +93,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <a href="MusicManager_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="MusicManager_8h.html">audio/MusicManager.h</a>&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
-<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="classMusicManager.html#a929c1db1d4d5e48744c32c47ce6b63d1">    3</a></span>&#160;std::shared_ptr&lt;Music&gt; <a class="code" href="classMusicManager.html#a929c1db1d4d5e48744c32c47ce6b63d1">MusicManager::load</a>(<span class="keyword">const</span> std::string&amp; path_) {</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    std::shared_ptr&lt;Music&gt; music = std::make_shared&lt;Music&gt;(path_);</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <a class="code" href="classResourceManager.html#a5e08aa5e0c56ab672011d997ff432230">registerResource</a>(path_, music);</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="keywordflow">return</span> music;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;}</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">namespace </span>sdl2engine {</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1MusicManager.html#ab549d69e5c445ad036a109d5383a60d0">    5</a></span>&#160;std::shared_ptr&lt;Music&gt; <a class="code" href="classsdl2engine_1_1MusicManager.html#ab549d69e5c445ad036a109d5383a60d0">MusicManager::load</a>(<span class="keyword">const</span> std::string&amp; path_) {</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    std::shared_ptr&lt;Music&gt; music = std::make_shared&lt;Music&gt;(path_);</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <a class="code" href="classsdl2engine_1_1ResourceManager.html#a03aaa1a9eca9c55856346732df6c42fd">registerResource</a>(path_, music);</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keywordflow">return</span> music;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;}</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;} <span class="comment">// namespace sdl2engine</span></div>
 <div class="ttc" id="MusicManager_8h_html"><div class="ttname"><a href="MusicManager_8h.html">MusicManager.h</a></div></div>
-<div class="ttc" id="classResourceManager_html_a5e08aa5e0c56ab672011d997ff432230"><div class="ttname"><a href="classResourceManager.html#a5e08aa5e0c56ab672011d997ff432230">ResourceManager&lt; Music &gt;::registerResource</a></div><div class="ttdeci">void registerResource(const std::string &amp;path_, typePtr resource_)</div></div>
-<div class="ttc" id="classMusicManager_html_a929c1db1d4d5e48744c32c47ce6b63d1"><div class="ttname"><a href="classMusicManager.html#a929c1db1d4d5e48744c32c47ce6b63d1">MusicManager::load</a></div><div class="ttdeci">std::shared_ptr&lt; Music &gt; load(const std::string &amp;path_)</div><div class="ttdef"><b>Definition:</b> <a href="MusicManager_8cpp_source.html#l00003">MusicManager.cpp:3</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1MusicManager_html_ab549d69e5c445ad036a109d5383a60d0"><div class="ttname"><a href="classsdl2engine_1_1MusicManager.html#ab549d69e5c445ad036a109d5383a60d0">sdl2engine::MusicManager::load</a></div><div class="ttdeci">std::shared_ptr&lt; Music &gt; load(const std::string &amp;path_)</div><div class="ttdef"><b>Definition:</b> <a href="MusicManager_8cpp_source.html#l00005">MusicManager.cpp:5</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1ResourceManager_html_a03aaa1a9eca9c55856346732df6c42fd"><div class="ttname"><a href="classsdl2engine_1_1ResourceManager.html#a03aaa1a9eca9c55856346732df6c42fd">sdl2engine::ResourceManager&lt; Music &gt;::registerResource</a></div><div class="ttdeci">void registerResource(const std::string &amp;path_, typePtr resource_)</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 29 2015 00:45:25 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 29 2015 23:28:55 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

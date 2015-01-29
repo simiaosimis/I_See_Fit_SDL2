@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v30</span>
+   &#160;<span id="projectnumber">v31</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -93,18 +93,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <a href="SFXManager_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="SFXManager_8h.html">audio/SFXManager.h</a>&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
-<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="classSFXManager.html#a61c913d68e0448dbaa3f11ff35026907">    3</a></span>&#160;std::shared_ptr&lt;SoundEffect&gt; <a class="code" href="classSFXManager.html#a61c913d68e0448dbaa3f11ff35026907">SFXManager::load</a>(<span class="keyword">const</span> std::string&amp; path_) {</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    std::shared_ptr&lt;SoundEffect&gt; soundEffect = std::make_shared&lt;SoundEffect&gt;(path_);</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <a class="code" href="classResourceManager.html#a5e08aa5e0c56ab672011d997ff432230">registerResource</a>(path_, soundEffect);</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="keywordflow">return</span> soundEffect;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;}</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">namespace </span>sdl2engine {</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1SFXManager.html#a21715e86b1edf150cc37b32793fb74db">    5</a></span>&#160;std::shared_ptr&lt;SoundEffect&gt; <a class="code" href="classsdl2engine_1_1SFXManager.html#a21715e86b1edf150cc37b32793fb74db">SFXManager::load</a>(<span class="keyword">const</span> std::string&amp; path_) {</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    std::shared_ptr&lt;SoundEffect&gt; soundEffect = std::make_shared&lt;SoundEffect&gt;(path_);</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <a class="code" href="classsdl2engine_1_1ResourceManager.html#a03aaa1a9eca9c55856346732df6c42fd">registerResource</a>(path_, soundEffect);</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keywordflow">return</span> soundEffect;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;}</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;} <span class="comment">// namespace sdl2engine</span></div>
 <div class="ttc" id="SFXManager_8h_html"><div class="ttname"><a href="SFXManager_8h.html">SFXManager.h</a></div></div>
-<div class="ttc" id="classResourceManager_html_a5e08aa5e0c56ab672011d997ff432230"><div class="ttname"><a href="classResourceManager.html#a5e08aa5e0c56ab672011d997ff432230">ResourceManager&lt; SoundEffect &gt;::registerResource</a></div><div class="ttdeci">void registerResource(const std::string &amp;path_, typePtr resource_)</div></div>
-<div class="ttc" id="classSFXManager_html_a61c913d68e0448dbaa3f11ff35026907"><div class="ttname"><a href="classSFXManager.html#a61c913d68e0448dbaa3f11ff35026907">SFXManager::load</a></div><div class="ttdeci">std::shared_ptr&lt; SoundEffect &gt; load(const std::string &amp;path_)</div><div class="ttdef"><b>Definition:</b> <a href="SFXManager_8cpp_source.html#l00003">SFXManager.cpp:3</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1SFXManager_html_a21715e86b1edf150cc37b32793fb74db"><div class="ttname"><a href="classsdl2engine_1_1SFXManager.html#a21715e86b1edf150cc37b32793fb74db">sdl2engine::SFXManager::load</a></div><div class="ttdeci">std::shared_ptr&lt; SoundEffect &gt; load(const std::string &amp;path_)</div><div class="ttdef"><b>Definition:</b> <a href="SFXManager_8cpp_source.html#l00005">SFXManager.cpp:5</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1ResourceManager_html_a03aaa1a9eca9c55856346732df6c42fd"><div class="ttname"><a href="classsdl2engine_1_1ResourceManager.html#a03aaa1a9eca9c55856346732df6c42fd">sdl2engine::ResourceManager&lt; SoundEffect &gt;::registerResource</a></div><div class="ttdeci">void registerResource(const std::string &amp;path_, typePtr resource_)</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 29 2015 00:45:26 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 29 2015 23:28:55 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

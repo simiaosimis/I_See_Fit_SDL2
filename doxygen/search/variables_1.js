@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['boundingbox',['boundingBox',['../classGameObject.html#abf0f01c3312477754c9780fddc73ffa2',1,'GameObject']]]
+  ['boundingbox',['boundingBox',['../classsdl2engine_1_1GameObject.html#ac5ddd5af97843e322fadf54124ac61e6',1,'sdl2engine::GameObject']]]
 ];

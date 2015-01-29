@@ -1,11 +1,10 @@
 <map id="ResourceHandler.h" name="ResourceHandler.h">
-<area shape="rect" id="node3" href="$SpriteManager_8h.html" title="graphics/SpriteManager.h" alt="" coords="311,83,481,112"/>
-<area shape="rect" id="node25" href="$MusicManager_8h.html" title="audio/MusicManager.h" alt="" coords="505,83,657,112"/>
-<area shape="rect" id="node34" href="$SFXManager_8h.html" title="audio/SFXManager.h" alt="" coords="681,83,825,112"/>
-<area shape="rect" id="node7" href="$ResourceManager_8h.html" title="core/ResourceManager.h" alt="" coords="321,160,489,189"/>
-<area shape="rect" id="node20" href="$Sprite_8h.html" title="graphics/Sprite.h" alt="" coords="177,160,297,189"/>
-<area shape="rect" id="node14" href="$Logger_8h.html" title="util/Logger.h" alt="" coords="168,237,261,267"/>
-<area shape="rect" id="node18" href="$Uncopyable_8h.html" title="util/Uncopyable.h" alt="" coords="285,237,408,267"/>
-<area shape="rect" id="node29" href="$Music_8h.html" title="audio/Music.h" alt="" coords="615,160,716,189"/>
-<area shape="rect" id="node38" href="$SoundEffect_8h.html" title="audio/SoundEffect.h" alt="" coords="791,160,929,189"/>
+<area shape="rect" id="node3" href="$SpriteManager_8h.html" title="graphics/SpriteManager.h" alt="" coords="177,83,348,112"/>
+<area shape="rect" id="node23" href="$MusicManager_8h.html" title="audio/MusicManager.h" alt="" coords="372,83,524,112"/>
+<area shape="rect" id="node32" href="$SFXManager_8h.html" title="audio/SFXManager.h" alt="" coords="548,83,692,112"/>
+<area shape="rect" id="node7" href="$ResourceManager_8h.html" title="core/ResourceManager.h" alt="" coords="188,160,356,189"/>
+<area shape="rect" id="node18" href="$Sprite_8h.html" title="graphics/Sprite.h" alt="" coords="44,160,164,189"/>
+<area shape="rect" id="node14" href="$Logger_8h.html" title="util/Logger.h" alt="" coords="331,237,424,267"/>
+<area shape="rect" id="node27" href="$Music_8h.html" title="audio/Music.h" alt="" coords="481,160,583,189"/>
+<area shape="rect" id="node36" href="$SoundEffect_8h.html" title="audio/SoundEffect.h" alt="" coords="657,160,796,189"/>
 </map>

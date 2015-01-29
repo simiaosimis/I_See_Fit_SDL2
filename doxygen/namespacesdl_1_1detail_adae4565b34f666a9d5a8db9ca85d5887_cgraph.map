@@ -1,5 +1,0 @@
-<map id="sdl::detail::SdlRenderDrivers" name="sdl::detail::SdlRenderDrivers">
-<area shape="rect" id="node3" href="$namespacesdl_1_1detail.html#a1043fde12d4ad0694098d20b6b447d40" title="sdl::detail::RendererInfo\lToString" alt="" coords="244,39,404,86"/>
-<area shape="rect" id="node5" href="$namespacesdl_1_1detail.html#ad3a6fe5f8424b0fabab176e9d009dbaa" title="sdl::detail::RendererFlags\lToString" alt="" coords="453,5,624,51"/>
-<area shape="rect" id="node7" href="$namespacesdl_1_1detail.html#a8783793a48f309ffe3d2d4eb7dcc5ae7" title="sdl::detail::PixelFormat\lToString" alt="" coords="461,74,616,121"/>
-</map>
