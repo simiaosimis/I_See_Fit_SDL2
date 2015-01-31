@@ -261,7 +261,7 @@
           </tr>
           <tr>
             <td class="headerName">Date:</td>
-            <td class="headerValue">2015-01-29</td>
+            <td class="headerValue">2015-01-31</td>
             <td></td>
             <td class="headerName">Branches:</td>
             <td class="headerTableEntry">41</td>
@@ -646,7 +646,7 @@
 
     <tr>
     <td align="right" class="lineno"><pre>61</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>390</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>446</pre></td>
     <td align="left" class="src coveredLine"><pre>void Sprite::Render(const double x, const double y, SDL_Rect* const clip,</pre></td>
     </tr>
 
@@ -676,7 +676,7 @@
 
     <tr>
     <td align="right" class="lineno"><pre>66</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>390</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>446</pre></td>
     <td align="left" class="src coveredLine"><pre>	SDL_Rect renderQuad = {static_cast&lt;int&gt;(x), static_cast&lt;int&gt;(y), m_width, m_height};</pre></td>
     </tr>
 
@@ -688,19 +688,19 @@
 
     <tr>
     <td align="right" class="lineno"><pre>68</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>390</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>446</pre></td>
     <td align="left" class="src coveredLine"><pre>	if(clip != nullptr) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>69</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>390</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>446</pre></td>
     <td align="left" class="src coveredLine"><pre>		renderQuad.w = clip-&gt;w;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>70</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>390</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>446</pre></td>
     <td align="left" class="src coveredLine"><pre>		renderQuad.h = clip-&gt;h;</pre></td>
     </tr>
 
@@ -736,19 +736,19 @@
 
     <tr>
     <td align="right" class="lineno"><pre>76</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>390</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>446</pre></td>
     <td align="left" class="src coveredLine"><pre>	int logicalW = 0;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>77</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>390</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>446</pre></td>
     <td align="left" class="src coveredLine"><pre>	int logicalH = 0;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>78</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>390</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>446</pre></td>
     <td align="left" class="src coveredLine"><pre>	Game::Instance().GetRenderer()-&gt;LogicalSize(&amp;logicalW, &amp;logicalH);</pre></td>
     </tr>
 
@@ -760,7 +760,7 @@
 
     <tr>
     <td align="right" class="lineno"><pre>80</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>390</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>446</pre></td>
     <td align="left" class="src coveredLine"><pre>		logicalH};</pre></td>
     </tr>
 
@@ -772,7 +772,7 @@
 
     <tr>
     <td align="right" class="lineno"><pre>82</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>390</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>446</pre></td>
     <td align="left" class="src coveredLine"><pre>	const int successfullRender = (!stretch) ?</pre></td>
     </tr>
 
@@ -790,13 +790,13 @@
 
     <tr>
     <td align="right" class="lineno"><pre>85</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>390</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>446</pre></td>
     <td align="left" class="src coveredLine"><pre>		SDL_RenderCopyEx(Game::Instance().GetRenderer()-&gt;SdlRenderer(), m_sdl_texture, clip,</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>86</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>780</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>892</pre></td>
     <td align="left" class="src coveredLine"><pre>			&amp;stretch_rectangle, angle, center, flip);</pre></td>
     </tr>
 
@@ -808,13 +808,13 @@
 
     <tr>
     <td align="right" class="lineno"><pre>88</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>390</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>446</pre></td>
     <td align="left" class="src coveredLine"><pre>	if(successfullRender != 0) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>89</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>390</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>446</pre></td>
     <td align="left" class="src coveredLine"><pre>		log_error() &lt;&lt; "Failed to render sprite." &lt;&lt; SDL_GetError();</pre></td>
     </tr>
 
@@ -826,7 +826,7 @@
 
     <tr>
     <td align="right" class="lineno"><pre>91</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>390</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>446</pre></td>
     <td align="left" class="src coveredLine"><pre>}</pre></td>
     </tr>
 
