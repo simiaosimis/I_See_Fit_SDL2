@@ -8,7 +8,7 @@ set(CMAKE_CONFIGURATION_TYPES Debug Release)
 
 message("Setting compiler flags")
 
-set(FLAG_CXX_STANDARD "-std=c++11")
+set(FLAG_CXX_STANDARD "-std=c++14")
 set(FLAGS_WARNING "-ansi -pedantic -W -Wall -Wextra -Wshadow -Wcast-align -Wcast-qual -Wctor-dtor-privacy -Wdisabled-optimization -Wformat=2 -Wlogical-op -Wmissing-declarations -Wmissing-include-dirs -Wnoexcept -Wold-style-cast -Woverloaded-virtual -Wredundant-decls -Wsign-conversion -Wsign-promo -Wstrict-null-sentinel -Wswitch-default -Wundef -Wzero-as-null-pointer-constant -Wuseless-cast -Wnon-virtual-dtor")
 set(FLAGS_GCOV "-fprofile-arcs -ftest-coverage -fPIC")
 set(FLAGS_MY_PROJECT "${FLAGS_WARNING} ${FLAG_CXX_STANDARD}")
