@@ -1,5 +1,0 @@
-<map id="sdl2engine::ResourceHandler::music" name="sdl2engine::ResourceHandler::music">
-<area shape="rect" id="node3" href="$classsdl2engine_1_1AudioHandler.html#acaef567691c854dbb334123b3c67ace9" title="Sets the current music. " alt="" coords="248,5,419,51"/>
-<area shape="rect" id="node5" href="$classsdl2engine_1_1AudioHandler.html#a48f4f08bc26f3bf0f03a32864bf0c97c" title="Sets new music for given path, infinitely looping. " alt="" coords="467,5,637,51"/>
-<area shape="rect" id="node7" href="$classsdl2engine_1_1GStatePlaceholder.html#a0a33c04bfe8475e4356ee9e8b75d7669" title="sdl2engine::GStatePlaceholder\l::load" alt="" coords="687,5,887,51"/>
-</map>

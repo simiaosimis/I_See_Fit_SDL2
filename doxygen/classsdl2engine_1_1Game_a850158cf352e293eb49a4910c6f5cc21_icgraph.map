@@ -1,15 +1,12 @@
 <map id="sdl2engine::Game::Instance" name="sdl2engine::Game::Instance">
-<area shape="rect" id="node3" href="$classsdl2engine_1_1AudioHandler.html#ac49bfc265a94d2730b2b0ff17bc032bf" title="Plays a sound effect once. " alt="" coords="240,5,411,51"/>
-<area shape="rect" id="node5" href="$classsdl2engine_1_1GStatePlaceholder.html#a702c19e5680ab65e13aede54433a6bdd" title="sdl2engine::GStatePlaceholder\l::update" alt="" coords="460,30,660,77"/>
-<area shape="rect" id="node7" href="$classsdl2engine_1_1AudioHandler.html#acaef567691c854dbb334123b3c67ace9" title="Sets the current music. " alt="" coords="240,125,411,171"/>
-<area shape="rect" id="node11" href="$classsdl2engine_1_1GStatePlaceholder.html#a0a33c04bfe8475e4356ee9e8b75d7669" title="sdl2engine::GStatePlaceholder\l::load" alt="" coords="711,155,911,202"/>
-<area shape="rect" id="node13" href="$classsdl2engine_1_1AudioHandler.html#a0583c998897a01c530715b9737132cef" title="Callback that gets called everytime a channel is done playing. " alt="" coords="240,245,411,291"/>
-<area shape="rect" id="node17" href="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="300,315,351,344"/>
-<area shape="rect" id="node19" href="$classsdl2engine_1_1Sprite.html#a618dfd6e5850ee7f8c40833d0d3fca7c" title="Renders the sprite. " alt="" coords="263,367,388,414"/>
-<area shape="rect" id="node25" href="$classsdl2engine_1_1Sprite.html#a4dfaeee4aed2bca6a87bb6b4926581da" title="Converts a SDL_Surface to a SDL_Texture. " alt="" coords="259,437,392,483"/>
-<area shape="rect" id="node9" href="$classsdl2engine_1_1AudioHandler.html#a48f4f08bc26f3bf0f03a32864bf0c97c" title="Sets new music for given path, infinitely looping. " alt="" coords="475,125,645,171"/>
-<area shape="rect" id="node21" href="$classsdl2engine_1_1GStatePlaceholder.html#ab503edaa692d97faebebe28e51fc5815" title="sdl2engine::GStatePlaceholder\l::render" alt="" coords="460,307,660,354"/>
-<area shape="rect" id="node23" href="$classsdl2engine_1_1Text.html#a28d6ca0354a8dc9148aa1f45cc8c0bea" title="sdl2engine::Text::render" alt="" coords="479,377,641,407"/>
-<area shape="rect" id="node27" href="$classsdl2engine_1_1Sprite.html#aa14984653f10c8e428bb7172e0472dbb" title="The constructor from a surface. " alt="" coords="497,434,623,481"/>
-<area shape="rect" id="node29" href="$classsdl2engine_1_1Sprite.html#a2d8ae44951073c4ca0d29082428ad900" title="Loads image from a path. " alt="" coords="497,503,623,550"/>
+<area shape="rect" id="node3" href="$classsdl2engine_1_1AudioHandler.html#a0583c998897a01c530715b9737132cef" title="Callback that gets called everytime a channel is done playing. " alt="" coords="256,5,427,51"/>
+<area shape="rect" id="node5" href="$classsdl2engine_1_1GStatePlaceholder.html#a0a33c04bfe8475e4356ee9e8b75d7669" title="sdl2engine::GStatePlaceholder\l::load" alt="" coords="241,74,441,121"/>
+<area shape="rect" id="node7" href="$classsdl2engine_1_1GStatePlaceholder.html#a702c19e5680ab65e13aede54433a6bdd" title="sdl2engine::GStatePlaceholder\l::update" alt="" coords="241,143,441,190"/>
+<area shape="rect" id="node9" href="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="316,213,367,243"/>
+<area shape="rect" id="node11" href="$classsdl2engine_1_1Sprite.html#a618dfd6e5850ee7f8c40833d0d3fca7c" title="Renders the sprite. " alt="" coords="279,266,404,313"/>
+<area shape="rect" id="node17" href="$classsdl2engine_1_1Sprite.html#a4dfaeee4aed2bca6a87bb6b4926581da" title="Converts a SDL_Surface to a SDL_Texture. " alt="" coords="275,335,408,382"/>
+<area shape="rect" id="node13" href="$classsdl2engine_1_1GStatePlaceholder.html#ab503edaa692d97faebebe28e51fc5815" title="sdl2engine::GStatePlaceholder\l::render" alt="" coords="492,209,692,255"/>
+<area shape="rect" id="node15" href="$classsdl2engine_1_1Text.html#a28d6ca0354a8dc9148aa1f45cc8c0bea" title="sdl2engine::Text::render" alt="" coords="511,279,673,308"/>
+<area shape="rect" id="node19" href="$classsdl2engine_1_1Sprite.html#aa14984653f10c8e428bb7172e0472dbb" title="The constructor from a surface. " alt="" coords="529,333,655,379"/>
+<area shape="rect" id="node21" href="$classsdl2engine_1_1Sprite.html#a2d8ae44951073c4ca0d29082428ad900" title="Loads image from a path. " alt="" coords="529,402,655,449"/>
 </map>

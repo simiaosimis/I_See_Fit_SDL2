@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v32</span>
+   &#160;<span id="projectnumber">v33</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -94,7 +94,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">ResourceManager.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;map&gt;</code><br/>
+<div class="textblock"><code>#include &lt;unordered_map&gt;</code><br/>
 <code>#include &lt;string&gt;</code><br/>
 <code>#include &lt;memory&gt;</code><br/>
 <code>#include &quot;<a class="el" href="Logger_8h_source.html">util/Logger.h</a>&quot;</code><br/>
@@ -103,21 +103,24 @@ Include dependency graph for ResourceManager.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="ResourceManager_8h__incl.png" border="0" usemap="#ResourceManager_8h" alt=""/></div>
 <map name="ResourceManager_8h" id="ResourceManager_8h">
-<area shape="rect" id="node9" href="Logger_8h.html" title="util/Logger.h" alt="" coords="245,83,339,112"/></map>
+<area shape="rect" id="node9" href="Logger_8h.html" title="util/Logger.h" alt="" coords="309,83,403,112"/></map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="ResourceManager_8h__dep__incl.png" border="0" usemap="#ResourceManager_8hdep" alt=""/></div>
 <map name="ResourceManager_8hdep" id="ResourceManager_8hdep">
-<area shape="rect" id="node3" href="MusicManager_8h.html" title="MusicManager.h" alt="" coords="339,83,456,112"/><area shape="rect" id="node25" href="SFXManager_8h.html" title="SFXManager.h" alt="" coords="480,83,589,112"/><area shape="rect" id="node30" href="SpriteManager_8h.html" title="SpriteManager.h" alt="" coords="613,83,731,112"/><area shape="rect" id="node5" href="MusicManager_8cpp.html" title="MusicManager.cpp" alt="" coords="245,160,376,189"/><area shape="rect" id="node7" href="ResourceHandler_8h.html" title="ResourceHandler.h" alt="" coords="400,160,533,189"/><area shape="rect" id="node9" href="Game_8h.html" title="Game.h" alt="" coords="368,237,435,267"/><area shape="rect" id="node23" href="ResourceHandler_8cpp.html" title="ResourceHandler.cpp" alt="" coords="459,237,605,267"/><area shape="rect" id="node11" href="AudioHandler_8cpp.html" title="AudioHandler.cpp" alt="" coords="5,315,131,344"/><area shape="rect" id="node13" href="Game_8cpp.html" title="Game.cpp" alt="" coords="155,315,237,344"/><area shape="rect" id="node15" href="GameObject_8cpp.html" title="GameObject.cpp" alt="" coords="261,315,381,344"/><area shape="rect" id="node17" href="GStatePlaceholder_8cpp.html" title="GStatePlaceholder.cpp" alt="" coords="405,315,560,344"/><area shape="rect" id="node19" href="Sprite_8cpp.html" title="Sprite.cpp" alt="" coords="584,315,664,344"/><area shape="rect" id="node21" href="main_8cpp.html" title="main.cpp" alt="" coords="688,315,763,344"/><area shape="rect" id="node27" href="SFXManager_8cpp.html" title="SFXManager.cpp" alt="" coords="557,160,680,189"/><area shape="rect" id="node33" href="SpriteManager_8cpp.html" title="SpriteManager.cpp" alt="" coords="704,160,835,189"/></map>
+<area shape="rect" id="node3" href="AudioHandler_8cpp.html" title="AudioHandler.cpp" alt="" coords="5,83,131,112"/><area shape="rect" id="node5" href="GameObject_8cpp.html" title="GameObject.cpp" alt="" coords="155,83,275,112"/><area shape="rect" id="node7" href="GStatePlaceholder_8cpp.html" title="GStatePlaceholder.cpp" alt="" coords="299,83,453,112"/></map>
 </div>
 </div>
 <p><a href="ResourceManager_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1ResourceManager.html">sdl2engine::ResourceManager&lt; Type &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1ResourceManager.html">sdl2engine::ResourceManager&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resource management class template.  <a href="classsdl2engine_1_1ResourceManager.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsdl2engine_1_1ResourceManager_1_1ConstructorTag.html">sdl2engine::ResourceManager&lt; T &gt;::ConstructorTag</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -128,7 +131,7 @@ Namespaces</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 31 2015 04:34:59 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 1 2015 23:45:40 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

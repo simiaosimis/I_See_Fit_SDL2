@@ -29,7 +29,7 @@ var searchData=
   ['m_5frenderer',['m_renderer',['../classsdl2engine_1_1Window.html#a767ed5a214b7d2ba42814e1508ad7dd8',1,'sdl2engine::Window']]],
   ['m_5fresolution_5fheight',['m_resolution_height',['../classsdl2engine_1_1Configuration.html#a6e4d8f829a81facceed0f5bc5551ddce',1,'sdl2engine::Configuration']]],
   ['m_5fresolution_5fwidth',['m_resolution_width',['../classsdl2engine_1_1Configuration.html#ae51a78159d8f8bb199763552ddfa517a',1,'sdl2engine::Configuration']]],
-  ['m_5fresource_5fhandler',['m_resource_handler',['../classsdl2engine_1_1Game.html#a2d902d6737418c62e690d6c3669c4a58',1,'sdl2engine::Game']]],
+  ['m_5fresources',['m_resources',['../classsdl2engine_1_1ResourceManager.html#a930dc834ea216119760be34ef3dba783',1,'sdl2engine::ResourceManager']]],
   ['m_5fscreen_5fheight',['m_screen_height',['../classsdl2engine_1_1Configuration.html#a9a15088cf03b20f04b46b0fc804804b7',1,'sdl2engine::Configuration']]],
   ['m_5fscreen_5fwidth',['m_screen_width',['../classsdl2engine_1_1Configuration.html#acc14a6b7a708c800542b69c3a458b9ac',1,'sdl2engine::Configuration']]],
   ['m_5fsdl_5frenderer',['m_sdl_renderer',['../classsdl2engine_1_1Renderer.html#ad9704015617fca483f7b17bf5517bd36',1,'sdl2engine::Renderer']]],
@@ -50,14 +50,10 @@ var searchData=
   ['maxframerate',['MaxFramerate',['../classsdl2engine_1_1Configuration.html#ac0e18fdffc2aca04c04370ab3a46cd06',1,'sdl2engine::Configuration']]],
   ['maximize',['Maximize',['../classsdl2engine_1_1Window.html#a6c4fcbfd74d276ce2a8f04a347a914eb',1,'sdl2engine::Window']]],
   ['minimize',['Minimize',['../classsdl2engine_1_1Window.html#a721aa12d374c964de429ff426d3fa8ba',1,'sdl2engine::Window']]],
-  ['mixchunk',['MixChunk',['../classsdl2engine_1_1SoundEffect.html#a8c9f4861d66bc6efa72dff4c962f3fec',1,'sdl2engine::SoundEffect']]],
-  ['mixmusic',['MixMusic',['../classsdl2engine_1_1Music.html#a3f891cfd3e4ab21fd3d85d9ae271fcb8',1,'sdl2engine::Music']]],
+  ['mixchunk',['MixChunk',['../classsdl2engine_1_1SoundEffect.html#a2add65600eb0cfea97d328664ccdda8a',1,'sdl2engine::SoundEffect']]],
+  ['mixmusic',['MixMusic',['../classsdl2engine_1_1Music.html#a8824f7b1996ff8dba6aa59c60f25da20',1,'sdl2engine::Music']]],
+  ['music',['Music',['../classsdl2engine_1_1Music.html#a1b1b256630190eac45399779a33e26e0',1,'sdl2engine::Music::Music(const std::string &amp;path)'],['../classsdl2engine_1_1Music.html#a71d2e7a80c6c67697edaffcd01c0a496',1,'sdl2engine::Music::Music(const Music &amp;)=delete'],['../classsdl2engine_1_1Music.html#a884373fa373b545ddf607e464188e496',1,'sdl2engine::Music::Music(Music &amp;&amp;)=delete']]],
   ['music',['Music',['../classsdl2engine_1_1Music.html',1,'sdl2engine']]],
-  ['music',['music',['../classsdl2engine_1_1ResourceHandler.html#a3746df47839483d13a33d480668fe2c7',1,'sdl2engine::ResourceHandler::music()'],['../classsdl2engine_1_1Music.html#a1b1b256630190eac45399779a33e26e0',1,'sdl2engine::Music::Music()']]],
   ['music_2ecpp',['Music.cpp',['../Music_8cpp.html',1,'']]],
-  ['music_2eh',['Music.h',['../Music_8h.html',1,'']]],
-  ['musicmanager',['MusicManager',['../classsdl2engine_1_1MusicManager.html',1,'sdl2engine']]],
-  ['musicmanager',['musicManager',['../classsdl2engine_1_1ResourceHandler.html#a50bf175d4de9c74d58d4e4fd706d9aaf',1,'sdl2engine::ResourceHandler']]],
-  ['musicmanager_2ecpp',['MusicManager.cpp',['../MusicManager_8cpp.html',1,'']]],
-  ['musicmanager_2eh',['MusicManager.h',['../MusicManager_8h.html',1,'']]]
+  ['music_2eh',['Music.h',['../Music_8h.html',1,'']]]
 ];

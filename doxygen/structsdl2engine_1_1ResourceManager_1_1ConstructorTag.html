@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>sdl2-engine: ResourceHandler.h File Reference</title>
+<title>sdl2-engine: sdl2engine::ResourceManager&lt; T &gt;::ConstructorTag Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v32</span>
+   &#160;<span id="projectnumber">v33</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -41,8 +41,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
-      <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
-      <li class="current"><a href="files.html"><span>Files</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -63,8 +63,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
-      <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>Globals</span></a></li>
+      <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
+      <li><a href="classes.html"><span>Data&#160;Structure&#160;Index</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="functions.html"><span>Data&#160;Fields</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -83,51 +85,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_2052808828190f934b76e979ee65af8a.html">engine</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespacesdl2engine.html">sdl2engine</a></li><li class="navelem"><a class="el" href="classsdl2engine_1_1ResourceManager.html">ResourceManager</a></li><li class="navelem"><a class="el" href="structsdl2engine_1_1ResourceManager_1_1ConstructorTag.html">ConstructorTag</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#nested-classes">Data Structures</a> &#124;
-<a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
-<div class="title">ResourceHandler.h File Reference</div>  </div>
+<div class="title">sdl2engine::ResourceManager&lt; T &gt;::ConstructorTag Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="SpriteManager_8h_source.html">graphics/SpriteManager.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="MusicManager_8h_source.html">audio/MusicManager.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="SFXManager_8h_source.html">audio/SFXManager.h</a>&quot;</code><br/>
-</div><div class="textblock"><div class="dynheader">
-Include dependency graph for ResourceHandler.h:</div>
-<div class="dyncontent">
-<div class="center"><img src="ResourceHandler_8h__incl.png" border="0" usemap="#ResourceHandler_8h" alt=""/></div>
-<map name="ResourceHandler_8h" id="ResourceHandler_8h">
-<area shape="rect" id="node3" href="SpriteManager_8h.html" title="graphics/SpriteManager.h" alt="" coords="177,83,348,112"/><area shape="rect" id="node23" href="MusicManager_8h.html" title="audio/MusicManager.h" alt="" coords="372,83,524,112"/><area shape="rect" id="node32" href="SFXManager_8h.html" title="audio/SFXManager.h" alt="" coords="548,83,692,112"/><area shape="rect" id="node7" href="ResourceManager_8h.html" title="core/ResourceManager.h" alt="" coords="188,160,356,189"/><area shape="rect" id="node18" href="Sprite_8h.html" title="graphics/Sprite.h" alt="" coords="44,160,164,189"/><area shape="rect" id="node14" href="Logger_8h.html" title="util/Logger.h" alt="" coords="331,237,424,267"/><area shape="rect" id="node27" href="Music_8h.html" title="audio/Music.h" alt="" coords="481,160,583,189"/><area shape="rect" id="node36" href="SoundEffect_8h.html" title="audio/SoundEffect.h" alt="" coords="657,160,796,189"/></map>
-</div>
-</div><div class="textblock"><div class="dynheader">
-This graph shows which files directly or indirectly include this file:</div>
-<div class="dyncontent">
-<div class="center"><img src="ResourceHandler_8h__dep__incl.png" border="0" usemap="#ResourceHandler_8hdep" alt=""/></div>
-<map name="ResourceHandler_8hdep" id="ResourceHandler_8hdep">
-<area shape="rect" id="node3" href="Game_8h.html" title="Game.h" alt="" coords="368,83,435,112"/><area shape="rect" id="node17" href="ResourceHandler_8cpp.html" title="ResourceHandler.cpp" alt="" coords="459,83,605,112"/><area shape="rect" id="node5" href="AudioHandler_8cpp.html" title="AudioHandler.cpp" alt="" coords="5,160,131,189"/><area shape="rect" id="node7" href="Game_8cpp.html" title="Game.cpp" alt="" coords="155,160,237,189"/><area shape="rect" id="node9" href="GameObject_8cpp.html" title="GameObject.cpp" alt="" coords="261,160,381,189"/><area shape="rect" id="node11" href="GStatePlaceholder_8cpp.html" title="GStatePlaceholder.cpp" alt="" coords="405,160,560,189"/><area shape="rect" id="node13" href="Sprite_8cpp.html" title="Sprite.cpp" alt="" coords="584,160,664,189"/><area shape="rect" id="node15" href="main_8cpp.html" title="main.cpp" alt="" coords="688,160,763,189"/></map>
-</div>
-</div>
-<p><a href="ResourceHandler_8h_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1ResourceHandler.html">sdl2engine::ResourceHandler</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:namespacesdl2engine"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesdl2engine.html">sdl2engine</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;typename T&gt;<br/>
+struct sdl2engine::ResourceManager&lt; T &gt;::ConstructorTag</h3>
+
+<p>&lt; Private tag needed to use the constructor. </p>
+
+<p>Definition at line <a class="el" href="ResourceManager_8h_source.html#l00028">28</a> of file <a class="el" href="ResourceManager_8h_source.html">ResourceManager.h</a>.</p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<li><a class="el" href="ResourceManager_8h_source.html">ResourceManager.h</a></li>
+</ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 31 2015 04:34:59 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 1 2015 23:45:41 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

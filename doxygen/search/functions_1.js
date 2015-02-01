@@ -8,6 +8,7 @@ var searchData=
   ['changemusic',['ChangeMusic',['../classsdl2engine_1_1AudioHandler.html#a48f4f08bc26f3bf0f03a32864bf0c97c',1,'sdl2engine::AudioHandler::ChangeMusic(const std::string &amp;path)'],['../classsdl2engine_1_1AudioHandler.html#a8e3cc567806e908f9f2f3270778110f5',1,'sdl2engine::AudioHandler::ChangeMusic(const std::string &amp;path, const int times)']]],
   ['changestate',['ChangeState',['../classsdl2engine_1_1Game.html#a71f2db5dc9bb418212fe60ee1ab73592',1,'sdl2engine::Game']]],
   ['changetext',['changeText',['../classsdl2engine_1_1Text.html#aa6f5e651760868bab52f885a31bc0f1a',1,'sdl2engine::Text::changeText(const char *text_, const SDL_Color color_)'],['../classsdl2engine_1_1Text.html#a8996ad696cbc9449340e8a6ba2ee1f9f',1,'sdl2engine::Text::changeText(const char *text_)']]],
+  ['channel',['Channel',['../classsdl2engine_1_1SoundEffect.html#a172f975c05eb16b68c2be73a4ede68dc',1,'sdl2engine::SoundEffect']]],
   ['channeldone',['ChannelDone',['../classsdl2engine_1_1AudioHandler.html#a0583c998897a01c530715b9737132cef',1,'sdl2engine::AudioHandler']]],
   ['cleangameobjects',['cleanGameObjects',['../classsdl2engine_1_1StateGame.html#ab65a05e7a0a837465c3cf86328ee598d',1,'sdl2engine::StateGame']]],
   ['clear',['Clear',['../classsdl2engine_1_1Renderer.html#a8fb21b238a2a807c6c650c54239a823c',1,'sdl2engine::Renderer']]],

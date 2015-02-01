@@ -29,7 +29,7 @@ var searchData=
   ['m_5frenderer',['m_renderer',['../classsdl2engine_1_1Window.html#a767ed5a214b7d2ba42814e1508ad7dd8',1,'sdl2engine::Window']]],
   ['m_5fresolution_5fheight',['m_resolution_height',['../classsdl2engine_1_1Configuration.html#a6e4d8f829a81facceed0f5bc5551ddce',1,'sdl2engine::Configuration']]],
   ['m_5fresolution_5fwidth',['m_resolution_width',['../classsdl2engine_1_1Configuration.html#ae51a78159d8f8bb199763552ddfa517a',1,'sdl2engine::Configuration']]],
-  ['m_5fresource_5fhandler',['m_resource_handler',['../classsdl2engine_1_1Game.html#a2d902d6737418c62e690d6c3669c4a58',1,'sdl2engine::Game']]],
+  ['m_5fresources',['m_resources',['../classsdl2engine_1_1ResourceManager.html#a930dc834ea216119760be34ef3dba783',1,'sdl2engine::ResourceManager']]],
   ['m_5fscreen_5fheight',['m_screen_height',['../classsdl2engine_1_1Configuration.html#a9a15088cf03b20f04b46b0fc804804b7',1,'sdl2engine::Configuration']]],
   ['m_5fscreen_5fwidth',['m_screen_width',['../classsdl2engine_1_1Configuration.html#acc14a6b7a708c800542b69c3a458b9ac',1,'sdl2engine::Configuration']]],
   ['m_5fsdl_5frenderer',['m_sdl_renderer',['../classsdl2engine_1_1Renderer.html#ad9704015617fca483f7b17bf5517bd36',1,'sdl2engine::Renderer']]],
@@ -43,6 +43,5 @@ var searchData=
   ['m_5fwindow',['m_window',['../classsdl2engine_1_1Game.html#a39333b04d1e86068aad9226152d14115',1,'sdl2engine::Game']]],
   ['m_5fwindow_5ftitle',['m_window_title',['../classsdl2engine_1_1Configuration.html#a585103dfd21b2ee72c6c80514b230f91',1,'sdl2engine::Configuration']]],
   ['m_5fx',['m_x',['../classsdl2engine_1_1Animation.html#ab129c8f55e366c85490a7e33233bb791',1,'sdl2engine::Animation']]],
-  ['m_5fy',['m_y',['../classsdl2engine_1_1Animation.html#a0c3c3de3bac5517fa8628b815ce8d869',1,'sdl2engine::Animation']]],
-  ['musicmanager',['musicManager',['../classsdl2engine_1_1ResourceHandler.html#a50bf175d4de9c74d58d4e4fd706d9aaf',1,'sdl2engine::ResourceHandler']]]
+  ['m_5fy',['m_y',['../classsdl2engine_1_1Animation.html#a0c3c3de3bac5517fa8628b815ce8d869',1,'sdl2engine::Animation']]]
 ];

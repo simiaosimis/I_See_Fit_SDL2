@@ -11,7 +11,7 @@ var searchData=
   ['gameobject_2ecpp',['GameObject.cpp',['../GameObject_8cpp.html',1,'']]],
   ['gameobject_2eh',['GameObject.h',['../GameObject_8h.html',1,'']]],
   ['gameobjects',['gameObjects',['../classsdl2engine_1_1StateGame.html#ae72c92c6ad620e37a4d91ef44dc0bc74',1,'sdl2engine::StateGame']]],
-  ['get',['get',['../classsdl2engine_1_1ResourceManager.html#a479490d26a47e06e0f58c087db3b362b',1,'sdl2engine::ResourceManager']]],
+  ['get',['Get',['../classsdl2engine_1_1ResourceManager.html#a5969ec3ff2d1e9c14226fad93338f528',1,'sdl2engine::ResourceManager']]],
   ['getanimationclip',['getAnimationClip',['../classsdl2engine_1_1GameObject.html#a545e6fe921a9507dcddaf192bbd56623',1,'sdl2engine::GameObject']]],
   ['getaudiohandler',['GetAudioHandler',['../classsdl2engine_1_1Game.html#a4ef2d50b6612ce02f234e3623e44e369',1,'sdl2engine::Game']]],
   ['getboundingbox',['getBoundingBox',['../classsdl2engine_1_1GameObject.html#aa7197c2216c38cbcbd4f084f06586d3b',1,'sdl2engine::GameObject']]],

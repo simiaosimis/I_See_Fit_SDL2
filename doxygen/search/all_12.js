@@ -7,6 +7,6 @@ var searchData=
   ['todo_20list',['Todo List',['../todo.html',1,'']]],
   ['top',['TOP',['../classsdl2engine_1_1Collision.html#a526544de8bd03ab26bf8ce3b7c9fcfabaf8334af95d7abbb433a605ca7fe284de',1,'sdl2engine::Collision']]],
   ['trigger_5fdead_5fzone',['TRIGGER_DEAD_ZONE',['../ControllerHandler_8h.html#a21465bd61a15247f747581e6728bea4f',1,'ControllerHandler.h']]],
-  ['typemap',['typeMap',['../classsdl2engine_1_1ResourceManager.html#ace49df20d5ac0df28222457ca3ef9049',1,'sdl2engine::ResourceManager']]],
-  ['typeptr',['typePtr',['../classsdl2engine_1_1ResourceManager.html#a239417938f9eff198367ba9b961d519c',1,'sdl2engine::ResourceManager']]]
+  ['typemap',['TypeMap',['../classsdl2engine_1_1ResourceManager.html#aecec20e40f560216f7e33f56288f6bfd',1,'sdl2engine::ResourceManager']]],
+  ['typeptr',['TypePtr',['../classsdl2engine_1_1ResourceManager.html#a74d18601d6275fbc36d946ea81c27b10',1,'sdl2engine::ResourceManager']]]
 ];

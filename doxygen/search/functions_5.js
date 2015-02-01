@@ -2,7 +2,7 @@ var searchData=
 [
   ['game',['Game',['../classsdl2engine_1_1Game.html#a5520fab660d101c624424a19448409d7',1,'sdl2engine::Game']]],
   ['gameobject',['GameObject',['../classsdl2engine_1_1GameObject.html#a345ea4ffcc8eb4b2133dd4e48571bc1f',1,'sdl2engine::GameObject::GameObject(const double x_, const double y_, const std::string &amp;path_)'],['../classsdl2engine_1_1GameObject.html#a4bc695eadf208d72e7d52e91d1468605',1,'sdl2engine::GameObject::GameObject(const double x_, const double y_)']]],
-  ['get',['get',['../classsdl2engine_1_1ResourceManager.html#a479490d26a47e06e0f58c087db3b362b',1,'sdl2engine::ResourceManager']]],
+  ['get',['Get',['../classsdl2engine_1_1ResourceManager.html#a5969ec3ff2d1e9c14226fad93338f528',1,'sdl2engine::ResourceManager']]],
   ['getanimationclip',['getAnimationClip',['../classsdl2engine_1_1GameObject.html#a545e6fe921a9507dcddaf192bbd56623',1,'sdl2engine::GameObject']]],
   ['getaudiohandler',['GetAudioHandler',['../classsdl2engine_1_1Game.html#a4ef2d50b6612ce02f234e3623e44e369',1,'sdl2engine::Game']]],
   ['getboundingbox',['getBoundingBox',['../classsdl2engine_1_1GameObject.html#aa7197c2216c38cbcbd4f084f06586d3b',1,'sdl2engine::GameObject']]],

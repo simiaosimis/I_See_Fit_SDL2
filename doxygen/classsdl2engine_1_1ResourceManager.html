@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>sdl2-engine: sdl2engine::ResourceManager&lt; Type &gt; Class Template Reference</title>
+<title>sdl2-engine: sdl2engine::ResourceManager&lt; T &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v32</span>
+   &#160;<span id="projectnumber">v33</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -90,77 +90,99 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
-<a href="#pri-types">Private Types</a>  </div>
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-types">Private Types</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a>  </div>
   <div class="headertitle">
-<div class="title">sdl2engine::ResourceManager&lt; Type &gt; Class Template Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">sdl2engine::ResourceManager&lt; T &gt; Class Template Reference<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
+<p>Resource management class template.  
+ <a href="classsdl2engine_1_1ResourceManager.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="ResourceManager_8h_source.html">ResourceManager.h</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for sdl2engine::ResourceManager&lt; Type &gt;:</div>
-<div class="dyncontent">
-<div class="center"><img src="classsdl2engine_1_1ResourceManager__inherit__graph.png" border="0" usemap="#sdl2engine_1_1ResourceManager_3_01Type_01_4_inherit__map" alt="Inheritance graph"/></div>
-<map name="sdl2engine_1_1ResourceManager_3_01Type_01_4_inherit__map" id="sdl2engine_1_1ResourceManager_3_01Type_01_4_inherit__map">
-<area shape="rect" id="node3" href="classsdl2engine_1_1ResourceManager.html" title="sdl2engine::ResourceManager\l\&lt; Sprite \&gt;" alt="" coords="356,5,553,51"/><area shape="rect" id="node7" href="classsdl2engine_1_1ResourceManager.html" title="sdl2engine::ResourceManager\l\&lt; Music \&gt;" alt="" coords="356,74,553,121"/><area shape="rect" id="node11" href="classsdl2engine_1_1ResourceManager.html" title="sdl2engine::ResourceManager\l\&lt; SoundEffect \&gt;" alt="" coords="356,143,553,190"/><area shape="rect" id="node5" href="classsdl2engine_1_1SpriteManager.html" title="sdl2engine::SpriteManager" alt="" coords="607,13,783,43"/><area shape="rect" id="node9" href="classsdl2engine_1_1MusicManager.html" title="sdl2engine::MusicManager" alt="" coords="607,83,783,112"/><area shape="rect" id="node13" href="classsdl2engine_1_1SFXManager.html" title="sdl2engine::SFXManager" alt="" coords="611,152,779,181"/></map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsdl2engine_1_1ResourceManager_1_1ConstructorTag.html">ConstructorTag</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3f14c7e44947a9128771a74dc250f640"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1ResourceManager.html#a3f14c7e44947a9128771a74dc250f640">ResourceManager</a> ()=default</td></tr>
-<tr class="separator:a3f14c7e44947a9128771a74dc250f640"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adab4a2960969f725f3c6a5f660f62191"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1ResourceManager.html#adab4a2960969f725f3c6a5f660f62191">~ResourceManager</a> ()</td></tr>
-<tr class="separator:adab4a2960969f725f3c6a5f660f62191"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21ed5d1aa7e8c6335b164e8781a100c6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1ResourceManager.html#a21ed5d1aa7e8c6335b164e8781a100c6">ResourceManager</a> (const <a class="el" href="classsdl2engine_1_1ResourceManager.html">ResourceManager</a> &amp;)=delete</td></tr>
-<tr class="separator:a21ed5d1aa7e8c6335b164e8781a100c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4a2030c5457025896ffd277ac61b2d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsdl2engine_1_1ResourceManager.html">ResourceManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1ResourceManager.html#aa4a2030c5457025896ffd277ac61b2d5">operator=</a> (const <a class="el" href="classsdl2engine_1_1ResourceManager.html">ResourceManager</a> &amp;)=delete</td></tr>
-<tr class="separator:aa4a2030c5457025896ffd277ac61b2d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a479490d26a47e06e0f58c087db3b362b"><td class="memItemLeft" align="right" valign="top">Type *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1ResourceManager.html#a479490d26a47e06e0f58c087db3b362b">get</a> (const std::string &amp;path_)</td></tr>
-<tr class="separator:a479490d26a47e06e0f58c087db3b362b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bd26bc417a1bb58eebc1a13ecf6bd32"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1ResourceManager.html#a0bd26bc417a1bb58eebc1a13ecf6bd32">ResourceManager</a> (const <a class="el" href="structsdl2engine_1_1ResourceManager_1_1ConstructorTag.html">ConstructorTag</a> &amp;private_tag)</td></tr>
+<tr class="memdesc:a0bd26bc417a1bb58eebc1a13ecf6bd32"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor.  <a href="#a0bd26bc417a1bb58eebc1a13ecf6bd32">More...</a><br/></td></tr>
+<tr class="separator:a0bd26bc417a1bb58eebc1a13ecf6bd32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb80c1ad04e2ca2f581fe6496c3f71bf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1ResourceManager.html#abb80c1ad04e2ca2f581fe6496c3f71bf">~ResourceManager</a> ()</td></tr>
+<tr class="memdesc:abb80c1ad04e2ca2f581fe6496c3f71bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">The destructor.  <a href="#abb80c1ad04e2ca2f581fe6496c3f71bf">More...</a><br/></td></tr>
+<tr class="separator:abb80c1ad04e2ca2f581fe6496c3f71bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cf851336b147ef11d00deb085299c08"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1ResourceManager.html#a7cf851336b147ef11d00deb085299c08">ResourceManager</a> (const <a class="el" href="classsdl2engine_1_1ResourceManager.html">ResourceManager</a> &amp;)=delete</td></tr>
+<tr class="separator:a7cf851336b147ef11d00deb085299c08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b95aa29781acbb589ea5b60f15fb30a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsdl2engine_1_1ResourceManager.html">ResourceManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1ResourceManager.html#a7b95aa29781acbb589ea5b60f15fb30a">operator=</a> (const <a class="el" href="classsdl2engine_1_1ResourceManager.html">ResourceManager</a> &amp;)=delete</td></tr>
+<tr class="separator:a7b95aa29781acbb589ea5b60f15fb30a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d4d4047e6802c9ba9deb7c2a71f37e0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1ResourceManager.html#a7d4d4047e6802c9ba9deb7c2a71f37e0">ResourceManager</a> (<a class="el" href="classsdl2engine_1_1ResourceManager.html">ResourceManager</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a7d4d4047e6802c9ba9deb7c2a71f37e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7cd8d716ede6fae4f108c2bcf495c70"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsdl2engine_1_1ResourceManager.html">ResourceManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1ResourceManager.html#aa7cd8d716ede6fae4f108c2bcf495c70">operator=</a> (<a class="el" href="classsdl2engine_1_1ResourceManager.html">ResourceManager</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:aa7cd8d716ede6fae4f108c2bcf495c70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5969ec3ff2d1e9c14226fad93338f528"><td class="memItemLeft" align="right" valign="top">T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1ResourceManager.html#a5969ec3ff2d1e9c14226fad93338f528">Get</a> (const std::string &amp;path)</td></tr>
+<tr class="memdesc:a5969ec3ff2d1e9c14226fad93338f528"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the resource from the resources.  <a href="#a5969ec3ff2d1e9c14226fad93338f528">More...</a><br/></td></tr>
+<tr class="separator:a5969ec3ff2d1e9c14226fad93338f528"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:af21b202b7a1762d6d648f5759b27e2f3"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classsdl2engine_1_1ResourceManager.html#a239417938f9eff198367ba9b961d519c">typePtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1ResourceManager.html#af21b202b7a1762d6d648f5759b27e2f3">load</a> (const std::string &amp;path_)=0</td></tr>
-<tr class="separator:af21b202b7a1762d6d648f5759b27e2f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03aaa1a9eca9c55856346732df6c42fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1ResourceManager.html#a03aaa1a9eca9c55856346732df6c42fd">registerResource</a> (const std::string &amp;path_, <a class="el" href="classsdl2engine_1_1ResourceManager.html#a239417938f9eff198367ba9b961d519c">typePtr</a> resource_)</td></tr>
-<tr class="separator:a03aaa1a9eca9c55856346732df6c42fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae49252af949ea85aeefeb0887c2e78a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1ResourceManager.html#ae49252af949ea85aeefeb0887c2e78a3">unregisterResource</a> (const std::string &amp;path_)</td></tr>
-<tr class="separator:ae49252af949ea85aeefeb0887c2e78a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr class="memitem:a23b553bdbe195f0248481a4e006eb283"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsdl2engine_1_1ResourceManager.html#ace49df20d5ac0df28222457ca3ef9049">typeMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1ResourceManager.html#a23b553bdbe195f0248481a4e006eb283">resources</a></td></tr>
-<tr class="separator:a23b553bdbe195f0248481a4e006eb283"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ab80e014a52a5237a000570b4ac67fcbd"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classsdl2engine_1_1ResourceManager.html">ResourceManager</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1ResourceManager.html#ab80e014a52a5237a000570b4ac67fcbd">Instance</a> ()</td></tr>
+<tr class="memdesc:ab80e014a52a5237a000570b4ac67fcbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Singleton implementation for <a class="el" href="classsdl2engine_1_1ResourceManager.html" title="Resource management class template. ">ResourceManager</a>.  <a href="#ab80e014a52a5237a000570b4ac67fcbd">More...</a><br/></td></tr>
+<tr class="separator:ab80e014a52a5237a000570b4ac67fcbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
 Private Types</h2></td></tr>
-<tr class="memitem:a239417938f9eff198367ba9b961d519c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1ResourceManager.html#a239417938f9eff198367ba9b961d519c">typePtr</a> = std::shared_ptr&lt; Type &gt;</td></tr>
-<tr class="separator:a239417938f9eff198367ba9b961d519c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace49df20d5ac0df28222457ca3ef9049"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1ResourceManager.html#ace49df20d5ac0df28222457ca3ef9049">typeMap</a> = std::map&lt; std::string, <a class="el" href="classsdl2engine_1_1ResourceManager.html#a239417938f9eff198367ba9b961d519c">typePtr</a> &gt;</td></tr>
-<tr class="separator:ace49df20d5ac0df28222457ca3ef9049"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74d18601d6275fbc36d946ea81c27b10"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1ResourceManager.html#a74d18601d6275fbc36d946ea81c27b10">TypePtr</a> = std::shared_ptr&lt; T &gt;</td></tr>
+<tr class="separator:a74d18601d6275fbc36d946ea81c27b10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecec20e40f560216f7e33f56288f6bfd"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1ResourceManager.html#aecec20e40f560216f7e33f56288f6bfd">TypeMap</a> = std::unordered_map&lt; std::string, <a class="el" href="classsdl2engine_1_1ResourceManager.html#a74d18601d6275fbc36d946ea81c27b10">TypePtr</a> &gt;</td></tr>
+<tr class="separator:aecec20e40f560216f7e33f56288f6bfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a6342e2a8f910e8521f69f5d90ee9b16c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsdl2engine_1_1ResourceManager.html#a74d18601d6275fbc36d946ea81c27b10">TypePtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1ResourceManager.html#a6342e2a8f910e8521f69f5d90ee9b16c">Load</a> (const std::string &amp;path)</td></tr>
+<tr class="memdesc:a6342e2a8f910e8521f69f5d90ee9b16c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the desired resource.  <a href="#a6342e2a8f910e8521f69f5d90ee9b16c">More...</a><br/></td></tr>
+<tr class="separator:a6342e2a8f910e8521f69f5d90ee9b16c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19152dfd5f1032bd1f7e0c55f48c03b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1ResourceManager.html#a19152dfd5f1032bd1f7e0c55f48c03b5">RegisterResource</a> (const std::string &amp;path, <a class="el" href="classsdl2engine_1_1ResourceManager.html#a74d18601d6275fbc36d946ea81c27b10">TypePtr</a> resource)</td></tr>
+<tr class="memdesc:a19152dfd5f1032bd1f7e0c55f48c03b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers the resource on the resources map.  <a href="#a19152dfd5f1032bd1f7e0c55f48c03b5">More...</a><br/></td></tr>
+<tr class="separator:a19152dfd5f1032bd1f7e0c55f48c03b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab11cdaf248c1ab38cf77f430d1baeab9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1ResourceManager.html#ab11cdaf248c1ab38cf77f430d1baeab9">UnregisterResource</a> (const std::string &amp;path)</td></tr>
+<tr class="memdesc:ab11cdaf248c1ab38cf77f430d1baeab9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unregisters the resource on the resources map.  <a href="#ab11cdaf248c1ab38cf77f430d1baeab9">More...</a><br/></td></tr>
+<tr class="separator:ab11cdaf248c1ab38cf77f430d1baeab9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a930dc834ea216119760be34ef3dba783"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsdl2engine_1_1ResourceManager.html#aecec20e40f560216f7e33f56288f6bfd">TypeMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1ResourceManager.html#a930dc834ea216119760be34ef3dba783">m_resources</a></td></tr>
+<tr class="separator:a930dc834ea216119760be34ef3dba783"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;class Type&gt;<br/>
-class sdl2engine::ResourceManager&lt; Type &gt;</h3>
+<div class="textblock"><h3>template&lt;typename T&gt;<br/>
+class sdl2engine::ResourceManager&lt; T &gt;</h3>
 
-<p>Template resource management class. </p>
+<p>Resource management class template. </p>
+<p>Usage: </p>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> some_music = ResourceHandler&lt;Music&gt;.Instance().Get(<span class="stringliteral">&quot;path/to/music.ogg&quot;</span>);</div>
+</div><!-- fragment --><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>Figure out if there is a way to restrict at compile-time the classes that can be used with this. </dd></dl>
 
-<p>Definition at line <a class="el" href="ResourceManager_8h_source.html#l00015">15</a> of file <a class="el" href="ResourceManager_8h_source.html">ResourceManager.h</a>.</p>
+<p>Definition at line <a class="el" href="ResourceManager_8h_source.html#l00022">22</a> of file <a class="el" href="ResourceManager_8h_source.html">ResourceManager.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a class="anchor" id="ace49df20d5ac0df28222457ca3ef9049"></a>
+<a class="anchor" id="aecec20e40f560216f7e33f56288f6bfd"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Type&gt; </div>
+template&lt;typename T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classsdl2engine_1_1ResourceManager.html">sdl2engine::ResourceManager</a>&lt; Type &gt;::<a class="el" href="classsdl2engine_1_1ResourceManager.html#ace49df20d5ac0df28222457ca3ef9049">typeMap</a> =  std::map&lt;std::string, <a class="el" href="classsdl2engine_1_1ResourceManager.html#a239417938f9eff198367ba9b961d519c">typePtr</a>&gt;</td>
+          <td class="memname">using <a class="el" href="classsdl2engine_1_1ResourceManager.html">sdl2engine::ResourceManager</a>&lt; T &gt;::<a class="el" href="classsdl2engine_1_1ResourceManager.html#aecec20e40f560216f7e33f56288f6bfd">TypeMap</a> =  std::unordered_map&lt;std::string, <a class="el" href="classsdl2engine_1_1ResourceManager.html#a74d18601d6275fbc36d946ea81c27b10">TypePtr</a>&gt;</td>
         </tr>
       </table>
   </td>
@@ -169,22 +191,23 @@ template&lt;class Type&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>std::unordered_map alias for std::string as keys and TypePtr as values </p>
 
-<p>Definition at line <a class="el" href="ResourceManager_8h_source.html#l00019">19</a> of file <a class="el" href="ResourceManager_8h_source.html">ResourceManager.h</a>.</p>
+<p>Definition at line <a class="el" href="ResourceManager_8h_source.html#l00027">27</a> of file <a class="el" href="ResourceManager_8h_source.html">ResourceManager.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a239417938f9eff198367ba9b961d519c"></a>
+<a class="anchor" id="a74d18601d6275fbc36d946ea81c27b10"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Type&gt; </div>
+template&lt;typename T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classsdl2engine_1_1ResourceManager.html">sdl2engine::ResourceManager</a>&lt; Type &gt;::<a class="el" href="classsdl2engine_1_1ResourceManager.html#a239417938f9eff198367ba9b961d519c">typePtr</a> =  std::shared_ptr&lt;Type&gt;</td>
+          <td class="memname">using <a class="el" href="classsdl2engine_1_1ResourceManager.html">sdl2engine::ResourceManager</a>&lt; T &gt;::<a class="el" href="classsdl2engine_1_1ResourceManager.html#a74d18601d6275fbc36d946ea81c27b10">TypePtr</a> =  std::shared_ptr&lt;T&gt;</td>
         </tr>
       </table>
   </td>
@@ -193,79 +216,105 @@ template&lt;class Type&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>std::shared_ptr alias for type T </p>
 
-<p>Definition at line <a class="el" href="ResourceManager_8h_source.html#l00018">18</a> of file <a class="el" href="ResourceManager_8h_source.html">ResourceManager.h</a>.</p>
+<p>Definition at line <a class="el" href="ResourceManager_8h_source.html#l00025">25</a> of file <a class="el" href="ResourceManager_8h_source.html">ResourceManager.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a3f14c7e44947a9128771a74dc250f640"></a>
+<a class="anchor" id="a0bd26bc417a1bb58eebc1a13ecf6bd32"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Type&gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classsdl2engine_1_1ResourceManager.html">sdl2engine::ResourceManager</a>&lt; Type &gt;::<a class="el" href="classsdl2engine_1_1ResourceManager.html">ResourceManager</a> </td>
+          <td class="memname"><a class="el" href="classsdl2engine_1_1ResourceManager.html">sdl2engine::ResourceManager</a>&lt; T &gt;::<a class="el" href="classsdl2engine_1_1ResourceManager.html">ResourceManager</a> </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="structsdl2engine_1_1ResourceManager_1_1ConstructorTag.html">ConstructorTag</a> &amp;&#160;</td>
+          <td class="paramname"><em>private_tag</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
+<p>The constructor. </p>
+<p>Since the std::make_unique in <a class="el" href="classsdl2engine_1_1ResourceManager.html#ab80e014a52a5237a000570b4ac67fcbd" title="Singleton implementation for ResourceManager. ">ResourceManager&lt;T&gt;::Instance()</a> can't access a private constructor, we make this constructor public but need a <a class="el" href="structsdl2engine_1_1ResourceManager_1_1ConstructorTag.html">ConstructorTag</a> parameter. <a class="el" href="structsdl2engine_1_1ResourceManager_1_1ConstructorTag.html">ConstructorTag</a> is an empty struct only accessible by this class, since it is private. This way the constructor can only actually be used in a private setting. </p>
+
+<p>Definition at line <a class="el" href="ResourceManager_8h_source.html#l00097">97</a> of file <a class="el" href="ResourceManager_8h_source.html">ResourceManager.h</a>.</p>
+
 </div>
 </div>
-<a class="anchor" id="adab4a2960969f725f3c6a5f660f62191"></a>
+<a class="anchor" id="abb80c1ad04e2ca2f581fe6496c3f71bf"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Type &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classsdl2engine_1_1ResourceManager.html">sdl2engine::ResourceManager</a>&lt; Type &gt;::~<a class="el" href="classsdl2engine_1_1ResourceManager.html">ResourceManager</a> </td>
+          <td class="memname"><a class="el" href="classsdl2engine_1_1ResourceManager.html">sdl2engine::ResourceManager</a>&lt; T &gt;::~<a class="el" href="classsdl2engine_1_1ResourceManager.html">ResourceManager</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+
 <p>The destructor. </p>
 <dl class="section note"><dt>Note</dt><dd>Warns about resources being deleted with references still pointing to them. </dd></dl>
 
-<p>Definition at line <a class="el" href="ResourceManager_8h_source.html#l00064">64</a> of file <a class="el" href="ResourceManager_8h_source.html">ResourceManager.h</a>.</p>
+<p>Definition at line <a class="el" href="ResourceManager_8h_source.html#l00113">113</a> of file <a class="el" href="ResourceManager_8h_source.html">ResourceManager.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a21ed5d1aa7e8c6335b164e8781a100c6"></a>
+<a class="anchor" id="a7cf851336b147ef11d00deb085299c08"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Type&gt; </div>
+template&lt;typename T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classsdl2engine_1_1ResourceManager.html">sdl2engine::ResourceManager</a>&lt; Type &gt;::<a class="el" href="classsdl2engine_1_1ResourceManager.html">ResourceManager</a> </td>
+          <td class="memname"><a class="el" href="classsdl2engine_1_1ResourceManager.html">sdl2engine::ResourceManager</a>&lt; T &gt;::<a class="el" href="classsdl2engine_1_1ResourceManager.html">ResourceManager</a> </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classsdl2engine_1_1ResourceManager.html">ResourceManager</a>&lt; Type &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classsdl2engine_1_1ResourceManager.html">ResourceManager</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7d4d4047e6802c9ba9deb7c2a71f37e0"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsdl2engine_1_1ResourceManager.html">sdl2engine::ResourceManager</a>&lt; T &gt;::<a class="el" href="classsdl2engine_1_1ResourceManager.html">ResourceManager</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsdl2engine_1_1ResourceManager.html">ResourceManager</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -280,91 +329,123 @@ template&lt;class Type&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a479490d26a47e06e0f58c087db3b362b"></a>
+<a class="anchor" id="a5969ec3ff2d1e9c14226fad93338f528"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Type &gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">Type * <a class="el" href="classsdl2engine_1_1ResourceManager.html">sdl2engine::ResourceManager</a>&lt; Type &gt;::get </td>
+          <td class="memname">T * <a class="el" href="classsdl2engine_1_1ResourceManager.html">sdl2engine::ResourceManager</a>&lt; T &gt;::Get </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>path_</em></td><td>)</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
 <p>Retrieves the resource from the resources. </p>
-<dl class="section return"><dt>Returns</dt><dd>The pointer to the wanted resource. Creates it, if not already in resources. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">path_</td><td>: Path to the desired resource. </td></tr>
+    <tr><td class="paramname">path</td><td>: Path to the desired resource.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>The pointer to the wanted resource. Creates it, if not already in resources. </dd></dl>
 
-<p>Definition at line <a class="el" href="ResourceManager_8h_source.html#l00076">76</a> of file <a class="el" href="ResourceManager_8h_source.html">ResourceManager.h</a>.</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classsdl2engine_1_1ResourceManager_a479490d26a47e06e0f58c087db3b362b_icgraph.png" border="0" usemap="#classsdl2engine_1_1ResourceManager_a479490d26a47e06e0f58c087db3b362b_icgraph" alt=""/></div>
-<map name="classsdl2engine_1_1ResourceManager_a479490d26a47e06e0f58c087db3b362b_icgraph" id="classsdl2engine_1_1ResourceManager_a479490d26a47e06e0f58c087db3b362b_icgraph">
-<area shape="rect" id="node3" href="classsdl2engine_1_1ResourceHandler.html#a6862d2a7ac5840adab225585c422d011" title="sdl2engine::ResourceHandler\l::sprite" alt="" coords="521,5,713,51"/><area shape="rect" id="node7" href="classsdl2engine_1_1ResourceHandler.html#a3746df47839483d13a33d480668fe2c7" title="sdl2engine::ResourceHandler\l::music" alt="" coords="279,71,471,118"/><area shape="rect" id="node14" href="classsdl2engine_1_1ResourceHandler.html#a64875e1b8d2c007de00773ffadcfcd1c" title="sdl2engine::ResourceHandler\l::soundEffect" alt="" coords="279,141,471,187"/><area shape="rect" id="node5" href="classsdl2engine_1_1GStatePlaceholder.html#a0a33c04bfe8475e4356ee9e8b75d7669" title="sdl2engine::GStatePlaceholder\l::load" alt="" coords="983,39,1183,86"/><area shape="rect" id="node9" href="classsdl2engine_1_1AudioHandler.html#acaef567691c854dbb334123b3c67ace9" title="Sets the current music. " alt="" coords="532,74,703,121"/><area shape="rect" id="node11" href="classsdl2engine_1_1AudioHandler.html#a48f4f08bc26f3bf0f03a32864bf0c97c" title="Sets new music for given path, infinitely looping. " alt="" coords="763,70,933,117"/></map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="ResourceManager_8h_source.html#l00123">123</a> of file <a class="el" href="ResourceManager_8h_source.html">ResourceManager.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="af21b202b7a1762d6d648f5759b27e2f3"></a>
+<a class="anchor" id="ab80e014a52a5237a000570b4ac67fcbd"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Type&gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classsdl2engine_1_1ResourceManager.html#a239417938f9eff198367ba9b961d519c">typePtr</a> <a class="el" href="classsdl2engine_1_1ResourceManager.html">sdl2engine::ResourceManager</a>&lt; Type &gt;::load </td>
+          <td class="memname"><a class="el" href="classsdl2engine_1_1ResourceManager.html">ResourceManager</a>&lt; T &gt; &amp; <a class="el" href="classsdl2engine_1_1ResourceManager.html">sdl2engine::ResourceManager</a>&lt; T &gt;::Instance </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>path_</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Constructs the desired resource. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">path_</td><td>: Path to the desired resource. </td></tr>
-  </table>
-  </dd>
-</dl>
 
-<p>Implemented in <a class="el" href="classsdl2engine_1_1MusicManager.html#ab549d69e5c445ad036a109d5383a60d0">sdl2engine::MusicManager</a>, <a class="el" href="classsdl2engine_1_1SFXManager.html#a21715e86b1edf150cc37b32793fb74db">sdl2engine::SFXManager</a>, and <a class="el" href="classsdl2engine_1_1SpriteManager.html#ac2252ac49087540ee583bd84a9ab5876">sdl2engine::SpriteManager</a>.</p>
+<p>Singleton implementation for <a class="el" href="classsdl2engine_1_1ResourceManager.html" title="Resource management class template. ">ResourceManager</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>The instance for a ResourceManager&lt;T&gt;. </dd></dl>
+
+<p>Definition at line <a class="el" href="ResourceManager_8h_source.html#l00104">104</a> of file <a class="el" href="ResourceManager_8h_source.html">ResourceManager.h</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classsdl2engine_1_1ResourceManager_ab80e014a52a5237a000570b4ac67fcbd_icgraph.png" border="0" usemap="#classsdl2engine_1_1ResourceManager_ab80e014a52a5237a000570b4ac67fcbd_icgraph" alt=""/></div>
+<map name="classsdl2engine_1_1ResourceManager_ab80e014a52a5237a000570b4ac67fcbd_icgraph" id="classsdl2engine_1_1ResourceManager_ab80e014a52a5237a000570b4ac67fcbd_icgraph">
+<area shape="rect" id="node3" href="classsdl2engine_1_1AudioHandler.html#acaef567691c854dbb334123b3c67ace9" title="Sets the current music. " alt="" coords="253,5,424,51"/><area shape="rect" id="node7" href="classsdl2engine_1_1GStatePlaceholder.html#a0a33c04bfe8475e4356ee9e8b75d7669" title="sdl2engine::GStatePlaceholder\l::load" alt="" coords="692,35,892,82"/><area shape="rect" id="node5" href="classsdl2engine_1_1AudioHandler.html#a48f4f08bc26f3bf0f03a32864bf0c97c" title="Sets new music for given path, infinitely looping. " alt="" coords="472,5,643,51"/></map>
+</div>
+</p>
 
 </div>
 </div>
-<a class="anchor" id="aa4a2030c5457025896ffd277ac61b2d5"></a>
+<a class="anchor" id="a6342e2a8f910e8521f69f5d90ee9b16c"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Type&gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classsdl2engine_1_1ResourceManager.html">ResourceManager</a>&amp; <a class="el" href="classsdl2engine_1_1ResourceManager.html">sdl2engine::ResourceManager</a>&lt; Type &gt;::operator= </td>
+          <td class="memname">std::shared_ptr&lt; T &gt; <a class="el" href="classsdl2engine_1_1ResourceManager.html">sdl2engine::ResourceManager</a>&lt; T &gt;::Load </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classsdl2engine_1_1ResourceManager.html">ResourceManager</a>&lt; Type &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs the desired resource. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>: Path to the desired resource. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="ResourceManager_8h_source.html#l00141">141</a> of file <a class="el" href="ResourceManager_8h_source.html">ResourceManager.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7b95aa29781acbb589ea5b60f15fb30a"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsdl2engine_1_1ResourceManager.html">ResourceManager</a>&amp; <a class="el" href="classsdl2engine_1_1ResourceManager.html">sdl2engine::ResourceManager</a>&lt; T &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classsdl2engine_1_1ResourceManager.html">ResourceManager</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -378,26 +459,52 @@ template&lt;class Type&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a03aaa1a9eca9c55856346732df6c42fd"></a>
+<a class="anchor" id="aa7cd8d716ede6fae4f108c2bcf495c70"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Type &gt; </div>
+template&lt;typename T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classsdl2engine_1_1ResourceManager.html">sdl2engine::ResourceManager</a>&lt; Type &gt;::registerResource </td>
+          <td class="memname"><a class="el" href="classsdl2engine_1_1ResourceManager.html">ResourceManager</a>&amp; <a class="el" href="classsdl2engine_1_1ResourceManager.html">sdl2engine::ResourceManager</a>&lt; T &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsdl2engine_1_1ResourceManager.html">ResourceManager</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a19152dfd5f1032bd1f7e0c55f48c03b5"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classsdl2engine_1_1ResourceManager.html">sdl2engine::ResourceManager</a>&lt; T &gt;::RegisterResource </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>path_</em>, </td>
+          <td class="paramname"><em>path</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classsdl2engine_1_1ResourceManager.html#a239417938f9eff198367ba9b961d519c">typePtr</a>&#160;</td>
-          <td class="paramname"><em>resource_</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="classsdl2engine_1_1ResourceManager.html#a74d18601d6275fbc36d946ea81c27b10">TypePtr</a>&#160;</td>
+          <td class="paramname"><em>resource</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -407,81 +514,83 @@ template&lt;class Type &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+
 <p>Registers the resource on the resources map. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">path_</td><td>: Path to the resource. Will be the key value. </td></tr>
-    <tr><td class="paramname">resource_</td><td>: The shared pointer for the resource. </td></tr>
+    <tr><td class="paramname">path</td><td>: Path to the resource. Will be the key value. </td></tr>
+    <tr><td class="paramname">resource</td><td>: The shared pointer for the resource. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="ResourceManager_8h_source.html#l00093">93</a> of file <a class="el" href="ResourceManager_8h_source.html">ResourceManager.h</a>.</p>
+<p>Definition at line <a class="el" href="ResourceManager_8h_source.html#l00148">148</a> of file <a class="el" href="ResourceManager_8h_source.html">ResourceManager.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ae49252af949ea85aeefeb0887c2e78a3"></a>
+<a class="anchor" id="ab11cdaf248c1ab38cf77f430d1baeab9"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Type &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classsdl2engine_1_1ResourceManager.html">sdl2engine::ResourceManager</a>&lt; Type &gt;::unregisterResource </td>
+          <td class="memname">void <a class="el" href="classsdl2engine_1_1ResourceManager.html">sdl2engine::ResourceManager</a>&lt; T &gt;::UnregisterResource </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>path_</em></td><td>)</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+
 <p>Unregisters the resource on the resources map. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">path_</td><td>: The key (path to resource) on the map. </td></tr>
+    <tr><td class="paramname">path</td><td>: The key (path to resource) on the map. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="ResourceManager_8h_source.html#l00098">98</a> of file <a class="el" href="ResourceManager_8h_source.html">ResourceManager.h</a>.</p>
+<p>Definition at line <a class="el" href="ResourceManager_8h_source.html#l00153">153</a> of file <a class="el" href="ResourceManager_8h_source.html">ResourceManager.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Field Documentation</h2>
-<a class="anchor" id="a23b553bdbe195f0248481a4e006eb283"></a>
+<a class="anchor" id="a930dc834ea216119760be34ef3dba783"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Type&gt; </div>
+template&lt;typename T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classsdl2engine_1_1ResourceManager.html#ace49df20d5ac0df28222457ca3ef9049">typeMap</a> <a class="el" href="classsdl2engine_1_1ResourceManager.html">sdl2engine::ResourceManager</a>&lt; Type &gt;::resources</td>
+          <td class="memname"><a class="el" href="classsdl2engine_1_1ResourceManager.html#aecec20e40f560216f7e33f56288f6bfd">TypeMap</a> <a class="el" href="classsdl2engine_1_1ResourceManager.html">sdl2engine::ResourceManager</a>&lt; T &gt;::m_resources</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The map that contains all the Type resources. </p>
+<p>The map that contains all the T resources. </p>
 
-<p>Definition at line <a class="el" href="ResourceManager_8h_source.html#l00060">60</a> of file <a class="el" href="ResourceManager_8h_source.html">ResourceManager.h</a>.</p>
+<p>Definition at line <a class="el" href="ResourceManager_8h_source.html#l00093">93</a> of file <a class="el" href="ResourceManager_8h_source.html">ResourceManager.h</a>.</p>
 
 </div>
 </div>
@@ -491,7 +600,7 @@ template&lt;class Type&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 31 2015 04:34:59 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 1 2015 23:45:41 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v32</span>
+   &#160;<span id="projectnumber">v33</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -93,102 +93,130 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <a href="ResourceManager_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Logger_8h.html">util/Logger.h</a>&quot;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span>sdl2engine {</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> Type&gt;</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1ResourceManager.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsdl2engine_1_1ResourceManager.html">ResourceManager</a> {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1ResourceManager.html#a239417938f9eff198367ba9b961d519c">   18</a></span>&#160;        <span class="keyword">using</span> <a class="code" href="classsdl2engine_1_1ResourceManager.html#a239417938f9eff198367ba9b961d519c">typePtr</a> = std::shared_ptr&lt;Type&gt;;</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1ResourceManager.html#ace49df20d5ac0df28222457ca3ef9049">   19</a></span>&#160;        <span class="keyword">using</span> <a class="code" href="classsdl2engine_1_1ResourceManager.html#ace49df20d5ac0df28222457ca3ef9049">typeMap</a> = std::map&lt;std::string, typePtr&gt;;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="classsdl2engine_1_1ResourceManager.html#a3f14c7e44947a9128771a74dc250f640">ResourceManager</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1ResourceManager.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsdl2engine_1_1ResourceManager.html">ResourceManager</a> final {</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classsdl2engine_1_1ResourceManager.html#adab4a2960969f725f3c6a5f660f62191">~ResourceManager</a>();</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="classsdl2engine_1_1ResourceManager.html#a3f14c7e44947a9128771a74dc250f640">ResourceManager</a>(<span class="keyword">const</span> <a class="code" href="classsdl2engine_1_1ResourceManager.html">ResourceManager</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="classsdl2engine_1_1ResourceManager.html">ResourceManager</a>&amp; <a class="code" href="classsdl2engine_1_1ResourceManager.html#aa4a2030c5457025896ffd277ac61b2d5">operator=</a>(<span class="keyword">const</span> <a class="code" href="classsdl2engine_1_1ResourceManager.html">ResourceManager</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        Type* <span class="keyword">get</span>(<span class="keyword">const</span> std::string&amp; path_);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classsdl2engine_1_1ResourceManager.html#a239417938f9eff198367ba9b961d519c">typePtr</a> <a class="code" href="classsdl2engine_1_1ResourceManager.html#af21b202b7a1762d6d648f5759b27e2f3">load</a>(<span class="keyword">const</span> std::string&amp; path_) = 0;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1ResourceManager.html#a03aaa1a9eca9c55856346732df6c42fd">registerResource</a>(<span class="keyword">const</span> std::string&amp; path_, <a class="code" href="classsdl2engine_1_1ResourceManager.html#a239417938f9eff198367ba9b961d519c">typePtr</a> resource_);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1ResourceManager.html#ae49252af949ea85aeefeb0887c2e78a3">unregisterResource</a>(<span class="keyword">const</span> std::string&amp; path_);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1ResourceManager.html#a23b553bdbe195f0248481a4e006eb283">   60</a></span>&#160;        <a class="code" href="classsdl2engine_1_1ResourceManager.html#ace49df20d5ac0df28222457ca3ef9049">typeMap</a> <a class="code" href="classsdl2engine_1_1ResourceManager.html#a23b553bdbe195f0248481a4e006eb283">resources</a>; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;};</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> Type&gt;</div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1ResourceManager.html#adab4a2960969f725f3c6a5f660f62191">   64</a></span>&#160;<a class="code" href="classsdl2engine_1_1ResourceManager.html#adab4a2960969f725f3c6a5f660f62191">ResourceManager&lt;Type&gt;::~ResourceManager</a>() {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">typename</span> typeMap::const_iterator it;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">for</span>(it = resources.begin(); it != resources.end(); it++) {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">if</span>(it-&gt;second.use_count() != 1) {</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <a class="code" href="namespacesdl2engine.html#ac31c5eafc7940521da71fab041ac0138">log_warn</a>() &lt;&lt; <span class="stringliteral">&quot;Resource deleted with use count different than 1 (&quot;</span> &lt;&lt; it-&gt;first</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                &lt;&lt; <span class="stringliteral">&quot;).&quot;</span>;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        }</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> Type&gt;</div>
-<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1ResourceManager.html#a479490d26a47e06e0f58c087db3b362b">   76</a></span>&#160;Type* <a class="code" href="classsdl2engine_1_1ResourceManager.html#a479490d26a47e06e0f58c087db3b362b">ResourceManager&lt;Type&gt;::get</a>(<span class="keyword">const</span> std::string&amp; path_) {</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">typename</span> typeMap::const_iterator it;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    it = resources.find(path_);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    Type* tPtr = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">if</span> (it != resources.end()) {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        tPtr = it-&gt;second.get();</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    }</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        tPtr = load(path_).get();</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">return</span> tPtr;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> Type&gt;</div>
-<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1ResourceManager.html#a03aaa1a9eca9c55856346732df6c42fd">   93</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1ResourceManager.html#a03aaa1a9eca9c55856346732df6c42fd">ResourceManager&lt;Type&gt;::registerResource</a>(<span class="keyword">const</span> std::string&amp; path_, <a class="code" href="classsdl2engine_1_1ResourceManager.html#a239417938f9eff198367ba9b961d519c">typePtr</a> resource_) {</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    resources.insert(std::make_pair(path_, resource_));</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> Type&gt;</div>
-<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1ResourceManager.html#ae49252af949ea85aeefeb0887c2e78a3">   98</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1ResourceManager.html#ae49252af949ea85aeefeb0887c2e78a3">ResourceManager&lt;Type&gt;::unregisterResource</a>(<span class="keyword">const</span> std::string&amp; path_) {</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">typename</span> typeMap::const_iterator it;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    it = resources.find(path_);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">if</span> (it != resources.end()) {</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        resources.erase(it);</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    }</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;} <span class="comment">// namespace sdl2engine</span></div>
-<div class="ttc" id="classsdl2engine_1_1ResourceManager_html_adab4a2960969f725f3c6a5f660f62191"><div class="ttname"><a href="classsdl2engine_1_1ResourceManager.html#adab4a2960969f725f3c6a5f660f62191">sdl2engine::ResourceManager::~ResourceManager</a></div><div class="ttdeci">virtual ~ResourceManager()</div><div class="ttdef"><b>Definition:</b> <a href="ResourceManager_8h_source.html#l00064">ResourceManager.h:64</a></div></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1ResourceManager.html#a74d18601d6275fbc36d946ea81c27b10">   25</a></span>&#160;        <span class="keyword">using</span> <a class="code" href="classsdl2engine_1_1ResourceManager.html#a74d18601d6275fbc36d946ea81c27b10">TypePtr</a> = std::shared_ptr&lt;T&gt;; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keyword">using</span> <a class="code" href="classsdl2engine_1_1ResourceManager.html#aecec20e40f560216f7e33f56288f6bfd">TypeMap</a> = std::unordered_map&lt;std::string, TypePtr&gt;; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structsdl2engine_1_1ResourceManager_1_1ConstructorTag.html">   28</a></span>&#160;        <span class="keyword">struct </span><a class="code" href="structsdl2engine_1_1ResourceManager_1_1ConstructorTag.html">ConstructorTag</a> {} ;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keyword">static</span> <a class="code" href="classsdl2engine_1_1ResourceManager.html">ResourceManager&lt;T&gt;</a>&amp; <a class="code" href="classsdl2engine_1_1ResourceManager.html#ab80e014a52a5237a000570b4ac67fcbd">Instance</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classsdl2engine_1_1ResourceManager.html#a0bd26bc417a1bb58eebc1a13ecf6bd32">ResourceManager</a>(<span class="keyword">const</span> <a class="code" href="structsdl2engine_1_1ResourceManager_1_1ConstructorTag.html">ConstructorTag</a>&amp; private_tag);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="classsdl2engine_1_1ResourceManager.html#abb80c1ad04e2ca2f581fe6496c3f71bf">~ResourceManager</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="comment">// Not copyable and not moveable.</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <a class="code" href="classsdl2engine_1_1ResourceManager.html#a0bd26bc417a1bb58eebc1a13ecf6bd32">ResourceManager</a>(<span class="keyword">const</span> <a class="code" href="classsdl2engine_1_1ResourceManager.html">ResourceManager</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="code" href="classsdl2engine_1_1ResourceManager.html">ResourceManager</a>&amp; <a class="code" href="classsdl2engine_1_1ResourceManager.html#a7b95aa29781acbb589ea5b60f15fb30a">operator=</a>(<span class="keyword">const</span> <a class="code" href="classsdl2engine_1_1ResourceManager.html">ResourceManager</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <a class="code" href="classsdl2engine_1_1ResourceManager.html#a0bd26bc417a1bb58eebc1a13ecf6bd32">ResourceManager</a>(<a class="code" href="classsdl2engine_1_1ResourceManager.html">ResourceManager</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <a class="code" href="classsdl2engine_1_1ResourceManager.html">ResourceManager</a>&amp; <a class="code" href="classsdl2engine_1_1ResourceManager.html#a7b95aa29781acbb589ea5b60f15fb30a">operator=</a>(<a class="code" href="classsdl2engine_1_1ResourceManager.html">ResourceManager</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        T* <a class="code" href="classsdl2engine_1_1ResourceManager.html#a5969ec3ff2d1e9c14226fad93338f528">Get</a>(<span class="keyword">const</span> std::string&amp; path);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <a class="code" href="classsdl2engine_1_1ResourceManager.html#a74d18601d6275fbc36d946ea81c27b10">TypePtr</a> <a class="code" href="classsdl2engine_1_1ResourceManager.html#a6342e2a8f910e8521f69f5d90ee9b16c">Load</a>(<span class="keyword">const</span> std::string&amp; path);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1ResourceManager.html#a19152dfd5f1032bd1f7e0c55f48c03b5">RegisterResource</a>(<span class="keyword">const</span> std::string&amp; path, <a class="code" href="classsdl2engine_1_1ResourceManager.html#a74d18601d6275fbc36d946ea81c27b10">TypePtr</a> resource);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1ResourceManager.html#ab11cdaf248c1ab38cf77f430d1baeab9">UnregisterResource</a>(<span class="keyword">const</span> std::string&amp; path);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1ResourceManager.html#a930dc834ea216119760be34ef3dba783">   93</a></span>&#160;        <a class="code" href="classsdl2engine_1_1ResourceManager.html#aecec20e40f560216f7e33f56288f6bfd">TypeMap</a> <a class="code" href="classsdl2engine_1_1ResourceManager.html#a930dc834ea216119760be34ef3dba783">m_resources</a>; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;};</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1ResourceManager.html#a0bd26bc417a1bb58eebc1a13ecf6bd32">   97</a></span>&#160;<a class="code" href="classsdl2engine_1_1ResourceManager.html#a0bd26bc417a1bb58eebc1a13ecf6bd32">ResourceManager&lt;T&gt;::ResourceManager</a>(<span class="keyword">const</span> <a class="code" href="structsdl2engine_1_1ResourceManager_1_1ConstructorTag.html">ConstructorTag</a>&amp; private_tag) :</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    m_resources{}</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;{</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keyword">static_cast&lt;</span><span class="keywordtype">void</span><span class="keyword">&gt;</span>(private_tag);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1ResourceManager.html#ab80e014a52a5237a000570b4ac67fcbd">  104</a></span>&#160;<a class="code" href="classsdl2engine_1_1ResourceManager.html">ResourceManager&lt;T&gt;</a>&amp; <a class="code" href="classsdl2engine_1_1ResourceManager.html#ab80e014a52a5237a000570b4ac67fcbd">ResourceManager&lt;T&gt;::Instance</a>() {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="comment">// &quot;C++11 mandates that the initializer for a local static variable is only run once, even</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="comment">// in the presence of concurrency. So, assuming you’ve got a modern C++ compiler, this code</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="comment">// is thread-safe[...]&quot;</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keyword">static</span> <span class="keyword">auto</span> instance = std::make_unique&lt;ResourceManager&lt;T&gt;&gt;(<a class="code" href="structsdl2engine_1_1ResourceManager_1_1ConstructorTag.html">ConstructorTag</a>{});</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordflow">return</span> *instance.get();</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;}</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1ResourceManager.html#abb80c1ad04e2ca2f581fe6496c3f71bf">  113</a></span>&#160;<a class="code" href="classsdl2engine_1_1ResourceManager.html#abb80c1ad04e2ca2f581fe6496c3f71bf">ResourceManager&lt;T&gt;::~ResourceManager</a>() {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; resource : m_resources) {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordflow">if</span>(resource.second.use_count() != 1) {</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <a class="code" href="namespacesdl2engine.html#ac31c5eafc7940521da71fab041ac0138">log_warn</a>() &lt;&lt; <span class="stringliteral">&quot;Resource deleted with use count different than 1 (&quot;</span> &lt;&lt;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                resource.first &lt;&lt; <span class="stringliteral">&quot;).&quot;</span>;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;}</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1ResourceManager.html#a5969ec3ff2d1e9c14226fad93338f528">  123</a></span>&#160;T* <a class="code" href="classsdl2engine_1_1ResourceManager.html#a5969ec3ff2d1e9c14226fad93338f528">ResourceManager&lt;T&gt;::Get</a>(<span class="keyword">const</span> std::string&amp; path) {</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    T* t_ptr = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> it = m_resources.find(path);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="comment">// Resource is already registered.</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordflow">if</span> (it != m_resources.end()) {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        t_ptr = it-&gt;second.get();</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="comment">// Resource was not loaded yet.</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        t_ptr = Load(path).get();</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    }</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordflow">return</span> t_ptr;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;}</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00141"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1ResourceManager.html#a6342e2a8f910e8521f69f5d90ee9b16c">  141</a></span>&#160;std::shared_ptr&lt;T&gt; <a class="code" href="classsdl2engine_1_1ResourceManager.html#a6342e2a8f910e8521f69f5d90ee9b16c">ResourceManager&lt;T&gt;::Load</a>(<span class="keyword">const</span> std::string&amp; path) {</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> resource = std::make_shared&lt;T&gt;(path);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    RegisterResource(path, resource);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordflow">return</span> resource;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;}</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00148"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1ResourceManager.html#a19152dfd5f1032bd1f7e0c55f48c03b5">  148</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1ResourceManager.html#a19152dfd5f1032bd1f7e0c55f48c03b5">ResourceManager&lt;T&gt;::RegisterResource</a>(<span class="keyword">const</span> std::string&amp; path, <a class="code" href="classsdl2engine_1_1ResourceManager.html#a74d18601d6275fbc36d946ea81c27b10">TypePtr</a> resource) {</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    m_resources.emplace(path, resource);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;}</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1ResourceManager.html#ab11cdaf248c1ab38cf77f430d1baeab9">  153</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1ResourceManager.html#ab11cdaf248c1ab38cf77f430d1baeab9">ResourceManager&lt;T&gt;::UnregisterResource</a>(<span class="keyword">const</span> std::string&amp; path) {</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> it = m_resources.find(path);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordflow">if</span> (it != m_resources.end()) {</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        m_resources.erase(it);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    }</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;}</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;} <span class="comment">// namespace sdl2engine</span></div>
+<div class="ttc" id="classsdl2engine_1_1ResourceManager_html_a74d18601d6275fbc36d946ea81c27b10"><div class="ttname"><a href="classsdl2engine_1_1ResourceManager.html#a74d18601d6275fbc36d946ea81c27b10">sdl2engine::ResourceManager::TypePtr</a></div><div class="ttdeci">std::shared_ptr&lt; T &gt; TypePtr</div><div class="ttdef"><b>Definition:</b> <a href="ResourceManager_8h_source.html#l00025">ResourceManager.h:25</a></div></div>
 <div class="ttc" id="namespacesdl2engine_html_ac31c5eafc7940521da71fab041ac0138"><div class="ttname"><a href="namespacesdl2engine.html#ac31c5eafc7940521da71fab041ac0138">sdl2engine::log_warn</a></div><div class="ttdeci">constexpr log_function_ptr log_warn</div><div class="ttdef"><b>Definition:</b> <a href="Logger_8h_source.html#l00086">Logger.h:86</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1ResourceManager_html_ace49df20d5ac0df28222457ca3ef9049"><div class="ttname"><a href="classsdl2engine_1_1ResourceManager.html#ace49df20d5ac0df28222457ca3ef9049">sdl2engine::ResourceManager&lt; SoundEffect &gt;::typeMap</a></div><div class="ttdeci">std::map&lt; std::string, typePtr &gt; typeMap</div><div class="ttdef"><b>Definition:</b> <a href="ResourceManager_8h_source.html#l00019">ResourceManager.h:19</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1ResourceManager_html_a3f14c7e44947a9128771a74dc250f640"><div class="ttname"><a href="classsdl2engine_1_1ResourceManager.html#a3f14c7e44947a9128771a74dc250f640">sdl2engine::ResourceManager::ResourceManager</a></div><div class="ttdeci">ResourceManager()=default</div></div>
-<div class="ttc" id="classsdl2engine_1_1ResourceManager_html_ae49252af949ea85aeefeb0887c2e78a3"><div class="ttname"><a href="classsdl2engine_1_1ResourceManager.html#ae49252af949ea85aeefeb0887c2e78a3">sdl2engine::ResourceManager::unregisterResource</a></div><div class="ttdeci">void unregisterResource(const std::string &amp;path_)</div><div class="ttdef"><b>Definition:</b> <a href="ResourceManager_8h_source.html#l00098">ResourceManager.h:98</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1ResourceManager_html"><div class="ttname"><a href="classsdl2engine_1_1ResourceManager.html">sdl2engine::ResourceManager</a></div><div class="ttdef"><b>Definition:</b> <a href="ResourceManager_8h_source.html#l00015">ResourceManager.h:15</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1ResourceManager_html_af21b202b7a1762d6d648f5759b27e2f3"><div class="ttname"><a href="classsdl2engine_1_1ResourceManager.html#af21b202b7a1762d6d648f5759b27e2f3">sdl2engine::ResourceManager::load</a></div><div class="ttdeci">virtual typePtr load(const std::string &amp;path_)=0</div></div>
-<div class="ttc" id="classsdl2engine_1_1ResourceManager_html_aa4a2030c5457025896ffd277ac61b2d5"><div class="ttname"><a href="classsdl2engine_1_1ResourceManager.html#aa4a2030c5457025896ffd277ac61b2d5">sdl2engine::ResourceManager::operator=</a></div><div class="ttdeci">ResourceManager &amp; operator=(const ResourceManager &amp;)=delete</div></div>
+<div class="ttc" id="classsdl2engine_1_1ResourceManager_html_a6342e2a8f910e8521f69f5d90ee9b16c"><div class="ttname"><a href="classsdl2engine_1_1ResourceManager.html#a6342e2a8f910e8521f69f5d90ee9b16c">sdl2engine::ResourceManager::Load</a></div><div class="ttdeci">TypePtr Load(const std::string &amp;path)</div><div class="ttdoc">Constructs the desired resource. </div><div class="ttdef"><b>Definition:</b> <a href="ResourceManager_8h_source.html#l00141">ResourceManager.h:141</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1ResourceManager_html_a0bd26bc417a1bb58eebc1a13ecf6bd32"><div class="ttname"><a href="classsdl2engine_1_1ResourceManager.html#a0bd26bc417a1bb58eebc1a13ecf6bd32">sdl2engine::ResourceManager::ResourceManager</a></div><div class="ttdeci">ResourceManager(const ConstructorTag &amp;private_tag)</div><div class="ttdoc">The constructor. </div><div class="ttdef"><b>Definition:</b> <a href="ResourceManager_8h_source.html#l00097">ResourceManager.h:97</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1ResourceManager_html_a7b95aa29781acbb589ea5b60f15fb30a"><div class="ttname"><a href="classsdl2engine_1_1ResourceManager.html#a7b95aa29781acbb589ea5b60f15fb30a">sdl2engine::ResourceManager::operator=</a></div><div class="ttdeci">ResourceManager &amp; operator=(const ResourceManager &amp;)=delete</div></div>
+<div class="ttc" id="classsdl2engine_1_1ResourceManager_html_aecec20e40f560216f7e33f56288f6bfd"><div class="ttname"><a href="classsdl2engine_1_1ResourceManager.html#aecec20e40f560216f7e33f56288f6bfd">sdl2engine::ResourceManager::TypeMap</a></div><div class="ttdeci">std::unordered_map&lt; std::string, TypePtr &gt; TypeMap</div><div class="ttdef"><b>Definition:</b> <a href="ResourceManager_8h_source.html#l00027">ResourceManager.h:27</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1ResourceManager_html_a5969ec3ff2d1e9c14226fad93338f528"><div class="ttname"><a href="classsdl2engine_1_1ResourceManager.html#a5969ec3ff2d1e9c14226fad93338f528">sdl2engine::ResourceManager::Get</a></div><div class="ttdeci">T * Get(const std::string &amp;path)</div><div class="ttdoc">Retrieves the resource from the resources. </div><div class="ttdef"><b>Definition:</b> <a href="ResourceManager_8h_source.html#l00123">ResourceManager.h:123</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1ResourceManager_html_a930dc834ea216119760be34ef3dba783"><div class="ttname"><a href="classsdl2engine_1_1ResourceManager.html#a930dc834ea216119760be34ef3dba783">sdl2engine::ResourceManager::m_resources</a></div><div class="ttdeci">TypeMap m_resources</div><div class="ttdef"><b>Definition:</b> <a href="ResourceManager_8h_source.html#l00093">ResourceManager.h:93</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1ResourceManager_html"><div class="ttname"><a href="classsdl2engine_1_1ResourceManager.html">sdl2engine::ResourceManager</a></div><div class="ttdoc">Resource management class template. </div><div class="ttdef"><b>Definition:</b> <a href="ResourceManager_8h_source.html#l00022">ResourceManager.h:22</a></div></div>
 <div class="ttc" id="Logger_8h_html"><div class="ttname"><a href="Logger_8h.html">Logger.h</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1ResourceManager_html_a239417938f9eff198367ba9b961d519c"><div class="ttname"><a href="classsdl2engine_1_1ResourceManager.html#a239417938f9eff198367ba9b961d519c">sdl2engine::ResourceManager&lt; SoundEffect &gt;::typePtr</a></div><div class="ttdeci">std::shared_ptr&lt; SoundEffect &gt; typePtr</div><div class="ttdef"><b>Definition:</b> <a href="ResourceManager_8h_source.html#l00018">ResourceManager.h:18</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1ResourceManager_html_a23b553bdbe195f0248481a4e006eb283"><div class="ttname"><a href="classsdl2engine_1_1ResourceManager.html#a23b553bdbe195f0248481a4e006eb283">sdl2engine::ResourceManager::resources</a></div><div class="ttdeci">typeMap resources</div><div class="ttdef"><b>Definition:</b> <a href="ResourceManager_8h_source.html#l00060">ResourceManager.h:60</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1ResourceManager_html_a03aaa1a9eca9c55856346732df6c42fd"><div class="ttname"><a href="classsdl2engine_1_1ResourceManager.html#a03aaa1a9eca9c55856346732df6c42fd">sdl2engine::ResourceManager::registerResource</a></div><div class="ttdeci">void registerResource(const std::string &amp;path_, typePtr resource_)</div><div class="ttdef"><b>Definition:</b> <a href="ResourceManager_8h_source.html#l00093">ResourceManager.h:93</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1ResourceManager_html_a479490d26a47e06e0f58c087db3b362b"><div class="ttname"><a href="classsdl2engine_1_1ResourceManager.html#a479490d26a47e06e0f58c087db3b362b">sdl2engine::ResourceManager::get</a></div><div class="ttdeci">Type * get(const std::string &amp;path_)</div><div class="ttdef"><b>Definition:</b> <a href="ResourceManager_8h_source.html#l00076">ResourceManager.h:76</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1ResourceManager_html_ab80e014a52a5237a000570b4ac67fcbd"><div class="ttname"><a href="classsdl2engine_1_1ResourceManager.html#ab80e014a52a5237a000570b4ac67fcbd">sdl2engine::ResourceManager::Instance</a></div><div class="ttdeci">static ResourceManager&lt; T &gt; &amp; Instance()</div><div class="ttdoc">Singleton implementation for ResourceManager. </div><div class="ttdef"><b>Definition:</b> <a href="ResourceManager_8h_source.html#l00104">ResourceManager.h:104</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1ResourceManager_html_a19152dfd5f1032bd1f7e0c55f48c03b5"><div class="ttname"><a href="classsdl2engine_1_1ResourceManager.html#a19152dfd5f1032bd1f7e0c55f48c03b5">sdl2engine::ResourceManager::RegisterResource</a></div><div class="ttdeci">void RegisterResource(const std::string &amp;path, TypePtr resource)</div><div class="ttdoc">Registers the resource on the resources map. </div><div class="ttdef"><b>Definition:</b> <a href="ResourceManager_8h_source.html#l00148">ResourceManager.h:148</a></div></div>
+<div class="ttc" id="structsdl2engine_1_1ResourceManager_1_1ConstructorTag_html"><div class="ttname"><a href="structsdl2engine_1_1ResourceManager_1_1ConstructorTag.html">sdl2engine::ResourceManager::ConstructorTag</a></div><div class="ttdef"><b>Definition:</b> <a href="ResourceManager_8h_source.html#l00028">ResourceManager.h:28</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1ResourceManager_html_ab11cdaf248c1ab38cf77f430d1baeab9"><div class="ttname"><a href="classsdl2engine_1_1ResourceManager.html#ab11cdaf248c1ab38cf77f430d1baeab9">sdl2engine::ResourceManager::UnregisterResource</a></div><div class="ttdeci">void UnregisterResource(const std::string &amp;path)</div><div class="ttdoc">Unregisters the resource on the resources map. </div><div class="ttdef"><b>Definition:</b> <a href="ResourceManager_8h_source.html#l00153">ResourceManager.h:153</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1ResourceManager_html_abb80c1ad04e2ca2f581fe6496c3f71bf"><div class="ttname"><a href="classsdl2engine_1_1ResourceManager.html#abb80c1ad04e2ca2f581fe6496c3f71bf">sdl2engine::ResourceManager::~ResourceManager</a></div><div class="ttdeci">~ResourceManager()</div><div class="ttdoc">The destructor. </div><div class="ttdef"><b>Definition:</b> <a href="ResourceManager_8h_source.html#l00113">ResourceManager.h:113</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 31 2015 04:34:59 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 1 2015 23:45:40 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v32</span>
+   &#160;<span id="projectnumber">v33</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -158,6 +158,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>changeText()
 : <a class="el" href="classsdl2engine_1_1Text.html#aa6f5e651760868bab52f885a31bc0f1a">sdl2engine::Text</a>
 </li>
+<li>Channel()
+: <a class="el" href="classsdl2engine_1_1SoundEffect.html#a172f975c05eb16b68c2be73a4ede68dc">sdl2engine::SoundEffect</a>
+</li>
 <li>ChannelDone()
 : <a class="el" href="classsdl2engine_1_1AudioHandler.html#a0583c998897a01c530715b9737132cef">sdl2engine::AudioHandler</a>
 </li>
@@ -205,8 +208,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>GameObject()
 : <a class="el" href="classsdl2engine_1_1GameObject.html#a345ea4ffcc8eb4b2133dd4e48571bc1f">sdl2engine::GameObject</a>
 </li>
-<li>get()
-: <a class="el" href="classsdl2engine_1_1ResourceManager.html#a479490d26a47e06e0f58c087db3b362b">sdl2engine::ResourceManager&lt; Type &gt;</a>
+<li>Get()
+: <a class="el" href="classsdl2engine_1_1ResourceManager.html#a5969ec3ff2d1e9c14226fad93338f528">sdl2engine::ResourceManager&lt; T &gt;</a>
 </li>
 <li>getAnimationClip()
 : <a class="el" href="classsdl2engine_1_1GameObject.html#a545e6fe921a9507dcddaf192bbd56623">sdl2engine::GameObject</a>
@@ -263,6 +266,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>Instance()
 : <a class="el" href="classsdl2engine_1_1Game.html#a850158cf352e293eb49a4910c6f5cc21">sdl2engine::Game</a>
+, <a class="el" href="classsdl2engine_1_1ResourceManager.html#ab80e014a52a5237a000570b4ac67fcbd">sdl2engine::ResourceManager&lt; T &gt;</a>
 </li>
 <li>isQuitFlag()
 : <a class="el" href="classsdl2engine_1_1InputHandler.html#a2e83405489f1ae86d92517ffa5096ba6">sdl2engine::InputHandler</a>
@@ -273,11 +277,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <h3><a class="anchor" id="index_l"></a>- l -</h3><ul>
 <li>load()
 : <a class="el" href="classsdl2engine_1_1GStatePlaceholder.html#a0a33c04bfe8475e4356ee9e8b75d7669">sdl2engine::GStatePlaceholder</a>
-, <a class="el" href="classsdl2engine_1_1MusicManager.html#ab549d69e5c445ad036a109d5383a60d0">sdl2engine::MusicManager</a>
-, <a class="el" href="classsdl2engine_1_1ResourceManager.html#af21b202b7a1762d6d648f5759b27e2f3">sdl2engine::ResourceManager&lt; Type &gt;</a>
-, <a class="el" href="classsdl2engine_1_1SFXManager.html#a21715e86b1edf150cc37b32793fb74db">sdl2engine::SFXManager</a>
-, <a class="el" href="classsdl2engine_1_1SpriteManager.html#ac2252ac49087540ee583bd84a9ab5876">sdl2engine::SpriteManager</a>
-, <a class="el" href="classsdl2engine_1_1StateGame.html#ade94602c8f136c12f67dc40ccc6a9669">sdl2engine::StateGame</a>
+</li>
+<li>Load()
+: <a class="el" href="classsdl2engine_1_1ResourceManager.html#a6342e2a8f910e8521f69f5d90ee9b16c">sdl2engine::ResourceManager&lt; T &gt;</a>
+</li>
+<li>load()
+: <a class="el" href="classsdl2engine_1_1StateGame.html#ade94602c8f136c12f67dc40ccc6a9669">sdl2engine::StateGame</a>
 </li>
 <li>LoadFrom()
 : <a class="el" href="classsdl2engine_1_1Sprite.html#a2d8ae44951073c4ca0d29082428ad900">sdl2engine::Sprite</a>
@@ -305,16 +310,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classsdl2engine_1_1Window.html#a721aa12d374c964de429ff426d3fa8ba">sdl2engine::Window</a>
 </li>
 <li>MixChunk()
-: <a class="el" href="classsdl2engine_1_1SoundEffect.html#a8c9f4861d66bc6efa72dff4c962f3fec">sdl2engine::SoundEffect</a>
+: <a class="el" href="classsdl2engine_1_1SoundEffect.html#a2add65600eb0cfea97d328664ccdda8a">sdl2engine::SoundEffect</a>
 </li>
 <li>MixMusic()
-: <a class="el" href="classsdl2engine_1_1Music.html#a3f891cfd3e4ab21fd3d85d9ae271fcb8">sdl2engine::Music</a>
+: <a class="el" href="classsdl2engine_1_1Music.html#a8824f7b1996ff8dba6aa59c60f25da20">sdl2engine::Music</a>
 </li>
 <li>Music()
 : <a class="el" href="classsdl2engine_1_1Music.html#a1b1b256630190eac45399779a33e26e0">sdl2engine::Music</a>
-</li>
-<li>music()
-: <a class="el" href="classsdl2engine_1_1ResourceHandler.html#a3746df47839483d13a33d480668fe2c7">sdl2engine::ResourceHandler</a>
 </li>
 </ul>
 
@@ -324,15 +326,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classsdl2engine_1_1LogBuffer.html#ac62575b5e5e2d6e1a8a10b691f7ae6b6">sdl2engine::LogBuffer</a>
 </li>
 <li>operator=()
-: <a class="el" href="classsdl2engine_1_1ResourceManager.html#aa4a2030c5457025896ffd277ac61b2d5">sdl2engine::ResourceManager&lt; Type &gt;</a>
+: <a class="el" href="classsdl2engine_1_1Music.html#aad61c42d9729605027c6d3f061a5cbf1">sdl2engine::Music</a>
+, <a class="el" href="classsdl2engine_1_1ResourceManager.html#a7b95aa29781acbb589ea5b60f15fb30a">sdl2engine::ResourceManager&lt; T &gt;</a>
+, <a class="el" href="classsdl2engine_1_1SoundEffect.html#a35371734d012d7d6c3c3e035169409a7">sdl2engine::SoundEffect</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_p"></a>- p -</h3><ul>
 <li>Path()
-: <a class="el" href="classsdl2engine_1_1Music.html#a650d96e093e06efcc9f572df26108e40">sdl2engine::Music</a>
-, <a class="el" href="classsdl2engine_1_1SoundEffect.html#a1b4e97d86043652cb59bec6da6e1cdfd">sdl2engine::SoundEffect</a>
+: <a class="el" href="classsdl2engine_1_1Music.html#a27476cec1a72e6a151cc02866d9ab3b5">sdl2engine::Music</a>
+, <a class="el" href="classsdl2engine_1_1SoundEffect.html#ac9a35497b88fe7ca5141e43cba92a3f4">sdl2engine::SoundEffect</a>
 , <a class="el" href="classsdl2engine_1_1Sprite.html#a0a7fa80091daa87a04423cf60fc6ea07">sdl2engine::Sprite</a>
 </li>
 <li>PauseEffects()
@@ -357,8 +361,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>rectsCollidedSide()
 : <a class="el" href="classsdl2engine_1_1Collision.html#a8f2dafce9139e610cc7f3d4a4fd15b83">sdl2engine::Collision</a>
 </li>
-<li>registerResource()
-: <a class="el" href="classsdl2engine_1_1ResourceManager.html#a03aaa1a9eca9c55856346732df6c42fd">sdl2engine::ResourceManager&lt; Type &gt;</a>
+<li>RegisterResource()
+: <a class="el" href="classsdl2engine_1_1ResourceManager.html#a19152dfd5f1032bd1f7e0c55f48c03b5">sdl2engine::ResourceManager&lt; T &gt;</a>
 </li>
 <li>render()
 : <a class="el" href="classsdl2engine_1_1GameObject.html#ad89e4e691f471d20e734681a46782c7a">sdl2engine::GameObject</a>
@@ -387,14 +391,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>ResolutionWidth()
 : <a class="el" href="classsdl2engine_1_1Configuration.html#a58cb441a464bbec5af7b81d35d94a761">sdl2engine::Configuration</a>
 </li>
-<li>Resource()
-: <a class="el" href="classsdl2engine_1_1Game.html#a2c968c813156606ffb8210a2a5f2e376">sdl2engine::Game</a>
-</li>
-<li>ResourceHandler()
-: <a class="el" href="classsdl2engine_1_1ResourceHandler.html#a43b25a4784dd144d84ac03312d0a2f93">sdl2engine::ResourceHandler</a>
-</li>
 <li>ResourceManager()
-: <a class="el" href="classsdl2engine_1_1ResourceManager.html#a3f14c7e44947a9128771a74dc250f640">sdl2engine::ResourceManager&lt; Type &gt;</a>
+: <a class="el" href="classsdl2engine_1_1ResourceManager.html#a7cf851336b147ef11d00deb085299c08">sdl2engine::ResourceManager&lt; T &gt;</a>
 </li>
 <li>ResumeEffects()
 : <a class="el" href="classsdl2engine_1_1AudioHandler.html#ae4f8e14418b250ec944ddac4ed88b99f">sdl2engine::AudioHandler</a>
@@ -424,6 +422,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>SetBlendMode()
 : <a class="el" href="classsdl2engine_1_1Sprite.html#a36f3eb939392214877ae8e06dd7eb97f">sdl2engine::Sprite</a>
 </li>
+<li>SetChannel()
+: <a class="el" href="classsdl2engine_1_1SoundEffect.html#af15767bb00eb96f55e8ccd754ffe532a">sdl2engine::SoundEffect</a>
+</li>
 <li>SetEffectsVolume()
 : <a class="el" href="classsdl2engine_1_1AudioHandler.html#a7c416cf932a6031ec1937ec760b6fd32">sdl2engine::AudioHandler</a>
 </li>
@@ -451,14 +452,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>signalExit()
 : <a class="el" href="classsdl2engine_1_1InputHandler.html#a0bae4f7fe561cfbf1649e7387791c957">sdl2engine::InputHandler</a>
 </li>
-<li>soundEffect()
-: <a class="el" href="classsdl2engine_1_1ResourceHandler.html#a64875e1b8d2c007de00773ffadcfcd1c">sdl2engine::ResourceHandler</a>
-</li>
 <li>SoundEffect()
 : <a class="el" href="classsdl2engine_1_1SoundEffect.html#ace01021e37269435f111648f2d481f22">sdl2engine::SoundEffect</a>
-</li>
-<li>sprite()
-: <a class="el" href="classsdl2engine_1_1ResourceHandler.html#a6862d2a7ac5840adab225585c422d011">sdl2engine::ResourceHandler</a>
 </li>
 <li>Sprite()
 : <a class="el" href="classsdl2engine_1_1Sprite.html#a82cdebf53de84da6a8dcb4947725c323">sdl2engine::Sprite</a>
@@ -487,8 +482,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classsdl2engine_1_1GStatePlaceholder.html#ac0ef624166f97b63f031a75aa4087e04">sdl2engine::GStatePlaceholder</a>
 , <a class="el" href="classsdl2engine_1_1StateGame.html#a2c320e3ee147659b2f4a82346f9294b0">sdl2engine::StateGame</a>
 </li>
-<li>unregisterResource()
-: <a class="el" href="classsdl2engine_1_1ResourceManager.html#ae49252af949ea85aeefeb0887c2e78a3">sdl2engine::ResourceManager&lt; Type &gt;</a>
+<li>UnregisterResource()
+: <a class="el" href="classsdl2engine_1_1ResourceManager.html#ab11cdaf248c1ab38cf77f430d1baeab9">sdl2engine::ResourceManager&lt; T &gt;</a>
 </li>
 <li>Update()
 : <a class="el" href="classsdl2engine_1_1Animation.html#af084f69f04ef384b602f8871e6795f6c">sdl2engine::Animation</a>
@@ -526,9 +521,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>~Animation()
 : <a class="el" href="classsdl2engine_1_1Animation.html#a41a9383b94d62f14b368e06acc3da354">sdl2engine::Animation</a>
 </li>
-<li>~AudioHandler()
-: <a class="el" href="classsdl2engine_1_1AudioHandler.html#a5ad3cd5d037f5d6c53375fa13cca39a6">sdl2engine::AudioHandler</a>
-</li>
 <li>~Camera()
 : <a class="el" href="classsdl2engine_1_1Camera.html#ae9c73066f4911065fae5918a5c74a714">sdl2engine::Camera</a>
 </li>
@@ -556,11 +548,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>~Renderer()
 : <a class="el" href="classsdl2engine_1_1Renderer.html#ad77f072c0112c51f87284d1e83d24e13">sdl2engine::Renderer</a>
 </li>
-<li>~ResourceHandler()
-: <a class="el" href="classsdl2engine_1_1ResourceHandler.html#a56fb62b43c587020a8ff1aa22a497056">sdl2engine::ResourceHandler</a>
-</li>
 <li>~ResourceManager()
-: <a class="el" href="classsdl2engine_1_1ResourceManager.html#adab4a2960969f725f3c6a5f660f62191">sdl2engine::ResourceManager&lt; Type &gt;</a>
+: <a class="el" href="classsdl2engine_1_1ResourceManager.html#abb80c1ad04e2ca2f581fe6496c3f71bf">sdl2engine::ResourceManager&lt; T &gt;</a>
 </li>
 <li>~SoundEffect()
 : <a class="el" href="classsdl2engine_1_1SoundEffect.html#a16c62cb422dfacd7f6f87c1aa78064c4">sdl2engine::SoundEffect</a>
@@ -581,7 +570,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 31 2015 04:34:59 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 1 2015 23:45:41 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

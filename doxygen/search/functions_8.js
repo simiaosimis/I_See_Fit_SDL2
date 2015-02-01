@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['load',['load',['../classsdl2engine_1_1MusicManager.html#ab549d69e5c445ad036a109d5383a60d0',1,'sdl2engine::MusicManager::load()'],['../classsdl2engine_1_1SFXManager.html#a21715e86b1edf150cc37b32793fb74db',1,'sdl2engine::SFXManager::load()'],['../classsdl2engine_1_1ResourceManager.html#af21b202b7a1762d6d648f5759b27e2f3',1,'sdl2engine::ResourceManager::load()'],['../classsdl2engine_1_1GStatePlaceholder.html#a0a33c04bfe8475e4356ee9e8b75d7669',1,'sdl2engine::GStatePlaceholder::load()'],['../classsdl2engine_1_1StateGame.html#ade94602c8f136c12f67dc40ccc6a9669',1,'sdl2engine::StateGame::load()'],['../classsdl2engine_1_1SpriteManager.html#ac2252ac49087540ee583bd84a9ab5876',1,'sdl2engine::SpriteManager::load()']]],
+  ['load',['load',['../classsdl2engine_1_1GStatePlaceholder.html#a0a33c04bfe8475e4356ee9e8b75d7669',1,'sdl2engine::GStatePlaceholder::load()'],['../classsdl2engine_1_1StateGame.html#ade94602c8f136c12f67dc40ccc6a9669',1,'sdl2engine::StateGame::load()'],['../classsdl2engine_1_1ResourceManager.html#a6342e2a8f910e8521f69f5d90ee9b16c',1,'sdl2engine::ResourceManager::Load()']]],
   ['loadfrom',['LoadFrom',['../classsdl2engine_1_1Sprite.html#a2d8ae44951073c4ca0d29082428ad900',1,'sdl2engine::Sprite']]],
   ['log',['log',['../namespacesdl2engine.html#adce96af93a7d3fa229b71236f2f8a59b',1,'sdl2engine']]],
   ['log_3c_20loglevel_3a_3adebug_20_3e',['log&lt; LogLevel::Debug &gt;',['../namespacesdl2engine.html#a89601785165bc49428b2ecf2ed10e0ab',1,'sdl2engine']]],

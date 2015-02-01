@@ -1,17 +1,5 @@
 <map id="ResourceManager.h" name="ResourceManager.h">
-<area shape="rect" id="node3" href="$MusicManager_8h.html" title="MusicManager.h" alt="" coords="339,83,456,112"/>
-<area shape="rect" id="node25" href="$SFXManager_8h.html" title="SFXManager.h" alt="" coords="480,83,589,112"/>
-<area shape="rect" id="node30" href="$SpriteManager_8h.html" title="SpriteManager.h" alt="" coords="613,83,731,112"/>
-<area shape="rect" id="node5" href="$MusicManager_8cpp.html" title="MusicManager.cpp" alt="" coords="245,160,376,189"/>
-<area shape="rect" id="node7" href="$ResourceHandler_8h.html" title="ResourceHandler.h" alt="" coords="400,160,533,189"/>
-<area shape="rect" id="node9" href="$Game_8h.html" title="Game.h" alt="" coords="368,237,435,267"/>
-<area shape="rect" id="node23" href="$ResourceHandler_8cpp.html" title="ResourceHandler.cpp" alt="" coords="459,237,605,267"/>
-<area shape="rect" id="node11" href="$AudioHandler_8cpp.html" title="AudioHandler.cpp" alt="" coords="5,315,131,344"/>
-<area shape="rect" id="node13" href="$Game_8cpp.html" title="Game.cpp" alt="" coords="155,315,237,344"/>
-<area shape="rect" id="node15" href="$GameObject_8cpp.html" title="GameObject.cpp" alt="" coords="261,315,381,344"/>
-<area shape="rect" id="node17" href="$GStatePlaceholder_8cpp.html" title="GStatePlaceholder.cpp" alt="" coords="405,315,560,344"/>
-<area shape="rect" id="node19" href="$Sprite_8cpp.html" title="Sprite.cpp" alt="" coords="584,315,664,344"/>
-<area shape="rect" id="node21" href="$main_8cpp.html" title="main.cpp" alt="" coords="688,315,763,344"/>
-<area shape="rect" id="node27" href="$SFXManager_8cpp.html" title="SFXManager.cpp" alt="" coords="557,160,680,189"/>
-<area shape="rect" id="node33" href="$SpriteManager_8cpp.html" title="SpriteManager.cpp" alt="" coords="704,160,835,189"/>
+<area shape="rect" id="node3" href="$AudioHandler_8cpp.html" title="AudioHandler.cpp" alt="" coords="5,83,131,112"/>
+<area shape="rect" id="node5" href="$GameObject_8cpp.html" title="GameObject.cpp" alt="" coords="155,83,275,112"/>
+<area shape="rect" id="node7" href="$GStatePlaceholder_8cpp.html" title="GStatePlaceholder.cpp" alt="" coords="299,83,453,112"/>
 </map>

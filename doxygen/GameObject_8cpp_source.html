@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v32</span>
+   &#160;<span id="projectnumber">v33</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -93,7 +93,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <a href="GameObject_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="GameObject_8h.html">engine/GameObject.h</a>&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;SDL2/SDL.h&gt;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Game_8h.html">engine/Game.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ResourceManager_8h.html">core/ResourceManager.h</a>&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Logger_8h.html">util/Logger.h</a>&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Assert_8h.html">util/Assert.h</a>&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
@@ -103,7 +103,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    x(x_),</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    y(y_),</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    isRight(true),</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    sprite(<a class="code" href="classsdl2engine_1_1Game.html">Game</a>::Instance().Resource().sprite(path_)),</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    sprite(<a class="code" href="classsdl2engine_1_1ResourceManager.html">ResourceManager</a>&lt;<a class="code" href="classsdl2engine_1_1Sprite.html">Sprite</a>&gt;::Instance().Get(path_)),</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    width(0),</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    height(0),</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    animationClip{0, 0, 0, 0},</div>
@@ -165,22 +165,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classsdl2engine_1_1GameObject_html_a41b34b9ff09b80588d20cc626a45c9e0"><div class="ttname"><a href="classsdl2engine_1_1GameObject.html#a41b34b9ff09b80588d20cc626a45c9e0">sdl2engine::GameObject::animationClip</a></div><div class="ttdeci">SDL_Rect animationClip</div><div class="ttdef"><b>Definition:</b> <a href="GameObject_8h_source.html#l00080">GameObject.h:80</a></div></div>
 <div class="ttc" id="classsdl2engine_1_1GameObject_html_ac6d4904f329d422234b93214d66acf98"><div class="ttname"><a href="classsdl2engine_1_1GameObject.html#ac6d4904f329d422234b93214d66acf98">sdl2engine::GameObject::~GameObject</a></div><div class="ttdeci">virtual ~GameObject()</div><div class="ttdef"><b>Definition:</b> <a href="GameObject_8cpp_source.html#l00049">GameObject.cpp:49</a></div></div>
 <div class="ttc" id="namespacesdl2engine_html_ac31c5eafc7940521da71fab041ac0138"><div class="ttname"><a href="namespacesdl2engine.html#ac31c5eafc7940521da71fab041ac0138">sdl2engine::log_warn</a></div><div class="ttdeci">constexpr log_function_ptr log_warn</div><div class="ttdef"><b>Definition:</b> <a href="Logger_8h_source.html#l00086">Logger.h:86</a></div></div>
-<div class="ttc" id="Game_8h_html"><div class="ttname"><a href="Game_8h.html">Game.h</a></div></div>
 <div class="ttc" id="classsdl2engine_1_1GameObject_html_a0f3dd8f798abd8cf4fea99d999c8b0ba"><div class="ttname"><a href="classsdl2engine_1_1GameObject.html#a0f3dd8f798abd8cf4fea99d999c8b0ba">sdl2engine::GameObject::height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition:</b> <a href="GameObject_8h_source.html#l00079">GameObject.h:79</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1Game_html"><div class="ttname"><a href="classsdl2engine_1_1Game.html">sdl2engine::Game</a></div><div class="ttdef"><b>Definition:</b> <a href="Game_8h_source.html#l00020">Game.h:20</a></div></div>
 <div class="ttc" id="classsdl2engine_1_1GameObject_html_a345ea4ffcc8eb4b2133dd4e48571bc1f"><div class="ttname"><a href="classsdl2engine_1_1GameObject.html#a345ea4ffcc8eb4b2133dd4e48571bc1f">sdl2engine::GameObject::GameObject</a></div><div class="ttdeci">GameObject(const double x_, const double y_, const std::string &amp;path_)</div><div class="ttdef"><b>Definition:</b> <a href="GameObject_8cpp_source.html#l00009">GameObject.cpp:9</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1ResourceManager_html"><div class="ttname"><a href="classsdl2engine_1_1ResourceManager.html">sdl2engine::ResourceManager</a></div><div class="ttdoc">Resource management class template. </div><div class="ttdef"><b>Definition:</b> <a href="ResourceManager_8h_source.html#l00022">ResourceManager.h:22</a></div></div>
 <div class="ttc" id="Assert_8h_html_ab1899199386b1542d1111168ca847e9c"><div class="ttname"><a href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a></div><div class="ttdeci">#define ASSERT(expression, message)</div><div class="ttdef"><b>Definition:</b> <a href="Assert_8h_source.html#l00006">Assert.h:6</a></div></div>
 <div class="ttc" id="GameObject_8h_html"><div class="ttname"><a href="GameObject_8h.html">GameObject.h</a></div></div>
 <div class="ttc" id="Assert_8h_html"><div class="ttname"><a href="Assert_8h.html">Assert.h</a></div></div>
 <div class="ttc" id="classsdl2engine_1_1GameObject_html_a545e6fe921a9507dcddaf192bbd56623"><div class="ttname"><a href="classsdl2engine_1_1GameObject.html#a545e6fe921a9507dcddaf192bbd56623">sdl2engine::GameObject::getAnimationClip</a></div><div class="ttdeci">SDL_Rect &amp; getAnimationClip()</div><div class="ttdef"><b>Definition:</b> <a href="GameObject_8cpp_source.html#l00061">GameObject.cpp:61</a></div></div>
 <div class="ttc" id="Logger_8h_html"><div class="ttname"><a href="Logger_8h.html">Logger.h</a></div></div>
 <div class="ttc" id="classsdl2engine_1_1GameObject_html_ac5ddd5af97843e322fadf54124ac61e6"><div class="ttname"><a href="classsdl2engine_1_1GameObject.html#ac5ddd5af97843e322fadf54124ac61e6">sdl2engine::GameObject::boundingBox</a></div><div class="ttdeci">SDL_Rect boundingBox</div><div class="ttdef"><b>Definition:</b> <a href="GameObject_8h_source.html#l00081">GameObject.h:81</a></div></div>
+<div class="ttc" id="ResourceManager_8h_html"><div class="ttname"><a href="ResourceManager_8h.html">ResourceManager.h</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1Sprite_html"><div class="ttname"><a href="classsdl2engine_1_1Sprite.html">sdl2engine::Sprite</a></div><div class="ttdoc">Visual representation of game objects. </div><div class="ttdef"><b>Definition:</b> <a href="Sprite_8h_source.html#l00013">Sprite.h:13</a></div></div>
 <div class="ttc" id="classsdl2engine_1_1GameObject_html_aac8db512d02772342a60fd69821c5804"><div class="ttname"><a href="classsdl2engine_1_1GameObject.html#aac8db512d02772342a60fd69821c5804">sdl2engine::GameObject::getHeight</a></div><div class="ttdeci">int getHeight()</div><div class="ttdef"><b>Definition:</b> <a href="GameObject_8cpp_source.html#l00057">GameObject.cpp:57</a></div></div>
 <div class="ttc" id="classsdl2engine_1_1GameObject_html_aa7197c2216c38cbcbd4f084f06586d3b"><div class="ttname"><a href="classsdl2engine_1_1GameObject.html#aa7197c2216c38cbcbd4f084f06586d3b">sdl2engine::GameObject::getBoundingBox</a></div><div class="ttdeci">SDL_Rect &amp; getBoundingBox()</div><div class="ttdef"><b>Definition:</b> <a href="GameObject_8cpp_source.html#l00065">GameObject.cpp:65</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 31 2015 04:34:59 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 1 2015 23:45:40 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

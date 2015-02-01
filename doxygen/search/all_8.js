@@ -11,7 +11,7 @@ var searchData=
   ['inputhandler_2ecpp',['InputHandler.cpp',['../InputHandler_8cpp.html',1,'']]],
   ['inputhandler_2eh',['InputHandler.h',['../InputHandler_8h.html',1,'']]],
   ['inputkeys_2eh',['InputKeys.h',['../InputKeys_8h.html',1,'']]],
-  ['instance',['Instance',['../classsdl2engine_1_1Game.html#a850158cf352e293eb49a4910c6f5cc21',1,'sdl2engine::Game']]],
+  ['instance',['Instance',['../classsdl2engine_1_1ResourceManager.html#ab80e014a52a5237a000570b4ac67fcbd',1,'sdl2engine::ResourceManager::Instance()'],['../classsdl2engine_1_1Game.html#a850158cf352e293eb49a4910c6f5cc21',1,'sdl2engine::Game::Instance()']]],
   ['isquitflag',['isQuitFlag',['../classsdl2engine_1_1InputHandler.html#a2e83405489f1ae86d92517ffa5096ba6',1,'sdl2engine::InputHandler']]],
   ['isright',['isRight',['../classsdl2engine_1_1GameObject.html#aa89bfa332dd0f32e34e60011fcd7bff1',1,'sdl2engine::GameObject']]]
 ];
