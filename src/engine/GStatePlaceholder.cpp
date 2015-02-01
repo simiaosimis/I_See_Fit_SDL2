@@ -23,7 +23,7 @@ void GStatePlaceholder::load() {
 
 	this->animation = new Animation(0, 4, 32, 32, 5, 5.0);
 	this->animationClip = {0, 0, 0, 0};
-	this->image = Game::Instance().Resource().sprite("assets/images/spritesheet.png");
+	this->image = Game::Instance().Resource().GetSprite("assets/images/spritesheet.png");
 
 	Game::Instance().GetAudioHandler().ChangeMusic("assets/audio/music/test_music.flac");
 }

@@ -10,7 +10,7 @@ GameObject::GameObject(const double x_, const double y_, const std::string& path
     x(x_),
     y(y_),
     isRight(true),
-    sprite(Game::Instance().Resource().sprite(path_)),
+    sprite(Game::Instance().Resource().GetSprite(path_)),
     width(0),
     height(0),
     animationClip{0, 0, 0, 0},
