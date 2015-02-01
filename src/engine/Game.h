@@ -8,7 +8,6 @@
 #include "engine/StateGame.h"
 #include "audio/AudioHandler.h"
 #include "input/InputHandler.h"
-#include "engine/ResourceHandler.h"
 
 namespace sdl2engine {
 
@@ -78,11 +77,6 @@ class Game {
 		Renderer* GetRenderer();
 
 		/**
-		* @return The Game resource handler.
-		*/
-		ResourceHandler& Resource();
-
-		/**
 		* @brief Stops execution and closes the game.
 		*/
 		void Stop();
@@ -121,7 +115,6 @@ class Game {
 		bool m_is_running; /**< Whether the game is currently running/looping or not. */
 		AudioHandler* m_audio_handler; /**< The Game AudioHandler. */
 		InputHandler* m_input_handler; /**< The Game InputHandler. */
-		ResourceHandler* m_resource_handler; /**< The Game ResourceHandler. */
 		StateGame* m_current_state; /**< The current state, which the game is in. */
 		Window m_window; /**< The game Window. */
 

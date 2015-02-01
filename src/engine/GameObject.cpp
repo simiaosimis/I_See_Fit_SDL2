@@ -1,6 +1,6 @@
 #include "engine/GameObject.h"
 #include <SDL2/SDL.h>
-#include "engine/Game.h"
+#include "core/ResourceManager.h"
 #include "util/Logger.h"
 #include "util/Assert.h"
 
@@ -10,7 +10,7 @@ GameObject::GameObject(const double x_, const double y_, const std::string& path
     x(x_),
     y(y_),
     isRight(true),
-    sprite(Game::Instance().Resource().GetSprite(path_)),
+    sprite(ResourceManager<Sprite>::Instance().Get(path_)),
     width(0),
     height(0),
     animationClip{0, 0, 0, 0},

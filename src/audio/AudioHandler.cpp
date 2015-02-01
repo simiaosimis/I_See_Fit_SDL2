@@ -3,6 +3,7 @@
 #include <algorithm>
 #include "audio/Music.h"
 #include "audio/SoundEffect.h"
+#include "core/ResourceManager.h"
 #include "engine/Game.h"
 #include "util/Logger.h"
 #include "util/Assert.h"
@@ -30,7 +31,7 @@ void AudioHandler::ChangeMusic(const std::string& path, const int times) {
 }
 
 void AudioHandler::PlaySoundEffect(const std::string& path) {
-	m_effects.push_back(Game::Instance().Resource().GetSoundEffect(path));
+	m_effects.push_back(ResourceManager<SoundEffect>::Instance().Get(path));
 
 	const int k_played_channel = Mix_PlayChannel(k_any_channel, m_effects.back()->MixChunk(),
 		0);
@@ -45,7 +46,7 @@ void AudioHandler::PlaySoundEffect(const std::string& path) {
 void AudioHandler::PlaySoundEffect(const std::string& path, const int times) {
 	ASSERT((times == k_infinite_loop || times >= 2), "Must be k_infinite_loop or >= 2. If only needed to play once, use AudioHandler::PlaySoundEffect(const std::string&)");
 
-	m_effects.push_back(Game::Instance().Resource().GetSoundEffect(path));
+	m_effects.push_back(ResourceManager<SoundEffect>::Instance().Get(path));
 
 	const int k_played_channel = Mix_PlayChannel(k_any_channel, m_effects.back()->MixChunk(),
 		(times - 1));
@@ -130,7 +131,7 @@ void AudioHandler::StopMusic() {
 }
 
 void AudioHandler::SetMusic(const std::string& path) {
-	m_current_music = Game::Instance().Resource().GetMusic(path);
+	m_current_music = ResourceManager<Music>::Instance().Get(path);
 }
 
 void AudioHandler::ClearChannel(const int channel) {

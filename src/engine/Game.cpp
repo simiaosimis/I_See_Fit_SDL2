@@ -26,7 +26,6 @@ Game::Game() :
 	m_is_running{false},
 	m_audio_handler{new AudioHandler()},
 	m_input_handler{new InputHandler()},
-	m_resource_handler{new ResourceHandler()},
 	m_current_state{nullptr},
 	m_window{},
 	m_game_states{}
@@ -44,7 +43,6 @@ Game::~Game() {
 
 	delete m_audio_handler;
 	delete m_input_handler;
-	delete m_resource_handler;
 }
 
 void Game::Run() {
@@ -149,10 +147,6 @@ void Game::ResizeWindow(const int width, const int height) {
 
 Renderer* Game::GetRenderer() {
 	return m_window.GetRenderer();
-}
-
-ResourceHandler& Game::Resource() {
-	return (*(m_resource_handler));
 }
 
 } // namespace sdl2engine
