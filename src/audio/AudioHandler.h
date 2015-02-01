@@ -1,12 +1,12 @@
 #pragma once
 
-#include <SDL2/SDL_mixer.h>
 #include <string>
 #include <vector>
-#include "audio/Music.h"
-#include "audio/SoundEffect.h"
 
 namespace sdl2engine {
+
+class Music;
+class SoundEffect;
 
 /**
 * Class that handles all the audio in the game.
@@ -23,11 +23,6 @@ class AudioHandler {
 		* @brief The constructor.
 		*/
 		AudioHandler();
-
-		/**
-		* @brief The destructor.
-		*/
-		~AudioHandler();
 
 		/**
 		* @brief Sets new music for given path, infinitely looping.

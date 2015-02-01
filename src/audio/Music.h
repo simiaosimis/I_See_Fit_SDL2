@@ -19,16 +19,20 @@ class Music {
 		* @brief The destructor.
 		*/
 		~Music();
+		Music(const Music&) = delete;
+		Music& operator=(const Music&) = delete;
+		Music(Music&&) = delete;
+		Music& operator=(Music&&) = delete;
 
 		/**
 		* @return A pointer to the raw Mix_Music object.
 		*/
-		Mix_Music* MixMusic();
+		Mix_Music* MixMusic() const;
 
 		/**
 		* @return The path given to the constructor.
 		*/
-		std::string Path();
+		std::string Path() const;
 
 	private:
 		Mix_Music* const m_mix_music; /**< Music data. */

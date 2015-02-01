@@ -18,11 +18,11 @@ Music::~Music() {
 	}
 }
 
-Mix_Music* Music::MixMusic() {
+Mix_Music* Music::MixMusic() const {
 	return m_mix_music;
 }
 
-std::string Music::Path() {
+std::string Music::Path() const {
 	return m_path;
 }
 

@@ -19,12 +19,20 @@ SoundEffect::~SoundEffect() {
 	}
 }
 
-Mix_Chunk* SoundEffect::MixChunk() {
+Mix_Chunk* SoundEffect::MixChunk() const {
 	return m_mix_chunk;
 }
 
-std::string SoundEffect::Path() {
+std::string SoundEffect::Path() const {
 	return m_path;
+}
+
+int SoundEffect::Channel() const {
+	return m_channel;
+}
+
+void SoundEffect::SetChannel(const int channel) {
+	m_channel = channel;
 }
 
 } // namespace sdl2engine
