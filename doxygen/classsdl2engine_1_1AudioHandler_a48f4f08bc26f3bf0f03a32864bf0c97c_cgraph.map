@@ -1,8 +1,0 @@
-<map id="sdl2engine::AudioHandler::ChangeMusic" name="sdl2engine::AudioHandler::ChangeMusic">
-<area shape="rect" id="node3" href="$classsdl2engine_1_1AudioHandler.html#a82f735fc18ee61c8b56ac906e97a52ea" title="Stops playing the current music. " alt="" coords="224,5,395,51"/>
-<area shape="rect" id="node5" href="$classsdl2engine_1_1AudioHandler.html#acaef567691c854dbb334123b3c67ace9" title="Sets the current music. " alt="" coords="224,74,395,121"/>
-<area shape="rect" id="node9" href="$classsdl2engine_1_1AudioHandler.html#a188c34fab020951a95a92cbdbfaba98b" title="Plays the current music as an infinite loop. " alt="" coords="224,143,395,190"/>
-<area shape="rect" id="node7" href="$classsdl2engine_1_1ResourceManager.html#ab80e014a52a5237a000570b4ac67fcbd" title="Singleton implementation for ResourceManager. " alt="" coords="444,74,641,121"/>
-<area shape="rect" id="node11" href="$classsdl2engine_1_1Music.html#a8824f7b1996ff8dba6aa59c60f25da20" title="sdl2engine::Music::\lMixMusic" alt="" coords="476,143,609,190"/>
-<area shape="rect" id="node13" href="$classsdl2engine_1_1Music.html#a27476cec1a72e6a151cc02866d9ab3b5" title="sdl2engine::Music::Path" alt="" coords="461,213,624,243"/>
-</map>

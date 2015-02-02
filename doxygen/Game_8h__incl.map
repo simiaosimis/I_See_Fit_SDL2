@@ -1,11 +1,11 @@
 <map id="Game.h" name="Game.h">
-<area shape="rect" id="node11" href="$Window_8h.html" title="graphics/Window.h" alt="" coords="848,160,982,189"/>
-<area shape="rect" id="node19" href="$StateGame_8h.html" title="engine/StateGame.h" alt="" coords="532,83,674,112"/>
-<area shape="rect" id="node31" href="$AudioHandler_8h.html" title="audio/AudioHandler.h" alt="" coords="362,83,508,112"/>
-<area shape="rect" id="node35" href="$InputHandler_8h.html" title="input/InputHandler.h" alt="" coords="84,83,223,112"/>
-<area shape="rect" id="node16" href="$Renderer_8h.html" title="graphics/Renderer.h" alt="" coords="978,237,1116,267"/>
-<area shape="rect" id="node23" href="$GameObject_8h.html" title="engine/GameObject.h" alt="" coords="527,160,674,189"/>
-<area shape="rect" id="node27" href="$Sprite_8h.html" title="graphics/Sprite.h" alt="" coords="732,237,852,267"/>
-<area shape="rect" id="node40" href="$InputKeys_8h.html" title="input/InputKeys.h" alt="" coords="20,237,143,267"/>
-<area shape="rect" id="node43" href="$ControllerHandler_8h.html" title="input/ControllerHandler.h" alt="" coords="71,160,236,189"/>
+<area shape="rect" id="node11" href="$Window_8h.html" title="graphics/Window.h" alt="" coords="936,160,1070,189"/>
+<area shape="rect" id="node19" href="$StateGame_8h.html" title="engine/StateGame.h" alt="" coords="618,83,759,112"/>
+<area shape="rect" id="node31" href="$AudioHandler_8h.html" title="audio/AudioHandler.h" alt="" coords="362,160,508,189"/>
+<area shape="rect" id="node34" href="$InputHandler_8h.html" title="input/InputHandler.h" alt="" coords="84,83,223,112"/>
+<area shape="rect" id="node16" href="$Renderer_8h.html" title="graphics/Renderer.h" alt="" coords="1066,237,1204,267"/>
+<area shape="rect" id="node23" href="$GameObject_8h.html" title="engine/GameObject.h" alt="" coords="615,160,762,189"/>
+<area shape="rect" id="node27" href="$Sprite_8h.html" title="graphics/Sprite.h" alt="" coords="820,237,940,267"/>
+<area shape="rect" id="node39" href="$InputKeys_8h.html" title="input/InputKeys.h" alt="" coords="20,237,143,267"/>
+<area shape="rect" id="node42" href="$ControllerHandler_8h.html" title="input/ControllerHandler.h" alt="" coords="71,160,236,189"/>
 </map>

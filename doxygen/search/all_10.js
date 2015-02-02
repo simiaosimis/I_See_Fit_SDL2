@@ -8,7 +8,7 @@ var searchData=
   ['rectscollidedside',['rectsCollidedSide',['../classsdl2engine_1_1Collision.html#a8f2dafce9139e610cc7f3d4a4fd15b83',1,'sdl2engine::Collision']]],
   ['registerresource',['RegisterResource',['../classsdl2engine_1_1ResourceManager.html#a19152dfd5f1032bd1f7e0c55f48c03b5',1,'sdl2engine::ResourceManager']]],
   ['released',['RELEASED',['../namespacesdl2engine_1_1controllerMap.html#a031302295da982dc16fd6893d1f96dd8ac47a6e6ff19576a45a7995cc1230b801',1,'sdl2engine::controllerMap']]],
-  ['render',['Render',['../classsdl2engine_1_1Renderer.html#af016a3209a0768f7db19c38ab9489068',1,'sdl2engine::Renderer::Render()'],['../classsdl2engine_1_1Sprite.html#a618dfd6e5850ee7f8c40833d0d3fca7c',1,'sdl2engine::Sprite::Render()'],['../classsdl2engine_1_1GameObject.html#ad89e4e691f471d20e734681a46782c7a',1,'sdl2engine::GameObject::render()'],['../classsdl2engine_1_1GStatePlaceholder.html#ab503edaa692d97faebebe28e51fc5815',1,'sdl2engine::GStatePlaceholder::render()'],['../classsdl2engine_1_1StateGame.html#a19a86fd1f53a048d360e1f7a3f685b5e',1,'sdl2engine::StateGame::render()'],['../classsdl2engine_1_1Text.html#a28d6ca0354a8dc9148aa1f45cc8c0bea',1,'sdl2engine::Text::render()']]],
+  ['render',['render',['../classsdl2engine_1_1GameObject.html#ad89e4e691f471d20e734681a46782c7a',1,'sdl2engine::GameObject::render()'],['../classsdl2engine_1_1GStatePlaceholder.html#ab503edaa692d97faebebe28e51fc5815',1,'sdl2engine::GStatePlaceholder::render()'],['../classsdl2engine_1_1StateGame.html#a19a86fd1f53a048d360e1f7a3f685b5e',1,'sdl2engine::StateGame::render()'],['../classsdl2engine_1_1Text.html#a28d6ca0354a8dc9148aa1f45cc8c0bea',1,'sdl2engine::Text::render()'],['../classsdl2engine_1_1Renderer.html#af016a3209a0768f7db19c38ab9489068',1,'sdl2engine::Renderer::Render()'],['../classsdl2engine_1_1Sprite.html#a618dfd6e5850ee7f8c40833d0d3fca7c',1,'sdl2engine::Sprite::Render()']]],
   ['renderer',['Renderer',['../classsdl2engine_1_1Renderer.html#a75db8a5077a6efa4b6defda741fea9d7',1,'sdl2engine::Renderer']]],
   ['renderer',['Renderer',['../classsdl2engine_1_1Renderer.html',1,'sdl2engine']]],
   ['renderer_2ecpp',['Renderer.cpp',['../Renderer_8cpp.html',1,'']]],
@@ -25,7 +25,7 @@ var searchData=
   ['resumeeffects',['ResumeEffects',['../classsdl2engine_1_1AudioHandler.html#ae4f8e14418b250ec944ddac4ed88b99f',1,'sdl2engine::AudioHandler']]],
   ['resumemusic',['ResumeMusic',['../classsdl2engine_1_1AudioHandler.html#adebf004b51a566247d3c011506152db1',1,'sdl2engine::AudioHandler']]],
   ['rhorizontal',['RHORIZONTAL',['../namespacesdl2engine_1_1controllerMap.html#a175550e7f2708486649ca6f0f49b35d4ae6d8d052a9705f4d5e3f57ffa2aa17f1',1,'sdl2engine::controllerMap']]],
-  ['right',['RIGHT',['../classsdl2engine_1_1Collision.html#a526544de8bd03ab26bf8ce3b7c9fcfaba0eb77b6bcfeebc4119c2d4633fa5a9d0',1,'sdl2engine::Collision::RIGHT()'],['../namespacesdl2engine.html#a92e23178a19914e86fa4f7640dcde170a46cab19e66f8e2ad4f1e5e38a0530d4c',1,'sdl2engine::RIGHT()']]],
+  ['right',['RIGHT',['../classsdl2engine_1_1Collision.html#a526544de8bd03ab26bf8ce3b7c9fcfaba0eb77b6bcfeebc4119c2d4633fa5a9d0',1,'sdl2engine::Collision']]],
   ['run',['Run',['../classsdl2engine_1_1Game.html#aa4fa7ae90d7c62dfddeb16f1737c23e3',1,'sdl2engine::Game']]],
   ['rvertical',['RVERTICAL',['../namespacesdl2engine_1_1controllerMap.html#a175550e7f2708486649ca6f0f49b35d4ae105447a48be02c9b0013fd2e28b0178',1,'sdl2engine::controllerMap']]]
 ];

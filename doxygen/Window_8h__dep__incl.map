@@ -1,9 +1,8 @@
 <map id="Window.h" name="Window.h">
-<area shape="rect" id="node3" href="$Game_8h.html" title="Game.h" alt="" coords="305,83,372,112"/>
-<area shape="rect" id="node15" href="$Window_8cpp.html" title="Window.cpp" alt="" coords="396,83,489,112"/>
-<area shape="rect" id="node5" href="$AudioHandler_8cpp.html" title="AudioHandler.cpp" alt="" coords="5,160,131,189"/>
-<area shape="rect" id="node7" href="$Game_8cpp.html" title="Game.cpp" alt="" coords="155,160,237,189"/>
-<area shape="rect" id="node9" href="$GStatePlaceholder_8cpp.html" title="GStatePlaceholder.cpp" alt="" coords="261,160,416,189"/>
-<area shape="rect" id="node11" href="$Sprite_8cpp.html" title="Sprite.cpp" alt="" coords="440,160,520,189"/>
-<area shape="rect" id="node13" href="$main_8cpp.html" title="main.cpp" alt="" coords="544,160,619,189"/>
+<area shape="rect" id="node3" href="$Game_8h.html" title="Game.h" alt="" coords="227,83,293,112"/>
+<area shape="rect" id="node13" href="$Window_8cpp.html" title="Window.cpp" alt="" coords="317,83,411,112"/>
+<area shape="rect" id="node5" href="$Game_8cpp.html" title="Game.cpp" alt="" coords="5,160,88,189"/>
+<area shape="rect" id="node7" href="$GStatePlaceholder_8cpp.html" title="GStatePlaceholder.cpp" alt="" coords="112,160,267,189"/>
+<area shape="rect" id="node9" href="$Sprite_8cpp.html" title="Sprite.cpp" alt="" coords="291,160,371,189"/>
+<area shape="rect" id="node11" href="$main_8cpp.html" title="main.cpp" alt="" coords="395,160,469,189"/>
 </map>

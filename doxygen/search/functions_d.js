@@ -16,7 +16,6 @@ var searchData=
   ['setheight',['SetHeight',['../classsdl2engine_1_1Sprite.html#aff91e4639ca3a7e7cdb36acc69991eb5',1,'sdl2engine::Sprite']]],
   ['setleveldimensions',['SetLevelDimensions',['../classsdl2engine_1_1Camera.html#a8bb4eb586afc1092909a668274630708',1,'sdl2engine::Camera']]],
   ['setlogicalsize',['SetLogicalSize',['../classsdl2engine_1_1Renderer.html#a6633fee9256aa171b92396b7e67a1689',1,'sdl2engine::Renderer']]],
-  ['setmusic',['SetMusic',['../classsdl2engine_1_1AudioHandler.html#acaef567691c854dbb334123b3c67ace9',1,'sdl2engine::AudioHandler']]],
   ['setmusicvolume',['SetMusicVolume',['../classsdl2engine_1_1AudioHandler.html#ac059edb4173744b5b12dc918795d68cf',1,'sdl2engine::AudioHandler']]],
   ['setwidth',['SetWidth',['../classsdl2engine_1_1Sprite.html#ac86b3a772245648fc25c2a255456bc41',1,'sdl2engine::Sprite']]],
   ['setwidthheight',['SetWidthHeight',['../classsdl2engine_1_1Animation.html#a0bf7e09bacbe9380cd00722c80977022',1,'sdl2engine::Animation']]],

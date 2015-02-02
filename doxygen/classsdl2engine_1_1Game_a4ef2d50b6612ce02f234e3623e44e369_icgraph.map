@@ -1,5 +1,4 @@
 <map id="sdl2engine::Game::GetAudioHandler" name="sdl2engine::Game::GetAudioHandler">
-<area shape="rect" id="node3" href="$classsdl2engine_1_1AudioHandler.html#a0583c998897a01c530715b9737132cef" title="Callback that gets called everytime a channel is done playing. " alt="" coords="259,5,429,51"/>
-<area shape="rect" id="node5" href="$classsdl2engine_1_1GStatePlaceholder.html#a0a33c04bfe8475e4356ee9e8b75d7669" title="sdl2engine::GStatePlaceholder\l::load" alt="" coords="244,74,444,121"/>
-<area shape="rect" id="node7" href="$classsdl2engine_1_1GStatePlaceholder.html#a702c19e5680ab65e13aede54433a6bdd" title="sdl2engine::GStatePlaceholder\l::update" alt="" coords="244,143,444,190"/>
+<area shape="rect" id="node3" href="$classsdl2engine_1_1GStatePlaceholder.html#a0a33c04bfe8475e4356ee9e8b75d7669" title="sdl2engine::GStatePlaceholder\l::load" alt="" coords="244,5,444,51"/>
+<area shape="rect" id="node5" href="$classsdl2engine_1_1GStatePlaceholder.html#a702c19e5680ab65e13aede54433a6bdd" title="sdl2engine::GStatePlaceholder\l::update" alt="" coords="244,74,444,121"/>
 </map>

@@ -261,7 +261,7 @@
           </tr>
           <tr>
             <td class="headerName">Date:</td>
-            <td class="headerValue">2015-02-01</td>
+            <td class="headerValue">2015-02-02</td>
             <td></td>
             <td class="headerName">Branches:</td>
             <td class="headerTableEntry">8</td>
@@ -412,19 +412,19 @@
 
     <tr>
     <td align="right" class="lineno"><pre>22</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>442</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>454</pre></td>
     <td align="left" class="src coveredLine"><pre>void Renderer::Clear() {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>23</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>442</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>454</pre></td>
     <td align="left" class="src coveredLine"><pre>	const int k_set_color = SDL_SetRenderDrawColor(m_sdl_renderer, 0x00, 0x00, 0x00, 0xFF);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>24</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>442</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>454</pre></td>
     <td align="left" class="src coveredLine"><pre>	if(k_set_color != 0){</pre></td>
     </tr>
 
@@ -448,13 +448,13 @@
 
     <tr>
     <td align="right" class="lineno"><pre>28</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>442</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>454</pre></td>
     <td align="left" class="src coveredLine"><pre>	const int k_clear_renderer = SDL_RenderClear(m_sdl_renderer);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>29</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>442</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>454</pre></td>
     <td align="left" class="src coveredLine"><pre>	if(k_clear_renderer != 0){</pre></td>
     </tr>
 
@@ -472,7 +472,7 @@
 
     <tr>
     <td align="right" class="lineno"><pre>32</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>442</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>454</pre></td>
     <td align="left" class="src coveredLine"><pre>}</pre></td>
     </tr>
 
@@ -484,19 +484,19 @@
 
     <tr>
     <td align="right" class="lineno"><pre>34</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>442</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>454</pre></td>
     <td align="left" class="src coveredLine"><pre>void Renderer::Render() {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>35</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>442</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>454</pre></td>
     <td align="left" class="src coveredLine"><pre>	SDL_RenderPresent(m_sdl_renderer);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>36</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>442</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>454</pre></td>
     <td align="left" class="src coveredLine"><pre>}</pre></td>
     </tr>
 
@@ -598,13 +598,13 @@
 
     <tr>
     <td align="right" class="lineno"><pre>53</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>442</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>454</pre></td>
     <td align="left" class="src coveredLine"><pre>void Renderer::LogicalSize(int* width, int* height) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>54</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>442</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>454</pre></td>
     <td align="left" class="src coveredLine"><pre>	SDL_RenderGetLogicalSize(m_sdl_renderer, width, height);</pre></td>
     </tr>
 
@@ -616,7 +616,7 @@
 
     <tr>
     <td align="right" class="lineno"><pre>56</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>442</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>454</pre></td>
     <td align="left" class="src coveredLine"><pre>	if((*width) == 0 &amp;&amp; (*height) == 0) {</pre></td>
     </tr>
 
@@ -634,7 +634,7 @@
 
     <tr>
     <td align="right" class="lineno"><pre>59</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>442</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>454</pre></td>
     <td align="left" class="src coveredLine"><pre>}</pre></td>
     </tr>
 
@@ -646,13 +646,13 @@
 
     <tr>
     <td align="right" class="lineno"><pre>61</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>442</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>454</pre></td>
     <td align="left" class="src coveredLine"><pre>SDL_Renderer* Renderer::SdlRenderer() {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>62</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>442</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>454</pre></td>
     <td align="left" class="src coveredLine"><pre>	return m_sdl_renderer;</pre></td>
     </tr>
 

@@ -1,18 +1,17 @@
 <map id="Sprite.h" name="Sprite.h">
 <area shape="rect" id="node3" href="$Game_8cpp.html" title="Game.cpp" alt="" coords="5,315,88,344"/>
-<area shape="rect" id="node5" href="$GameObject_8h.html" title="GameObject.h" alt="" coords="344,83,451,112"/>
-<area shape="rect" id="node20" href="$Sprite_8cpp.html" title="Sprite.cpp" alt="" coords="625,315,705,344"/>
-<area shape="rect" id="node24" href="$GStatePlaceholder_8h.html" title="GStatePlaceholder.h" alt="" coords="84,237,225,267"/>
-<area shape="rect" id="node7" href="$Camera_8cpp.html" title="Camera.cpp" alt="" coords="285,160,379,189"/>
-<area shape="rect" id="node9" href="$GameObject_8cpp.html" title="GameObject.cpp" alt="" coords="403,160,523,189"/>
-<area shape="rect" id="node11" href="$StateGame_8h.html" title="StateGame.h" alt="" coords="163,160,261,189"/>
-<area shape="rect" id="node30" href="$Text_8h.html" title="Text.h" alt="" coords="547,160,605,189"/>
-<area shape="rect" id="node34" href="$Collision_8h.html" title="Collision.h" alt="" coords="629,160,712,189"/>
-<area shape="rect" id="node13" href="$Game_8h.html" title="Game.h" alt="" coords="249,237,316,267"/>
-<area shape="rect" id="node28" href="$StateGame_8cpp.html" title="StateGame.cpp" alt="" coords="340,237,452,267"/>
-<area shape="rect" id="node15" href="$AudioHandler_8cpp.html" title="AudioHandler.cpp" alt="" coords="291,315,416,344"/>
-<area shape="rect" id="node18" href="$GStatePlaceholder_8cpp.html" title="GStatePlaceholder.cpp" alt="" coords="112,315,267,344"/>
-<area shape="rect" id="node22" href="$main_8cpp.html" title="main.cpp" alt="" coords="440,315,515,344"/>
-<area shape="rect" id="node32" href="$Text_8cpp.html" title="Text.cpp" alt="" coords="523,237,595,267"/>
-<area shape="rect" id="node36" href="$Collision_8cpp.html" title="Collision.cpp" alt="" coords="619,237,715,267"/>
+<area shape="rect" id="node5" href="$GameObject_8h.html" title="GameObject.h" alt="" coords="297,83,404,112"/>
+<area shape="rect" id="node18" href="$Sprite_8cpp.html" title="Sprite.cpp" alt="" coords="527,315,607,344"/>
+<area shape="rect" id="node22" href="$GStatePlaceholder_8h.html" title="GStatePlaceholder.h" alt="" coords="37,237,179,267"/>
+<area shape="rect" id="node7" href="$Camera_8cpp.html" title="Camera.cpp" alt="" coords="239,160,332,189"/>
+<area shape="rect" id="node9" href="$GameObject_8cpp.html" title="GameObject.cpp" alt="" coords="356,160,476,189"/>
+<area shape="rect" id="node11" href="$StateGame_8h.html" title="StateGame.h" alt="" coords="116,160,215,189"/>
+<area shape="rect" id="node28" href="$Text_8h.html" title="Text.h" alt="" coords="500,160,559,189"/>
+<area shape="rect" id="node32" href="$Collision_8h.html" title="Collision.h" alt="" coords="583,160,665,189"/>
+<area shape="rect" id="node13" href="$Game_8h.html" title="Game.h" alt="" coords="203,237,269,267"/>
+<area shape="rect" id="node26" href="$StateGame_8cpp.html" title="StateGame.cpp" alt="" coords="293,237,405,267"/>
+<area shape="rect" id="node16" href="$GStatePlaceholder_8cpp.html" title="GStatePlaceholder.cpp" alt="" coords="112,315,267,344"/>
+<area shape="rect" id="node20" href="$main_8cpp.html" title="main.cpp" alt="" coords="291,315,365,344"/>
+<area shape="rect" id="node30" href="$Text_8cpp.html" title="Text.cpp" alt="" coords="476,237,548,267"/>
+<area shape="rect" id="node34" href="$Collision_8cpp.html" title="Collision.cpp" alt="" coords="572,237,668,267"/>
 </map>
