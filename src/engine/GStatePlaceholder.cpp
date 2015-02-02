@@ -42,6 +42,10 @@ void GStatePlaceholder::update(const double dt_) {
 		Game::Instance().GetAudioHandler().PlaySoundEffect("assets/audio/sfx/test_sfx.wav");
 	}
 
+	if(keyStates[GameKeys::A] == true) {
+		Game::Instance().GetAudioHandler().PlaySoundEffect("assets/audio/sfx/tururu.wav");
+	}
+
 	this->animation->Update(this->animationClip, dt_);
 }
 

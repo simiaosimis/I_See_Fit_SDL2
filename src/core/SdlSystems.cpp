@@ -163,7 +163,7 @@ bool OpenSdlMixer() {
 		SDL_MIXER_VERSION(&compiled);
 		log_debug() << sdl::detail::SdlVersion("SDL_mixer", compiled);
 
-		const int k_channels_to_allocate = 25;
+		const int k_channels_to_allocate = 4000;
 		const int k_channels_allocated = Mix_AllocateChannels(k_channels_to_allocate);
 
 		log_debug() << "Allocated " << k_channels_allocated << " out of "

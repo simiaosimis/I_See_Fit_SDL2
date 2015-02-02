@@ -40,17 +40,8 @@ void InputHandler::handleInput() {
 				case SDLK_SPACE: // SPACEBAR.
 					this->keyStates[GameKeys::SPACE] = true;
 					break;
-				case SDLK_UP: // UP ARROW.
-					this->keyStates[GameKeys::UP] = true;
-					break;
-				case SDLK_DOWN: // DOWN ARROW.
-					this->keyStates[GameKeys::DOWN] = true;
-					break;
-				case SDLK_LEFT: // LEFT ARROW.
-					this->keyStates[GameKeys::LEFT] = true;
-					break;
-				case SDLK_RIGHT: // RIGHT ARROW.
-					this->keyStates[GameKeys::RIGHT] = true;
+				case SDLK_a: // A.
+					this->keyStates[GameKeys::A] = true;
 					break;
 				case SDLK_ESCAPE: // ESCAPE.
 					this->keyStates[GameKeys::ESCAPE] = true;
@@ -67,17 +58,9 @@ void InputHandler::handleInput() {
 				case SDLK_SPACE: // SPACEBAR.
 					this->keyStates[GameKeys::SPACE] = false;
 					break;
-				case SDLK_UP: // UP ARROW.
-					this->keyStates[GameKeys::UP] = false;
+				case SDLK_a: // A.
+					this->keyStates[GameKeys::A] = false;
 					break;
-				case SDLK_DOWN: // DOWN ARROW.
-					this->keyStates[GameKeys::DOWN] = false;
-					break;
-				case SDLK_LEFT: // LEFT ARROW.
-					this->keyStates[GameKeys::LEFT] = false;
-					break;
-				case SDLK_RIGHT: // RIGHT ARROW.
-					this->keyStates[GameKeys::RIGHT] = false;
 					break;
 				case SDLK_ESCAPE: // ESCAPE.
 					this->keyStates[GameKeys::ESCAPE] = false;

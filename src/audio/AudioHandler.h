@@ -1,7 +1,6 @@
 #pragma once
 
 #include <string>
-#include <vector>
 
 namespace sdl2engine {
 
@@ -22,7 +21,7 @@ class AudioHandler {
 		/**
 		* @brief The constructor.
 		*/
-		AudioHandler();
+		AudioHandler() = default;
 
 		/**
 		* @brief Sets new music for given path, infinitely looping.
@@ -98,55 +97,32 @@ class AudioHandler {
 
 	private:
 		/**
-		* @brief Plays the current music as an infinite loop.
+		* @brief Plays music from path.
 		*
 		* @note Will warn if there is no music loaded.
+		*
+		* @param path : The path to the desired music.
 		*/
-		void PlayMusic();
+		void PlayMusic(const std::string& path);
 
 		/**
-		* @brief Plays the current music.
+		* @brief Plays music from path.
 		*
 		* @note Will warn if there is no music loaded.
 		*
+		* @param path : The path to the desired music.
 		* @param times : Times to loop the song (1+).
 		*/
-		void PlayMusic(const int times);
+		void PlayMusic(const std::string& path, const int times);
 
 		/**
 		* @brief Stops playing the current music.
 		*/
 		void StopMusic();
 
-		/**
-		* @brief Sets the current music.
-		*
-		* If one already exists, frees it first.
-		*
-		* @param path : The path to the desired music.
-		*/
-		void SetMusic(const std::string& path);
-
-		/**
-		* @brief Removes any sound effects from a given channel.
-		*
-		* @param channel : The channel to remove all sound effects from.
-		*/
-		void ClearChannel(const int channel);
-
-		/**
-		* @brief Callback that gets called everytime a channel is done playing.
-		*
-		* @note Calls AudioHandler::ClearChannel.
-		*/
-		static void ChannelDone(const int channel);
-
 		static constexpr int k_infinite_loop = -1;
 		static constexpr int k_all_channels = -1;
 		static constexpr int k_any_channel = -1;
-
-		Music* m_current_music; /**< The current music that is playing. */
-		std::vector<SoundEffect*> m_effects; /**< The current effects that are playing. */
 };
 
 } // namespace sdl2engine

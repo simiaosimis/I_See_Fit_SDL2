@@ -5,10 +5,7 @@
 namespace sdl2engine {
 
 enum GameKeys {
-	UP = 0,
-	LEFT,
-	RIGHT,
-	DOWN,
+	A,
 	SPACE,
 	ESCAPE,
 	MAX
