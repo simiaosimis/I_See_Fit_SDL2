@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['inputarray',['InputArray',['../namespacesdl2engine.html#af7170bd9949accae63505ef4408c12b9',1,'sdl2engine']]]
+  ['clock',['clock',['../classsdl2engine_1_1Timer.html#a81713ea81dab78b2753ab7dc16427156',1,'sdl2engine::Timer']]]
 ];

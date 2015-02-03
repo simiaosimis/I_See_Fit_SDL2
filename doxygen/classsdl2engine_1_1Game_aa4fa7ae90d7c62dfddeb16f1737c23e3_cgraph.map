@@ -1,14 +1,9 @@
 <map id="sdl2engine::Game::Run" name="sdl2engine::Game::Run">
-<area shape="rect" id="node3" href="$classsdl2engine_1_1StateGame.html#ade94602c8f136c12f67dc40ccc6a9669" title="sdl2engine::StateGame\l::load" alt="" coords="219,5,376,51"/>
-<area shape="rect" id="node5" href="$classsdl2engine_1_1InputHandler.html#aa5d2981ffdf38c430eea2780557b5525" title="sdl2engine::InputHandler\l::handleInput" alt="" coords="215,74,380,121"/>
-<area shape="rect" id="node13" href="$classsdl2engine_1_1InputHandler.html#a2e83405489f1ae86d92517ffa5096ba6" title="sdl2engine::InputHandler\l::isQuitFlag" alt="" coords="215,143,380,190"/>
-<area shape="rect" id="node15" href="$classsdl2engine_1_1Game.html#adcd0f476137568967aed69fe800805a0" title="Stops execution and closes the game. " alt="" coords="216,213,379,243"/>
-<area shape="rect" id="node17" href="$classsdl2engine_1_1StateGame.html#a286d6924ca6e74a5850be536107f2e8b" title="sdl2engine::StateGame\l::update" alt="" coords="219,266,376,313"/>
-<area shape="rect" id="node19" href="$classsdl2engine_1_1Window.html#ad37ec5bd73b7688c8b3bbd65bd62b560" title="sdl2engine::Window\l::GetRenderer" alt="" coords="228,335,367,382"/>
-<area shape="rect" id="node21" href="$classsdl2engine_1_1Renderer.html#a8fb21b238a2a807c6c650c54239a823c" title="Clears previous rendering. " alt="" coords="225,405,369,451"/>
-<area shape="rect" id="node23" href="$classsdl2engine_1_1StateGame.html#a19a86fd1f53a048d360e1f7a3f685b5e" title="sdl2engine::StateGame\l::render" alt="" coords="219,474,376,521"/>
-<area shape="rect" id="node25" href="$classsdl2engine_1_1Renderer.html#af016a3209a0768f7db19c38ab9489068" title="Renders everything drawn in a frame. " alt="" coords="225,543,369,590"/>
-<area shape="rect" id="node7" href="$classsdl2engine_1_1ControllerHandler.html#a648f51a30e58aed36f0f1c877ce57b2d" title="sdl2engine::ControllerHandler\l::handleInput" alt="" coords="431,5,623,51"/>
-<area shape="rect" id="node9" href="$classsdl2engine_1_1ControllerHandler.html#a4a7bcc412b8e6399299f67e35c93c89e" title="sdl2engine::ControllerHandler\l::getKeyStates" alt="" coords="431,74,623,121"/>
-<area shape="rect" id="node11" href="$classsdl2engine_1_1InputHandler.html#a0bae4f7fe561cfbf1649e7387791c957" title="sdl2engine::InputHandler\l::signalExit" alt="" coords="444,143,609,190"/>
+<area shape="rect" id="node3" href="$classsdl2engine_1_1StateGame.html#ade94602c8f136c12f67dc40ccc6a9669" title="sdl2engine::StateGame\l::load" alt="" coords="216,5,373,51"/>
+<area shape="rect" id="node5" href="$classsdl2engine_1_1Game.html#adcd0f476137568967aed69fe800805a0" title="Stops execution and closes the game. " alt="" coords="213,75,376,104"/>
+<area shape="rect" id="node7" href="$classsdl2engine_1_1StateGame.html#a286d6924ca6e74a5850be536107f2e8b" title="sdl2engine::StateGame\l::update" alt="" coords="216,127,373,174"/>
+<area shape="rect" id="node9" href="$classsdl2engine_1_1Window.html#ad37ec5bd73b7688c8b3bbd65bd62b560" title="sdl2engine::Window\l::GetRenderer" alt="" coords="225,197,364,243"/>
+<area shape="rect" id="node11" href="$classsdl2engine_1_1Renderer.html#a8fb21b238a2a807c6c650c54239a823c" title="Clears previous rendering. " alt="" coords="223,266,367,313"/>
+<area shape="rect" id="node13" href="$classsdl2engine_1_1StateGame.html#a19a86fd1f53a048d360e1f7a3f685b5e" title="sdl2engine::StateGame\l::render" alt="" coords="216,335,373,382"/>
+<area shape="rect" id="node15" href="$classsdl2engine_1_1Renderer.html#af016a3209a0768f7db19c38ab9489068" title="Renders everything drawn in a frame. " alt="" coords="223,405,367,451"/>
 </map>

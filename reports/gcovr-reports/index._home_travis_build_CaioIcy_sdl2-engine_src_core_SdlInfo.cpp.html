@@ -255,18 +255,18 @@
             <td class="headerValue">/home/travis/build/CaioIcy/sdl2-engine/src/core/SdlInfo.cpp</td>
             <td></td>
             <td class="headerName">Lines:</td>
-            <td class="headerTableEntry">133</td>
-            <td class="headerTableEntry">212</td>
-            <td class="headerTableEntry" style="background-color:LightPink">62.7 %</td>
+            <td class="headerTableEntry">129</td>
+            <td class="headerTableEntry">208</td>
+            <td class="headerTableEntry" style="background-color:LightPink">62.0 %</td>
           </tr>
           <tr>
             <td class="headerName">Date:</td>
             <td class="headerValue">2015-02-03</td>
             <td></td>
             <td class="headerName">Branches:</td>
-            <td class="headerTableEntry">177</td>
-            <td class="headerTableEntry">511</td>
-            <td class="headerTableEntry" style="background-color:LightPink">34.6 %</td>
+            <td class="headerTableEntry">170</td>
+            <td class="headerTableEntry">497</td>
+            <td class="headerTableEntry" style="background-color:LightPink">34.2 %</td>
           </tr>
         </table>
       </td>
@@ -371,121 +371,121 @@
     <tr>
     <td align="right" class="lineno"><pre>15</pre></td>
     <td align="right" class="linecount coveredLine"><pre>3</pre></td>
-    <td align="left" class="src coveredLine"><pre>	std::ostringstream oss;</pre></td>
+    <td align="left" class="src coveredLine"><pre>	return SdlVersion(library, version_compiled, "");</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>16</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>3</pre></td>
-    <td align="left" class="src coveredLine"><pre>	oss &lt;&lt; library &lt;&lt; " Version (compiled): " &lt;&lt; static_cast&lt;int&gt;(version_compiled.major) &lt;&lt;</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>17</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>6</pre></td>
-    <td align="left" class="src coveredLine"><pre>		"." &lt;&lt; static_cast&lt;int&gt;(version_compiled.minor) &lt;&lt; "." &lt;&lt;</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>18</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>6</pre></td>
-    <td align="left" class="src coveredLine"><pre>		static_cast&lt;int&gt;(version_compiled.patch);</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>19</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>3</pre></td>
-    <td align="left" class="src coveredLine"><pre>	return oss.str();</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>20</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>21</pre></td>
+    <td align="right" class="lineno"><pre>17</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>22</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="right" class="lineno"><pre>18</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>4</pre></td>
     <td align="left" class="src coveredLine"><pre>std::string SdlVersion(const std::string&amp; library, const SDL_version&amp; version_compiled,</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>23</pre></td>
+    <td align="right" class="lineno"><pre>19</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		const std::string&amp; revision) {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>24</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="right" class="lineno"><pre>20</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>4</pre></td>
     <td align="left" class="src coveredLine"><pre>	std::ostringstream oss;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>25</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="right" class="lineno"><pre>21</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>4</pre></td>
     <td align="left" class="src coveredLine"><pre>	oss &lt;&lt; library &lt;&lt; " Version (compiled): " &lt;&lt; static_cast&lt;int&gt;(version_compiled.major) &lt;&lt;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>26</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>2</pre></td>
+    <td align="right" class="lineno"><pre>22</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>8</pre></td>
     <td align="left" class="src coveredLine"><pre>		"." &lt;&lt; static_cast&lt;int&gt;(version_compiled.minor) &lt;&lt; "." &lt;&lt;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>27</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>2</pre></td>
+    <td align="right" class="lineno"><pre>23</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>8</pre></td>
     <td align="left" class="src coveredLine"><pre>		static_cast&lt;int&gt;(version_compiled.patch) &lt;&lt; " " &lt;&lt; revision;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>28</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="right" class="lineno"><pre>24</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>4</pre></td>
     <td align="left" class="src coveredLine"><pre>	return oss.str();</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>29</pre></td>
+    <td align="right" class="lineno"><pre>25</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>30</pre></td>
+    <td align="right" class="lineno"><pre>26</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>31</pre></td>
+    <td align="right" class="lineno"><pre>27</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>std::string SdlVideoDrivers() {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>32</pre></td>
+    <td align="right" class="lineno"><pre>28</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>	std::ostringstream oss;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>33</pre></td>
+    <td align="right" class="lineno"><pre>29</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>34</pre></td>
+    <td align="right" class="lineno"><pre>30</pre></td>
     <td align="right" class="linecount coveredLine"><pre>2</pre></td>
     <td align="left" class="src coveredLine"><pre>	const std::string current_video_driver{SDL_GetCurrentVideoDriver()};</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>31</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>32</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>	const int k_num_video_drivers = SDL_GetNumVideoDrivers();</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>33</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>	if(k_num_video_drivers &gt;= 1) {</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>34</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>		oss &lt;&lt; k_num_video_drivers &lt;&lt; " video driver(s) compiled into SDL:";</pre></td>
     </tr>
 
     <tr>
@@ -496,20 +496,20 @@
 
     <tr>
     <td align="right" class="lineno"><pre>36</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>	const int k_num_video_drivers = SDL_GetNumVideoDrivers();</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>3</pre></td>
+    <td align="left" class="src coveredLine"><pre>		for(int i = 0; i &lt; k_num_video_drivers; i++) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>37</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>	if(k_num_video_drivers &gt;= 1) {</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>2</pre></td>
+    <td align="left" class="src coveredLine"><pre>			const std::string video_driver{SDL_GetVideoDriver(i)};</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>38</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>		oss &lt;&lt; k_num_video_drivers &lt;&lt; " video driver(s) compiled into SDL:";</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>2</pre></td>
+    <td align="left" class="src coveredLine"><pre>			oss &lt;&lt; "\n\t(" &lt;&lt; (i+1) &lt;&lt; ") " &lt;&lt; video_driver;</pre></td>
     </tr>
 
     <tr>
@@ -520,122 +520,122 @@
 
     <tr>
     <td align="right" class="lineno"><pre>40</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>3</pre></td>
-    <td align="left" class="src coveredLine"><pre>		for(int i = 0; i &lt; k_num_video_drivers; i++) {</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>41</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>2</pre></td>
-    <td align="left" class="src coveredLine"><pre>			const std::string video_driver{SDL_GetVideoDriver(i)};</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>42</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>2</pre></td>
-    <td align="left" class="src coveredLine"><pre>			oss &lt;&lt; "\n\t(" &lt;&lt; (i+1) &lt;&lt; ") " &lt;&lt; video_driver;</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>43</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>44</pre></td>
     <td align="right" class="linecount coveredLine"><pre>2</pre></td>
     <td align="left" class="src coveredLine"><pre>			if(current_video_driver == video_driver) {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>45</pre></td>
+    <td align="right" class="lineno"><pre>41</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>				oss &lt;&lt; " [* CURRENT]";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>46</pre></td>
+    <td align="right" class="lineno"><pre>42</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>			}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>47</pre></td>
+    <td align="right" class="lineno"><pre>43</pre></td>
     <td align="right" class="linecount coveredLine"><pre>2</pre></td>
     <td align="left" class="src coveredLine"><pre>		}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>48</pre></td>
+    <td align="right" class="lineno"><pre>44</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>49</pre></td>
+    <td align="right" class="lineno"><pre>45</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	else {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>50</pre></td>
+    <td align="right" class="lineno"><pre>46</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>		log_error() &lt;&lt; "Could not get number of video drivers. " &lt;&lt; SDL_GetError();</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>51</pre></td>
+    <td align="right" class="lineno"><pre>47</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>52</pre></td>
+    <td align="right" class="lineno"><pre>48</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>53</pre></td>
+    <td align="right" class="lineno"><pre>49</pre></td>
     <td align="right" class="linecount coveredLine"><pre>2</pre></td>
     <td align="left" class="src coveredLine"><pre>	return oss.str();</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>54</pre></td>
+    <td align="right" class="lineno"><pre>50</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>55</pre></td>
+    <td align="right" class="lineno"><pre>51</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>56</pre></td>
+    <td align="right" class="lineno"><pre>52</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>std::string SdlAudioDrivers() {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>57</pre></td>
+    <td align="right" class="lineno"><pre>53</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>	std::ostringstream oss;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>58</pre></td>
+    <td align="right" class="lineno"><pre>54</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>59</pre></td>
+    <td align="right" class="lineno"><pre>55</pre></td>
     <td align="right" class="linecount coveredLine"><pre>2</pre></td>
     <td align="left" class="src coveredLine"><pre>	const std::string current_audio_driver{SDL_GetCurrentAudioDriver()};</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>56</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>57</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>	const int k_num_audio_drivers = SDL_GetNumAudioDrivers();</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>58</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>	if(k_num_audio_drivers &gt;= 1) {</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>59</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>		oss &lt;&lt; k_num_audio_drivers &lt;&lt; " audio driver(s) compiled into SDL:";</pre></td>
     </tr>
 
     <tr>
@@ -646,20 +646,20 @@
 
     <tr>
     <td align="right" class="lineno"><pre>61</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>	const int k_num_audio_drivers = SDL_GetNumAudioDrivers();</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>6</pre></td>
+    <td align="left" class="src coveredLine"><pre>		for(int i = 0; i &lt; k_num_audio_drivers; i++) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>62</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>	if(k_num_audio_drivers &gt;= 1) {</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>5</pre></td>
+    <td align="left" class="src coveredLine"><pre>			const std::string audio_driver{SDL_GetAudioDriver(i)};</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>63</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>		oss &lt;&lt; k_num_audio_drivers &lt;&lt; " audio driver(s) compiled into SDL:";</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>5</pre></td>
+    <td align="left" class="src coveredLine"><pre>			oss &lt;&lt; "\n\t(" &lt;&lt; (i+1) &lt;&lt; ") " &lt;&lt; audio_driver;</pre></td>
     </tr>
 
     <tr>
@@ -670,110 +670,110 @@
 
     <tr>
     <td align="right" class="lineno"><pre>65</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>6</pre></td>
-    <td align="left" class="src coveredLine"><pre>		for(int i = 0; i &lt; k_num_audio_drivers; i++) {</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>66</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>5</pre></td>
-    <td align="left" class="src coveredLine"><pre>			const std::string audio_driver{SDL_GetAudioDriver(i)};</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>67</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>5</pre></td>
-    <td align="left" class="src coveredLine"><pre>			oss &lt;&lt; "\n\t(" &lt;&lt; (i+1) &lt;&lt; ") " &lt;&lt; audio_driver;</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>68</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>69</pre></td>
     <td align="right" class="linecount coveredLine"><pre>5</pre></td>
     <td align="left" class="src coveredLine"><pre>			if(current_audio_driver == audio_driver) {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>70</pre></td>
+    <td align="right" class="lineno"><pre>66</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>				oss &lt;&lt; " [* CURRENT]";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>71</pre></td>
+    <td align="right" class="lineno"><pre>67</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>			}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>72</pre></td>
+    <td align="right" class="lineno"><pre>68</pre></td>
     <td align="right" class="linecount coveredLine"><pre>5</pre></td>
     <td align="left" class="src coveredLine"><pre>		}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>73</pre></td>
+    <td align="right" class="lineno"><pre>69</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>74</pre></td>
+    <td align="right" class="lineno"><pre>70</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	else {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>75</pre></td>
+    <td align="right" class="lineno"><pre>71</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>		log_error() &lt;&lt; "Could not get number of audio drivers. " &lt;&lt; SDL_GetError();</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>76</pre></td>
+    <td align="right" class="lineno"><pre>72</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>77</pre></td>
+    <td align="right" class="lineno"><pre>73</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>78</pre></td>
+    <td align="right" class="lineno"><pre>74</pre></td>
     <td align="right" class="linecount coveredLine"><pre>2</pre></td>
     <td align="left" class="src coveredLine"><pre>	return oss.str();</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>79</pre></td>
+    <td align="right" class="lineno"><pre>75</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>80</pre></td>
+    <td align="right" class="lineno"><pre>76</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>81</pre></td>
+    <td align="right" class="lineno"><pre>77</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>std::string SdlRenderDrivers() {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>82</pre></td>
+    <td align="right" class="lineno"><pre>78</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>	std::ostringstream oss;</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>79</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>80</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>	const int k_num_render_drivers = SDL_GetNumRenderDrivers();</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>81</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>	if(k_num_render_drivers &gt;= 1) {</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>82</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>		oss &lt;&lt; k_num_render_drivers &lt;&lt; " render driver(s) available:";</pre></td>
     </tr>
 
     <tr>
@@ -785,163 +785,163 @@
     <tr>
     <td align="right" class="lineno"><pre>84</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>	const int k_num_render_drivers = SDL_GetNumRenderDrivers();</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>85</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>	if(k_num_render_drivers &gt;= 1) {</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>86</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>		oss &lt;&lt; k_num_render_drivers &lt;&lt; " render driver(s) available:";</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>87</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>88</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>		SDL_RendererInfo* infos = new SDL_RendererInfo[k_num_render_drivers];</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>89</pre></td>
+    <td align="right" class="lineno"><pre>85</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>90</pre></td>
+    <td align="right" class="lineno"><pre>86</pre></td>
     <td align="right" class="linecount coveredLine"><pre>3</pre></td>
     <td align="left" class="src coveredLine"><pre>		for(int i = 0; i &lt; k_num_render_drivers; i++) {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>91</pre></td>
+    <td align="right" class="lineno"><pre>87</pre></td>
     <td align="right" class="linecount coveredLine"><pre>2</pre></td>
     <td align="left" class="src coveredLine"><pre>			const int k_got_info = SDL_GetRenderDriverInfo(i, &amp;infos[i]);</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>92</pre></td>
+    <td align="right" class="lineno"><pre>88</pre></td>
     <td align="right" class="linecount coveredLine"><pre>2</pre></td>
     <td align="left" class="src coveredLine"><pre>			if(k_got_info == 0){</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>93</pre></td>
+    <td align="right" class="lineno"><pre>89</pre></td>
     <td align="right" class="linecount coveredLine"><pre>2</pre></td>
     <td align="left" class="src coveredLine"><pre>				oss &lt;&lt; "\n\t(" &lt;&lt; (i+1) &lt;&lt; ") " &lt;&lt; RendererInfoToString(infos[i]);</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>94</pre></td>
+    <td align="right" class="lineno"><pre>90</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>			}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>95</pre></td>
+    <td align="right" class="lineno"><pre>91</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>			else {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>96</pre></td>
+    <td align="right" class="lineno"><pre>92</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>				log_error() &lt;&lt; "Could not get renderer info. " &lt;&lt; SDL_GetError();</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>97</pre></td>
+    <td align="right" class="lineno"><pre>93</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>			}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>98</pre></td>
+    <td align="right" class="lineno"><pre>94</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>99</pre></td>
+    <td align="right" class="lineno"><pre>95</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>100</pre></td>
+    <td align="right" class="lineno"><pre>96</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>		delete[] infos;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>101</pre></td>
+    <td align="right" class="lineno"><pre>97</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>102</pre></td>
+    <td align="right" class="lineno"><pre>98</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	else {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>103</pre></td>
+    <td align="right" class="lineno"><pre>99</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>		log_error() &lt;&lt; "Could not get number of render drivers. " &lt;&lt; SDL_GetError();</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>104</pre></td>
+    <td align="right" class="lineno"><pre>100</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>105</pre></td>
+    <td align="right" class="lineno"><pre>101</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>106</pre></td>
+    <td align="right" class="lineno"><pre>102</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>	return oss.str();</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>107</pre></td>
+    <td align="right" class="lineno"><pre>103</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>108</pre></td>
+    <td align="right" class="lineno"><pre>104</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>109</pre></td>
+    <td align="right" class="lineno"><pre>105</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>std::string SdlAudioDevices() {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>110</pre></td>
+    <td align="right" class="lineno"><pre>106</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>	std::ostringstream oss;</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>107</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>108</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>	const int k_num_audio_devices = SDL_GetNumAudioDevices(0);</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>109</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>	if(k_num_audio_devices &gt;= 1) {</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>110</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>		oss &lt;&lt; k_num_audio_devices &lt;&lt; " audio device(s) available:";</pre></td>
     </tr>
 
     <tr>
@@ -952,158 +952,158 @@
 
     <tr>
     <td align="right" class="lineno"><pre>112</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>	const int k_num_audio_devices = SDL_GetNumAudioDevices(0);</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>113</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>	if(k_num_audio_devices &gt;= 1) {</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>114</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>		oss &lt;&lt; k_num_audio_devices &lt;&lt; " audio device(s) available:";</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>115</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>116</pre></td>
     <td align="right" class="linecount coveredLine"><pre>2</pre></td>
     <td align="left" class="src coveredLine"><pre>		for(int i = 0; i &lt; k_num_audio_devices; i++) {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>117</pre></td>
+    <td align="right" class="lineno"><pre>113</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>			const char* audio_device_name = SDL_GetAudioDeviceName(i, 0);</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>118</pre></td>
+    <td align="right" class="lineno"><pre>114</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>			if(audio_device_name != nullptr) {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>119</pre></td>
+    <td align="right" class="lineno"><pre>115</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>				oss &lt;&lt; "\n\t(" &lt;&lt; (i+1) &lt;&lt; ") " &lt;&lt; audio_device_name;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>120</pre></td>
+    <td align="right" class="lineno"><pre>116</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>			}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>121</pre></td>
+    <td align="right" class="lineno"><pre>117</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>			else{</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>122</pre></td>
+    <td align="right" class="lineno"><pre>118</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>				log_error() &lt;&lt; "Could not get audio device name. " &lt;&lt; SDL_GetError();</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>123</pre></td>
+    <td align="right" class="lineno"><pre>119</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>			}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>124</pre></td>
+    <td align="right" class="lineno"><pre>120</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>125</pre></td>
+    <td align="right" class="lineno"><pre>121</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>126</pre></td>
+    <td align="right" class="lineno"><pre>122</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	else {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>127</pre></td>
+    <td align="right" class="lineno"><pre>123</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>		log_error() &lt;&lt; "Could not get number of audio devices. " &lt;&lt; SDL_GetError();</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>128</pre></td>
+    <td align="right" class="lineno"><pre>124</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>129</pre></td>
+    <td align="right" class="lineno"><pre>125</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>130</pre></td>
+    <td align="right" class="lineno"><pre>126</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>	return oss.str();</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>131</pre></td>
+    <td align="right" class="lineno"><pre>127</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>132</pre></td>
+    <td align="right" class="lineno"><pre>128</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>133</pre></td>
+    <td align="right" class="lineno"><pre>129</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>std::string SdlDisplayModes() {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>134</pre></td>
+    <td align="right" class="lineno"><pre>130</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>	std::ostringstream oss;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>135</pre></td>
+    <td align="right" class="lineno"><pre>131</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>136</pre></td>
+    <td align="right" class="lineno"><pre>132</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>	const int k_num_video_displays = SDL_GetNumVideoDisplays();</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>137</pre></td>
+    <td align="right" class="lineno"><pre>133</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>		if(k_num_video_displays &gt;= 1) {</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>134</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>135</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>			oss &lt;&lt; "Display | Mode | Format | Width | Height | Refresh Rate\n";</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>136</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>137</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>2</pre></td>
+    <td align="left" class="src coveredLine"><pre>			for(int i = 0; i &lt; k_num_video_displays; i++) {</pre></td>
     </tr>
 
     <tr>
@@ -1114,20 +1114,20 @@
 
     <tr>
     <td align="right" class="lineno"><pre>139</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>			oss &lt;&lt; "Display | Mode | Format | Width | Height | Refresh Rate\n";</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>				SDL_DisplayMode current_mode;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>140</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>				const int k_got_current_mode = SDL_GetDesktopDisplayMode(i, &amp;current_mode);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>141</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>2</pre></td>
-    <td align="left" class="src coveredLine"><pre>			for(int i = 0; i &lt; k_num_video_displays; i++) {</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>				if (k_got_current_mode == 0){</pre></td>
     </tr>
 
     <tr>
@@ -1138,116 +1138,116 @@
 
     <tr>
     <td align="right" class="lineno"><pre>143</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>				SDL_DisplayMode current_mode;</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>144</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>				const int k_got_current_mode = SDL_GetDesktopDisplayMode(i, &amp;current_mode);</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>145</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>				if (k_got_current_mode == 0){</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>146</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>147</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>					const int k_num_display_modes = SDL_GetNumDisplayModes(i);</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>148</pre></td>
+    <td align="right" class="lineno"><pre>144</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>					if(k_num_display_modes &gt;= 1) {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>149</pre></td>
+    <td align="right" class="lineno"><pre>145</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>150</pre></td>
+    <td align="right" class="lineno"><pre>146</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>						SDL_DisplayMode* modes = new</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>151</pre></td>
+    <td align="right" class="lineno"><pre>147</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>							SDL_DisplayMode[k_num_video_displays * k_num_display_modes];</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>152</pre></td>
+    <td align="right" class="lineno"><pre>148</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>153</pre></td>
+    <td align="right" class="lineno"><pre>149</pre></td>
     <td align="right" class="linecount coveredLine"><pre>2</pre></td>
     <td align="left" class="src coveredLine"><pre>						for(int j = 0; j &lt; k_num_display_modes; j++) {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>154</pre></td>
+    <td align="right" class="lineno"><pre>150</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>							SDL_DisplayMode mode_ij = modes[i + k_num_display_modes * j];</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>155</pre></td>
+    <td align="right" class="lineno"><pre>151</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>156</pre></td>
+    <td align="right" class="lineno"><pre>152</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>							const int k_got_display_mode = SDL_GetDisplayMode(i, j, &amp;mode_ij);</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>157</pre></td>
+    <td align="right" class="lineno"><pre>153</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>							if(k_got_display_mode == 0) {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>158</pre></td>
+    <td align="right" class="lineno"><pre>154</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>								oss &lt;&lt; (i+1) &lt;&lt; "\t|" &lt;&lt; (j+1) &lt;&lt; "\t|" &lt;&lt;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>159</pre></td>
+    <td align="right" class="lineno"><pre>155</pre></td>
     <td align="right" class="linecount coveredLine"><pre>3</pre></td>
     <td align="left" class="src coveredLine"><pre>									detail::PixelFormatToString(mode_ij.format) &lt;&lt; "\t|" &lt;&lt;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>160</pre></td>
+    <td align="right" class="lineno"><pre>156</pre></td>
     <td align="right" class="linecount coveredLine"><pre>2</pre></td>
     <td align="left" class="src coveredLine"><pre>									mode_ij.w &lt;&lt; "\t|" &lt;&lt; mode_ij.h &lt;&lt; "\t|" &lt;&lt;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>161</pre></td>
+    <td align="right" class="lineno"><pre>157</pre></td>
     <td align="right" class="linecount coveredLine"><pre>2</pre></td>
     <td align="left" class="src coveredLine"><pre>									mode_ij.refresh_rate;</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>158</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>159</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>								if(EqualDisplayModes(current_mode, mode_ij)) {</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>160</pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>									oss &lt;&lt; " [* CURRENT]";</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>161</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>								}</pre></td>
     </tr>
 
     <tr>
@@ -1259,31 +1259,31 @@
     <tr>
     <td align="right" class="lineno"><pre>163</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>								if(EqualDisplayModes(current_mode, mode_ij)) {</pre></td>
+    <td align="left" class="src coveredLine"><pre>								oss &lt;&lt; "\n";</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>164</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>									oss &lt;&lt; " [* CURRENT]";</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>							}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>165</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>								}</pre></td>
+    <td align="left" class="src "><pre>							else {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>166</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>								log_error() &lt;&lt; "Could not get display mode information. " &lt;&lt;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>167</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>								oss &lt;&lt; "\n";</pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>									SDL_GetError();</pre></td>
     </tr>
 
     <tr>
@@ -1295,43 +1295,43 @@
     <tr>
     <td align="right" class="lineno"><pre>169</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>							else {</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>170</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>								log_error() &lt;&lt; "Could not get display mode information. " &lt;&lt;</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>171</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>									SDL_GetError();</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>172</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>							}</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>173</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>						}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>174</pre></td>
+    <td align="right" class="lineno"><pre>170</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>175</pre></td>
+    <td align="right" class="lineno"><pre>171</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>						delete[] modes;</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>172</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>					}</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>173</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>					else {</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>174</pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>						log_error() &lt;&lt; "Could not get number of display modes. " &lt;&lt;</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>175</pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>							SDL_GetError();</pre></td>
     </tr>
 
     <tr>
@@ -1343,115 +1343,115 @@
     <tr>
     <td align="right" class="lineno"><pre>177</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>					else {</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>178</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>						log_error() &lt;&lt; "Could not get number of display modes. " &lt;&lt;</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>179</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>							SDL_GetError();</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>180</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>					}</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>181</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>				}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>182</pre></td>
+    <td align="right" class="lineno"><pre>178</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>				else {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>183</pre></td>
+    <td align="right" class="lineno"><pre>179</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>					log_error() &lt;&lt; "Could not get current display mode. " &lt;&lt; SDL_GetError();</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>184</pre></td>
+    <td align="right" class="lineno"><pre>180</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>				}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>185</pre></td>
+    <td align="right" class="lineno"><pre>181</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>			}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>186</pre></td>
+    <td align="right" class="lineno"><pre>182</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>187</pre></td>
+    <td align="right" class="lineno"><pre>183</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		else {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>188</pre></td>
+    <td align="right" class="lineno"><pre>184</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			log_error() &lt;&lt; "Could not get number of video displays. " &lt;&lt; SDL_GetError();</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>189</pre></td>
+    <td align="right" class="lineno"><pre>185</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>190</pre></td>
+    <td align="right" class="lineno"><pre>186</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>191</pre></td>
+    <td align="right" class="lineno"><pre>187</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>	return oss.str();</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>192</pre></td>
+    <td align="right" class="lineno"><pre>188</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>193</pre></td>
+    <td align="right" class="lineno"><pre>189</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>194</pre></td>
+    <td align="right" class="lineno"><pre>190</pre></td>
     <td align="right" class="linecount coveredLine"><pre>2</pre></td>
     <td align="left" class="src coveredLine"><pre>std::string RendererInfoToString(const SDL_RendererInfo&amp; info) {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>195</pre></td>
+    <td align="right" class="lineno"><pre>191</pre></td>
     <td align="right" class="linecount coveredLine"><pre>2</pre></td>
     <td align="left" class="src coveredLine"><pre>	std::ostringstream oss;</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>192</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>193</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>4</pre></td>
+    <td align="left" class="src coveredLine"><pre>	oss &lt;&lt; info.name &lt;&lt; ": [" &lt;&lt; RendererFlagsToString(info.flags) &lt;&lt;</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>194</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>4</pre></td>
+    <td align="left" class="src coveredLine"><pre>		"] renderer flags, " &lt;&lt; info.max_texture_width &lt;&lt; "/" &lt;&lt; info.max_texture_height &lt;&lt;</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>195</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>2</pre></td>
+    <td align="left" class="src coveredLine"><pre>		" as max width/height, formats: ";</pre></td>
     </tr>
 
     <tr>
@@ -1462,20 +1462,20 @@
 
     <tr>
     <td align="right" class="lineno"><pre>197</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>4</pre></td>
-    <td align="left" class="src coveredLine"><pre>	oss &lt;&lt; info.name &lt;&lt; ": [" &lt;&lt; RendererFlagsToString(info.flags) &lt;&lt;</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>11</pre></td>
+    <td align="left" class="src coveredLine"><pre>	for(int i = 0; i &lt; static_cast&lt;int&gt;(info.num_texture_formats); i++) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>198</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>4</pre></td>
-    <td align="left" class="src coveredLine"><pre>		"] renderer flags, " &lt;&lt; info.max_texture_width &lt;&lt; "/" &lt;&lt; info.max_texture_height &lt;&lt;</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>9</pre></td>
+    <td align="left" class="src coveredLine"><pre>		oss &lt;&lt; PixelFormatToString(info.texture_formats[i]) &lt;&lt; ", ";</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>199</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>2</pre></td>
-    <td align="left" class="src coveredLine"><pre>		" as max width/height, formats: ";</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>	}</pre></td>
     </tr>
 
     <tr>
@@ -1486,938 +1486,938 @@
 
     <tr>
     <td align="right" class="lineno"><pre>201</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>11</pre></td>
-    <td align="left" class="src coveredLine"><pre>	for(int i = 0; i &lt; static_cast&lt;int&gt;(info.num_texture_formats); i++) {</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>202</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>9</pre></td>
-    <td align="left" class="src coveredLine"><pre>		oss &lt;&lt; PixelFormatToString(info.texture_formats[i]) &lt;&lt; ", ";</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>203</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>	}</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>204</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>205</pre></td>
     <td align="right" class="linecount coveredLine"><pre>2</pre></td>
     <td align="left" class="src coveredLine"><pre>	return oss.str();</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>206</pre></td>
+    <td align="right" class="lineno"><pre>202</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>207</pre></td>
+    <td align="right" class="lineno"><pre>203</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>208</pre></td>
+    <td align="right" class="lineno"><pre>204</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>std::string AudioFormatToString(const Uint16 format) {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>209</pre></td>
+    <td align="right" class="lineno"><pre>205</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>	std::string audio_format{"Unidentified!"};</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>210</pre></td>
+    <td align="right" class="lineno"><pre>206</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>211</pre></td>
+    <td align="right" class="lineno"><pre>207</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>	switch(format) {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>212</pre></td>
+    <td align="right" class="lineno"><pre>208</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>        case AUDIO_U8:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>213</pre></td>
+    <td align="right" class="lineno"><pre>209</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>        	audio_format = "U8";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>214</pre></td>
+    <td align="right" class="lineno"><pre>210</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>        	break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>215</pre></td>
+    <td align="right" class="lineno"><pre>211</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>        case AUDIO_S8:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>216</pre></td>
+    <td align="right" class="lineno"><pre>212</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	        audio_format = "S8";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>217</pre></td>
+    <td align="right" class="lineno"><pre>213</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>        	break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>218</pre></td>
+    <td align="right" class="lineno"><pre>214</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>        case AUDIO_U16LSB:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>219</pre></td>
+    <td align="right" class="lineno"><pre>215</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	        audio_format = "U16LSB";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>220</pre></td>
+    <td align="right" class="lineno"><pre>216</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>        	break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>221</pre></td>
+    <td align="right" class="lineno"><pre>217</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>        case AUDIO_S16LSB:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>222</pre></td>
+    <td align="right" class="lineno"><pre>218</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>	        audio_format = "S16LSB";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>223</pre></td>
+    <td align="right" class="lineno"><pre>219</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>        	break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>224</pre></td>
+    <td align="right" class="lineno"><pre>220</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>        case AUDIO_U16MSB:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>225</pre></td>
+    <td align="right" class="lineno"><pre>221</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	        audio_format = "U16MSB";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>226</pre></td>
+    <td align="right" class="lineno"><pre>222</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>        	break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>227</pre></td>
+    <td align="right" class="lineno"><pre>223</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>        case AUDIO_S16MSB:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>228</pre></td>
+    <td align="right" class="lineno"><pre>224</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	        audio_format = "S16MSB";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>229</pre></td>
+    <td align="right" class="lineno"><pre>225</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>        	break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>230</pre></td>
+    <td align="right" class="lineno"><pre>226</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>        default:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>231</pre></td>
+    <td align="right" class="lineno"><pre>227</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	        log_error() &lt;&lt; "Some SDL_Mixer audio format was not listed!";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>232</pre></td>
+    <td align="right" class="lineno"><pre>228</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>        	break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>233</pre></td>
+    <td align="right" class="lineno"><pre>229</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>234</pre></td>
+    <td align="right" class="lineno"><pre>230</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>235</pre></td>
+    <td align="right" class="lineno"><pre>231</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>	return audio_format;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>236</pre></td>
+    <td align="right" class="lineno"><pre>232</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>237</pre></td>
+    <td align="right" class="lineno"><pre>233</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>238</pre></td>
+    <td align="right" class="lineno"><pre>234</pre></td>
     <td align="right" class="linecount coveredLine"><pre>10</pre></td>
     <td align="left" class="src coveredLine"><pre>std::string PixelFormatToString(const Uint32 texture_format) {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>239</pre></td>
+    <td align="right" class="lineno"><pre>235</pre></td>
     <td align="right" class="linecount coveredLine"><pre>10</pre></td>
     <td align="left" class="src coveredLine"><pre>	std::string sdl_pixelformat{"Unidentified!"};</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>240</pre></td>
+    <td align="right" class="lineno"><pre>236</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>241</pre></td>
+    <td align="right" class="lineno"><pre>237</pre></td>
     <td align="right" class="linecount coveredLine"><pre>10</pre></td>
     <td align="left" class="src coveredLine"><pre>	switch(texture_format) {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>242</pre></td>
+    <td align="right" class="lineno"><pre>238</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		case SDL_PIXELFORMAT_UNKNOWN:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>243</pre></td>
+    <td align="right" class="lineno"><pre>239</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>			sdl_pixelformat = "UNKNOWN";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>244</pre></td>
+    <td align="right" class="lineno"><pre>240</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>			break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>245</pre></td>
+    <td align="right" class="lineno"><pre>241</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		case SDL_PIXELFORMAT_INDEX1LSB:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>246</pre></td>
+    <td align="right" class="lineno"><pre>242</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			sdl_pixelformat = "INDEX1LSB";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>247</pre></td>
+    <td align="right" class="lineno"><pre>243</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>248</pre></td>
+    <td align="right" class="lineno"><pre>244</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		case SDL_PIXELFORMAT_INDEX1MSB:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>249</pre></td>
+    <td align="right" class="lineno"><pre>245</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			sdl_pixelformat = "INDEX1MSB";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>250</pre></td>
+    <td align="right" class="lineno"><pre>246</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>251</pre></td>
+    <td align="right" class="lineno"><pre>247</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		case SDL_PIXELFORMAT_INDEX4LSB:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>252</pre></td>
+    <td align="right" class="lineno"><pre>248</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			sdl_pixelformat = "INDEX4LSB";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>253</pre></td>
+    <td align="right" class="lineno"><pre>249</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>254</pre></td>
+    <td align="right" class="lineno"><pre>250</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		case SDL_PIXELFORMAT_INDEX4MSB:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>255</pre></td>
+    <td align="right" class="lineno"><pre>251</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			sdl_pixelformat = "INDEX4MSB";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>256</pre></td>
+    <td align="right" class="lineno"><pre>252</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>257</pre></td>
+    <td align="right" class="lineno"><pre>253</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		case SDL_PIXELFORMAT_INDEX8:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>258</pre></td>
+    <td align="right" class="lineno"><pre>254</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			sdl_pixelformat = "INDEX8";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>259</pre></td>
+    <td align="right" class="lineno"><pre>255</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>260</pre></td>
+    <td align="right" class="lineno"><pre>256</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		case SDL_PIXELFORMAT_RGB332:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>261</pre></td>
+    <td align="right" class="lineno"><pre>257</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			sdl_pixelformat = "RGB332";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>262</pre></td>
+    <td align="right" class="lineno"><pre>258</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>263</pre></td>
+    <td align="right" class="lineno"><pre>259</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		case SDL_PIXELFORMAT_RGB444:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>264</pre></td>
+    <td align="right" class="lineno"><pre>260</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			sdl_pixelformat = "RGB444";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>265</pre></td>
+    <td align="right" class="lineno"><pre>261</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>266</pre></td>
+    <td align="right" class="lineno"><pre>262</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		case SDL_PIXELFORMAT_RGB555:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>267</pre></td>
+    <td align="right" class="lineno"><pre>263</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>			sdl_pixelformat = "RGB555";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>268</pre></td>
+    <td align="right" class="lineno"><pre>264</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>			break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>269</pre></td>
+    <td align="right" class="lineno"><pre>265</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		case SDL_PIXELFORMAT_BGR555:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>270</pre></td>
+    <td align="right" class="lineno"><pre>266</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			sdl_pixelformat = "BGR555";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>271</pre></td>
+    <td align="right" class="lineno"><pre>267</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>272</pre></td>
+    <td align="right" class="lineno"><pre>268</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		case SDL_PIXELFORMAT_ARGB4444:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>273</pre></td>
+    <td align="right" class="lineno"><pre>269</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			sdl_pixelformat = "ARGB4444";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>274</pre></td>
+    <td align="right" class="lineno"><pre>270</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>275</pre></td>
+    <td align="right" class="lineno"><pre>271</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		case SDL_PIXELFORMAT_RGBA4444:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>276</pre></td>
+    <td align="right" class="lineno"><pre>272</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			sdl_pixelformat = "RGBA4444";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>277</pre></td>
+    <td align="right" class="lineno"><pre>273</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>278</pre></td>
+    <td align="right" class="lineno"><pre>274</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		case SDL_PIXELFORMAT_ABGR4444:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>279</pre></td>
+    <td align="right" class="lineno"><pre>275</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			sdl_pixelformat = "ABGR4444";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>280</pre></td>
+    <td align="right" class="lineno"><pre>276</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>281</pre></td>
+    <td align="right" class="lineno"><pre>277</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		case SDL_PIXELFORMAT_BGRA4444:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>282</pre></td>
+    <td align="right" class="lineno"><pre>278</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			sdl_pixelformat = "BGRA4444";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>283</pre></td>
+    <td align="right" class="lineno"><pre>279</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>284</pre></td>
+    <td align="right" class="lineno"><pre>280</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		case SDL_PIXELFORMAT_ARGB1555:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>285</pre></td>
+    <td align="right" class="lineno"><pre>281</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			sdl_pixelformat = "ARGB1555";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>286</pre></td>
+    <td align="right" class="lineno"><pre>282</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>287</pre></td>
+    <td align="right" class="lineno"><pre>283</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		case SDL_PIXELFORMAT_RGBA5551:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>288</pre></td>
+    <td align="right" class="lineno"><pre>284</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			sdl_pixelformat = "RGBA5551";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>289</pre></td>
+    <td align="right" class="lineno"><pre>285</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>290</pre></td>
+    <td align="right" class="lineno"><pre>286</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		case SDL_PIXELFORMAT_ABGR1555:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>291</pre></td>
+    <td align="right" class="lineno"><pre>287</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			sdl_pixelformat = "ABGR1555";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>292</pre></td>
+    <td align="right" class="lineno"><pre>288</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>293</pre></td>
+    <td align="right" class="lineno"><pre>289</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		case SDL_PIXELFORMAT_BGRA5551:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>294</pre></td>
+    <td align="right" class="lineno"><pre>290</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			sdl_pixelformat = "BGRA5551";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>295</pre></td>
+    <td align="right" class="lineno"><pre>291</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>296</pre></td>
+    <td align="right" class="lineno"><pre>292</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		case SDL_PIXELFORMAT_RGB565:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>297</pre></td>
+    <td align="right" class="lineno"><pre>293</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>			sdl_pixelformat = "RGB565";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>298</pre></td>
+    <td align="right" class="lineno"><pre>294</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>			break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>299</pre></td>
+    <td align="right" class="lineno"><pre>295</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		case SDL_PIXELFORMAT_BGR565:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>300</pre></td>
+    <td align="right" class="lineno"><pre>296</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			sdl_pixelformat = "BGR565";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>301</pre></td>
+    <td align="right" class="lineno"><pre>297</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>302</pre></td>
+    <td align="right" class="lineno"><pre>298</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		case SDL_PIXELFORMAT_RGB24:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>303</pre></td>
+    <td align="right" class="lineno"><pre>299</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			sdl_pixelformat = "RGB24";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>304</pre></td>
+    <td align="right" class="lineno"><pre>300</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>305</pre></td>
+    <td align="right" class="lineno"><pre>301</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		case SDL_PIXELFORMAT_RGB888:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>306</pre></td>
+    <td align="right" class="lineno"><pre>302</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>			sdl_pixelformat = "RGB888";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>307</pre></td>
+    <td align="right" class="lineno"><pre>303</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>			break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>308</pre></td>
+    <td align="right" class="lineno"><pre>304</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		case SDL_PIXELFORMAT_RGBX8888:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>309</pre></td>
+    <td align="right" class="lineno"><pre>305</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			sdl_pixelformat = "RGBX8888";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>310</pre></td>
+    <td align="right" class="lineno"><pre>306</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>311</pre></td>
+    <td align="right" class="lineno"><pre>307</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		case SDL_PIXELFORMAT_BGR888:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>312</pre></td>
+    <td align="right" class="lineno"><pre>308</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>			sdl_pixelformat = "BGR888";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>313</pre></td>
+    <td align="right" class="lineno"><pre>309</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>			break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>314</pre></td>
+    <td align="right" class="lineno"><pre>310</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		case SDL_PIXELFORMAT_BGRX8888:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>315</pre></td>
+    <td align="right" class="lineno"><pre>311</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			sdl_pixelformat = "BGRX8888";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>316</pre></td>
+    <td align="right" class="lineno"><pre>312</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>317</pre></td>
+    <td align="right" class="lineno"><pre>313</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		case SDL_PIXELFORMAT_ARGB8888:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>318</pre></td>
+    <td align="right" class="lineno"><pre>314</pre></td>
     <td align="right" class="linecount coveredLine"><pre>2</pre></td>
     <td align="left" class="src coveredLine"><pre>			sdl_pixelformat = "ARGB8888";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>319</pre></td>
+    <td align="right" class="lineno"><pre>315</pre></td>
     <td align="right" class="linecount coveredLine"><pre>2</pre></td>
     <td align="left" class="src coveredLine"><pre>			break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>320</pre></td>
+    <td align="right" class="lineno"><pre>316</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		case SDL_PIXELFORMAT_RGBA8888:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>321</pre></td>
+    <td align="right" class="lineno"><pre>317</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>			sdl_pixelformat = "RGBA8888";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>322</pre></td>
+    <td align="right" class="lineno"><pre>318</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>			break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>323</pre></td>
+    <td align="right" class="lineno"><pre>319</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		case SDL_PIXELFORMAT_ABGR8888:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>324</pre></td>
+    <td align="right" class="lineno"><pre>320</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>			sdl_pixelformat = "ABGR8888";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>325</pre></td>
+    <td align="right" class="lineno"><pre>321</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>			break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>326</pre></td>
+    <td align="right" class="lineno"><pre>322</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		case SDL_PIXELFORMAT_BGRA8888:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>327</pre></td>
+    <td align="right" class="lineno"><pre>323</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>			sdl_pixelformat = "BGRA8888";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>328</pre></td>
+    <td align="right" class="lineno"><pre>324</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>			break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>329</pre></td>
+    <td align="right" class="lineno"><pre>325</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		case SDL_PIXELFORMAT_ARGB2101010:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>330</pre></td>
+    <td align="right" class="lineno"><pre>326</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			sdl_pixelformat = "ARGB2101010";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>331</pre></td>
+    <td align="right" class="lineno"><pre>327</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>332</pre></td>
+    <td align="right" class="lineno"><pre>328</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		case SDL_PIXELFORMAT_YV12:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>333</pre></td>
+    <td align="right" class="lineno"><pre>329</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			sdl_pixelformat = "YV12";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>334</pre></td>
+    <td align="right" class="lineno"><pre>330</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>335</pre></td>
+    <td align="right" class="lineno"><pre>331</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		case SDL_PIXELFORMAT_IYUV:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>336</pre></td>
+    <td align="right" class="lineno"><pre>332</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			sdl_pixelformat = "IYUV";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>337</pre></td>
+    <td align="right" class="lineno"><pre>333</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>338</pre></td>
+    <td align="right" class="lineno"><pre>334</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		case SDL_PIXELFORMAT_YUY2:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>339</pre></td>
+    <td align="right" class="lineno"><pre>335</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			sdl_pixelformat = "YUY2";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>340</pre></td>
+    <td align="right" class="lineno"><pre>336</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>341</pre></td>
+    <td align="right" class="lineno"><pre>337</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		case SDL_PIXELFORMAT_UYVY:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>342</pre></td>
+    <td align="right" class="lineno"><pre>338</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			sdl_pixelformat = "UYVY";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>343</pre></td>
+    <td align="right" class="lineno"><pre>339</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>344</pre></td>
+    <td align="right" class="lineno"><pre>340</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		case SDL_PIXELFORMAT_YVYU:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>345</pre></td>
+    <td align="right" class="lineno"><pre>341</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			sdl_pixelformat = "YVYU";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>346</pre></td>
+    <td align="right" class="lineno"><pre>342</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>347</pre></td>
+    <td align="right" class="lineno"><pre>343</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		default:</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>348</pre></td>
+    <td align="right" class="lineno"><pre>344</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			log_error() &lt;&lt; "Some SDL_PIXELFORMAT was not listed!";</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>349</pre></td>
+    <td align="right" class="lineno"><pre>345</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			break;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>350</pre></td>
+    <td align="right" class="lineno"><pre>346</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>351</pre></td>
+    <td align="right" class="lineno"><pre>347</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>352</pre></td>
+    <td align="right" class="lineno"><pre>348</pre></td>
     <td align="right" class="linecount coveredLine"><pre>10</pre></td>
     <td align="left" class="src coveredLine"><pre>	return sdl_pixelformat;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>353</pre></td>
+    <td align="right" class="lineno"><pre>349</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>354</pre></td>
+    <td align="right" class="lineno"><pre>350</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>355</pre></td>
+    <td align="right" class="lineno"><pre>351</pre></td>
     <td align="right" class="linecount coveredLine"><pre>2</pre></td>
     <td align="left" class="src coveredLine"><pre>std::string RendererFlagsToString(const Uint32 flags) {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>356</pre></td>
+    <td align="right" class="lineno"><pre>352</pre></td>
     <td align="right" class="linecount coveredLine"><pre>2</pre></td>
     <td align="left" class="src coveredLine"><pre>	std::ostringstream oss;</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>353</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>354</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>2</pre></td>
+    <td align="left" class="src coveredLine"><pre>	if(flags &amp; SDL_RENDERER_SOFTWARE) {</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>355</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>		oss &lt;&lt; "SOFTWARE,";</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>356</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>	}</pre></td>
     </tr>
 
     <tr>
@@ -2429,13 +2429,13 @@
     <tr>
     <td align="right" class="lineno"><pre>358</pre></td>
     <td align="right" class="linecount coveredLine"><pre>2</pre></td>
-    <td align="left" class="src coveredLine"><pre>	if(flags &amp; SDL_RENDERER_SOFTWARE) {</pre></td>
+    <td align="left" class="src coveredLine"><pre>	if(flags &amp; SDL_RENDERER_ACCELERATED) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>359</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>		oss &lt;&lt; "SOFTWARE,";</pre></td>
+    <td align="left" class="src coveredLine"><pre>		oss &lt;&lt; "ACCELERATED,";</pre></td>
     </tr>
 
     <tr>
@@ -2453,13 +2453,13 @@
     <tr>
     <td align="right" class="lineno"><pre>362</pre></td>
     <td align="right" class="linecount coveredLine"><pre>2</pre></td>
-    <td align="left" class="src coveredLine"><pre>	if(flags &amp; SDL_RENDERER_ACCELERATED) {</pre></td>
+    <td align="left" class="src coveredLine"><pre>	if(flags &amp; SDL_RENDERER_PRESENTVSYNC) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>363</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>		oss &lt;&lt; "ACCELERATED,";</pre></td>
+    <td align="left" class="src coveredLine"><pre>		oss &lt;&lt; "PRESENTVSYNC,";</pre></td>
     </tr>
 
     <tr>
@@ -2477,13 +2477,13 @@
     <tr>
     <td align="right" class="lineno"><pre>366</pre></td>
     <td align="right" class="linecount coveredLine"><pre>2</pre></td>
-    <td align="left" class="src coveredLine"><pre>	if(flags &amp; SDL_RENDERER_PRESENTVSYNC) {</pre></td>
+    <td align="left" class="src coveredLine"><pre>	if(flags &amp; SDL_RENDERER_TARGETTEXTURE) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>367</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>		oss &lt;&lt; "PRESENTVSYNC,";</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>2</pre></td>
+    <td align="left" class="src coveredLine"><pre>		oss &lt;&lt; "TARGETTEXTURE,";</pre></td>
     </tr>
 
     <tr>
@@ -2501,89 +2501,65 @@
     <tr>
     <td align="right" class="lineno"><pre>370</pre></td>
     <td align="right" class="linecount coveredLine"><pre>2</pre></td>
-    <td align="left" class="src coveredLine"><pre>	if(flags &amp; SDL_RENDERER_TARGETTEXTURE) {</pre></td>
+    <td align="left" class="src coveredLine"><pre>	return oss.str();</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>371</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>2</pre></td>
-    <td align="left" class="src coveredLine"><pre>		oss &lt;&lt; "TARGETTEXTURE,";</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>372</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>	}</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>373</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>374</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>2</pre></td>
-    <td align="left" class="src coveredLine"><pre>	return oss.str();</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>375</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>}</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>376</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>377</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>bool EqualDisplayModes(const SDL_DisplayMode&amp; first, const SDL_DisplayMode&amp; second) {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>378</pre></td>
+    <td align="right" class="lineno"><pre>374</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>	return ((first.format == second.format) &amp;&amp; (first.w == second.w) &amp;&amp; (first.h == second.h)</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>379</pre></td>
+    <td align="right" class="lineno"><pre>375</pre></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
     <td align="left" class="src coveredLine"><pre>		&amp;&amp; (first.refresh_rate == second.refresh_rate));</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>380</pre></td>
+    <td align="right" class="lineno"><pre>376</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>381</pre></td>
+    <td align="right" class="lineno"><pre>377</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>382</pre></td>
+    <td align="right" class="lineno"><pre>378</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>} // namespace detail</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>383</pre></td>
+    <td align="right" class="lineno"><pre>379</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>} // namespace sdl</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>384</pre></td>
+    <td align="right" class="lineno"><pre>380</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>} // namespace sdl2engine</pre></td>
     </tr>

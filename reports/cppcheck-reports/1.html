@@ -107,12 +107,12 @@
   </head>
   <body onload="init_expandables()">
       <div id="header">
-        <h1>Cppcheck report - sdl2-engine: /home/travis/build/CaioIcy/sdl2-engine/src/graphics/Renderer.cpp </h1>
+        <h1>Cppcheck report - sdl2-engine: /home/travis/build/CaioIcy/sdl2-engine/src/util/Logger.cpp </h1>
       </div>
       <div id="menu" dir="rtl">
        <a href="index.html">Defect list</a>
        <br>
-<a href='1.html#line-42'> unreadVariable 42</a>
+<a href='1.html#line-18'> constStatement 18</a><a href='1.html#line-19'> constStatement 19</a><a href='1.html#line-20'> constStatement 20</a><a href='1.html#line-21'> constStatement 21</a>
       </div>
       <div id="content">
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -172,78 +172,64 @@
 55
 56
 57
-58
-59
-60
-61
-62
-63
-64
-65</pre></div></td><td class="code"><div class="highlight"><pre><a name="line-1"></a><span class="cp">#include &quot;graphics/Renderer.h&quot;</span>
-<a name="line-2"></a><span class="cp">#include &quot;util/Configuration.h&quot;</span>
-<a name="line-3"></a><span class="cp">#include &quot;util/Logger.h&quot;</span>
-<a name="line-4"></a><span class="cp">#include &quot;util/Assert.h&quot;</span>
-<a name="line-5"></a>
-<a name="line-6"></a><span class="k">namespace</span> <span class="n">sdl2engine</span> <span class="p">{</span>
-<a name="line-7"></a>
-<a name="line-8"></a><span class="n">Renderer</span><span class="o">::</span><span class="n">Renderer</span><span class="p">(</span><span class="n">SDL_Window</span><span class="o">*</span> <span class="k">const</span> <span class="n">sdl_window</span><span class="p">,</span> <span class="k">const</span> <span class="n">Uint32</span> <span class="n">flags</span><span class="p">)</span> <span class="o">:</span>
-<a name="line-9"></a>	<span class="n">m_sdl_renderer</span><span class="p">{</span><span class="n">SDL_CreateRenderer</span><span class="p">(</span><span class="n">sdl_window</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">flags</span><span class="p">)}</span>
-<a name="line-10"></a><span class="p">{</span>
-<a name="line-11"></a>	<span class="k">if</span><span class="p">(</span><span class="n">m_sdl_renderer</span> <span class="o">==</span> <span class="k">nullptr</span><span class="p">){</span>
-<a name="line-12"></a>		<span class="n">log_error</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Renderer could not be created. &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">SDL_GetError</span><span class="p">();</span>
-<a name="line-13"></a>	<span class="p">}</span>
-<a name="line-14"></a><span class="p">}</span>
+58</pre></div></td><td class="code"><div class="highlight"><pre><a name="line-1"></a><span class="cp">#include &quot;Logger.h&quot;</span>
+<a name="line-2"></a><span class="cp">#include &lt;iostream&gt;</span>
+<a name="line-3"></a><span class="cp">#include &lt;utility&gt;</span>
+<a name="line-4"></a>
+<a name="line-5"></a><span class="k">namespace</span> <span class="p">{</span>
+<a name="line-6"></a>
+<a name="line-7"></a><span class="k">struct</span> <span class="n">LogInfo</span> <span class="p">{</span>
+<a name="line-8"></a>	<span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">tag</span><span class="p">;</span>
+<a name="line-9"></a>	<span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">color</span><span class="p">;</span>
+<a name="line-10"></a><span class="p">};</span>
+<a name="line-11"></a>
+<a name="line-12"></a><span class="c1">// constexpr implies const, but const is here to stop the compiler from yelling about</span>
+<a name="line-13"></a><span class="c1">// -Wwrite-strings</span>
+<a name="line-14"></a><span class="k">constexpr</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">colorReset</span> <span class="o">=</span> <span class="s">&quot;</span><span class="se">\033</span><span class="s">[0m&quot;</span><span class="p">;</span>
 <a name="line-15"></a>
-<a name="line-16"></a><span class="n">Renderer</span><span class="o">::~</span><span class="n">Renderer</span><span class="p">()</span> <span class="p">{</span>
-<a name="line-17"></a>	<span class="k">if</span><span class="p">(</span><span class="n">m_sdl_renderer</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-18"></a>		<span class="n">SDL_DestroyRenderer</span><span class="p">(</span><span class="n">m_sdl_renderer</span><span class="p">);</span>
-<a name="line-19"></a>	<span class="p">}</span>
-<a name="line-20"></a><span class="p">}</span>
-<a name="line-21"></a>
-<a name="line-22"></a><span class="kt">void</span> <span class="n">Renderer</span><span class="o">::</span><span class="n">Clear</span><span class="p">()</span> <span class="p">{</span>
-<a name="line-23"></a>	<span class="k">const</span> <span class="kt">int</span> <span class="n">k_set_color</span> <span class="o">=</span> <span class="n">SDL_SetRenderDrawColor</span><span class="p">(</span><span class="n">m_sdl_renderer</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0xFF</span><span class="p">);</span>
-<a name="line-24"></a>	<span class="k">if</span><span class="p">(</span><span class="n">k_set_color</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">){</span>
-<a name="line-25"></a>		<span class="n">log_error</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Failed to set renderer draw color. &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">SDL_GetError</span><span class="p">();</span>
-<a name="line-26"></a>	<span class="p">}</span>
+<a name="line-16"></a><span class="k">constexpr</span> <span class="n">LogInfo</span> <span class="n">logInfos</span><span class="p">[]</span> <span class="p">{</span>
+<a name="line-17"></a><span class="c1">//	  Level   ,  Color</span>
+<a name="line-18"></a><span class="hll">	<span class="p">{</span><span class="s">&quot; ERROR &quot;</span><span class="p">,</span> <span class="s">&quot;</span><span class="se">\033</span><span class="s">[1;4;91;49m&quot;</span><span class="p">},</span><span class='error2'>&lt;--- Redundant code: Found a statement that begins with string constant</span>
+</span><a name="line-19"></a><span class="hll">	<span class="p">{</span><span class="s">&quot;WARNING&quot;</span><span class="p">,</span> <span class="s">&quot;</span><span class="se">\033</span><span class="s">[1;4;93;49m&quot;</span><span class="p">},</span><span class='error2'>&lt;--- Redundant code: Found a statement that begins with string constant</span>
+</span><a name="line-20"></a><span class="hll">	<span class="p">{</span><span class="s">&quot; INFO  &quot;</span><span class="p">,</span> <span class="s">&quot;</span><span class="se">\033</span><span class="s">[1;4;96;49m&quot;</span><span class="p">},</span><span class='error2'>&lt;--- Redundant code: Found a statement that begins with string constant</span>
+</span><a name="line-21"></a><span class="hll">	<span class="p">{</span><span class="s">&quot; DEBUG &quot;</span><span class="p">,</span> <span class="s">&quot;</span><span class="se">\033</span><span class="s">[1;4;32;49m&quot;</span><span class="p">}</span><span class='error2'>&lt;--- Redundant code: Found a statement that begins with string constant</span>
+</span><a name="line-22"></a><span class="p">};</span>
+<a name="line-23"></a>
+<a name="line-24"></a><span class="p">}</span> <span class="c1">// namespace</span>
+<a name="line-25"></a>
+<a name="line-26"></a><span class="k">namespace</span> <span class="n">sdl2engine</span> <span class="p">{</span>
 <a name="line-27"></a>
-<a name="line-28"></a>	<span class="k">const</span> <span class="kt">int</span> <span class="n">k_clear_renderer</span> <span class="o">=</span> <span class="n">SDL_RenderClear</span><span class="p">(</span><span class="n">m_sdl_renderer</span><span class="p">);</span>
-<a name="line-29"></a>	<span class="k">if</span><span class="p">(</span><span class="n">k_clear_renderer</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">){</span>
-<a name="line-30"></a>		<span class="n">log_error</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Failed to clear the renderer. &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">SDL_GetError</span><span class="p">();</span>
-<a name="line-31"></a>	<span class="p">}</span>
-<a name="line-32"></a><span class="p">}</span>
-<a name="line-33"></a>
-<a name="line-34"></a><span class="kt">void</span> <span class="n">Renderer</span><span class="o">::</span><span class="n">Render</span><span class="p">()</span> <span class="p">{</span>
-<a name="line-35"></a>	<span class="n">SDL_RenderPresent</span><span class="p">(</span><span class="n">m_sdl_renderer</span><span class="p">);</span>
-<a name="line-36"></a><span class="p">}</span>
-<a name="line-37"></a>
-<a name="line-38"></a><span class="kt">void</span> <span class="n">Renderer</span><span class="o">::</span><span class="n">SetLogicalSize</span><span class="p">(</span><span class="k">const</span> <span class="kt">int</span> <span class="n">size</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-39"></a>	<span class="n">ASSERT</span><span class="p">(</span><span class="n">size</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&quot;Must be &gt;= 0&quot;</span><span class="p">);</span>
-<a name="line-40"></a>
-<a name="line-41"></a>	<span class="c1">// Just a precaution, so there is no abuse on the size.</span>
-<a name="line-42"></a><span class="hll">	<span class="k">const</span> <span class="kt">int</span> <span class="n">k_safe_size</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span><span class='error2'>&lt;--- Variable 'k_safe_size' is assigned a value that is never used</span>
-</span><a name="line-43"></a>	<span class="n">ASSERT</span><span class="p">(</span><span class="n">size</span> <span class="o">&lt;</span> <span class="n">k_safe_size</span><span class="p">,</span> <span class="s">&quot;Trying to set logical size for a value too big.&quot;</span><span class="p">);</span>
-<a name="line-44"></a>
-<a name="line-45"></a>	<span class="k">const</span> <span class="kt">int</span> <span class="n">k_set_size</span> <span class="o">=</span> <span class="n">SDL_RenderSetLogicalSize</span><span class="p">(</span><span class="n">m_sdl_renderer</span><span class="p">,</span>
-<a name="line-46"></a>		<span class="n">Configuration</span><span class="o">::</span><span class="n">ResolutionWidth</span><span class="p">()</span> <span class="o">*</span> <span class="n">size</span><span class="p">,</span> <span class="n">Configuration</span><span class="o">::</span><span class="n">ResolutionHeight</span><span class="p">()</span> <span class="o">*</span> <span class="n">size</span><span class="p">);</span>
-<a name="line-47"></a>
-<a name="line-48"></a>	<span class="k">if</span><span class="p">(</span><span class="n">k_set_size</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-49"></a>		<span class="n">log_error</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Failed to set the renderer logical size. &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">SDL_GetError</span><span class="p">();</span>
-<a name="line-50"></a>	<span class="p">}</span>
+<a name="line-28"></a><span class="n">LogBuffer</span><span class="o">::</span><span class="n">LogBuffer</span><span class="p">(</span><span class="k">const</span> <span class="n">LogLevel</span> <span class="n">level</span><span class="p">)</span> <span class="o">:</span>
+<a name="line-29"></a>	<span class="n">m_log_level</span><span class="p">{</span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">level</span><span class="p">)},</span>
+<a name="line-30"></a>	<span class="n">m_log_stream</span><span class="p">{}</span>
+<a name="line-31"></a><span class="p">{</span>
+<a name="line-32"></a>	<span class="c1">// Ignoring &#39;parameter not used&#39; warning.</span>
+<a name="line-33"></a>	<span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">level</span><span class="p">;</span>
+<a name="line-34"></a><span class="p">}</span>
+<a name="line-35"></a>
+<a name="line-36"></a><span class="n">LogBuffer</span><span class="o">::</span><span class="n">LogBuffer</span><span class="p">(</span><span class="k">const</span> <span class="n">LogBuffer</span><span class="o">&amp;</span> <span class="n">log_buffer</span><span class="p">)</span> <span class="o">:</span>
+<a name="line-37"></a>	<span class="n">m_log_level</span><span class="p">{</span><span class="n">log_buffer</span><span class="p">.</span><span class="n">m_log_level</span><span class="p">},</span>
+<a name="line-38"></a>	<span class="n">m_log_stream</span><span class="p">{}</span>
+<a name="line-39"></a><span class="p">{</span>
+<a name="line-40"></a><span class="p">}</span>
+<a name="line-41"></a>
+<a name="line-42"></a><span class="n">LogBuffer</span><span class="o">::~</span><span class="n">LogBuffer</span><span class="p">()</span> <span class="p">{</span>
+<a name="line-43"></a>	<span class="n">std</span><span class="o">::</span><span class="n">clog</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;[&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">logInfos</span><span class="p">[</span><span class="n">m_log_level</span><span class="p">].</span><span class="n">color</span> <span class="o">&lt;&lt;</span> <span class="n">logInfos</span><span class="p">[</span><span class="n">m_log_level</span><span class="p">].</span><span class="n">tag</span> <span class="o">&lt;&lt;</span> <span class="n">colorReset</span>
+<a name="line-44"></a>		<span class="o">&lt;&lt;</span> <span class="s">&quot;] - &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">m_log_stream</span><span class="p">.</span><span class="n">str</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<a name="line-45"></a><span class="p">}</span>
+<a name="line-46"></a>
+<a name="line-47"></a><span class="k">template</span> <span class="o">&lt;</span><span class="n">LogLevel</span> <span class="n">level</span><span class="o">&gt;</span>
+<a name="line-48"></a><span class="n">LogBuffer</span> <span class="n">log</span><span class="p">()</span> <span class="p">{</span>
+<a name="line-49"></a>	<span class="n">LogBuffer</span> <span class="n">log_buffer</span><span class="p">{</span><span class="n">level</span><span class="p">};</span>
+<a name="line-50"></a>	<span class="k">return</span> <span class="n">log_buffer</span><span class="p">;</span>
 <a name="line-51"></a><span class="p">}</span>
 <a name="line-52"></a>
-<a name="line-53"></a><span class="kt">void</span> <span class="n">Renderer</span><span class="o">::</span><span class="n">LogicalSize</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span><span class="o">*</span> <span class="n">height</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-54"></a>	<span class="n">SDL_RenderGetLogicalSize</span><span class="p">(</span><span class="n">m_sdl_renderer</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">);</span>
-<a name="line-55"></a>
-<a name="line-56"></a>	<span class="k">if</span><span class="p">((</span><span class="o">*</span><span class="n">width</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="o">*</span><span class="n">height</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-<a name="line-57"></a>		<span class="n">log_warn</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Tried to get logical size of renderer, but it has never been set.&quot;</span><span class="p">;</span>
-<a name="line-58"></a>	<span class="p">}</span>
-<a name="line-59"></a><span class="p">}</span>
-<a name="line-60"></a>
-<a name="line-61"></a><span class="n">SDL_Renderer</span><span class="o">*</span> <span class="n">Renderer</span><span class="o">::</span><span class="n">SdlRenderer</span><span class="p">()</span> <span class="p">{</span>
-<a name="line-62"></a>	<span class="k">return</span> <span class="n">m_sdl_renderer</span><span class="p">;</span>
-<a name="line-63"></a><span class="p">}</span>
-<a name="line-64"></a>
-<a name="line-65"></a><span class="p">}</span> <span class="c1">// namespace sdl2engine</span>
+<a name="line-53"></a><span class="k">template</span> <span class="n">LogBuffer</span> <span class="n">log</span><span class="o">&lt;</span><span class="n">LogLevel</span><span class="o">::</span><span class="n">Error</span><span class="o">&gt;</span><span class="p">();</span>
+<a name="line-54"></a><span class="k">template</span> <span class="n">LogBuffer</span> <span class="n">log</span><span class="o">&lt;</span><span class="n">LogLevel</span><span class="o">::</span><span class="n">Warn</span><span class="o">&gt;</span><span class="p">();</span>
+<a name="line-55"></a><span class="k">template</span> <span class="n">LogBuffer</span> <span class="n">log</span><span class="o">&lt;</span><span class="n">LogLevel</span><span class="o">::</span><span class="n">Info</span><span class="o">&gt;</span><span class="p">();</span>
+<a name="line-56"></a><span class="k">template</span> <span class="n">LogBuffer</span> <span class="n">log</span><span class="o">&lt;</span><span class="n">LogLevel</span><span class="o">::</span><span class="n">Debug</span><span class="o">&gt;</span><span class="p">();</span>
+<a name="line-57"></a>
+<a name="line-58"></a><span class="p">}</span> <span class="c1">// namespace sdl2engine</span>
 </pre></div>
 </td></tr></table>
       </div>

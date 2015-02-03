@@ -1,7 +1,7 @@
 var searchData=
 [
   ['a',['A',['../namespacesdl2engine.html#a92e23178a19914e86fa4f7640dcde170a516639ee85de040fc3e75cfe05ac5049',1,'sdl2engine']]],
-  ['add_5fstate',['ADD_STATE',['../Game_8cpp.html#a47ca4f81b749093d7a70c2f9c5da0841',1,'Game.cpp']]],
+  ['add_5fstate',['ADD_STATE',['../Game_8cpp.html#a3b78904d8ae89c99b3faaa746973f3ec',1,'Game.cpp']]],
   ['addgameobject',['addGameObject',['../classsdl2engine_1_1StateGame.html#ab88e41507b6d1bca27120eb947eac572',1,'sdl2engine::StateGame']]],
   ['alpha',['Alpha',['../classsdl2engine_1_1Sprite.html#a9c1d5dfbfd2286d64a5c99f03a1325f3',1,'sdl2engine::Sprite']]],
   ['animation',['Animation',['../classsdl2engine_1_1Animation.html',1,'sdl2engine']]],

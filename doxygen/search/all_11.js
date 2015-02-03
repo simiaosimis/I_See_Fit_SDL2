@@ -35,14 +35,14 @@ var searchData=
   ['soundeffect_2eh',['SoundEffect.h',['../SoundEffect_8h.html',1,'']]],
   ['space',['SPACE',['../namespacesdl2engine.html#a92e23178a19914e86fa4f7640dcde170a1271aa631edd779a3d7a2d7cf517729a',1,'sdl2engine']]],
   ['sprite',['Sprite',['../classsdl2engine_1_1Sprite.html',1,'sdl2engine']]],
-  ['sprite',['Sprite',['../classsdl2engine_1_1Sprite.html#a82cdebf53de84da6a8dcb4947725c323',1,'sdl2engine::Sprite::Sprite(const std::string &amp;path)'],['../classsdl2engine_1_1Sprite.html#aa14984653f10c8e428bb7172e0472dbb',1,'sdl2engine::Sprite::Sprite(SDL_Surface *const surface)'],['../classsdl2engine_1_1GameObject.html#a8dee83407ebcee04c6f8f371b4679ee0',1,'sdl2engine::GameObject::sprite()']]],
+  ['sprite',['sprite',['../classsdl2engine_1_1GameObject.html#a8dee83407ebcee04c6f8f371b4679ee0',1,'sdl2engine::GameObject::sprite()'],['../classsdl2engine_1_1Sprite.html#a82cdebf53de84da6a8dcb4947725c323',1,'sdl2engine::Sprite::Sprite(const std::string &amp;path)'],['../classsdl2engine_1_1Sprite.html#aa14984653f10c8e428bb7172e0472dbb',1,'sdl2engine::Sprite::Sprite(SDL_Surface *const surface)']]],
   ['sprite_2ecpp',['Sprite.cpp',['../Sprite_8cpp.html',1,'']]],
   ['sprite_2eh',['Sprite.h',['../Sprite_8h.html',1,'']]],
   ['start',['START',['../namespacesdl2engine_1_1controllerMap.html#a031302295da982dc16fd6893d1f96dd8a3f843e1922ba7435c6cc3a3de0837adf',1,'sdl2engine::controllerMap']]],
   ['stategame',['StateGame',['../classsdl2engine_1_1StateGame.html',1,'sdl2engine']]],
   ['stategame_2ecpp',['StateGame.cpp',['../StateGame_8cpp.html',1,'']]],
   ['stategame_2eh',['StateGame.h',['../StateGame_8h.html',1,'']]],
-  ['statesmap',['StatesMap',['../classsdl2engine_1_1Game.html#a6a7c9cd865493921c0f55601e9641798',1,'sdl2engine::Game']]],
+  ['statesmap',['StatesMap',['../classsdl2engine_1_1Game.html#a2e4fb4e57035f095a323e47ad5d3e917',1,'sdl2engine::Game']]],
   ['stop',['Stop',['../classsdl2engine_1_1AudioHandler.html#afa5f570101608f704fd3555b9c934850',1,'sdl2engine::AudioHandler::Stop()'],['../classsdl2engine_1_1Game.html#adcd0f476137568967aed69fe800805a0',1,'sdl2engine::Game::Stop()'],['../classsdl2engine_1_1AudioHandler.html#a0c67582ab5a6d5a32de9b19a71b1177e',1,'sdl2engine::AudioHandler::Stop()'],['../classsdl2engine_1_1AudioHandler.html#ad480f017577815a14dc533b60c55e231',1,'sdl2engine::AudioHandler::Stop()']]],
   ['surfacetotexture',['SurfaceToTexture',['../classsdl2engine_1_1Sprite.html#a4dfaeee4aed2bca6a87bb6b4926581da',1,'sdl2engine::Sprite']]]
 ];

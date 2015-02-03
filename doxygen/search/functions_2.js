@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['destroystates',['DestroyStates',['../classsdl2engine_1_1Game.html#a8d4ea87a27afde724b2c376fe513795b',1,'sdl2engine::Game']]]
+  ['equaldisplaymodes',['EqualDisplayModes',['../namespacesdl2engine_1_1sdl_1_1detail.html#a623f4d5fe0026d3700c982868751621d',1,'sdl2engine::sdl::detail']]]
 ];
