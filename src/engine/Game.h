@@ -18,6 +18,9 @@ namespace sdl2engine {
 */
 class Game {
 
+	private:
+		struct ConstructorTag {} /**< Private tag needed to use the constructor. */;
+
 	public:
 		/**
 		* All possible game states.
@@ -32,6 +35,17 @@ class Game {
 		* @return The instance for a Game.
 		*/
 		static Game& Instance();
+
+		/**
+		* @brief The constructor.
+		*
+		* Sets the game window and tells the game that it is OK to begin looping.
+		* Since the std::make_unique in Game::Instance() can't access a private constructor,
+		* we make this constructor public but need a ConstructorTag parameter. ConstructorTag
+		* is an empty struct only accessible by this class, since it is private. This way the
+		* constructor can only actually be used in a private setting.
+		*/
+		explicit Game(const ConstructorTag& private_tag);
 
 		/**
 		* @brief The destructor.
@@ -86,31 +100,17 @@ class Game {
 
 	private:
 		/**
-		* The constructor.
-		* Sets the game window and tells the game that it is OK to begin looping. Also, it
-		* 	begins the FPS manager.
-		* @note If the Window cannot be created, the game will not begin.
-		*/
-		Game();
-
-		/**
 		* Loads all the states.
 		* Every new state implemented should be initialized here.
 		*/
 		void InitializeStates();
 
-		/**
-		* Deletes all the loaded states.
-		* Every new state implemented should be deleted here.
-		*/
-		void DestroyStates();
-
 		bool m_is_running; /**< Whether the game is currently running/looping or not. */
-		InputHandler* m_input_handler; /**< The Game InputHandler. */
+		std::unique_ptr<InputHandler> m_input_handler; /**< The Game InputHandler. */
 		StateGame* m_current_state; /**< The current state, which the game is in. */
 		Window m_window; /**< The game Window. */
 
-		using StatesMap = std::map<GStates, StateGame*>;
+		using StatesMap = std::map<GStates, std::unique_ptr<StateGame>>;
 		StatesMap m_game_states; /**< Map containing all possible states. */
 };
 

@@ -19,6 +19,8 @@ class Music {
 		* @brief The destructor.
 		*/
 		~Music();
+
+		// Not copyable and not moveable.
 		Music(const Music&) = delete;
 		Music& operator=(const Music&) = delete;
 		Music(Music&&) = delete;

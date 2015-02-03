@@ -61,7 +61,6 @@ void InputHandler::handleInput() {
 				case SDLK_a: // A.
 					this->keyStates[GameKeys::A] = false;
 					break;
-					break;
 				case SDLK_ESCAPE: // ESCAPE.
 					this->keyStates[GameKeys::ESCAPE] = false;
 					break;

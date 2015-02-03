@@ -1,16 +1,14 @@
 #include "engine/Game.h"
 #include <chrono>
 #include <memory>
-#include "util/Configuration.h"
+#include "engine/Timer.h"
 #include "graphics/Sprite.h"
+#include "util/Configuration.h"
 #include "util/Logger.h"
 #include "util/Assert.h"
 // Begin Game States includes
 #include "engine/GStatePlaceholder.h"
 // End Game States includes
-
-#define ADD_STATE(stateEnum, stateClass) \
-	m_game_states.insert(std::make_pair(stateEnum, new stateClass()))
 
 namespace sdl2engine {
 
@@ -18,17 +16,18 @@ Game& Game::Instance() {
 	// "C++11 mandates that the initializer for a local static variable is only run once, even
 	// in the presence of concurrency. So, assuming you’ve got a modern C++ compiler, this code
 	// is thread-safe[...]"
-	static std::unique_ptr<Game> instance{new Game};
+	static auto instance = std::make_unique<Game>(ConstructorTag{});
 	return *instance.get();
 }
 
-Game::Game() :
+Game::Game(const ConstructorTag& private_tag) :
 	m_is_running{false},
-	m_input_handler{new InputHandler()},
+	m_input_handler{std::make_unique<InputHandler>()},
 	m_current_state{nullptr},
 	m_window{},
 	m_game_states{}
 {
+	static_cast<void>(private_tag);
 	InitializeStates();
 	m_is_running = true;
 }
@@ -37,43 +36,36 @@ Game::~Game() {
 	if(m_current_state != nullptr) {
 		m_current_state->unload();
 	}
-
-	DestroyStates();
-
-	delete m_input_handler;
 }
 
 void Game::Run() {
 	// Load the first state of the game.
-	m_current_state = m_game_states.at(GStates::PLACEHOLDER);
+	m_current_state = m_game_states.at(GStates::PLACEHOLDER).get();
+	ASSERT(m_current_state != nullptr, "Some game state should be loaded.");
 	m_current_state->load();
 
 	// Get the first game time.
-	const double deltaTime = 1.0 / 60.0;
-	double totalGameTime = 0.0;
-	double accumulatedTime = 0.0;
+	const auto k_delta_time = 1.0 / 60.0;
+	auto total_game_time = 0.0;
+	auto accumulated_time = 0.0;
 
-	using s_clock = std::chrono::steady_clock;
-	s_clock::time_point lastTime = s_clock::now();
+	/////////////////////////////// CREATE TIMER (LAST_TIME = CLOCK::NOW)
+	Timer timer{};
 
 	// This is the main game loop.
 	while(m_is_running) {
 
 #ifdef ICYTIMEDRUN
 		// Auto-close the game in 2 seconds so TravisCI doesn't loop forever
-		if(totalGameTime >= 2.0) {
+		if(total_game_time >= 2.0) {
 			m_is_running = false;
 		}
 #endif
 
-		s_clock::time_point now = s_clock::now();
-		s_clock::duration dt{now - lastTime};
-
-		const double frameTime = std::chrono::duration_cast<std::chrono::duration<double, std::ratio<1, 1>>>(dt).count();
-		accumulatedTime += frameTime;
+		accumulated_time += timer.GetFrameTime();
 
 		// Update.
-		while(accumulatedTime >= deltaTime) {
+		while(accumulated_time >= k_delta_time) {
 			m_input_handler->handleInput();
 
 			// Check for an exit signal from input.
@@ -82,10 +74,10 @@ void Game::Run() {
 				return;
 			}
 
-			m_current_state->update(deltaTime);
+			m_current_state->update(k_delta_time);
 
-			accumulatedTime -= deltaTime;
-			totalGameTime += deltaTime;
+			accumulated_time -= k_delta_time;
+			total_game_time += k_delta_time;
 		}
 
 		// Render.
@@ -93,8 +85,8 @@ void Game::Run() {
 		m_current_state->render();
 		m_window.GetRenderer()->Render();
 
-		lastTime = now;
-
+		//////////////////////////////////////// RESET
+		timer.Reset();
 	}
 
 }
@@ -102,23 +94,18 @@ void Game::Run() {
 void Game::ChangeState(const GStates game_state) {
 	/// @todo Implement the transition between states.
 	m_current_state->unload();
-	m_current_state = m_game_states.at(game_state);
+	m_current_state = m_game_states.at(game_state).get();
 	m_current_state->load();
 }
 
 void Game::InitializeStates() {
-	// Initialize all the states in Game here.
+#define ADD_STATE(GSTATE_ENUM, GStateClass) m_game_states.emplace((GSTATE_ENUM), \
+	(std::make_unique<GStateClass>()))
 
-	// Insert the states pointers onto the map.
-	/// @todo Emplace instead of insert.
+	// Add all the states in Game here.
 	ADD_STATE(PLACEHOLDER, GStatePlaceholder);
-}
 
-void Game::DestroyStates() {
-	StatesMap::const_iterator it;
-    for(it = m_game_states.begin(); it != m_game_states.end(); it++) {
-        delete it->second;
-    }
+#undef ADD_STATE
 }
 
 InputArray Game::Input() {
@@ -144,5 +131,3 @@ Renderer* Game::GetRenderer() {
 }
 
 } // namespace sdl2engine
-
-#undef ADD_STATE

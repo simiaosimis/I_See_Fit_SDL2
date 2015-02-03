@@ -12,11 +12,7 @@ namespace sdl {
 namespace detail {
 
 std::string SdlVersion(const std::string& library, const SDL_version& version_compiled) {
-	std::ostringstream oss;
-	oss << library << " Version (compiled): " << static_cast<int>(version_compiled.major) <<
-		"." << static_cast<int>(version_compiled.minor) << "." <<
-		static_cast<int>(version_compiled.patch);
-	return oss.str();
+	return SdlVersion(library, version_compiled, "");
 }
 
 std::string SdlVersion(const std::string& library, const SDL_version& version_compiled,

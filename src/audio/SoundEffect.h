@@ -19,6 +19,8 @@ class SoundEffect {
 		* @brief The destructor.
 		*/
 		~SoundEffect();
+
+		// Not copyable and not moveable.
 		SoundEffect(const SoundEffect&) = delete;
 		SoundEffect& operator=(const SoundEffect&) = delete;
 		SoundEffect(SoundEffect&&) = delete;
