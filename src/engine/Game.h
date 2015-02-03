@@ -5,8 +5,8 @@
 #include <memory>
 #include <string>
 #include "graphics/Window.h"
+#include "graphics/Renderer.h"
 #include "engine/StateGame.h"
-#include "audio/AudioHandler.h"
 #include "input/InputHandler.h"
 
 namespace sdl2engine {
@@ -58,13 +58,6 @@ class Game {
 		void ChangeState(const GStates game_state);
 
 		/**
-		* @return The Game audio handler.
-		*
-		* @note The 'Get' was added to the name to avoid conflict with class AudioHandler.
-		*/
-		AudioHandler& GetAudioHandler();
-
-		/**
 		* @return The boolean array recieved from the InputHandler.
 		*/
 		InputArray Input();
@@ -113,7 +106,6 @@ class Game {
 		void DestroyStates();
 
 		bool m_is_running; /**< Whether the game is currently running/looping or not. */
-		AudioHandler* m_audio_handler; /**< The Game AudioHandler. */
 		InputHandler* m_input_handler; /**< The Game InputHandler. */
 		StateGame* m_current_state; /**< The current state, which the game is in. */
 		Window m_window; /**< The game Window. */

@@ -24,7 +24,6 @@ Game& Game::Instance() {
 
 Game::Game() :
 	m_is_running{false},
-	m_audio_handler{new AudioHandler()},
 	m_input_handler{new InputHandler()},
 	m_current_state{nullptr},
 	m_window{},
@@ -41,7 +40,6 @@ Game::~Game() {
 
 	DestroyStates();
 
-	delete m_audio_handler;
 	delete m_input_handler;
 }
 
@@ -121,10 +119,6 @@ void Game::DestroyStates() {
     for(it = m_game_states.begin(); it != m_game_states.end(); it++) {
         delete it->second;
     }
-}
-
-AudioHandler& Game::GetAudioHandler() {
-	return (*(m_audio_handler));
 }
 
 InputArray Game::Input() {

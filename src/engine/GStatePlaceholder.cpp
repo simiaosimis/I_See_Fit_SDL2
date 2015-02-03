@@ -1,7 +1,9 @@
 #include "engine/GStatePlaceholder.h"
+#include "audio/AudioHandler.h"
 #include "engine/Game.h"
 #include "core/ResourceManager.h"
 #include "util/Logger.h"
+#include "util/Assert.h"
 
 namespace sdl2engine {
 
@@ -26,7 +28,7 @@ void GStatePlaceholder::load() {
 	this->animationClip = {0, 0, 0, 0};
 	this->image = ResourceManager<Sprite>::Instance().Get("assets/images/spritesheet.png");
 
-	Game::Instance().GetAudioHandler().ChangeMusic("assets/audio/music/test_music.flac");
+	AudioMusic::Play("assets/audio/music/test_music.flac", k_infinite_loop);
 }
 
 void GStatePlaceholder::unload() {
@@ -39,11 +41,14 @@ void GStatePlaceholder::update(const double dt_) {
 	const InputArray keyStates = Game::Instance().Input();
 
 	if(keyStates[GameKeys::SPACE] == true) {
-		Game::Instance().GetAudioHandler().PlaySoundEffect("assets/audio/sfx/test_sfx.wav");
+		AudioMusic::FadeOut(5.0);
+		AudioSfx::Play("assets/audio/sfx/test_sfx.wav", 1);
 	}
 
 	if(keyStates[GameKeys::A] == true) {
-		Game::Instance().GetAudioHandler().PlaySoundEffect("assets/audio/sfx/tururu.wav");
+		if(AudioMusic::FadedOut()) {
+			AudioSfx::Play("assets/audio/sfx/tururu.wav", 1);
+		}
 	}
 
 	this->animation->Update(this->animationClip, dt_);
