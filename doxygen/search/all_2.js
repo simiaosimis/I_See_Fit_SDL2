@@ -8,7 +8,6 @@ var searchData=
   ['cameradistancewidth',['CameraDistanceWidth',['../classsdl2engine_1_1Configuration.html#a272a2bd01156c4b04fb16685001a64c4',1,'sdl2engine::Configuration']]],
   ['centralizeon',['CentralizeOn',['../classsdl2engine_1_1Camera.html#aa025710f7d6684e8ddebbfaafdef665e',1,'sdl2engine::Camera']]],
   ['changeanimation',['ChangeAnimation',['../classsdl2engine_1_1Animation.html#a3760f7cedee546ed6faaf6d8d6015719',1,'sdl2engine::Animation']]],
-  ['changemusic',['ChangeMusic',['../classsdl2engine_1_1AudioHandler.html#a48f4f08bc26f3bf0f03a32864bf0c97c',1,'sdl2engine::AudioHandler::ChangeMusic(const std::string &amp;path)'],['../classsdl2engine_1_1AudioHandler.html#a8e3cc567806e908f9f2f3270778110f5',1,'sdl2engine::AudioHandler::ChangeMusic(const std::string &amp;path, const int times)']]],
   ['changestate',['ChangeState',['../classsdl2engine_1_1Game.html#a71f2db5dc9bb418212fe60ee1ab73592',1,'sdl2engine::Game']]],
   ['changetext',['changeText',['../classsdl2engine_1_1Text.html#aa6f5e651760868bab52f885a31bc0f1a',1,'sdl2engine::Text::changeText(const char *text_, const SDL_Color color_)'],['../classsdl2engine_1_1Text.html#a8996ad696cbc9449340e8a6ba2ee1f9f',1,'sdl2engine::Text::changeText(const char *text_)']]],
   ['channel',['Channel',['../classsdl2engine_1_1SoundEffect.html#a172f975c05eb16b68c2be73a4ede68dc',1,'sdl2engine::SoundEffect']]],

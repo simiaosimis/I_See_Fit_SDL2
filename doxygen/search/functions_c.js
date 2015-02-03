@@ -12,7 +12,6 @@ var searchData=
   ['resolutionheight',['ResolutionHeight',['../classsdl2engine_1_1Configuration.html#a8773d6193188c23a93365b11a835704c',1,'sdl2engine::Configuration']]],
   ['resolutionwidth',['ResolutionWidth',['../classsdl2engine_1_1Configuration.html#a58cb441a464bbec5af7b81d35d94a761',1,'sdl2engine::Configuration']]],
   ['resourcemanager',['ResourceManager',['../classsdl2engine_1_1ResourceManager.html#a0bd26bc417a1bb58eebc1a13ecf6bd32',1,'sdl2engine::ResourceManager::ResourceManager(const ConstructorTag &amp;private_tag)'],['../classsdl2engine_1_1ResourceManager.html#a7cf851336b147ef11d00deb085299c08',1,'sdl2engine::ResourceManager::ResourceManager(const ResourceManager &amp;)=delete'],['../classsdl2engine_1_1ResourceManager.html#a7d4d4047e6802c9ba9deb7c2a71f37e0',1,'sdl2engine::ResourceManager::ResourceManager(ResourceManager &amp;&amp;)=delete']]],
-  ['resumeeffects',['ResumeEffects',['../classsdl2engine_1_1AudioHandler.html#ae4f8e14418b250ec944ddac4ed88b99f',1,'sdl2engine::AudioHandler']]],
-  ['resumemusic',['ResumeMusic',['../classsdl2engine_1_1AudioHandler.html#adebf004b51a566247d3c011506152db1',1,'sdl2engine::AudioHandler']]],
+  ['resume',['Resume',['../classsdl2engine_1_1AudioHandler.html#a4c8fbf3b529efb47e3e31f0b77a17eae',1,'sdl2engine::AudioHandler::Resume()'],['../classsdl2engine_1_1AudioHandler.html#a128cc0017eece1a71d831e30c83e3ed5',1,'sdl2engine::AudioHandler::Resume()'],['../classsdl2engine_1_1AudioHandler.html#a2a600082e80c3c89cdb03d7bfafef031',1,'sdl2engine::AudioHandler::Resume()']]],
   ['run',['Run',['../classsdl2engine_1_1Game.html#aa4fa7ae90d7c62dfddeb16f1737c23e3',1,'sdl2engine::Game']]]
 ];

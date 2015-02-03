@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v34</span>
+   &#160;<span id="projectnumber">v35</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -106,6 +106,7 @@ Namespaces</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1AudioHandler.html">AudioHandler</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static class that handles all the audio in the game.  <a href="classsdl2engine_1_1AudioHandler.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1Music.html">Music</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -149,6 +150,10 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
+<tr class="memitem:a510b8ab0fe262941a17169daf4d8f637"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesdl2engine.html#a510b8ab0fe262941a17169daf4d8f637">AudioSfx</a> = <a class="el" href="classsdl2engine_1_1AudioHandler.html">AudioHandler</a>&lt; <a class="el" href="namespacesdl2engine.html#aeccca27a95f2b37740093a79b4588a9da078f6f9d0068fedb79050a274b0ace96">AudioType::SoundEffect</a> &gt;</td></tr>
+<tr class="separator:a510b8ab0fe262941a17169daf4d8f637"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a239c8481720d24d909626a3bf590edd4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesdl2engine.html#a239c8481720d24d909626a3bf590edd4">AudioMusic</a> = <a class="el" href="classsdl2engine_1_1AudioHandler.html">AudioHandler</a>&lt; <a class="el" href="namespacesdl2engine.html#aeccca27a95f2b37740093a79b4588a9da47dcbd834e669233d7eb8a51456ed217">AudioType::Music</a> &gt;</td></tr>
+<tr class="separator:a239c8481720d24d909626a3bf590edd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af7170bd9949accae63505ef4408c12b9"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesdl2engine.html#af7170bd9949accae63505ef4408c12b9">InputArray</a> = std::array&lt; bool, GameKeys::MAX &gt;</td></tr>
 <tr class="separator:af7170bd9949accae63505ef4408c12b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a798e7c6b0c28edef46c680a42ff13869"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesdl2engine.html#a798e7c6b0c28edef46c680a42ff13869">log_function_ptr</a> ) = <a class="el" href="classsdl2engine_1_1LogBuffer.html">LogBuffer</a>(*)(</td></tr>
@@ -156,6 +161,11 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
+<tr class="memitem:aeccca27a95f2b37740093a79b4588a9d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesdl2engine.html#aeccca27a95f2b37740093a79b4588a9d">AudioType</a> { <a class="el" href="namespacesdl2engine.html#aeccca27a95f2b37740093a79b4588a9da47dcbd834e669233d7eb8a51456ed217">AudioType::Music</a>, 
+<a class="el" href="namespacesdl2engine.html#aeccca27a95f2b37740093a79b4588a9da078f6f9d0068fedb79050a274b0ace96">AudioType::SoundEffect</a>
+ }</td></tr>
+<tr class="memdesc:aeccca27a95f2b37740093a79b4588a9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Distinguishes between the two types of audio.  <a href="namespacesdl2engine.html#aeccca27a95f2b37740093a79b4588a9d">More...</a><br/></td></tr>
+<tr class="separator:aeccca27a95f2b37740093a79b4588a9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92e23178a19914e86fa4f7640dcde170"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesdl2engine.html#a92e23178a19914e86fa4f7640dcde170">GameKeys</a> { <a class="el" href="namespacesdl2engine.html#a92e23178a19914e86fa4f7640dcde170a516639ee85de040fc3e75cfe05ac5049">A</a>, 
 <a class="el" href="namespacesdl2engine.html#a92e23178a19914e86fa4f7640dcde170a1271aa631edd779a3d7a2d7cf517729a">SPACE</a>, 
 <a class="el" href="namespacesdl2engine.html#a92e23178a19914e86fa4f7640dcde170ac9932bd06e7cc4014d11b6d9692d34cb">ESCAPE</a>, 
@@ -187,6 +197,8 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:af735837a8360218dee00b102cd0e7729"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesdl2engine.html#af735837a8360218dee00b102cd0e7729">k_infinite_loop</a> = -1</td></tr>
+<tr class="separator:af735837a8360218dee00b102cd0e7729"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b2cd64e9633f9ecfda37e160b02852f"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespacesdl2engine.html#a798e7c6b0c28edef46c680a42ff13869">log_function_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesdl2engine.html#a5b2cd64e9633f9ecfda37e160b02852f">log_error</a> = <a class="el" href="namespacesdl2engine.html#adce96af93a7d3fa229b71236f2f8a59b">log</a>&lt;<a class="el" href="namespacesdl2engine.html#a72818c74e8372a1d6c169905f7eb232ea902b0d55fddef6f8d651fe1035b7d4bd">LogLevel::Error</a>&gt;</td></tr>
 <tr class="separator:a5b2cd64e9633f9ecfda37e160b02852f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac31c5eafc7940521da71fab041ac0138"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespacesdl2engine.html#a798e7c6b0c28edef46c680a42ff13869">log_function_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesdl2engine.html#ac31c5eafc7940521da71fab041ac0138">log_warn</a> = <a class="el" href="namespacesdl2engine.html#adce96af93a7d3fa229b71236f2f8a59b">log</a>&lt;<a class="el" href="namespacesdl2engine.html#a72818c74e8372a1d6c169905f7eb232ea56525ae64d370c0b448ac0d60710ef17">LogLevel::Warn</a>&gt;</td></tr>
@@ -197,6 +209,34 @@ Variables</h2></td></tr>
 <tr class="separator:a3e30a0e0ea4b28c022a6274ec3dd8273"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
+<a class="anchor" id="a239c8481720d24d909626a3bf590edd4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacesdl2engine.html#a239c8481720d24d909626a3bf590edd4">sdl2engine::AudioMusic</a> = typedef <a class="el" href="classsdl2engine_1_1AudioHandler.html">AudioHandler</a>&lt;<a class="el" href="namespacesdl2engine.html#aeccca27a95f2b37740093a79b4588a9da47dcbd834e669233d7eb8a51456ed217">AudioType::Music</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="AudioHandler_8h_source.html#l00079">79</a> of file <a class="el" href="AudioHandler_8h_source.html">AudioHandler.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a510b8ab0fe262941a17169daf4d8f637"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacesdl2engine.html#a510b8ab0fe262941a17169daf4d8f637">sdl2engine::AudioSfx</a> = typedef <a class="el" href="classsdl2engine_1_1AudioHandler.html">AudioHandler</a>&lt;<a class="el" href="namespacesdl2engine.html#aeccca27a95f2b37740093a79b4588a9da078f6f9d0068fedb79050a274b0ace96">AudioType::SoundEffect</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="AudioHandler_8h_source.html#l00078">78</a> of file <a class="el" href="AudioHandler_8h_source.html">AudioHandler.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="af7170bd9949accae63505ef4408c12b9"></a>
 <div class="memitem">
 <div class="memproto">
@@ -226,6 +266,36 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
+<a class="anchor" id="aeccca27a95f2b37740093a79b4588a9d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="namespacesdl2engine.html#aeccca27a95f2b37740093a79b4588a9d">sdl2engine::AudioType</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Distinguishes between the two types of audio. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="aeccca27a95f2b37740093a79b4588a9da47dcbd834e669233d7eb8a51456ed217"></a>Music</em>&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="aeccca27a95f2b37740093a79b4588a9da078f6f9d0068fedb79050a274b0ace96"></a>SoundEffect</em>&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+<p>Definition at line <a class="el" href="AudioHandler_8h_source.html#l00012">12</a> of file <a class="el" href="AudioHandler_8h_source.html">AudioHandler.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a92e23178a19914e86fa4f7640dcde170"></a>
 <div class="memitem">
 <div class="memproto">
@@ -368,6 +438,29 @@ template&lt;LogLevel level&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a class="anchor" id="af735837a8360218dee00b102cd0e7729"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int sdl2engine::k_infinite_loop = -1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Represents infinite looping of an audio. </p>
+
+<p>Definition at line <a class="el" href="AudioHandler_8h_source.html#l00007">7</a> of file <a class="el" href="AudioHandler_8h_source.html">AudioHandler.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a3e30a0e0ea4b28c022a6274ec3dd8273"></a>
 <div class="memitem">
 <div class="memproto">
@@ -427,7 +520,7 @@ template&lt;LogLevel level&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 2 2015 06:11:24 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 3 2015 16:48:50 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

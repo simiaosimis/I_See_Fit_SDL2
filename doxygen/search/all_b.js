@@ -1,7 +1,6 @@
 var searchData=
 [
   ['m_5fanimation_5fcount',['m_animation_count',['../classsdl2engine_1_1Animation.html#a8e4ce1a1e9191404d16b107cb2535587',1,'sdl2engine::Animation']]],
-  ['m_5faudio_5fhandler',['m_audio_handler',['../classsdl2engine_1_1Game.html#abea169ab279e703daf94f6992e625282',1,'sdl2engine::Game']]],
   ['m_5fcamera_5fdistance_5fheight',['m_camera_distance_height',['../classsdl2engine_1_1Configuration.html#ae01f5bbb693dd826f6c9c4c2db825a64',1,'sdl2engine::Configuration']]],
   ['m_5fcamera_5fdistance_5fwidth',['m_camera_distance_width',['../classsdl2engine_1_1Configuration.html#ad08f7c863ff9bda13cb80a9afaaf700a',1,'sdl2engine::Configuration']]],
   ['m_5fchannel',['m_channel',['../classsdl2engine_1_1SoundEffect.html#a8640f49b42ce7c803e3deda5ba13a3aa',1,'sdl2engine::SoundEffect']]],
@@ -51,7 +50,7 @@ var searchData=
   ['mixchunk',['MixChunk',['../classsdl2engine_1_1SoundEffect.html#a2add65600eb0cfea97d328664ccdda8a',1,'sdl2engine::SoundEffect']]],
   ['mixmusic',['MixMusic',['../classsdl2engine_1_1Music.html#a8824f7b1996ff8dba6aa59c60f25da20',1,'sdl2engine::Music']]],
   ['music',['Music',['../classsdl2engine_1_1Music.html',1,'sdl2engine']]],
-  ['music',['Music',['../classsdl2engine_1_1Music.html#a1b1b256630190eac45399779a33e26e0',1,'sdl2engine::Music::Music(const std::string &amp;path)'],['../classsdl2engine_1_1Music.html#a71d2e7a80c6c67697edaffcd01c0a496',1,'sdl2engine::Music::Music(const Music &amp;)=delete'],['../classsdl2engine_1_1Music.html#a884373fa373b545ddf607e464188e496',1,'sdl2engine::Music::Music(Music &amp;&amp;)=delete']]],
+  ['music',['Music',['../classsdl2engine_1_1Music.html#a1b1b256630190eac45399779a33e26e0',1,'sdl2engine::Music::Music(const std::string &amp;path)'],['../classsdl2engine_1_1Music.html#a71d2e7a80c6c67697edaffcd01c0a496',1,'sdl2engine::Music::Music(const Music &amp;)=delete'],['../classsdl2engine_1_1Music.html#a884373fa373b545ddf607e464188e496',1,'sdl2engine::Music::Music(Music &amp;&amp;)=delete'],['../namespacesdl2engine.html#aeccca27a95f2b37740093a79b4588a9da47dcbd834e669233d7eb8a51456ed217',1,'sdl2engine::Music()']]],
   ['music_2ecpp',['Music.cpp',['../Music_8cpp.html',1,'']]],
   ['music_2eh',['Music.h',['../Music_8h.html',1,'']]]
 ];

@@ -1,15 +1,14 @@
 <map id="main.cpp" name="main.cpp">
-<area shape="rect" id="node3" href="$SdlSystems_8h.html" title="core/SdlSystems.h" alt="" coords="208,83,341,112"/>
-<area shape="rect" id="node5" href="$Game_8h.html" title="engine/Game.h" alt="" coords="365,83,475,112"/>
-<area shape="rect" id="node50" href="$Configuration_8h.html" title="util/Configuration.h" alt="" coords="553,83,684,112"/>
-<area shape="rect" id="node54" href="$Logger_8h.html" title="util/Logger.h" alt="" coords="819,83,912,112"/>
-<area shape="rect" id="node15" href="$Window_8h.html" title="graphics/Window.h" alt="" coords="856,237,989,267"/>
-<area shape="rect" id="node23" href="$StateGame_8h.html" title="engine/StateGame.h" alt="" coords="483,160,624,189"/>
-<area shape="rect" id="node35" href="$AudioHandler_8h.html" title="audio/AudioHandler.h" alt="" coords="432,237,579,267"/>
-<area shape="rect" id="node38" href="$InputHandler_8h.html" title="input/InputHandler.h" alt="" coords="168,160,307,189"/>
-<area shape="rect" id="node20" href="$Renderer_8h.html" title="graphics/Renderer.h" alt="" coords="788,315,927,344"/>
-<area shape="rect" id="node27" href="$GameObject_8h.html" title="engine/GameObject.h" alt="" coords="603,237,749,267"/>
-<area shape="rect" id="node31" href="$Sprite_8h.html" title="graphics/Sprite.h" alt="" coords="644,315,764,344"/>
-<area shape="rect" id="node43" href="$InputKeys_8h.html" title="input/InputKeys.h" alt="" coords="40,315,163,344"/>
-<area shape="rect" id="node46" href="$ControllerHandler_8h.html" title="input/ControllerHandler.h" alt="" coords="91,237,256,267"/>
+<area shape="rect" id="node3" href="$SdlSystems_8h.html" title="core/SdlSystems.h" alt="" coords="251,83,384,112"/>
+<area shape="rect" id="node5" href="$Game_8h.html" title="engine/Game.h" alt="" coords="408,83,517,112"/>
+<area shape="rect" id="node48" href="$Configuration_8h.html" title="util/Configuration.h" alt="" coords="611,83,741,112"/>
+<area shape="rect" id="node52" href="$Logger_8h.html" title="util/Logger.h" alt="" coords="903,83,996,112"/>
+<area shape="rect" id="node15" href="$Window_8h.html" title="graphics/Window.h" alt="" coords="112,237,245,267"/>
+<area shape="rect" id="node20" href="$Renderer_8h.html" title="graphics/Renderer.h" alt="" coords="5,315,144,344"/>
+<area shape="rect" id="node24" href="$StateGame_8h.html" title="engine/StateGame.h" alt="" coords="357,160,499,189"/>
+<area shape="rect" id="node36" href="$InputHandler_8h.html" title="input/InputHandler.h" alt="" coords="624,160,763,189"/>
+<area shape="rect" id="node28" href="$GameObject_8h.html" title="engine/GameObject.h" alt="" coords="352,237,499,267"/>
+<area shape="rect" id="node32" href="$Sprite_8h.html" title="graphics/Sprite.h" alt="" coords="269,315,389,344"/>
+<area shape="rect" id="node41" href="$InputKeys_8h.html" title="input/InputKeys.h" alt="" coords="768,315,891,344"/>
+<area shape="rect" id="node44" href="$ControllerHandler_8h.html" title="input/ControllerHandler.h" alt="" coords="675,237,840,267"/>
 </map>

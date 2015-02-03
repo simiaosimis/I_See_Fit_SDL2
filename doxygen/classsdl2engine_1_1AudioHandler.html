@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>sdl2-engine: sdl2engine::AudioHandler Class Reference</title>
+<title>sdl2-engine: sdl2engine::AudioHandler&lt; type &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v34</span>
+   &#160;<span id="projectnumber">v35</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -91,196 +91,100 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-static-attribs">Static Private Attributes</a>  </div>
+<a href="#pub-static-methods">Static Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">sdl2engine::AudioHandler Class Reference</div>  </div>
+<div class="title">sdl2engine::AudioHandler&lt; type &gt; Class Template Reference<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Static class that handles all the audio in the game.  
+ <a href="classsdl2engine_1_1AudioHandler.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="AudioHandler_8h_source.html">AudioHandler.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9362795e9cb716865e1c67531d13762d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1AudioHandler.html#a9362795e9cb716865e1c67531d13762d">AudioHandler</a> ()=default</td></tr>
-<tr class="memdesc:a9362795e9cb716865e1c67531d13762d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor.  <a href="#a9362795e9cb716865e1c67531d13762d">More...</a><br/></td></tr>
-<tr class="separator:a9362795e9cb716865e1c67531d13762d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48f4f08bc26f3bf0f03a32864bf0c97c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1AudioHandler.html#a48f4f08bc26f3bf0f03a32864bf0c97c">ChangeMusic</a> (const std::string &amp;path)</td></tr>
-<tr class="memdesc:a48f4f08bc26f3bf0f03a32864bf0c97c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets new music for given path, infinitely looping.  <a href="#a48f4f08bc26f3bf0f03a32864bf0c97c">More...</a><br/></td></tr>
-<tr class="separator:a48f4f08bc26f3bf0f03a32864bf0c97c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e3cc567806e908f9f2f3270778110f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1AudioHandler.html#a8e3cc567806e908f9f2f3270778110f5">ChangeMusic</a> (const std::string &amp;path, const int times)</td></tr>
-<tr class="memdesc:a8e3cc567806e908f9f2f3270778110f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets new music for given path.  <a href="#a8e3cc567806e908f9f2f3270778110f5">More...</a><br/></td></tr>
-<tr class="separator:a8e3cc567806e908f9f2f3270778110f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac49bfc265a94d2730b2b0ff17bc032bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1AudioHandler.html#ac49bfc265a94d2730b2b0ff17bc032bf">PlaySoundEffect</a> (const std::string &amp;path)</td></tr>
-<tr class="memdesc:ac49bfc265a94d2730b2b0ff17bc032bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plays a sound effect once.  <a href="#ac49bfc265a94d2730b2b0ff17bc032bf">More...</a><br/></td></tr>
-<tr class="separator:ac49bfc265a94d2730b2b0ff17bc032bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33123014f73d08ab03fc47d1268a1e02"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1AudioHandler.html#a33123014f73d08ab03fc47d1268a1e02">PlaySoundEffect</a> (const std::string &amp;path, const int times)</td></tr>
-<tr class="memdesc:a33123014f73d08ab03fc47d1268a1e02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plays a sound effect a given amount of times.  <a href="#a33123014f73d08ab03fc47d1268a1e02">More...</a><br/></td></tr>
-<tr class="separator:a33123014f73d08ab03fc47d1268a1e02"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac059edb4173744b5b12dc918795d68cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1AudioHandler.html#ac059edb4173744b5b12dc918795d68cf">SetMusicVolume</a> (const int percent)</td></tr>
-<tr class="memdesc:ac059edb4173744b5b12dc918795d68cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the volume for the music.  <a href="#ac059edb4173744b5b12dc918795d68cf">More...</a><br/></td></tr>
-<tr class="separator:ac059edb4173744b5b12dc918795d68cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c416cf932a6031ec1937ec760b6fd32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1AudioHandler.html#a7c416cf932a6031ec1937ec760b6fd32">SetEffectsVolume</a> (const int percent)</td></tr>
-<tr class="memdesc:a7c416cf932a6031ec1937ec760b6fd32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the volume for the sound effects.  <a href="#a7c416cf932a6031ec1937ec760b6fd32">More...</a><br/></td></tr>
-<tr class="separator:a7c416cf932a6031ec1937ec760b6fd32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed3b794a8665b6518ad29aab5ce0666c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1AudioHandler.html#aed3b794a8665b6518ad29aab5ce0666c">PauseMusic</a> ()</td></tr>
-<tr class="memdesc:aed3b794a8665b6518ad29aab5ce0666c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pauses the music.  <a href="#aed3b794a8665b6518ad29aab5ce0666c">More...</a><br/></td></tr>
-<tr class="separator:aed3b794a8665b6518ad29aab5ce0666c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c7a9c8692ddd105da725626962c1b2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1AudioHandler.html#a1c7a9c8692ddd105da725626962c1b2a">PauseEffects</a> ()</td></tr>
-<tr class="memdesc:a1c7a9c8692ddd105da725626962c1b2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pauses all sound effects.  <a href="#a1c7a9c8692ddd105da725626962c1b2a">More...</a><br/></td></tr>
-<tr class="separator:a1c7a9c8692ddd105da725626962c1b2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adebf004b51a566247d3c011506152db1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1AudioHandler.html#adebf004b51a566247d3c011506152db1">ResumeMusic</a> ()</td></tr>
-<tr class="memdesc:adebf004b51a566247d3c011506152db1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resumes the music.  <a href="#adebf004b51a566247d3c011506152db1">More...</a><br/></td></tr>
-<tr class="separator:adebf004b51a566247d3c011506152db1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4f8e14418b250ec944ddac4ed88b99f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1AudioHandler.html#ae4f8e14418b250ec944ddac4ed88b99f">ResumeEffects</a> ()</td></tr>
-<tr class="memdesc:ae4f8e14418b250ec944ddac4ed88b99f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resumes all sound effects.  <a href="#ae4f8e14418b250ec944ddac4ed88b99f">More...</a><br/></td></tr>
-<tr class="separator:ae4f8e14418b250ec944ddac4ed88b99f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae543713ebb455901af9c73fed86e14bb"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:ae543713ebb455901af9c73fed86e14bb"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1AudioHandler.html#ae543713ebb455901af9c73fed86e14bb">Play</a> (const std::string &amp;path, const int times)</td></tr>
+<tr class="separator:ae543713ebb455901af9c73fed86e14bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7166f2931f4ee375f37d699a6fb0862e"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:a7166f2931f4ee375f37d699a6fb0862e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1AudioHandler.html#a7166f2931f4ee375f37d699a6fb0862e">SetVolume</a> (const int percent)</td></tr>
+<tr class="separator:a7166f2931f4ee375f37d699a6fb0862e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addeff3e673084c9975bca5bb38458aed"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:addeff3e673084c9975bca5bb38458aed"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1AudioHandler.html#addeff3e673084c9975bca5bb38458aed">Pause</a> ()</td></tr>
+<tr class="separator:addeff3e673084c9975bca5bb38458aed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a128cc0017eece1a71d831e30c83e3ed5"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:a128cc0017eece1a71d831e30c83e3ed5"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1AudioHandler.html#a128cc0017eece1a71d831e30c83e3ed5">Resume</a> ()</td></tr>
+<tr class="separator:a128cc0017eece1a71d831e30c83e3ed5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c67582ab5a6d5a32de9b19a71b1177e"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:a0c67582ab5a6d5a32de9b19a71b1177e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1AudioHandler.html#a0c67582ab5a6d5a32de9b19a71b1177e">Stop</a> ()</td></tr>
+<tr class="separator:a0c67582ab5a6d5a32de9b19a71b1177e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa4a742bbb2c13584bebcc051fdbc93b"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:afa4a742bbb2c13584bebcc051fdbc93b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1AudioHandler.html#afa4a742bbb2c13584bebcc051fdbc93b">FadeOut</a> (const double seconds)</td></tr>
+<tr class="separator:afa4a742bbb2c13584bebcc051fdbc93b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bc650e14197ea1655e6d738c7014d18"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:a8bc650e14197ea1655e6d738c7014d18"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1AudioHandler.html#a8bc650e14197ea1655e6d738c7014d18">FadedOut</a> ()</td></tr>
+<tr class="separator:a8bc650e14197ea1655e6d738c7014d18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcf94bd6a774562d8525654bd81f138c"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:adcf94bd6a774562d8525654bd81f138c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1AudioHandler.html#adcf94bd6a774562d8525654bd81f138c">Play</a> (const std::string &amp;path, const int times)</td></tr>
+<tr class="separator:adcf94bd6a774562d8525654bd81f138c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cbf63b2ddb8630e742a02e8c3ac5f3d"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:a7cbf63b2ddb8630e742a02e8c3ac5f3d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1AudioHandler.html#a7cbf63b2ddb8630e742a02e8c3ac5f3d">SetVolume</a> (const int percent)</td></tr>
+<tr class="separator:a7cbf63b2ddb8630e742a02e8c3ac5f3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60ec53d6c78e3f386e3252db2b6ee661"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:a60ec53d6c78e3f386e3252db2b6ee661"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1AudioHandler.html#a60ec53d6c78e3f386e3252db2b6ee661">Pause</a> ()</td></tr>
+<tr class="separator:a60ec53d6c78e3f386e3252db2b6ee661"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a600082e80c3c89cdb03d7bfafef031"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:a2a600082e80c3c89cdb03d7bfafef031"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1AudioHandler.html#a2a600082e80c3c89cdb03d7bfafef031">Resume</a> ()</td></tr>
+<tr class="separator:a2a600082e80c3c89cdb03d7bfafef031"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad480f017577815a14dc533b60c55e231"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:ad480f017577815a14dc533b60c55e231"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1AudioHandler.html#ad480f017577815a14dc533b60c55e231">Stop</a> ()</td></tr>
+<tr class="separator:ad480f017577815a14dc533b60c55e231"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5e97caa2ac73355b5a626cc802e07d6"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:af5e97caa2ac73355b5a626cc802e07d6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1AudioHandler.html#af5e97caa2ac73355b5a626cc802e07d6">FadeOut</a> (const double seconds)</td></tr>
+<tr class="separator:af5e97caa2ac73355b5a626cc802e07d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:aa6d8cc8ed936031cde12fbf88a8ae8c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1AudioHandler.html#aa6d8cc8ed936031cde12fbf88a8ae8c7">PlayMusic</a> (const std::string &amp;path)</td></tr>
-<tr class="memdesc:aa6d8cc8ed936031cde12fbf88a8ae8c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plays music from path.  <a href="#aa6d8cc8ed936031cde12fbf88a8ae8c7">More...</a><br/></td></tr>
-<tr class="separator:aa6d8cc8ed936031cde12fbf88a8ae8c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa93cb16d8fa3d2a9e6918fca36ca46fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1AudioHandler.html#aa93cb16d8fa3d2a9e6918fca36ca46fd">PlayMusic</a> (const std::string &amp;path, const int times)</td></tr>
-<tr class="memdesc:aa93cb16d8fa3d2a9e6918fca36ca46fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plays music from path.  <a href="#aa93cb16d8fa3d2a9e6918fca36ca46fd">More...</a><br/></td></tr>
-<tr class="separator:aa93cb16d8fa3d2a9e6918fca36ca46fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82f735fc18ee61c8b56ac906e97a52ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1AudioHandler.html#a82f735fc18ee61c8b56ac906e97a52ea">StopMusic</a> ()</td></tr>
-<tr class="memdesc:a82f735fc18ee61c8b56ac906e97a52ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops playing the current music.  <a href="#a82f735fc18ee61c8b56ac906e97a52ea">More...</a><br/></td></tr>
-<tr class="separator:a82f735fc18ee61c8b56ac906e97a52ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
-Static Private Attributes</h2></td></tr>
-<tr class="memitem:a6383cf07bce3cdf18677302311e0f43a"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1AudioHandler.html#a6383cf07bce3cdf18677302311e0f43a">k_infinite_loop</a> = -1</td></tr>
-<tr class="separator:a6383cf07bce3cdf18677302311e0f43a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ce16cac3fac2ac39a1b369c2a6a4289"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1AudioHandler.html#a5ce16cac3fac2ac39a1b369c2a6a4289">k_all_channels</a> = -1</td></tr>
-<tr class="separator:a5ce16cac3fac2ac39a1b369c2a6a4289"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39e33c3247ca5d8fde32ef92cecde725"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1AudioHandler.html#a39e33c3247ca5d8fde32ef92cecde725">k_any_channel</a> = -1</td></tr>
-<tr class="separator:a39e33c3247ca5d8fde32ef92cecde725"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a25a1cf5e091c0e0b30d61d8c8ec8c022"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1AudioHandler.html#a25a1cf5e091c0e0b30d61d8c8ec8c022">Play</a> (const std::string &amp;path, const int times)</td></tr>
+<tr class="memdesc:a25a1cf5e091c0e0b30d61d8c8ec8c022"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plays an audio a given amount of times.  <a href="#a25a1cf5e091c0e0b30d61d8c8ec8c022">More...</a><br/></td></tr>
+<tr class="separator:a25a1cf5e091c0e0b30d61d8c8ec8c022"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4ada745f6b3150a77d0489b5e82cb3f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1AudioHandler.html#ac4ada745f6b3150a77d0489b5e82cb3f">SetVolume</a> (const int percent)</td></tr>
+<tr class="memdesc:ac4ada745f6b3150a77d0489b5e82cb3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the volume for the audio.  <a href="#ac4ada745f6b3150a77d0489b5e82cb3f">More...</a><br/></td></tr>
+<tr class="separator:ac4ada745f6b3150a77d0489b5e82cb3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a99528c9feeb34009ed7fc3bcfe4ff4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1AudioHandler.html#a8a99528c9feeb34009ed7fc3bcfe4ff4">Pause</a> ()</td></tr>
+<tr class="memdesc:a8a99528c9feeb34009ed7fc3bcfe4ff4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pauses audio.  <a href="#a8a99528c9feeb34009ed7fc3bcfe4ff4">More...</a><br/></td></tr>
+<tr class="separator:a8a99528c9feeb34009ed7fc3bcfe4ff4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c8fbf3b529efb47e3e31f0b77a17eae"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1AudioHandler.html#a4c8fbf3b529efb47e3e31f0b77a17eae">Resume</a> ()</td></tr>
+<tr class="memdesc:a4c8fbf3b529efb47e3e31f0b77a17eae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resumes audio.  <a href="#a4c8fbf3b529efb47e3e31f0b77a17eae">More...</a><br/></td></tr>
+<tr class="separator:a4c8fbf3b529efb47e3e31f0b77a17eae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa5f570101608f704fd3555b9c934850"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1AudioHandler.html#afa5f570101608f704fd3555b9c934850">Stop</a> ()</td></tr>
+<tr class="memdesc:afa5f570101608f704fd3555b9c934850"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops playing the current audio.  <a href="#afa5f570101608f704fd3555b9c934850">More...</a><br/></td></tr>
+<tr class="separator:afa5f570101608f704fd3555b9c934850"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80011f3c39b3cf5eb480103eda3a4cad"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1AudioHandler.html#a80011f3c39b3cf5eb480103eda3a4cad">FadeOut</a> (const double seconds)</td></tr>
+<tr class="memdesc:a80011f3c39b3cf5eb480103eda3a4cad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gradually fades audio out.  <a href="#a80011f3c39b3cf5eb480103eda3a4cad">More...</a><br/></td></tr>
+<tr class="separator:a80011f3c39b3cf5eb480103eda3a4cad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79a2eea358513edc55c91056ea972e2d"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1AudioHandler.html#a79a2eea358513edc55c91056ea972e2d">FadedOut</a> ()</td></tr>
+<tr class="separator:a79a2eea358513edc55c91056ea972e2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Class that handles all the audio in the game.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd><p class="startdd">Figure out the best way to design music logic apart from SFX logic. </p>
-<p>Add support for multiple music. Example: you pause the game, the game music pauses, and the pause menu plays a different music. When you unpause, it resumes the game music. </p>
-<p class="enddd">Unecessary pointers? </p>
-</dd></dl>
+<div class="textblock"><h3>template&lt;AudioType type&gt;<br/>
+class sdl2engine::AudioHandler&lt; type &gt;</h3>
 
-<p>Definition at line <a class="el" href="AudioHandler_8h_source.html#l00018">18</a> of file <a class="el" href="AudioHandler_8h_source.html">AudioHandler.h</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a9362795e9cb716865e1c67531d13762d"></a>
+<p>Static class that handles all the audio in the game. </p>
+<p>AudioMusic or AudioHandler&lt;AudioType::Music&gt; AudioSfx or AudioHandler&lt;AudioType::SoundEffect&gt;</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>Add support for multiple music. Example: you pause the game, the game music pauses, and the pause menu plays a different music. When you unpause, it resumes the game music. </dd></dl>
+
+<p>Definition at line <a class="el" href="AudioHandler_8h_source.html#l00027">27</a> of file <a class="el" href="AudioHandler_8h_source.html">AudioHandler.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a8bc650e14197ea1655e6d738c7014d18"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
+<div class="memtemplate">
+template&lt;&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">sdl2engine::AudioHandler::AudioHandler </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>The constructor. </p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a48f4f08bc26f3bf0f03a32864bf0c97c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void sdl2engine::AudioHandler::ChangeMusic </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>path</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sets new music for given path, infinitely looping. </p>
-<p>Stops the music, sets it to the new one, and plays it as an infinite loop.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">path</td><td>: The path to the desired music. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Definition at line <a class="el" href="AudioHandler_8cpp_source.html#l00012">12</a> of file <a class="el" href="AudioHandler_8cpp_source.html">AudioHandler.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classsdl2engine_1_1AudioHandler_a48f4f08bc26f3bf0f03a32864bf0c97c_icgraph.png" border="0" usemap="#classsdl2engine_1_1AudioHandler_a48f4f08bc26f3bf0f03a32864bf0c97c_icgraph" alt=""/></div>
-<map name="classsdl2engine_1_1AudioHandler_a48f4f08bc26f3bf0f03a32864bf0c97c_icgraph" id="classsdl2engine_1_1AudioHandler_a48f4f08bc26f3bf0f03a32864bf0c97c_icgraph">
-<area shape="rect" id="node3" href="classsdl2engine_1_1GStatePlaceholder.html#a0a33c04bfe8475e4356ee9e8b75d7669" title="sdl2engine::GStatePlaceholder\l::load" alt="" coords="225,5,425,51"/></map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="a8e3cc567806e908f9f2f3270778110f5"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void sdl2engine::AudioHandler::ChangeMusic </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>times</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sets new music for given path. </p>
-<p>Stops the music, sets it to the new one, and plays it for the determined amount of loops.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">path</td><td>: The path to the desired music. </td></tr>
-    <tr><td class="paramname">times</td><td>: The amount of times to loop the music. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Definition at line <a class="el" href="AudioHandler_8cpp_source.html#l00016">16</a> of file <a class="el" href="AudioHandler_8cpp_source.html">AudioHandler.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classsdl2engine_1_1AudioHandler_a8e3cc567806e908f9f2f3270778110f5_cgraph.png" border="0" usemap="#classsdl2engine_1_1AudioHandler_a8e3cc567806e908f9f2f3270778110f5_cgraph" alt=""/></div>
-<map name="classsdl2engine_1_1AudioHandler_a8e3cc567806e908f9f2f3270778110f5_cgraph" id="classsdl2engine_1_1AudioHandler_a8e3cc567806e908f9f2f3270778110f5_cgraph">
-<area shape="rect" id="node3" href="classsdl2engine_1_1AudioHandler.html#a82f735fc18ee61c8b56ac906e97a52ea" title="Stops playing the current music. " alt="" coords="224,5,395,51"/><area shape="rect" id="node5" href="classsdl2engine_1_1AudioHandler.html#aa6d8cc8ed936031cde12fbf88a8ae8c7" title="Plays music from path. " alt="" coords="224,74,395,121"/></map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="a1c7a9c8692ddd105da725626962c1b2a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void sdl2engine::AudioHandler::PauseEffects </td>
+          <td class="memname">bool <a class="el" href="classsdl2engine_1_1AudioHandler.html">sdl2engine::AudioHandler</a>&lt; <a class="el" href="namespacesdl2engine.html#aeccca27a95f2b37740093a79b4588a9da47dcbd834e669233d7eb8a51456ed217">AudioType::Music</a> &gt;::FadedOut </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -288,171 +192,203 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Pauses all sound effects. </p>
-
-<p>Definition at line <a class="el" href="AudioHandler_8cpp_source.html#l00069">69</a> of file <a class="el" href="AudioHandler_8cpp_source.html">AudioHandler.cpp</a>.</p>
+<p>Definition at line <a class="el" href="AudioHandler_8cpp_source.html#l00073">73</a> of file <a class="el" href="AudioHandler_8cpp_source.html">AudioHandler.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aed3b794a8665b6518ad29aab5ce0666c"></a>
+<a class="anchor" id="a79a2eea358513edc55c91056ea972e2d"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;AudioType type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void sdl2engine::AudioHandler::PauseMusic </td>
+          <td class="memname">static bool <a class="el" href="classsdl2engine_1_1AudioHandler.html">sdl2engine::AudioHandler</a>&lt; type &gt;::FadedOut </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-</div><div class="memdoc">
-
-<p>Pauses the music. </p>
-
-<p>Definition at line <a class="el" href="AudioHandler_8cpp_source.html#l00059">59</a> of file <a class="el" href="AudioHandler_8cpp_source.html">AudioHandler.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aa6d8cc8ed936031cde12fbf88a8ae8c7"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void sdl2engine::AudioHandler::PlayMusic </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>path</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Plays music from path. </p>
-<dl class="section note"><dt>Note</dt><dd>Will warn if there is no music loaded.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">path</td><td>: The path to the desired music. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Definition at line <a class="el" href="AudioHandler_8cpp_source.html#l00081">81</a> of file <a class="el" href="AudioHandler_8cpp_source.html">AudioHandler.cpp</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd>True if the audio has faded away.</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>Figure out a way to indicate that sound effects channels have been faded out. </dd></dl>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classsdl2engine_1_1AudioHandler_aa6d8cc8ed936031cde12fbf88a8ae8c7_icgraph.png" border="0" usemap="#classsdl2engine_1_1AudioHandler_aa6d8cc8ed936031cde12fbf88a8ae8c7_icgraph" alt=""/></div>
-<map name="classsdl2engine_1_1AudioHandler_aa6d8cc8ed936031cde12fbf88a8ae8c7_icgraph" id="classsdl2engine_1_1AudioHandler_aa6d8cc8ed936031cde12fbf88a8ae8c7_icgraph">
-<area shape="rect" id="node3" href="classsdl2engine_1_1AudioHandler.html#a8e3cc567806e908f9f2f3270778110f5" title="Sets new music for given path. " alt="" coords="224,5,395,51"/></map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="aa93cb16d8fa3d2a9e6918fca36ca46fd"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void sdl2engine::AudioHandler::PlayMusic </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>times</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Plays music from path. </p>
-<dl class="section note"><dt>Note</dt><dd>Will warn if there is no music loaded.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">path</td><td>: The path to the desired music. </td></tr>
-    <tr><td class="paramname">times</td><td>: Times to loop the song (1+). </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Definition at line <a class="el" href="AudioHandler_8cpp_source.html#l00085">85</a> of file <a class="el" href="AudioHandler_8cpp_source.html">AudioHandler.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classsdl2engine_1_1AudioHandler_aa93cb16d8fa3d2a9e6918fca36ca46fd_cgraph.png" border="0" usemap="#classsdl2engine_1_1AudioHandler_aa93cb16d8fa3d2a9e6918fca36ca46fd_cgraph" alt=""/></div>
-<map name="classsdl2engine_1_1AudioHandler_aa93cb16d8fa3d2a9e6918fca36ca46fd_cgraph" id="classsdl2engine_1_1AudioHandler_aa93cb16d8fa3d2a9e6918fca36ca46fd_cgraph">
-<area shape="rect" id="node3" href="classsdl2engine_1_1ResourceManager.html#ab80e014a52a5237a000570b4ac67fcbd" title="Singleton implementation for ResourceManager. " alt="" coords="225,5,423,51"/></map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="ac49bfc265a94d2730b2b0ff17bc032bf"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void sdl2engine::AudioHandler::PlaySoundEffect </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>path</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Plays a sound effect once. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">path</td><td>: The path to the desired sound effect. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Definition at line <a class="el" href="AudioHandler_8cpp_source.html#l00022">22</a> of file <a class="el" href="AudioHandler_8cpp_source.html">AudioHandler.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classsdl2engine_1_1AudioHandler_ac49bfc265a94d2730b2b0ff17bc032bf_icgraph.png" border="0" usemap="#classsdl2engine_1_1AudioHandler_ac49bfc265a94d2730b2b0ff17bc032bf_icgraph" alt=""/></div>
-<map name="classsdl2engine_1_1AudioHandler_ac49bfc265a94d2730b2b0ff17bc032bf_icgraph" id="classsdl2engine_1_1AudioHandler_ac49bfc265a94d2730b2b0ff17bc032bf_icgraph">
+<div class="center"><img src="classsdl2engine_1_1AudioHandler_a79a2eea358513edc55c91056ea972e2d_icgraph.png" border="0" usemap="#classsdl2engine_1_1AudioHandler_a79a2eea358513edc55c91056ea972e2d_icgraph" alt=""/></div>
+<map name="classsdl2engine_1_1AudioHandler_a79a2eea358513edc55c91056ea972e2d_icgraph" id="classsdl2engine_1_1AudioHandler_a79a2eea358513edc55c91056ea972e2d_icgraph">
 <area shape="rect" id="node3" href="classsdl2engine_1_1GStatePlaceholder.html#a702c19e5680ab65e13aede54433a6bdd" title="sdl2engine::GStatePlaceholder\l::update" alt="" coords="225,5,425,51"/></map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="a33123014f73d08ab03fc47d1268a1e02"></a>
+<a class="anchor" id="afa4a742bbb2c13584bebcc051fdbc93b"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void sdl2engine::AudioHandler::PlaySoundEffect </td>
+          <td class="memname">void <a class="el" href="classsdl2engine_1_1AudioHandler.html">sdl2engine::AudioHandler</a>&lt; <a class="el" href="namespacesdl2engine.html#aeccca27a95f2b37740093a79b4588a9da47dcbd834e669233d7eb8a51456ed217">AudioType::Music</a> &gt;::FadeOut </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>seconds</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="AudioHandler_8cpp_source.html#l00064">64</a> of file <a class="el" href="AudioHandler_8cpp_source.html">AudioHandler.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a80011f3c39b3cf5eb480103eda3a4cad"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;AudioType type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void <a class="el" href="classsdl2engine_1_1AudioHandler.html">sdl2engine::AudioHandler</a>&lt; type &gt;::FadeOut </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>seconds</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gradually fades audio out. </p>
+<p>The audio will be stopped after completely fading out.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">seconds</td><td>: The amount in seconds over which the audio will fade out. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classsdl2engine_1_1AudioHandler_a80011f3c39b3cf5eb480103eda3a4cad_icgraph.png" border="0" usemap="#classsdl2engine_1_1AudioHandler_a80011f3c39b3cf5eb480103eda3a4cad_icgraph" alt=""/></div>
+<map name="classsdl2engine_1_1AudioHandler_a80011f3c39b3cf5eb480103eda3a4cad_icgraph" id="classsdl2engine_1_1AudioHandler_a80011f3c39b3cf5eb480103eda3a4cad_icgraph">
+<area shape="rect" id="node3" href="classsdl2engine_1_1GStatePlaceholder.html#a702c19e5680ab65e13aede54433a6bdd" title="sdl2engine::GStatePlaceholder\l::update" alt="" coords="225,5,425,51"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="af5e97caa2ac73355b5a626cc802e07d6"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classsdl2engine_1_1AudioHandler.html">sdl2engine::AudioHandler</a>&lt; <a class="el" href="namespacesdl2engine.html#aeccca27a95f2b37740093a79b4588a9da078f6f9d0068fedb79050a274b0ace96">AudioType::SoundEffect</a> &gt;::FadeOut </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>seconds</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="AudioHandler_8cpp_source.html#l00123">123</a> of file <a class="el" href="AudioHandler_8cpp_source.html">AudioHandler.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="addeff3e673084c9975bca5bb38458aed"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classsdl2engine_1_1AudioHandler.html">sdl2engine::AudioHandler</a>&lt; <a class="el" href="namespacesdl2engine.html#aeccca27a95f2b37740093a79b4588a9da47dcbd834e669233d7eb8a51456ed217">AudioType::Music</a> &gt;::Pause </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="AudioHandler_8cpp_source.html#l00049">49</a> of file <a class="el" href="AudioHandler_8cpp_source.html">AudioHandler.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8a99528c9feeb34009ed7fc3bcfe4ff4"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;AudioType type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void <a class="el" href="classsdl2engine_1_1AudioHandler.html">sdl2engine::AudioHandler</a>&lt; type &gt;::Pause </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pauses audio. </p>
+
+</div>
+</div>
+<a class="anchor" id="a60ec53d6c78e3f386e3252db2b6ee661"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classsdl2engine_1_1AudioHandler.html">sdl2engine::AudioHandler</a>&lt; <a class="el" href="namespacesdl2engine.html#aeccca27a95f2b37740093a79b4588a9da078f6f9d0068fedb79050a274b0ace96">AudioType::SoundEffect</a> &gt;::Pause </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="AudioHandler_8cpp_source.html#l00108">108</a> of file <a class="el" href="AudioHandler_8cpp_source.html">AudioHandler.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae543713ebb455901af9c73fed86e14bb"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classsdl2engine_1_1AudioHandler.html">sdl2engine::AudioHandler</a>&lt; <a class="el" href="namespacesdl2engine.html#aeccca27a95f2b37740093a79b4588a9da47dcbd834e669233d7eb8a51456ed217">AudioType::Music</a> &gt;::Play </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>path</em>, </td>
@@ -471,26 +407,138 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Plays a sound effect a given amount of times. </p>
-<p>Should only be used if you either want to play the effect 2+ times or infinitely, in which case you should pass k_infinite_loop.</p>
+<p>Definition at line <a class="el" href="AudioHandler_8cpp_source.html#l00023">23</a> of file <a class="el" href="AudioHandler_8cpp_source.html">AudioHandler.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classsdl2engine_1_1AudioHandler_ae543713ebb455901af9c73fed86e14bb_cgraph.png" border="0" usemap="#classsdl2engine_1_1AudioHandler_ae543713ebb455901af9c73fed86e14bb_cgraph" alt=""/></div>
+<map name="classsdl2engine_1_1AudioHandler_ae543713ebb455901af9c73fed86e14bb_cgraph" id="classsdl2engine_1_1AudioHandler_ae543713ebb455901af9c73fed86e14bb_cgraph">
+<area shape="rect" id="node3" href="classsdl2engine_1_1ResourceManager.html#ab80e014a52a5237a000570b4ac67fcbd" title="Singleton implementation for ResourceManager. " alt="" coords="225,5,423,51"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a25a1cf5e091c0e0b30d61d8c8ec8c022"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;AudioType type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void <a class="el" href="classsdl2engine_1_1AudioHandler.html">sdl2engine::AudioHandler</a>&lt; type &gt;::Play </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>times</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Plays an audio a given amount of times. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">path</td><td>: The path to the desired sound effect. </td></tr>
-    <tr><td class="paramname">times</td><td>: The amount of times to loop the sound effect. </td></tr>
+    <tr><td class="paramname">path</td><td>: The path to the desired audio. </td></tr>
+    <tr><td class="paramname">times</td><td>: The amount of times to loop the sound effect. Use k_infinite_loop for infinite looping. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="AudioHandler_8cpp_source.html#l00026">26</a> of file <a class="el" href="AudioHandler_8cpp_source.html">AudioHandler.cpp</a>.</p>
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classsdl2engine_1_1AudioHandler_a25a1cf5e091c0e0b30d61d8c8ec8c022_icgraph.png" border="0" usemap="#classsdl2engine_1_1AudioHandler_a25a1cf5e091c0e0b30d61d8c8ec8c022_icgraph" alt=""/></div>
+<map name="classsdl2engine_1_1AudioHandler_a25a1cf5e091c0e0b30d61d8c8ec8c022_icgraph" id="classsdl2engine_1_1AudioHandler_a25a1cf5e091c0e0b30d61d8c8ec8c022_icgraph">
+<area shape="rect" id="node3" href="classsdl2engine_1_1GStatePlaceholder.html#a0a33c04bfe8475e4356ee9e8b75d7669" title="sdl2engine::GStatePlaceholder\l::load" alt="" coords="225,5,425,51"/><area shape="rect" id="node5" href="classsdl2engine_1_1GStatePlaceholder.html#a702c19e5680ab65e13aede54433a6bdd" title="sdl2engine::GStatePlaceholder\l::update" alt="" coords="225,74,425,121"/></map>
+</div>
+</p>
 
 </div>
 </div>
-<a class="anchor" id="ae4f8e14418b250ec944ddac4ed88b99f"></a>
+<a class="anchor" id="adcf94bd6a774562d8525654bd81f138c"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void sdl2engine::AudioHandler::ResumeEffects </td>
+          <td class="memname">void <a class="el" href="classsdl2engine_1_1AudioHandler.html">sdl2engine::AudioHandler</a>&lt; <a class="el" href="namespacesdl2engine.html#aeccca27a95f2b37740093a79b4588a9da078f6f9d0068fedb79050a274b0ace96">AudioType::SoundEffect</a> &gt;::Play </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>times</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="AudioHandler_8cpp_source.html#l00084">84</a> of file <a class="el" href="AudioHandler_8cpp_source.html">AudioHandler.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4c8fbf3b529efb47e3e31f0b77a17eae"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;AudioType type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void <a class="el" href="classsdl2engine_1_1AudioHandler.html">sdl2engine::AudioHandler</a>&lt; type &gt;::Resume </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resumes audio. </p>
+
+</div>
+</div>
+<a class="anchor" id="a128cc0017eece1a71d831e30c83e3ed5"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classsdl2engine_1_1AudioHandler.html">sdl2engine::AudioHandler</a>&lt; <a class="el" href="namespacesdl2engine.html#aeccca27a95f2b37740093a79b4588a9da47dcbd834e669233d7eb8a51456ed217">AudioType::Music</a> &gt;::Resume </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -498,18 +546,18 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Resumes all sound effects. </p>
-
-<p>Definition at line <a class="el" href="AudioHandler_8cpp_source.html#l00077">77</a> of file <a class="el" href="AudioHandler_8cpp_source.html">AudioHandler.cpp</a>.</p>
+<p>Definition at line <a class="el" href="AudioHandler_8cpp_source.html#l00054">54</a> of file <a class="el" href="AudioHandler_8cpp_source.html">AudioHandler.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="adebf004b51a566247d3c011506152db1"></a>
+<a class="anchor" id="a2a600082e80c3c89cdb03d7bfafef031"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void sdl2engine::AudioHandler::ResumeMusic </td>
+          <td class="memname">void <a class="el" href="classsdl2engine_1_1AudioHandler.html">sdl2engine::AudioHandler</a>&lt; <a class="el" href="namespacesdl2engine.html#aeccca27a95f2b37740093a79b4588a9da078f6f9d0068fedb79050a274b0ace96">AudioType::SoundEffect</a> &gt;::Resume </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -517,18 +565,18 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Resumes the music. </p>
-
-<p>Definition at line <a class="el" href="AudioHandler_8cpp_source.html#l00073">73</a> of file <a class="el" href="AudioHandler_8cpp_source.html">AudioHandler.cpp</a>.</p>
+<p>Definition at line <a class="el" href="AudioHandler_8cpp_source.html#l00113">113</a> of file <a class="el" href="AudioHandler_8cpp_source.html">AudioHandler.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a7c416cf932a6031ec1937ec760b6fd32"></a>
+<a class="anchor" id="a7166f2931f4ee375f37d699a6fb0862e"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void sdl2engine::AudioHandler::SetEffectsVolume </td>
+          <td class="memname">void <a class="el" href="classsdl2engine_1_1AudioHandler.html">sdl2engine::AudioHandler</a>&lt; <a class="el" href="namespacesdl2engine.html#aeccca27a95f2b37740093a79b4588a9da47dcbd834e669233d7eb8a51456ed217">AudioType::Music</a> &gt;::SetVolume </td>
           <td>(</td>
           <td class="paramtype">const int&#160;</td>
           <td class="paramname"><em>percent</em></td><td>)</td>
@@ -536,56 +584,78 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Sets the volume for the sound effects. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">percent</td><td>: The volume percentage (0-100). </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>Decide whether the &lt;= 100 assertion is necessary. </dd></dl>
-
-<p>Definition at line <a class="el" href="AudioHandler_8cpp_source.html#l00048">48</a> of file <a class="el" href="AudioHandler_8cpp_source.html">AudioHandler.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ac059edb4173744b5b12dc918795d68cf"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void sdl2engine::AudioHandler::SetMusicVolume </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>percent</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sets the volume for the music. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">percent</td><td>: The volume percentage (0-100). </td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>Decide whether the &lt;= 100 assertion is necessary. </dd></dl>
 
 <p>Definition at line <a class="el" href="AudioHandler_8cpp_source.html#l00037">37</a> of file <a class="el" href="AudioHandler_8cpp_source.html">AudioHandler.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a82f735fc18ee61c8b56ac906e97a52ea"></a>
+<a class="anchor" id="ac4ada745f6b3150a77d0489b5e82cb3f"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;AudioType type&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void sdl2engine::AudioHandler::StopMusic </td>
+          <td class="memname">static void <a class="el" href="classsdl2engine_1_1AudioHandler.html">sdl2engine::AudioHandler</a>&lt; type &gt;::SetVolume </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>percent</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the volume for the audio. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">percent</td><td>: The volume percentage (0-100). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a7cbf63b2ddb8630e742a02e8c3ac5f3d"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classsdl2engine_1_1AudioHandler.html">sdl2engine::AudioHandler</a>&lt; <a class="el" href="namespacesdl2engine.html#aeccca27a95f2b37740093a79b4588a9da078f6f9d0068fedb79050a274b0ace96">AudioType::SoundEffect</a> &gt;::SetVolume </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>percent</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>Decide whether the &lt;= 100 assertion is necessary. </dd></dl>
+
+<p>Definition at line <a class="el" href="AudioHandler_8cpp_source.html#l00096">96</a> of file <a class="el" href="AudioHandler_8cpp_source.html">AudioHandler.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afa5f570101608f704fd3555b9c934850"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;AudioType type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void <a class="el" href="classsdl2engine_1_1AudioHandler.html">sdl2engine::AudioHandler</a>&lt; type &gt;::Stop </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -593,101 +663,60 @@ Here is the caller graph for this function:</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Stops playing the current music. </p>
-
-<p>Definition at line <a class="el" href="AudioHandler_8cpp_source.html#l00098">98</a> of file <a class="el" href="AudioHandler_8cpp_source.html">AudioHandler.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classsdl2engine_1_1AudioHandler_a82f735fc18ee61c8b56ac906e97a52ea_icgraph.png" border="0" usemap="#classsdl2engine_1_1AudioHandler_a82f735fc18ee61c8b56ac906e97a52ea_icgraph" alt=""/></div>
-<map name="classsdl2engine_1_1AudioHandler_a82f735fc18ee61c8b56ac906e97a52ea_icgraph" id="classsdl2engine_1_1AudioHandler_a82f735fc18ee61c8b56ac906e97a52ea_icgraph">
-<area shape="rect" id="node3" href="classsdl2engine_1_1AudioHandler.html#a8e3cc567806e908f9f2f3270778110f5" title="Sets new music for given path. " alt="" coords="224,5,395,51"/></map>
-</div>
-</p>
+<p>Stops playing the current audio. </p>
 
 </div>
 </div>
-<h2 class="groupheader">Field Documentation</h2>
-<a class="anchor" id="a5ce16cac3fac2ac39a1b369c2a6a4289"></a>
+<a class="anchor" id="a0c67582ab5a6d5a32de9b19a71b1177e"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
+<div class="memtemplate">
+template&lt;&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">constexpr int sdl2engine::AudioHandler::k_all_channels = -1</td>
+          <td class="memname">void <a class="el" href="classsdl2engine_1_1AudioHandler.html">sdl2engine::AudioHandler</a>&lt; <a class="el" href="namespacesdl2engine.html#aeccca27a95f2b37740093a79b4588a9da47dcbd834e669233d7eb8a51456ed217">AudioType::Music</a> &gt;::Stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="AudioHandler_8h_source.html#l00124">124</a> of file <a class="el" href="AudioHandler_8h_source.html">AudioHandler.h</a>.</p>
+<p>Definition at line <a class="el" href="AudioHandler_8cpp_source.html#l00059">59</a> of file <a class="el" href="AudioHandler_8cpp_source.html">AudioHandler.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a39e33c3247ca5d8fde32ef92cecde725"></a>
+<a class="anchor" id="ad480f017577815a14dc533b60c55e231"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
+<div class="memtemplate">
+template&lt;&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">constexpr int sdl2engine::AudioHandler::k_any_channel = -1</td>
+          <td class="memname">void <a class="el" href="classsdl2engine_1_1AudioHandler.html">sdl2engine::AudioHandler</a>&lt; <a class="el" href="namespacesdl2engine.html#aeccca27a95f2b37740093a79b4588a9da078f6f9d0068fedb79050a274b0ace96">AudioType::SoundEffect</a> &gt;::Stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="AudioHandler_8h_source.html#l00125">125</a> of file <a class="el" href="AudioHandler_8h_source.html">AudioHandler.h</a>.</p>
+<p>Definition at line <a class="el" href="AudioHandler_8cpp_source.html#l00118">118</a> of file <a class="el" href="AudioHandler_8cpp_source.html">AudioHandler.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a6383cf07bce3cdf18677302311e0f43a"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr int sdl2engine::AudioHandler::k_infinite_loop = -1</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="AudioHandler_8h_source.html#l00123">123</a> of file <a class="el" href="AudioHandler_8h_source.html">AudioHandler.h</a>.</p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="AudioHandler_8h_source.html">AudioHandler.h</a></li>
-<li><a class="el" href="AudioHandler_8cpp_source.html">AudioHandler.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 2 2015 06:11:24 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 3 2015 16:48:50 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

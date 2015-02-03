@@ -1,7 +1,6 @@
 var searchData=
 [
   ['m_5fanimation_5fcount',['m_animation_count',['../classsdl2engine_1_1Animation.html#a8e4ce1a1e9191404d16b107cb2535587',1,'sdl2engine::Animation']]],
-  ['m_5faudio_5fhandler',['m_audio_handler',['../classsdl2engine_1_1Game.html#abea169ab279e703daf94f6992e625282',1,'sdl2engine::Game']]],
   ['m_5fcamera_5fdistance_5fheight',['m_camera_distance_height',['../classsdl2engine_1_1Configuration.html#ae01f5bbb693dd826f6c9c4c2db825a64',1,'sdl2engine::Configuration']]],
   ['m_5fcamera_5fdistance_5fwidth',['m_camera_distance_width',['../classsdl2engine_1_1Configuration.html#ad08f7c863ff9bda13cb80a9afaaf700a',1,'sdl2engine::Configuration']]],
   ['m_5fchannel',['m_channel',['../classsdl2engine_1_1SoundEffect.html#a8640f49b42ce7c803e3deda5ba13a3aa',1,'sdl2engine::SoundEffect']]],

@@ -1,11 +1,10 @@
 <map id="sdl2engine::Game::Instance" name="sdl2engine::Game::Instance">
-<area shape="rect" id="node3" href="$classsdl2engine_1_1GStatePlaceholder.html#a0a33c04bfe8475e4356ee9e8b75d7669" title="sdl2engine::GStatePlaceholder\l::load" alt="" coords="241,5,441,51"/>
-<area shape="rect" id="node5" href="$classsdl2engine_1_1GStatePlaceholder.html#a702c19e5680ab65e13aede54433a6bdd" title="sdl2engine::GStatePlaceholder\l::update" alt="" coords="241,74,441,121"/>
-<area shape="rect" id="node7" href="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="316,144,367,173"/>
-<area shape="rect" id="node9" href="$classsdl2engine_1_1Sprite.html#a618dfd6e5850ee7f8c40833d0d3fca7c" title="Renders the sprite. " alt="" coords="279,197,404,243"/>
-<area shape="rect" id="node15" href="$classsdl2engine_1_1Sprite.html#a4dfaeee4aed2bca6a87bb6b4926581da" title="Converts a SDL_Surface to a SDL_Texture. " alt="" coords="275,266,408,313"/>
-<area shape="rect" id="node11" href="$classsdl2engine_1_1GStatePlaceholder.html#ab503edaa692d97faebebe28e51fc5815" title="sdl2engine::GStatePlaceholder\l::render" alt="" coords="492,139,692,186"/>
-<area shape="rect" id="node13" href="$classsdl2engine_1_1Text.html#a28d6ca0354a8dc9148aa1f45cc8c0bea" title="sdl2engine::Text::render" alt="" coords="511,209,673,239"/>
-<area shape="rect" id="node17" href="$classsdl2engine_1_1Sprite.html#aa14984653f10c8e428bb7172e0472dbb" title="The constructor from a surface. " alt="" coords="529,263,655,310"/>
-<area shape="rect" id="node19" href="$classsdl2engine_1_1Sprite.html#a2d8ae44951073c4ca0d29082428ad900" title="Loads image from a path. " alt="" coords="529,333,655,379"/>
+<area shape="rect" id="node3" href="$classsdl2engine_1_1GStatePlaceholder.html#a702c19e5680ab65e13aede54433a6bdd" title="sdl2engine::GStatePlaceholder\l::update" alt="" coords="241,5,441,51"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="316,75,367,104"/>
+<area shape="rect" id="node7" href="$classsdl2engine_1_1Sprite.html#a618dfd6e5850ee7f8c40833d0d3fca7c" title="Renders the sprite. " alt="" coords="279,127,404,174"/>
+<area shape="rect" id="node13" href="$classsdl2engine_1_1Sprite.html#a4dfaeee4aed2bca6a87bb6b4926581da" title="Converts a SDL_Surface to a SDL_Texture. " alt="" coords="275,197,408,243"/>
+<area shape="rect" id="node9" href="$classsdl2engine_1_1GStatePlaceholder.html#ab503edaa692d97faebebe28e51fc5815" title="sdl2engine::GStatePlaceholder\l::render" alt="" coords="492,70,692,117"/>
+<area shape="rect" id="node11" href="$classsdl2engine_1_1Text.html#a28d6ca0354a8dc9148aa1f45cc8c0bea" title="sdl2engine::Text::render" alt="" coords="511,140,673,169"/>
+<area shape="rect" id="node15" href="$classsdl2engine_1_1Sprite.html#aa14984653f10c8e428bb7172e0472dbb" title="The constructor from a surface. " alt="" coords="529,194,655,241"/>
+<area shape="rect" id="node17" href="$classsdl2engine_1_1Sprite.html#a2d8ae44951073c4ca0d29082428ad900" title="Loads image from a path. " alt="" coords="529,263,655,310"/>
 </map>

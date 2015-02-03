@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v34</span>
+   &#160;<span id="projectnumber">v35</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -89,7 +89,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
-<a href="#namespaces">Namespaces</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">AudioHandler.h File Reference</div>  </div>
 </div><!--header-->
@@ -105,25 +108,46 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="AudioHandler_8h__dep__incl.png" border="0" usemap="#AudioHandler_8hdep" alt=""/></div>
 <map name="AudioHandler_8hdep" id="AudioHandler_8hdep">
-<area shape="rect" id="node3" href="AudioHandler_8cpp.html" title="AudioHandler.cpp" alt="" coords="77,83,203,112"/><area shape="rect" id="node5" href="Game_8h.html" title="Game.h" alt="" coords="227,83,293,112"/><area shape="rect" id="node7" href="Game_8cpp.html" title="Game.cpp" alt="" coords="5,160,88,189"/><area shape="rect" id="node9" href="GStatePlaceholder_8cpp.html" title="GStatePlaceholder.cpp" alt="" coords="112,160,267,189"/><area shape="rect" id="node11" href="Sprite_8cpp.html" title="Sprite.cpp" alt="" coords="291,160,371,189"/><area shape="rect" id="node13" href="main_8cpp.html" title="main.cpp" alt="" coords="395,160,469,189"/></map>
+<area shape="rect" id="node3" href="AudioHandler_8cpp.html" title="AudioHandler.cpp" alt="" coords="5,83,131,112"/><area shape="rect" id="node5" href="GStatePlaceholder_8cpp.html" title="GStatePlaceholder.cpp" alt="" coords="155,83,309,112"/></map>
 </div>
 </div>
 <p><a href="AudioHandler_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1AudioHandler.html">sdl2engine::AudioHandler</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1AudioHandler.html">sdl2engine::AudioHandler&lt; type &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static class that handles all the audio in the game.  <a href="classsdl2engine_1_1AudioHandler.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacesdl2engine"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesdl2engine.html">sdl2engine</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a510b8ab0fe262941a17169daf4d8f637"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesdl2engine.html#a510b8ab0fe262941a17169daf4d8f637">sdl2engine::AudioSfx</a> = AudioHandler&lt; AudioType::SoundEffect &gt;</td></tr>
+<tr class="separator:a510b8ab0fe262941a17169daf4d8f637"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a239c8481720d24d909626a3bf590edd4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesdl2engine.html#a239c8481720d24d909626a3bf590edd4">sdl2engine::AudioMusic</a> = AudioHandler&lt; AudioType::Music &gt;</td></tr>
+<tr class="separator:a239c8481720d24d909626a3bf590edd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:aeccca27a95f2b37740093a79b4588a9d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesdl2engine.html#aeccca27a95f2b37740093a79b4588a9d">sdl2engine::AudioType</a> { <a class="el" href="namespacesdl2engine.html#aeccca27a95f2b37740093a79b4588a9da47dcbd834e669233d7eb8a51456ed217">sdl2engine::AudioType::Music</a>, 
+<a class="el" href="namespacesdl2engine.html#aeccca27a95f2b37740093a79b4588a9da078f6f9d0068fedb79050a274b0ace96">sdl2engine::AudioType::SoundEffect</a>
+ }</td></tr>
+<tr class="memdesc:aeccca27a95f2b37740093a79b4588a9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Distinguishes between the two types of audio.  <a href="namespacesdl2engine.html#aeccca27a95f2b37740093a79b4588a9d">More...</a><br/></td></tr>
+<tr class="separator:aeccca27a95f2b37740093a79b4588a9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:af735837a8360218dee00b102cd0e7729"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesdl2engine.html#af735837a8360218dee00b102cd0e7729">sdl2engine::k_infinite_loop</a> = -1</td></tr>
+<tr class="separator:af735837a8360218dee00b102cd0e7729"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 2 2015 06:11:24 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 3 2015 16:48:50 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

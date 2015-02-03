@@ -1,6 +1,4 @@
 <map id="sdl2engine::GStatePlaceholder::load" name="sdl2engine::GStatePlaceholder::load">
 <area shape="rect" id="node3" href="$classsdl2engine_1_1ResourceManager.html#ab80e014a52a5237a000570b4ac67fcbd" title="Singleton implementation for ResourceManager. " alt="" coords="257,5,455,51"/>
-<area shape="rect" id="node5" href="$classsdl2engine_1_1Game.html#a850158cf352e293eb49a4910c6f5cc21" title="Singleton implementation for Game. " alt="" coords="264,75,448,104"/>
-<area shape="rect" id="node7" href="$classsdl2engine_1_1Game.html#a4ef2d50b6612ce02f234e3623e44e369" title="sdl2engine::Game::GetAudio\lHandler" alt="" coords="261,127,451,174"/>
-<area shape="rect" id="node9" href="$classsdl2engine_1_1AudioHandler.html#a48f4f08bc26f3bf0f03a32864bf0c97c" title="Sets new music for given path, infinitely looping. " alt="" coords="271,197,441,243"/>
+<area shape="rect" id="node5" href="$classsdl2engine_1_1AudioHandler.html#a25a1cf5e091c0e0b30d61d8c8ec8c022" title="Plays an audio a given amount of times. " alt="" coords="271,74,441,121"/>
 </map>

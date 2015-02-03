@@ -14,8 +14,10 @@ var searchData=
   ['assert_2eh',['Assert.h',['../Assert_8h.html',1,'']]],
   ['audioformattostring',['AudioFormatToString',['../namespacesdl2engine_1_1sdl_1_1detail.html#ae08a55cf264053a7a7fe05430feff49c',1,'sdl2engine::sdl::detail']]],
   ['audiohandler',['AudioHandler',['../classsdl2engine_1_1AudioHandler.html',1,'sdl2engine']]],
-  ['audiohandler',['AudioHandler',['../classsdl2engine_1_1AudioHandler.html#a9362795e9cb716865e1c67531d13762d',1,'sdl2engine::AudioHandler']]],
   ['audiohandler_2ecpp',['AudioHandler.cpp',['../AudioHandler_8cpp.html',1,'']]],
   ['audiohandler_2eh',['AudioHandler.h',['../AudioHandler_8h.html',1,'']]],
+  ['audiomusic',['AudioMusic',['../namespacesdl2engine.html#a239c8481720d24d909626a3bf590edd4',1,'sdl2engine']]],
+  ['audiosfx',['AudioSfx',['../namespacesdl2engine.html#a510b8ab0fe262941a17169daf4d8f637',1,'sdl2engine']]],
+  ['audiotype',['AudioType',['../namespacesdl2engine.html#aeccca27a95f2b37740093a79b4588a9d',1,'sdl2engine']]],
   ['axes',['axes',['../namespacesdl2engine_1_1controllerMap.html#a175550e7f2708486649ca6f0f49b35d4',1,'sdl2engine::controllerMap']]]
 ];

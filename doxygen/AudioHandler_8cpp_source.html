@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v34</span>
+   &#160;<span id="projectnumber">v35</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -93,41 +93,40 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <a href="AudioHandler_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="AudioHandler_8h.html">audio/AudioHandler.h</a>&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;SDL2/SDL_mixer.h&gt;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Music_8h.html">audio/Music.h</a>&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="SoundEffect_8h.html">audio/SoundEffect.h</a>&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ResourceManager_8h.html">core/ResourceManager.h</a>&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Logger_8h.html">util/Logger.h</a>&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Assert_8h.html">util/Assert.h</a>&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="namespacesdl2engine.html">   10</a></span>&#160;<span class="keyword">namespace </span>sdl2engine {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1AudioHandler.html#a48f4f08bc26f3bf0f03a32864bf0c97c">   12</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1AudioHandler.html#a48f4f08bc26f3bf0f03a32864bf0c97c">AudioHandler::ChangeMusic</a>(<span class="keyword">const</span> std::string&amp; path) {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="classsdl2engine_1_1AudioHandler.html#a48f4f08bc26f3bf0f03a32864bf0c97c">ChangeMusic</a>(path, <a class="code" href="classsdl2engine_1_1AudioHandler.html#a6383cf07bce3cdf18677302311e0f43a">k_infinite_loop</a>);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Music_8h.html">audio/Music.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="SoundEffect_8h.html">audio/SoundEffect.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ResourceManager_8h.html">core/ResourceManager.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Logger_8h.html">util/Logger.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Assert_8h.html">util/Assert.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span>{</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">static</span> constexpr <span class="keyword">auto</span> k_all_channels = -1; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">static</span> constexpr <span class="keyword">auto</span> k_any_channel = -1; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;} <span class="comment">// namespace</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1AudioHandler.html#a8e3cc567806e908f9f2f3270778110f5">   16</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1AudioHandler.html#a48f4f08bc26f3bf0f03a32864bf0c97c">AudioHandler::ChangeMusic</a>(<span class="keyword">const</span> std::string&amp; path, <span class="keyword">const</span> <span class="keywordtype">int</span> times) {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>((times == <a class="code" href="classsdl2engine_1_1AudioHandler.html#a6383cf07bce3cdf18677302311e0f43a">k_infinite_loop</a> || times &gt;= 1), <span class="stringliteral">&quot;Must be k_infinite_loop or &gt;= 1.&quot;</span>);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="classsdl2engine_1_1AudioHandler.html#a82f735fc18ee61c8b56ac906e97a52ea">StopMusic</a>();</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="classsdl2engine_1_1AudioHandler.html#aa6d8cc8ed936031cde12fbf88a8ae8c7">PlayMusic</a>(path, times);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="namespacesdl2engine.html">   16</a></span>&#160;<span class="keyword">namespace </span>sdl2engine {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">// ----------------------------------------------------------- //</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">//                       Music Handling</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">// ----------------------------------------------------------- //</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1AudioHandler.html#ac49bfc265a94d2730b2b0ff17bc032bf">   22</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1AudioHandler.html#ac49bfc265a94d2730b2b0ff17bc032bf">AudioHandler::PlaySoundEffect</a>(<span class="keyword">const</span> std::string&amp; path) {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classsdl2engine_1_1AudioHandler.html#ac49bfc265a94d2730b2b0ff17bc032bf">PlaySoundEffect</a>(path, 1);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">template</span> &lt;&gt;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1AudioHandler.html#ae543713ebb455901af9c73fed86e14bb">   23</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1AudioHandler.html#a25a1cf5e091c0e0b30d61d8c8ec8c022">AudioHandler&lt;AudioType::Music&gt;::Play</a>(<span class="keyword">const</span> std::string&amp; path, <span class="keyword">const</span> <span class="keywordtype">int</span> times) {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>((times == <a class="code" href="namespacesdl2engine.html#af735837a8360218dee00b102cd0e7729">k_infinite_loop</a> || times &gt;= 1), <span class="stringliteral">&quot;Must be k_infinite_loop or &gt;= 1.&quot;</span>);</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1AudioHandler.html#a33123014f73d08ab03fc47d1268a1e02">   26</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1AudioHandler.html#ac49bfc265a94d2730b2b0ff17bc032bf">AudioHandler::PlaySoundEffect</a>(<span class="keyword">const</span> std::string&amp; path, <span class="keyword">const</span> <span class="keywordtype">int</span> times) {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>((times == <a class="code" href="classsdl2engine_1_1AudioHandler.html#a6383cf07bce3cdf18677302311e0f43a">k_infinite_loop</a> || times &gt;= 1), <span class="stringliteral">&quot;Must be k_infinite_loop or &gt;= 1.&quot;</span>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> music = <a class="code" href="classsdl2engine_1_1ResourceManager.html#ab80e014a52a5237a000570b4ac67fcbd">ResourceManager&lt;Music&gt;::Instance</a>().Get(path);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(music != <span class="keyword">nullptr</span>, <span class="stringliteral">&quot;Shouldn&#39;t be playing null music.&quot;</span>);</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> k_played_channel = Mix_PlayChannel(<a class="code" href="classsdl2engine_1_1AudioHandler.html#a39e33c3247ca5d8fde32ef92cecde725">k_any_channel</a>,</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="classsdl2engine_1_1ResourceManager.html">ResourceManager&lt;SoundEffect&gt;::Instance</a>().Get(path)-&gt;MixChunk(), (times - 1));</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">if</span>(k_played_channel == -1) {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="namespacesdl2engine.html#a5b2cd64e9633f9ecfda37e160b02852f">log_error</a>() &lt;&lt; <span class="stringliteral">&quot;Failed to play sound effect for any channel (&quot;</span> &lt;&lt; k_played_channel &lt;&lt;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="stringliteral">&quot;). &quot;</span> &lt;&lt; Mix_GetError();</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1AudioHandler.html#ac059edb4173744b5b12dc918795d68cf">   37</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1AudioHandler.html#ac059edb4173744b5b12dc918795d68cf">AudioHandler::SetMusicVolume</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> percent) {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> k_played_music = (Mix_PlayMusic(music-&gt;MixMusic(), times) == 0);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">if</span>(!k_played_music) {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="namespacesdl2engine.html#a5b2cd64e9633f9ecfda37e160b02852f">log_error</a>() &lt;&lt; <span class="stringliteral">&quot;Couldn&#39;t play music (&quot;</span> &lt;&lt; music-&gt;Path() &lt;&lt; <span class="stringliteral">&quot;). &quot;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            &lt;&lt; Mix_GetError();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">template</span> &lt;&gt;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1AudioHandler.html#a7166f2931f4ee375f37d699a6fb0862e">   37</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1AudioHandler.html#ac4ada745f6b3150a77d0489b5e82cb3f">AudioHandler&lt;AudioType::Music&gt;::SetVolume</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> percent) {</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">// No need to check for percent being above 100, SDL_Mixer already caps the volume to</span></div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="comment">// MIX_MAX_VOLUME.</span></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(percent &gt;= 0  , <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
@@ -137,88 +136,114 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    Mix_VolumeMusic(k_volume_value);</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1AudioHandler.html#a7c416cf932a6031ec1937ec760b6fd32">   48</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1AudioHandler.html#a7c416cf932a6031ec1937ec760b6fd32">AudioHandler::SetEffectsVolume</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> percent) {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment">// No need to check for percent being above 100, SDL_Mixer already caps the volume to</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="comment">// MIX_MAX_VOLUME.</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(percent &gt;= 0  , <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(percent &lt;= 100, <span class="stringliteral">&quot;Must be &lt;= 100&quot;</span>);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> k_volume_value = percent * MIX_MAX_VOLUME/100;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    Mix_Volume(<a class="code" href="classsdl2engine_1_1AudioHandler.html#a5ce16cac3fac2ac39a1b369c2a6a4289">k_all_channels</a>, k_volume_value);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1AudioHandler.html#aed3b794a8665b6518ad29aab5ce0666c">   59</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1AudioHandler.html#aed3b794a8665b6518ad29aab5ce0666c">AudioHandler::PauseMusic</a>() {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> k_music_is_playing = (Mix_PlayingMusic() == 1);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">if</span>(k_music_is_playing) {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        Mix_PauseMusic();</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <a class="code" href="namespacesdl2engine.html#ac31c5eafc7940521da71fab041ac0138">log_warn</a>() &lt;&lt; <span class="stringliteral">&quot;Trying to pause music that is not playing.&quot;</span>;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1AudioHandler.html#a1c7a9c8692ddd105da725626962c1b2a">   69</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1AudioHandler.html#a1c7a9c8692ddd105da725626962c1b2a">AudioHandler::PauseEffects</a>() {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    Mix_Pause(<a class="code" href="classsdl2engine_1_1AudioHandler.html#a5ce16cac3fac2ac39a1b369c2a6a4289">k_all_channels</a>);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1AudioHandler.html#adebf004b51a566247d3c011506152db1">   73</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1AudioHandler.html#adebf004b51a566247d3c011506152db1">AudioHandler::ResumeMusic</a>() {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    Mix_ResumeMusic();</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1AudioHandler.html#ae4f8e14418b250ec944ddac4ed88b99f">   77</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1AudioHandler.html#ae4f8e14418b250ec944ddac4ed88b99f">AudioHandler::ResumeEffects</a>() {</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    Mix_Resume(<a class="code" href="classsdl2engine_1_1AudioHandler.html#a5ce16cac3fac2ac39a1b369c2a6a4289">k_all_channels</a>);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1AudioHandler.html#aa6d8cc8ed936031cde12fbf88a8ae8c7">   81</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1AudioHandler.html#aa6d8cc8ed936031cde12fbf88a8ae8c7">AudioHandler::PlayMusic</a>(<span class="keyword">const</span> std::string&amp; path) {</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="classsdl2engine_1_1AudioHandler.html#aa6d8cc8ed936031cde12fbf88a8ae8c7">PlayMusic</a>(path, <a class="code" href="classsdl2engine_1_1AudioHandler.html#a6383cf07bce3cdf18677302311e0f43a">k_infinite_loop</a>);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1AudioHandler.html#aa93cb16d8fa3d2a9e6918fca36ca46fd">   85</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1AudioHandler.html#aa6d8cc8ed936031cde12fbf88a8ae8c7">AudioHandler::PlayMusic</a>(<span class="keyword">const</span> std::string&amp; path, <span class="keyword">const</span> <span class="keywordtype">int</span> times) {</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>((times == <a class="code" href="classsdl2engine_1_1AudioHandler.html#a6383cf07bce3cdf18677302311e0f43a">k_infinite_loop</a> || times &gt;= 1), <span class="stringliteral">&quot;Must be k_infinite_loop or &gt;= 1.&quot;</span>);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> music = <a class="code" href="classsdl2engine_1_1ResourceManager.html#ab80e014a52a5237a000570b4ac67fcbd">ResourceManager&lt;Music&gt;::Instance</a>().Get(path);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(music != <span class="keyword">nullptr</span>, <span class="stringliteral">&quot;Shouldn&#39;t be playing null music.&quot;</span>);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> k_played_music = (Mix_PlayMusic(music-&gt;MixMusic(), times) == 0);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">if</span>(!k_played_music) {</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <a class="code" href="namespacesdl2engine.html#a5b2cd64e9633f9ecfda37e160b02852f">log_error</a>() &lt;&lt; <span class="stringliteral">&quot;Couldn&#39;t play music (&quot;</span> &lt;&lt; music-&gt;Path() &lt;&lt; <span class="stringliteral">&quot;). &quot;</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            &lt;&lt; Mix_GetError();</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1AudioHandler.html#a82f735fc18ee61c8b56ac906e97a52ea">   98</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1AudioHandler.html#a82f735fc18ee61c8b56ac906e97a52ea">AudioHandler::StopMusic</a>() {</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    Mix_HaltMusic();</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;} <span class="comment">// namespace sdl2engine</span></div>
-<div class="ttc" id="classsdl2engine_1_1AudioHandler_html_a7c416cf932a6031ec1937ec760b6fd32"><div class="ttname"><a href="classsdl2engine_1_1AudioHandler.html#a7c416cf932a6031ec1937ec760b6fd32">sdl2engine::AudioHandler::SetEffectsVolume</a></div><div class="ttdeci">void SetEffectsVolume(const int percent)</div><div class="ttdoc">Sets the volume for the sound effects. </div><div class="ttdef"><b>Definition:</b> <a href="AudioHandler_8cpp_source.html#l00048">AudioHandler.cpp:48</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1AudioHandler_html_aa6d8cc8ed936031cde12fbf88a8ae8c7"><div class="ttname"><a href="classsdl2engine_1_1AudioHandler.html#aa6d8cc8ed936031cde12fbf88a8ae8c7">sdl2engine::AudioHandler::PlayMusic</a></div><div class="ttdeci">void PlayMusic(const std::string &amp;path)</div><div class="ttdoc">Plays music from path. </div><div class="ttdef"><b>Definition:</b> <a href="AudioHandler_8cpp_source.html#l00081">AudioHandler.cpp:81</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1AudioHandler_html_a6383cf07bce3cdf18677302311e0f43a"><div class="ttname"><a href="classsdl2engine_1_1AudioHandler.html#a6383cf07bce3cdf18677302311e0f43a">sdl2engine::AudioHandler::k_infinite_loop</a></div><div class="ttdeci">static constexpr int k_infinite_loop</div><div class="ttdef"><b>Definition:</b> <a href="AudioHandler_8h_source.html#l00123">AudioHandler.h:123</a></div></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">template</span> &lt;&gt;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1AudioHandler.html#addeff3e673084c9975bca5bb38458aed">   49</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1AudioHandler.html#a8a99528c9feeb34009ed7fc3bcfe4ff4">AudioHandler&lt;AudioType::Music&gt;::Pause</a>() {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    Mix_PauseMusic();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">template</span> &lt;&gt;</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1AudioHandler.html#a128cc0017eece1a71d831e30c83e3ed5">   54</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1AudioHandler.html#a4c8fbf3b529efb47e3e31f0b77a17eae">AudioHandler&lt;AudioType::Music&gt;::Resume</a>() {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    Mix_ResumeMusic();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">template</span> &lt;&gt;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1AudioHandler.html#a0c67582ab5a6d5a32de9b19a71b1177e">   59</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1AudioHandler.html#afa5f570101608f704fd3555b9c934850">AudioHandler&lt;AudioType::Music&gt;::Stop</a>() {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    Mix_HaltMusic();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">template</span> &lt;&gt;</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1AudioHandler.html#afa4a742bbb2c13584bebcc051fdbc93b">   64</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1AudioHandler.html#a80011f3c39b3cf5eb480103eda3a4cad">AudioHandler&lt;AudioType::Music&gt;::FadeOut</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> seconds) {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> k_milliseconds = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(seconds*1000);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> k_faded = (Mix_FadeOutMusic(k_milliseconds) == 1);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">if</span>(!k_faded) {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <a class="code" href="namespacesdl2engine.html#ac31c5eafc7940521da71fab041ac0138">log_warn</a>() &lt;&lt; <span class="stringliteral">&quot;Could not fade music. Probably no music playing/already faded.&quot;</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keyword">template</span> &lt;&gt;</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1AudioHandler.html#a8bc650e14197ea1655e6d738c7014d18">   73</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classsdl2engine_1_1AudioHandler.html#a79a2eea358513edc55c91056ea972e2d">AudioHandler&lt;AudioType::Music&gt;::FadedOut</a>() {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> k_fading = (Mix_FadingMusic() == MIX_FADING_OUT);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> k_playing = (Mix_PlayingMusic() == 1);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">return</span> !k_fading &amp;&amp; !k_playing;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">// ----------------------------------------------------------- //</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">//                    Sound Effects Handling</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">// ----------------------------------------------------------- //</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keyword">template</span> &lt;&gt;</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1AudioHandler.html#adcf94bd6a774562d8525654bd81f138c">   84</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1AudioHandler.html#a25a1cf5e091c0e0b30d61d8c8ec8c022">AudioHandler&lt;AudioType::SoundEffect&gt;::Play</a>(<span class="keyword">const</span> std::string&amp; path, <span class="keyword">const</span> <span class="keywordtype">int</span> times) {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>((times == <a class="code" href="namespacesdl2engine.html#af735837a8360218dee00b102cd0e7729">k_infinite_loop</a> || times &gt;= 1), <span class="stringliteral">&quot;Must be k_infinite_loop or &gt;= 1.&quot;</span>);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> k_played_channel = Mix_PlayChannel(k_any_channel,</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <a class="code" href="classsdl2engine_1_1ResourceManager.html">ResourceManager&lt;SoundEffect&gt;::Instance</a>().Get(path)-&gt;MixChunk(), (times - 1));</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">if</span>(k_played_channel == -1) {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <a class="code" href="namespacesdl2engine.html#a5b2cd64e9633f9ecfda37e160b02852f">log_error</a>() &lt;&lt; <span class="stringliteral">&quot;Failed to play sound effect for any channel (&quot;</span> &lt;&lt; k_played_channel &lt;&lt;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="stringliteral">&quot;). &quot;</span> &lt;&lt; Mix_GetError();</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keyword">template</span> &lt;&gt;</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1AudioHandler.html#a7cbf63b2ddb8630e742a02e8c3ac5f3d">   96</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1AudioHandler.html#ac4ada745f6b3150a77d0489b5e82cb3f">AudioHandler&lt;AudioType::SoundEffect&gt;::SetVolume</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> percent) {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="comment">// No need to check for percent being above 100, SDL_Mixer already caps the volume to</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="comment">// MIX_MAX_VOLUME.</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(percent &gt;= 0  , <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(percent &lt;= 100, <span class="stringliteral">&quot;Must be &lt;= 100&quot;</span>);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> k_volume_value = percent * MIX_MAX_VOLUME/100;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    Mix_Volume(k_all_channels, k_volume_value);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="keyword">template</span> &lt;&gt;</div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1AudioHandler.html#a60ec53d6c78e3f386e3252db2b6ee661">  108</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1AudioHandler.html#a8a99528c9feeb34009ed7fc3bcfe4ff4">AudioHandler&lt;AudioType::SoundEffect&gt;::Pause</a>() {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    Mix_Pause(k_all_channels);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;}</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="keyword">template</span> &lt;&gt;</div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1AudioHandler.html#a2a600082e80c3c89cdb03d7bfafef031">  113</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1AudioHandler.html#a4c8fbf3b529efb47e3e31f0b77a17eae">AudioHandler&lt;AudioType::SoundEffect&gt;::Resume</a>() {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    Mix_Resume(k_all_channels);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="keyword">template</span> &lt;&gt;</div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1AudioHandler.html#ad480f017577815a14dc533b60c55e231">  118</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1AudioHandler.html#afa5f570101608f704fd3555b9c934850">AudioHandler&lt;AudioType::SoundEffect&gt;::Stop</a>() {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    Mix_HaltChannel(k_all_channels);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;}</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="keyword">template</span> &lt;&gt;</div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1AudioHandler.html#af5e97caa2ac73355b5a626cc802e07d6">  123</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1AudioHandler.html#a80011f3c39b3cf5eb480103eda3a4cad">AudioHandler&lt;AudioType::SoundEffect&gt;::FadeOut</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> seconds) {</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> k_milliseconds = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(seconds*1000);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    Mix_FadeOutChannel(k_all_channels, k_milliseconds);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;}</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment">// template &lt;&gt;</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="comment">// bool AudioHandler&lt;AudioType::SoundEffect&gt;::FadedOut() {</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="comment">//  return false;</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="comment">// }</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;} <span class="comment">// namespace sdl2engine</span></div>
+<div class="ttc" id="classsdl2engine_1_1AudioHandler_html_a8a99528c9feeb34009ed7fc3bcfe4ff4"><div class="ttname"><a href="classsdl2engine_1_1AudioHandler.html#a8a99528c9feeb34009ed7fc3bcfe4ff4">sdl2engine::AudioHandler::Pause</a></div><div class="ttdeci">static void Pause()</div><div class="ttdoc">Pauses audio. </div></div>
 <div class="ttc" id="namespacesdl2engine_html_a5b2cd64e9633f9ecfda37e160b02852f"><div class="ttname"><a href="namespacesdl2engine.html#a5b2cd64e9633f9ecfda37e160b02852f">sdl2engine::log_error</a></div><div class="ttdeci">constexpr log_function_ptr log_error</div><div class="ttdef"><b>Definition:</b> <a href="Logger_8h_source.html#l00085">Logger.h:85</a></div></div>
 <div class="ttc" id="AudioHandler_8h_html"><div class="ttname"><a href="AudioHandler_8h.html">AudioHandler.h</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1AudioHandler_html_afa5f570101608f704fd3555b9c934850"><div class="ttname"><a href="classsdl2engine_1_1AudioHandler.html#afa5f570101608f704fd3555b9c934850">sdl2engine::AudioHandler::Stop</a></div><div class="ttdeci">static void Stop()</div><div class="ttdoc">Stops playing the current audio. </div></div>
 <div class="ttc" id="namespacesdl2engine_html_ac31c5eafc7940521da71fab041ac0138"><div class="ttname"><a href="namespacesdl2engine.html#ac31c5eafc7940521da71fab041ac0138">sdl2engine::log_warn</a></div><div class="ttdeci">constexpr log_function_ptr log_warn</div><div class="ttdef"><b>Definition:</b> <a href="Logger_8h_source.html#l00086">Logger.h:86</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1AudioHandler_html_a5ce16cac3fac2ac39a1b369c2a6a4289"><div class="ttname"><a href="classsdl2engine_1_1AudioHandler.html#a5ce16cac3fac2ac39a1b369c2a6a4289">sdl2engine::AudioHandler::k_all_channels</a></div><div class="ttdeci">static constexpr int k_all_channels</div><div class="ttdef"><b>Definition:</b> <a href="AudioHandler_8h_source.html#l00124">AudioHandler.h:124</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1AudioHandler_html_ac49bfc265a94d2730b2b0ff17bc032bf"><div class="ttname"><a href="classsdl2engine_1_1AudioHandler.html#ac49bfc265a94d2730b2b0ff17bc032bf">sdl2engine::AudioHandler::PlaySoundEffect</a></div><div class="ttdeci">void PlaySoundEffect(const std::string &amp;path)</div><div class="ttdoc">Plays a sound effect once. </div><div class="ttdef"><b>Definition:</b> <a href="AudioHandler_8cpp_source.html#l00022">AudioHandler.cpp:22</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1AudioHandler_html_a1c7a9c8692ddd105da725626962c1b2a"><div class="ttname"><a href="classsdl2engine_1_1AudioHandler.html#a1c7a9c8692ddd105da725626962c1b2a">sdl2engine::AudioHandler::PauseEffects</a></div><div class="ttdeci">void PauseEffects()</div><div class="ttdoc">Pauses all sound effects. </div><div class="ttdef"><b>Definition:</b> <a href="AudioHandler_8cpp_source.html#l00069">AudioHandler.cpp:69</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1AudioHandler_html_a80011f3c39b3cf5eb480103eda3a4cad"><div class="ttname"><a href="classsdl2engine_1_1AudioHandler.html#a80011f3c39b3cf5eb480103eda3a4cad">sdl2engine::AudioHandler::FadeOut</a></div><div class="ttdeci">static void FadeOut(const double seconds)</div><div class="ttdoc">Gradually fades audio out. </div></div>
+<div class="ttc" id="classsdl2engine_1_1AudioHandler_html_a4c8fbf3b529efb47e3e31f0b77a17eae"><div class="ttname"><a href="classsdl2engine_1_1AudioHandler.html#a4c8fbf3b529efb47e3e31f0b77a17eae">sdl2engine::AudioHandler::Resume</a></div><div class="ttdeci">static void Resume()</div><div class="ttdoc">Resumes audio. </div></div>
+<div class="ttc" id="classsdl2engine_1_1AudioHandler_html_a25a1cf5e091c0e0b30d61d8c8ec8c022"><div class="ttname"><a href="classsdl2engine_1_1AudioHandler.html#a25a1cf5e091c0e0b30d61d8c8ec8c022">sdl2engine::AudioHandler::Play</a></div><div class="ttdeci">static void Play(const std::string &amp;path, const int times)</div><div class="ttdoc">Plays an audio a given amount of times. </div></div>
 <div class="ttc" id="SoundEffect_8h_html"><div class="ttname"><a href="SoundEffect_8h.html">SoundEffect.h</a></div></div>
 <div class="ttc" id="classsdl2engine_1_1ResourceManager_html"><div class="ttname"><a href="classsdl2engine_1_1ResourceManager.html">sdl2engine::ResourceManager</a></div><div class="ttdoc">Resource management class template. </div><div class="ttdef"><b>Definition:</b> <a href="ResourceManager_8h_source.html#l00022">ResourceManager.h:22</a></div></div>
 <div class="ttc" id="Assert_8h_html_ab1899199386b1542d1111168ca847e9c"><div class="ttname"><a href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a></div><div class="ttdeci">#define ASSERT(expression, message)</div><div class="ttdef"><b>Definition:</b> <a href="Assert_8h_source.html#l00006">Assert.h:6</a></div></div>
+<div class="ttc" id="namespacesdl2engine_html_af735837a8360218dee00b102cd0e7729"><div class="ttname"><a href="namespacesdl2engine.html#af735837a8360218dee00b102cd0e7729">sdl2engine::k_infinite_loop</a></div><div class="ttdeci">static constexpr int k_infinite_loop</div><div class="ttdef"><b>Definition:</b> <a href="AudioHandler_8h_source.html#l00007">AudioHandler.h:7</a></div></div>
 <div class="ttc" id="Assert_8h_html"><div class="ttname"><a href="Assert_8h.html">Assert.h</a></div></div>
 <div class="ttc" id="Logger_8h_html"><div class="ttname"><a href="Logger_8h.html">Logger.h</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1AudioHandler_html_ae4f8e14418b250ec944ddac4ed88b99f"><div class="ttname"><a href="classsdl2engine_1_1AudioHandler.html#ae4f8e14418b250ec944ddac4ed88b99f">sdl2engine::AudioHandler::ResumeEffects</a></div><div class="ttdeci">void ResumeEffects()</div><div class="ttdoc">Resumes all sound effects. </div><div class="ttdef"><b>Definition:</b> <a href="AudioHandler_8cpp_source.html#l00077">AudioHandler.cpp:77</a></div></div>
 <div class="ttc" id="ResourceManager_8h_html"><div class="ttname"><a href="ResourceManager_8h.html">ResourceManager.h</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1AudioHandler_html_aed3b794a8665b6518ad29aab5ce0666c"><div class="ttname"><a href="classsdl2engine_1_1AudioHandler.html#aed3b794a8665b6518ad29aab5ce0666c">sdl2engine::AudioHandler::PauseMusic</a></div><div class="ttdeci">void PauseMusic()</div><div class="ttdoc">Pauses the music. </div><div class="ttdef"><b>Definition:</b> <a href="AudioHandler_8cpp_source.html#l00059">AudioHandler.cpp:59</a></div></div>
 <div class="ttc" id="Music_8h_html"><div class="ttname"><a href="Music_8h.html">Music.h</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1AudioHandler_html_a39e33c3247ca5d8fde32ef92cecde725"><div class="ttname"><a href="classsdl2engine_1_1AudioHandler.html#a39e33c3247ca5d8fde32ef92cecde725">sdl2engine::AudioHandler::k_any_channel</a></div><div class="ttdeci">static constexpr int k_any_channel</div><div class="ttdef"><b>Definition:</b> <a href="AudioHandler_8h_source.html#l00125">AudioHandler.h:125</a></div></div>
 <div class="ttc" id="classsdl2engine_1_1ResourceManager_html_ab80e014a52a5237a000570b4ac67fcbd"><div class="ttname"><a href="classsdl2engine_1_1ResourceManager.html#ab80e014a52a5237a000570b4ac67fcbd">sdl2engine::ResourceManager::Instance</a></div><div class="ttdeci">static ResourceManager&lt; T &gt; &amp; Instance()</div><div class="ttdoc">Singleton implementation for ResourceManager. </div><div class="ttdef"><b>Definition:</b> <a href="ResourceManager_8h_source.html#l00104">ResourceManager.h:104</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1AudioHandler_html_ac059edb4173744b5b12dc918795d68cf"><div class="ttname"><a href="classsdl2engine_1_1AudioHandler.html#ac059edb4173744b5b12dc918795d68cf">sdl2engine::AudioHandler::SetMusicVolume</a></div><div class="ttdeci">void SetMusicVolume(const int percent)</div><div class="ttdoc">Sets the volume for the music. </div><div class="ttdef"><b>Definition:</b> <a href="AudioHandler_8cpp_source.html#l00037">AudioHandler.cpp:37</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1AudioHandler_html_a82f735fc18ee61c8b56ac906e97a52ea"><div class="ttname"><a href="classsdl2engine_1_1AudioHandler.html#a82f735fc18ee61c8b56ac906e97a52ea">sdl2engine::AudioHandler::StopMusic</a></div><div class="ttdeci">void StopMusic()</div><div class="ttdoc">Stops playing the current music. </div><div class="ttdef"><b>Definition:</b> <a href="AudioHandler_8cpp_source.html#l00098">AudioHandler.cpp:98</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1AudioHandler_html_adebf004b51a566247d3c011506152db1"><div class="ttname"><a href="classsdl2engine_1_1AudioHandler.html#adebf004b51a566247d3c011506152db1">sdl2engine::AudioHandler::ResumeMusic</a></div><div class="ttdeci">void ResumeMusic()</div><div class="ttdoc">Resumes the music. </div><div class="ttdef"><b>Definition:</b> <a href="AudioHandler_8cpp_source.html#l00073">AudioHandler.cpp:73</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1AudioHandler_html_a48f4f08bc26f3bf0f03a32864bf0c97c"><div class="ttname"><a href="classsdl2engine_1_1AudioHandler.html#a48f4f08bc26f3bf0f03a32864bf0c97c">sdl2engine::AudioHandler::ChangeMusic</a></div><div class="ttdeci">void ChangeMusic(const std::string &amp;path)</div><div class="ttdoc">Sets new music for given path, infinitely looping. </div><div class="ttdef"><b>Definition:</b> <a href="AudioHandler_8cpp_source.html#l00012">AudioHandler.cpp:12</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1AudioHandler_html_ac4ada745f6b3150a77d0489b5e82cb3f"><div class="ttname"><a href="classsdl2engine_1_1AudioHandler.html#ac4ada745f6b3150a77d0489b5e82cb3f">sdl2engine::AudioHandler::SetVolume</a></div><div class="ttdeci">static void SetVolume(const int percent)</div><div class="ttdoc">Sets the volume for the audio. </div></div>
+<div class="ttc" id="classsdl2engine_1_1AudioHandler_html_a79a2eea358513edc55c91056ea972e2d"><div class="ttname"><a href="classsdl2engine_1_1AudioHandler.html#a79a2eea358513edc55c91056ea972e2d">sdl2engine::AudioHandler::FadedOut</a></div><div class="ttdeci">static bool FadedOut()</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 2 2015 06:11:24 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 3 2015 16:48:50 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -1,4 +1,0 @@
-<map id="sdl2engine::AudioHandler::ChangeMusic" name="sdl2engine::AudioHandler::ChangeMusic">
-<area shape="rect" id="node3" href="$classsdl2engine_1_1AudioHandler.html#a82f735fc18ee61c8b56ac906e97a52ea" title="Stops playing the current music. " alt="" coords="224,5,395,51"/>
-<area shape="rect" id="node5" href="$classsdl2engine_1_1AudioHandler.html#aa6d8cc8ed936031cde12fbf88a8ae8c7" title="Plays music from path. " alt="" coords="224,74,395,121"/>
-</map>
