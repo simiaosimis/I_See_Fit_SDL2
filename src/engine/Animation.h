@@ -26,11 +26,6 @@ class Animation {
 			const int number_of_images, const double total_time);
 
 		/**
-		* @brief The destructor.
-		*/
-		~Animation();
-
-		/**
 		* @brief Updates the animation clip.
 		*
 		* @param clip : Reference to the clip of whatever object the animation is a part of.

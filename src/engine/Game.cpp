@@ -6,9 +6,6 @@
 #include "util/Configuration.h"
 #include "util/Logger.h"
 #include "util/Assert.h"
-// Begin Game States includes
-#include "engine/GStatePlaceholder.h"
-// End Game States includes
 
 namespace sdl2engine {
 
@@ -21,35 +18,23 @@ Game& Game::Instance() {
 }
 
 Game::Game(const ConstructorTag& private_tag) :
-	m_is_running{false},
+	m_is_running{true},
 	m_input_handler{std::make_unique<InputHandler>()},
-	m_current_state{nullptr},
 	m_window{},
-	m_game_states{}
+	m_state_manager{}
 {
 	static_cast<void>(private_tag);
-	InitializeStates();
-	m_is_running = true;
-}
-
-Game::~Game() {
-	if(m_current_state != nullptr) {
-		m_current_state->unload();
-	}
 }
 
 void Game::Run() {
 	// Load the first state of the game.
-	m_current_state = m_game_states.at(GStates::PLACEHOLDER).get();
-	ASSERT(m_current_state != nullptr, "Some game state should be loaded.");
-	m_current_state->load();
+	m_state_manager.LoadFirstState();
 
 	// Get the first game time.
 	const auto k_delta_time = 1.0 / 60.0;
 	auto total_game_time = 0.0;
 	auto accumulated_time = 0.0;
 
-	/////////////////////////////// CREATE TIMER (LAST_TIME = CLOCK::NOW)
 	Timer timer{};
 
 	// This is the main game loop.
@@ -74,7 +59,7 @@ void Game::Run() {
 				return;
 			}
 
-			m_current_state->update(k_delta_time);
+			m_state_manager.CurrentState()->Update(k_delta_time);
 
 			accumulated_time -= k_delta_time;
 			total_game_time += k_delta_time;
@@ -82,30 +67,17 @@ void Game::Run() {
 
 		// Render.
 		m_window.GetRenderer()->Clear();
-		m_current_state->render();
+		m_state_manager.CurrentState()->Render();
 		m_window.GetRenderer()->Render();
 
-		//////////////////////////////////////// RESET
 		timer.Reset();
 	}
 
 }
 
-void Game::ChangeState(const GStates game_state) {
+void Game::ChangeState(const GameStates game_state) {
 	/// @todo Implement the transition between states.
-	m_current_state->unload();
-	m_current_state = m_game_states.at(game_state).get();
-	m_current_state->load();
-}
-
-void Game::InitializeStates() {
-#define ADD_STATE(GSTATE_ENUM, GStateClass) m_game_states.emplace((GSTATE_ENUM), \
-	(std::make_unique<GStateClass>()))
-
-	// Add all the states in Game here.
-	ADD_STATE(PLACEHOLDER, GStatePlaceholder);
-
-#undef ADD_STATE
+	m_state_manager.ChangeState(game_state);
 }
 
 InputArray Game::Input() {

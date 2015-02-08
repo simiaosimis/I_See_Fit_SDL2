@@ -1,26 +1,10 @@
 #include "engine/StateGame.h"
+#include "engine/GameObject.h"
 
 namespace sdl2engine {
 
-StateGame::~StateGame() {
-
-}
-
-void StateGame::unload() {
-	cleanGameObjects();
-}
-
-void StateGame::addGameObject(GameObject* const gameObject_) {
-	this->gameObjects.push_back(gameObject_);
-}
-
-void StateGame::cleanGameObjects() {
-	for(auto gameObject : this->gameObjects) {
-		delete gameObject;
-		gameObject = nullptr;
-	}
-
-	this->gameObjects.clear();
+void StateGame::AddGameObject(GameObject* const game_object) {
+	m_game_objects.push_back(game_object);
 }
 
 } // namespace sdl2engine

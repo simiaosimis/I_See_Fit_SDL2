@@ -28,9 +28,6 @@ Animation::Animation(const int x, const int y, const int sprite_width, const int
 	ASSERT(m_animation_count >= 0	, "Must be >= 0");
 }
 
-Animation::~Animation() {
-}
-
 void Animation::Update(SDL_Rect& clip, const double delta_time) {
 	// Compare the position on the sprite with the number of positions to know if is the
 	// end of the animation.

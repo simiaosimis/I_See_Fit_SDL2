@@ -25,7 +25,7 @@ class ResourceManager final {
 		using TypePtr = std::shared_ptr<T>; /**< std::shared_ptr alias for type T */
 		using TypeMap = std::unordered_map<std::string, TypePtr>; /**< std::unordered_map
 			alias for std::string as keys and TypePtr as values */
-		struct ConstructorTag {} /**< Private tag needed to use the constructor. */;
+		struct ConstructorTag {}; /**< Private tag needed to use the constructor. */
 
 	public:
 		/**
