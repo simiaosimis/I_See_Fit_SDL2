@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v36</span>
+   &#160;<span id="projectnumber">v37</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -94,47 +94,44 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="StateGame_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="GameObject_8h.html">engine/GameObject.h</a>&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span>sdl2engine {</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1StateGame.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsdl2engine_1_1StateGame.html">StateGame</a> {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classsdl2engine_1_1StateGame.html#a5e75a0667d2d82d6bf8a4e8e8fe45dd4">~StateGame</a>();</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1StateGame.html#ade94602c8f136c12f67dc40ccc6a9669">load</a>() = 0;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1StateGame.html#a286d6924ca6e74a5850be536107f2e8b">update</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> dt_) = 0;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1StateGame.html#a2c320e3ee147659b2f4a82346f9294b0">unload</a>() = 0;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1StateGame.html#a19a86fd1f53a048d360e1f7a3f685b5e">render</a>() = 0;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1StateGame.html#ab88e41507b6d1bca27120eb947eac572">addGameObject</a>(<a class="code" href="classsdl2engine_1_1GameObject.html">GameObject</a>* <span class="keyword">const</span> gameObject_);</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span>sdl2engine {</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">class </span>GameObject;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1StateGame.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsdl2engine_1_1StateGame.html">StateGame</a> {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1StateGame.html#abe45e4ebf97c17994aecfde4e789f7bd">   18</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classsdl2engine_1_1StateGame.html#abe45e4ebf97c17994aecfde4e789f7bd">~StateGame</a>() {};</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1StateGame.html#a3bc152caedb95ce760cee495f3425ef5">Load</a>() = 0;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1StateGame.html#a8ec99d263aca2ca7cae640baa7120ee8">Unload</a>() = 0;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1StateGame.html#a03b0d87d6a6d7c2e230b3abfe143b18f">Update</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> dt) = 0;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1StateGame.html#ac9bd463b5a76a03902d854395a228314">Render</a>() = 0;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1StateGame.html#ab65a05e7a0a837465c3cf86328ee598d">cleanGameObjects</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1StateGame.html#a4bee2226f72cce784bbaa7e264c14681">AddGameObject</a>(<a class="code" href="classsdl2engine_1_1GameObject.html">GameObject</a>* <span class="keyword">const</span> game_object);</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1StateGame.html#ae72c92c6ad620e37a4d91ef44dc0bc74">   55</a></span>&#160;        std::vector&lt;GameObject*&gt; <a class="code" href="classsdl2engine_1_1StateGame.html#ae72c92c6ad620e37a4d91ef44dc0bc74">gameObjects</a>; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;};</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;} <span class="comment">// namespace sdl2engine</span></div>
-<div class="ttc" id="classsdl2engine_1_1StateGame_html_ade94602c8f136c12f67dc40ccc6a9669"><div class="ttname"><a href="classsdl2engine_1_1StateGame.html#ade94602c8f136c12f67dc40ccc6a9669">sdl2engine::StateGame::load</a></div><div class="ttdeci">virtual void load()=0</div></div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1StateGame.html#a3108f0d45d355cf1347bffe16aca1c68">   55</a></span>&#160;        std::vector&lt;GameObject*&gt; <a class="code" href="classsdl2engine_1_1StateGame.html#a3108f0d45d355cf1347bffe16aca1c68">m_game_objects</a>; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;};</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;} <span class="comment">// namespace sdl2engine</span></div>
+<div class="ttc" id="classsdl2engine_1_1StateGame_html_a4bee2226f72cce784bbaa7e264c14681"><div class="ttname"><a href="classsdl2engine_1_1StateGame.html#a4bee2226f72cce784bbaa7e264c14681">sdl2engine::StateGame::AddGameObject</a></div><div class="ttdeci">void AddGameObject(GameObject *const game_object)</div><div class="ttdoc">Adds a GameObject to the m_game_objects vector. </div><div class="ttdef"><b>Definition:</b> <a href="StateGame_8cpp_source.html#l00006">StateGame.cpp:6</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1StateGame_html_ac9bd463b5a76a03902d854395a228314"><div class="ttname"><a href="classsdl2engine_1_1StateGame.html#ac9bd463b5a76a03902d854395a228314">sdl2engine::StateGame::Render</a></div><div class="ttdeci">virtual void Render()=0</div><div class="ttdoc">Renders the state. Pure virtual function. </div></div>
+<div class="ttc" id="classsdl2engine_1_1StateGame_html_a3bc152caedb95ce760cee495f3425ef5"><div class="ttname"><a href="classsdl2engine_1_1StateGame.html#a3bc152caedb95ce760cee495f3425ef5">sdl2engine::StateGame::Load</a></div><div class="ttdeci">virtual void Load()=0</div><div class="ttdoc">Loads necessary objects. </div></div>
 <div class="ttc" id="classsdl2engine_1_1GameObject_html"><div class="ttname"><a href="classsdl2engine_1_1GameObject.html">sdl2engine::GameObject</a></div><div class="ttdef"><b>Definition:</b> <a href="GameObject_8h_source.html#l00013">GameObject.h:13</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1StateGame_html_a2c320e3ee147659b2f4a82346f9294b0"><div class="ttname"><a href="classsdl2engine_1_1StateGame.html#a2c320e3ee147659b2f4a82346f9294b0">sdl2engine::StateGame::unload</a></div><div class="ttdeci">virtual void unload()=0</div><div class="ttdef"><b>Definition:</b> <a href="StateGame_8cpp_source.html#l00009">StateGame.cpp:9</a></div></div>
-<div class="ttc" id="GameObject_8h_html"><div class="ttname"><a href="GameObject_8h.html">GameObject.h</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1StateGame_html_ae72c92c6ad620e37a4d91ef44dc0bc74"><div class="ttname"><a href="classsdl2engine_1_1StateGame.html#ae72c92c6ad620e37a4d91ef44dc0bc74">sdl2engine::StateGame::gameObjects</a></div><div class="ttdeci">std::vector&lt; GameObject * &gt; gameObjects</div><div class="ttdef"><b>Definition:</b> <a href="StateGame_8h_source.html#l00055">StateGame.h:55</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1StateGame_html_ab65a05e7a0a837465c3cf86328ee598d"><div class="ttname"><a href="classsdl2engine_1_1StateGame.html#ab65a05e7a0a837465c3cf86328ee598d">sdl2engine::StateGame::cleanGameObjects</a></div><div class="ttdeci">void cleanGameObjects()</div><div class="ttdef"><b>Definition:</b> <a href="StateGame_8cpp_source.html#l00017">StateGame.cpp:17</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1StateGame_html"><div class="ttname"><a href="classsdl2engine_1_1StateGame.html">sdl2engine::StateGame</a></div><div class="ttdef"><b>Definition:</b> <a href="StateGame_8h_source.html#l00011">StateGame.h:11</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1StateGame_html_a19a86fd1f53a048d360e1f7a3f685b5e"><div class="ttname"><a href="classsdl2engine_1_1StateGame.html#a19a86fd1f53a048d360e1f7a3f685b5e">sdl2engine::StateGame::render</a></div><div class="ttdeci">virtual void render()=0</div></div>
-<div class="ttc" id="classsdl2engine_1_1StateGame_html_a5e75a0667d2d82d6bf8a4e8e8fe45dd4"><div class="ttname"><a href="classsdl2engine_1_1StateGame.html#a5e75a0667d2d82d6bf8a4e8e8fe45dd4">sdl2engine::StateGame::~StateGame</a></div><div class="ttdeci">virtual ~StateGame()</div><div class="ttdef"><b>Definition:</b> <a href="StateGame_8cpp_source.html#l00005">StateGame.cpp:5</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1StateGame_html_ab88e41507b6d1bca27120eb947eac572"><div class="ttname"><a href="classsdl2engine_1_1StateGame.html#ab88e41507b6d1bca27120eb947eac572">sdl2engine::StateGame::addGameObject</a></div><div class="ttdeci">void addGameObject(GameObject *const gameObject_)</div><div class="ttdef"><b>Definition:</b> <a href="StateGame_8cpp_source.html#l00013">StateGame.cpp:13</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1StateGame_html_a286d6924ca6e74a5850be536107f2e8b"><div class="ttname"><a href="classsdl2engine_1_1StateGame.html#a286d6924ca6e74a5850be536107f2e8b">sdl2engine::StateGame::update</a></div><div class="ttdeci">virtual void update(const double dt_)=0</div></div>
+<div class="ttc" id="classsdl2engine_1_1StateGame_html_a03b0d87d6a6d7c2e230b3abfe143b18f"><div class="ttname"><a href="classsdl2engine_1_1StateGame.html#a03b0d87d6a6d7c2e230b3abfe143b18f">sdl2engine::StateGame::Update</a></div><div class="ttdeci">virtual void Update(const double dt)=0</div><div class="ttdoc">Update all m_game_objects. </div></div>
+<div class="ttc" id="classsdl2engine_1_1StateGame_html"><div class="ttname"><a href="classsdl2engine_1_1StateGame.html">sdl2engine::StateGame</a></div><div class="ttdoc">Parent class for other game states. </div><div class="ttdef"><b>Definition:</b> <a href="StateGame_8h_source.html#l00012">StateGame.h:12</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1StateGame_html_abe45e4ebf97c17994aecfde4e789f7bd"><div class="ttname"><a href="classsdl2engine_1_1StateGame.html#abe45e4ebf97c17994aecfde4e789f7bd">sdl2engine::StateGame::~StateGame</a></div><div class="ttdeci">virtual ~StateGame()</div><div class="ttdoc">The destructor. </div><div class="ttdef"><b>Definition:</b> <a href="StateGame_8h_source.html#l00018">StateGame.h:18</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1StateGame_html_a8ec99d263aca2ca7cae640baa7120ee8"><div class="ttname"><a href="classsdl2engine_1_1StateGame.html#a8ec99d263aca2ca7cae640baa7120ee8">sdl2engine::StateGame::Unload</a></div><div class="ttdeci">virtual void Unload()=0</div><div class="ttdoc">Unloads necessary objects. </div></div>
+<div class="ttc" id="classsdl2engine_1_1StateGame_html_a3108f0d45d355cf1347bffe16aca1c68"><div class="ttname"><a href="classsdl2engine_1_1StateGame.html#a3108f0d45d355cf1347bffe16aca1c68">sdl2engine::StateGame::m_game_objects</a></div><div class="ttdeci">std::vector&lt; GameObject * &gt; m_game_objects</div><div class="ttdef"><b>Definition:</b> <a href="StateGame_8h_source.html#l00055">StateGame.h:55</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 3 2015 23:15:27 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 8 2015 06:13:37 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

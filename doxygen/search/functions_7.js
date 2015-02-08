@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['load',['load',['../classsdl2engine_1_1GStatePlaceholder.html#a0a33c04bfe8475e4356ee9e8b75d7669',1,'sdl2engine::GStatePlaceholder::load()'],['../classsdl2engine_1_1StateGame.html#ade94602c8f136c12f67dc40ccc6a9669',1,'sdl2engine::StateGame::load()'],['../classsdl2engine_1_1ResourceManager.html#a6342e2a8f910e8521f69f5d90ee9b16c',1,'sdl2engine::ResourceManager::Load()']]],
+  ['load',['Load',['../classsdl2engine_1_1ResourceManager.html#a6342e2a8f910e8521f69f5d90ee9b16c',1,'sdl2engine::ResourceManager::Load()'],['../classsdl2engine_1_1StateGame.html#a3bc152caedb95ce760cee495f3425ef5',1,'sdl2engine::StateGame::Load()'],['../classsdl2engine_1_1Placeholder.html#a37c789e80beed5a3a8ec80c43f69e623',1,'sdl2engine::Placeholder::Load()']]],
+  ['loadfirststate',['LoadFirstState',['../classsdl2engine_1_1StateManager.html#a82af1358c2b092e10faca0ac14c29850',1,'sdl2engine::StateManager']]],
   ['loadfrom',['LoadFrom',['../classsdl2engine_1_1Sprite.html#a2d8ae44951073c4ca0d29082428ad900',1,'sdl2engine::Sprite']]],
   ['log',['log',['../namespacesdl2engine.html#adce96af93a7d3fa229b71236f2f8a59b',1,'sdl2engine']]],
   ['log_3c_20loglevel_3a_3adebug_20_3e',['log&lt; LogLevel::Debug &gt;',['../namespacesdl2engine.html#a89601785165bc49428b2ecf2ed10e0ab',1,'sdl2engine']]],

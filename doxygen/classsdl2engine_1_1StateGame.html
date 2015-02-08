@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v36</span>
+   &#160;<span id="projectnumber">v37</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -97,43 +97,50 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
+<p>Parent class for other game states.  
+ <a href="classsdl2engine_1_1StateGame.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="StateGame_8h_source.html">StateGame.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for sdl2engine::StateGame:</div>
 <div class="dyncontent">
 <div class="center"><img src="classsdl2engine_1_1StateGame__inherit__graph.png" border="0" usemap="#sdl2engine_1_1StateGame_inherit__map" alt="Inheritance graph"/></div>
 <map name="sdl2engine_1_1StateGame_inherit__map" id="sdl2engine_1_1StateGame_inherit__map">
-<area shape="rect" id="node3" href="classsdl2engine_1_1GStatePlaceholder.html" title="sdl2engine::GStatePlaceholder" alt="" coords="5,83,205,112"/></map>
+<area shape="rect" id="node3" href="classsdl2engine_1_1Placeholder.html" title="The state used for testing the engine. " alt="" coords="5,83,165,112"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5e75a0667d2d82d6bf8a4e8e8fe45dd4"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1StateGame.html#a5e75a0667d2d82d6bf8a4e8e8fe45dd4">~StateGame</a> ()</td></tr>
-<tr class="separator:a5e75a0667d2d82d6bf8a4e8e8fe45dd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade94602c8f136c12f67dc40ccc6a9669"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1StateGame.html#ade94602c8f136c12f67dc40ccc6a9669">load</a> ()=0</td></tr>
-<tr class="separator:ade94602c8f136c12f67dc40ccc6a9669"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a286d6924ca6e74a5850be536107f2e8b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1StateGame.html#a286d6924ca6e74a5850be536107f2e8b">update</a> (const double dt_)=0</td></tr>
-<tr class="separator:a286d6924ca6e74a5850be536107f2e8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c320e3ee147659b2f4a82346f9294b0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1StateGame.html#a2c320e3ee147659b2f4a82346f9294b0">unload</a> ()=0</td></tr>
-<tr class="separator:a2c320e3ee147659b2f4a82346f9294b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19a86fd1f53a048d360e1f7a3f685b5e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1StateGame.html#a19a86fd1f53a048d360e1f7a3f685b5e">render</a> ()=0</td></tr>
-<tr class="separator:a19a86fd1f53a048d360e1f7a3f685b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab88e41507b6d1bca27120eb947eac572"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1StateGame.html#ab88e41507b6d1bca27120eb947eac572">addGameObject</a> (<a class="el" href="classsdl2engine_1_1GameObject.html">GameObject</a> *const gameObject_)</td></tr>
-<tr class="separator:ab88e41507b6d1bca27120eb947eac572"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab65a05e7a0a837465c3cf86328ee598d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1StateGame.html#ab65a05e7a0a837465c3cf86328ee598d">cleanGameObjects</a> ()</td></tr>
-<tr class="separator:ab65a05e7a0a837465c3cf86328ee598d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe45e4ebf97c17994aecfde4e789f7bd"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1StateGame.html#abe45e4ebf97c17994aecfde4e789f7bd">~StateGame</a> ()</td></tr>
+<tr class="memdesc:abe45e4ebf97c17994aecfde4e789f7bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">The destructor.  <a href="#abe45e4ebf97c17994aecfde4e789f7bd">More...</a><br/></td></tr>
+<tr class="separator:abe45e4ebf97c17994aecfde4e789f7bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bc152caedb95ce760cee495f3425ef5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1StateGame.html#a3bc152caedb95ce760cee495f3425ef5">Load</a> ()=0</td></tr>
+<tr class="memdesc:a3bc152caedb95ce760cee495f3425ef5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads necessary objects.  <a href="#a3bc152caedb95ce760cee495f3425ef5">More...</a><br/></td></tr>
+<tr class="separator:a3bc152caedb95ce760cee495f3425ef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ec99d263aca2ca7cae640baa7120ee8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1StateGame.html#a8ec99d263aca2ca7cae640baa7120ee8">Unload</a> ()=0</td></tr>
+<tr class="memdesc:a8ec99d263aca2ca7cae640baa7120ee8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unloads necessary objects.  <a href="#a8ec99d263aca2ca7cae640baa7120ee8">More...</a><br/></td></tr>
+<tr class="separator:a8ec99d263aca2ca7cae640baa7120ee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03b0d87d6a6d7c2e230b3abfe143b18f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1StateGame.html#a03b0d87d6a6d7c2e230b3abfe143b18f">Update</a> (const double dt)=0</td></tr>
+<tr class="memdesc:a03b0d87d6a6d7c2e230b3abfe143b18f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update all m_game_objects.  <a href="#a03b0d87d6a6d7c2e230b3abfe143b18f">More...</a><br/></td></tr>
+<tr class="separator:a03b0d87d6a6d7c2e230b3abfe143b18f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9bd463b5a76a03902d854395a228314"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1StateGame.html#ac9bd463b5a76a03902d854395a228314">Render</a> ()=0</td></tr>
+<tr class="memdesc:ac9bd463b5a76a03902d854395a228314"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders the state. Pure virtual function.  <a href="#ac9bd463b5a76a03902d854395a228314">More...</a><br/></td></tr>
+<tr class="separator:ac9bd463b5a76a03902d854395a228314"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bee2226f72cce784bbaa7e264c14681"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1StateGame.html#a4bee2226f72cce784bbaa7e264c14681">AddGameObject</a> (<a class="el" href="classsdl2engine_1_1GameObject.html">GameObject</a> *const game_object)</td></tr>
+<tr class="memdesc:a4bee2226f72cce784bbaa7e264c14681"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a <a class="el" href="classsdl2engine_1_1GameObject.html">GameObject</a> to the m_game_objects vector.  <a href="#a4bee2226f72cce784bbaa7e264c14681">More...</a><br/></td></tr>
+<tr class="separator:a4bee2226f72cce784bbaa7e264c14681"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:ae72c92c6ad620e37a4d91ef44dc0bc74"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classsdl2engine_1_1GameObject.html">GameObject</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1StateGame.html#ae72c92c6ad620e37a4d91ef44dc0bc74">gameObjects</a></td></tr>
-<tr class="separator:ae72c92c6ad620e37a4d91ef44dc0bc74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3108f0d45d355cf1347bffe16aca1c68"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classsdl2engine_1_1GameObject.html">GameObject</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1StateGame.html#a3108f0d45d355cf1347bffe16aca1c68">m_game_objects</a></td></tr>
+<tr class="separator:a3108f0d45d355cf1347bffe16aca1c68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Parent class for other game states. </p>
 
-<p>Definition at line <a class="el" href="StateGame_8h_source.html#l00011">11</a> of file <a class="el" href="StateGame_8h_source.html">StateGame.h</a>.</p>
+<p>Definition at line <a class="el" href="StateGame_8h_source.html#l00012">12</a> of file <a class="el" href="StateGame_8h_source.html">StateGame.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a5e75a0667d2d82d6bf8a4e8e8fe45dd4"></a>
+<a class="anchor" id="abe45e4ebf97c17994aecfde4e789f7bd"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -141,7 +148,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">sdl2engine::StateGame::~StateGame </td>
+          <td class="memname">virtual sdl2engine::StateGame::~StateGame </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -149,64 +156,39 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+
 <p>The destructor. </p>
 
-<p>Definition at line <a class="el" href="StateGame_8cpp_source.html#l00005">5</a> of file <a class="el" href="StateGame_8cpp_source.html">StateGame.cpp</a>.</p>
+<p>Definition at line <a class="el" href="StateGame_8h_source.html#l00018">18</a> of file <a class="el" href="StateGame_8h_source.html">StateGame.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="ab88e41507b6d1bca27120eb947eac572"></a>
+<a class="anchor" id="a4bee2226f72cce784bbaa7e264c14681"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void sdl2engine::StateGame::addGameObject </td>
+          <td class="memname">void sdl2engine::StateGame::AddGameObject </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classsdl2engine_1_1GameObject.html">GameObject</a> *const&#160;</td>
-          <td class="paramname"><em>gameObject_</em></td><td>)</td>
+          <td class="paramname"><em>game_object</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Adds a <a class="el" href="classsdl2engine_1_1GameObject.html">GameObject</a> to the gameObjects vector. </p>
 
-<p>Definition at line <a class="el" href="StateGame_8cpp_source.html#l00013">13</a> of file <a class="el" href="StateGame_8cpp_source.html">StateGame.cpp</a>.</p>
+<p>Adds a <a class="el" href="classsdl2engine_1_1GameObject.html">GameObject</a> to the m_game_objects vector. </p>
 
-</div>
-</div>
-<a class="anchor" id="ab65a05e7a0a837465c3cf86328ee598d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void sdl2engine::StateGame::cleanGameObjects </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Deletes all the gameObjects inside the gameObjects vector. </p>
-
-<p>Definition at line <a class="el" href="StateGame_8cpp_source.html#l00017">17</a> of file <a class="el" href="StateGame_8cpp_source.html">StateGame.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classsdl2engine_1_1StateGame_ab65a05e7a0a837465c3cf86328ee598d_icgraph.png" border="0" usemap="#classsdl2engine_1_1StateGame_ab65a05e7a0a837465c3cf86328ee598d_icgraph" alt=""/></div>
-<map name="classsdl2engine_1_1StateGame_ab65a05e7a0a837465c3cf86328ee598d_icgraph" id="classsdl2engine_1_1StateGame_ab65a05e7a0a837465c3cf86328ee598d_icgraph">
-<area shape="rect" id="node3" href="classsdl2engine_1_1StateGame.html#a2c320e3ee147659b2f4a82346f9294b0" title="sdl2engine::StateGame\l::unload" alt="" coords="215,58,372,105"/><area shape="rect" id="node5" href="classsdl2engine_1_1Game.html#aa00edafd604842aa8e1ef5652131c76a" title="The destructor. " alt="" coords="433,5,612,35"/><area shape="rect" id="node7" href="classsdl2engine_1_1Game.html#a71f2db5dc9bb418212fe60ee1ab73592" title="Sets the current game state. " alt="" coords="433,58,612,105"/><area shape="rect" id="node9" href="classsdl2engine_1_1GStatePlaceholder.html#ac0ef624166f97b63f031a75aa4087e04" title="sdl2engine::GStatePlaceholder\l::unload" alt="" coords="423,127,623,174"/></map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="StateGame_8cpp_source.html#l00006">6</a> of file <a class="el" href="StateGame_8cpp_source.html">StateGame.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ade94602c8f136c12f67dc40ccc6a9669"></a>
+<a class="anchor" id="a3bc152caedb95ce760cee495f3425ef5"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -214,7 +196,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void sdl2engine::StateGame::load </td>
+          <td class="memname">virtual void sdl2engine::StateGame::Load </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -226,22 +208,24 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Loads necessary objects. Pure virtual function. Purpose is to load all things relevant to the state. </p>
 
-<p>Implemented in <a class="el" href="classsdl2engine_1_1GStatePlaceholder.html#a0a33c04bfe8475e4356ee9e8b75d7669">sdl2engine::GStatePlaceholder</a>.</p>
+<p>Loads necessary objects. </p>
+<p>Pure virtual function. Purpose is to load all things relevant to the state. </p>
+
+<p>Implemented in <a class="el" href="classsdl2engine_1_1Placeholder.html#a37c789e80beed5a3a8ec80c43f69e623">sdl2engine::Placeholder</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classsdl2engine_1_1StateGame_ade94602c8f136c12f67dc40ccc6a9669_icgraph.png" border="0" usemap="#classsdl2engine_1_1StateGame_ade94602c8f136c12f67dc40ccc6a9669_icgraph" alt=""/></div>
-<map name="classsdl2engine_1_1StateGame_ade94602c8f136c12f67dc40ccc6a9669_icgraph" id="classsdl2engine_1_1StateGame_ade94602c8f136c12f67dc40ccc6a9669_icgraph">
-<area shape="rect" id="node3" href="classsdl2engine_1_1Game.html#aa4fa7ae90d7c62dfddeb16f1737c23e3" title="The main game loop. " alt="" coords="225,5,383,35"/><area shape="rect" id="node7" href="classsdl2engine_1_1Game.html#a71f2db5dc9bb418212fe60ee1ab73592" title="Sets the current game state. " alt="" coords="215,58,393,105"/><area shape="rect" id="node5" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="443,5,493,35"/></map>
+<div class="center"><img src="classsdl2engine_1_1StateGame_a3bc152caedb95ce760cee495f3425ef5_icgraph.png" border="0" usemap="#classsdl2engine_1_1StateGame_a3bc152caedb95ce760cee495f3425ef5_icgraph" alt=""/></div>
+<map name="classsdl2engine_1_1StateGame_a3bc152caedb95ce760cee495f3425ef5_icgraph" id="classsdl2engine_1_1StateGame_a3bc152caedb95ce760cee495f3425ef5_icgraph">
+<area shape="rect" id="node3" href="classsdl2engine_1_1StateManager.html#ad44a9e633d8cb8fb478e172cb1396811" title="Sets the current game state. " alt="" coords="213,5,387,51"/><area shape="rect" id="node7" href="classsdl2engine_1_1StateManager.html#a82af1358c2b092e10faca0ac14c29850" title="Loads first state of the game. " alt="" coords="213,74,387,121"/><area shape="rect" id="node5" href="classsdl2engine_1_1Game.html#a7bb96d640b3cf11c0c1ec4faea63ec52" title="Sets the current game state. " alt="" coords="436,5,615,51"/><area shape="rect" id="node9" href="classsdl2engine_1_1Game.html#aa4fa7ae90d7c62dfddeb16f1737c23e3" title="The main game loop. " alt="" coords="447,83,604,112"/><area shape="rect" id="node11" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="664,83,715,112"/></map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="a19a86fd1f53a048d360e1f7a3f685b5e"></a>
+<a class="anchor" id="ac9bd463b5a76a03902d854395a228314"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -249,7 +233,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void sdl2engine::StateGame::render </td>
+          <td class="memname">virtual void sdl2engine::StateGame::Render </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -261,22 +245,23 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
 <p>Renders the state. Pure virtual function. </p>
 
-<p>Implemented in <a class="el" href="classsdl2engine_1_1GStatePlaceholder.html#ab503edaa692d97faebebe28e51fc5815">sdl2engine::GStatePlaceholder</a>.</p>
+<p>Implemented in <a class="el" href="classsdl2engine_1_1Placeholder.html#a2fede2d358bc8efbef6da0e6901da58b">sdl2engine::Placeholder</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classsdl2engine_1_1StateGame_a19a86fd1f53a048d360e1f7a3f685b5e_icgraph.png" border="0" usemap="#classsdl2engine_1_1StateGame_a19a86fd1f53a048d360e1f7a3f685b5e_icgraph" alt=""/></div>
-<map name="classsdl2engine_1_1StateGame_a19a86fd1f53a048d360e1f7a3f685b5e_icgraph" id="classsdl2engine_1_1StateGame_a19a86fd1f53a048d360e1f7a3f685b5e_icgraph">
+<div class="center"><img src="classsdl2engine_1_1StateGame_ac9bd463b5a76a03902d854395a228314_icgraph.png" border="0" usemap="#classsdl2engine_1_1StateGame_ac9bd463b5a76a03902d854395a228314_icgraph" alt=""/></div>
+<map name="classsdl2engine_1_1StateGame_ac9bd463b5a76a03902d854395a228314_icgraph" id="classsdl2engine_1_1StateGame_ac9bd463b5a76a03902d854395a228314_icgraph">
 <area shape="rect" id="node3" href="classsdl2engine_1_1Game.html#aa4fa7ae90d7c62dfddeb16f1737c23e3" title="The main game loop. " alt="" coords="215,13,372,43"/><area shape="rect" id="node5" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="421,13,472,43"/></map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="a2c320e3ee147659b2f4a82346f9294b0"></a>
+<a class="anchor" id="a8ec99d263aca2ca7cae640baa7120ee8"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -284,7 +269,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void sdl2engine::StateGame::unload </td>
+          <td class="memname">virtual void sdl2engine::StateGame::Unload </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -296,33 +281,24 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Unloads necessary objects. Purpose is to unload whatever was previously loaded. </p>
 
-<p>Implemented in <a class="el" href="classsdl2engine_1_1GStatePlaceholder.html#ac0ef624166f97b63f031a75aa4087e04">sdl2engine::GStatePlaceholder</a>.</p>
+<p>Unloads necessary objects. </p>
+<p>Purpose is to unload whatever was previously loaded. </p>
 
-<p>Definition at line <a class="el" href="StateGame_8cpp_source.html#l00009">9</a> of file <a class="el" href="StateGame_8cpp_source.html">StateGame.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classsdl2engine_1_1StateGame_a2c320e3ee147659b2f4a82346f9294b0_cgraph.png" border="0" usemap="#classsdl2engine_1_1StateGame_a2c320e3ee147659b2f4a82346f9294b0_cgraph" alt=""/></div>
-<map name="classsdl2engine_1_1StateGame_a2c320e3ee147659b2f4a82346f9294b0_cgraph" id="classsdl2engine_1_1StateGame_a2c320e3ee147659b2f4a82346f9294b0_cgraph">
-<area shape="rect" id="node3" href="classsdl2engine_1_1StateGame.html#ab65a05e7a0a837465c3cf86328ee598d" title="sdl2engine::StateGame\l::cleanGameObjects" alt="" coords="215,5,372,51"/></map>
-</div>
-</p>
+<p>Implemented in <a class="el" href="classsdl2engine_1_1Placeholder.html#a59b1b60fc9a6d2a5b79d035f6d8907a5">sdl2engine::Placeholder</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classsdl2engine_1_1StateGame_a2c320e3ee147659b2f4a82346f9294b0_icgraph.png" border="0" usemap="#classsdl2engine_1_1StateGame_a2c320e3ee147659b2f4a82346f9294b0_icgraph" alt=""/></div>
-<map name="classsdl2engine_1_1StateGame_a2c320e3ee147659b2f4a82346f9294b0_icgraph" id="classsdl2engine_1_1StateGame_a2c320e3ee147659b2f4a82346f9294b0_icgraph">
-<area shape="rect" id="node3" href="classsdl2engine_1_1Game.html#aa00edafd604842aa8e1ef5652131c76a" title="The destructor. " alt="" coords="225,5,404,35"/><area shape="rect" id="node5" href="classsdl2engine_1_1Game.html#a71f2db5dc9bb418212fe60ee1ab73592" title="Sets the current game state. " alt="" coords="225,58,404,105"/><area shape="rect" id="node7" href="classsdl2engine_1_1GStatePlaceholder.html#ac0ef624166f97b63f031a75aa4087e04" title="sdl2engine::GStatePlaceholder\l::unload" alt="" coords="215,127,415,174"/></map>
+<div class="center"><img src="classsdl2engine_1_1StateGame_a8ec99d263aca2ca7cae640baa7120ee8_icgraph.png" border="0" usemap="#classsdl2engine_1_1StateGame_a8ec99d263aca2ca7cae640baa7120ee8_icgraph" alt=""/></div>
+<map name="classsdl2engine_1_1StateGame_a8ec99d263aca2ca7cae640baa7120ee8_icgraph" id="classsdl2engine_1_1StateGame_a8ec99d263aca2ca7cae640baa7120ee8_icgraph">
+<area shape="rect" id="node3" href="classsdl2engine_1_1StateManager.html#ac49e6a90b4516fbb41ddd9689635e460" title="The destructor. " alt="" coords="213,5,387,51"/><area shape="rect" id="node5" href="classsdl2engine_1_1StateManager.html#ad44a9e633d8cb8fb478e172cb1396811" title="Sets the current game state. " alt="" coords="213,74,387,121"/><area shape="rect" id="node7" href="classsdl2engine_1_1Game.html#a7bb96d640b3cf11c0c1ec4faea63ec52" title="Sets the current game state. " alt="" coords="436,74,615,121"/></map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="a286d6924ca6e74a5850be536107f2e8b"></a>
+<a class="anchor" id="a03b0d87d6a6d7c2e230b3abfe143b18f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -330,10 +306,10 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void sdl2engine::StateGame::update </td>
+          <td class="memname">virtual void sdl2engine::StateGame::Update </td>
           <td>(</td>
           <td class="paramtype">const double&#160;</td>
-          <td class="paramname"><em>dt_</em></td><td>)</td>
+          <td class="paramname"><em>dt</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -343,21 +319,23 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Update all gameObjects. Pure virtual function. Purpose is to update all the gameObjects in the vector. </p>
+
+<p>Update all m_game_objects. </p>
+<p>Pure virtual function. Purpose is to update all the m_game_objects in the vector.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">dt_</td><td>: Delta time. Time elapsed between one frame and the other. </td></tr>
+    <tr><td class="paramname">dt</td><td>: Delta time. Time elapsed between one frame and the other. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classsdl2engine_1_1GStatePlaceholder.html#a702c19e5680ab65e13aede54433a6bdd">sdl2engine::GStatePlaceholder</a>.</p>
+<p>Implemented in <a class="el" href="classsdl2engine_1_1Placeholder.html#ab1183e05f8c96177c2925f02db48e25b">sdl2engine::Placeholder</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classsdl2engine_1_1StateGame_a286d6924ca6e74a5850be536107f2e8b_icgraph.png" border="0" usemap="#classsdl2engine_1_1StateGame_a286d6924ca6e74a5850be536107f2e8b_icgraph" alt=""/></div>
-<map name="classsdl2engine_1_1StateGame_a286d6924ca6e74a5850be536107f2e8b_icgraph" id="classsdl2engine_1_1StateGame_a286d6924ca6e74a5850be536107f2e8b_icgraph">
+<div class="center"><img src="classsdl2engine_1_1StateGame_a03b0d87d6a6d7c2e230b3abfe143b18f_icgraph.png" border="0" usemap="#classsdl2engine_1_1StateGame_a03b0d87d6a6d7c2e230b3abfe143b18f_icgraph" alt=""/></div>
+<map name="classsdl2engine_1_1StateGame_a03b0d87d6a6d7c2e230b3abfe143b18f_icgraph" id="classsdl2engine_1_1StateGame_a03b0d87d6a6d7c2e230b3abfe143b18f_icgraph">
 <area shape="rect" id="node3" href="classsdl2engine_1_1Game.html#aa4fa7ae90d7c62dfddeb16f1737c23e3" title="The main game loop. " alt="" coords="215,13,372,43"/><area shape="rect" id="node5" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="421,13,472,43"/></map>
 </div>
 </p>
@@ -365,7 +343,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Field Documentation</h2>
-<a class="anchor" id="ae72c92c6ad620e37a4d91ef44dc0bc74"></a>
+<a class="anchor" id="a3108f0d45d355cf1347bffe16aca1c68"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -373,7 +351,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="classsdl2engine_1_1GameObject.html">GameObject</a>*&gt; sdl2engine::StateGame::gameObjects</td>
+          <td class="memname">std::vector&lt;<a class="el" href="classsdl2engine_1_1GameObject.html">GameObject</a>*&gt; sdl2engine::StateGame::m_game_objects</td>
         </tr>
       </table>
   </td>
@@ -395,7 +373,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 3 2015 23:15:27 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 8 2015 06:13:37 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

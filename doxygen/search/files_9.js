@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['welcome_2emd',['WELCOME.md',['../WELCOME_8md.html',1,'']]],
-  ['window_2ecpp',['Window.cpp',['../Window_8cpp.html',1,'']]],
-  ['window_2eh',['Window.h',['../Window_8h.html',1,'']]]
+  ['timer_2ecpp',['Timer.cpp',['../Timer_8cpp.html',1,'']]],
+  ['timer_2eh',['Timer.h',['../Timer_8h.html',1,'']]]
 ];

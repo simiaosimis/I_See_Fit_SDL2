@@ -2,21 +2,23 @@
 <area shape="rect" id="node3" href="$classsdl2engine_1_1Configuration.html#a4d423870232879eb825bf2b207958669" title="sdl2engine::Configuration\l::Initialize" alt="" coords="113,117,281,163"/>
 <area shape="rect" id="node5" href="$namespacesdl2engine_1_1sdl.html#a500dd363b9ca16d441249ee8ab7c5e9f" title="The system initializer. " alt="" coords="115,187,280,216"/>
 <area shape="rect" id="node26" href="$classsdl2engine_1_1Game.html#a850158cf352e293eb49a4910c6f5cc21" title="Singleton implementation for Game. " alt="" coords="105,240,289,269"/>
-<area shape="rect" id="node28" href="$classsdl2engine_1_1Game.html#aa4fa7ae90d7c62dfddeb16f1737c23e3" title="The main game loop. " alt="" coords="119,517,276,547"/>
-<area shape="rect" id="node7" href="$namespacesdl2engine_1_1sdl_1_1detail.html#a6064ba7826dcf1ec4da9aca46f58cce5" title="sdl2engine::sdl::detail\l::SdlVideoDrivers" alt="" coords="347,5,493,51"/>
-<area shape="rect" id="node9" href="$namespacesdl2engine_1_1sdl_1_1detail.html#a1c78fcb7bd8734616488de02cce84a05" title="sdl2engine::sdl::detail\l::SdlAudioDrivers" alt="" coords="347,74,493,121"/>
-<area shape="rect" id="node11" href="$namespacesdl2engine_1_1sdl_1_1detail.html#a65add4457525d6e24b3a2c239919cf1c" title="sdl2engine::sdl::detail\l::SdlRenderDrivers" alt="" coords="347,143,493,190"/>
-<area shape="rect" id="node19" href="$namespacesdl2engine_1_1sdl_1_1detail.html#af6d60502e741bdb14ad61b992fbd1af3" title="sdl2engine::sdl::detail\l::SdlDisplayModes" alt="" coords="347,213,493,259"/>
-<area shape="rect" id="node24" href="$namespacesdl2engine_1_1sdl_1_1detail.html#ad685ff2d863169e0028a8c8e8d971cc9" title="sdl2engine::sdl::detail\l::SdlAudioDevices" alt="" coords="347,282,493,329"/>
-<area shape="rect" id="node13" href="$namespacesdl2engine_1_1sdl_1_1detail.html#ad04c987675e6478cb7e788a66bc0eda3" title="sdl2engine::sdl::detail\l::RendererInfoToString" alt="" coords="549,143,704,190"/>
-<area shape="rect" id="node15" href="$namespacesdl2engine_1_1sdl_1_1detail.html#a8307caed513d913a98061717be8fd89f" title="sdl2engine::sdl::detail\l::RendererFlagsToString" alt="" coords="753,139,916,186"/>
-<area shape="rect" id="node17" href="$namespacesdl2engine_1_1sdl_1_1detail.html#a94a9bfdeeb1f8528d9cccb3572c36a9a" title="sdl2engine::sdl::detail\l::PixelFormatToString" alt="" coords="760,209,909,255"/>
-<area shape="rect" id="node22" href="$namespacesdl2engine_1_1sdl_1_1detail.html#a623f4d5fe0026d3700c982868751621d" title="sdl2engine::sdl::detail\l::EqualDisplayModes" alt="" coords="553,269,700,315"/>
-<area shape="rect" id="node30" href="$classsdl2engine_1_1StateGame.html#ade94602c8f136c12f67dc40ccc6a9669" title="sdl2engine::StateGame\l::load" alt="" coords="341,351,499,398"/>
-<area shape="rect" id="node32" href="$classsdl2engine_1_1Game.html#adcd0f476137568967aed69fe800805a0" title="Stops execution and closes the game. " alt="" coords="339,421,501,451"/>
-<area shape="rect" id="node34" href="$classsdl2engine_1_1StateGame.html#a286d6924ca6e74a5850be536107f2e8b" title="sdl2engine::StateGame\l::update" alt="" coords="341,474,499,521"/>
-<area shape="rect" id="node36" href="$classsdl2engine_1_1Window.html#ad37ec5bd73b7688c8b3bbd65bd62b560" title="sdl2engine::Window\l::GetRenderer" alt="" coords="351,543,489,590"/>
-<area shape="rect" id="node38" href="$classsdl2engine_1_1Renderer.html#a8fb21b238a2a807c6c650c54239a823c" title="Clears previous rendering. " alt="" coords="348,613,492,659"/>
-<area shape="rect" id="node40" href="$classsdl2engine_1_1StateGame.html#a19a86fd1f53a048d360e1f7a3f685b5e" title="sdl2engine::StateGame\l::render" alt="" coords="341,682,499,729"/>
-<area shape="rect" id="node42" href="$classsdl2engine_1_1Renderer.html#af016a3209a0768f7db19c38ab9489068" title="Renders everything drawn in a frame. " alt="" coords="348,751,492,798"/>
+<area shape="rect" id="node28" href="$classsdl2engine_1_1Game.html#aa4fa7ae90d7c62dfddeb16f1737c23e3" title="The main game loop. " alt="" coords="119,552,276,581"/>
+<area shape="rect" id="node7" href="$namespacesdl2engine_1_1sdl_1_1detail.html#a6064ba7826dcf1ec4da9aca46f58cce5" title="sdl2engine::sdl::detail\l::SdlVideoDrivers" alt="" coords="352,5,499,51"/>
+<area shape="rect" id="node9" href="$namespacesdl2engine_1_1sdl_1_1detail.html#a1c78fcb7bd8734616488de02cce84a05" title="sdl2engine::sdl::detail\l::SdlAudioDrivers" alt="" coords="352,74,499,121"/>
+<area shape="rect" id="node11" href="$namespacesdl2engine_1_1sdl_1_1detail.html#a65add4457525d6e24b3a2c239919cf1c" title="sdl2engine::sdl::detail\l::SdlRenderDrivers" alt="" coords="352,143,499,190"/>
+<area shape="rect" id="node19" href="$namespacesdl2engine_1_1sdl_1_1detail.html#af6d60502e741bdb14ad61b992fbd1af3" title="sdl2engine::sdl::detail\l::SdlDisplayModes" alt="" coords="352,213,499,259"/>
+<area shape="rect" id="node24" href="$namespacesdl2engine_1_1sdl_1_1detail.html#ad685ff2d863169e0028a8c8e8d971cc9" title="sdl2engine::sdl::detail\l::SdlAudioDevices" alt="" coords="352,282,499,329"/>
+<area shape="rect" id="node13" href="$namespacesdl2engine_1_1sdl_1_1detail.html#ad04c987675e6478cb7e788a66bc0eda3" title="sdl2engine::sdl::detail\l::RendererInfoToString" alt="" coords="563,143,717,190"/>
+<area shape="rect" id="node15" href="$namespacesdl2engine_1_1sdl_1_1detail.html#a8307caed513d913a98061717be8fd89f" title="sdl2engine::sdl::detail\l::RendererFlagsToString" alt="" coords="769,139,932,186"/>
+<area shape="rect" id="node17" href="$namespacesdl2engine_1_1sdl_1_1detail.html#a94a9bfdeeb1f8528d9cccb3572c36a9a" title="sdl2engine::sdl::detail\l::PixelFormatToString" alt="" coords="776,209,925,255"/>
+<area shape="rect" id="node22" href="$namespacesdl2engine_1_1sdl_1_1detail.html#a623f4d5fe0026d3700c982868751621d" title="sdl2engine::sdl::detail\l::EqualDisplayModes" alt="" coords="567,269,713,315"/>
+<area shape="rect" id="node30" href="$classsdl2engine_1_1StateManager.html#a82af1358c2b092e10faca0ac14c29850" title="Loads first state of the game. " alt="" coords="339,351,512,398"/>
+<area shape="rect" id="node34" href="$classsdl2engine_1_1Game.html#adcd0f476137568967aed69fe800805a0" title="Stops execution and closes the game. " alt="" coords="344,421,507,451"/>
+<area shape="rect" id="node36" href="$classsdl2engine_1_1StateManager.html#aa7161c44ad5dc61220ca5711514d23d2" title="sdl2engine::StateManager\l::CurrentState" alt="" coords="339,474,512,521"/>
+<area shape="rect" id="node38" href="$classsdl2engine_1_1StateGame.html#a03b0d87d6a6d7c2e230b3abfe143b18f" title="Update all m_game_objects. " alt="" coords="347,543,504,590"/>
+<area shape="rect" id="node40" href="$classsdl2engine_1_1Window.html#ad37ec5bd73b7688c8b3bbd65bd62b560" title="sdl2engine::Window\l::GetRenderer" alt="" coords="356,613,495,659"/>
+<area shape="rect" id="node42" href="$classsdl2engine_1_1Renderer.html#a8fb21b238a2a807c6c650c54239a823c" title="Clears previous rendering. " alt="" coords="353,682,497,729"/>
+<area shape="rect" id="node44" href="$classsdl2engine_1_1StateGame.html#ac9bd463b5a76a03902d854395a228314" title="Renders the state. Pure virtual function. " alt="" coords="347,751,504,798"/>
+<area shape="rect" id="node46" href="$classsdl2engine_1_1Renderer.html#af016a3209a0768f7db19c38ab9489068" title="Renders everything drawn in a frame. " alt="" coords="353,821,497,867"/>
+<area shape="rect" id="node32" href="$classsdl2engine_1_1StateGame.html#a3bc152caedb95ce760cee495f3425ef5" title="Loads necessary objects. " alt="" coords="561,351,719,398"/>
 </map>

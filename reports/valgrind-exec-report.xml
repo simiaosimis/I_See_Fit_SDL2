@@ -12,8 +12,8 @@
   <line>Command: /home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</line>
 </preamble>
 
-<pid>15078</pid>
-<ppid>15055</ppid>
+<pid>15315</pid>
+<ppid>15292</ppid>
 <tool>memcheck</tool>
 
 <args>
@@ -32,7 +32,7 @@
 
 <status>
   <state>RUNNING</state>
-  <time>00:00:00:00.129 </time>
+  <time>00:00:00:00.122 </time>
 </status>
 
 <error>
@@ -54,7 +54,7 @@
       <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
     </frame>
     <frame>
-      <ip>0x46361B</ip>
+      <ip>0x446A2B</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>sdl2engine::Renderer::Renderer(SDL_Window*, unsigned int)</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src/graphics</dir>
@@ -62,7 +62,7 @@
       <line>9</line>
     </frame>
     <frame>
-      <ip>0x461116</ip>
+      <ip>0x446276</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>sdl2engine::Window::Create()</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src/graphics</dir>
@@ -70,7 +70,7 @@
       <line>45</line>
     </frame>
     <frame>
-      <ip>0x460EB8</ip>
+      <ip>0x446018</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>sdl2engine::Window::Window()</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src/graphics</dir>
@@ -78,28 +78,28 @@
       <line>12</line>
     </frame>
     <frame>
-      <ip>0x43DC47</ip>
+      <ip>0x4440CB</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>sdl2engine::Game::Game(sdl2engine::Game::ConstructorTag const&amp;)</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src/engine</dir>
       <file>Game.cpp</file>
-      <line>28</line>
+      <line>24</line>
     </frame>
     <frame>
-      <ip>0x43E8D3</ip>
+      <ip>0x444987</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>std::_MakeUniq&lt;sdl2engine::Game&gt;::__single_object std::make_unique&lt;sdl2engine::Game, sdl2engine::Game::ConstructorTag&gt;(sdl2engine::Game::ConstructorTag&amp;&amp;)</fn>
     </frame>
     <frame>
-      <ip>0x43DAFB</ip>
+      <ip>0x443F8B</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>sdl2engine::Game::Instance()</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src/engine</dir>
       <file>Game.cpp</file>
-      <line>19</line>
+      <line>16</line>
     </frame>
     <frame>
-      <ip>0x43C77E</ip>
+      <ip>0x43AD8E</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>main</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src</dir>
@@ -135,7 +135,7 @@
       <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
     </frame>
     <frame>
-      <ip>0x46361B</ip>
+      <ip>0x446A2B</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>sdl2engine::Renderer::Renderer(SDL_Window*, unsigned int)</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src/graphics</dir>
@@ -143,7 +143,7 @@
       <line>9</line>
     </frame>
     <frame>
-      <ip>0x461116</ip>
+      <ip>0x446276</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>sdl2engine::Window::Create()</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src/graphics</dir>
@@ -151,7 +151,7 @@
       <line>45</line>
     </frame>
     <frame>
-      <ip>0x460EB8</ip>
+      <ip>0x446018</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>sdl2engine::Window::Window()</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src/graphics</dir>
@@ -159,28 +159,28 @@
       <line>12</line>
     </frame>
     <frame>
-      <ip>0x43DC47</ip>
+      <ip>0x4440CB</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>sdl2engine::Game::Game(sdl2engine::Game::ConstructorTag const&amp;)</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src/engine</dir>
       <file>Game.cpp</file>
-      <line>28</line>
+      <line>24</line>
     </frame>
     <frame>
-      <ip>0x43E8D3</ip>
+      <ip>0x444987</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>std::_MakeUniq&lt;sdl2engine::Game&gt;::__single_object std::make_unique&lt;sdl2engine::Game, sdl2engine::Game::ConstructorTag&gt;(sdl2engine::Game::ConstructorTag&amp;&amp;)</fn>
     </frame>
     <frame>
-      <ip>0x43DAFB</ip>
+      <ip>0x443F8B</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>sdl2engine::Game::Instance()</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src/engine</dir>
       <file>Game.cpp</file>
-      <line>19</line>
+      <line>16</line>
     </frame>
     <frame>
-      <ip>0x43C77E</ip>
+      <ip>0x43AD8E</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>main</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src</dir>
@@ -240,7 +240,7 @@
       <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
     </frame>
     <frame>
-      <ip>0x46361B</ip>
+      <ip>0x446A2B</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>sdl2engine::Renderer::Renderer(SDL_Window*, unsigned int)</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src/graphics</dir>
@@ -248,7 +248,7 @@
       <line>9</line>
     </frame>
     <frame>
-      <ip>0x461116</ip>
+      <ip>0x446276</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>sdl2engine::Window::Create()</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src/graphics</dir>
@@ -256,7 +256,7 @@
       <line>45</line>
     </frame>
     <frame>
-      <ip>0x460EB8</ip>
+      <ip>0x446018</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>sdl2engine::Window::Window()</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src/graphics</dir>
@@ -264,15 +264,15 @@
       <line>12</line>
     </frame>
     <frame>
-      <ip>0x43DC47</ip>
+      <ip>0x4440CB</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>sdl2engine::Game::Game(sdl2engine::Game::ConstructorTag const&amp;)</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src/engine</dir>
       <file>Game.cpp</file>
-      <line>28</line>
+      <line>24</line>
     </frame>
     <frame>
-      <ip>0x43E8D3</ip>
+      <ip>0x444987</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>std::_MakeUniq&lt;sdl2engine::Game&gt;::__single_object std::make_unique&lt;sdl2engine::Game, sdl2engine::Game::ConstructorTag&gt;(sdl2engine::Game::ConstructorTag&amp;&amp;)</fn>
     </frame>
@@ -337,7 +337,7 @@
       <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
     </frame>
     <frame>
-      <ip>0x46361B</ip>
+      <ip>0x446A2B</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>sdl2engine::Renderer::Renderer(SDL_Window*, unsigned int)</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src/graphics</dir>
@@ -345,7 +345,7 @@
       <line>9</line>
     </frame>
     <frame>
-      <ip>0x461116</ip>
+      <ip>0x446276</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>sdl2engine::Window::Create()</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src/graphics</dir>
@@ -353,7 +353,7 @@
       <line>45</line>
     </frame>
     <frame>
-      <ip>0x460EB8</ip>
+      <ip>0x446018</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>sdl2engine::Window::Window()</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src/graphics</dir>
@@ -361,12 +361,12 @@
       <line>12</line>
     </frame>
     <frame>
-      <ip>0x43DC47</ip>
+      <ip>0x4440CB</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>sdl2engine::Game::Game(sdl2engine::Game::ConstructorTag const&amp;)</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src/engine</dir>
       <file>Game.cpp</file>
-      <line>28</line>
+      <line>24</line>
     </frame>
   </stack>
   <auxwhat>Uninitialised value was created by a stack allocation</auxwhat>
@@ -429,7 +429,7 @@
       <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
     </frame>
     <frame>
-      <ip>0x46361B</ip>
+      <ip>0x446A2B</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>sdl2engine::Renderer::Renderer(SDL_Window*, unsigned int)</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src/graphics</dir>
@@ -437,7 +437,7 @@
       <line>9</line>
     </frame>
     <frame>
-      <ip>0x461116</ip>
+      <ip>0x446276</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>sdl2engine::Window::Create()</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src/graphics</dir>
@@ -445,7 +445,7 @@
       <line>45</line>
     </frame>
     <frame>
-      <ip>0x460EB8</ip>
+      <ip>0x446018</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>sdl2engine::Window::Window()</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src/graphics</dir>
@@ -453,12 +453,12 @@
       <line>12</line>
     </frame>
     <frame>
-      <ip>0x43DC47</ip>
+      <ip>0x4440CB</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>sdl2engine::Game::Game(sdl2engine::Game::ConstructorTag const&amp;)</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src/engine</dir>
       <file>Game.cpp</file>
-      <line>28</line>
+      <line>24</line>
     </frame>
   </stack>
   <auxwhat>Uninitialised value was created by a stack allocation</auxwhat>
@@ -473,7 +473,7 @@
 
 <status>
   <state>FINISHED</state>
-  <time>00:00:00:06.828 </time>
+  <time>00:00:00:06.552 </time>
 </status>
 
 <errorcounts>

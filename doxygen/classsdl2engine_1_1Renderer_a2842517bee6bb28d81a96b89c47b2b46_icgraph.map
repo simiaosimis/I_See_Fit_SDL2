@@ -1,5 +1,4 @@
 <map id="sdl2engine::Renderer::LogicalSize" name="sdl2engine::Renderer::LogicalSize">
-<area shape="rect" id="node3" href="$classsdl2engine_1_1Sprite.html#a618dfd6e5850ee7f8c40833d0d3fca7c" title="Renders the sprite. " alt="" coords="201,35,327,82"/>
-<area shape="rect" id="node5" href="$classsdl2engine_1_1GStatePlaceholder.html#ab503edaa692d97faebebe28e51fc5815" title="sdl2engine::GStatePlaceholder\l::render" alt="" coords="377,5,577,51"/>
-<area shape="rect" id="node7" href="$classsdl2engine_1_1Text.html#a28d6ca0354a8dc9148aa1f45cc8c0bea" title="sdl2engine::Text::render" alt="" coords="396,75,559,104"/>
+<area shape="rect" id="node3" href="$classsdl2engine_1_1Sprite.html#a618dfd6e5850ee7f8c40833d0d3fca7c" title="Renders the sprite. " alt="" coords="201,5,327,51"/>
+<area shape="rect" id="node5" href="$classsdl2engine_1_1Placeholder.html#a2fede2d358bc8efbef6da0e6901da58b" title="sdl2engine::Placeholder\l::Render" alt="" coords="376,5,536,51"/>
 </map>

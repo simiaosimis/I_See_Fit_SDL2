@@ -255,18 +255,18 @@
             <td class="headerValue">/home/travis/build/CaioIcy/sdl2-engine/src/audio/AudioHandler.cpp</td>
             <td></td>
             <td class="headerName">Lines:</td>
-            <td class="headerTableEntry">9</td>
+            <td class="headerTableEntry">16</td>
             <td class="headerTableEntry">60</td>
-            <td class="headerTableEntry" style="background-color:LightPink">15.0 %</td>
+            <td class="headerTableEntry" style="background-color:LightPink">26.7 %</td>
           </tr>
           <tr>
             <td class="headerName">Date:</td>
-            <td class="headerValue">2015-02-03</td>
+            <td class="headerValue">2015-02-08</td>
             <td></td>
             <td class="headerName">Branches:</td>
-            <td class="headerTableEntry">9</td>
+            <td class="headerTableEntry">22</td>
             <td class="headerTableEntry">64</td>
-            <td class="headerTableEntry" style="background-color:LightPink">14.1 %</td>
+            <td class="headerTableEntry" style="background-color:LightPink">34.4 %</td>
           </tr>
         </table>
       </td>
@@ -784,14 +784,14 @@
 
     <tr>
     <td align="right" class="lineno"><pre>84</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>void AudioHandler&lt;AudioType::SoundEffect&gt;::Play(const std::string&amp; path, const int times) {</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>void AudioHandler&lt;AudioType::SoundEffect&gt;::Play(const std::string&amp; path, const int times) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>85</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	ASSERT((times == k_infinite_loop || times &gt;= 1), "Must be k_infinite_loop or &gt;= 1.");</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>	ASSERT((times == k_infinite_loop || times &gt;= 1), "Must be k_infinite_loop or &gt;= 1.");</pre></td>
     </tr>
 
     <tr>
@@ -802,8 +802,8 @@
 
     <tr>
     <td align="right" class="lineno"><pre>87</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	const auto k_played_channel = Mix_PlayChannel(k_any_channel,</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>	const auto k_played_channel = Mix_PlayChannel(k_any_channel,</pre></td>
     </tr>
 
     <tr>
@@ -814,20 +814,20 @@
 
     <tr>
     <td align="right" class="lineno"><pre>89</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	if(k_played_channel == -1) {</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>	if(k_played_channel == -1) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>90</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>		log_error() &lt;&lt; "Failed to play sound effect for any channel (" &lt;&lt; k_played_channel &lt;&lt;</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>2</pre></td>
+    <td align="left" class="src coveredLine"><pre>		log_error() &lt;&lt; "Failed to play sound effect for any channel (" &lt;&lt; k_played_channel &lt;&lt;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>91</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>			"). " &lt;&lt; Mix_GetError();</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>3</pre></td>
+    <td align="left" class="src coveredLine"><pre>			"). " &lt;&lt; Mix_GetError();</pre></td>
     </tr>
 
     <tr>
@@ -838,8 +838,8 @@
 
     <tr>
     <td align="right" class="lineno"><pre>93</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>}</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="left" class="src coveredLine"><pre>}</pre></td>
     </tr>
 
     <tr>

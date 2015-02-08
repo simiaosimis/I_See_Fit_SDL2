@@ -1,16 +1,8 @@
 var searchData=
 [
-  ['text',['Text',['../classsdl2engine_1_1Text.html',1,'sdl2engine']]],
-  ['text',['Text',['../classsdl2engine_1_1Text.html#ad864375d55794ce862422e4434ea0e42',1,'sdl2engine::Text::Text(const double x_, const double y_, const char *path_, const int size_, const char *text_, const SDL_Color color_)'],['../classsdl2engine_1_1Text.html#ac758aeca89eb324e047141984694f119',1,'sdl2engine::Text::Text(const double x_, const double y_, const char *path_, const int size_, const char *text_)']]],
-  ['text_2ecpp',['Text.cpp',['../Text_8cpp.html',1,'']]],
-  ['text_2eh',['Text.h',['../Text_8h.html',1,'']]],
-  ['timer',['Timer',['../classsdl2engine_1_1Timer.html',1,'sdl2engine']]],
-  ['timer',['Timer',['../classsdl2engine_1_1Timer.html#a07fb0efd7db293086a0bf4533b2f187a',1,'sdl2engine::Timer']]],
-  ['timer_2ecpp',['Timer.cpp',['../Timer_8cpp.html',1,'']]],
-  ['timer_2eh',['Timer.h',['../Timer_8h.html',1,'']]],
-  ['todo_20list',['Todo List',['../todo.html',1,'']]],
-  ['top',['TOP',['../classsdl2engine_1_1Collision.html#a526544de8bd03ab26bf8ce3b7c9fcfabaf8334af95d7abbb433a605ca7fe284de',1,'sdl2engine::Collision']]],
-  ['trigger_5fdead_5fzone',['TRIGGER_DEAD_ZONE',['../ControllerHandler_8h.html#a21465bd61a15247f747581e6728bea4f',1,'ControllerHandler.h']]],
-  ['typemap',['TypeMap',['../classsdl2engine_1_1ResourceManager.html#aecec20e40f560216f7e33f56288f6bfd',1,'sdl2engine::ResourceManager']]],
-  ['typeptr',['TypePtr',['../classsdl2engine_1_1ResourceManager.html#a74d18601d6275fbc36d946ea81c27b10',1,'sdl2engine::ResourceManager']]]
+  ['unload',['Unload',['../classsdl2engine_1_1StateGame.html#a8ec99d263aca2ca7cae640baa7120ee8',1,'sdl2engine::StateGame::Unload()'],['../classsdl2engine_1_1Placeholder.html#a59b1b60fc9a6d2a5b79d035f6d8907a5',1,'sdl2engine::Placeholder::Unload()']]],
+  ['unregisterresource',['UnregisterResource',['../classsdl2engine_1_1ResourceManager.html#ab11cdaf248c1ab38cf77f430d1baeab9',1,'sdl2engine::ResourceManager']]],
+  ['update',['Update',['../classsdl2engine_1_1Animation.html#af084f69f04ef384b602f8871e6795f6c',1,'sdl2engine::Animation::Update()'],['../classsdl2engine_1_1Camera.html#aa093b93c51a39ca5ca61cff6b17e11aa',1,'sdl2engine::Camera::Update()'],['../classsdl2engine_1_1StateGame.html#a03b0d87d6a6d7c2e230b3abfe143b18f',1,'sdl2engine::StateGame::Update()'],['../classsdl2engine_1_1Placeholder.html#ab1183e05f8c96177c2925f02db48e25b',1,'sdl2engine::Placeholder::Update()'],['../classsdl2engine_1_1GameObject.html#a00d2251bbd9f04288dc7e22d0ac11c91',1,'sdl2engine::GameObject::update()']]],
+  ['updateclip',['UpdateClip',['../classsdl2engine_1_1Animation.html#a91d73f4b382dd493ebdd3faa3a093010',1,'sdl2engine::Animation']]],
+  ['updateposition',['UpdatePosition',['../classsdl2engine_1_1Camera.html#ad10ee2d5ba235f6d2e1d72c3d9070c3f',1,'sdl2engine::Camera']]]
 ];

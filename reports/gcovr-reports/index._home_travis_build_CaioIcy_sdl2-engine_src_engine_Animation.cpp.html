@@ -255,13 +255,13 @@
             <td class="headerValue">/home/travis/build/CaioIcy/sdl2-engine/src/engine/Animation.cpp</td>
             <td></td>
             <td class="headerName">Lines:</td>
-            <td class="headerTableEntry">43</td>
-            <td class="headerTableEntry">70</td>
-            <td class="headerTableEntry" style="background-color:LightPink">61.4 %</td>
+            <td class="headerTableEntry">41</td>
+            <td class="headerTableEntry">68</td>
+            <td class="headerTableEntry" style="background-color:LightPink">60.3 %</td>
           </tr>
           <tr>
             <td class="headerName">Date:</td>
-            <td class="headerValue">2015-02-03</td>
+            <td class="headerValue">2015-02-08</td>
             <td></td>
             <td class="headerName">Branches:</td>
             <td class="headerTableEntry">19</td>
@@ -466,522 +466,504 @@
 
     <tr>
     <td align="right" class="lineno"><pre>31</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>Animation::~Animation() {</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>32</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>}</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>33</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>34</pre></td>
     <td align="right" class="linecount coveredLine"><pre>121</pre></td>
     <td align="left" class="src coveredLine"><pre>void Animation::Update(SDL_Rect&amp; clip, const double delta_time) {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>35</pre></td>
+    <td align="right" class="lineno"><pre>32</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	// Compare the position on the sprite with the number of positions to know if is the</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>36</pre></td>
+    <td align="right" class="lineno"><pre>33</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	// end of the animation.</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>37</pre></td>
+    <td align="right" class="lineno"><pre>34</pre></td>
     <td align="right" class="linecount coveredLine"><pre>121</pre></td>
     <td align="left" class="src coveredLine"><pre>	const bool k_end_of_animation = (CurrentFrame() &gt;= m_number_of_images);</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>38</pre></td>
+    <td align="right" class="lineno"><pre>35</pre></td>
     <td align="right" class="linecount coveredLine"><pre>121</pre></td>
     <td align="left" class="src coveredLine"><pre>	const double k_time_for_each_frame = (m_total_time / m_number_of_images);</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>39</pre></td>
+    <td align="right" class="lineno"><pre>36</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>40</pre></td>
+    <td align="right" class="lineno"><pre>37</pre></td>
     <td align="right" class="linecount coveredLine"><pre>121</pre></td>
     <td align="left" class="src coveredLine"><pre>	m_total_elapsed_time += delta_time;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>41</pre></td>
+    <td align="right" class="lineno"><pre>38</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>42</pre></td>
+    <td align="right" class="lineno"><pre>39</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	// Check if the frame has changed.</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>43</pre></td>
+    <td align="right" class="lineno"><pre>40</pre></td>
     <td align="right" class="linecount coveredLine"><pre>121</pre></td>
     <td align="left" class="src coveredLine"><pre>	if(m_total_elapsed_time &gt;= k_time_for_each_frame) {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>44</pre></td>
+    <td align="right" class="lineno"><pre>41</pre></td>
     <td align="right" class="linecount coveredLine"><pre>2</pre></td>
     <td align="left" class="src coveredLine"><pre>		m_total_elapsed_time = 0;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>45</pre></td>
+    <td align="right" class="lineno"><pre>42</pre></td>
     <td align="right" class="linecount coveredLine"><pre>2</pre></td>
     <td align="left" class="src coveredLine"><pre>		m_animation_count += 1;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>46</pre></td>
+    <td align="right" class="lineno"><pre>43</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>47</pre></td>
+    <td align="right" class="lineno"><pre>44</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		// Apparently defines the max horizontal sprites in the spritesheet.</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>48</pre></td>
+    <td align="right" class="lineno"><pre>45</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		/// @todo Be sure what k_animation_limit does.</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>49</pre></td>
+    <td align="right" class="lineno"><pre>46</pre></td>
     <td align="right" class="linecount coveredLine"><pre>2</pre></td>
     <td align="left" class="src coveredLine"><pre>		const int k_animation_limit = 10;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>50</pre></td>
+    <td align="right" class="lineno"><pre>47</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		ASSERT(k_animation_limit &gt;= 0, "Must be &gt;= 0");</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>51</pre></td>
+    <td align="right" class="lineno"><pre>48</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>52</pre></td>
+    <td align="right" class="lineno"><pre>49</pre></td>
     <td align="right" class="linecount coveredLine"><pre>2</pre></td>
     <td align="left" class="src coveredLine"><pre>		if(m_animation_count &lt;= m_number_of_images) {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>53</pre></td>
+    <td align="right" class="lineno"><pre>50</pre></td>
     <td align="right" class="linecount coveredLine"><pre>2</pre></td>
     <td align="left" class="src coveredLine"><pre>			if(m_x &lt; k_animation_limit) {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>54</pre></td>
+    <td align="right" class="lineno"><pre>51</pre></td>
     <td align="right" class="linecount coveredLine"><pre>2</pre></td>
     <td align="left" class="src coveredLine"><pre>				m_x += 1;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>55</pre></td>
+    <td align="right" class="lineno"><pre>52</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>			}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>56</pre></td>
+    <td align="right" class="lineno"><pre>53</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>			else {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>57</pre></td>
+    <td align="right" class="lineno"><pre>54</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>				m_y += 1;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>58</pre></td>
+    <td align="right" class="lineno"><pre>55</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>				m_x = 0;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>59</pre></td>
+    <td align="right" class="lineno"><pre>56</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>			}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>60</pre></td>
+    <td align="right" class="lineno"><pre>57</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>61</pre></td>
+    <td align="right" class="lineno"><pre>58</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>62</pre></td>
+    <td align="right" class="lineno"><pre>59</pre></td>
     <td align="right" class="linecount coveredLine"><pre>2</pre></td>
     <td align="left" class="src coveredLine"><pre>		if(k_end_of_animation) {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>63</pre></td>
+    <td align="right" class="lineno"><pre>60</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			m_x = m_initial_x;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>64</pre></td>
+    <td align="right" class="lineno"><pre>61</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			m_y = m_initial_y;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>65</pre></td>
+    <td align="right" class="lineno"><pre>62</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>			m_animation_count = 0;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>66</pre></td>
+    <td align="right" class="lineno"><pre>63</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>67</pre></td>
+    <td align="right" class="lineno"><pre>64</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>	}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>68</pre></td>
+    <td align="right" class="lineno"><pre>65</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>69</pre></td>
+    <td align="right" class="lineno"><pre>66</pre></td>
     <td align="right" class="linecount coveredLine"><pre>121</pre></td>
     <td align="left" class="src coveredLine"><pre>	const int k_position_x = m_x * m_sprite_width;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>70</pre></td>
+    <td align="right" class="lineno"><pre>67</pre></td>
     <td align="right" class="linecount coveredLine"><pre>121</pre></td>
     <td align="left" class="src coveredLine"><pre>	const int k_position_y = m_y * m_sprite_height;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>71</pre></td>
+    <td align="right" class="lineno"><pre>68</pre></td>
     <td align="right" class="linecount coveredLine"><pre>121</pre></td>
     <td align="left" class="src coveredLine"><pre>	UpdateClip(clip, k_position_x, k_position_y);</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>72</pre></td>
+    <td align="right" class="lineno"><pre>69</pre></td>
     <td align="right" class="linecount coveredLine"><pre>121</pre></td>
     <td align="left" class="src coveredLine"><pre>}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>73</pre></td>
+    <td align="right" class="lineno"><pre>70</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>74</pre></td>
+    <td align="right" class="lineno"><pre>71</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>void Animation::ChangeAnimation(const int x, const int y, const int number_of_images,</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>75</pre></td>
+    <td align="right" class="lineno"><pre>72</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>		const double total_time) {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>76</pre></td>
+    <td align="right" class="lineno"><pre>73</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	m_x = x;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>77</pre></td>
+    <td align="right" class="lineno"><pre>74</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	m_y = y;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>78</pre></td>
+    <td align="right" class="lineno"><pre>75</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	m_initial_x = x;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>79</pre></td>
+    <td align="right" class="lineno"><pre>76</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	m_initial_y = y;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>80</pre></td>
+    <td align="right" class="lineno"><pre>77</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	m_number_of_images = (number_of_images == 0) ? 1 : number_of_images;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>81</pre></td>
+    <td align="right" class="lineno"><pre>78</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	m_total_time = total_time;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>82</pre></td>
+    <td align="right" class="lineno"><pre>79</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	m_animation_count = 0;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>83</pre></td>
+    <td align="right" class="lineno"><pre>80</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>84</pre></td>
+    <td align="right" class="lineno"><pre>81</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	ASSERT(m_x &gt;= 0				  , "Must be &gt;= 0");</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>85</pre></td>
+    <td align="right" class="lineno"><pre>82</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	ASSERT(m_y &gt;= 0				  , "Must be &gt;= 0");</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>86</pre></td>
+    <td align="right" class="lineno"><pre>83</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	ASSERT(m_initial_x &gt;= 0		  , "Must be &gt;= 0");</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>87</pre></td>
+    <td align="right" class="lineno"><pre>84</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	ASSERT(m_initial_y &gt;= 0		  , "Must be &gt;= 0");</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>88</pre></td>
+    <td align="right" class="lineno"><pre>85</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	ASSERT(m_number_of_images &gt;= 1, "Must be &gt;= 1");</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>89</pre></td>
+    <td align="right" class="lineno"><pre>86</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	ASSERT(m_total_time &gt;= 0	  , "Must be &gt;= 0");</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>90</pre></td>
+    <td align="right" class="lineno"><pre>87</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	ASSERT(m_animation_count &gt;= 0 , "Must be &gt;= 0");</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>91</pre></td>
+    <td align="right" class="lineno"><pre>88</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>92</pre></td>
+    <td align="right" class="lineno"><pre>89</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>93</pre></td>
+    <td align="right" class="lineno"><pre>90</pre></td>
     <td align="right" class="linecount coveredLine"><pre>121</pre></td>
     <td align="left" class="src coveredLine"><pre>void Animation::UpdateClip(SDL_Rect&amp; clip, const int x, const int y) {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>94</pre></td>
+    <td align="right" class="lineno"><pre>91</pre></td>
     <td align="right" class="linecount coveredLine"><pre>121</pre></td>
     <td align="left" class="src coveredLine"><pre>	ASSERT(x &gt;= 0, "Must be &gt;= 0");</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>95</pre></td>
+    <td align="right" class="lineno"><pre>92</pre></td>
     <td align="right" class="linecount coveredLine"><pre>121</pre></td>
     <td align="left" class="src coveredLine"><pre>	ASSERT(y &gt;= 0, "Must be &gt;= 0");</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>96</pre></td>
+    <td align="right" class="lineno"><pre>93</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>97</pre></td>
+    <td align="right" class="lineno"><pre>94</pre></td>
     <td align="right" class="linecount coveredLine"><pre>121</pre></td>
     <td align="left" class="src coveredLine"><pre>	clip.x = x;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>98</pre></td>
+    <td align="right" class="lineno"><pre>95</pre></td>
     <td align="right" class="linecount coveredLine"><pre>121</pre></td>
     <td align="left" class="src coveredLine"><pre>	clip.y = y;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>99</pre></td>
+    <td align="right" class="lineno"><pre>96</pre></td>
     <td align="right" class="linecount coveredLine"><pre>121</pre></td>
     <td align="left" class="src coveredLine"><pre>	clip.w = m_sprite_width;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>100</pre></td>
+    <td align="right" class="lineno"><pre>97</pre></td>
     <td align="right" class="linecount coveredLine"><pre>121</pre></td>
     <td align="left" class="src coveredLine"><pre>	clip.h = m_sprite_height;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>101</pre></td>
+    <td align="right" class="lineno"><pre>98</pre></td>
     <td align="right" class="linecount coveredLine"><pre>121</pre></td>
     <td align="left" class="src coveredLine"><pre>}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>102</pre></td>
+    <td align="right" class="lineno"><pre>99</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>103</pre></td>
+    <td align="right" class="lineno"><pre>100</pre></td>
     <td align="right" class="linecount coveredLine"><pre>121</pre></td>
     <td align="left" class="src coveredLine"><pre>int Animation::CurrentFrame() {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>104</pre></td>
+    <td align="right" class="lineno"><pre>101</pre></td>
     <td align="right" class="linecount coveredLine"><pre>121</pre></td>
     <td align="left" class="src coveredLine"><pre>	const int k_current_frame = m_animation_count + 1;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>105</pre></td>
+    <td align="right" class="lineno"><pre>102</pre></td>
     <td align="right" class="linecount coveredLine"><pre>121</pre></td>
     <td align="left" class="src coveredLine"><pre>	ASSERT(k_current_frame &gt;= 0, "Must be &gt;= 0");</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>106</pre></td>
+    <td align="right" class="lineno"><pre>103</pre></td>
     <td align="right" class="linecount coveredLine"><pre>121</pre></td>
     <td align="left" class="src coveredLine"><pre>	return k_current_frame;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>107</pre></td>
+    <td align="right" class="lineno"><pre>104</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>108</pre></td>
+    <td align="right" class="lineno"><pre>105</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>109</pre></td>
+    <td align="right" class="lineno"><pre>106</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>void Animation::SetWidthHeight(const int width, const int height) {</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>110</pre></td>
+    <td align="right" class="lineno"><pre>107</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	m_sprite_width = width;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>111</pre></td>
+    <td align="right" class="lineno"><pre>108</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	m_sprite_height = height;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>112</pre></td>
+    <td align="right" class="lineno"><pre>109</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>113</pre></td>
+    <td align="right" class="lineno"><pre>110</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	ASSERT(m_sprite_width &gt;= 0 , "Must be &gt;= 0");</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>114</pre></td>
+    <td align="right" class="lineno"><pre>111</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>	ASSERT(m_sprite_height &gt;= 0, "Must be &gt;= 0");</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>115</pre></td>
+    <td align="right" class="lineno"><pre>112</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
     <td align="left" class="src uncoveredLine"><pre>}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>116</pre></td>
+    <td align="right" class="lineno"><pre>113</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>117</pre></td>
+    <td align="right" class="lineno"><pre>114</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>} // namespace sdl2engine</pre></td>
     </tr>

@@ -1,14 +1,14 @@
 var searchData=
 [
   ['a',['A',['../namespacesdl2engine.html#a92e23178a19914e86fa4f7640dcde170a516639ee85de040fc3e75cfe05ac5049',1,'sdl2engine']]],
-  ['add_5fstate',['ADD_STATE',['../Game_8cpp.html#a3b78904d8ae89c99b3faaa746973f3ec',1,'Game.cpp']]],
-  ['addgameobject',['addGameObject',['../classsdl2engine_1_1StateGame.html#ab88e41507b6d1bca27120eb947eac572',1,'sdl2engine::StateGame']]],
+  ['add_5fstate',['ADD_STATE',['../StateManager_8cpp.html#aedca40702003f3f00068c701dabfb0f0',1,'StateManager.cpp']]],
+  ['addgameobject',['AddGameObject',['../classsdl2engine_1_1StateGame.html#a4bee2226f72cce784bbaa7e264c14681',1,'sdl2engine::StateGame']]],
   ['alpha',['Alpha',['../classsdl2engine_1_1Sprite.html#a9c1d5dfbfd2286d64a5c99f03a1325f3',1,'sdl2engine::Sprite']]],
   ['animation',['Animation',['../classsdl2engine_1_1Animation.html',1,'sdl2engine']]],
-  ['animation',['animation',['../classsdl2engine_1_1GStatePlaceholder.html#a48a07559746dc05889f499f232452516',1,'sdl2engine::GStatePlaceholder::animation()'],['../classsdl2engine_1_1Animation.html#ae0239e9c0faa92c7726646b0a6befd67',1,'sdl2engine::Animation::Animation()']]],
+  ['animation',['Animation',['../classsdl2engine_1_1Animation.html#ae0239e9c0faa92c7726646b0a6befd67',1,'sdl2engine::Animation']]],
   ['animation_2ecpp',['Animation.cpp',['../Animation_8cpp.html',1,'']]],
   ['animation_2eh',['Animation.h',['../Animation_8h.html',1,'']]],
-  ['animationclip',['animationClip',['../classsdl2engine_1_1GameObject.html#a41b34b9ff09b80588d20cc626a45c9e0',1,'sdl2engine::GameObject::animationClip()'],['../classsdl2engine_1_1GStatePlaceholder.html#a8e0a4386f98e9b68ebc75999e97e2e47',1,'sdl2engine::GStatePlaceholder::animationClip()']]],
+  ['animationclip',['animationClip',['../classsdl2engine_1_1GameObject.html#a41b34b9ff09b80588d20cc626a45c9e0',1,'sdl2engine::GameObject']]],
   ['assert',['ASSERT',['../Assert_8h.html#ab1899199386b1542d1111168ca847e9c',1,'Assert.h']]],
   ['assert_2ecpp',['Assert.cpp',['../Assert_8cpp.html',1,'']]],
   ['assert_2eh',['Assert.h',['../Assert_8h.html',1,'']]],

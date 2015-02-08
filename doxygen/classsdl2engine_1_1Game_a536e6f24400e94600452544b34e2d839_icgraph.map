@@ -1,5 +1,4 @@
 <map id="sdl2engine::Game::GetRenderer" name="sdl2engine::Game::GetRenderer">
-<area shape="rect" id="node3" href="$classsdl2engine_1_1Sprite.html#a618dfd6e5850ee7f8c40833d0d3fca7c" title="Renders the sprite. " alt="" coords="265,35,391,82"/>
-<area shape="rect" id="node5" href="$classsdl2engine_1_1GStatePlaceholder.html#ab503edaa692d97faebebe28e51fc5815" title="sdl2engine::GStatePlaceholder\l::render" alt="" coords="441,5,641,51"/>
-<area shape="rect" id="node7" href="$classsdl2engine_1_1Text.html#a28d6ca0354a8dc9148aa1f45cc8c0bea" title="sdl2engine::Text::render" alt="" coords="460,75,623,104"/>
+<area shape="rect" id="node3" href="$classsdl2engine_1_1Sprite.html#a618dfd6e5850ee7f8c40833d0d3fca7c" title="Renders the sprite. " alt="" coords="265,5,391,51"/>
+<area shape="rect" id="node5" href="$classsdl2engine_1_1Placeholder.html#a2fede2d358bc8efbef6da0e6901da58b" title="sdl2engine::Placeholder\l::Render" alt="" coords="440,5,600,51"/>
 </map>

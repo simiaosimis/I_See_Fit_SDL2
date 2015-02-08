@@ -1,0 +1,10 @@
+<map id="sdl2engine::Placeholder::Update" name="sdl2engine::Placeholder::Update">
+<area shape="rect" id="node3" href="$classsdl2engine_1_1Game.html#a850158cf352e293eb49a4910c6f5cc21" title="Singleton implementation for Game. " alt="" coords="215,5,399,35"/>
+<area shape="rect" id="node5" href="$classsdl2engine_1_1Game.html#ad4c17e9aa5b64755d6ec67c72a2cde3a" title="sdl2engine::Game::Input" alt="" coords="225,59,388,88"/>
+<area shape="rect" id="node7" href="$classsdl2engine_1_1AudioHandler.html#a80011f3c39b3cf5eb480103eda3a4cad" title="Gradually fades audio out. " alt="" coords="221,111,392,158"/>
+<area shape="rect" id="node9" href="$classsdl2engine_1_1AudioHandler.html#a25a1cf5e091c0e0b30d61d8c8ec8c022" title="Plays an audio a given amount of times. " alt="" coords="221,181,392,227"/>
+<area shape="rect" id="node11" href="$classsdl2engine_1_1AudioHandler.html#a79a2eea358513edc55c91056ea972e2d" title="sdl2engine::AudioHandler\l::FadedOut" alt="" coords="221,250,392,297"/>
+<area shape="rect" id="node13" href="$classsdl2engine_1_1Animation.html#af084f69f04ef384b602f8871e6795f6c" title="Updates the animation clip. " alt="" coords="232,319,381,366"/>
+<area shape="rect" id="node15" href="$classsdl2engine_1_1Animation.html#a5c5909786285dea66b0f52983195b380" title="sdl2engine::Animation\l::CurrentFrame" alt="" coords="449,285,599,331"/>
+<area shape="rect" id="node17" href="$classsdl2engine_1_1Animation.html#a91d73f4b382dd493ebdd3faa3a093010" title="Updates the clip to a new position. " alt="" coords="449,354,599,401"/>
+</map>

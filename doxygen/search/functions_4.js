@@ -9,6 +9,5 @@ var searchData=
   ['getheight',['getHeight',['../classsdl2engine_1_1GameObject.html#aac8db512d02772342a60fd69821c5804',1,'sdl2engine::GameObject']]],
   ['getkeystates',['getKeyStates',['../classsdl2engine_1_1ControllerHandler.html#a4a7bcc412b8e6399299f67e35c93c89e',1,'sdl2engine::ControllerHandler::getKeyStates()'],['../classsdl2engine_1_1InputHandler.html#ac2784925244b824cf784328b154aaefc',1,'sdl2engine::InputHandler::getKeyStates()']]],
   ['getrenderer',['GetRenderer',['../classsdl2engine_1_1Game.html#a536e6f24400e94600452544b34e2d839',1,'sdl2engine::Game::GetRenderer()'],['../classsdl2engine_1_1Window.html#ad37ec5bd73b7688c8b3bbd65bd62b560',1,'sdl2engine::Window::GetRenderer()']]],
-  ['getwidth',['getWidth',['../classsdl2engine_1_1GameObject.html#a82cb6d5d6ba68bbe8534ee398fca792f',1,'sdl2engine::GameObject']]],
-  ['gstateplaceholder',['GStatePlaceholder',['../classsdl2engine_1_1GStatePlaceholder.html#a940f49d4da5f1b282271d1136d2118f9',1,'sdl2engine::GStatePlaceholder']]]
+  ['getwidth',['getWidth',['../classsdl2engine_1_1GameObject.html#a82cb6d5d6ba68bbe8534ee398fca792f',1,'sdl2engine::GameObject']]]
 ];

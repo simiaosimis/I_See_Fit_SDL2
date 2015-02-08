@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['image',['image',['../classsdl2engine_1_1GStatePlaceholder.html#a96ef5d37b87a052f9eb85ee9d7dd1cca',1,'sdl2engine::GStatePlaceholder']]],
   ['info',['Info',['../namespacesdl2engine.html#a72818c74e8372a1d6c169905f7eb232ea4059b0251f66a18cb56f544728796875',1,'sdl2engine']]],
   ['initialize',['Initialize',['../classsdl2engine_1_1Configuration.html#a4d423870232879eb825bf2b207958669',1,'sdl2engine::Configuration::Initialize()'],['../namespacesdl2engine_1_1sdl.html#a500dd363b9ca16d441249ee8ab7c5e9f',1,'sdl2engine::sdl::Initialize()']]],
-  ['initializestates',['InitializeStates',['../classsdl2engine_1_1Game.html#a2a27f5199a37819d9f6a25a22d75b489',1,'sdl2engine::Game']]],
+  ['initializestates',['InitializeStates',['../classsdl2engine_1_1StateManager.html#a5bf1568bdde1aafac244b891609eb764',1,'sdl2engine::StateManager']]],
   ['input',['Input',['../classsdl2engine_1_1Game.html#ad4c17e9aa5b64755d6ec67c72a2cde3a',1,'sdl2engine::Game']]],
   ['inputarray',['InputArray',['../namespacesdl2engine.html#af7170bd9949accae63505ef4408c12b9',1,'sdl2engine']]],
   ['inputhandler',['InputHandler',['../classsdl2engine_1_1InputHandler.html',1,'sdl2engine']]],

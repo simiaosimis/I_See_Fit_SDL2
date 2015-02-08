@@ -1,8 +1,0 @@
-<map id="sdl2engine::GStatePlaceholder::render" name="sdl2engine::GStatePlaceholder::render">
-<area shape="rect" id="node3" href="$classsdl2engine_1_1Sprite.html#a618dfd6e5850ee7f8c40833d0d3fca7c" title="Renders the sprite. " alt="" coords="257,81,383,127"/>
-<area shape="rect" id="node5" href="$classsdl2engine_1_1Game.html#a850158cf352e293eb49a4910c6f5cc21" title="Singleton implementation for Game. " alt="" coords="445,5,629,35"/>
-<area shape="rect" id="node7" href="$classsdl2engine_1_1Game.html#a536e6f24400e94600452544b34e2d839" title="sdl2engine::Game::GetRenderer" alt="" coords="433,59,641,88"/>
-<area shape="rect" id="node11" href="$classsdl2engine_1_1Renderer.html#a2842517bee6bb28d81a96b89c47b2b46" title="Returns the current set logical size through the parameters. " alt="" coords="465,111,609,158"/>
-<area shape="rect" id="node13" href="$classsdl2engine_1_1Renderer.html#a6f0a2649cba5368dba4fb99d169af103" title="sdl2engine::Renderer\l::SdlRenderer" alt="" coords="465,181,609,227"/>
-<area shape="rect" id="node9" href="$classsdl2engine_1_1Window.html#ad37ec5bd73b7688c8b3bbd65bd62b560" title="sdl2engine::Window\l::GetRenderer" alt="" coords="691,50,829,97"/>
-</map>

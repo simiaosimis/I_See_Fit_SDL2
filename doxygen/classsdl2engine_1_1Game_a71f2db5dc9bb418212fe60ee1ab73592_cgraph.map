@@ -1,5 +1,0 @@
-<map id="sdl2engine::Game::ChangeState" name="sdl2engine::Game::ChangeState">
-<area shape="rect" id="node3" href="$classsdl2engine_1_1StateGame.html#a2c320e3ee147659b2f4a82346f9294b0" title="sdl2engine::StateGame\l::unload" alt="" coords="236,5,393,51"/>
-<area shape="rect" id="node7" href="$classsdl2engine_1_1StateGame.html#ade94602c8f136c12f67dc40ccc6a9669" title="sdl2engine::StateGame\l::load" alt="" coords="236,74,393,121"/>
-<area shape="rect" id="node5" href="$classsdl2engine_1_1StateGame.html#ab65a05e7a0a837465c3cf86328ee598d" title="sdl2engine::StateGame\l::cleanGameObjects" alt="" coords="444,5,601,51"/>
-</map>

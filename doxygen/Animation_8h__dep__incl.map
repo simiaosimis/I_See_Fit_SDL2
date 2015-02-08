@@ -1,6 +1,4 @@
 <map id="Animation.h" name="Animation.h">
 <area shape="rect" id="node3" href="$Animation_8cpp.html" title="Animation.cpp" alt="" coords="5,83,109,112"/>
-<area shape="rect" id="node5" href="$GStatePlaceholder_8h.html" title="GStatePlaceholder.h" alt="" coords="133,83,275,112"/>
-<area shape="rect" id="node7" href="$Game_8cpp.html" title="Game.cpp" alt="" coords="91,160,173,189"/>
-<area shape="rect" id="node9" href="$GStatePlaceholder_8cpp.html" title="GStatePlaceholder.cpp" alt="" coords="197,160,352,189"/>
+<area shape="rect" id="node5" href="$Placeholder_8cpp.html" title="Placeholder.cpp" alt="" coords="133,83,248,112"/>
 </map>

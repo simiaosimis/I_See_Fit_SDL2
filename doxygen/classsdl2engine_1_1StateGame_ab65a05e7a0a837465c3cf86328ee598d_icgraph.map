@@ -1,6 +1,0 @@
-<map id="sdl2engine::StateGame::cleanGameObjects" name="sdl2engine::StateGame::cleanGameObjects">
-<area shape="rect" id="node3" href="$classsdl2engine_1_1StateGame.html#a2c320e3ee147659b2f4a82346f9294b0" title="sdl2engine::StateGame\l::unload" alt="" coords="215,58,372,105"/>
-<area shape="rect" id="node5" href="$classsdl2engine_1_1Game.html#aa00edafd604842aa8e1ef5652131c76a" title="The destructor. " alt="" coords="433,5,612,35"/>
-<area shape="rect" id="node7" href="$classsdl2engine_1_1Game.html#a71f2db5dc9bb418212fe60ee1ab73592" title="Sets the current game state. " alt="" coords="433,58,612,105"/>
-<area shape="rect" id="node9" href="$classsdl2engine_1_1GStatePlaceholder.html#ac0ef624166f97b63f031a75aa4087e04" title="sdl2engine::GStatePlaceholder\l::unload" alt="" coords="423,127,623,174"/>
-</map>

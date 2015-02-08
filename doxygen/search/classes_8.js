@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['text',['Text',['../classsdl2engine_1_1Text.html',1,'sdl2engine']]],
-  ['timer',['Timer',['../classsdl2engine_1_1Timer.html',1,'sdl2engine']]]
+  ['soundeffect',['SoundEffect',['../classsdl2engine_1_1SoundEffect.html',1,'sdl2engine']]],
+  ['sprite',['Sprite',['../classsdl2engine_1_1Sprite.html',1,'sdl2engine']]],
+  ['stategame',['StateGame',['../classsdl2engine_1_1StateGame.html',1,'sdl2engine']]],
+  ['statemanager',['StateManager',['../classsdl2engine_1_1StateManager.html',1,'sdl2engine']]]
 ];

@@ -1,4 +1,4 @@
 <map id="sdl2engine::AudioHandler::Play" name="sdl2engine::AudioHandler::Play">
-<area shape="rect" id="node3" href="$classsdl2engine_1_1GStatePlaceholder.html#a0a33c04bfe8475e4356ee9e8b75d7669" title="sdl2engine::GStatePlaceholder\l::load" alt="" coords="225,5,425,51"/>
-<area shape="rect" id="node5" href="$classsdl2engine_1_1GStatePlaceholder.html#a702c19e5680ab65e13aede54433a6bdd" title="sdl2engine::GStatePlaceholder\l::update" alt="" coords="225,74,425,121"/>
+<area shape="rect" id="node3" href="$classsdl2engine_1_1Placeholder.html#a37c789e80beed5a3a8ec80c43f69e623" title="sdl2engine::Placeholder\l::Load" alt="" coords="224,5,384,51"/>
+<area shape="rect" id="node5" href="$classsdl2engine_1_1Placeholder.html#ab1183e05f8c96177c2925f02db48e25b" title="sdl2engine::Placeholder\l::Update" alt="" coords="224,74,384,121"/>
 </map>

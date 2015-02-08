@@ -1,0 +1,4 @@
+<map id="sdl2engine::StateManager::ChangeState" name="sdl2engine::StateManager::ChangeState">
+<area shape="rect" id="node3" href="$classsdl2engine_1_1StateGame.html#a8ec99d263aca2ca7cae640baa7120ee8" title="Unloads necessary objects. " alt="" coords="228,5,385,51"/>
+<area shape="rect" id="node5" href="$classsdl2engine_1_1StateGame.html#a3bc152caedb95ce760cee495f3425ef5" title="Loads necessary objects. " alt="" coords="228,74,385,121"/>
+</map>

@@ -4,10 +4,11 @@
 <area shape="rect" id="node7" href="$Camera_8cpp.html" title="Camera.cpp" alt="" coords="283,83,376,112"/>
 <area shape="rect" id="node9" href="$Game_8cpp.html" title="Game.cpp" alt="" coords="400,83,483,112"/>
 <area shape="rect" id="node11" href="$GameObject_8cpp.html" title="GameObject.cpp" alt="" coords="507,83,627,112"/>
-<area shape="rect" id="node13" href="$GStatePlaceholder_8cpp.html" title="GStatePlaceholder.cpp" alt="" coords="651,83,805,112"/>
-<area shape="rect" id="node15" href="$Renderer_8cpp.html" title="Renderer.cpp" alt="" coords="829,83,928,112"/>
-<area shape="rect" id="node17" href="$Sprite_8cpp.html" title="Sprite.cpp" alt="" coords="952,83,1032,112"/>
-<area shape="rect" id="node19" href="$Window_8cpp.html" title="Window.cpp" alt="" coords="1056,83,1149,112"/>
-<area shape="rect" id="node21" href="$Assert_8cpp.html" title="Assert.cpp" alt="" coords="1173,83,1259,112"/>
-<area shape="rect" id="node23" href="$Configuration_8cpp.html" title="Configuration.cpp" alt="" coords="1283,83,1405,112"/>
+<area shape="rect" id="node13" href="$StateManager_8cpp.html" title="StateManager.cpp" alt="" coords="651,83,779,112"/>
+<area shape="rect" id="node15" href="$Placeholder_8cpp.html" title="Placeholder.cpp" alt="" coords="803,83,917,112"/>
+<area shape="rect" id="node17" href="$Renderer_8cpp.html" title="Renderer.cpp" alt="" coords="941,83,1040,112"/>
+<area shape="rect" id="node19" href="$Sprite_8cpp.html" title="Sprite.cpp" alt="" coords="1064,83,1144,112"/>
+<area shape="rect" id="node21" href="$Window_8cpp.html" title="Window.cpp" alt="" coords="1168,83,1261,112"/>
+<area shape="rect" id="node23" href="$Assert_8cpp.html" title="Assert.cpp" alt="" coords="1285,83,1371,112"/>
+<area shape="rect" id="node25" href="$Configuration_8cpp.html" title="Configuration.cpp" alt="" coords="1395,83,1517,112"/>
 </map>

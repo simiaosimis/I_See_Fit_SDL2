@@ -1,13 +1,17 @@
 var searchData=
 [
+  ['m_5fanimation_5fclip',['m_animation_clip',['../classsdl2engine_1_1Placeholder.html#a712483b4f86457941210b855617cd5a8',1,'sdl2engine::Placeholder']]],
   ['m_5fanimation_5fcount',['m_animation_count',['../classsdl2engine_1_1Animation.html#a8e4ce1a1e9191404d16b107cb2535587',1,'sdl2engine::Animation']]],
   ['m_5fcamera_5fdistance_5fheight',['m_camera_distance_height',['../classsdl2engine_1_1Configuration.html#ae01f5bbb693dd826f6c9c4c2db825a64',1,'sdl2engine::Configuration']]],
   ['m_5fcamera_5fdistance_5fwidth',['m_camera_distance_width',['../classsdl2engine_1_1Configuration.html#ad08f7c863ff9bda13cb80a9afaaf700a',1,'sdl2engine::Configuration']]],
   ['m_5fchannel',['m_channel',['../classsdl2engine_1_1SoundEffect.html#a8640f49b42ce7c803e3deda5ba13a3aa',1,'sdl2engine::SoundEffect']]],
   ['m_5fclip',['m_clip',['../classsdl2engine_1_1Camera.html#a7625200077414d0ddb89c4eeae0cb8bc',1,'sdl2engine::Camera']]],
-  ['m_5fcurrent_5fstate',['m_current_state',['../classsdl2engine_1_1Game.html#ad4bc16212e974471c4df4890ac2494a9',1,'sdl2engine::Game']]],
+  ['m_5fcurrent_5fstate',['m_current_state',['../classsdl2engine_1_1StateManager.html#a5a664b9bb04130a852f1905adec5930a',1,'sdl2engine::StateManager']]],
+  ['m_5fexplosion',['m_explosion',['../classsdl2engine_1_1Placeholder.html#a7d21c1b10ef5dd35aa6d91f1cda09753',1,'sdl2engine::Placeholder']]],
+  ['m_5fexplosion_5fanimation',['m_explosion_animation',['../classsdl2engine_1_1Placeholder.html#ac7dca375b1cb658be585d1cccfda4e0a',1,'sdl2engine::Placeholder']]],
   ['m_5fgame_5fobject',['m_game_object',['../classsdl2engine_1_1Camera.html#aab842fb0909b7b320f34a227071579a8',1,'sdl2engine::Camera']]],
-  ['m_5fgame_5fstates',['m_game_states',['../classsdl2engine_1_1Game.html#acfb2a6cbe82a15f043c1356729c78c19',1,'sdl2engine::Game']]],
+  ['m_5fgame_5fobjects',['m_game_objects',['../classsdl2engine_1_1StateGame.html#a3108f0d45d355cf1347bffe16aca1c68',1,'sdl2engine::StateGame']]],
+  ['m_5fgame_5fstates',['m_game_states',['../classsdl2engine_1_1StateManager.html#a54875ab8a2d98dd8025937c59d6bb7cf',1,'sdl2engine::StateManager']]],
   ['m_5fheight',['m_height',['../classsdl2engine_1_1Sprite.html#a78f7fa124c3992e5c168ac755e5fa714',1,'sdl2engine::Sprite']]],
   ['m_5finitial_5fx',['m_initial_x',['../classsdl2engine_1_1Animation.html#a6fa61f04f063ffc208351f8cab8e8f1d',1,'sdl2engine::Animation']]],
   ['m_5finitial_5fy',['m_initial_y',['../classsdl2engine_1_1Animation.html#add6b8c704573522ccf7c1262fcdc9529',1,'sdl2engine::Animation']]],
@@ -36,6 +40,7 @@ var searchData=
   ['m_5fsdl_5fwindow',['m_sdl_window',['../classsdl2engine_1_1Window.html#a14bf790c4b03a9d0c92158bee761261b',1,'sdl2engine::Window']]],
   ['m_5fsprite_5fheight',['m_sprite_height',['../classsdl2engine_1_1Animation.html#ae85fb3177f1c8b5772c3781d32f65a38',1,'sdl2engine::Animation']]],
   ['m_5fsprite_5fwidth',['m_sprite_width',['../classsdl2engine_1_1Animation.html#a63998430076824093096aeff62b7a724',1,'sdl2engine::Animation']]],
+  ['m_5fstate_5fmanager',['m_state_manager',['../classsdl2engine_1_1Game.html#aa45a1d2bc8715e90e9b345ee5a10f1a7',1,'sdl2engine::Game']]],
   ['m_5ftotal_5felapsed_5ftime',['m_total_elapsed_time',['../classsdl2engine_1_1Animation.html#ae997d125015de7c7f629e7c483068d10',1,'sdl2engine::Animation']]],
   ['m_5ftotal_5ftime',['m_total_time',['../classsdl2engine_1_1Animation.html#a099085f1a204ebd7c6ddcc35fd4e437e',1,'sdl2engine::Animation']]],
   ['m_5fwidth',['m_width',['../classsdl2engine_1_1Sprite.html#a3c6ae597aab67b167a31aede0b757b01',1,'sdl2engine::Sprite']]],
@@ -51,8 +56,8 @@ var searchData=
   ['minimize',['Minimize',['../classsdl2engine_1_1Window.html#a721aa12d374c964de429ff426d3fa8ba',1,'sdl2engine::Window']]],
   ['mixchunk',['MixChunk',['../classsdl2engine_1_1SoundEffect.html#a2add65600eb0cfea97d328664ccdda8a',1,'sdl2engine::SoundEffect']]],
   ['mixmusic',['MixMusic',['../classsdl2engine_1_1Music.html#a8824f7b1996ff8dba6aa59c60f25da20',1,'sdl2engine::Music']]],
-  ['music',['Music',['../classsdl2engine_1_1Music.html#a1b1b256630190eac45399779a33e26e0',1,'sdl2engine::Music::Music(const std::string &amp;path)'],['../classsdl2engine_1_1Music.html#a71d2e7a80c6c67697edaffcd01c0a496',1,'sdl2engine::Music::Music(const Music &amp;)=delete'],['../classsdl2engine_1_1Music.html#a884373fa373b545ddf607e464188e496',1,'sdl2engine::Music::Music(Music &amp;&amp;)=delete'],['../namespacesdl2engine.html#aeccca27a95f2b37740093a79b4588a9da47dcbd834e669233d7eb8a51456ed217',1,'sdl2engine::Music()']]],
   ['music',['Music',['../classsdl2engine_1_1Music.html',1,'sdl2engine']]],
+  ['music',['Music',['../classsdl2engine_1_1Music.html#a1b1b256630190eac45399779a33e26e0',1,'sdl2engine::Music::Music(const std::string &amp;path)'],['../classsdl2engine_1_1Music.html#a71d2e7a80c6c67697edaffcd01c0a496',1,'sdl2engine::Music::Music(const Music &amp;)=delete'],['../classsdl2engine_1_1Music.html#a884373fa373b545ddf607e464188e496',1,'sdl2engine::Music::Music(Music &amp;&amp;)=delete'],['../namespacesdl2engine.html#aeccca27a95f2b37740093a79b4588a9da47dcbd834e669233d7eb8a51456ed217',1,'sdl2engine::Music()']]],
   ['music_2ecpp',['Music.cpp',['../Music_8cpp.html',1,'']]],
   ['music_2eh',['Music.h',['../Music_8h.html',1,'']]]
 ];

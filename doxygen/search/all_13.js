@@ -1,8 +1,11 @@
 var searchData=
 [
-  ['unload',['unload',['../classsdl2engine_1_1GStatePlaceholder.html#ac0ef624166f97b63f031a75aa4087e04',1,'sdl2engine::GStatePlaceholder::unload()'],['../classsdl2engine_1_1StateGame.html#a2c320e3ee147659b2f4a82346f9294b0',1,'sdl2engine::StateGame::unload()']]],
-  ['unregisterresource',['UnregisterResource',['../classsdl2engine_1_1ResourceManager.html#ab11cdaf248c1ab38cf77f430d1baeab9',1,'sdl2engine::ResourceManager']]],
-  ['update',['Update',['../classsdl2engine_1_1Animation.html#af084f69f04ef384b602f8871e6795f6c',1,'sdl2engine::Animation::Update()'],['../classsdl2engine_1_1Camera.html#aa093b93c51a39ca5ca61cff6b17e11aa',1,'sdl2engine::Camera::Update()'],['../classsdl2engine_1_1GameObject.html#a00d2251bbd9f04288dc7e22d0ac11c91',1,'sdl2engine::GameObject::update()'],['../classsdl2engine_1_1GStatePlaceholder.html#a702c19e5680ab65e13aede54433a6bdd',1,'sdl2engine::GStatePlaceholder::update()'],['../classsdl2engine_1_1StateGame.html#a286d6924ca6e74a5850be536107f2e8b',1,'sdl2engine::StateGame::update()'],['../classsdl2engine_1_1Text.html#a053df06eb3cc2cf5668753e928939d3a',1,'sdl2engine::Text::update()']]],
-  ['updateclip',['UpdateClip',['../classsdl2engine_1_1Animation.html#a91d73f4b382dd493ebdd3faa3a093010',1,'sdl2engine::Animation']]],
-  ['updateposition',['UpdatePosition',['../classsdl2engine_1_1Camera.html#ad10ee2d5ba235f6d2e1d72c3d9070c3f',1,'sdl2engine::Camera']]]
+  ['warn',['Warn',['../namespacesdl2engine.html#a72818c74e8372a1d6c169905f7eb232ea56525ae64d370c0b448ac0d60710ef17',1,'sdl2engine']]],
+  ['welcome_2emd',['WELCOME.md',['../WELCOME_8md.html',1,'']]],
+  ['width',['Width',['../classsdl2engine_1_1Sprite.html#a77127b66ed4450ac8a3edd0457a2d677',1,'sdl2engine::Sprite::Width()'],['../classsdl2engine_1_1GameObject.html#a8dd98fc5fe67c5e562805487d643ee19',1,'sdl2engine::GameObject::width()']]],
+  ['window',['Window',['../classsdl2engine_1_1Window.html',1,'sdl2engine']]],
+  ['window',['Window',['../classsdl2engine_1_1Window.html#aa0403e65f0dfe560bee7c8f0b779bc55',1,'sdl2engine::Window']]],
+  ['window_2ecpp',['Window.cpp',['../Window_8cpp.html',1,'']]],
+  ['window_2eh',['Window.h',['../Window_8h.html',1,'']]],
+  ['windowtitle',['WindowTitle',['../classsdl2engine_1_1Configuration.html#a5246fe0e44ebf973bba29cb0ffaad6be',1,'sdl2engine::Configuration']]]
 ];
