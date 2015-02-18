@@ -1,11 +1,15 @@
 <map id="sdl2engine::Game::Run" name="sdl2engine::Game::Run">
 <area shape="rect" id="node3" href="$classsdl2engine_1_1StateManager.html#a82af1358c2b092e10faca0ac14c29850" title="Loads first state of the game. " alt="" coords="213,5,387,51"/>
-<area shape="rect" id="node7" href="$classsdl2engine_1_1Game.html#adcd0f476137568967aed69fe800805a0" title="Stops execution and closes the game. " alt="" coords="219,75,381,104"/>
-<area shape="rect" id="node9" href="$classsdl2engine_1_1StateManager.html#aa7161c44ad5dc61220ca5711514d23d2" title="sdl2engine::StateManager\l::CurrentState" alt="" coords="213,127,387,174"/>
-<area shape="rect" id="node11" href="$classsdl2engine_1_1StateGame.html#a03b0d87d6a6d7c2e230b3abfe143b18f" title="Update all m_game_objects. " alt="" coords="221,197,379,243"/>
-<area shape="rect" id="node13" href="$classsdl2engine_1_1Window.html#ad37ec5bd73b7688c8b3bbd65bd62b560" title="sdl2engine::Window\l::GetRenderer" alt="" coords="231,266,369,313"/>
-<area shape="rect" id="node15" href="$classsdl2engine_1_1Renderer.html#a8fb21b238a2a807c6c650c54239a823c" title="Clears previous rendering. " alt="" coords="228,335,372,382"/>
-<area shape="rect" id="node17" href="$classsdl2engine_1_1StateGame.html#ac9bd463b5a76a03902d854395a228314" title="Renders the state. Pure virtual function. " alt="" coords="221,405,379,451"/>
-<area shape="rect" id="node19" href="$classsdl2engine_1_1Renderer.html#af016a3209a0768f7db19c38ab9489068" title="Renders everything drawn in a frame. " alt="" coords="228,474,372,521"/>
-<area shape="rect" id="node5" href="$classsdl2engine_1_1StateGame.html#a3bc152caedb95ce760cee495f3425ef5" title="Loads necessary objects. " alt="" coords="436,5,593,51"/>
+<area shape="rect" id="node7" href="$classsdl2engine_1_1EventHandler.html#a77a95bea7da9993ae9d3d5b4bd5afd9d" title="Main event handling method. " alt="" coords="215,74,385,121"/>
+<area shape="rect" id="node13" href="$classsdl2engine_1_1EventHandler.html#aa72d4a856a0646724a4f72f395439bb6" title="sdl2engine::EventHandler\l::QuitFlagged" alt="" coords="215,143,385,190"/>
+<area shape="rect" id="node15" href="$classsdl2engine_1_1Game.html#adcd0f476137568967aed69fe800805a0" title="Stops execution and closes the game. " alt="" coords="219,213,381,243"/>
+<area shape="rect" id="node17" href="$classsdl2engine_1_1StateManager.html#aa7161c44ad5dc61220ca5711514d23d2" title="sdl2engine::StateManager\l::CurrentState" alt="" coords="213,266,387,313"/>
+<area shape="rect" id="node19" href="$classsdl2engine_1_1StateGame.html#a03b0d87d6a6d7c2e230b3abfe143b18f" title="Update all m_game_objects. " alt="" coords="221,335,379,382"/>
+<area shape="rect" id="node21" href="$classsdl2engine_1_1Window.html#ad37ec5bd73b7688c8b3bbd65bd62b560" title="sdl2engine::Window\l::GetRenderer" alt="" coords="231,405,369,451"/>
+<area shape="rect" id="node23" href="$classsdl2engine_1_1Renderer.html#a8fb21b238a2a807c6c650c54239a823c" title="Clears previous rendering. " alt="" coords="228,474,372,521"/>
+<area shape="rect" id="node25" href="$classsdl2engine_1_1StateGame.html#ac9bd463b5a76a03902d854395a228314" title="Renders the state. Pure virtual function. " alt="" coords="221,543,379,590"/>
+<area shape="rect" id="node27" href="$classsdl2engine_1_1Renderer.html#af016a3209a0768f7db19c38ab9489068" title="Renders everything drawn in a frame. " alt="" coords="228,613,372,659"/>
+<area shape="rect" id="node5" href="$classsdl2engine_1_1StateGame.html#a3bc152caedb95ce760cee495f3425ef5" title="Loads necessary objects. " alt="" coords="440,5,597,51"/>
+<area shape="rect" id="node9" href="$classsdl2engine_1_1InputHandler.html#a94bdffcffd2b3b88df26b9ab261e9dc6" title="sdl2engine::InputHandler\l::Reset" alt="" coords="436,74,601,121"/>
+<area shape="rect" id="node11" href="$classsdl2engine_1_1InputHandler.html#a28070ec8f1fae4210eb6dbb419b37bdc" title="sdl2engine::InputHandler\l::HandleInput" alt="" coords="436,143,601,190"/>
 </map>

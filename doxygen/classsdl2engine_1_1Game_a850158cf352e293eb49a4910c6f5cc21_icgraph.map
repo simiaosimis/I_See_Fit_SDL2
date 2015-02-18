@@ -1,9 +1,7 @@
 <map id="sdl2engine::Game::Instance" name="sdl2engine::Game::Instance">
-<area shape="rect" id="node3" href="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="295,5,345,35"/>
-<area shape="rect" id="node5" href="$classsdl2engine_1_1Placeholder.html#ab1183e05f8c96177c2925f02db48e25b" title="sdl2engine::Placeholder\l::Update" alt="" coords="240,58,400,105"/>
-<area shape="rect" id="node7" href="$classsdl2engine_1_1Sprite.html#a618dfd6e5850ee7f8c40833d0d3fca7c" title="Renders the sprite. " alt="" coords="257,127,383,174"/>
-<area shape="rect" id="node11" href="$classsdl2engine_1_1Sprite.html#a4dfaeee4aed2bca6a87bb6b4926581da" title="Converts a SDL_Surface to a SDL_Texture. " alt="" coords="253,197,387,243"/>
-<area shape="rect" id="node9" href="$classsdl2engine_1_1Placeholder.html#a2fede2d358bc8efbef6da0e6901da58b" title="sdl2engine::Placeholder\l::Render" alt="" coords="448,127,608,174"/>
-<area shape="rect" id="node13" href="$classsdl2engine_1_1Sprite.html#aa14984653f10c8e428bb7172e0472dbb" title="The constructor from a surface. " alt="" coords="465,197,591,243"/>
-<area shape="rect" id="node15" href="$classsdl2engine_1_1Sprite.html#a2d8ae44951073c4ca0d29082428ad900" title="Loads image from a path. " alt="" coords="465,266,591,313"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="283,5,333,35"/>
+<area shape="rect" id="node5" href="$classsdl2engine_1_1Sprite.html#a618dfd6e5850ee7f8c40833d0d3fca7c" title="Renders the sprite. " alt="" coords="245,58,371,105"/>
+<area shape="rect" id="node9" href="$classsdl2engine_1_1Sprite.html#a4dfaeee4aed2bca6a87bb6b4926581da" title="Converts a SDL_Surface to a SDL_Texture. " alt="" coords="241,127,375,174"/>
+<area shape="rect" id="node7" href="$classsdl2engine_1_1Placeholder.html#a2fede2d358bc8efbef6da0e6901da58b" title="sdl2engine::Placeholder\l::Render" alt="" coords="424,58,584,105"/>
+<area shape="rect" id="node11" href="$classsdl2engine_1_1Sprite.html#a2d8ae44951073c4ca0d29082428ad900" title="Loads image from a path. " alt="" coords="441,127,567,174"/>
 </map>

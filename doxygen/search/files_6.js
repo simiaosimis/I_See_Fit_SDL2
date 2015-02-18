@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['placeholder_2ecpp',['Placeholder.cpp',['../Placeholder_8cpp.html',1,'']]],
-  ['placeholder_2eh',['Placeholder.h',['../Placeholder_8h.html',1,'']]]
+  ['main_2ecpp',['main.cpp',['../main_8cpp.html',1,'']]],
+  ['music_2ecpp',['Music.cpp',['../Music_8cpp.html',1,'']]],
+  ['music_2eh',['Music.h',['../Music_8h.html',1,'']]]
 ];

@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v37</span>
+   &#160;<span id="projectnumber">v38</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -97,8 +97,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:namespacesdl2engine_1_1controllerMap"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesdl2engine_1_1controllerMap.html">controllerMap</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacesdl2engine_1_1sdl"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesdl2engine_1_1sdl.html">sdl</a></td></tr>
 <tr class="memdesc:namespacesdl2engine_1_1sdl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encloses initialization/closing of SDL systems. <br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -141,7 +139,8 @@ Data Structures</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1Window.html">Window</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1ControllerHandler.html">ControllerHandler</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1EventHandler.html">EventHandler</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles the different SDL events.  <a href="classsdl2engine_1_1EventHandler.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsdl2engine_1_1InputHandler.html">InputHandler</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -157,8 +156,8 @@ Typedefs</h2></td></tr>
 <tr class="separator:a510b8ab0fe262941a17169daf4d8f637"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a239c8481720d24d909626a3bf590edd4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesdl2engine.html#a239c8481720d24d909626a3bf590edd4">AudioMusic</a> = <a class="el" href="classsdl2engine_1_1AudioHandler.html">AudioHandler</a>&lt; <a class="el" href="namespacesdl2engine.html#aeccca27a95f2b37740093a79b4588a9da47dcbd834e669233d7eb8a51456ed217">AudioType::Music</a> &gt;</td></tr>
 <tr class="separator:a239c8481720d24d909626a3bf590edd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7170bd9949accae63505ef4408c12b9"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesdl2engine.html#af7170bd9949accae63505ef4408c12b9">InputArray</a> = std::array&lt; bool, GameKeys::MAX &gt;</td></tr>
-<tr class="separator:af7170bd9949accae63505ef4408c12b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b3d34c47397c51a286af9175325d204"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesdl2engine.html#a5b3d34c47397c51a286af9175325d204">InputArray</a> = std::array&lt; bool, Key::Count &gt;</td></tr>
+<tr class="separator:a5b3d34c47397c51a286af9175325d204"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a798e7c6b0c28edef46c680a42ff13869"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesdl2engine.html#a798e7c6b0c28edef46c680a42ff13869">log_function_ptr</a> ) = <a class="el" href="classsdl2engine_1_1LogBuffer.html">LogBuffer</a>(*)(</td></tr>
 <tr class="separator:a798e7c6b0c28edef46c680a42ff13869"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -173,12 +172,17 @@ Enumerations</h2></td></tr>
 <a class="el" href="namespacesdl2engine.html#a0798c4f5addad4986537ba482d3a1c0aab9e7211b8b73d3fa841b0c0719fc0c1c">TOTAL</a>
  }</td></tr>
 <tr class="separator:a0798c4f5addad4986537ba482d3a1c0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92e23178a19914e86fa4f7640dcde170"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesdl2engine.html#a92e23178a19914e86fa4f7640dcde170">GameKeys</a> { <a class="el" href="namespacesdl2engine.html#a92e23178a19914e86fa4f7640dcde170a516639ee85de040fc3e75cfe05ac5049">A</a>, 
-<a class="el" href="namespacesdl2engine.html#a92e23178a19914e86fa4f7640dcde170a1271aa631edd779a3d7a2d7cf517729a">SPACE</a>, 
-<a class="el" href="namespacesdl2engine.html#a92e23178a19914e86fa4f7640dcde170ac9932bd06e7cc4014d11b6d9692d34cb">ESCAPE</a>, 
-<a class="el" href="namespacesdl2engine.html#a92e23178a19914e86fa4f7640dcde170a0d4c59538d2b61f7d152afb5471d78e3">MAX</a>
+<tr class="memitem:a70d0efdc0cb93bef2219f4ca2ea8d343"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesdl2engine.html#a70d0efdc0cb93bef2219f4ca2ea8d343">Key</a> { <br/>
+&#160;&#160;<a class="el" href="namespacesdl2engine.html#a70d0efdc0cb93bef2219f4ca2ea8d343a3637f0ab4519acc9b60cd886b7d66bc5">FadeOut</a>, 
+<a class="el" href="namespacesdl2engine.html#a70d0efdc0cb93bef2219f4ca2ea8d343ad111d25b18cef887ee1e0eee2ecdf3ae">LogSomething</a>, 
+<a class="el" href="namespacesdl2engine.html#a70d0efdc0cb93bef2219f4ca2ea8d343abdb530adfe217a3e5d458100b029ee93">TestSfx</a>, 
+<a class="el" href="namespacesdl2engine.html#a70d0efdc0cb93bef2219f4ca2ea8d343abdc9435198e80aa7c4f44500d5f332cf">TestSfxAfterFadeOut</a>, 
+<br/>
+&#160;&#160;<a class="el" href="namespacesdl2engine.html#a70d0efdc0cb93bef2219f4ca2ea8d343ace6a9578ef6caaf5cf0cf8872f08cf35">Quit</a>, 
+<a class="el" href="namespacesdl2engine.html#a70d0efdc0cb93bef2219f4ca2ea8d343a28a5e911a38d25983c0392be650a09eb">Count</a>
+<br/>
  }</td></tr>
-<tr class="separator:a92e23178a19914e86fa4f7640dcde170"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a70d0efdc0cb93bef2219f4ca2ea8d343"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72818c74e8372a1d6c169905f7eb232e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesdl2engine.html#a72818c74e8372a1d6c169905f7eb232e">LogLevel</a> { <a class="el" href="namespacesdl2engine.html#a72818c74e8372a1d6c169905f7eb232ea902b0d55fddef6f8d651fe1035b7d4bd">LogLevel::Error</a>, 
 <a class="el" href="namespacesdl2engine.html#a72818c74e8372a1d6c169905f7eb232ea56525ae64d370c0b448ac0d60710ef17">LogLevel::Warn</a>, 
 <a class="el" href="namespacesdl2engine.html#a72818c74e8372a1d6c169905f7eb232ea4059b0251f66a18cb56f544728796875">LogLevel::Info</a>, 
@@ -244,17 +248,17 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="af7170bd9949accae63505ef4408c12b9"></a>
+<a class="anchor" id="a5b3d34c47397c51a286af9175325d204"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="namespacesdl2engine.html#af7170bd9949accae63505ef4408c12b9">sdl2engine::InputArray</a> = typedef std::array&lt;bool, GameKeys::MAX&gt;</td>
+          <td class="memname">using <a class="el" href="namespacesdl2engine.html#a5b3d34c47397c51a286af9175325d204">sdl2engine::InputArray</a> = typedef std::array&lt;bool, Key::Count&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="InputKeys_8h_source.html#l00014">14</a> of file <a class="el" href="InputKeys_8h_source.html">InputKeys.h</a>.</p>
+<p>Definition at line <a class="el" href="InputKeys_8h_source.html#l00016">16</a> of file <a class="el" href="InputKeys_8h_source.html">InputKeys.h</a>.</p>
 
 </div>
 </div>
@@ -303,30 +307,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a92e23178a19914e86fa4f7640dcde170"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="namespacesdl2engine.html#a92e23178a19914e86fa4f7640dcde170">sdl2engine::GameKeys</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="a92e23178a19914e86fa4f7640dcde170a516639ee85de040fc3e75cfe05ac5049"></a>A</em>&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="a92e23178a19914e86fa4f7640dcde170a1271aa631edd779a3d7a2d7cf517729a"></a>SPACE</em>&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="a92e23178a19914e86fa4f7640dcde170ac9932bd06e7cc4014d11b6d9692d34cb"></a>ESCAPE</em>&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="a92e23178a19914e86fa4f7640dcde170a0d4c59538d2b61f7d152afb5471d78e3"></a>MAX</em>&#160;</td><td class="fielddoc">
-</td></tr>
-</table>
-
-<p>Definition at line <a class="el" href="InputKeys_8h_source.html#l00007">7</a> of file <a class="el" href="InputKeys_8h_source.html">InputKeys.h</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a0798c4f5addad4986537ba482d3a1c0a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -345,6 +325,34 @@ Variables</h2></td></tr>
 </table>
 
 <p>Definition at line <a class="el" href="StateManager_8h_source.html#l00012">12</a> of file <a class="el" href="StateManager_8h_source.html">StateManager.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a70d0efdc0cb93bef2219f4ca2ea8d343"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="namespacesdl2engine.html#a70d0efdc0cb93bef2219f4ca2ea8d343">sdl2engine::Key</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="a70d0efdc0cb93bef2219f4ca2ea8d343a3637f0ab4519acc9b60cd886b7d66bc5"></a>FadeOut</em>&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a70d0efdc0cb93bef2219f4ca2ea8d343ad111d25b18cef887ee1e0eee2ecdf3ae"></a>LogSomething</em>&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a70d0efdc0cb93bef2219f4ca2ea8d343abdb530adfe217a3e5d458100b029ee93"></a>TestSfx</em>&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a70d0efdc0cb93bef2219f4ca2ea8d343abdc9435198e80aa7c4f44500d5f332cf"></a>TestSfxAfterFadeOut</em>&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a70d0efdc0cb93bef2219f4ca2ea8d343ace6a9578ef6caaf5cf0cf8872f08cf35"></a>Quit</em>&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a70d0efdc0cb93bef2219f4ca2ea8d343a28a5e911a38d25983c0392be650a09eb"></a>Count</em>&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+<p>Definition at line <a class="el" href="InputKeys_8h_source.html#l00007">7</a> of file <a class="el" href="InputKeys_8h_source.html">InputKeys.h</a>.</p>
 
 </div>
 </div>
@@ -548,7 +556,7 @@ template&lt;LogLevel level&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Feb 8 2015 06:13:37 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 18 2015 18:55:30 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

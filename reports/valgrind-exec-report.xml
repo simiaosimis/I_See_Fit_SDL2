@@ -12,8 +12,8 @@
   <line>Command: /home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</line>
 </preamble>
 
-<pid>15315</pid>
-<ppid>15292</ppid>
+<pid>15466</pid>
+<ppid>15443</ppid>
 <tool>memcheck</tool>
 
 <args>
@@ -32,7 +32,7 @@
 
 <status>
   <state>RUNNING</state>
-  <time>00:00:00:00.122 </time>
+  <time>00:00:00:00.125 </time>
 </status>
 
 <error>
@@ -54,7 +54,7 @@
       <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
     </frame>
     <frame>
-      <ip>0x446A2B</ip>
+      <ip>0x446737</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>sdl2engine::Renderer::Renderer(SDL_Window*, unsigned int)</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src/graphics</dir>
@@ -62,7 +62,7 @@
       <line>9</line>
     </frame>
     <frame>
-      <ip>0x446276</ip>
+      <ip>0x447476</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>sdl2engine::Window::Create()</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src/graphics</dir>
@@ -70,7 +70,7 @@
       <line>45</line>
     </frame>
     <frame>
-      <ip>0x446018</ip>
+      <ip>0x447218</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>sdl2engine::Window::Window()</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src/graphics</dir>
@@ -78,7 +78,7 @@
       <line>12</line>
     </frame>
     <frame>
-      <ip>0x4440CB</ip>
+      <ip>0x43CAD7</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>sdl2engine::Game::Game(sdl2engine::Game::ConstructorTag const&amp;)</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src/engine</dir>
@@ -86,12 +86,12 @@
       <line>24</line>
     </frame>
     <frame>
-      <ip>0x444987</ip>
+      <ip>0x43D219</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>std::_MakeUniq&lt;sdl2engine::Game&gt;::__single_object std::make_unique&lt;sdl2engine::Game, sdl2engine::Game::ConstructorTag&gt;(sdl2engine::Game::ConstructorTag&amp;&amp;)</fn>
     </frame>
     <frame>
-      <ip>0x443F8B</ip>
+      <ip>0x43C997</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>sdl2engine::Game::Instance()</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src/engine</dir>
@@ -99,7 +99,7 @@
       <line>16</line>
     </frame>
     <frame>
-      <ip>0x43AD8E</ip>
+      <ip>0x438CDE</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>main</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src</dir>
@@ -135,7 +135,7 @@
       <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
     </frame>
     <frame>
-      <ip>0x446A2B</ip>
+      <ip>0x446737</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>sdl2engine::Renderer::Renderer(SDL_Window*, unsigned int)</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src/graphics</dir>
@@ -143,7 +143,7 @@
       <line>9</line>
     </frame>
     <frame>
-      <ip>0x446276</ip>
+      <ip>0x447476</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>sdl2engine::Window::Create()</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src/graphics</dir>
@@ -151,7 +151,7 @@
       <line>45</line>
     </frame>
     <frame>
-      <ip>0x446018</ip>
+      <ip>0x447218</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>sdl2engine::Window::Window()</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src/graphics</dir>
@@ -159,7 +159,7 @@
       <line>12</line>
     </frame>
     <frame>
-      <ip>0x4440CB</ip>
+      <ip>0x43CAD7</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>sdl2engine::Game::Game(sdl2engine::Game::ConstructorTag const&amp;)</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src/engine</dir>
@@ -167,12 +167,12 @@
       <line>24</line>
     </frame>
     <frame>
-      <ip>0x444987</ip>
+      <ip>0x43D219</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>std::_MakeUniq&lt;sdl2engine::Game&gt;::__single_object std::make_unique&lt;sdl2engine::Game, sdl2engine::Game::ConstructorTag&gt;(sdl2engine::Game::ConstructorTag&amp;&amp;)</fn>
     </frame>
     <frame>
-      <ip>0x443F8B</ip>
+      <ip>0x43C997</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>sdl2engine::Game::Instance()</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src/engine</dir>
@@ -180,7 +180,7 @@
       <line>16</line>
     </frame>
     <frame>
-      <ip>0x43AD8E</ip>
+      <ip>0x438CDE</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>main</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src</dir>
@@ -240,7 +240,7 @@
       <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
     </frame>
     <frame>
-      <ip>0x446A2B</ip>
+      <ip>0x446737</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>sdl2engine::Renderer::Renderer(SDL_Window*, unsigned int)</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src/graphics</dir>
@@ -248,7 +248,7 @@
       <line>9</line>
     </frame>
     <frame>
-      <ip>0x446276</ip>
+      <ip>0x447476</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>sdl2engine::Window::Create()</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src/graphics</dir>
@@ -256,7 +256,7 @@
       <line>45</line>
     </frame>
     <frame>
-      <ip>0x446018</ip>
+      <ip>0x447218</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>sdl2engine::Window::Window()</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src/graphics</dir>
@@ -264,7 +264,7 @@
       <line>12</line>
     </frame>
     <frame>
-      <ip>0x4440CB</ip>
+      <ip>0x43CAD7</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>sdl2engine::Game::Game(sdl2engine::Game::ConstructorTag const&amp;)</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src/engine</dir>
@@ -272,7 +272,7 @@
       <line>24</line>
     </frame>
     <frame>
-      <ip>0x444987</ip>
+      <ip>0x43D219</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>std::_MakeUniq&lt;sdl2engine::Game&gt;::__single_object std::make_unique&lt;sdl2engine::Game, sdl2engine::Game::ConstructorTag&gt;(sdl2engine::Game::ConstructorTag&amp;&amp;)</fn>
     </frame>
@@ -337,7 +337,7 @@
       <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
     </frame>
     <frame>
-      <ip>0x446A2B</ip>
+      <ip>0x446737</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>sdl2engine::Renderer::Renderer(SDL_Window*, unsigned int)</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src/graphics</dir>
@@ -345,7 +345,7 @@
       <line>9</line>
     </frame>
     <frame>
-      <ip>0x446276</ip>
+      <ip>0x447476</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>sdl2engine::Window::Create()</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src/graphics</dir>
@@ -353,7 +353,7 @@
       <line>45</line>
     </frame>
     <frame>
-      <ip>0x446018</ip>
+      <ip>0x447218</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>sdl2engine::Window::Window()</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src/graphics</dir>
@@ -361,7 +361,7 @@
       <line>12</line>
     </frame>
     <frame>
-      <ip>0x4440CB</ip>
+      <ip>0x43CAD7</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>sdl2engine::Game::Game(sdl2engine::Game::ConstructorTag const&amp;)</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src/engine</dir>
@@ -429,7 +429,7 @@
       <obj>/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.2.1</obj>
     </frame>
     <frame>
-      <ip>0x446A2B</ip>
+      <ip>0x446737</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>sdl2engine::Renderer::Renderer(SDL_Window*, unsigned int)</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src/graphics</dir>
@@ -437,7 +437,7 @@
       <line>9</line>
     </frame>
     <frame>
-      <ip>0x446276</ip>
+      <ip>0x447476</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>sdl2engine::Window::Create()</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src/graphics</dir>
@@ -445,7 +445,7 @@
       <line>45</line>
     </frame>
     <frame>
-      <ip>0x446018</ip>
+      <ip>0x447218</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>sdl2engine::Window::Window()</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src/graphics</dir>
@@ -453,7 +453,7 @@
       <line>12</line>
     </frame>
     <frame>
-      <ip>0x4440CB</ip>
+      <ip>0x43CAD7</ip>
       <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
       <fn>sdl2engine::Game::Game(sdl2engine::Game::ConstructorTag const&amp;)</fn>
       <dir>/home/travis/build/CaioIcy/sdl2-engine/src/engine</dir>
@@ -470,13 +470,733 @@
   </stack>
 </error>
 
+<error>
+  <unique>0x7</unique>
+  <tid>1</tid>
+  <kind>UninitCondition</kind>
+  <what>Conditional jump or move depends on uninitialised value(s)</what>
+  <stack>
+    <frame>
+      <ip>0x447C77</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::EventHandler::PollEvents()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/input</dir>
+      <file>EventHandler.cpp</file>
+      <line>23</line>
+    </frame>
+    <frame>
+      <ip>0x43CC8D</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::Game::Run()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/engine</dir>
+      <file>Game.cpp</file>
+      <line>54</line>
+    </frame>
+    <frame>
+      <ip>0x438CFB</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>main</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src</dir>
+      <file>main.cpp</file>
+      <line>20</line>
+    </frame>
+  </stack>
+  <auxwhat>Uninitialised value was created by a stack allocation</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x447C08</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::EventHandler::PollEvents()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/input</dir>
+      <file>EventHandler.cpp</file>
+      <line>13</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x8</unique>
+  <tid>1</tid>
+  <kind>UninitCondition</kind>
+  <what>Conditional jump or move depends on uninitialised value(s)</what>
+  <stack>
+    <frame>
+      <ip>0x447C9B</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::EventHandler::PollEvents()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/input</dir>
+      <file>EventHandler.cpp</file>
+      <line>23</line>
+    </frame>
+    <frame>
+      <ip>0x43CC8D</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::Game::Run()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/engine</dir>
+      <file>Game.cpp</file>
+      <line>54</line>
+    </frame>
+    <frame>
+      <ip>0x438CFB</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>main</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src</dir>
+      <file>main.cpp</file>
+      <line>20</line>
+    </frame>
+  </stack>
+  <auxwhat>Uninitialised value was created by a stack allocation</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x447C08</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::EventHandler::PollEvents()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/input</dir>
+      <file>EventHandler.cpp</file>
+      <line>13</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x9</unique>
+  <tid>1</tid>
+  <kind>UninitCondition</kind>
+  <what>Conditional jump or move depends on uninitialised value(s)</what>
+  <stack>
+    <frame>
+      <ip>0x447CA6</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::EventHandler::PollEvents()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/input</dir>
+      <file>EventHandler.cpp</file>
+      <line>23</line>
+    </frame>
+    <frame>
+      <ip>0x43CC8D</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::Game::Run()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/engine</dir>
+      <file>Game.cpp</file>
+      <line>54</line>
+    </frame>
+    <frame>
+      <ip>0x438CFB</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>main</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src</dir>
+      <file>main.cpp</file>
+      <line>20</line>
+    </frame>
+  </stack>
+  <auxwhat>Uninitialised value was created by a stack allocation</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x447C08</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::EventHandler::PollEvents()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/input</dir>
+      <file>EventHandler.cpp</file>
+      <line>13</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0xa</unique>
+  <tid>1</tid>
+  <kind>UninitCondition</kind>
+  <what>Conditional jump or move depends on uninitialised value(s)</what>
+  <stack>
+    <frame>
+      <ip>0x447CB1</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::EventHandler::PollEvents()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/input</dir>
+      <file>EventHandler.cpp</file>
+      <line>23</line>
+    </frame>
+    <frame>
+      <ip>0x43CC8D</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::Game::Run()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/engine</dir>
+      <file>Game.cpp</file>
+      <line>54</line>
+    </frame>
+    <frame>
+      <ip>0x438CFB</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>main</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src</dir>
+      <file>main.cpp</file>
+      <line>20</line>
+    </frame>
+  </stack>
+  <auxwhat>Uninitialised value was created by a stack allocation</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x447C08</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::EventHandler::PollEvents()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/input</dir>
+      <file>EventHandler.cpp</file>
+      <line>13</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0xb</unique>
+  <tid>1</tid>
+  <kind>UninitCondition</kind>
+  <what>Conditional jump or move depends on uninitialised value(s)</what>
+  <stack>
+    <frame>
+      <ip>0x447CB8</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::EventHandler::PollEvents()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/input</dir>
+      <file>EventHandler.cpp</file>
+      <line>23</line>
+    </frame>
+    <frame>
+      <ip>0x43CC8D</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::Game::Run()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/engine</dir>
+      <file>Game.cpp</file>
+      <line>54</line>
+    </frame>
+    <frame>
+      <ip>0x438CFB</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>main</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src</dir>
+      <file>main.cpp</file>
+      <line>20</line>
+    </frame>
+  </stack>
+  <auxwhat>Uninitialised value was created by a stack allocation</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x447C08</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::EventHandler::PollEvents()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/input</dir>
+      <file>EventHandler.cpp</file>
+      <line>13</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0xc</unique>
+  <tid>1</tid>
+  <kind>UninitCondition</kind>
+  <what>Conditional jump or move depends on uninitialised value(s)</what>
+  <stack>
+    <frame>
+      <ip>0x447CC3</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::EventHandler::PollEvents()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/input</dir>
+      <file>EventHandler.cpp</file>
+      <line>23</line>
+    </frame>
+    <frame>
+      <ip>0x43CC8D</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::Game::Run()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/engine</dir>
+      <file>Game.cpp</file>
+      <line>54</line>
+    </frame>
+    <frame>
+      <ip>0x438CFB</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>main</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src</dir>
+      <file>main.cpp</file>
+      <line>20</line>
+    </frame>
+  </stack>
+  <auxwhat>Uninitialised value was created by a stack allocation</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x447C08</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::EventHandler::PollEvents()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/input</dir>
+      <file>EventHandler.cpp</file>
+      <line>13</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0xd</unique>
+  <tid>1</tid>
+  <kind>UninitCondition</kind>
+  <what>Conditional jump or move depends on uninitialised value(s)</what>
+  <stack>
+    <frame>
+      <ip>0x447CCA</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::EventHandler::PollEvents()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/input</dir>
+      <file>EventHandler.cpp</file>
+      <line>23</line>
+    </frame>
+    <frame>
+      <ip>0x43CC8D</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::Game::Run()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/engine</dir>
+      <file>Game.cpp</file>
+      <line>54</line>
+    </frame>
+    <frame>
+      <ip>0x438CFB</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>main</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src</dir>
+      <file>main.cpp</file>
+      <line>20</line>
+    </frame>
+  </stack>
+  <auxwhat>Uninitialised value was created by a stack allocation</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x447C08</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::EventHandler::PollEvents()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/input</dir>
+      <file>EventHandler.cpp</file>
+      <line>13</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0xe</unique>
+  <tid>1</tid>
+  <kind>UninitCondition</kind>
+  <what>Conditional jump or move depends on uninitialised value(s)</what>
+  <stack>
+    <frame>
+      <ip>0x447CD5</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::EventHandler::PollEvents()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/input</dir>
+      <file>EventHandler.cpp</file>
+      <line>23</line>
+    </frame>
+    <frame>
+      <ip>0x43CC8D</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::Game::Run()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/engine</dir>
+      <file>Game.cpp</file>
+      <line>54</line>
+    </frame>
+    <frame>
+      <ip>0x438CFB</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>main</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src</dir>
+      <file>main.cpp</file>
+      <line>20</line>
+    </frame>
+  </stack>
+  <auxwhat>Uninitialised value was created by a stack allocation</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x447C08</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::EventHandler::PollEvents()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/input</dir>
+      <file>EventHandler.cpp</file>
+      <line>13</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x21</unique>
+  <tid>1</tid>
+  <kind>UninitCondition</kind>
+  <what>Conditional jump or move depends on uninitialised value(s)</what>
+  <stack>
+    <frame>
+      <ip>0x447D3D</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::EventHandler::PollEvents()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/input</dir>
+      <file>EventHandler.cpp</file>
+      <line>23</line>
+    </frame>
+    <frame>
+      <ip>0x43CC8D</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::Game::Run()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/engine</dir>
+      <file>Game.cpp</file>
+      <line>54</line>
+    </frame>
+    <frame>
+      <ip>0x438CFB</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>main</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src</dir>
+      <file>main.cpp</file>
+      <line>20</line>
+    </frame>
+  </stack>
+  <auxwhat>Uninitialised value was created by a stack allocation</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x447C08</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::EventHandler::PollEvents()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/input</dir>
+      <file>EventHandler.cpp</file>
+      <line>13</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x22</unique>
+  <tid>1</tid>
+  <kind>UninitCondition</kind>
+  <what>Conditional jump or move depends on uninitialised value(s)</what>
+  <stack>
+    <frame>
+      <ip>0x447D48</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::EventHandler::PollEvents()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/input</dir>
+      <file>EventHandler.cpp</file>
+      <line>23</line>
+    </frame>
+    <frame>
+      <ip>0x43CC8D</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::Game::Run()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/engine</dir>
+      <file>Game.cpp</file>
+      <line>54</line>
+    </frame>
+    <frame>
+      <ip>0x438CFB</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>main</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src</dir>
+      <file>main.cpp</file>
+      <line>20</line>
+    </frame>
+  </stack>
+  <auxwhat>Uninitialised value was created by a stack allocation</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x447C08</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::EventHandler::PollEvents()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/input</dir>
+      <file>EventHandler.cpp</file>
+      <line>13</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x23</unique>
+  <tid>1</tid>
+  <kind>UninitCondition</kind>
+  <what>Conditional jump or move depends on uninitialised value(s)</what>
+  <stack>
+    <frame>
+      <ip>0x447D97</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::EventHandler::PollEvents()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/input</dir>
+      <file>EventHandler.cpp</file>
+      <line>23</line>
+    </frame>
+    <frame>
+      <ip>0x43CC8D</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::Game::Run()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/engine</dir>
+      <file>Game.cpp</file>
+      <line>54</line>
+    </frame>
+    <frame>
+      <ip>0x438CFB</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>main</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src</dir>
+      <file>main.cpp</file>
+      <line>20</line>
+    </frame>
+  </stack>
+  <auxwhat>Uninitialised value was created by a stack allocation</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x447C08</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::EventHandler::PollEvents()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/input</dir>
+      <file>EventHandler.cpp</file>
+      <line>13</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x24</unique>
+  <tid>1</tid>
+  <kind>UninitCondition</kind>
+  <what>Conditional jump or move depends on uninitialised value(s)</what>
+  <stack>
+    <frame>
+      <ip>0x447DA2</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::EventHandler::PollEvents()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/input</dir>
+      <file>EventHandler.cpp</file>
+      <line>23</line>
+    </frame>
+    <frame>
+      <ip>0x43CC8D</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::Game::Run()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/engine</dir>
+      <file>Game.cpp</file>
+      <line>54</line>
+    </frame>
+    <frame>
+      <ip>0x438CFB</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>main</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src</dir>
+      <file>main.cpp</file>
+      <line>20</line>
+    </frame>
+  </stack>
+  <auxwhat>Uninitialised value was created by a stack allocation</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x447C08</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::EventHandler::PollEvents()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/input</dir>
+      <file>EventHandler.cpp</file>
+      <line>13</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x25</unique>
+  <tid>1</tid>
+  <kind>UninitCondition</kind>
+  <what>Conditional jump or move depends on uninitialised value(s)</what>
+  <stack>
+    <frame>
+      <ip>0x447DC4</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::EventHandler::PollEvents()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/input</dir>
+      <file>EventHandler.cpp</file>
+      <line>23</line>
+    </frame>
+    <frame>
+      <ip>0x43CC8D</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::Game::Run()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/engine</dir>
+      <file>Game.cpp</file>
+      <line>54</line>
+    </frame>
+    <frame>
+      <ip>0x438CFB</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>main</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src</dir>
+      <file>main.cpp</file>
+      <line>20</line>
+    </frame>
+  </stack>
+  <auxwhat>Uninitialised value was created by a stack allocation</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x447C08</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::EventHandler::PollEvents()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/input</dir>
+      <file>EventHandler.cpp</file>
+      <line>13</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x26</unique>
+  <tid>1</tid>
+  <kind>UninitCondition</kind>
+  <what>Conditional jump or move depends on uninitialised value(s)</what>
+  <stack>
+    <frame>
+      <ip>0x447DCF</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::EventHandler::PollEvents()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/input</dir>
+      <file>EventHandler.cpp</file>
+      <line>23</line>
+    </frame>
+    <frame>
+      <ip>0x43CC8D</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::Game::Run()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/engine</dir>
+      <file>Game.cpp</file>
+      <line>54</line>
+    </frame>
+    <frame>
+      <ip>0x438CFB</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>main</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src</dir>
+      <file>main.cpp</file>
+      <line>20</line>
+    </frame>
+  </stack>
+  <auxwhat>Uninitialised value was created by a stack allocation</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x447C08</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::EventHandler::PollEvents()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/input</dir>
+      <file>EventHandler.cpp</file>
+      <line>13</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x27</unique>
+  <tid>1</tid>
+  <kind>UninitCondition</kind>
+  <what>Conditional jump or move depends on uninitialised value(s)</what>
+  <stack>
+    <frame>
+      <ip>0x447DDA</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::EventHandler::PollEvents()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/input</dir>
+      <file>EventHandler.cpp</file>
+      <line>23</line>
+    </frame>
+    <frame>
+      <ip>0x43CC8D</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::Game::Run()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/engine</dir>
+      <file>Game.cpp</file>
+      <line>54</line>
+    </frame>
+    <frame>
+      <ip>0x438CFB</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>main</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src</dir>
+      <file>main.cpp</file>
+      <line>20</line>
+    </frame>
+  </stack>
+  <auxwhat>Uninitialised value was created by a stack allocation</auxwhat>
+  <stack>
+    <frame>
+      <ip>0x447C08</ip>
+      <obj>/home/travis/build/CaioIcy/sdl2-engine/sdl2-engine_exec</obj>
+      <fn>sdl2engine::EventHandler::PollEvents()</fn>
+      <dir>/home/travis/build/CaioIcy/sdl2-engine/src/input</dir>
+      <file>EventHandler.cpp</file>
+      <line>13</line>
+    </frame>
+  </stack>
+</error>
+
 
 <status>
   <state>FINISHED</state>
-  <time>00:00:00:06.552 </time>
+  <time>00:00:00:06.766 </time>
 </status>
 
 <errorcounts>
+  <pair>
+    <count>117</count>
+    <unique>0x27</unique>
+  </pair>
+  <pair>
+    <count>117</count>
+    <unique>0x26</unique>
+  </pair>
+  <pair>
+    <count>117</count>
+    <unique>0x25</unique>
+  </pair>
+  <pair>
+    <count>117</count>
+    <unique>0x24</unique>
+  </pair>
+  <pair>
+    <count>117</count>
+    <unique>0x23</unique>
+  </pair>
+  <pair>
+    <count>117</count>
+    <unique>0x22</unique>
+  </pair>
+  <pair>
+    <count>117</count>
+    <unique>0x21</unique>
+  </pair>
+  <pair>
+    <count>120</count>
+    <unique>0x8</unique>
+  </pair>
+  <pair>
+    <count>120</count>
+    <unique>0x7</unique>
+  </pair>
+  <pair>
+    <count>3</count>
+    <unique>0xe</unique>
+  </pair>
+  <pair>
+    <count>3</count>
+    <unique>0xd</unique>
+  </pair>
+  <pair>
+    <count>3</count>
+    <unique>0xc</unique>
+  </pair>
+  <pair>
+    <count>3</count>
+    <unique>0xb</unique>
+  </pair>
+  <pair>
+    <count>3</count>
+    <unique>0xa</unique>
+  </pair>
+  <pair>
+    <count>3</count>
+    <unique>0x9</unique>
+  </pair>
   <pair>
     <count>1</count>
     <unique>0x6</unique>

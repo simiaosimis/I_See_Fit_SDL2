@@ -1,4 +1,6 @@
 <map id="sdl2engine::Camera::UpdatePosition" name="sdl2engine::Camera::UpdatePosition">
-<area shape="rect" id="node3" href="$classsdl2engine_1_1GameObject.html#a82cb6d5d6ba68bbe8534ee398fca792f" title="sdl2engine::GameObject\l::getWidth" alt="" coords="192,5,357,51"/>
-<area shape="rect" id="node5" href="$classsdl2engine_1_1GameObject.html#aac8db512d02772342a60fd69821c5804" title="sdl2engine::GameObject\l::getHeight" alt="" coords="192,74,357,121"/>
+<area shape="rect" id="node3" href="$classsdl2engine_1_1GameObject.html#a95275b1e950a64444fd59da24a897710" title="sdl2engine::GameObject::X" alt="" coords="193,5,375,35"/>
+<area shape="rect" id="node5" href="$classsdl2engine_1_1GameObject.html#abdd41e72cf7b2d828649e464b28dadd3" title="sdl2engine::GameObject\l::Width" alt="" coords="201,58,367,105"/>
+<area shape="rect" id="node7" href="$classsdl2engine_1_1GameObject.html#aab783144eeef48d20364a4022523e767" title="sdl2engine::GameObject::Y" alt="" coords="193,128,375,157"/>
+<area shape="rect" id="node9" href="$classsdl2engine_1_1GameObject.html#a7b862aa7d2b9f8163c0697033a347f1a" title="sdl2engine::GameObject\l::Height" alt="" coords="201,181,367,227"/>
 </map>

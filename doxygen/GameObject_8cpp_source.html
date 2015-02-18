@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v37</span>
+   &#160;<span id="projectnumber">v38</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -92,96 +92,97 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <a href="GameObject_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="GameObject_8h.html">engine/GameObject.h</a>&quot;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;SDL2/SDL.h&gt;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ResourceManager_8h.html">core/ResourceManager.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ResourceManager_8h.html">core/ResourceManager.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Sprite_8h.html">graphics/Sprite.h</a>&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Logger_8h.html">util/Logger.h</a>&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Assert_8h.html">util/Assert.h</a>&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span>sdl2engine {</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1GameObject.html#a345ea4ffcc8eb4b2133dd4e48571bc1f">    9</a></span>&#160;<a class="code" href="classsdl2engine_1_1GameObject.html#a345ea4ffcc8eb4b2133dd4e48571bc1f">GameObject::GameObject</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> x_, <span class="keyword">const</span> <span class="keywordtype">double</span> y_, <span class="keyword">const</span> std::string&amp; path_) :</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    x(x_),</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    y(y_),</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    isRight(true),</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    sprite(<a class="code" href="classsdl2engine_1_1ResourceManager.html">ResourceManager</a>&lt;<a class="code" href="classsdl2engine_1_1Sprite.html">Sprite</a>&gt;::Instance().Get(path_)),</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    width(0),</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    height(0),</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    animationClip{0, 0, 0, 0},</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    boundingBox{<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(x_), static_cast&lt;int&gt;(y_), 0, 0}</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="comment">// Only serves as the initializer for the derived classes.</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">if</span>(this-&gt;sprite != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        this-&gt;width = this-&gt;sprite-&gt;Width();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        this-&gt;height = this-&gt;sprite-&gt;Height();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        this-&gt;boundingBox.w = this-&gt;width;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        this-&gt;boundingBox.h = this-&gt;height;</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1GameObject.html#a7c0aec2b117162757a9e4c479a77fa08">    9</a></span>&#160;<a class="code" href="classsdl2engine_1_1GameObject.html#a7c0aec2b117162757a9e4c479a77fa08">GameObject::GameObject</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> x, <span class="keyword">const</span> <span class="keywordtype">double</span> y, <span class="keyword">const</span> std::string&amp; path) :</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    m_x{x},</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    m_y{y},</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    m_sprite{<a class="code" href="classsdl2engine_1_1ResourceManager.html#ab80e014a52a5237a000570b4ac67fcbd">ResourceManager&lt;Sprite&gt;::Instance</a>().Get(path)},</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    m_width{0},</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    m_height{0},</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    m_animation_clip{0, 0, 0, 0},</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    m_bounding_box{<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(x), static_cast&lt;int&gt;(y), 0, 0}</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">if</span>(m_sprite != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        m_width = m_sprite-&gt;Width();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        m_height = m_sprite-&gt;Height();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        m_bounding_box.w = m_width;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        m_bounding_box.h = m_height;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="namespacesdl2engine.html#ac31c5eafc7940521da71fab041ac0138">log_warn</a>() &lt;&lt; <span class="stringliteral">&quot;GameObject sprite is null, width and height will be undefined.&quot;</span>;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="namespacesdl2engine.html#ac31c5eafc7940521da71fab041ac0138">log_warn</a>() &lt;&lt; <span class="stringliteral">&quot;GameObject sprite is null, width and height will be undefined.&quot;</span>;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(width &gt;= 0 , <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(height &gt;= 0, <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1GameObject.html#a4bc695eadf208d72e7d52e91d1468605">   36</a></span>&#160;<a class="code" href="classsdl2engine_1_1GameObject.html#a345ea4ffcc8eb4b2133dd4e48571bc1f">GameObject::GameObject</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> x_, <span class="keyword">const</span> <span class="keywordtype">double</span> y_) :</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    x(x_),</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    y(y_),</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    isRight(true),</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    sprite(nullptr),</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    width(0),</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    height(0),</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    animationClip{0, 0, 0, 0},</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    boundingBox{<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(x_), static_cast&lt;int&gt;(y_), 0, 0}</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">// Only serves as the initializer for the derived classes.</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(m_width &gt;= 0 , <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(m_height &gt;= 0, <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1GameObject.html#a95275b1e950a64444fd59da24a897710">   33</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="classsdl2engine_1_1GameObject.html#a95275b1e950a64444fd59da24a897710">GameObject::X</a>() {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classsdl2engine_1_1GameObject.html#addedf3994a5cefd1fbeeddb644289dca">m_x</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1GameObject.html#aab783144eeef48d20364a4022523e767">   37</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="classsdl2engine_1_1GameObject.html#aab783144eeef48d20364a4022523e767">GameObject::Y</a>() {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classsdl2engine_1_1GameObject.html#a5a29166ad0bf8aa66a29f8a06e1b54a9">m_y</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1GameObject.html#abdd41e72cf7b2d828649e464b28dadd3">   41</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classsdl2engine_1_1GameObject.html#abdd41e72cf7b2d828649e464b28dadd3">GameObject::Width</a>() {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classsdl2engine_1_1GameObject.html#aba9990a9598f650d3ab43453c634c808">m_width</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1GameObject.html#a7b862aa7d2b9f8163c0697033a347f1a">   45</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classsdl2engine_1_1GameObject.html#a7b862aa7d2b9f8163c0697033a347f1a">GameObject::Height</a>() {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classsdl2engine_1_1GameObject.html#af87e64c0e71c0d313c20dcad4412685d">m_height</a>;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1GameObject.html#ac6d4904f329d422234b93214d66acf98">   49</a></span>&#160;<a class="code" href="classsdl2engine_1_1GameObject.html#ac6d4904f329d422234b93214d66acf98">GameObject::~GameObject</a>() {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1GameObject.html#a1bafc2d962b1c63f8af4670db4934205">   49</a></span>&#160;SDL_Rect&amp; <a class="code" href="classsdl2engine_1_1GameObject.html#a1bafc2d962b1c63f8af4670db4934205">GameObject::AnimationClip</a>() {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classsdl2engine_1_1GameObject.html#a809174f2ba992593c958eebd502b42e3">m_animation_clip</a>;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1GameObject.html#a82cb6d5d6ba68bbe8534ee398fca792f">   53</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classsdl2engine_1_1GameObject.html#a82cb6d5d6ba68bbe8534ee398fca792f">GameObject::getWidth</a>() {</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">return</span> this-&gt;<a class="code" href="classsdl2engine_1_1GameObject.html#a8dd98fc5fe67c5e562805487d643ee19">width</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1GameObject.html#a565d94c21ffe246bfff862b24b38900e">   53</a></span>&#160;SDL_Rect&amp; <a class="code" href="classsdl2engine_1_1GameObject.html#a565d94c21ffe246bfff862b24b38900e">GameObject::BoundingBox</a>() {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classsdl2engine_1_1GameObject.html#ae7f5a840b6a5d923e8dbfbc75699dcc6">m_bounding_box</a>;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1GameObject.html#aac8db512d02772342a60fd69821c5804">   57</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classsdl2engine_1_1GameObject.html#aac8db512d02772342a60fd69821c5804">GameObject::getHeight</a>() {</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">return</span> this-&gt;<a class="code" href="classsdl2engine_1_1GameObject.html#a0f3dd8f798abd8cf4fea99d999c8b0ba">height</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1GameObject.html#a3d86f3f18d311091a5c301b89230b4ee">   57</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1GameObject.html#a3d86f3f18d311091a5c301b89230b4ee">GameObject::SetX</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> x) {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="classsdl2engine_1_1GameObject.html#addedf3994a5cefd1fbeeddb644289dca">m_x</a> = x;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1GameObject.html#a545e6fe921a9507dcddaf192bbd56623">   61</a></span>&#160;SDL_Rect&amp; <a class="code" href="classsdl2engine_1_1GameObject.html#a545e6fe921a9507dcddaf192bbd56623">GameObject::getAnimationClip</a>() {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">return</span> this-&gt;<a class="code" href="classsdl2engine_1_1GameObject.html#a41b34b9ff09b80588d20cc626a45c9e0">animationClip</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1GameObject.html#a3901460b43a92d8db948da6573219baa">   61</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1GameObject.html#a3901460b43a92d8db948da6573219baa">GameObject::SetY</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> y) {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="classsdl2engine_1_1GameObject.html#a5a29166ad0bf8aa66a29f8a06e1b54a9">m_y</a> = y;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1GameObject.html#aa7197c2216c38cbcbd4f084f06586d3b">   65</a></span>&#160;SDL_Rect&amp; <a class="code" href="classsdl2engine_1_1GameObject.html#aa7197c2216c38cbcbd4f084f06586d3b">GameObject::getBoundingBox</a>() {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">return</span> this-&gt;<a class="code" href="classsdl2engine_1_1GameObject.html#ac5ddd5af97843e322fadf54124ac61e6">boundingBox</a>;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;} <span class="comment">// namespace sdl2engine</span></div>
-<div class="ttc" id="classsdl2engine_1_1GameObject_html_a8dd98fc5fe67c5e562805487d643ee19"><div class="ttname"><a href="classsdl2engine_1_1GameObject.html#a8dd98fc5fe67c5e562805487d643ee19">sdl2engine::GameObject::width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition:</b> <a href="GameObject_8h_source.html#l00078">GameObject.h:78</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1GameObject_html_a82cb6d5d6ba68bbe8534ee398fca792f"><div class="ttname"><a href="classsdl2engine_1_1GameObject.html#a82cb6d5d6ba68bbe8534ee398fca792f">sdl2engine::GameObject::getWidth</a></div><div class="ttdeci">int getWidth()</div><div class="ttdef"><b>Definition:</b> <a href="GameObject_8cpp_source.html#l00053">GameObject.cpp:53</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1GameObject_html_a41b34b9ff09b80588d20cc626a45c9e0"><div class="ttname"><a href="classsdl2engine_1_1GameObject.html#a41b34b9ff09b80588d20cc626a45c9e0">sdl2engine::GameObject::animationClip</a></div><div class="ttdeci">SDL_Rect animationClip</div><div class="ttdef"><b>Definition:</b> <a href="GameObject_8h_source.html#l00080">GameObject.h:80</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1GameObject_html_ac6d4904f329d422234b93214d66acf98"><div class="ttname"><a href="classsdl2engine_1_1GameObject.html#ac6d4904f329d422234b93214d66acf98">sdl2engine::GameObject::~GameObject</a></div><div class="ttdeci">virtual ~GameObject()</div><div class="ttdef"><b>Definition:</b> <a href="GameObject_8cpp_source.html#l00049">GameObject.cpp:49</a></div></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;} <span class="comment">// namespace sdl2engine</span></div>
+<div class="ttc" id="classsdl2engine_1_1GameObject_html_a3901460b43a92d8db948da6573219baa"><div class="ttname"><a href="classsdl2engine_1_1GameObject.html#a3901460b43a92d8db948da6573219baa">sdl2engine::GameObject::SetY</a></div><div class="ttdeci">void SetY(const double y)</div><div class="ttdoc">Set the y axis position. </div><div class="ttdef"><b>Definition:</b> <a href="GameObject_8cpp_source.html#l00061">GameObject.cpp:61</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1GameObject_html_aab783144eeef48d20364a4022523e767"><div class="ttname"><a href="classsdl2engine_1_1GameObject.html#aab783144eeef48d20364a4022523e767">sdl2engine::GameObject::Y</a></div><div class="ttdeci">double Y()</div><div class="ttdef"><b>Definition:</b> <a href="GameObject_8cpp_source.html#l00037">GameObject.cpp:37</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1GameObject_html_ae7f5a840b6a5d923e8dbfbc75699dcc6"><div class="ttname"><a href="classsdl2engine_1_1GameObject.html#ae7f5a840b6a5d923e8dbfbc75699dcc6">sdl2engine::GameObject::m_bounding_box</a></div><div class="ttdeci">SDL_Rect m_bounding_box</div><div class="ttdef"><b>Definition:</b> <a href="GameObject_8h_source.html#l00097">GameObject.h:97</a></div></div>
 <div class="ttc" id="namespacesdl2engine_html_ac31c5eafc7940521da71fab041ac0138"><div class="ttname"><a href="namespacesdl2engine.html#ac31c5eafc7940521da71fab041ac0138">sdl2engine::log_warn</a></div><div class="ttdeci">constexpr log_function_ptr log_warn</div><div class="ttdef"><b>Definition:</b> <a href="Logger_8h_source.html#l00086">Logger.h:86</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1GameObject_html_a0f3dd8f798abd8cf4fea99d999c8b0ba"><div class="ttname"><a href="classsdl2engine_1_1GameObject.html#a0f3dd8f798abd8cf4fea99d999c8b0ba">sdl2engine::GameObject::height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition:</b> <a href="GameObject_8h_source.html#l00079">GameObject.h:79</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1GameObject_html_a345ea4ffcc8eb4b2133dd4e48571bc1f"><div class="ttname"><a href="classsdl2engine_1_1GameObject.html#a345ea4ffcc8eb4b2133dd4e48571bc1f">sdl2engine::GameObject::GameObject</a></div><div class="ttdeci">GameObject(const double x_, const double y_, const std::string &amp;path_)</div><div class="ttdef"><b>Definition:</b> <a href="GameObject_8cpp_source.html#l00009">GameObject.cpp:9</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1ResourceManager_html"><div class="ttname"><a href="classsdl2engine_1_1ResourceManager.html">sdl2engine::ResourceManager</a></div><div class="ttdoc">Resource management class template. </div><div class="ttdef"><b>Definition:</b> <a href="ResourceManager_8h_source.html#l00022">ResourceManager.h:22</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1GameObject_html_a5a29166ad0bf8aa66a29f8a06e1b54a9"><div class="ttname"><a href="classsdl2engine_1_1GameObject.html#a5a29166ad0bf8aa66a29f8a06e1b54a9">sdl2engine::GameObject::m_y</a></div><div class="ttdeci">double m_y</div><div class="ttdef"><b>Definition:</b> <a href="GameObject_8h_source.html#l00092">GameObject.h:92</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1GameObject_html_aba9990a9598f650d3ab43453c634c808"><div class="ttname"><a href="classsdl2engine_1_1GameObject.html#aba9990a9598f650d3ab43453c634c808">sdl2engine::GameObject::m_width</a></div><div class="ttdeci">int m_width</div><div class="ttdef"><b>Definition:</b> <a href="GameObject_8h_source.html#l00094">GameObject.h:94</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1GameObject_html_a95275b1e950a64444fd59da24a897710"><div class="ttname"><a href="classsdl2engine_1_1GameObject.html#a95275b1e950a64444fd59da24a897710">sdl2engine::GameObject::X</a></div><div class="ttdeci">double X()</div><div class="ttdef"><b>Definition:</b> <a href="GameObject_8cpp_source.html#l00033">GameObject.cpp:33</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1GameObject_html_abdd41e72cf7b2d828649e464b28dadd3"><div class="ttname"><a href="classsdl2engine_1_1GameObject.html#abdd41e72cf7b2d828649e464b28dadd3">sdl2engine::GameObject::Width</a></div><div class="ttdeci">int Width()</div><div class="ttdef"><b>Definition:</b> <a href="GameObject_8cpp_source.html#l00041">GameObject.cpp:41</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1GameObject_html_af87e64c0e71c0d313c20dcad4412685d"><div class="ttname"><a href="classsdl2engine_1_1GameObject.html#af87e64c0e71c0d313c20dcad4412685d">sdl2engine::GameObject::m_height</a></div><div class="ttdeci">int m_height</div><div class="ttdef"><b>Definition:</b> <a href="GameObject_8h_source.html#l00095">GameObject.h:95</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1GameObject_html_a7c0aec2b117162757a9e4c479a77fa08"><div class="ttname"><a href="classsdl2engine_1_1GameObject.html#a7c0aec2b117162757a9e4c479a77fa08">sdl2engine::GameObject::GameObject</a></div><div class="ttdeci">GameObject(const double x, const double y, const std::string &amp;path)</div><div class="ttdef"><b>Definition:</b> <a href="GameObject_8cpp_source.html#l00009">GameObject.cpp:9</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1GameObject_html_a565d94c21ffe246bfff862b24b38900e"><div class="ttname"><a href="classsdl2engine_1_1GameObject.html#a565d94c21ffe246bfff862b24b38900e">sdl2engine::GameObject::BoundingBox</a></div><div class="ttdeci">SDL_Rect &amp; BoundingBox()</div><div class="ttdef"><b>Definition:</b> <a href="GameObject_8cpp_source.html#l00053">GameObject.cpp:53</a></div></div>
+<div class="ttc" id="Sprite_8h_html"><div class="ttname"><a href="Sprite_8h.html">Sprite.h</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1GameObject_html_a3d86f3f18d311091a5c301b89230b4ee"><div class="ttname"><a href="classsdl2engine_1_1GameObject.html#a3d86f3f18d311091a5c301b89230b4ee">sdl2engine::GameObject::SetX</a></div><div class="ttdeci">void SetX(const double x)</div><div class="ttdoc">Set the x axis position. </div><div class="ttdef"><b>Definition:</b> <a href="GameObject_8cpp_source.html#l00057">GameObject.cpp:57</a></div></div>
 <div class="ttc" id="Assert_8h_html_ab1899199386b1542d1111168ca847e9c"><div class="ttname"><a href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a></div><div class="ttdeci">#define ASSERT(expression, message)</div><div class="ttdef"><b>Definition:</b> <a href="Assert_8h_source.html#l00006">Assert.h:6</a></div></div>
 <div class="ttc" id="GameObject_8h_html"><div class="ttname"><a href="GameObject_8h.html">GameObject.h</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1GameObject_html_addedf3994a5cefd1fbeeddb644289dca"><div class="ttname"><a href="classsdl2engine_1_1GameObject.html#addedf3994a5cefd1fbeeddb644289dca">sdl2engine::GameObject::m_x</a></div><div class="ttdeci">double m_x</div><div class="ttdef"><b>Definition:</b> <a href="GameObject_8h_source.html#l00091">GameObject.h:91</a></div></div>
 <div class="ttc" id="Assert_8h_html"><div class="ttname"><a href="Assert_8h.html">Assert.h</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1GameObject_html_a545e6fe921a9507dcddaf192bbd56623"><div class="ttname"><a href="classsdl2engine_1_1GameObject.html#a545e6fe921a9507dcddaf192bbd56623">sdl2engine::GameObject::getAnimationClip</a></div><div class="ttdeci">SDL_Rect &amp; getAnimationClip()</div><div class="ttdef"><b>Definition:</b> <a href="GameObject_8cpp_source.html#l00061">GameObject.cpp:61</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1GameObject_html_a809174f2ba992593c958eebd502b42e3"><div class="ttname"><a href="classsdl2engine_1_1GameObject.html#a809174f2ba992593c958eebd502b42e3">sdl2engine::GameObject::m_animation_clip</a></div><div class="ttdeci">SDL_Rect m_animation_clip</div><div class="ttdef"><b>Definition:</b> <a href="GameObject_8h_source.html#l00096">GameObject.h:96</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1GameObject_html_a1bafc2d962b1c63f8af4670db4934205"><div class="ttname"><a href="classsdl2engine_1_1GameObject.html#a1bafc2d962b1c63f8af4670db4934205">sdl2engine::GameObject::AnimationClip</a></div><div class="ttdeci">SDL_Rect &amp; AnimationClip()</div><div class="ttdef"><b>Definition:</b> <a href="GameObject_8cpp_source.html#l00049">GameObject.cpp:49</a></div></div>
 <div class="ttc" id="Logger_8h_html"><div class="ttname"><a href="Logger_8h.html">Logger.h</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1GameObject_html_ac5ddd5af97843e322fadf54124ac61e6"><div class="ttname"><a href="classsdl2engine_1_1GameObject.html#ac5ddd5af97843e322fadf54124ac61e6">sdl2engine::GameObject::boundingBox</a></div><div class="ttdeci">SDL_Rect boundingBox</div><div class="ttdef"><b>Definition:</b> <a href="GameObject_8h_source.html#l00081">GameObject.h:81</a></div></div>
 <div class="ttc" id="ResourceManager_8h_html"><div class="ttname"><a href="ResourceManager_8h.html">ResourceManager.h</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1Sprite_html"><div class="ttname"><a href="classsdl2engine_1_1Sprite.html">sdl2engine::Sprite</a></div><div class="ttdoc">Visual representation of game objects. </div><div class="ttdef"><b>Definition:</b> <a href="Sprite_8h_source.html#l00013">Sprite.h:13</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1GameObject_html_aac8db512d02772342a60fd69821c5804"><div class="ttname"><a href="classsdl2engine_1_1GameObject.html#aac8db512d02772342a60fd69821c5804">sdl2engine::GameObject::getHeight</a></div><div class="ttdeci">int getHeight()</div><div class="ttdef"><b>Definition:</b> <a href="GameObject_8cpp_source.html#l00057">GameObject.cpp:57</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1GameObject_html_aa7197c2216c38cbcbd4f084f06586d3b"><div class="ttname"><a href="classsdl2engine_1_1GameObject.html#aa7197c2216c38cbcbd4f084f06586d3b">sdl2engine::GameObject::getBoundingBox</a></div><div class="ttdeci">SDL_Rect &amp; getBoundingBox()</div><div class="ttdef"><b>Definition:</b> <a href="GameObject_8cpp_source.html#l00065">GameObject.cpp:65</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1ResourceManager_html_ab80e014a52a5237a000570b4ac67fcbd"><div class="ttname"><a href="classsdl2engine_1_1ResourceManager.html#ab80e014a52a5237a000570b4ac67fcbd">sdl2engine::ResourceManager::Instance</a></div><div class="ttdeci">static ResourceManager&lt; T &gt; &amp; Instance()</div><div class="ttdoc">Singleton implementation for ResourceManager. </div><div class="ttdef"><b>Definition:</b> <a href="ResourceManager_8h_source.html#l00104">ResourceManager.h:104</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1GameObject_html_a7b862aa7d2b9f8163c0697033a347f1a"><div class="ttname"><a href="classsdl2engine_1_1GameObject.html#a7b862aa7d2b9f8163c0697033a347f1a">sdl2engine::GameObject::Height</a></div><div class="ttdeci">int Height()</div><div class="ttdef"><b>Definition:</b> <a href="GameObject_8cpp_source.html#l00045">GameObject.cpp:45</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Feb 8 2015 06:13:37 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 18 2015 18:55:30 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

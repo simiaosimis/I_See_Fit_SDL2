@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['info',['Info',['../namespacesdl2engine.html#a72818c74e8372a1d6c169905f7eb232ea4059b0251f66a18cb56f544728796875',1,'sdl2engine']]]
+  ['logsomething',['LogSomething',['../namespacesdl2engine.html#a70d0efdc0cb93bef2219f4ca2ea8d343ad111d25b18cef887ee1e0eee2ecdf3ae',1,'sdl2engine']]]
 ];

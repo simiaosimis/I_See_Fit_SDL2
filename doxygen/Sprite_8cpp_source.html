@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">sdl2-engine
-   &#160;<span id="projectnumber">v37</span>
+   &#160;<span id="projectnumber">v38</span>
    </div>
    <div id="projectbrief">sdl2-engine is a personal project to study SDL2.</div>
   </td>
@@ -113,195 +113,180 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(m_height &gt;= 0, <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1Sprite.html#aa14984653f10c8e428bb7172e0472dbb">   23</a></span>&#160;<a class="code" href="classsdl2engine_1_1Sprite.html#a82cdebf53de84da6a8dcb4947725c323">Sprite::Sprite</a>(SDL_Surface* <span class="keyword">const</span> surface) :</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    m_sdl_texture{<a class="code" href="classsdl2engine_1_1Sprite.html#a4dfaeee4aed2bca6a87bb6b4926581da">SurfaceToTexture</a>(surface)},</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    m_width{0},</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    m_height{0},</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    m_path{<span class="stringliteral">&quot;font&quot;</span>}</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">// Display error log if image wasn&#39;t loaded.</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">if</span>(m_sdl_texture == <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="namespacesdl2engine.html#a5b2cd64e9633f9ecfda37e160b02852f">log_error</a>() &lt;&lt; <span class="stringliteral">&quot;Sprite load failed: &quot;</span> &lt;&lt; m_path;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(m_width &gt;= 0 , <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(m_height &gt;= 0, <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1Sprite.html#a2809c1db0136f09a2b583bb36d5dfc54">   38</a></span>&#160;<a class="code" href="classsdl2engine_1_1Sprite.html#a2809c1db0136f09a2b583bb36d5dfc54">Sprite::~Sprite</a>() {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="classsdl2engine_1_1Sprite.html#a6d7315eca5d4ba68404748289da6fe1a">m_sdl_texture</a> != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        SDL_DestroyTexture(<a class="code" href="classsdl2engine_1_1Sprite.html#a6d7315eca5d4ba68404748289da6fe1a">m_sdl_texture</a>);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="classsdl2engine_1_1Sprite.html#a6d7315eca5d4ba68404748289da6fe1a">m_sdl_texture</a> = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1Sprite.html#a2d8ae44951073c4ca0d29082428ad900">   45</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1Sprite.html#a2d8ae44951073c4ca0d29082428ad900">Sprite::LoadFrom</a>(<span class="keyword">const</span> std::string&amp; path) {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    SDL_Surface* loadedSurface = IMG_Load(path.c_str());</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">if</span>(loadedSurface != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="classsdl2engine_1_1Sprite.html#a6d7315eca5d4ba68404748289da6fe1a">m_sdl_texture</a> = <a class="code" href="classsdl2engine_1_1Sprite.html#a4dfaeee4aed2bca6a87bb6b4926581da">SurfaceToTexture</a>(loadedSurface);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="namespacesdl2engine.html#a5b2cd64e9633f9ecfda37e160b02852f">log_error</a>() &lt;&lt; <span class="stringliteral">&quot;Could not load surface from path.&quot;</span> &lt;&lt; IMG_GetError();</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="comment">// Display error log if image wasn&#39;t loaded.</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="classsdl2engine_1_1Sprite.html#a6d7315eca5d4ba68404748289da6fe1a">m_sdl_texture</a> == <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="code" href="namespacesdl2engine.html#a5b2cd64e9633f9ecfda37e160b02852f">log_error</a>() &lt;&lt; <span class="stringliteral">&quot;Sprite load failed: &quot;</span> &lt;&lt; path;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1Sprite.html#a2809c1db0136f09a2b583bb36d5dfc54">   23</a></span>&#160;<a class="code" href="classsdl2engine_1_1Sprite.html#a2809c1db0136f09a2b583bb36d5dfc54">Sprite::~Sprite</a>() {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="classsdl2engine_1_1Sprite.html#a6d7315eca5d4ba68404748289da6fe1a">m_sdl_texture</a> != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        SDL_DestroyTexture(<a class="code" href="classsdl2engine_1_1Sprite.html#a6d7315eca5d4ba68404748289da6fe1a">m_sdl_texture</a>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="classsdl2engine_1_1Sprite.html#a6d7315eca5d4ba68404748289da6fe1a">m_sdl_texture</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1Sprite.html#a2d8ae44951073c4ca0d29082428ad900">   30</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1Sprite.html#a2d8ae44951073c4ca0d29082428ad900">Sprite::LoadFrom</a>(<span class="keyword">const</span> std::string&amp; path) {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    SDL_Surface* loadedSurface = IMG_Load(path.c_str());</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">if</span>(loadedSurface != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <a class="code" href="classsdl2engine_1_1Sprite.html#a6d7315eca5d4ba68404748289da6fe1a">m_sdl_texture</a> = <a class="code" href="classsdl2engine_1_1Sprite.html#a4dfaeee4aed2bca6a87bb6b4926581da">SurfaceToTexture</a>(loadedSurface);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <a class="code" href="namespacesdl2engine.html#a5b2cd64e9633f9ecfda37e160b02852f">log_error</a>() &lt;&lt; <span class="stringliteral">&quot;Could not load surface from path.&quot;</span> &lt;&lt; IMG_GetError();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="comment">// Display error log if image wasn&#39;t loaded.</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="classsdl2engine_1_1Sprite.html#a6d7315eca5d4ba68404748289da6fe1a">m_sdl_texture</a> == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="namespacesdl2engine.html#a5b2cd64e9633f9ecfda37e160b02852f">log_error</a>() &lt;&lt; <span class="stringliteral">&quot;Sprite load failed: &quot;</span> &lt;&lt; path;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1Sprite.html#a618dfd6e5850ee7f8c40833d0d3fca7c">   46</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1Sprite.html#a618dfd6e5850ee7f8c40833d0d3fca7c">Sprite::Render</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> x, <span class="keyword">const</span> <span class="keywordtype">double</span> y, SDL_Rect* <span class="keyword">const</span> clip,</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">bool</span> stretch, <span class="keyword">const</span> <span class="keywordtype">double</span> angle, SDL_Point* <span class="keyword">const</span> center,</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    SDL_RendererFlip flip) {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment">// This is the destination SDL_Rect structure.</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    SDL_Rect renderQuad = {<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(x), static_cast&lt;int&gt;(y), <a class="code" href="classsdl2engine_1_1Sprite.html#a3c6ae597aab67b167a31aede0b757b01">m_width</a>, <a class="code" href="classsdl2engine_1_1Sprite.html#a78f7fa124c3992e5c168ac755e5fa714">m_height</a>};</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">if</span>(clip != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        renderQuad.w = clip-&gt;w;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        renderQuad.h = clip-&gt;h;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="comment">// Don&#39;t clip the sprite.</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1Sprite.html#a618dfd6e5850ee7f8c40833d0d3fca7c">   61</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1Sprite.html#a618dfd6e5850ee7f8c40833d0d3fca7c">Sprite::Render</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> x, <span class="keyword">const</span> <span class="keywordtype">double</span> y, SDL_Rect* <span class="keyword">const</span> clip,</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">bool</span> stretch, <span class="keyword">const</span> <span class="keywordtype">double</span> angle, SDL_Point* <span class="keyword">const</span> center,</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    SDL_RendererFlip flip) {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="comment">// This is the destination SDL_Rect structure.</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    SDL_Rect renderQuad = {<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(x), static_cast&lt;int&gt;(y), <a class="code" href="classsdl2engine_1_1Sprite.html#a3c6ae597aab67b167a31aede0b757b01">m_width</a>, <a class="code" href="classsdl2engine_1_1Sprite.html#a78f7fa124c3992e5c168ac755e5fa714">m_height</a>};</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">if</span>(clip != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        renderQuad.w = clip-&gt;w;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        renderQuad.h = clip-&gt;h;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="comment">// Don&#39;t clip the sprite.</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">int</span> logicalW = 0;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">int</span> logicalH = 0;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <a class="code" href="classsdl2engine_1_1Game.html#a850158cf352e293eb49a4910c6f5cc21">Game::Instance</a>().<a class="code" href="classsdl2engine_1_1Game.html#a536e6f24400e94600452544b34e2d839">GetRenderer</a>()-&gt;<a class="code" href="classsdl2engine_1_1Renderer.html#a2842517bee6bb28d81a96b89c47b2b46">LogicalSize</a>(&amp;logicalW, &amp;logicalH);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    SDL_Rect stretch_rectangle = {<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(x), static_cast&lt;int&gt;(y), logicalW,</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        logicalH};</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">int</span> logicalW = 0;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">int</span> logicalH = 0;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="classsdl2engine_1_1Game.html#a850158cf352e293eb49a4910c6f5cc21">Game::Instance</a>().<a class="code" href="classsdl2engine_1_1Game.html#a536e6f24400e94600452544b34e2d839">GetRenderer</a>()-&gt;<a class="code" href="classsdl2engine_1_1Renderer.html#a2842517bee6bb28d81a96b89c47b2b46">LogicalSize</a>(&amp;logicalW, &amp;logicalH);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    SDL_Rect stretch_rectangle = {<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(x), static_cast&lt;int&gt;(y), logicalW,</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        logicalH};</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> successfullRender = (!stretch) ?</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        SDL_RenderCopyEx(<a class="code" href="classsdl2engine_1_1Game.html#a850158cf352e293eb49a4910c6f5cc21">Game::Instance</a>().<a class="code" href="classsdl2engine_1_1Game.html#a536e6f24400e94600452544b34e2d839">GetRenderer</a>()-&gt;<a class="code" href="classsdl2engine_1_1Renderer.html#a6f0a2649cba5368dba4fb99d169af103">SdlRenderer</a>(), <a class="code" href="classsdl2engine_1_1Sprite.html#a6d7315eca5d4ba68404748289da6fe1a">m_sdl_texture</a>, clip,</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            &amp;renderQuad, angle, center, flip) :</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        SDL_RenderCopyEx(<a class="code" href="classsdl2engine_1_1Game.html#a850158cf352e293eb49a4910c6f5cc21">Game::Instance</a>().<a class="code" href="classsdl2engine_1_1Game.html#a536e6f24400e94600452544b34e2d839">GetRenderer</a>()-&gt;<a class="code" href="classsdl2engine_1_1Renderer.html#a6f0a2649cba5368dba4fb99d169af103">SdlRenderer</a>(), <a class="code" href="classsdl2engine_1_1Sprite.html#a6d7315eca5d4ba68404748289da6fe1a">m_sdl_texture</a>, clip,</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            &amp;stretch_rectangle, angle, center, flip);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">if</span>(successfullRender != 0) {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <a class="code" href="namespacesdl2engine.html#a5b2cd64e9633f9ecfda37e160b02852f">log_error</a>() &lt;&lt; <span class="stringliteral">&quot;Failed to render sprite.&quot;</span> &lt;&lt; SDL_GetError();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1Sprite.html#a77127b66ed4450ac8a3edd0457a2d677">   78</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classsdl2engine_1_1Sprite.html#a77127b66ed4450ac8a3edd0457a2d677">Sprite::Width</a>() {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classsdl2engine_1_1Sprite.html#a3c6ae597aab67b167a31aede0b757b01">m_width</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> successfullRender = (!stretch) ?</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        SDL_RenderCopyEx(<a class="code" href="classsdl2engine_1_1Game.html#a850158cf352e293eb49a4910c6f5cc21">Game::Instance</a>().<a class="code" href="classsdl2engine_1_1Game.html#a536e6f24400e94600452544b34e2d839">GetRenderer</a>()-&gt;<a class="code" href="classsdl2engine_1_1Renderer.html#a6f0a2649cba5368dba4fb99d169af103">SdlRenderer</a>(), <a class="code" href="classsdl2engine_1_1Sprite.html#a6d7315eca5d4ba68404748289da6fe1a">m_sdl_texture</a>, clip,</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            &amp;renderQuad, angle, center, flip) :</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        SDL_RenderCopyEx(<a class="code" href="classsdl2engine_1_1Game.html#a850158cf352e293eb49a4910c6f5cc21">Game::Instance</a>().<a class="code" href="classsdl2engine_1_1Game.html#a536e6f24400e94600452544b34e2d839">GetRenderer</a>()-&gt;<a class="code" href="classsdl2engine_1_1Renderer.html#a6f0a2649cba5368dba4fb99d169af103">SdlRenderer</a>(), <a class="code" href="classsdl2engine_1_1Sprite.html#a6d7315eca5d4ba68404748289da6fe1a">m_sdl_texture</a>, clip,</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            &amp;stretch_rectangle, angle, center, flip);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">if</span>(successfullRender != 0) {</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <a class="code" href="namespacesdl2engine.html#a5b2cd64e9633f9ecfda37e160b02852f">log_error</a>() &lt;&lt; <span class="stringliteral">&quot;Failed to render sprite.&quot;</span> &lt;&lt; SDL_GetError();</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1Sprite.html#a77127b66ed4450ac8a3edd0457a2d677">   93</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classsdl2engine_1_1Sprite.html#a77127b66ed4450ac8a3edd0457a2d677">Sprite::Width</a>() {</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classsdl2engine_1_1Sprite.html#a3c6ae597aab67b167a31aede0b757b01">m_width</a>;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1Sprite.html#a57e7134a2f8e231fe0fbbe716349149e">   97</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classsdl2engine_1_1Sprite.html#a57e7134a2f8e231fe0fbbe716349149e">Sprite::Height</a>() {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classsdl2engine_1_1Sprite.html#a78f7fa124c3992e5c168ac755e5fa714">m_height</a>;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1Sprite.html#ac86b3a772245648fc25c2a255456bc41">  101</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1Sprite.html#ac86b3a772245648fc25c2a255456bc41">Sprite::SetWidth</a>(<span class="keywordtype">int</span> width) {</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(width &gt;= 0, <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <a class="code" href="classsdl2engine_1_1Sprite.html#a3c6ae597aab67b167a31aede0b757b01">m_width</a> = width;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;}</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
-<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1Sprite.html#aff91e4639ca3a7e7cdb36acc69991eb5">  106</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1Sprite.html#aff91e4639ca3a7e7cdb36acc69991eb5">Sprite::SetHeight</a>(<span class="keywordtype">int</span> height) {</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(height &gt;= 0, <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <a class="code" href="classsdl2engine_1_1Sprite.html#a78f7fa124c3992e5c168ac755e5fa714">m_height</a> = height;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
-<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1Sprite.html#a4dfaeee4aed2bca6a87bb6b4926581da">  111</a></span>&#160;SDL_Texture* <a class="code" href="classsdl2engine_1_1Sprite.html#a4dfaeee4aed2bca6a87bb6b4926581da">Sprite::SurfaceToTexture</a>(SDL_Surface* <span class="keyword">const</span> surface) {</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(<a class="code" href="classsdl2engine_1_1Game.html#a850158cf352e293eb49a4910c6f5cc21">Game::Instance</a>().GetRenderer()-&gt;SdlRenderer() != <span class="keyword">nullptr</span>, <span class="stringliteral">&quot;Window renderer should not be null!&quot;</span>);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="comment">// The final texture.</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    SDL_Texture* newTexture = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">if</span>(surface != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="comment">// Create texture from the surface pixels.</span></div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        newTexture = SDL_CreateTextureFromSurface(</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <a class="code" href="classsdl2engine_1_1Game.html#a850158cf352e293eb49a4910c6f5cc21">Game::Instance</a>().GetRenderer()-&gt;SdlRenderer(), surface);</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keywordflow">if</span>(newTexture != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <span class="comment">// Set the Sprites width and height, from the loaded surface.</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            <a class="code" href="classsdl2engine_1_1Sprite.html#a3c6ae597aab67b167a31aede0b757b01">m_width</a> = surface-&gt;w;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            <a class="code" href="classsdl2engine_1_1Sprite.html#a78f7fa124c3992e5c168ac755e5fa714">m_height</a> = surface-&gt;h;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        }</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            <a class="code" href="namespacesdl2engine.html#a5b2cd64e9633f9ecfda37e160b02852f">log_error</a>() &lt;&lt; <span class="stringliteral">&quot;Could not create texture from surface.&quot;</span> &lt;&lt; SDL_GetError();</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        }</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="comment">// Free the loaded surface.</span></div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        SDL_FreeSurface(surface);</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    }</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <a class="code" href="namespacesdl2engine.html#ac31c5eafc7940521da71fab041ac0138">log_warn</a>() &lt;&lt; <span class="stringliteral">&quot;Trying to convert a null surface to a texture.&quot;</span>;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    }</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordflow">return</span> newTexture;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;}</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
-<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1Sprite.html#a0a7fa80091daa87a04423cf60fc6ea07">  140</a></span>&#160;std::string <a class="code" href="classsdl2engine_1_1Sprite.html#a0a7fa80091daa87a04423cf60fc6ea07">Sprite::Path</a>() {</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classsdl2engine_1_1Sprite.html#a75319c838422762dfdfe660f53fd3718">m_path</a>;</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;}</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
-<div class="line"><a name="l00144"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1Sprite.html#a9c1d5dfbfd2286d64a5c99f03a1325f3">  144</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="classsdl2engine_1_1Sprite.html#a9c1d5dfbfd2286d64a5c99f03a1325f3">Sprite::Alpha</a>() {</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    Uint8 alpha = 0;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> rc = SDL_GetTextureAlphaMod(<a class="code" href="classsdl2engine_1_1Sprite.html#a6d7315eca5d4ba68404748289da6fe1a">m_sdl_texture</a>, &amp;alpha);</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordflow">if</span>(rc != 0) {</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <a class="code" href="namespacesdl2engine.html#a5b2cd64e9633f9ecfda37e160b02852f">log_error</a>() &lt;&lt; <span class="stringliteral">&quot;Could not get alpha value from Sprite (&quot;</span> &lt;&lt; <a class="code" href="classsdl2engine_1_1Sprite.html#a75319c838422762dfdfe660f53fd3718">m_path</a> &lt;&lt; <span class="stringliteral">&quot;). &quot;</span> &lt;&lt;</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            SDL_GetError();</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    }</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(alpha);</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1Sprite.html#a57e7134a2f8e231fe0fbbe716349149e">   82</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classsdl2engine_1_1Sprite.html#a57e7134a2f8e231fe0fbbe716349149e">Sprite::Height</a>() {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classsdl2engine_1_1Sprite.html#a78f7fa124c3992e5c168ac755e5fa714">m_height</a>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1Sprite.html#ac86b3a772245648fc25c2a255456bc41">   86</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1Sprite.html#ac86b3a772245648fc25c2a255456bc41">Sprite::SetWidth</a>(<span class="keywordtype">int</span> width) {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(width &gt;= 0, <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="classsdl2engine_1_1Sprite.html#a3c6ae597aab67b167a31aede0b757b01">m_width</a> = width;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1Sprite.html#aff91e4639ca3a7e7cdb36acc69991eb5">   91</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1Sprite.html#aff91e4639ca3a7e7cdb36acc69991eb5">Sprite::SetHeight</a>(<span class="keywordtype">int</span> height) {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(height &gt;= 0, <span class="stringliteral">&quot;Must be &gt;= 0&quot;</span>);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <a class="code" href="classsdl2engine_1_1Sprite.html#a78f7fa124c3992e5c168ac755e5fa714">m_height</a> = height;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1Sprite.html#a4dfaeee4aed2bca6a87bb6b4926581da">   96</a></span>&#160;SDL_Texture* <a class="code" href="classsdl2engine_1_1Sprite.html#a4dfaeee4aed2bca6a87bb6b4926581da">Sprite::SurfaceToTexture</a>(SDL_Surface* <span class="keyword">const</span> surface) {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <a class="code" href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a>(<a class="code" href="classsdl2engine_1_1Game.html#a850158cf352e293eb49a4910c6f5cc21">Game::Instance</a>().GetRenderer()-&gt;SdlRenderer() != <span class="keyword">nullptr</span>, <span class="stringliteral">&quot;Window renderer should not be null!&quot;</span>);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="comment">// The final texture.</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    SDL_Texture* newTexture = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">if</span>(surface != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="comment">// Create texture from the surface pixels.</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        newTexture = SDL_CreateTextureFromSurface(</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <a class="code" href="classsdl2engine_1_1Game.html#a850158cf352e293eb49a4910c6f5cc21">Game::Instance</a>().GetRenderer()-&gt;SdlRenderer(), surface);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordflow">if</span>(newTexture != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            <span class="comment">// Set the Sprites width and height, from the loaded surface.</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <a class="code" href="classsdl2engine_1_1Sprite.html#a3c6ae597aab67b167a31aede0b757b01">m_width</a> = surface-&gt;w;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            <a class="code" href="classsdl2engine_1_1Sprite.html#a78f7fa124c3992e5c168ac755e5fa714">m_height</a> = surface-&gt;h;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <a class="code" href="namespacesdl2engine.html#a5b2cd64e9633f9ecfda37e160b02852f">log_error</a>() &lt;&lt; <span class="stringliteral">&quot;Could not create texture from surface.&quot;</span> &lt;&lt; SDL_GetError();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="comment">// Free the loaded surface.</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        SDL_FreeSurface(surface);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <a class="code" href="namespacesdl2engine.html#ac31c5eafc7940521da71fab041ac0138">log_warn</a>() &lt;&lt; <span class="stringliteral">&quot;Trying to convert a null surface to a texture.&quot;</span>;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordflow">return</span> newTexture;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;}</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1Sprite.html#a0a7fa80091daa87a04423cf60fc6ea07">  125</a></span>&#160;std::string <a class="code" href="classsdl2engine_1_1Sprite.html#a0a7fa80091daa87a04423cf60fc6ea07">Sprite::Path</a>() {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classsdl2engine_1_1Sprite.html#a75319c838422762dfdfe660f53fd3718">m_path</a>;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;}</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1Sprite.html#a9c1d5dfbfd2286d64a5c99f03a1325f3">  129</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="classsdl2engine_1_1Sprite.html#a9c1d5dfbfd2286d64a5c99f03a1325f3">Sprite::Alpha</a>() {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    Uint8 alpha = 0;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> rc = SDL_GetTextureAlphaMod(<a class="code" href="classsdl2engine_1_1Sprite.html#a6d7315eca5d4ba68404748289da6fe1a">m_sdl_texture</a>, &amp;alpha);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordflow">if</span>(rc != 0) {</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <a class="code" href="namespacesdl2engine.html#a5b2cd64e9633f9ecfda37e160b02852f">log_error</a>() &lt;&lt; <span class="stringliteral">&quot;Could not get alpha value from Sprite (&quot;</span> &lt;&lt; <a class="code" href="classsdl2engine_1_1Sprite.html#a75319c838422762dfdfe660f53fd3718">m_path</a> &lt;&lt; <span class="stringliteral">&quot;). &quot;</span> &lt;&lt;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            SDL_GetError();</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    }</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(alpha);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;}</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00141"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1Sprite.html#a2e6637d2f378050c007f2b84970c8919">  141</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1Sprite.html#a2e6637d2f378050c007f2b84970c8919">Sprite::SetAlpha</a>(<span class="keywordtype">int</span> alpha) {</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordflow">if</span>(alpha &lt; 0) {</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        alpha = 0;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    }</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(alpha &gt; 255) {</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        alpha = 255;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    }</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> rc = SDL_SetTextureAlphaMod(<a class="code" href="classsdl2engine_1_1Sprite.html#a6d7315eca5d4ba68404748289da6fe1a">m_sdl_texture</a>, alpha);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordflow">if</span>(rc != 0) {</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <a class="code" href="namespacesdl2engine.html#a5b2cd64e9633f9ecfda37e160b02852f">log_error</a>() &lt;&lt; <span class="stringliteral">&quot;Could not set alpha value of Sprite (&quot;</span> &lt;&lt; <a class="code" href="classsdl2engine_1_1Sprite.html#a75319c838422762dfdfe660f53fd3718">m_path</a> &lt;&lt; <span class="stringliteral">&quot;). &quot;</span> &lt;&lt;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            SDL_GetError();</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    }</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;}</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
-<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1Sprite.html#a2e6637d2f378050c007f2b84970c8919">  156</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1Sprite.html#a2e6637d2f378050c007f2b84970c8919">Sprite::SetAlpha</a>(<span class="keywordtype">int</span> alpha) {</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordflow">if</span>(alpha &lt; 0) {</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        alpha = 0;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    }</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(alpha &gt; 255) {</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        alpha = 255;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    }</div>
+<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1Sprite.html#a36f3eb939392214877ae8e06dd7eb97f">  156</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1Sprite.html#a36f3eb939392214877ae8e06dd7eb97f">Sprite::SetBlendMode</a>(SDL_BlendMode blend_mode) {</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> rc = SDL_SetTextureBlendMode(<a class="code" href="classsdl2engine_1_1Sprite.html#a6d7315eca5d4ba68404748289da6fe1a">m_sdl_texture</a>, blend_mode);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">if</span>(rc != 0) {</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <a class="code" href="namespacesdl2engine.html#a5b2cd64e9633f9ecfda37e160b02852f">log_error</a>() &lt;&lt; <span class="stringliteral">&quot;Could not set blend mode of Sprite (&quot;</span> &lt;&lt; <a class="code" href="classsdl2engine_1_1Sprite.html#a75319c838422762dfdfe660f53fd3718">m_path</a> &lt;&lt; <span class="stringliteral">&quot;). &quot;</span> &lt;&lt;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            SDL_GetError();</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    }</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;}</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> rc = SDL_SetTextureAlphaMod(<a class="code" href="classsdl2engine_1_1Sprite.html#a6d7315eca5d4ba68404748289da6fe1a">m_sdl_texture</a>, alpha);</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordflow">if</span>(rc != 0) {</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <a class="code" href="namespacesdl2engine.html#a5b2cd64e9633f9ecfda37e160b02852f">log_error</a>() &lt;&lt; <span class="stringliteral">&quot;Could not set alpha value of Sprite (&quot;</span> &lt;&lt; <a class="code" href="classsdl2engine_1_1Sprite.html#a75319c838422762dfdfe660f53fd3718">m_path</a> &lt;&lt; <span class="stringliteral">&quot;). &quot;</span> &lt;&lt;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            SDL_GetError();</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    }</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;}</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
-<div class="line"><a name="l00171"></a><span class="lineno"><a class="line" href="classsdl2engine_1_1Sprite.html#a36f3eb939392214877ae8e06dd7eb97f">  171</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classsdl2engine_1_1Sprite.html#a36f3eb939392214877ae8e06dd7eb97f">Sprite::SetBlendMode</a>(SDL_BlendMode blend_mode) {</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> rc = SDL_SetTextureBlendMode(<a class="code" href="classsdl2engine_1_1Sprite.html#a6d7315eca5d4ba68404748289da6fe1a">m_sdl_texture</a>, blend_mode);</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordflow">if</span>(rc != 0) {</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <a class="code" href="namespacesdl2engine.html#a5b2cd64e9633f9ecfda37e160b02852f">log_error</a>() &lt;&lt; <span class="stringliteral">&quot;Could not set blend mode of Sprite (&quot;</span> &lt;&lt; <a class="code" href="classsdl2engine_1_1Sprite.html#a75319c838422762dfdfe660f53fd3718">m_path</a> &lt;&lt; <span class="stringliteral">&quot;). &quot;</span> &lt;&lt;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            SDL_GetError();</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    }</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;}</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;} <span class="comment">// namespace sdl2engine</span></div>
-<div class="ttc" id="classsdl2engine_1_1Sprite_html_a9c1d5dfbfd2286d64a5c99f03a1325f3"><div class="ttname"><a href="classsdl2engine_1_1Sprite.html#a9c1d5dfbfd2286d64a5c99f03a1325f3">sdl2engine::Sprite::Alpha</a></div><div class="ttdeci">double Alpha()</div><div class="ttdef"><b>Definition:</b> <a href="Sprite_8cpp_source.html#l00144">Sprite.cpp:144</a></div></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;} <span class="comment">// namespace sdl2engine</span></div>
+<div class="ttc" id="classsdl2engine_1_1Sprite_html_a9c1d5dfbfd2286d64a5c99f03a1325f3"><div class="ttname"><a href="classsdl2engine_1_1Sprite.html#a9c1d5dfbfd2286d64a5c99f03a1325f3">sdl2engine::Sprite::Alpha</a></div><div class="ttdeci">double Alpha()</div><div class="ttdef"><b>Definition:</b> <a href="Sprite_8cpp_source.html#l00129">Sprite.cpp:129</a></div></div>
 <div class="ttc" id="classsdl2engine_1_1Game_html_a850158cf352e293eb49a4910c6f5cc21"><div class="ttname"><a href="classsdl2engine_1_1Game.html#a850158cf352e293eb49a4910c6f5cc21">sdl2engine::Game::Instance</a></div><div class="ttdeci">static Game &amp; Instance()</div><div class="ttdoc">Singleton implementation for Game. </div><div class="ttdef"><b>Definition:</b> <a href="Game_8cpp_source.html#l00012">Game.cpp:12</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1Sprite_html_a6d7315eca5d4ba68404748289da6fe1a"><div class="ttname"><a href="classsdl2engine_1_1Sprite.html#a6d7315eca5d4ba68404748289da6fe1a">sdl2engine::Sprite::m_sdl_texture</a></div><div class="ttdeci">SDL_Texture * m_sdl_texture</div><div class="ttdef"><b>Definition:</b> <a href="Sprite_8h_source.html#l00124">Sprite.h:124</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1Sprite_html_a2d8ae44951073c4ca0d29082428ad900"><div class="ttname"><a href="classsdl2engine_1_1Sprite.html#a2d8ae44951073c4ca0d29082428ad900">sdl2engine::Sprite::LoadFrom</a></div><div class="ttdeci">void LoadFrom(const std::string &amp;path)</div><div class="ttdoc">Loads image from a path. </div><div class="ttdef"><b>Definition:</b> <a href="Sprite_8cpp_source.html#l00045">Sprite.cpp:45</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1Sprite_html_a6d7315eca5d4ba68404748289da6fe1a"><div class="ttname"><a href="classsdl2engine_1_1Sprite.html#a6d7315eca5d4ba68404748289da6fe1a">sdl2engine::Sprite::m_sdl_texture</a></div><div class="ttdeci">SDL_Texture * m_sdl_texture</div><div class="ttdef"><b>Definition:</b> <a href="Sprite_8h_source.html#l00115">Sprite.h:115</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1Sprite_html_a2d8ae44951073c4ca0d29082428ad900"><div class="ttname"><a href="classsdl2engine_1_1Sprite.html#a2d8ae44951073c4ca0d29082428ad900">sdl2engine::Sprite::LoadFrom</a></div><div class="ttdeci">void LoadFrom(const std::string &amp;path)</div><div class="ttdoc">Loads image from a path. </div><div class="ttdef"><b>Definition:</b> <a href="Sprite_8cpp_source.html#l00030">Sprite.cpp:30</a></div></div>
 <div class="ttc" id="namespacesdl2engine_html_a5b2cd64e9633f9ecfda37e160b02852f"><div class="ttname"><a href="namespacesdl2engine.html#a5b2cd64e9633f9ecfda37e160b02852f">sdl2engine::log_error</a></div><div class="ttdeci">constexpr log_function_ptr log_error</div><div class="ttdef"><b>Definition:</b> <a href="Logger_8h_source.html#l00085">Logger.h:85</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1Sprite_html_a75319c838422762dfdfe660f53fd3718"><div class="ttname"><a href="classsdl2engine_1_1Sprite.html#a75319c838422762dfdfe660f53fd3718">sdl2engine::Sprite::m_path</a></div><div class="ttdeci">const std::string m_path</div><div class="ttdef"><b>Definition:</b> <a href="Sprite_8h_source.html#l00127">Sprite.h:127</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1Sprite_html_a75319c838422762dfdfe660f53fd3718"><div class="ttname"><a href="classsdl2engine_1_1Sprite.html#a75319c838422762dfdfe660f53fd3718">sdl2engine::Sprite::m_path</a></div><div class="ttdeci">const std::string m_path</div><div class="ttdef"><b>Definition:</b> <a href="Sprite_8h_source.html#l00118">Sprite.h:118</a></div></div>
 <div class="ttc" id="namespacesdl2engine_html_ac31c5eafc7940521da71fab041ac0138"><div class="ttname"><a href="namespacesdl2engine.html#ac31c5eafc7940521da71fab041ac0138">sdl2engine::log_warn</a></div><div class="ttdeci">constexpr log_function_ptr log_warn</div><div class="ttdef"><b>Definition:</b> <a href="Logger_8h_source.html#l00086">Logger.h:86</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1Sprite_html_a2e6637d2f378050c007f2b84970c8919"><div class="ttname"><a href="classsdl2engine_1_1Sprite.html#a2e6637d2f378050c007f2b84970c8919">sdl2engine::Sprite::SetAlpha</a></div><div class="ttdeci">void SetAlpha(int alpha)</div><div class="ttdoc">Set the alpha value. </div><div class="ttdef"><b>Definition:</b> <a href="Sprite_8cpp_source.html#l00156">Sprite.cpp:156</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1Sprite_html_a0a7fa80091daa87a04423cf60fc6ea07"><div class="ttname"><a href="classsdl2engine_1_1Sprite.html#a0a7fa80091daa87a04423cf60fc6ea07">sdl2engine::Sprite::Path</a></div><div class="ttdeci">std::string Path()</div><div class="ttdef"><b>Definition:</b> <a href="Sprite_8cpp_source.html#l00140">Sprite.cpp:140</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1Sprite_html_a2e6637d2f378050c007f2b84970c8919"><div class="ttname"><a href="classsdl2engine_1_1Sprite.html#a2e6637d2f378050c007f2b84970c8919">sdl2engine::Sprite::SetAlpha</a></div><div class="ttdeci">void SetAlpha(int alpha)</div><div class="ttdoc">Set the alpha value. </div><div class="ttdef"><b>Definition:</b> <a href="Sprite_8cpp_source.html#l00141">Sprite.cpp:141</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1Sprite_html_a0a7fa80091daa87a04423cf60fc6ea07"><div class="ttname"><a href="classsdl2engine_1_1Sprite.html#a0a7fa80091daa87a04423cf60fc6ea07">sdl2engine::Sprite::Path</a></div><div class="ttdeci">std::string Path()</div><div class="ttdef"><b>Definition:</b> <a href="Sprite_8cpp_source.html#l00125">Sprite.cpp:125</a></div></div>
 <div class="ttc" id="classsdl2engine_1_1Sprite_html_a82cdebf53de84da6a8dcb4947725c323"><div class="ttname"><a href="classsdl2engine_1_1Sprite.html#a82cdebf53de84da6a8dcb4947725c323">sdl2engine::Sprite::Sprite</a></div><div class="ttdeci">Sprite(const std::string &amp;path)</div><div class="ttdoc">The regular constructor. </div><div class="ttdef"><b>Definition:</b> <a href="Sprite_8cpp_source.html#l00008">Sprite.cpp:8</a></div></div>
 <div class="ttc" id="Game_8h_html"><div class="ttname"><a href="Game_8h.html">Game.h</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1Sprite_html_a3c6ae597aab67b167a31aede0b757b01"><div class="ttname"><a href="classsdl2engine_1_1Sprite.html#a3c6ae597aab67b167a31aede0b757b01">sdl2engine::Sprite::m_width</a></div><div class="ttdeci">int m_width</div><div class="ttdef"><b>Definition:</b> <a href="Sprite_8h_source.html#l00125">Sprite.h:125</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1Sprite_html_a3c6ae597aab67b167a31aede0b757b01"><div class="ttname"><a href="classsdl2engine_1_1Sprite.html#a3c6ae597aab67b167a31aede0b757b01">sdl2engine::Sprite::m_width</a></div><div class="ttdeci">int m_width</div><div class="ttdef"><b>Definition:</b> <a href="Sprite_8h_source.html#l00116">Sprite.h:116</a></div></div>
 <div class="ttc" id="classsdl2engine_1_1Renderer_html_a6f0a2649cba5368dba4fb99d169af103"><div class="ttname"><a href="classsdl2engine_1_1Renderer.html#a6f0a2649cba5368dba4fb99d169af103">sdl2engine::Renderer::SdlRenderer</a></div><div class="ttdeci">SDL_Renderer * SdlRenderer()</div><div class="ttdef"><b>Definition:</b> <a href="Renderer_8cpp_source.html#l00061">Renderer.cpp:61</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1Sprite_html_a4dfaeee4aed2bca6a87bb6b4926581da"><div class="ttname"><a href="classsdl2engine_1_1Sprite.html#a4dfaeee4aed2bca6a87bb6b4926581da">sdl2engine::Sprite::SurfaceToTexture</a></div><div class="ttdeci">SDL_Texture * SurfaceToTexture(SDL_Surface *const surface)</div><div class="ttdoc">Converts a SDL_Surface to a SDL_Texture. </div><div class="ttdef"><b>Definition:</b> <a href="Sprite_8cpp_source.html#l00111">Sprite.cpp:111</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1Sprite_html_a4dfaeee4aed2bca6a87bb6b4926581da"><div class="ttname"><a href="classsdl2engine_1_1Sprite.html#a4dfaeee4aed2bca6a87bb6b4926581da">sdl2engine::Sprite::SurfaceToTexture</a></div><div class="ttdeci">SDL_Texture * SurfaceToTexture(SDL_Surface *const surface)</div><div class="ttdoc">Converts a SDL_Surface to a SDL_Texture. </div><div class="ttdef"><b>Definition:</b> <a href="Sprite_8cpp_source.html#l00096">Sprite.cpp:96</a></div></div>
 <div class="ttc" id="Sprite_8h_html"><div class="ttname"><a href="Sprite_8h.html">Sprite.h</a></div></div>
 <div class="ttc" id="Assert_8h_html_ab1899199386b1542d1111168ca847e9c"><div class="ttname"><a href="Assert_8h.html#ab1899199386b1542d1111168ca847e9c">ASSERT</a></div><div class="ttdeci">#define ASSERT(expression, message)</div><div class="ttdef"><b>Definition:</b> <a href="Assert_8h_source.html#l00006">Assert.h:6</a></div></div>
 <div class="ttc" id="classsdl2engine_1_1Renderer_html_a2842517bee6bb28d81a96b89c47b2b46"><div class="ttname"><a href="classsdl2engine_1_1Renderer.html#a2842517bee6bb28d81a96b89c47b2b46">sdl2engine::Renderer::LogicalSize</a></div><div class="ttdeci">void LogicalSize(int *width, int *height)</div><div class="ttdoc">Returns the current set logical size through the parameters. </div><div class="ttdef"><b>Definition:</b> <a href="Renderer_8cpp_source.html#l00053">Renderer.cpp:53</a></div></div>
 <div class="ttc" id="Assert_8h_html"><div class="ttname"><a href="Assert_8h.html">Assert.h</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1Sprite_html_aff91e4639ca3a7e7cdb36acc69991eb5"><div class="ttname"><a href="classsdl2engine_1_1Sprite.html#aff91e4639ca3a7e7cdb36acc69991eb5">sdl2engine::Sprite::SetHeight</a></div><div class="ttdeci">void SetHeight(int height)</div><div class="ttdoc">Set the height. </div><div class="ttdef"><b>Definition:</b> <a href="Sprite_8cpp_source.html#l00106">Sprite.cpp:106</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1Sprite_html_a618dfd6e5850ee7f8c40833d0d3fca7c"><div class="ttname"><a href="classsdl2engine_1_1Sprite.html#a618dfd6e5850ee7f8c40833d0d3fca7c">sdl2engine::Sprite::Render</a></div><div class="ttdeci">void Render(const double x, const double y, SDL_Rect *const clip=nullptr, const bool stretch=false, const double angle=0.0, SDL_Point *const center=nullptr, SDL_RendererFlip flip=SDL_FLIP_NONE)</div><div class="ttdoc">Renders the sprite. </div><div class="ttdef"><b>Definition:</b> <a href="Sprite_8cpp_source.html#l00061">Sprite.cpp:61</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1Sprite_html_aff91e4639ca3a7e7cdb36acc69991eb5"><div class="ttname"><a href="classsdl2engine_1_1Sprite.html#aff91e4639ca3a7e7cdb36acc69991eb5">sdl2engine::Sprite::SetHeight</a></div><div class="ttdeci">void SetHeight(int height)</div><div class="ttdoc">Set the height. </div><div class="ttdef"><b>Definition:</b> <a href="Sprite_8cpp_source.html#l00091">Sprite.cpp:91</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1Sprite_html_a618dfd6e5850ee7f8c40833d0d3fca7c"><div class="ttname"><a href="classsdl2engine_1_1Sprite.html#a618dfd6e5850ee7f8c40833d0d3fca7c">sdl2engine::Sprite::Render</a></div><div class="ttdeci">void Render(const double x, const double y, SDL_Rect *const clip=nullptr, const bool stretch=false, const double angle=0.0, SDL_Point *const center=nullptr, SDL_RendererFlip flip=SDL_FLIP_NONE)</div><div class="ttdoc">Renders the sprite. </div><div class="ttdef"><b>Definition:</b> <a href="Sprite_8cpp_source.html#l00046">Sprite.cpp:46</a></div></div>
 <div class="ttc" id="Logger_8h_html"><div class="ttname"><a href="Logger_8h.html">Logger.h</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1Sprite_html_a2809c1db0136f09a2b583bb36d5dfc54"><div class="ttname"><a href="classsdl2engine_1_1Sprite.html#a2809c1db0136f09a2b583bb36d5dfc54">sdl2engine::Sprite::~Sprite</a></div><div class="ttdeci">~Sprite()</div><div class="ttdoc">The destructor. </div><div class="ttdef"><b>Definition:</b> <a href="Sprite_8cpp_source.html#l00038">Sprite.cpp:38</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1Sprite_html_ac86b3a772245648fc25c2a255456bc41"><div class="ttname"><a href="classsdl2engine_1_1Sprite.html#ac86b3a772245648fc25c2a255456bc41">sdl2engine::Sprite::SetWidth</a></div><div class="ttdeci">void SetWidth(int width)</div><div class="ttdoc">Set the width. </div><div class="ttdef"><b>Definition:</b> <a href="Sprite_8cpp_source.html#l00101">Sprite.cpp:101</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1Sprite_html_a36f3eb939392214877ae8e06dd7eb97f"><div class="ttname"><a href="classsdl2engine_1_1Sprite.html#a36f3eb939392214877ae8e06dd7eb97f">sdl2engine::Sprite::SetBlendMode</a></div><div class="ttdeci">void SetBlendMode(SDL_BlendMode blend_mode)</div><div class="ttdoc">Sets the blend mode of the Sprite. </div><div class="ttdef"><b>Definition:</b> <a href="Sprite_8cpp_source.html#l00171">Sprite.cpp:171</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1Sprite_html_a77127b66ed4450ac8a3edd0457a2d677"><div class="ttname"><a href="classsdl2engine_1_1Sprite.html#a77127b66ed4450ac8a3edd0457a2d677">sdl2engine::Sprite::Width</a></div><div class="ttdeci">int Width()</div><div class="ttdef"><b>Definition:</b> <a href="Sprite_8cpp_source.html#l00093">Sprite.cpp:93</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1Sprite_html_a78f7fa124c3992e5c168ac755e5fa714"><div class="ttname"><a href="classsdl2engine_1_1Sprite.html#a78f7fa124c3992e5c168ac755e5fa714">sdl2engine::Sprite::m_height</a></div><div class="ttdeci">int m_height</div><div class="ttdef"><b>Definition:</b> <a href="Sprite_8h_source.html#l00126">Sprite.h:126</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1Game_html_a536e6f24400e94600452544b34e2d839"><div class="ttname"><a href="classsdl2engine_1_1Game.html#a536e6f24400e94600452544b34e2d839">sdl2engine::Game::GetRenderer</a></div><div class="ttdeci">Renderer * GetRenderer()</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cpp_source.html#l00101">Game.cpp:101</a></div></div>
-<div class="ttc" id="classsdl2engine_1_1Sprite_html_a57e7134a2f8e231fe0fbbe716349149e"><div class="ttname"><a href="classsdl2engine_1_1Sprite.html#a57e7134a2f8e231fe0fbbe716349149e">sdl2engine::Sprite::Height</a></div><div class="ttdeci">int Height()</div><div class="ttdef"><b>Definition:</b> <a href="Sprite_8cpp_source.html#l00097">Sprite.cpp:97</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1Sprite_html_a2809c1db0136f09a2b583bb36d5dfc54"><div class="ttname"><a href="classsdl2engine_1_1Sprite.html#a2809c1db0136f09a2b583bb36d5dfc54">sdl2engine::Sprite::~Sprite</a></div><div class="ttdeci">~Sprite()</div><div class="ttdoc">The destructor. </div><div class="ttdef"><b>Definition:</b> <a href="Sprite_8cpp_source.html#l00023">Sprite.cpp:23</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1Sprite_html_ac86b3a772245648fc25c2a255456bc41"><div class="ttname"><a href="classsdl2engine_1_1Sprite.html#ac86b3a772245648fc25c2a255456bc41">sdl2engine::Sprite::SetWidth</a></div><div class="ttdeci">void SetWidth(int width)</div><div class="ttdoc">Set the width. </div><div class="ttdef"><b>Definition:</b> <a href="Sprite_8cpp_source.html#l00086">Sprite.cpp:86</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1Sprite_html_a36f3eb939392214877ae8e06dd7eb97f"><div class="ttname"><a href="classsdl2engine_1_1Sprite.html#a36f3eb939392214877ae8e06dd7eb97f">sdl2engine::Sprite::SetBlendMode</a></div><div class="ttdeci">void SetBlendMode(SDL_BlendMode blend_mode)</div><div class="ttdoc">Sets the blend mode of the Sprite. </div><div class="ttdef"><b>Definition:</b> <a href="Sprite_8cpp_source.html#l00156">Sprite.cpp:156</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1Sprite_html_a77127b66ed4450ac8a3edd0457a2d677"><div class="ttname"><a href="classsdl2engine_1_1Sprite.html#a77127b66ed4450ac8a3edd0457a2d677">sdl2engine::Sprite::Width</a></div><div class="ttdeci">int Width()</div><div class="ttdef"><b>Definition:</b> <a href="Sprite_8cpp_source.html#l00078">Sprite.cpp:78</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1Sprite_html_a78f7fa124c3992e5c168ac755e5fa714"><div class="ttname"><a href="classsdl2engine_1_1Sprite.html#a78f7fa124c3992e5c168ac755e5fa714">sdl2engine::Sprite::m_height</a></div><div class="ttdeci">int m_height</div><div class="ttdef"><b>Definition:</b> <a href="Sprite_8h_source.html#l00117">Sprite.h:117</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1Game_html_a536e6f24400e94600452544b34e2d839"><div class="ttname"><a href="classsdl2engine_1_1Game.html#a536e6f24400e94600452544b34e2d839">sdl2engine::Game::GetRenderer</a></div><div class="ttdeci">Renderer * GetRenderer()</div><div class="ttdef"><b>Definition:</b> <a href="Game_8cpp_source.html#l00093">Game.cpp:93</a></div></div>
+<div class="ttc" id="classsdl2engine_1_1Sprite_html_a57e7134a2f8e231fe0fbbe716349149e"><div class="ttname"><a href="classsdl2engine_1_1Sprite.html#a57e7134a2f8e231fe0fbbe716349149e">sdl2engine::Sprite::Height</a></div><div class="ttdeci">int Height()</div><div class="ttdef"><b>Definition:</b> <a href="Sprite_8cpp_source.html#l00082">Sprite.cpp:82</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Feb 8 2015 06:13:37 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 18 2015 18:55:30 for sdl2-engine by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -1,13 +1,6 @@
 var searchData=
 [
-  ['game',['Game',['../classsdl2engine_1_1Game.html#ac091e7c91ecc611f7602bfadb8299893',1,'sdl2engine::Game']]],
-  ['gameobject',['GameObject',['../classsdl2engine_1_1GameObject.html#a345ea4ffcc8eb4b2133dd4e48571bc1f',1,'sdl2engine::GameObject::GameObject(const double x_, const double y_, const std::string &amp;path_)'],['../classsdl2engine_1_1GameObject.html#a4bc695eadf208d72e7d52e91d1468605',1,'sdl2engine::GameObject::GameObject(const double x_, const double y_)']]],
-  ['get',['Get',['../classsdl2engine_1_1ResourceManager.html#a5969ec3ff2d1e9c14226fad93338f528',1,'sdl2engine::ResourceManager']]],
-  ['getanimationclip',['getAnimationClip',['../classsdl2engine_1_1GameObject.html#a545e6fe921a9507dcddaf192bbd56623',1,'sdl2engine::GameObject']]],
-  ['getboundingbox',['getBoundingBox',['../classsdl2engine_1_1GameObject.html#aa7197c2216c38cbcbd4f084f06586d3b',1,'sdl2engine::GameObject']]],
-  ['getframetime',['GetFrameTime',['../classsdl2engine_1_1Timer.html#a3424dad54133a24ebafa293495bddff1',1,'sdl2engine::Timer']]],
-  ['getheight',['getHeight',['../classsdl2engine_1_1GameObject.html#aac8db512d02772342a60fd69821c5804',1,'sdl2engine::GameObject']]],
-  ['getkeystates',['getKeyStates',['../classsdl2engine_1_1ControllerHandler.html#a4a7bcc412b8e6399299f67e35c93c89e',1,'sdl2engine::ControllerHandler::getKeyStates()'],['../classsdl2engine_1_1InputHandler.html#ac2784925244b824cf784328b154aaefc',1,'sdl2engine::InputHandler::getKeyStates()']]],
-  ['getrenderer',['GetRenderer',['../classsdl2engine_1_1Game.html#a536e6f24400e94600452544b34e2d839',1,'sdl2engine::Game::GetRenderer()'],['../classsdl2engine_1_1Window.html#ad37ec5bd73b7688c8b3bbd65bd62b560',1,'sdl2engine::Window::GetRenderer()']]],
-  ['getwidth',['getWidth',['../classsdl2engine_1_1GameObject.html#a82cb6d5d6ba68bbe8534ee398fca792f',1,'sdl2engine::GameObject']]]
+  ['fadedout',['FadedOut',['../classsdl2engine_1_1AudioHandler.html#a79a2eea358513edc55c91056ea972e2d',1,'sdl2engine::AudioHandler::FadedOut()'],['../classsdl2engine_1_1AudioHandler.html#a8bc650e14197ea1655e6d738c7014d18',1,'sdl2engine::AudioHandler::FadedOut()']]],
+  ['fadeout',['FadeOut',['../classsdl2engine_1_1AudioHandler.html#a80011f3c39b3cf5eb480103eda3a4cad',1,'sdl2engine::AudioHandler::FadeOut(const double seconds)'],['../classsdl2engine_1_1AudioHandler.html#afa4a742bbb2c13584bebcc051fdbc93b',1,'sdl2engine::AudioHandler::FadeOut(const double seconds)'],['../classsdl2engine_1_1AudioHandler.html#af5e97caa2ac73355b5a626cc802e07d6',1,'sdl2engine::AudioHandler::FadeOut(const double seconds)']]],
+  ['failedassertion',['FailedAssertion',['../Assert_8cpp.html#ac2928e2bc641ad90d5138beb2a29a5b2',1,'FailedAssertion(const char *expression, const char *message, const char *file, const int line, const char *function):&#160;Assert.cpp'],['../Assert_8h.html#ac2928e2bc641ad90d5138beb2a29a5b2',1,'FailedAssertion(const char *expression, const char *message, const char *file, const int line, const char *function):&#160;Assert.cpp']]]
 ];

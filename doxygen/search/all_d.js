@@ -8,5 +8,5 @@ var searchData=
   ['placeholder_2ecpp',['Placeholder.cpp',['../Placeholder_8cpp.html',1,'']]],
   ['placeholder_2eh',['Placeholder.h',['../Placeholder_8h.html',1,'']]],
   ['play',['Play',['../classsdl2engine_1_1AudioHandler.html#a25a1cf5e091c0e0b30d61d8c8ec8c022',1,'sdl2engine::AudioHandler::Play(const std::string &amp;path, const int times)'],['../classsdl2engine_1_1AudioHandler.html#ae543713ebb455901af9c73fed86e14bb',1,'sdl2engine::AudioHandler::Play(const std::string &amp;path, const int times)'],['../classsdl2engine_1_1AudioHandler.html#adcf94bd6a774562d8525654bd81f138c',1,'sdl2engine::AudioHandler::Play(const std::string &amp;path, const int times)']]],
-  ['pressed',['PRESSED',['../namespacesdl2engine_1_1controllerMap.html#a031302295da982dc16fd6893d1f96dd8a2691bed42395efe937ba422b900a7431',1,'sdl2engine::controllerMap']]]
+  ['pollevents',['PollEvents',['../classsdl2engine_1_1EventHandler.html#a77a95bea7da9993ae9d3d5b4bd5afd9d',1,'sdl2engine::EventHandler']]]
 ];

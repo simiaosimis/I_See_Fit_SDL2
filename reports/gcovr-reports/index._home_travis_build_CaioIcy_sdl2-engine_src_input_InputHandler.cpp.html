@@ -255,18 +255,18 @@
             <td class="headerValue">/home/travis/build/CaioIcy/sdl2-engine/src/input/InputHandler.cpp</td>
             <td></td>
             <td class="headerName">Lines:</td>
+            <td class="headerTableEntry">5</td>
             <td class="headerTableEntry">22</td>
-            <td class="headerTableEntry">49</td>
-            <td class="headerTableEntry" style="background-color:LightPink">44.9 %</td>
+            <td class="headerTableEntry" style="background-color:LightPink">22.7 %</td>
           </tr>
           <tr>
             <td class="headerName">Date:</td>
-            <td class="headerValue">2015-02-08</td>
+            <td class="headerValue">2015-02-18</td>
             <td></td>
             <td class="headerName">Branches:</td>
-            <td class="headerTableEntry">11</td>
-            <td class="headerTableEntry">30</td>
-            <td class="headerTableEntry" style="background-color:LightPink">36.7 %</td>
+            <td class="headerTableEntry">1</td>
+            <td class="headerTableEntry">16</td>
+            <td class="headerTableEntry" style="background-color:LightPink">6.3 %</td>
           </tr>
         </table>
       </td>
@@ -293,569 +293,251 @@
     <tr>
     <td align="right" class="lineno"><pre>2</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>#include "util/Logger.h"</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>3</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="left" class="src "><pre>namespace sdl2engine {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>4</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>namespace sdl2engine {</pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>5</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="left" class="src "><pre>InputArray InputHandler::m_key_states;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>6</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>InputHandler::InputHandler() :</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>7</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>	controllerHandler(new ControllerHandler()),</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>121</pre></td>
+    <td align="left" class="src coveredLine"><pre>InputArray InputHandler::KeyStates() {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>8</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>	quitFlag(false)</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>121</pre></td>
+    <td align="left" class="src coveredLine"><pre>	return m_key_states;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>9</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>{</pre></td>
+    <td align="left" class="src "><pre>}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>10</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>	this-&gt;keyStates.fill(false);</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>11</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>}</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>121</pre></td>
+    <td align="left" class="src coveredLine"><pre>void InputHandler::Reset() {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>12</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="right" class="linecount coveredLine"><pre>121</pre></td>
+    <td align="left" class="src coveredLine"><pre>	m_key_states.fill(false);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>13</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>InputHandler::~InputHandler() {</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>14</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>	delete this-&gt;controllerHandler;</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>15</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>121</pre></td>
     <td align="left" class="src coveredLine"><pre>}</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>16</pre></td>
+    <td align="right" class="lineno"><pre>14</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>15</pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>void InputHandler::HandleInput(const SDL_Event&amp; sdl_event) {</pre></td>
+    </tr>
+
+    <tr>
+    <td align="right" class="lineno"><pre>16</pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	const bool key_up = (sdl_event.type == SDL_KEYUP);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>17</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>121</pre></td>
-    <td align="left" class="src coveredLine"><pre>void InputHandler::handleInput() {</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>	const bool key_down_no_repeat =</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>18</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>		(sdl_event.type == SDL_KEYDOWN &amp;&amp; sdl_event.key.repeat == 0);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>19</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>121</pre></td>
-    <td align="left" class="src coveredLine"><pre>	int pendingEvent = 0;</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>20</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
+    <td align="right" class="lineno"><pre>20</pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>	if(key_down_no_repeat || key_up) {</pre></td>
+    </tr>
+
+    <tr>
     <td align="right" class="lineno"><pre>21</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>124</pre></td>
-    <td align="left" class="src coveredLine"><pre>	do {</pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>		switch(sdl_event.key.keysym.sym) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>22</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="left" class="src "><pre>			case SDLK_f:</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>23</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>124</pre></td>
-    <td align="left" class="src coveredLine"><pre>		pendingEvent = SDL_PollEvent(&amp;this-&gt;sdlEvent);</pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>				m_key_states[Key::FadeOut] = key_down_no_repeat;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>24</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>				break;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>25</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>124</pre></td>
-    <td align="left" class="src coveredLine"><pre>		if(this-&gt;sdlEvent.type == SDL_CONTROLLERBUTTONDOWN</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>			case SDLK_l:</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>26</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>124</pre></td>
-    <td align="left" class="src coveredLine"><pre>			|| this-&gt;sdlEvent.type == SDL_CONTROLLERBUTTONUP</pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>				m_key_states[Key::LogSomething] = key_down_no_repeat;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>27</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>124</pre></td>
-    <td align="left" class="src coveredLine"><pre>			|| this-&gt;sdlEvent.type == SDL_CONTROLLERAXISMOTION) {</pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>				break;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>28</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="left" class="src "><pre>			case SDLK_s:</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>29</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>			this-&gt;controllerHandler-&gt;handleInput(this-&gt;sdlEvent);</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>				m_key_states[Key::TestSfx] = key_down_no_repeat;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>30</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>				break;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>31</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>			for(unsigned int i = 0; i &lt; this-&gt;keyStates.size(); i++) {</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>			case SDLK_a:</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>32</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>				this-&gt;keyStates[i] = this-&gt;controllerHandler-&gt;getKeyStates()[i];</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>				m_key_states[Key::TestSfxAfterFadeOut] = key_down_no_repeat;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>33</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>			}</pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>				break;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>34</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="left" class="src "><pre>			case SDLK_ESCAPE:</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>35</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>		}</pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>				m_key_states[Key::Quit] = key_down_no_repeat;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>36</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>		// On keydown.</pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>				break;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>37</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>124</pre></td>
-    <td align="left" class="src coveredLine"><pre>		if(this-&gt;sdlEvent.type == SDL_KEYDOWN) {</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>			default:</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>38</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
+    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
+    <td align="left" class="src uncoveredLine"><pre>				break;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>39</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>			switch(this-&gt;sdlEvent.key.keysym.sym) {</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre>		}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>40</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>				case SDLK_SPACE: // SPACEBAR.</pre></td>
+    <td align="left" class="src "><pre>	}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>41</pre></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>					this-&gt;keyStates[GameKeys::SPACE] = true;</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>}</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>42</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>					break;</pre></td>
+    <td align="right" class="linecount "><pre></pre></td>
+    <td align="left" class="src "><pre></pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>43</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>				case SDLK_a: // A.</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>44</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>					this-&gt;keyStates[GameKeys::A] = true;</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>45</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>					break;</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>46</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>				case SDLK_ESCAPE: // ESCAPE.</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>47</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>					this-&gt;keyStates[GameKeys::ESCAPE] = true;</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>48</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>					break;</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>49</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>				default:</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>50</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>					break;</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>51</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>			}</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>52</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>		}</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>53</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>54</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>		// On keyup.</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>55</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>124</pre></td>
-    <td align="left" class="src coveredLine"><pre>		else if(this-&gt;sdlEvent.type == SDL_KEYUP) {</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>56</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>57</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>			switch(this-&gt;sdlEvent.key.keysym.sym) {</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>58</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>				case SDLK_SPACE: // SPACEBAR.</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>59</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>					this-&gt;keyStates[GameKeys::SPACE] = false;</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>60</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>					break;</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>61</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>				case SDLK_a: // A.</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>62</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>					this-&gt;keyStates[GameKeys::A] = false;</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>63</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>					break;</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>64</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>				case SDLK_ESCAPE: // ESCAPE.</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>65</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>					this-&gt;keyStates[GameKeys::ESCAPE] = false;</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>66</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>					break;</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>67</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>				default:</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>68</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>					break;</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>69</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>			}</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>70</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>		}</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>71</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>72</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>		// On window exit (X).</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>73</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>124</pre></td>
-    <td align="left" class="src coveredLine"><pre>		else if(this-&gt;sdlEvent.type == SDL_QUIT) {</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>74</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>			signalExit();</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>75</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>		}</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>76</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>77</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>	} while(pendingEvent != 0);</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>78</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>121</pre></td>
-    <td align="left" class="src coveredLine"><pre>}</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>79</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>80</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>121</pre></td>
-    <td align="left" class="src coveredLine"><pre>InputArray InputHandler::getKeyStates() {</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>81</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>121</pre></td>
-    <td align="left" class="src coveredLine"><pre>	return this-&gt;keyStates;</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>82</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>}</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>83</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>84</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>121</pre></td>
-    <td align="left" class="src coveredLine"><pre>bool InputHandler::isQuitFlag() {</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>85</pre></td>
-    <td align="right" class="linecount coveredLine"><pre>121</pre></td>
-    <td align="left" class="src coveredLine"><pre>	return this-&gt;quitFlag;</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>86</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre>}</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>87</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>88</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>void InputHandler::signalExit() {</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>89</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	this-&gt;quitFlag = true;</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>90</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>}</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>91</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>92</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>void InputHandler::clearKey(const GameKeys key_) {</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>93</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>	this-&gt;keyStates.at(key_) = false;</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>94</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>}</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>95</pre></td>
-    <td align="right" class="linecount "><pre></pre></td>
-    <td align="left" class="src "><pre></pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>96</pre></td>
     <td align="right" class="linecount "><pre></pre></td>
     <td align="left" class="src "><pre>} // namespace sdl2engine</pre></td>
     </tr>

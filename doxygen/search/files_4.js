@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['logger_2ecpp',['Logger.cpp',['../Logger_8cpp.html',1,'']]],
-  ['logger_2eh',['Logger.h',['../Logger_8h.html',1,'']]]
+  ['inputhandler_2ecpp',['InputHandler.cpp',['../InputHandler_8cpp.html',1,'']]],
+  ['inputhandler_2eh',['InputHandler.h',['../InputHandler_8h.html',1,'']]],
+  ['inputkeys_2eh',['InputKeys.h',['../InputKeys_8h.html',1,'']]]
 ];

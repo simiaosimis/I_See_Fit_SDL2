@@ -1,8 +1,10 @@
 var searchData=
 [
-  ['path',['Path',['../classsdl2engine_1_1Music.html#a27476cec1a72e6a151cc02866d9ab3b5',1,'sdl2engine::Music::Path()'],['../classsdl2engine_1_1SoundEffect.html#ac9a35497b88fe7ca5141e43cba92a3f4',1,'sdl2engine::SoundEffect::Path()'],['../classsdl2engine_1_1Sprite.html#a0a7fa80091daa87a04423cf60fc6ea07',1,'sdl2engine::Sprite::Path()']]],
-  ['pause',['Pause',['../classsdl2engine_1_1AudioHandler.html#a8a99528c9feeb34009ed7fc3bcfe4ff4',1,'sdl2engine::AudioHandler::Pause()'],['../classsdl2engine_1_1AudioHandler.html#addeff3e673084c9975bca5bb38458aed',1,'sdl2engine::AudioHandler::Pause()'],['../classsdl2engine_1_1AudioHandler.html#a60ec53d6c78e3f386e3252db2b6ee661',1,'sdl2engine::AudioHandler::Pause()']]],
-  ['pixelformattostring',['PixelFormatToString',['../namespacesdl2engine_1_1sdl_1_1detail.html#a94a9bfdeeb1f8528d9cccb3572c36a9a',1,'sdl2engine::sdl::detail']]],
-  ['placeholder',['Placeholder',['../classsdl2engine_1_1Placeholder.html#a82d646cb6948ab903484880f6fbcfdec',1,'sdl2engine::Placeholder::Placeholder()'],['../classsdl2engine_1_1Placeholder.html#afaaeee6c204e9a6bdc8243c4409a51bf',1,'sdl2engine::Placeholder::Placeholder(const Placeholder &amp;)=delete'],['../classsdl2engine_1_1Placeholder.html#a5f8fd7390275861b299a56967542376e',1,'sdl2engine::Placeholder::Placeholder(Placeholder &amp;&amp;)=delete']]],
-  ['play',['Play',['../classsdl2engine_1_1AudioHandler.html#a25a1cf5e091c0e0b30d61d8c8ec8c022',1,'sdl2engine::AudioHandler::Play(const std::string &amp;path, const int times)'],['../classsdl2engine_1_1AudioHandler.html#ae543713ebb455901af9c73fed86e14bb',1,'sdl2engine::AudioHandler::Play(const std::string &amp;path, const int times)'],['../classsdl2engine_1_1AudioHandler.html#adcf94bd6a774562d8525654bd81f138c',1,'sdl2engine::AudioHandler::Play(const std::string &amp;path, const int times)']]]
+  ['main',['main',['../main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main.cpp']]],
+  ['maxframerate',['MaxFramerate',['../classsdl2engine_1_1Configuration.html#ac0e18fdffc2aca04c04370ab3a46cd06',1,'sdl2engine::Configuration']]],
+  ['maximize',['Maximize',['../classsdl2engine_1_1Window.html#a6c4fcbfd74d276ce2a8f04a347a914eb',1,'sdl2engine::Window']]],
+  ['minimize',['Minimize',['../classsdl2engine_1_1Window.html#a721aa12d374c964de429ff426d3fa8ba',1,'sdl2engine::Window']]],
+  ['mixchunk',['MixChunk',['../classsdl2engine_1_1SoundEffect.html#a2add65600eb0cfea97d328664ccdda8a',1,'sdl2engine::SoundEffect']]],
+  ['mixmusic',['MixMusic',['../classsdl2engine_1_1Music.html#a8824f7b1996ff8dba6aa59c60f25da20',1,'sdl2engine::Music']]],
+  ['music',['Music',['../classsdl2engine_1_1Music.html#a1b1b256630190eac45399779a33e26e0',1,'sdl2engine::Music::Music(const std::string &amp;path)'],['../classsdl2engine_1_1Music.html#a71d2e7a80c6c67697edaffcd01c0a496',1,'sdl2engine::Music::Music(const Music &amp;)=delete'],['../classsdl2engine_1_1Music.html#a884373fa373b545ddf607e464188e496',1,'sdl2engine::Music::Music(Music &amp;&amp;)=delete']]]
 ];

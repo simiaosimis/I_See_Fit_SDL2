@@ -1,6 +1,28 @@
 var searchData=
 [
-  ['width',['Width',['../classsdl2engine_1_1Sprite.html#a77127b66ed4450ac8a3edd0457a2d677',1,'sdl2engine::Sprite']]],
-  ['window',['Window',['../classsdl2engine_1_1Window.html#aa0403e65f0dfe560bee7c8f0b779bc55',1,'sdl2engine::Window']]],
-  ['windowtitle',['WindowTitle',['../classsdl2engine_1_1Configuration.html#a5246fe0e44ebf973bba29cb0ffaad6be',1,'sdl2engine::Configuration']]]
+  ['screenheight',['ScreenHeight',['../classsdl2engine_1_1Configuration.html#a230f8709e257dc499e2dc3fc235593d7',1,'sdl2engine::Configuration']]],
+  ['screenwidth',['ScreenWidth',['../classsdl2engine_1_1Configuration.html#a4631a25106d5f5c63b636ec6486d323d',1,'sdl2engine::Configuration']]],
+  ['sdlaudiodevices',['SdlAudioDevices',['../namespacesdl2engine_1_1sdl_1_1detail.html#ad685ff2d863169e0028a8c8e8d971cc9',1,'sdl2engine::sdl::detail']]],
+  ['sdlaudiodrivers',['SdlAudioDrivers',['../namespacesdl2engine_1_1sdl_1_1detail.html#a1c78fcb7bd8734616488de02cce84a05',1,'sdl2engine::sdl::detail']]],
+  ['sdldisplaymodes',['SdlDisplayModes',['../namespacesdl2engine_1_1sdl_1_1detail.html#af6d60502e741bdb14ad61b992fbd1af3',1,'sdl2engine::sdl::detail']]],
+  ['sdlrenderdrivers',['SdlRenderDrivers',['../namespacesdl2engine_1_1sdl_1_1detail.html#a65add4457525d6e24b3a2c239919cf1c',1,'sdl2engine::sdl::detail']]],
+  ['sdlrenderer',['SdlRenderer',['../classsdl2engine_1_1Renderer.html#a6f0a2649cba5368dba4fb99d169af103',1,'sdl2engine::Renderer']]],
+  ['sdlversion',['SdlVersion',['../namespacesdl2engine_1_1sdl_1_1detail.html#a9cdf573548209a55bd71c4e3a2080b5e',1,'sdl2engine::sdl::detail::SdlVersion(const std::string &amp;library, const SDL_version &amp;version_compiled)'],['../namespacesdl2engine_1_1sdl_1_1detail.html#afaa061f7a0b845bf8d851b7d49862034',1,'sdl2engine::sdl::detail::SdlVersion(const std::string &amp;library, const SDL_version &amp;version_compiled, const std::string &amp;revision)']]],
+  ['sdlvideodrivers',['SdlVideoDrivers',['../namespacesdl2engine_1_1sdl_1_1detail.html#a6064ba7826dcf1ec4da9aca46f58cce5',1,'sdl2engine::sdl::detail']]],
+  ['setalpha',['SetAlpha',['../classsdl2engine_1_1Sprite.html#a2e6637d2f378050c007f2b84970c8919',1,'sdl2engine::Sprite']]],
+  ['setblendmode',['SetBlendMode',['../classsdl2engine_1_1Sprite.html#a36f3eb939392214877ae8e06dd7eb97f',1,'sdl2engine::Sprite']]],
+  ['setchannel',['SetChannel',['../classsdl2engine_1_1SoundEffect.html#af15767bb00eb96f55e8ccd754ffe532a',1,'sdl2engine::SoundEffect']]],
+  ['setheight',['SetHeight',['../classsdl2engine_1_1Sprite.html#aff91e4639ca3a7e7cdb36acc69991eb5',1,'sdl2engine::Sprite']]],
+  ['setleveldimensions',['SetLevelDimensions',['../classsdl2engine_1_1Camera.html#a8bb4eb586afc1092909a668274630708',1,'sdl2engine::Camera']]],
+  ['setlogicalsize',['SetLogicalSize',['../classsdl2engine_1_1Renderer.html#a6633fee9256aa171b92396b7e67a1689',1,'sdl2engine::Renderer']]],
+  ['setvolume',['SetVolume',['../classsdl2engine_1_1AudioHandler.html#ac4ada745f6b3150a77d0489b5e82cb3f',1,'sdl2engine::AudioHandler::SetVolume(const int percent)'],['../classsdl2engine_1_1AudioHandler.html#a7166f2931f4ee375f37d699a6fb0862e',1,'sdl2engine::AudioHandler::SetVolume(const int percent)'],['../classsdl2engine_1_1AudioHandler.html#a7cbf63b2ddb8630e742a02e8c3ac5f3d',1,'sdl2engine::AudioHandler::SetVolume(const int percent)']]],
+  ['setwidth',['SetWidth',['../classsdl2engine_1_1Sprite.html#ac86b3a772245648fc25c2a255456bc41',1,'sdl2engine::Sprite']]],
+  ['setwidthheight',['SetWidthHeight',['../classsdl2engine_1_1Animation.html#a0bf7e09bacbe9380cd00722c80977022',1,'sdl2engine::Animation']]],
+  ['setx',['SetX',['../classsdl2engine_1_1GameObject.html#a3d86f3f18d311091a5c301b89230b4ee',1,'sdl2engine::GameObject']]],
+  ['sety',['SetY',['../classsdl2engine_1_1GameObject.html#a3901460b43a92d8db948da6573219baa',1,'sdl2engine::GameObject']]],
+  ['soundeffect',['SoundEffect',['../classsdl2engine_1_1SoundEffect.html#ace01021e37269435f111648f2d481f22',1,'sdl2engine::SoundEffect::SoundEffect(const std::string &amp;path)'],['../classsdl2engine_1_1SoundEffect.html#af4ec9c7053407040baebf181b435bdd6',1,'sdl2engine::SoundEffect::SoundEffect(const SoundEffect &amp;)=delete'],['../classsdl2engine_1_1SoundEffect.html#a0851c75e03eafe06571d16b6cd79f78c',1,'sdl2engine::SoundEffect::SoundEffect(SoundEffect &amp;&amp;)=delete']]],
+  ['sprite',['Sprite',['../classsdl2engine_1_1Sprite.html#a82cdebf53de84da6a8dcb4947725c323',1,'sdl2engine::Sprite']]],
+  ['statemanager',['StateManager',['../classsdl2engine_1_1StateManager.html#a4a0e331396ea948aeaa1b805987ef16a',1,'sdl2engine::StateManager::StateManager()'],['../classsdl2engine_1_1StateManager.html#a271ae86c99221f33bc984c1671ebd40a',1,'sdl2engine::StateManager::StateManager(const StateManager &amp;)=delete'],['../classsdl2engine_1_1StateManager.html#ad6da96249478ad78f71ab4194e0ca367',1,'sdl2engine::StateManager::StateManager(StateManager &amp;&amp;)=delete']]],
+  ['stop',['Stop',['../classsdl2engine_1_1AudioHandler.html#afa5f570101608f704fd3555b9c934850',1,'sdl2engine::AudioHandler::Stop()'],['../classsdl2engine_1_1Game.html#adcd0f476137568967aed69fe800805a0',1,'sdl2engine::Game::Stop()'],['../classsdl2engine_1_1AudioHandler.html#a0c67582ab5a6d5a32de9b19a71b1177e',1,'sdl2engine::AudioHandler::Stop()'],['../classsdl2engine_1_1AudioHandler.html#ad480f017577815a14dc533b60c55e231',1,'sdl2engine::AudioHandler::Stop()']]],
+  ['surfacetotexture',['SurfaceToTexture',['../classsdl2engine_1_1Sprite.html#a4dfaeee4aed2bca6a87bb6b4926581da',1,'sdl2engine::Sprite']]]
 ];

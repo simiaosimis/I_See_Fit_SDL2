@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['a',['A',['../namespacesdl2engine.html#a92e23178a19914e86fa4f7640dcde170a516639ee85de040fc3e75cfe05ac5049',1,'sdl2engine']]],
   ['add_5fstate',['ADD_STATE',['../StateManager_8cpp.html#aedca40702003f3f00068c701dabfb0f0',1,'StateManager.cpp']]],
   ['addgameobject',['AddGameObject',['../classsdl2engine_1_1StateGame.html#a4bee2226f72cce784bbaa7e264c14681',1,'sdl2engine::StateGame']]],
   ['alpha',['Alpha',['../classsdl2engine_1_1Sprite.html#a9c1d5dfbfd2286d64a5c99f03a1325f3',1,'sdl2engine::Sprite']]],
@@ -8,7 +7,7 @@ var searchData=
   ['animation',['Animation',['../classsdl2engine_1_1Animation.html#ae0239e9c0faa92c7726646b0a6befd67',1,'sdl2engine::Animation']]],
   ['animation_2ecpp',['Animation.cpp',['../Animation_8cpp.html',1,'']]],
   ['animation_2eh',['Animation.h',['../Animation_8h.html',1,'']]],
-  ['animationclip',['animationClip',['../classsdl2engine_1_1GameObject.html#a41b34b9ff09b80588d20cc626a45c9e0',1,'sdl2engine::GameObject']]],
+  ['animationclip',['AnimationClip',['../classsdl2engine_1_1GameObject.html#a1bafc2d962b1c63f8af4670db4934205',1,'sdl2engine::GameObject']]],
   ['assert',['ASSERT',['../Assert_8h.html#ab1899199386b1542d1111168ca847e9c',1,'Assert.h']]],
   ['assert_2ecpp',['Assert.cpp',['../Assert_8cpp.html',1,'']]],
   ['assert_2eh',['Assert.h',['../Assert_8h.html',1,'']]],
@@ -18,6 +17,5 @@ var searchData=
   ['audiohandler_2eh',['AudioHandler.h',['../AudioHandler_8h.html',1,'']]],
   ['audiomusic',['AudioMusic',['../namespacesdl2engine.html#a239c8481720d24d909626a3bf590edd4',1,'sdl2engine']]],
   ['audiosfx',['AudioSfx',['../namespacesdl2engine.html#a510b8ab0fe262941a17169daf4d8f637',1,'sdl2engine']]],
-  ['audiotype',['AudioType',['../namespacesdl2engine.html#aeccca27a95f2b37740093a79b4588a9d',1,'sdl2engine']]],
-  ['axes',['axes',['../namespacesdl2engine_1_1controllerMap.html#a175550e7f2708486649ca6f0f49b35d4',1,'sdl2engine::controllerMap']]]
+  ['audiotype',['AudioType',['../namespacesdl2engine.html#aeccca27a95f2b37740093a79b4588a9d',1,'sdl2engine']]]
 ];

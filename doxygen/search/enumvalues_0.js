@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['a',['A',['../namespacesdl2engine.html#a92e23178a19914e86fa4f7640dcde170a516639ee85de040fc3e75cfe05ac5049',1,'sdl2engine']]]
+  ['count',['Count',['../namespacesdl2engine.html#a70d0efdc0cb93bef2219f4ca2ea8d343a28a5e911a38d25983c0392be650a09eb',1,'sdl2engine']]]
 ];

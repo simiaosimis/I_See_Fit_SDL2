@@ -1,9 +1,5 @@
 var searchData=
 [
-  ['l3',['L3',['../namespacesdl2engine_1_1controllerMap.html#a031302295da982dc16fd6893d1f96dd8a16e1d8e657c00924930cb1575b022bf6',1,'sdl2engine::controllerMap']]],
-  ['latrigger',['LATRIGGER',['../namespacesdl2engine_1_1controllerMap.html#a175550e7f2708486649ca6f0f49b35d4a8ffe2a80caeaa9f78dac9b964918b2a7',1,'sdl2engine::controllerMap']]],
-  ['ldtrigger',['LDTRIGGER',['../namespacesdl2engine_1_1controllerMap.html#a031302295da982dc16fd6893d1f96dd8a93422c5ea34400ef31e6151017d9fe23',1,'sdl2engine::controllerMap']]],
-  ['lhorizontal',['LHORIZONTAL',['../namespacesdl2engine_1_1controllerMap.html#a175550e7f2708486649ca6f0f49b35d4a6cee3fe64967ae63e292cf37eb6a9b37',1,'sdl2engine::controllerMap']]],
   ['load',['Load',['../classsdl2engine_1_1ResourceManager.html#a6342e2a8f910e8521f69f5d90ee9b16c',1,'sdl2engine::ResourceManager::Load()'],['../classsdl2engine_1_1StateGame.html#a3bc152caedb95ce760cee495f3425ef5',1,'sdl2engine::StateGame::Load()'],['../classsdl2engine_1_1Placeholder.html#a37c789e80beed5a3a8ec80c43f69e623',1,'sdl2engine::Placeholder::Load()']]],
   ['loadfirststate',['LoadFirstState',['../classsdl2engine_1_1StateManager.html#a82af1358c2b092e10faca0ac14c29850',1,'sdl2engine::StateManager']]],
   ['loadfrom',['LoadFrom',['../classsdl2engine_1_1Sprite.html#a2d8ae44951073c4ca0d29082428ad900',1,'sdl2engine::Sprite']]],
@@ -24,5 +20,5 @@ var searchData=
   ['logicalrendersize',['LogicalRenderSize',['../classsdl2engine_1_1Configuration.html#a26f03c3e6b663cfb75b2fc671f923af9',1,'sdl2engine::Configuration']]],
   ['logicalsize',['LogicalSize',['../classsdl2engine_1_1Renderer.html#a2842517bee6bb28d81a96b89c47b2b46',1,'sdl2engine::Renderer']]],
   ['loglevel',['LogLevel',['../namespacesdl2engine.html#a72818c74e8372a1d6c169905f7eb232e',1,'sdl2engine']]],
-  ['lvertical',['LVERTICAL',['../namespacesdl2engine_1_1controllerMap.html#a175550e7f2708486649ca6f0f49b35d4aac82d17f09cf553c724f7b5fda6aa9f5',1,'sdl2engine::controllerMap']]]
+  ['logsomething',['LogSomething',['../namespacesdl2engine.html#a70d0efdc0cb93bef2219f4ca2ea8d343ad111d25b18cef887ee1e0eee2ecdf3ae',1,'sdl2engine']]]
 ];

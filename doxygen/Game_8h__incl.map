@@ -1,9 +1,7 @@
 <map id="Game.h" name="Game.h">
-<area shape="rect" id="node9" href="$StateManager_8h.html" title="engine/StateManager.h" alt="" coords="468,83,623,112"/>
-<area shape="rect" id="node18" href="$Window_8h.html" title="graphics/Window.h" alt="" coords="712,83,845,112"/>
-<area shape="rect" id="node23" href="$Renderer_8h.html" title="graphics/Renderer.h" alt="" coords="837,160,976,189"/>
-<area shape="rect" id="node27" href="$InputHandler_8h.html" title="input/InputHandler.h" alt="" coords="224,83,363,112"/>
-<area shape="rect" id="node14" href="$StateGame_8h.html" title="engine/StateGame.h" alt="" coords="475,160,616,189"/>
-<area shape="rect" id="node32" href="$InputKeys_8h.html" title="input/InputKeys.h" alt="" coords="184,237,307,267"/>
-<area shape="rect" id="node35" href="$ControllerHandler_8h.html" title="input/ControllerHandler.h" alt="" coords="91,160,256,189"/>
+<area shape="rect" id="node9" href="$StateManager_8h.html" title="engine/StateManager.h" alt="" coords="176,83,331,112"/>
+<area shape="rect" id="node18" href="$Window_8h.html" title="graphics/Window.h" alt="" coords="405,83,539,112"/>
+<area shape="rect" id="node23" href="$Renderer_8h.html" title="graphics/Renderer.h" alt="" coords="509,160,648,189"/>
+<area shape="rect" id="node27" href="$EventHandler_8h.html" title="input/EventHandler.h" alt="" coords="613,83,757,112"/>
+<area shape="rect" id="node14" href="$StateGame_8h.html" title="engine/StateGame.h" alt="" coords="216,160,357,189"/>
 </map>

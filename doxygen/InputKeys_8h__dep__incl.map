@@ -1,11 +1,6 @@
 <map id="InputKeys.h" name="InputKeys.h">
-<area shape="rect" id="node3" href="$ControllerHandler_8h.html" title="ControllerHandler.h" alt="" coords="117,83,251,112"/>
-<area shape="rect" id="node7" href="$InputHandler_8h.html" title="InputHandler.h" alt="" coords="235,160,341,189"/>
-<area shape="rect" id="node5" href="$ControllerHandler_8cpp.html" title="ControllerHandler.cpp" alt="" coords="64,160,211,189"/>
-<area shape="rect" id="node9" href="$Game_8h.html" title="Game.h" alt="" coords="196,237,263,267"/>
-<area shape="rect" id="node19" href="$InputHandler_8cpp.html" title="InputHandler.cpp" alt="" coords="287,237,407,267"/>
-<area shape="rect" id="node11" href="$Game_8cpp.html" title="Game.cpp" alt="" coords="5,315,88,344"/>
-<area shape="rect" id="node13" href="$Placeholder_8cpp.html" title="Placeholder.cpp" alt="" coords="112,315,227,344"/>
-<area shape="rect" id="node15" href="$Sprite_8cpp.html" title="Sprite.cpp" alt="" coords="251,315,331,344"/>
-<area shape="rect" id="node17" href="$main_8cpp.html" title="main.cpp" alt="" coords="355,315,429,344"/>
+<area shape="rect" id="node3" href="$InputHandler_8h.html" title="InputHandler.h" alt="" coords="153,83,260,112"/>
+<area shape="rect" id="node5" href="$Placeholder_8cpp.html" title="Placeholder.cpp" alt="" coords="5,160,120,189"/>
+<area shape="rect" id="node7" href="$EventHandler_8cpp.html" title="EventHandler.cpp" alt="" coords="144,160,269,189"/>
+<area shape="rect" id="node9" href="$InputHandler_8cpp.html" title="InputHandler.cpp" alt="" coords="293,160,413,189"/>
 </map>
