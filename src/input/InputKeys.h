@@ -4,13 +4,15 @@
 
 namespace sdl2engine {
 
-enum GameKeys {
-	A,
-	SPACE,
-	ESCAPE,
-	MAX
+enum Key {
+	FadeOut,
+	LogSomething,
+	TestSfx,
+	TestSfxAfterFadeOut,
+	Quit,
+	Count // Always last.
 };
 
-using InputArray = std::array<bool, GameKeys::MAX>;
+using InputArray = std::array<bool, Key::Count>;
 
 } // namespace sdl2engine

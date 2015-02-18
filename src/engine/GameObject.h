@@ -2,9 +2,10 @@
 
 #include <SDL2/SDL.h>
 #include <string>
-#include "graphics/Sprite.h"
 
 namespace sdl2engine {
+
+class Sprite;
 
 /**
 * Base class for all game objects (gameObjects).
@@ -16,69 +17,84 @@ class GameObject {
 		/**
 		* The destructor.
 		*/
-		virtual ~GameObject();
+		virtual ~GameObject() {};
 
 		/**
-		* Updates the entity.
+		* @brief Updates the entity.
+		*
 		* Pure virtual function. Purpose is to update whatever is necessary, relative to the
 		* 	entity.
-		* @param dt_ : Delta time. Time elapsed between one frame and the other.
+		*
+		* @param dt : Delta time. Time elapsed between one frame and the other.
 		*/
-		virtual void update(const double dt_) = 0;
+		virtual void Update(const double dt) = 0;
 
 		/**
 		* Renders the entity.
 		* Pure virtual function. Purpose is to copy the entity's texture onto the renderer.
 		* @note Usually just calls the render method from the Sprite class.
-		* @param cameraX_ : The x position of the camera.
-		* @param cameraY_ : The y position of the camera.
+		* @param camera_x : The x position of the camera.
+		* @param camera_y : The y position of the camera.
 		*/
-		virtual void render(const double cameraX_, const double cameraY_) = 0;
+		virtual void Render(const double camera_x, const double camera_y) = 0;
+
+		/**
+		* @return The x axis position.
+		*/
+		double X();
+
+		/**
+		* @return The y axis position.
+		*/
+		double Y();
 
 		/**
 		* @return The GameObject width.
 		*/
-		int getWidth();
+		int Width();
 
 		/**
 		* @return The GameObject height.
 		*/
-		int getHeight();
+		int Height();
 
 		/**
-		* @return The GameObject::animationClip.
+		* @return The GameObject::m_animation_clip.
 		*/
-		SDL_Rect& getAnimationClip();
+		SDL_Rect& AnimationClip();
 
-		SDL_Rect& getBoundingBox();
+		/**
+		* @return The game object's bounding box.
+		*/
+		SDL_Rect& BoundingBox();
 
-		double x; /**< The position in the x axis. */
-		double y; /**< The position in the y axis. */
-		bool isRight; /**< The direction in the x axis. */
+		/**
+		* @brief Set the x axis position.
+		*/
+		void SetX(const double x);
+
+		/**
+		* @brief Set the y axis position.
+		*/
+		void SetY(const double y);
 
 	protected:
 		/**
 		* The constructor.
 		* Initializes all the attributes.
-		* @param x_ : position in x axis.
-		* @param y_ : position in y axis.
+		* @param x : position in x axis.
+		* @param y : position in y axis.
 		* @param path : path for which sprite to use.
 		*/
-		GameObject(const double x_, const double y_, const std::string& path_);
+		GameObject(const double x, const double y, const std::string& path);
 
-		/**
-		* The constructor.
-		* Initializes all the attributes.
-		* @param x_ : position in x axis.
-		* @param y_ : position in y axis.
-		*/
-		GameObject(const double x_, const double y_);
-
-		Sprite* sprite; /**< The Sprite attributed to the entity. */
-		int width; /**< The entitys width, from its sprite. */
-		int height; /**< The entitys height, from its sprite. */
-		SDL_Rect animationClip; /**< The current clip on the spritesheet, to determine animation. */
-		SDL_Rect boundingBox;
+		double m_x; /**< The position in the x axis. */
+		double m_y; /**< The position in the y axis. */
+		Sprite* m_sprite; /**< The Sprite attributed to the entity. */
+		int m_width; /**< The entitys width, from its sprite. */
+		int m_height; /**< The entitys height, from its sprite. */
+		SDL_Rect m_animation_clip; /**< The current clip on the spritesheet, to determine animation. */
+		SDL_Rect m_bounding_box;
 };
 
 } // namespace sdl2engine

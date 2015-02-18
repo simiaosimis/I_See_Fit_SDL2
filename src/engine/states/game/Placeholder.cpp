@@ -4,6 +4,7 @@
 #include "graphics/Sprite.h"
 #include "engine/Game.h"
 #include "engine/Animation.h"
+#include "input/InputHandler.h"
 #include "util/Logger.h"
 #include "util/Assert.h"
 
@@ -36,14 +37,21 @@ void Placeholder::Unload() {
 }
 
 void Placeholder::Update(const double dt_) {
-	const InputArray keyStates = Game::Instance().Input();
+	const InputArray keyStates = InputHandler::KeyStates();
 
-	if(keyStates[GameKeys::SPACE] == true) {
+	if(keyStates[Key::FadeOut] == true) {
 		AudioMusic::FadeOut(5.0);
+	}
+
+	if(keyStates[Key::LogSomething] == true) {
+		log_warn() << "Testing input!";
+	}
+
+	if(keyStates[Key::TestSfx] == true) {
 		AudioSfx::Play("assets/audio/sfx/test_sfx.wav", 1);
 	}
 
-	if(keyStates[GameKeys::A] == true) {
+	if(keyStates[Key::TestSfxAfterFadeOut] == true) {
 		if(AudioMusic::FadedOut()) {
 			AudioSfx::Play("assets/audio/sfx/tururu.wav", 1);
 		}

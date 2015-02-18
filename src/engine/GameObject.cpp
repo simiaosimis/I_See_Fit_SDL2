@@ -1,69 +1,65 @@
 #include "engine/GameObject.h"
-#include <SDL2/SDL.h>
 #include "core/ResourceManager.h"
+#include "graphics/Sprite.h"
 #include "util/Logger.h"
 #include "util/Assert.h"
 
 namespace sdl2engine {
 
-GameObject::GameObject(const double x_, const double y_, const std::string& path_) :
-    x(x_),
-    y(y_),
-    isRight(true),
-    sprite(ResourceManager<Sprite>::Instance().Get(path_)),
-    width(0),
-    height(0),
-    animationClip{0, 0, 0, 0},
-    boundingBox{static_cast<int>(x_), static_cast<int>(y_), 0, 0}
+GameObject::GameObject(const double x, const double y, const std::string& path) :
+    m_x{x},
+    m_y{y},
+    m_sprite{ResourceManager<Sprite>::Instance().Get(path)},
+    m_width{0},
+    m_height{0},
+    m_animation_clip{0, 0, 0, 0},
+    m_bounding_box{static_cast<int>(x), static_cast<int>(y), 0, 0}
 {
-    // Only serves as the initializer for the derived classes.
+    if(m_sprite != nullptr) {
+        m_width = m_sprite->Width();
+        m_height = m_sprite->Height();
 
-    if(this->sprite != nullptr) {
-        this->width = this->sprite->Width();
-        this->height = this->sprite->Height();
-
-        this->boundingBox.w = this->width;
-        this->boundingBox.h = this->height;
+        m_bounding_box.w = m_width;
+        m_bounding_box.h = m_height;
     }
     else {
         log_warn() << "GameObject sprite is null, width and height will be undefined.";
     }
 
-    ASSERT(width >= 0 , "Must be >= 0");
-    ASSERT(height >= 0, "Must be >= 0");
+    ASSERT(m_width >= 0 , "Must be >= 0");
+    ASSERT(m_height >= 0, "Must be >= 0");
 }
 
-GameObject::GameObject(const double x_, const double y_) :
-    x(x_),
-    y(y_),
-    isRight(true),
-    sprite(nullptr),
-    width(0),
-    height(0),
-    animationClip{0, 0, 0, 0},
-    boundingBox{static_cast<int>(x_), static_cast<int>(y_), 0, 0}
-{
-    // Only serves as the initializer for the derived classes.
+double GameObject::X() {
+    return m_x;
 }
 
-GameObject::~GameObject() {
-
+double GameObject::Y() {
+    return m_y;
 }
 
-int GameObject::getWidth() {
-	return this->width;
+int GameObject::Width() {
+    return m_width;
 }
 
-int GameObject::getHeight() {
-	return this->height;
+int GameObject::Height() {
+    return m_height;
 }
 
-SDL_Rect& GameObject::getAnimationClip() {
-	return this->animationClip;
+SDL_Rect& GameObject::AnimationClip() {
+    return m_animation_clip;
 }
 
-SDL_Rect& GameObject::getBoundingBox() {
-    return this->boundingBox;
+SDL_Rect& GameObject::BoundingBox() {
+    return m_bounding_box;
+}
+
+void GameObject::SetX(const double x) {
+    m_x = x;
+}
+
+void GameObject::SetY(const double y) {
+    m_y = y;
 }
 
 } // namespace sdl2engine

@@ -19,7 +19,7 @@ Game& Game::Instance() {
 
 Game::Game(const ConstructorTag& private_tag) :
 	m_is_running{true},
-	m_input_handler{std::make_unique<InputHandler>()},
+	m_event_handler{},
 	m_window{},
 	m_state_manager{}
 {
@@ -51,10 +51,10 @@ void Game::Run() {
 
 		// Update.
 		while(accumulated_time >= k_delta_time) {
-			m_input_handler->handleInput();
+			m_event_handler.PollEvents();
 
 			// Check for an exit signal from input.
-			if(m_input_handler->isQuitFlag() == true) {
+			if(m_event_handler.QuitFlagged() == true) {
 				Stop();
 				return;
 			}
@@ -80,16 +80,8 @@ void Game::ChangeState(const GameStates game_state) {
 	m_state_manager.ChangeState(game_state);
 }
 
-InputArray Game::Input() {
-	return m_input_handler->getKeyStates();
-}
-
 void Game::Stop() {
 	m_is_running = false;
-}
-
-void Game::ClearInputKey(const GameKeys input_key) {
-	m_input_handler->clearKey(input_key);
 }
 
 void Game::ResizeWindow(const int width, const int height) {

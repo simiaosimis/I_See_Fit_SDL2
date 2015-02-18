@@ -6,7 +6,7 @@
 #include "engine/StateManager.h"
 #include "graphics/Window.h"
 #include "graphics/Renderer.h"
-#include "input/InputHandler.h"
+#include "input/EventHandler.h"
 
 namespace sdl2engine {
 
@@ -58,11 +58,6 @@ class Game {
 		void ChangeState(const GameStates game_state);
 
 		/**
-		* @return The boolean array recieved from the InputHandler.
-		*/
-		InputArray Input();
-
-		/**
 		* @return The SDL_Renderer.
 		*
 		* @note The 'Get' was added to the name to avoid conflict with class Renderer.
@@ -75,18 +70,13 @@ class Game {
 		void Stop();
 
 		/**
-		* @brief Clears a certain key from input, setting it to false.
-		*/
-		void ClearInputKey(const GameKeys input_key);
-
-		/**
 		* @brief Resizes the window.
 		*/
 		void ResizeWindow(const int width, const int height);
 
 	private:
 		bool m_is_running; /**< Whether the game is currently running/looping or not. */
-		std::unique_ptr<InputHandler> m_input_handler; /**< The Game InputHandler. */
+		EventHandler m_event_handler; /**< The Game EventHandler. */
 		Window m_window; /**< The game Window. */
 		StateManager m_state_manager;
 };

@@ -25,15 +25,6 @@ class Sprite {
 		explicit Sprite(const std::string& path);
 
 		/**
-		* @brief The constructor from a surface.
-		*
-		* Created to help the Text class.
-		*
-		* @param surface : The SDL_Surface from which to construct the sprite.
-		*/
-		explicit Sprite(SDL_Surface* const surface);
-
-		/**
 		* @brief The destructor.
 		*/
 		~Sprite();

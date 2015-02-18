@@ -1,60 +1,28 @@
 #pragma once
 
 #include <SDL2/SDL.h>
-#include <array>
 #include "input/InputKeys.h"
-#include "input/ControllerHandler.h"
 
 namespace sdl2engine {
 
-/**
-* Handles player input.
-* Using SDL event handling, recieves the player input accordingly.
-*/
 class InputHandler {
 
 	public:
 		/**
-		* The constructor.
-		* Used to create the input handler instance.
+		* @return EventHandler::m_key_states
 		*/
-		InputHandler();
+		static InputArray KeyStates();
+
+		static void Reset();
 
 		/**
-		* The destructor.
-		* Deletes the InputHandler instance.
+		*
 		*/
-		~InputHandler();
-
-		/**
-		* Handles the input.
-		* Detects the pending events, and handles them appropriately.
-		*/
-		void handleInput();
-
-		/**
-		* @return InputHandler::keyStates
-		*/
-		InputArray getKeyStates();
-
-		/**
-		* @return InputHandler::quitFlag
-		*/
-		bool isQuitFlag();
-
-		void clearKey(const GameKeys key_);
+		static void HandleInput(const SDL_Event& sdl_event);
 
 	private:
-		/**
-		* Sets InputHandler::quitFlag to true.
-		*/
-		void signalExit();
-
-		ControllerHandler* controllerHandler; /**< Handles input if joystick is present. */
-		InputArray keyStates; /**< Boolean array that controls which keys are
+		static InputArray m_key_states; /**< Boolean array that controls which keys are
 			pressed or not. */
-		SDL_Event sdlEvent; /**< SDL internal event structure. */
-		bool quitFlag; /**< If the quit signal was recieved or not. */
 };
 
 } // namespace sdl2engine

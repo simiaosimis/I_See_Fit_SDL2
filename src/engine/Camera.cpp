@@ -27,8 +27,8 @@ SDL_Rect& Camera::Clip() {
 }
 
 void Camera::UpdatePosition() {
-	m_clip.x = (m_game_object->x + m_game_object->getWidth() / 2) - (m_clip.w / 2);
-	m_clip.y = (m_game_object->y + m_game_object->getHeight() / 2) - (m_clip.h / 2);
+	m_clip.x = (m_game_object->X() + m_game_object->Width() / 2) - (m_clip.w / 2);
+	m_clip.y = (m_game_object->Y() + m_game_object->Height() / 2) - (m_clip.h / 2);
 
 	// Left wall.
 	if(m_clip.x < 0) {

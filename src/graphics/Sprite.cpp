@@ -20,21 +20,6 @@ Sprite::Sprite(const std::string& path) :
 	ASSERT(m_height >= 0, "Must be >= 0");
 }
 
-Sprite::Sprite(SDL_Surface* const surface) :
-	m_sdl_texture{SurfaceToTexture(surface)},
-	m_width{0},
-	m_height{0},
-	m_path{"font"}
-{
-	// Display error log if image wasn't loaded.
-	if(m_sdl_texture == nullptr) {
-		log_error() << "Sprite load failed: " << m_path;
-	}
-
-	ASSERT(m_width >= 0 , "Must be >= 0");
-	ASSERT(m_height >= 0, "Must be >= 0");
-}
-
 Sprite::~Sprite() {
 	if(m_sdl_texture != nullptr) {
 		SDL_DestroyTexture(m_sdl_texture);
