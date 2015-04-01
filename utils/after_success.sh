@@ -8,14 +8,7 @@ function attention_echo {
 }
 
 # Default project name (no spaces)
-NAME_PROJECT="Default_Project_Name"
-# If there is a T_NAME_PROJECT, assign it to NAME_PROJECT
-if [ ! -z $T_NAME_PROJECT ]
-then
-	NAME_PROJECT=${T_NAME_PROJECT}
-else
-	attention_echo "No T_NAME_PROJECT set"
-fi
+NAME_PROJECT="ISeeFit"
 
 # Target names
 TARGET_PROJECT=${NAME_PROJECT}_exec
@@ -48,45 +41,45 @@ function success_exit {
 	exit 0
 }
 
-function publish_to_gh_pages {
-	attention_echo "Publish function start"
+# function publish_to_gh_pages {
+# 	attention_echo "Publish function start"
 
-	pushd ${DIR_PROJECT_ROOT}
+# 	pushd ${DIR_PROJECT_ROOT}
 
-	mkdir -p ${DIR_TMP_GHPAGES}
-	cp -Rf ${DIR_DOXYGEN} ${DIR_TMP_GHPAGES} || exit $?
-	cp -Rf ${DIR_REPORTS} ${DIR_TMP_GHPAGES} || exit $?
-	cp -f  ${FILES_CPACK} ${DIR_TMP_GHPAGES} || exit $?
+# 	mkdir -p ${DIR_TMP_GHPAGES}
+# 	cp -Rf ${DIR_DOXYGEN} ${DIR_TMP_GHPAGES} || exit $?
+# 	cp -Rf ${DIR_REPORTS} ${DIR_TMP_GHPAGES} || exit $?
+# 	cp -f  ${FILES_CPACK} ${DIR_TMP_GHPAGES} || exit $?
 
-	pushd ${DIR_TMP_GHPAGES}
+# 	pushd ${DIR_TMP_GHPAGES}
 
-	mv ${DIRNAME_DOXYGEN}/ doxygen/
+# 	mv ${DIRNAME_DOXYGEN}/ doxygen/
 
-	git config --global user.email "travis@travis-ci.org"
-	git config --global user.name "Travis-CI"
+# 	git config --global user.email "travis@travis-ci.org"
+# 	git config --global user.name "Travis-CI"
 
-	git clone --quiet --branch=gh-pages https://${GH_TOKEN}@${GH_REF} gh-pages > /dev/null 2>&1 # Muted for security (personal access token)
+# 	git clone --quiet --branch=gh-pages https://${GH_TOKEN}@${GH_REF} gh-pages > /dev/null 2>&1 # Muted for security (personal access token)
 
-	cd gh-pages/
-	git rm -rf ./doxygen/
-	git rm -rf ./reports/
-	git rm -rf ./cpack/
-	mkdir cpack || exit $?
-	cd ..
-	mv doxygen/ gh-pages/
-	mv reports/ gh-pages/
-	mv ${FILES_CPACK} gh-pages/cpack/
-	cd gh-pages/
+# 	cd gh-pages/
+# 	git rm -rf ./doxygen/
+# 	git rm -rf ./reports/
+# 	git rm -rf ./cpack/
+# 	mkdir cpack || exit $?
+# 	cd ..
+# 	mv doxygen/ gh-pages/
+# 	mv reports/ gh-pages/
+# 	mv ${FILES_CPACK} gh-pages/cpack/
+# 	cd gh-pages/
 
-	git add --all
-	git commit -m "Latest documentation and reports. Auto-pushed from travis. Build $TRAVIS_BUILD_NUMBER"
+# 	git add --all
+# 	git commit -m "Latest documentation and reports. Auto-pushed from travis. Build $TRAVIS_BUILD_NUMBER"
 
-	git remote rm origin
-	git remote add origin https://${GH_USR}:${GH_TOKEN}@${GH_REF} > /dev/null 2>&1 # Muted for security (personal access token)
+# 	git remote rm origin
+# 	git remote add origin https://${GH_USR}:${GH_TOKEN}@${GH_REF} > /dev/null 2>&1 # Muted for security (personal access token)
 
-	git push -fq origin gh-pages > /dev/null 2>&1 # Muted for security (personal access token)
-	popd
-}
+# 	git push -fq origin gh-pages > /dev/null 2>&1 # Muted for security (personal access token)
+# 	popd
+# }
 
 function do_cppcheck {
 	attention_echo "cppcheck"
@@ -185,19 +178,19 @@ attention_echo "Packing with CPack"
 cpack
 popd
 
-# If the first argument is what we want
-if [ ! -z $T_DO_PUBLISH_GH_COV ] && [ "$T_DO_PUBLISH_GH_COV" == "Yes" ]
-then
-	attention_echo "cpp-coveralls"
+# # If the first argument is what we want
+# if [ ! -z $T_DO_PUBLISH_GH_COV ] && [ "$T_DO_PUBLISH_GH_COV" == "Yes" ]
+# then
+# 	attention_echo "cpp-coveralls"
 
-	# Publish to Coveralls
-	coveralls --verbose\
-		--root ${DIR_PROJECT_ROOT} -E ".*externals*" -E ".*CMakeFiles.*" -E ".*test/.*.cpp.*"
+# 	# Publish to Coveralls
+# 	coveralls --verbose\
+# 		--root ${DIR_PROJECT_ROOT} -E ".*externals*" -E ".*CMakeFiles.*" -E ".*test/.*.cpp.*"
 
-	# Publish Doxygen to gh-pages
-	publish_to_gh_pages
+# 	# Publish Doxygen to gh-pages
+# 	publish_to_gh_pages
 
-# If no argument specified to publish
-else
-	attention_echo "Not publishing Doxygen/Coveralls"
-fi
+# # If no argument specified to publish
+# else
+# 	attention_echo "Not publishing Doxygen/Coveralls"
+# fi
